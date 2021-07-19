@@ -1,4 +1,4 @@
-type SpacingScale =
+type SpacingScaleType =
   | '0'
   | '3'
   | '6'
@@ -9,7 +9,7 @@ type SpacingScale =
   | 'auto'
   | 'unset';
 
-export const Spacing: Record<SpacingScale, string> = {
+export const Spacing: Record<SpacingScaleType, string> = {
   '0': '0',
   '3': '3px',
   '6': '6px',
