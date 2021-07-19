@@ -8,3 +8,6 @@ node dist/index.js
 
 info "Copying normalize.css to dist..."
 cp src/normalize.css dist/
+
+info "Running design system CSS through postcss..."
+npx postcss dist/main.css -o dist/main.css
