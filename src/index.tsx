@@ -1,1 +1,3 @@
-export * from './generate-css';
+import { main } from './generate-css';
+
+main();

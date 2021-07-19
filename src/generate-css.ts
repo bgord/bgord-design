@@ -16,17 +16,15 @@ class GeneratorProcessor {
       output += generator.generateFooter();
     }
 
-    const file = new File('main.css');
+    const file = new File('dist/main.css');
 
     await file.save(output);
   }
 }
 
-async function main() {
+export async function main() {
   await new GeneratorProcessor().process([
     new Margins(Spacing),
     new Paddings(Spacing),
   ]);
 }
-
-main();
