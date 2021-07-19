@@ -16,5 +16,5 @@ info "Running doiuse..."
 npx doiuse --browsers " last 2 versions" dist/main.css
 
 info "Minifying..."
-npx minify --css dist/main.css > dist/main.min.css
-npx minify --css dist/normalize.css > dist/normalize.min.css
+npx clean-css-cli dist/main.css -o dist/main.min.css
+npx clean-css-cli dist/normalize.css -o dist/normalize.min.css
