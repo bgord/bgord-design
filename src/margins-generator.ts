@@ -22,7 +22,12 @@ export class Margins implements GeneratorInterface {
 
     // Horizontal margin: data-mx="*"
     for (const [key, value] of Object.entries(this.spacing)) {
-      output += `*[data-m='${key}'] {\n  margin-left: ${value};\n  margin-right: ${value};\n}\n`;
+      output += `*[data-mx='${key}'] {\n  margin-left: ${value};\n  margin-right: ${value};\n}\n`;
+    }
+
+    // Vertical margin: data-my="*"
+    for (const [key, value] of Object.entries(this.spacing)) {
+      output += `*[data-my='${key}'] {\n  margin-top: ${value};\n  margin-bottom: ${value};\n}\n`;
     }
 
     return output;
