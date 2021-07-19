@@ -10,9 +10,9 @@ class GeneratorProcessor {
     let output = '';
 
     for (const generator of generators) {
-      output + -generator.generateHeader();
-      output + -generator.generateCss();
-      output + -generator.generateFooter();
+      output += generator.generateHeader();
+      output += generator.generateCss();
+      output += generator.generateFooter();
     }
 
     const file = new File('main.css');
@@ -22,7 +22,7 @@ class GeneratorProcessor {
 }
 
 async function main() {
-  new GeneratorProcessor().process([new Margins(Spacing)]);
+  await new GeneratorProcessor().process([new Margins(Spacing)]);
 }
 
 main();
