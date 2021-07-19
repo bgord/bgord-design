@@ -11,3 +11,6 @@ cp src/normalize.css dist/
 
 info "Running design system CSS through postcss..."
 npx postcss dist/main.css -o dist/main.css
+
+info "Running doiuse..."
+npx doiuse --browsers " last 2 versions" dist/main.css
