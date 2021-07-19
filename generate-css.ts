@@ -1,12 +1,28 @@
+import { File } from './file';
+
+import { GeneratorInterface } from './src/generator';
+import { Margins } from './src/margins-generator';
+
 import { Spacing } from './src/tokens';
 
-function generateRegularMargins() {
-  // Regular margin: data-m="*"
-  let output = '/* Margins */\n\n';
+class GeneratorProcessor {
+  async process(generators: GeneratorInterface[]) {
+    let output = '';
 
-  Object.entries(Spacing).forEach(([key, value]) => {
-    output += `*[data-m="${key}"] {\n  margin: ${value};\n}\n`;
-  });
+    for (const generator of generators) {
+      output + -generator.generateHeader();
+      output + -generator.generateCss();
+      output + -generator.generateFooter();
+    }
 
-  return output;
+    const file = new File('main.css');
+
+    await file.save(output);
+  }
 }
+
+async function main() {
+  new GeneratorProcessor().process([new Margins(Spacing)]);
+}
+
+main();
