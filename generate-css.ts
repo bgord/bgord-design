@@ -2,6 +2,7 @@ import { File } from './file';
 
 import { GeneratorInterface } from './src/generator';
 import { Margins } from './src/margins-generator';
+import { Paddings } from './src/paddings-generator';
 
 import { Spacing } from './src/tokens';
 
@@ -22,7 +23,10 @@ class GeneratorProcessor {
 }
 
 async function main() {
-  await new GeneratorProcessor().process([new Margins(Spacing)]);
+  await new GeneratorProcessor().process([
+    new Margins(Spacing),
+    new Paddings(Spacing),
+  ]);
 }
 
 main();
