@@ -36,7 +36,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "bgord-design",
+  "name": "@bgord/design",
   "author": "Bartosz Gordon",
   "module": "dist/bgord-design.esm.js",
   "size-limit": [
