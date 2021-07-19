@@ -17,7 +17,7 @@ export class Margins implements GeneratorInterface {
 
     // Regular margin: data-m="*"
     for (const [key, value] of Object.entries(this.spacing)) {
-      output += `*[data-m="${key}"] {\n  margin: ${value};\n}\n`;
+      output += `*[data-m='${key}'] {\n  margin: ${value};\n}\n`;
     }
 
     return output;
