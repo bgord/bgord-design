@@ -4,8 +4,9 @@ import { GeneratorInterface } from './generator';
 import { Margins } from './margins-generator';
 import { Paddings } from './paddings-generator';
 import { DisplaysGenerator } from './displays-generator';
+import { AxisPlacementsGenerator } from './axis-placements-generator';
 
-import { Spacing, Displays } from './tokens';
+import { Spacing, Displays, AxisPlacements } from './tokens';
 
 class GeneratorProcessor {
   async process(generators: GeneratorInterface[]) {
@@ -24,11 +25,16 @@ class GeneratorProcessor {
 }
 
 export async function main() {
-  const config = { spacing: Spacing, displays: Displays };
+  const config = {
+    spacing: Spacing,
+    displays: Displays,
+    axisPlacements: AxisPlacements,
+  };
 
   await new GeneratorProcessor().process([
     new Margins(config),
     new Paddings(config),
     new DisplaysGenerator(config),
+    new AxisPlacementsGenerator(config),
   ]);
 }

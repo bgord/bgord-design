@@ -28,3 +28,13 @@ export const Displays: Record<DisplayType, string> = {
   block: 'block',
   'inline-block': 'inline-block',
 };
+
+type AxisPlacementType = 'start' | 'end' | 'between' | 'center' | 'baseline';
+
+export const AxisPlacements: Record<AxisPlacementType, string> = {
+  start: 'start',
+  end: 'end',
+  between: 'between',
+  center: 'center',
+  baseline: 'baseline',
+};

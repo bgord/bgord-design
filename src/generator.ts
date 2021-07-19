@@ -1,4 +1,4 @@
-import { Spacing, Displays } from './tokens';
+import { Spacing, Displays, AxisPlacements } from './tokens';
 
 export interface GeneratorInterface {
   spacing: typeof Spacing;
@@ -12,4 +12,5 @@ export interface GeneratorInterface {
 export type GeneratorConfigType = {
   spacing: typeof Spacing;
   displays: typeof Displays;
+  axisPlacements: typeof AxisPlacements;
 };
