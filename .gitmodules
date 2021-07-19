@@ -1,0 +1,3 @@
+[submodule "bgord-scripts"]
+	path = bgord-scripts
+	url = git@github.com:bgord/bgord-scripts.git
