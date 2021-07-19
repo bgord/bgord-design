@@ -3,8 +3,9 @@ import { File } from './file';
 import { GeneratorInterface } from './generator';
 import { Margins } from './margins-generator';
 import { Paddings } from './paddings-generator';
+import { DisplaysGenerator } from './displays-generator';
 
-import { Spacing } from './tokens';
+import { Spacing, Displays } from './tokens';
 
 class GeneratorProcessor {
   async process(generators: GeneratorInterface[]) {
@@ -23,8 +24,11 @@ class GeneratorProcessor {
 }
 
 export async function main() {
+  const config = { spacing: Spacing, displays: Displays };
+
   await new GeneratorProcessor().process([
-    new Margins(Spacing),
-    new Paddings(Spacing),
+    new Margins(config),
+    new Paddings(config),
+    new DisplaysGenerator(config),
   ]);
 }

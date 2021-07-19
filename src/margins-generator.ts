@@ -1,11 +1,12 @@
-import { GeneratorInterface } from './generator';
-import { Spacing } from './tokens';
+import { GeneratorInterface, GeneratorConfigType } from './generator';
 
 export class Margins implements GeneratorInterface {
-  spacing: typeof Spacing;
+  spacing: GeneratorConfigType['spacing'];
+  displays: GeneratorConfigType['displays'];
 
-  constructor(spacing: typeof Spacing) {
-    this.spacing = spacing;
+  constructor(config: GeneratorConfigType) {
+    this.spacing = config.spacing;
+    this.displays = config.displays;
   }
 
   generateHeader(): string {
