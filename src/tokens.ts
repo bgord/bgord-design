@@ -20,3 +20,11 @@ export const Spacing: Record<SpacingScaleType, string> = {
   auto: 'auto',
   unset: 'unset',
 };
+
+type DisplayType = 'flex' | 'block' | 'inline-block';
+
+export const Displays: Record<DisplayType, string> = {
+  flex: 'flex',
+  block: 'block',
+  'inline-block': 'inline-block',
+};
