@@ -1,7 +1,9 @@
 import { Spacing } from './tokens';
 
 export interface GeneratorInterface {
+  spacing: typeof Spacing;
+
   generateHeader(): string;
-  generateCss(spacing: typeof Spacing): string;
+  generateCss(): string;
   generateFooter(): string;
 }

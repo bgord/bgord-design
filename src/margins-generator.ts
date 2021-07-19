@@ -2,15 +2,21 @@ import { GeneratorInterface } from './generator';
 import { Spacing } from './tokens';
 
 export class Margins implements GeneratorInterface {
+  spacing: typeof Spacing;
+
+  constructor(spacing: typeof Spacing) {
+    this.spacing = spacing;
+  }
+
   generateHeader(): string {
     return '/* Margins */\n\n';
   }
 
-  generateCss(spacing: typeof Spacing): string {
+  generateCss(): string {
     let output = '';
 
     // Regular margin: data-m="*"
-    for (const [key, value] of Object.entries(spacing)) {
+    for (const [key, value] of Object.entries(this.spacing)) {
       output += `*[data-m="${key}"] {\n  margin: ${value};\n}\n`;
     }
 
