@@ -1,10 +1,10 @@
 import { File } from './file';
 
-import { GeneratorInterface } from './src/generator';
-import { Margins } from './src/margins-generator';
-import { Paddings } from './src/paddings-generator';
+import { GeneratorInterface } from './generator';
+import { Margins } from './margins-generator';
+import { Paddings } from './paddings-generator';
 
-import { Spacing } from './src/tokens';
+import { Spacing } from './tokens';
 
 class GeneratorProcessor {
   async process(generators: GeneratorInterface[]) {
