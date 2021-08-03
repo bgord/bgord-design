@@ -55,3 +55,12 @@ export const Positions: Record<PositionType, string> = {
   sticky: 'sticky',
   unset: 'unset',
 };
+
+type FlexWrapTypes = 'nowrap' | 'wrap' | 'wrap-reverse' | 'unset';
+
+export const FlexWraps: Record<FlexWrapTypes, string> = {
+  nowrap: 'nowrap',
+  wrap: 'wrap',
+  'wrap-reverse': 'wrap-reverse',
+  unset: 'unset',
+};
