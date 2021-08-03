@@ -38,3 +38,20 @@ export const AxisPlacements: Record<AxisPlacementType, string> = {
   center: 'center',
   baseline: 'baseline',
 };
+
+type PositionType =
+  | 'static'
+  | 'relative'
+  | 'absolute'
+  | 'fixed'
+  | 'sticky'
+  | 'unset';
+
+export const Positions: Record<PositionType, string> = {
+  static: 'static',
+  relative: 'relative',
+  absolute: 'absolute',
+  fixed: 'fixed',
+  sticky: 'sticky',
+  unset: 'unset',
+};
