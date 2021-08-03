@@ -4,6 +4,7 @@ import {
   AxisPlacements,
   Positions,
   FlexWraps,
+  ZIndexes,
 } from './tokens';
 
 export interface GeneratorInterface {
@@ -21,4 +22,5 @@ export type GeneratorConfigType = {
   axisPlacements: typeof AxisPlacements;
   positions: typeof Positions;
   flexWraps: typeof FlexWraps;
+  zIndexes: typeof ZIndexes;
 };

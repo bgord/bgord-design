@@ -64,3 +64,12 @@ export const FlexWraps: Record<FlexWrapTypes, string> = {
   'wrap-reverse': 'wrap-reverse',
   unset: 'unset',
 };
+
+type ZIndexType = '0' | '1' | '2' | '3';
+
+export const ZIndexes: Record<ZIndexType, string> = {
+  '0': '0',
+  '1': '1',
+  '2': '2',
+  '3': '3',
+};

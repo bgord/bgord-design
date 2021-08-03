@@ -7,6 +7,7 @@ import { DisplaysGenerator } from './displays-generator';
 import { AxisPlacementsGenerator } from './axis-placements-generator';
 import { PositionsGenerator } from './postions-generator';
 import { FlexWrapGenerator } from './flex-wraps-generator';
+import { ZIndexGenerator } from './z-index-generator';
 
 import {
   Spacing,
@@ -14,6 +15,7 @@ import {
   AxisPlacements,
   Positions,
   FlexWraps,
+  ZIndexes,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -39,6 +41,7 @@ export async function main() {
     axisPlacements: AxisPlacements,
     positions: Positions,
     flexWraps: FlexWraps,
+    zIndexes: ZIndexes,
   };
 
   await new GeneratorProcessor().process([
@@ -48,5 +51,6 @@ export async function main() {
     new AxisPlacementsGenerator(config),
     new PositionsGenerator(config),
     new FlexWrapGenerator(config),
+    new ZIndexGenerator(config),
   ]);
 }
