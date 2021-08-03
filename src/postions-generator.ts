@@ -19,7 +19,7 @@ export class PositionsGenerator implements GeneratorInterface {
     let output = '';
 
     // Regular display: data-position="*"
-    for (const [key, value] of Object.entries(this.displays)) {
+    for (const [key, value] of Object.entries(this.positions)) {
       output += `*[data-position='${key}'] {\n  position: ${value};\n}\n`;
     }
 
