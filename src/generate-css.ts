@@ -8,6 +8,7 @@ import { AxisPlacementsGenerator } from './axis-placements-generator';
 import { PositionsGenerator } from './postions-generator';
 import { FlexWrapGenerator } from './flex-wraps-generator';
 import { ZIndexGenerator } from './z-index-generator';
+import { WidthsGenerator } from './widhts-generator';
 
 import {
   Spacing,
@@ -16,6 +17,7 @@ import {
   Positions,
   FlexWraps,
   ZIndexes,
+  Widths,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -42,6 +44,7 @@ export async function main() {
     positions: Positions,
     flexWraps: FlexWraps,
     zIndexes: ZIndexes,
+    widths: Widths,
   };
 
   await new GeneratorProcessor().process([
@@ -52,5 +55,6 @@ export async function main() {
     new PositionsGenerator(config),
     new FlexWrapGenerator(config),
     new ZIndexGenerator(config),
+    new WidthsGenerator(config),
   ]);
 }

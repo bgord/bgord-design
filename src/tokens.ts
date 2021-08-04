@@ -73,3 +73,11 @@ export const ZIndexes: Record<ZIndexType, string> = {
   '2': '2',
   '3': '3',
 };
+
+type WidthType = '100%' | 'auto' | 'unset';
+
+export const Widths: Record<WidthType, string> = {
+  '100%': '100%',
+  auto: 'auto',
+  unset: 'unset',
+};
