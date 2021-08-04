@@ -9,6 +9,7 @@ import { PositionsGenerator } from './postions-generator';
 import { FlexWrapGenerator } from './flex-wraps-generator';
 import { ZIndexGenerator } from './z-index-generator';
 import { WidthsGenerator } from './widhts-generator';
+import { FontSizeGenerator } from './font-size-generator';
 
 import {
   Spacing,
@@ -18,6 +19,7 @@ import {
   FlexWraps,
   ZIndexes,
   Widths,
+  FontSizes,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -45,6 +47,7 @@ export async function main() {
     flexWraps: FlexWraps,
     zIndexes: ZIndexes,
     widths: Widths,
+    fontSizes: FontSizes,
   };
 
   await new GeneratorProcessor().process([
@@ -56,5 +59,6 @@ export async function main() {
     new FlexWrapGenerator(config),
     new ZIndexGenerator(config),
     new WidthsGenerator(config),
+    new FontSizeGenerator(config),
   ]);
 }

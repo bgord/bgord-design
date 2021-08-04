@@ -81,3 +81,14 @@ export const Widths: Record<WidthType, string> = {
   auto: 'auto',
   unset: 'unset',
 };
+
+type FontSizeType = '12' | '14' | '16' | '20' | '24' | '32';
+
+export const FontSizes: Record<FontSizeType, string> = {
+  12: '12',
+  14: '14',
+  16: '16',
+  20: '20',
+  24: '24',
+  32: '32',
+};
