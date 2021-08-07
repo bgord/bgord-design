@@ -10,6 +10,7 @@ import { FlexWrapGenerator } from './flex-wraps-generator';
 import { ZIndexGenerator } from './z-index-generator';
 import { WidthsGenerator } from './widhts-generator';
 import { FontSizeGenerator } from './font-size-generator';
+import { FlexDirectionsGenerator } from './flex-directions-generator';
 
 import {
   Spacing,
@@ -20,6 +21,7 @@ import {
   ZIndexes,
   Widths,
   FontSizes,
+  FlexDirections,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -48,6 +50,7 @@ export async function main() {
     zIndexes: ZIndexes,
     widths: Widths,
     fontSizes: FontSizes,
+    flexDirections: FlexDirections,
   };
 
   await new GeneratorProcessor().process([
@@ -60,5 +63,6 @@ export async function main() {
     new ZIndexGenerator(config),
     new WidthsGenerator(config),
     new FontSizeGenerator(config),
+    new FlexDirectionsGenerator(config),
   ]);
 }

@@ -92,3 +92,12 @@ export const FontSizes: Record<FontSizeType, string> = {
   24: '24',
   32: '32',
 };
+
+type FlexDirectionType = 'row' | 'row-reverse' | 'column' | 'column-reverse';
+
+export const FlexDirections: Record<FlexDirectionType, string> = {
+  row: 'row',
+  'row-reverse': 'row-reverse',
+  column: 'column',
+  'column-reverse': 'column-reverse',
+};
