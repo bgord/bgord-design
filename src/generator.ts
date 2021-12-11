@@ -8,6 +8,7 @@ import {
   Widths,
   FontSizes,
   FlexDirections,
+  FontWeights,
 } from './tokens';
 
 export interface GeneratorInterface {
@@ -28,5 +29,6 @@ export type GeneratorConfigType = {
   zIndexes: typeof ZIndexes;
   widths: typeof Widths;
   fontSizes: typeof FontSizes;
+  fontWeights: typeof FontWeights;
   flexDirections: typeof FlexDirections;
 };

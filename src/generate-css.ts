@@ -10,6 +10,7 @@ import { FlexWrapGenerator } from './flex-wraps-generator';
 import { ZIndexGenerator } from './z-index-generator';
 import { WidthsGenerator } from './widhts-generator';
 import { FontSizeGenerator } from './font-size-generator';
+import { FontWeightGenerator } from './font-weight-generator';
 import { FlexDirectionsGenerator } from './flex-directions-generator';
 
 import {
@@ -21,6 +22,7 @@ import {
   ZIndexes,
   Widths,
   FontSizes,
+  FontWeights,
   FlexDirections,
 } from './tokens';
 
@@ -50,6 +52,7 @@ export async function main() {
     zIndexes: ZIndexes,
     widths: Widths,
     fontSizes: FontSizes,
+    fontWeights: FontWeights,
     flexDirections: FlexDirections,
   };
 
@@ -63,6 +66,7 @@ export async function main() {
     new ZIndexGenerator(config),
     new WidthsGenerator(config),
     new FontSizeGenerator(config),
+    new FontWeightGenerator(config),
     new FlexDirectionsGenerator(config),
   ]);
 }

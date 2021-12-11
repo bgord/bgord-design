@@ -93,6 +93,17 @@ export const FontSizes: Record<FontSizeType, string> = {
   32: '32',
 };
 
+type FontWeightType = '300' | '400' | '500' | '700' | '900' | 'unset';
+
+export const FontWeights: Record<FontWeightType, string> = {
+  '300': '300',
+  '400': '400',
+  '500': '500',
+  '700': '700',
+  '900': '900',
+  unset: 'unset',
+};
+
 type FlexDirectionType = 'row' | 'row-reverse' | 'column' | 'column-reverse';
 
 export const FlexDirections: Record<FlexDirectionType, string> = {
