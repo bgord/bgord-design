@@ -11,6 +11,7 @@ import { ZIndexGenerator } from './z-index-generator';
 import { WidthsGenerator } from './widhts-generator';
 import { FontSizeGenerator } from './font-size-generator';
 import { FontWeightGenerator } from './font-weight-generator';
+import { LineHeightsGenerator } from './line-height-generator';
 import { FlexDirectionsGenerator } from './flex-directions-generator';
 
 import {
@@ -24,6 +25,7 @@ import {
   FontSizes,
   FontWeights,
   FlexDirections,
+  LineHeights,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -53,6 +55,7 @@ export async function main() {
     widths: Widths,
     fontSizes: FontSizes,
     fontWeights: FontWeights,
+    lineHeights: LineHeights,
     flexDirections: FlexDirections,
   };
 
@@ -67,6 +70,7 @@ export async function main() {
     new WidthsGenerator(config),
     new FontSizeGenerator(config),
     new FontWeightGenerator(config),
+    new LineHeightsGenerator(config),
     new FlexDirectionsGenerator(config),
   ]);
 }
