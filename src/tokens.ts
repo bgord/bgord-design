@@ -104,6 +104,16 @@ export const FontWeights: Record<FontWeightType, string> = {
   unset: 'unset',
 };
 
+type LineHeightType = '12' | '16' | '24' | '32' | 'unset';
+
+export const LineHeights: Record<LineHeightType, string> = {
+  12: '12',
+  16: '16',
+  24: '24',
+  32: '32',
+  unset: 'unset',
+};
+
 type FlexDirectionType = 'row' | 'row-reverse' | 'column' | 'column-reverse';
 
 export const FlexDirections: Record<FlexDirectionType, string> = {

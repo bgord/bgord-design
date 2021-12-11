@@ -1,26 +1,26 @@
 import { GeneratorInterface, GeneratorConfigType } from './generator';
 
-export class FontWeightGenerator implements GeneratorInterface {
+export class LineHeightGenerator implements GeneratorInterface {
   spacing: GeneratorConfigType['spacing'];
   displays: GeneratorConfigType['displays'];
-  fontWeights: GeneratorConfigType['fontWeights'];
+  lineHeights: GeneratorConfigType['lineHeights'];
 
   constructor(config: GeneratorConfigType) {
     this.spacing = config.spacing;
     this.displays = config.displays;
-    this.fontWeights = config.fontWeights;
+    this.lineHeights = config.lineHeights;
   }
 
   generateHeader(): string {
-    return '/* Font weights */\n\n';
+    return '/* Line heights */\n\n';
   }
 
   generateCss(): string {
     let output = '';
 
-    // Regular display: data-fw="*"
-    for (const [key, value] of Object.entries(this.fontWeights)) {
-      output += `*[data-fw='${key}'] {\n  font-weight: ${value};\n}\n`;
+    // Regular display: data-lh="*"
+    for (const [key, value] of Object.entries(this.lineHeights)) {
+      output += `*[data-lh='${key}'] {\n  line-height: ${value};\n}\n`;
     }
 
     return output;
