@@ -18,7 +18,11 @@ export class DisplaysGenerator implements GeneratorInterface {
 
     // Regular display: data-display="*"
     for (const [key, value] of Object.entries(this.displays)) {
-      output += `*[data-display='${key}'] {\n  display: ${value};\n}\n`;
+      if (value === 'flex') {
+        output += `*[data-display='${key}'] {\n  display: ${value};\nflex-wrap: wrap;\n}\n`;
+      } else {
+        output += `*[data-display='${key}'] {\n  display: ${value};\n}\n`;
+      }
     }
 
     return output;
