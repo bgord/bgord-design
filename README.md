@@ -23,7 +23,7 @@ Text:
 
 - font-size
 - font-weight
+- line-height
 
 TODO:
-- line-height (lh)
 - letter-spacing (ls)
