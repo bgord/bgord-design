@@ -33,7 +33,15 @@ import {
 
 class GeneratorProcessor {
   async process(generators: GeneratorInterface[]) {
-    let output = '';
+    let output = `
+/* General */
+
+* {
+  box-sizing: border-box;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+}\n\n`;
 
     for (const generator of generators) {
       output += generator.generateHeader();
