@@ -62,15 +62,18 @@ export async function main() {
   await new GeneratorProcessor().process([
     new Margins(config),
     new Paddings(config),
+
     new DisplaysGenerator(config),
     new AxisPlacementsGenerator(config),
-    new PositionsGenerator(config),
     new FlexWrapGenerator(config),
-    new ZIndexGenerator(config),
+    new FlexDirectionsGenerator(config),
+
     new WidthsGenerator(config),
+    new PositionsGenerator(config),
+    new ZIndexGenerator(config),
+
     new FontSizeGenerator(config),
     new FontWeightGenerator(config),
     new LineHeightsGenerator(config),
-    new FlexDirectionsGenerator(config),
   ]);
 }
