@@ -123,3 +123,28 @@ export const FlexDirections: Record<FlexDirectionType, string> = {
   column: 'column',
   'column-reverse': 'column-reverse',
 };
+
+type ColorsType =
+  | 'white'
+  | 'gray-100'
+  | 'gray-200'
+  | 'gray-300'
+  | 'gray-400'
+  | 'gray-500'
+  | 'gray-600'
+  | 'gray-700'
+  | 'gray-800'
+  | 'black';
+
+export const Colors: Record<ColorsType, string> = {
+  white: '#F9FAFB',
+  'gray-100': '#F3F4F6',
+  'gray-200': '#E5E7EB',
+  'gray-300': '#D1D5DB',
+  'gray-400': '#9CA3AF',
+  'gray-500': '#6B7280',
+  'gray-600': '#4B5563',
+  'gray-700': '#374151',
+  'gray-800': '#1F2937',
+  black: '#111827',
+};

@@ -26,6 +26,7 @@ import {
   FontWeights,
   FlexDirections,
   LineHeights,
+  Colors,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -57,6 +58,7 @@ export async function main() {
     fontWeights: FontWeights,
     lineHeights: LineHeights,
     flexDirections: FlexDirections,
+    colors: Colors,
   };
 
   await new GeneratorProcessor().process([

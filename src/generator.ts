@@ -10,6 +10,7 @@ import {
   FlexDirections,
   FontWeights,
   LineHeights,
+  Colors,
 } from './tokens';
 
 export interface GeneratorInterface {
@@ -33,4 +34,5 @@ export type GeneratorConfigType = {
   fontWeights: typeof FontWeights;
   lineHeights: typeof LineHeights;
   flexDirections: typeof FlexDirections;
+  colors: typeof Colors;
 };
