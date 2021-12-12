@@ -41,6 +41,10 @@ class GeneratorProcessor {
   line-height: 24px;
   padding: 0;
   margin: 0;
+}
+
+small {
+  display: block;
 }\n\n`;
 
     for (const generator of generators) {
