@@ -14,6 +14,7 @@ import { FontWeightGenerator } from './font-weight-generator';
 import { LineHeightsGenerator } from './line-height-generator';
 import { FlexDirectionsGenerator } from './flex-directions-generator';
 import { BackgroundsGenerator } from './backgrounds-generator';
+import { FontColorsGenerator } from './font-colors-generator';
 
 import {
   Spacing,
@@ -77,6 +78,7 @@ export async function main() {
 
     new FontSizeGenerator(config),
     new FontWeightGenerator(config),
+    new FontColorsGenerator(config),
     new LineHeightsGenerator(config),
 
     new BackgroundsGenerator(config),
