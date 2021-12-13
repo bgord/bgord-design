@@ -29,6 +29,7 @@ import {
   FlexDirections,
   LineHeights,
   Colors,
+  Breakpoints,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -73,6 +74,7 @@ export async function main() {
     lineHeights: LineHeights,
     flexDirections: FlexDirections,
     colors: Colors,
+    breakpoints: Breakpoints,
   };
 
   await new GeneratorProcessor().process([

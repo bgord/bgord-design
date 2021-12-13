@@ -148,3 +148,9 @@ export const Colors: Record<ColorsType, string> = {
   'gray-800': '#1F2937',
   black: '#111827',
 };
+
+type BreakpointType = 'md';
+
+export const Breakpoints: Record<BreakpointType, number> = {
+  md: 768,
+};
