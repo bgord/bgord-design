@@ -1,13 +1,9 @@
 import { GeneratorInterface, GeneratorConfigType } from './generator';
 
 export class BackgroundsGenerator implements GeneratorInterface {
-  spacing: GeneratorConfigType['spacing'];
-  displays: GeneratorConfigType['displays'];
   colors: GeneratorConfigType['colors'];
 
   constructor(config: GeneratorConfigType) {
-    this.spacing = config.spacing;
-    this.displays = config.displays;
     this.colors = config.colors;
   }
 

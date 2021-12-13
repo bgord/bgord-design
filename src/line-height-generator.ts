@@ -1,13 +1,9 @@
 import { GeneratorInterface, GeneratorConfigType } from './generator';
 
 export class LineHeightsGenerator implements GeneratorInterface {
-  spacing: GeneratorConfigType['spacing'];
-  displays: GeneratorConfigType['displays'];
   lineHeights: GeneratorConfigType['lineHeights'];
 
   constructor(config: GeneratorConfigType) {
-    this.spacing = config.spacing;
-    this.displays = config.displays;
     this.lineHeights = config.lineHeights;
   }
 

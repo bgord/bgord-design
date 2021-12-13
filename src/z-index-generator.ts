@@ -1,13 +1,9 @@
 import { GeneratorInterface, GeneratorConfigType } from './generator';
 
 export class ZIndexGenerator implements GeneratorInterface {
-  spacing: GeneratorConfigType['spacing'];
-  displays: GeneratorConfigType['displays'];
   zIndexes: GeneratorConfigType['zIndexes'];
 
   constructor(config: GeneratorConfigType) {
-    this.spacing = config.spacing;
-    this.displays = config.displays;
     this.zIndexes = config.zIndexes;
   }
 

@@ -1,13 +1,9 @@
 import { GeneratorInterface, GeneratorConfigType } from './generator';
 
 export class FontWeightGenerator implements GeneratorInterface {
-  spacing: GeneratorConfigType['spacing'];
-  displays: GeneratorConfigType['displays'];
   fontWeights: GeneratorConfigType['fontWeights'];
 
   constructor(config: GeneratorConfigType) {
-    this.spacing = config.spacing;
-    this.displays = config.displays;
     this.fontWeights = config.fontWeights;
   }
 

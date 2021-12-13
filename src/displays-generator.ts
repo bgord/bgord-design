@@ -1,11 +1,9 @@
 import { GeneratorInterface, GeneratorConfigType } from './generator';
 
 export class DisplaysGenerator implements GeneratorInterface {
-  spacing: GeneratorConfigType['spacing'];
   displays: GeneratorConfigType['displays'];
 
   constructor(config: GeneratorConfigType) {
-    this.spacing = config.spacing;
     this.displays = config.displays;
   }
 
