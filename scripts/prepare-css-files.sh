@@ -18,3 +18,7 @@ npx doiuse --browsers " last 2 versions" dist/main.css
 info "Minifying..."
 npx clean-css-cli dist/main.css -o dist/main.min.css
 npx clean-css-cli dist/normalize.css -o dist/normalize.min.css
+
+info "Compressing..."
+npx gzip dist/main.min.css --extension=gz --extension=br
+npx gzip dist/normalize.min.css --extension=gz --extension=br
