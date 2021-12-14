@@ -19,6 +19,16 @@ export class FontSizeGenerator implements GeneratorInterface {
       output += `*[data-fs='${key}'] {\n  font-size: ${value}px;\n}\n`;
     }
 
+    for (const [name, value] of Object.entries(this.fontSizes)) {
+      output += `@media (max-width: ${value}px) {\n`;
+
+      for (const [key, value] of Object.entries(this.fontSizes)) {
+        output += `  *[data-${name}-fs='${key}'] {\n    font-size: ${value}px;\n  }\n`;
+      }
+
+      output += `}\n`;
+    }
+
     return output;
   }
 
