@@ -55,9 +55,9 @@ small {
       output += generator.generateFooter();
     }
 
-    const file = new File('dist/main.css');
+    output += await new File('src/ui/button.css').read();
 
-    await file.save(output);
+    await new File('dist/main.css').save(output);
   }
 }
 

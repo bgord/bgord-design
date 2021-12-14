@@ -1,0 +1,67 @@
+/* Button component */
+
+.c-button {
+  height: 36px;
+  padding: 0 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  user-select: none; /* Prevents from copying text on mobile */
+  white-space: nowrap; /* Prevents from multiline text */
+
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-color: transparent;
+
+  transition: border-radius 300ms, opacity 400ms;
+}
+
+.c-button:hover,
+.c-button:active,
+.c-button:focus {
+  cursor: pointer;
+
+  opacity: 0.75;
+  border-radius: 0;
+
+  transition: border-radius 300ms, opacity 400ms;
+}
+
+.c-button:active {
+  border: 2px solid transparent !important;
+}
+
+.c-button:disabled {
+  opacity: 0.5;
+
+  transition: opacity 300ms;
+}
+.c-button:disabled:hover {
+  cursor: auto;
+}
+
+.c-button[data-variant='primary'] {
+  background-color: #374151;
+  color: #e5e7eb;
+  letter-spacing: 0.75px;
+}
+.c-button[data-variant='secondary'] {
+  background-color: #d1d5db;
+  color: #1f2937;
+  letter-spacing: 0.5px;
+}
+.c-button[data-variant='bare'],
+.c-button[data-variant='with-icon'] {
+  background-color: transparent;
+  color: #1f2937;
+  letter-spacing: 0.5px;
+}
+.c-button[data-variant='with-icon'] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===================== */
