@@ -1,15 +1,15 @@
-import { promises as fs } from 'fs';
+import { promises as fs, PathLike } from 'fs';
 
-type FilenameType = string;
+type PathType = PathLike;
 
 export class File {
-  filename: FilenameType;
+  path: PathType;
 
-  constructor(filename: FilenameType) {
-    this.filename = filename;
+  constructor(path: PathType) {
+    this.path = path;
   }
 
-  save(content: string) {
-    return fs.writeFile(this.filename, content);
+  async save(content: string) {
+    return fs.writeFile(this.path, content);
   }
 }
