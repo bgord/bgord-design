@@ -36,8 +36,7 @@ import {
 
 class GeneratorProcessor {
   async process(generators: GeneratorInterface[]) {
-    let output = `
-/* General */
+    let output = `/* General */
 
 * {
   box-sizing: border-box;
