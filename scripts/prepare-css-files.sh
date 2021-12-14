@@ -22,3 +22,9 @@ npx clean-css-cli dist/normalize.css -o dist/normalize.min.css
 info "Compressing..."
 npx gzip dist/main.min.css --extension=gz --extension=br
 npx gzip dist/normalize.min.css --extension=gz --extension=br
+
+info "main.css file sizes:"
+ls -alh dist | grep main | awk '{print $5"\t"$8}'
+
+info "normalize.css file sizes:"
+ls -alh dist | grep normalize | awk '{print $5"\t"$8}'
