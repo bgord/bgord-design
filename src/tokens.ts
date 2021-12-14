@@ -4,6 +4,7 @@ type SpacingScaleType =
   | '6'
   | '12'
   | '24'
+  | '36'
   | '48'
   | '72'
   | 'auto'
@@ -15,6 +16,7 @@ export const Spacing: Record<SpacingScaleType, string> = {
   '6': '6px',
   '12': '12px',
   '24': '24px',
+  '36': '36px',
   '48': '48px',
   '72': '72px',
   auto: 'auto',
