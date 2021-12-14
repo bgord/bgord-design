@@ -12,4 +12,13 @@ export class File {
   async save(content: string) {
     return fs.writeFile(this.path, content);
   }
+
+  async read(): Promise<string | null> {
+    try {
+      const result = await fs.readFile(this.path);
+      return result.toString();
+    } catch (error) {
+      return null;
+    }
+  }
 }
