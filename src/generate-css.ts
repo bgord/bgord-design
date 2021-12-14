@@ -15,6 +15,7 @@ import { LineHeightsGenerator } from './line-height-generator';
 import { FlexDirectionsGenerator } from './flex-directions-generator';
 import { BackgroundsGenerator } from './backgrounds-generator';
 import { FontColorsGenerator } from './font-colors-generator';
+import { LetterSpacingsGenerator } from './letter-spacings-generator';
 
 import {
   Spacing,
@@ -30,6 +31,7 @@ import {
   LineHeights,
   Colors,
   Breakpoints,
+  LetterSpacings,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -75,6 +77,7 @@ export async function main() {
     flexDirections: FlexDirections,
     colors: Colors,
     breakpoints: Breakpoints,
+    letterSpacings: LetterSpacings,
   };
 
   await new GeneratorProcessor().process([
@@ -94,6 +97,7 @@ export async function main() {
     new FontWeightGenerator(config),
     new FontColorsGenerator(config),
     new LineHeightsGenerator(config),
+    new LetterSpacingsGenerator(config),
 
     new BackgroundsGenerator(config),
   ]);

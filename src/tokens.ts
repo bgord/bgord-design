@@ -154,3 +154,12 @@ type BreakpointType = 'md';
 export const Breakpoints: Record<BreakpointType, number> = {
   md: 768,
 };
+
+type LetterSpacingType = '0.5' | '1' | '1.5' | '2';
+
+export const LetterSpacings: Record<LetterSpacingType, number> = {
+  '0.5': 0.5,
+  '1': 1,
+  '1.5': 1.5,
+  '2': 2,
+};

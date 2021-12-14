@@ -12,6 +12,7 @@ import {
   LineHeights,
   Colors,
   Breakpoints,
+  LetterSpacings,
 } from './tokens';
 
 export interface GeneratorInterface {
@@ -34,4 +35,5 @@ export type GeneratorConfigType = {
   flexDirections: typeof FlexDirections;
   colors: typeof Colors;
   breakpoints: typeof Breakpoints;
+  letterSpacings: typeof LetterSpacings;
 };
