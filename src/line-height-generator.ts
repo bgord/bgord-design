@@ -16,7 +16,7 @@ export class LineHeightsGenerator implements GeneratorInterface {
 
     // Regular display: data-lh="*"
     for (const [key, value] of Object.entries(this.lineHeights)) {
-      output += `*[data-lh='${key}'] {\n  line-height: ${value};\n}\n`;
+      output += `*[data-lh='${key}'] {\n  line-height: ${value}px;\n}\n`;
     }
 
     return output;
