@@ -84,7 +84,7 @@ export const Widths: Record<WidthType, string> = {
   unset: 'unset',
 };
 
-type FontSizeType = '12' | '14' | '16' | '20' | '24' | '32';
+type FontSizeType = '12' | '14' | '16' | '20' | '24' | '32' | '36';
 
 export const FontSizes: Record<FontSizeType, string> = {
   12: '12',
@@ -93,6 +93,7 @@ export const FontSizes: Record<FontSizeType, string> = {
   20: '20',
   24: '24',
   32: '32',
+  36: '36',
 };
 
 type FontWeightType = '300' | '400' | '500' | '700' | '900' | 'unset';
@@ -106,7 +107,7 @@ export const FontWeights: Record<FontWeightType, string> = {
   unset: 'unset',
 };
 
-type LineHeightType = '12' | '16' | '20' | '24' | '32' | 'unset';
+type LineHeightType = '12' | '16' | '20' | '24' | '32' | '36' | 'unset';
 
 export const LineHeights: Record<LineHeightType, string> = {
   '12': '12',
@@ -114,6 +115,7 @@ export const LineHeights: Record<LineHeightType, string> = {
   '20': '20',
   '24': '24',
   '32': '32',
+  '36': '36',
   unset: 'unset',
 };
 
