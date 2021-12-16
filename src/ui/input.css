@@ -1,0 +1,44 @@
+.c-input {
+  height: 36px;
+  font-size: 12px;
+  line-height: 24px;
+  color: #374151;
+  padding: 0 0 0 6px;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  outline: none;
+  appearance: none;
+
+  transition: border-radius 300ms, border-color 400ms;
+}
+
+.c-input:hover,
+.c-input:active,
+.c-input:focus {
+  border-color: #9ca3af;
+  border-radius: 0;
+
+  transition: border-radius 300ms, border-color 400ms;
+}
+
+.c-input:disabled {
+  opacity: 0.75;
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.c-input:placeholder-shown {
+  color: #4b5563;
+}
+
+.c-input:invalid:not(:placeholder-shown) {
+  border-color: #b31940;
+}
+
+/* To avoid zooming on input focus on iOS Chrome and Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+  .c-input {
+    font-size: 16px;
+  }
+}

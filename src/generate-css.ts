@@ -56,6 +56,7 @@ small {
     }
 
     output += await new File('src/ui/button.css').read();
+    output += await new File('src/ui/input.css').read();
     output += await new File('src/ui/label.css').read();
 
     await new File('dist/main.css').save(output);
