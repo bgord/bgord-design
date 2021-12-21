@@ -13,6 +13,7 @@ import {
   Colors,
   Breakpoints,
   LetterSpacings,
+  FlexGrows,
 } from './tokens';
 
 export interface GeneratorInterface {
@@ -36,4 +37,5 @@ export type GeneratorConfigType = {
   colors: typeof Colors;
   breakpoints: typeof Breakpoints;
   letterSpacings: typeof LetterSpacings;
+  flexGrows: typeof FlexGrows;
 };

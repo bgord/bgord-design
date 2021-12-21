@@ -32,6 +32,7 @@ import {
   Colors,
   Breakpoints,
   LetterSpacings,
+  FlexGrows,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -79,6 +80,7 @@ export async function main() {
     colors: Colors,
     breakpoints: Breakpoints,
     letterSpacings: LetterSpacings,
+    flexGrows: FlexGrows,
   };
 
   await new GeneratorProcessor().process([

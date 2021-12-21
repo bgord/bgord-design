@@ -168,3 +168,10 @@ export const LetterSpacings: Record<LetterSpacingType, number> = {
   '1.5': 1.5,
   '2': 2,
 };
+
+type FlexGrowType = '1' | 'unset';
+
+export const FlexGrows: Record<FlexGrowType, string> = {
+  '1': '1',
+  unset: 'unset',
+};
