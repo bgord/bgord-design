@@ -19,23 +19,23 @@ export class BorderColorsGenerator implements GeneratorInterface {
     }
 
     for (const [key, value] of Object.entries(this.borderColors)) {
-      output += `*[data-bcx='${key}'] {\n  border-right-color: ${value};\n  border-left-color: ${value};\n border-style: solid;\n}\n`;
+      output += `*[data-bcx='${key}'] {\n  border-right-color: ${value};\n  border-left-color: ${value};\n border-right-style: solid;\n  border-left-style: solid;\n}\n`;
     }
     for (const [key, value] of Object.entries(this.borderColors)) {
-      output += `*[data-bcy='${key}'] {\n  border-top-color: ${value};\n  border-bottom-color: ${value};\n border-style: solid;\n}\n`;
+      output += `*[data-bcy='${key}'] {\n  border-top-color: ${value};\n  border-bottom-color: ${value};\n border-top-style: solid;\n  border-bottom-style: solid;\n}\n`;
     }
 
     for (const [key, value] of Object.entries(this.borderColors)) {
-      output += `*[data-bct='${key}'] {\n  border-top-color: ${value};\n  border-style: solid;\n}\n`;
+      output += `*[data-bct='${key}'] {\n  border-top-color: ${value};\n  border-top-style: solid;\n}\n`;
     }
     for (const [key, value] of Object.entries(this.borderColors)) {
-      output += `*[data-bcr='${key}'] {\n  border-right-color: ${value};\n  border-style: solid;\n}\n`;
+      output += `*[data-bcr='${key}'] {\n  border-right-color: ${value};\n  border-right-style: solid;\n}\n`;
     }
     for (const [key, value] of Object.entries(this.borderColors)) {
-      output += `*[data-bcb='${key}'] {\n  border-bottom-color: ${value};\n  border-style: solid;\n}\n`;
+      output += `*[data-bcb='${key}'] {\n  border-bottom-color: ${value};\n  border-bottom-style: solid;\n}\n`;
     }
     for (const [key, value] of Object.entries(this.borderColors)) {
-      output += `*[data-bcl='${key}'] {\n  border-left-color: ${value};\n  border-style: solid;\n}\n`;
+      output += `*[data-bcl='${key}'] {\n  border-left-color: ${value};\n  border-left-style: solid;\n}\n`;
     }
 
     return output;
