@@ -17,6 +17,7 @@ import { BackgroundsGenerator } from './backgrounds-generator';
 import { FontColorsGenerator } from './font-colors-generator';
 import { LetterSpacingsGenerator } from './letter-spacings-generator';
 import { FlexGrowsGenerator } from './flex-grows-generator';
+import { BorderWidthsGenerator } from './border-widths-generator';
 
 import {
   Spacing,
@@ -34,6 +35,7 @@ import {
   Breakpoints,
   LetterSpacings,
   FlexGrows,
+  BorderWidths,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -82,6 +84,7 @@ export async function main() {
     breakpoints: Breakpoints,
     letterSpacings: LetterSpacings,
     flexGrows: FlexGrows,
+    borderWidths: BorderWidths,
   };
 
   await new GeneratorProcessor().process([
@@ -105,5 +108,6 @@ export async function main() {
     new LetterSpacingsGenerator(config),
 
     new BackgroundsGenerator(config),
+    new BorderWidthsGenerator(config),
   ]);
 }
