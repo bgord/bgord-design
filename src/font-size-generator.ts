@@ -2,9 +2,11 @@ import { GeneratorInterface, GeneratorConfigType } from './generator';
 
 export class FontSizeGenerator implements GeneratorInterface {
   fontSizes: GeneratorConfigType['fontSizes'];
+  breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
     this.fontSizes = config.fontSizes;
+    this.breakpoints = config.breakpoints;
   }
 
   generateHeader(): string {
@@ -19,7 +21,7 @@ export class FontSizeGenerator implements GeneratorInterface {
       output += `*[data-fs='${key}'] {\n  font-size: ${value}px;\n}\n`;
     }
 
-    for (const [name, value] of Object.entries(this.fontSizes)) {
+    for (const [name, value] of Object.entries(this.breakpoints)) {
       output += `@media (max-width: ${value}px) {\n`;
 
       for (const [key, value] of Object.entries(this.fontSizes)) {
