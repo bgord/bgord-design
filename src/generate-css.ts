@@ -16,6 +16,7 @@ import { FlexDirectionsGenerator } from './flex-directions-generator';
 import { BackgroundsGenerator } from './backgrounds-generator';
 import { FontColorsGenerator } from './font-colors-generator';
 import { LetterSpacingsGenerator } from './letter-spacings-generator';
+import { FlexGrowsGenerator } from './flex-grows-generator';
 
 import {
   Spacing,
@@ -91,6 +92,7 @@ export async function main() {
     new AxisPlacementsGenerator(config),
     new FlexWrapGenerator(config),
     new FlexDirectionsGenerator(config),
+    new FlexGrowsGenerator(config),
 
     new WidthsGenerator(config),
     new PositionsGenerator(config),
