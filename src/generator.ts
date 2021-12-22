@@ -15,6 +15,7 @@ import {
   LetterSpacings,
   FlexGrows,
   BorderWidths,
+  BorderColors,
 } from './tokens';
 
 export interface GeneratorInterface {
@@ -40,4 +41,5 @@ export type GeneratorConfigType = {
   letterSpacings: typeof LetterSpacings;
   flexGrows: typeof FlexGrows;
   borderWidths: typeof BorderWidths;
+  borderColors: typeof BorderColors;
 };

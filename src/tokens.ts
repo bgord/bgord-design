@@ -185,3 +185,10 @@ export const BorderWidths: Record<BorderWidthType, number> = {
   '6': 6,
   '12': 12,
 };
+
+type BorderColorType = ColorsType | 'transparent';
+
+export const BorderColors: Record<BorderColorType, string> = {
+  ...Colors,
+  transparent: 'transparent',
+};
