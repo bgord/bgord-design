@@ -8,6 +8,6 @@
   transition: opacity 300ms;
 }
 
-.c-link[variant='bare'] {
+.c-link[data-variant='bare'] {
   text-decoration: none;
 }
