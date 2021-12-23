@@ -1,0 +1,13 @@
+.c-link {
+  text-underline-offset: 4px;
+  color: #111827;
+}
+
+.c-link:hover {
+  opacity: 0.75;
+  transition: opacity 300ms;
+}
+
+.c-link[variant='bare'] {
+  text-decoration: none;
+}
