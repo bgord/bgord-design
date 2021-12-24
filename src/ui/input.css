@@ -1,3 +1,5 @@
+/* Input component */
+
 .c-input {
   height: 36px;
   font-size: 12px;
@@ -42,3 +44,5 @@
     font-size: 16px;
   }
 }
+
+/* ===================== */

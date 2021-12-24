@@ -1,3 +1,5 @@
+/* Link component */
+
 .c-link {
   text-underline-offset: 4px;
   letter-spacing: 0.5px;
@@ -11,3 +13,5 @@
 .c-link[data-variant='bare'] {
   text-decoration: none;
 }
+
+/* ===================== */

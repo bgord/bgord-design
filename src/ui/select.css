@@ -1,3 +1,5 @@
+/* Select component */
+
 @supports (appearance: none) {
   .c-select {
     appearance: none;
@@ -44,3 +46,5 @@
     font-size: 16px;
   }
 }
+
+/* ===================== */
