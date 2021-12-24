@@ -1,0 +1,46 @@
+@supports (appearance: none) {
+  .c-select {
+    appearance: none;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 24px 0 6px;
+    height: 36px;
+    width: 150px;
+    font-size: 12px;
+    background: white;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    text-overflow: ellipsis;
+    outline: none;
+  }
+
+  .c-select:hover,
+  .c-select:focus {
+    cursor: pointer;
+    border: 1px solid #9ca3af;
+  }
+
+  .c-select-wrapper {
+    position: relative;
+  }
+
+  .c-select-wrapper::after {
+    position: absolute;
+    content: '';
+    top: 12px;
+    right: 8px;
+    height: 8px;
+    width: 8px;
+    border: 2px solid #1f2937;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+  }
+}
+
+/* To avoid zooming on select focus on Chrome and Safari on iOS */
+@media not all and (min-resolution: 0.001dpcm) {
+  .c-select {
+    font-size: 16px;
+  }
+}
