@@ -13,6 +13,19 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+/**
+ * 1. Add default box-sizing.
+ * 2. Set default line-height.
+ * 3. Remove padding/margin by default.
+ */
+
+* {
+  box-sizing: border-box; /* 1 */
+  line-height: 24px; /* 2 */
+  padding: 0; /* 3 */
+  margin: 0; /* 3 */
+}
+
 /* Sections
    ========================================================================== */
 
