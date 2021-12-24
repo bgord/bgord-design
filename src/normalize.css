@@ -17,11 +17,12 @@ html {
    ========================================================================== */
 
 /**
- * Remove the margin in all browsers.
+ * Remove the margin in all browsers, and sans-serif as the default font-family.
  */
 
 body {
   margin: 0;
+  font-family: sans-serif;
 }
 
 /**
