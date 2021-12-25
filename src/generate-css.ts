@@ -20,6 +20,7 @@ import { FlexGrowsGenerator } from './flex-grows-generator';
 import { BorderWidthsGenerator } from './border-widths-generator';
 import { BorderColorsGenerator } from './border-colors-generator';
 import { BorderRadiusesGenerator } from './border-radiuses-generator';
+import { MaxWidthsGenerator } from './max-widths-generator';
 
 import {
   Spacing,
@@ -43,6 +44,7 @@ import {
   BorderWidths,
   BorderColors,
   BorderRadiuses,
+  MaxWidths,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -88,6 +90,7 @@ export async function main() {
     borderWidths: BorderWidths,
     borderColors: BorderColors,
     borderRadiuses: BorderRadiuses,
+    maxWidths: MaxWidths,
   };
 
   await new GeneratorProcessor().process([
@@ -115,5 +118,6 @@ export async function main() {
     new BorderWidthsGenerator(config),
     new BorderColorsGenerator(config),
     new BorderRadiusesGenerator(config),
+    new MaxWidthsGenerator(config),
   ]);
 }

@@ -265,3 +265,11 @@ export const BorderRadiuses: Record<BorderRadiusType, string> = {
   '4': '4px',
   '50%': '50%',
 };
+
+type MaxWidthType = '100%' | '768' | 'unset';
+
+export const MaxWidths: Record<MaxWidthType, string> = {
+  '100%': '100%',
+  '768': '768px',
+  unset: 'unset',
+};
