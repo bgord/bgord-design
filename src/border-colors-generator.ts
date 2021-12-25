@@ -2,9 +2,15 @@ import { GeneratorInterface, GeneratorConfigType } from './generator';
 
 export class BorderColorsGenerator implements GeneratorInterface {
   borderColors: GeneratorConfigType['borderColors'];
+  greens: GeneratorConfigType['greens'];
+  oranges: GeneratorConfigType['oranges'];
+  reds: GeneratorConfigType['reds'];
 
   constructor(config: GeneratorConfigType) {
     this.borderColors = config.borderColors;
+    this.greens = config.greens;
+    this.oranges = config.oranges;
+    this.reds = config.reds;
   }
 
   generateHeader(): string {
@@ -14,7 +20,12 @@ export class BorderColorsGenerator implements GeneratorInterface {
   generateCss(): string {
     let output = '';
 
-    for (const [key, value] of Object.entries(this.borderColors)) {
+    for (const [key, value] of Object.entries({
+      ...this.borderColors,
+      ...this.greens,
+      ...this.oranges,
+      ...this.reds,
+    })) {
       output += `*[data-bc='${key}'] {\n  border-color: ${value};\n  border-style: solid;\n}\n`;
     }
 
