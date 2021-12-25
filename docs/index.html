@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Colors</title>
+
+    <style>
+      :root {
+        --green-100: hsl(112, 50%, 85%);
+        --green-200: hsl(112, 50%, 75%);
+        --green-300: hsl(112, 50%, 65%);
+        --green-400: hsl(112, 50%, 55%);
+        --green-500: hsl(112, 50%, 45%);
+        --green-600: hsl(112, 50%, 35%);
+        --green-700: hsl(112, 50%, 25%);
+        --green-800: hsl(112, 50%, 20%);
+
+        --red-100: hsl(5, 80%, 90%);
+        --red-200: hsl(5, 80%, 83%);
+        --red-300: hsl(5, 80%, 72.5%);
+        --red-400: hsl(5, 80%, 62.5%);
+        --red-500: hsl(5, 80%, 52.5%);
+        --red-600: hsl(5, 80%, 42%);
+        --red-700: hsl(5, 80%, 32.5%);
+        --red-800: hsl(5, 80%, 22.5%);
+
+        --orange-100: hsl(25, 88%, 85%);
+        --orange-200: hsl(25, 88%, 75%);
+        --orange-300: hsl(25, 88%, 65%);
+        --orange-400: hsl(25, 88%, 55%);
+        --orange-500: hsl(25, 88%, 45%);
+        --orange-600: hsl(25, 88%, 37.5%);
+        --orange-700: hsl(25, 88%, 27.5%);
+        --orange-800: hsl(25, 88%, 20%);
+      }
+
+      section {
+        display: flex;
+        font-family: sans-serif;
+      }
+
+      div {
+        width: 200px;
+        margin-right: 5px;
+        padding: 15px;
+        font-weight: 600;
+      }
+
+      .green-background-100 {
+        background-color: var(--green-100);
+      }
+      .green-background-200 {
+        background-color: var(--green-200);
+      }
+      .green-background-300 {
+        background-color: var(--green-300);
+      }
+      .green-background-400 {
+        background-color: var(--green-400);
+      }
+      .green-background-500 {
+        background-color: var(--green-500);
+      }
+      .green-background-600 {
+        background-color: var(--green-600);
+      }
+      .green-background-700 {
+        background-color: var(--green-700);
+      }
+      .green-background-800 {
+        background-color: var(--green-800);
+      }
+
+      .green-color-100 {
+        color: var(--green-100);
+      }
+      .green-color-200 {
+        color: var(--green-200);
+      }
+      .green-color-300 {
+        color: var(--green-300);
+      }
+      .green-color-400 {
+        color: var(--green-400);
+      }
+      .green-color-500 {
+        color: var(--green-500);
+      }
+      .green-color-600 {
+        color: var(--green-600);
+      }
+      .green-color-700 {
+        color: var(--green-700);
+      }
+      .green-color-800 {
+        color: var(--green-800);
+      }
+
+      .red-background-100 {
+        background-color: var(--red-100);
+      }
+      .red-background-200 {
+        background-color: var(--red-200);
+      }
+      .red-background-300 {
+        background-color: var(--red-300);
+      }
+      .red-background-400 {
+        background-color: var(--red-400);
+      }
+      .red-background-500 {
+        background-color: var(--red-500);
+      }
+      .red-background-600 {
+        background-color: var(--red-600);
+      }
+      .red-background-700 {
+        background-color: var(--red-700);
+      }
+      .red-background-800 {
+        background-color: var(--red-800);
+      }
+
+      .red-color-100 {
+        color: var(--red-100);
+      }
+      .red-color-200 {
+        color: var(--red-200);
+      }
+      .red-color-300 {
+        color: var(--red-300);
+      }
+      .red-color-400 {
+        color: var(--red-400);
+      }
+      .red-color-500 {
+        color: var(--red-500);
+      }
+      .red-color-600 {
+        color: var(--red-600);
+      }
+      .red-color-700 {
+        color: var(--red-700);
+      }
+      .red-color-800 {
+        color: var(--red-800);
+      }
+
+      .orange-background-100 {
+        background-color: var(--orange-100);
+      }
+      .orange-background-200 {
+        background-color: var(--orange-200);
+      }
+      .orange-background-300 {
+        background-color: var(--orange-300);
+      }
+      .orange-background-400 {
+        background-color: var(--orange-400);
+      }
+      .orange-background-500 {
+        background-color: var(--orange-500);
+      }
+      .orange-background-600 {
+        background-color: var(--orange-600);
+      }
+      .orange-background-700 {
+        background-color: var(--orange-700);
+      }
+      .orange-background-800 {
+        background-color: var(--orange-800);
+      }
+
+      .orange-color-100 {
+        color: var(--orange-100);
+      }
+      .orange-color-200 {
+        color: var(--orange-200);
+      }
+      .orange-color-300 {
+        color: var(--orange-300);
+      }
+      .orange-color-400 {
+        color: var(--orange-400);
+      }
+      .orange-color-500 {
+        color: var(--orange-500);
+      }
+      .orange-color-600 {
+        color: var(--orange-600);
+      }
+      .orange-color-700 {
+        color: var(--orange-700);
+      }
+      .orange-color-800 {
+        color: var(--orange-800);
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="green-background-100">
+      <div class="green-color-100">100</div>
+      <div class="green-color-200">200</div>
+      <div class="green-color-300">300</div>
+      <div class="green-color-400">400</div>
+      <div class="green-color-500">500</div>
+      <div class="green-color-600">600</div>
+      <div class="green-color-700">700</div>
+      <div class="green-color-800">800</div>
+    </section>
+    <section class="green-background-200">
+      <div class="green-color-100">100</div>
+      <div class="green-color-200">200</div>
+      <div class="green-color-300">300</div>
+      <div class="green-color-400">400</div>
+      <div class="green-color-500">500</div>
+      <div class="green-color-600">600</div>
+      <div class="green-color-700">700</div>
+      <div class="green-color-800">800</div>
+    </section>
+    <section class="green-background-300">
+      <div class="green-color-100">100</div>
+      <div class="green-color-200">200</div>
+      <div class="green-color-300">300</div>
+      <div class="green-color-400">400</div>
+      <div class="green-color-500">500</div>
+      <div class="green-color-600">600</div>
+      <div class="green-color-700">700</div>
+      <div class="green-color-800">800</div>
+    </section>
+    <section class="green-background-400">
+      <div class="green-color-100">100</div>
+      <div class="green-color-200">200</div>
+      <div class="green-color-300">300</div>
+      <div class="green-color-400">400</div>
+      <div class="green-color-500">500</div>
+      <div class="green-color-600">600</div>
+      <div class="green-color-700">700</div>
+      <div class="green-color-800">800</div>
+    </section>
+    <section class="green-background-500">
+      <div class="green-color-100">100</div>
+      <div class="green-color-200">200</div>
+      <div class="green-color-300">300</div>
+      <div class="green-color-400">400</div>
+      <div class="green-color-500">500</div>
+      <div class="green-color-600">600</div>
+      <div class="green-color-700">700</div>
+      <div class="green-color-800">800</div>
+    </section>
+    <section class="green-background-600">
+      <div class="green-color-100">100</div>
+      <div class="green-color-200">200</div>
+      <div class="green-color-300">300</div>
+      <div class="green-color-400">400</div>
+      <div class="green-color-500">500</div>
+      <div class="green-color-600">600</div>
+      <div class="green-color-700">700</div>
+      <div class="green-color-800">800</div>
+    </section>
+    <section class="green-background-700">
+      <div class="green-color-100">100</div>
+      <div class="green-color-200">200</div>
+      <div class="green-color-300">300</div>
+      <div class="green-color-400">400</div>
+      <div class="green-color-500">500</div>
+      <div class="green-color-600">600</div>
+      <div class="green-color-700">700</div>
+      <div class="green-color-800">800</div>
+    </section>
+    <section class="green-background-800">
+      <div class="green-color-100">100</div>
+      <div class="green-color-200">200</div>
+      <div class="green-color-300">300</div>
+      <div class="green-color-400">400</div>
+      <div class="green-color-500">500</div>
+      <div class="green-color-600">600</div>
+      <div class="green-color-700">700</div>
+      <div class="green-color-800">800</div>
+    </section>
+
+    <br />
+
+    <section class="red-background-100">
+      <div class="red-color-100">100</div>
+      <div class="red-color-200">200</div>
+      <div class="red-color-300">300</div>
+      <div class="red-color-400">400</div>
+      <div class="red-color-500">500</div>
+      <div class="red-color-600">600</div>
+      <div class="red-color-700">700</div>
+      <div class="red-color-800">800</div>
+    </section>
+    <section class="red-background-200">
+      <div class="red-color-100">100</div>
+      <div class="red-color-200">200</div>
+      <div class="red-color-300">300</div>
+      <div class="red-color-400">400</div>
+      <div class="red-color-500">500</div>
+      <div class="red-color-600">600</div>
+      <div class="red-color-700">700</div>
+      <div class="red-color-800">800</div>
+    </section>
+    <section class="red-background-300">
+      <div class="red-color-100">100</div>
+      <div class="red-color-200">200</div>
+      <div class="red-color-300">300</div>
+      <div class="red-color-400">400</div>
+      <div class="red-color-500">500</div>
+      <div class="red-color-600">600</div>
+      <div class="red-color-700">700</div>
+      <div class="red-color-800">800</div>
+    </section>
+    <section class="red-background-400">
+      <div class="red-color-100">100</div>
+      <div class="red-color-200">200</div>
+      <div class="red-color-300">300</div>
+      <div class="red-color-400">400</div>
+      <div class="red-color-500">500</div>
+      <div class="red-color-600">600</div>
+      <div class="red-color-700">700</div>
+      <div class="red-color-800">800</div>
+    </section>
+    <section class="red-background-500">
+      <div class="red-color-100">100</div>
+      <div class="red-color-200">200</div>
+      <div class="red-color-300">300</div>
+      <div class="red-color-400">400</div>
+      <div class="red-color-500">500</div>
+      <div class="red-color-600">600</div>
+      <div class="red-color-700">700</div>
+      <div class="red-color-800">800</div>
+    </section>
+    <section class="red-background-600">
+      <div class="red-color-100">100</div>
+      <div class="red-color-200">200</div>
+      <div class="red-color-300">300</div>
+      <div class="red-color-400">400</div>
+      <div class="red-color-500">500</div>
+      <div class="red-color-600">600</div>
+      <div class="red-color-700">700</div>
+      <div class="red-color-800">800</div>
+    </section>
+    <section class="red-background-700">
+      <div class="red-color-100">100</div>
+      <div class="red-color-200">200</div>
+      <div class="red-color-300">300</div>
+      <div class="red-color-400">400</div>
+      <div class="red-color-500">500</div>
+      <div class="red-color-600">600</div>
+      <div class="red-color-700">700</div>
+      <div class="red-color-800">800</div>
+    </section>
+    <section class="red-background-800">
+      <div class="red-color-100">100</div>
+      <div class="red-color-200">200</div>
+      <div class="red-color-300">300</div>
+      <div class="red-color-400">400</div>
+      <div class="red-color-500">500</div>
+      <div class="red-color-600">600</div>
+      <div class="red-color-700">700</div>
+      <div class="red-color-800">800</div>
+    </section>
+
+    <br />
+
+    <section class="orange-background-100">
+      <div class="orange-color-100">100</div>
+      <div class="orange-color-200">200</div>
+      <div class="orange-color-300">300</div>
+      <div class="orange-color-400">400</div>
+      <div class="orange-color-500">500</div>
+      <div class="orange-color-600">600</div>
+      <div class="orange-color-700">700</div>
+      <div class="orange-color-800">800</div>
+    </section>
+    <section class="orange-background-200">
+      <div class="orange-color-100">100</div>
+      <div class="orange-color-200">200</div>
+      <div class="orange-color-300">300</div>
+      <div class="orange-color-400">400</div>
+      <div class="orange-color-500">500</div>
+      <div class="orange-color-600">600</div>
+      <div class="orange-color-700">700</div>
+      <div class="orange-color-800">800</div>
+    </section>
+    <section class="orange-background-300">
+      <div class="orange-color-100">100</div>
+      <div class="orange-color-200">200</div>
+      <div class="orange-color-300">300</div>
+      <div class="orange-color-400">400</div>
+      <div class="orange-color-500">500</div>
+      <div class="orange-color-600">600</div>
+      <div class="orange-color-700">700</div>
+      <div class="orange-color-800">800</div>
+    </section>
+    <section class="orange-background-400">
+      <div class="orange-color-100">100</div>
+      <div class="orange-color-200">200</div>
+      <div class="orange-color-300">300</div>
+      <div class="orange-color-400">400</div>
+      <div class="orange-color-500">500</div>
+      <div class="orange-color-600">600</div>
+      <div class="orange-color-700">700</div>
+      <div class="orange-color-800">800</div>
+    </section>
+    <section class="orange-background-500">
+      <div class="orange-color-100">100</div>
+      <div class="orange-color-200">200</div>
+      <div class="orange-color-300">300</div>
+      <div class="orange-color-400">400</div>
+      <div class="orange-color-500">500</div>
+      <div class="orange-color-600">600</div>
+      <div class="orange-color-700">700</div>
+      <div class="orange-color-800">800</div>
+    </section>
+    <section class="orange-background-600">
+      <div class="orange-color-100">100</div>
+      <div class="orange-color-200">200</div>
+      <div class="orange-color-300">300</div>
+      <div class="orange-color-400">400</div>
+      <div class="orange-color-500">500</div>
+      <div class="orange-color-600">600</div>
+      <div class="orange-color-700">700</div>
+      <div class="orange-color-800">800</div>
+    </section>
+    <section class="orange-background-700">
+      <div class="orange-color-100">100</div>
+      <div class="orange-color-200">200</div>
+      <div class="orange-color-300">300</div>
+      <div class="orange-color-400">400</div>
+      <div class="orange-color-500">500</div>
+      <div class="orange-color-600">600</div>
+      <div class="orange-color-700">700</div>
+      <div class="orange-color-800">800</div>
+    </section>
+    <section class="orange-background-800">
+      <div class="orange-color-100">100</div>
+      <div class="orange-color-200">200</div>
+      <div class="orange-color-300">300</div>
+      <div class="orange-color-400">400</div>
+      <div class="orange-color-500">500</div>
+      <div class="orange-color-600">600</div>
+      <div class="orange-color-700">700</div>
+      <div class="orange-color-800">800</div>
+    </section>
+  </body>
+</html>
