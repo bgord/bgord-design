@@ -154,6 +154,27 @@ export const Grayscale: Record<GrayscaleType, string> = {
   black: '#111827',
 };
 
+type GreenType =
+  | 'green-100'
+  | 'green-200'
+  | 'green-300'
+  | 'green-400'
+  | 'green-500'
+  | 'green-600'
+  | 'green-700'
+  | 'green-800';
+
+export const Greens: Record<GreenType, string> = {
+  'green-100': 'hsl(112, 50%, 85%)',
+  'green-200': 'hsl(112, 50%, 75%)',
+  'green-300': 'hsl(112, 50%, 65%)',
+  'green-400': 'hsl(112, 50%, 55%)',
+  'green-500': 'hsl(112, 50%, 45%)',
+  'green-600': 'hsl(112, 50%, 35%)',
+  'green-700': 'hsl(112, 50%, 25%)',
+  'green-800': 'hsl(112, 50%, 20%)',
+};
+
 type BreakpointType = 'md';
 
 export const Breakpoints: Record<BreakpointType, number> = {
