@@ -175,6 +175,27 @@ export const Greens: Record<GreenType, string> = {
   'green-800': 'hsl(112, 50%, 20%)',
 };
 
+type RedType =
+  | 'red-100'
+  | 'red-200'
+  | 'red-300'
+  | 'red-400'
+  | 'red-500'
+  | 'red-600'
+  | 'red-700'
+  | 'red-800';
+
+export const Reds: Record<RedType, string> = {
+  'red-100': 'hsl(5, 80%, 90%)',
+  'red-200': 'hsl(5, 80%, 83%)',
+  'red-300': 'hsl(5, 80%, 72.5%)',
+  'red-400': 'hsl(5, 80%, 62.5%)',
+  'red-500': 'hsl(5, 80%, 52.5%)',
+  'red-600': 'hsl(5, 80%, 42%)',
+  'red-700': 'hsl(5, 80%, 32.5%)',
+  'red-800': 'hsl(5, 80%, 22.5%)',
+};
+
 type BreakpointType = 'md';
 
 export const Breakpoints: Record<BreakpointType, number> = {

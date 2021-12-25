@@ -12,6 +12,7 @@ import {
   LineHeights,
   Grayscale,
   Greens,
+  Reds,
   Breakpoints,
   LetterSpacings,
   FlexGrows,
@@ -40,6 +41,7 @@ export type GeneratorConfigType = {
   flexDirections: typeof FlexDirections;
   grayscale: typeof Grayscale;
   greens: typeof Greens;
+  reds: typeof Reds;
   breakpoints: typeof Breakpoints;
   letterSpacings: typeof LetterSpacings;
   flexGrows: typeof FlexGrows;
