@@ -16,6 +16,7 @@ import {
   FlexGrows,
   BorderWidths,
   BorderColors,
+  BorderRadiuses,
 } from './tokens';
 
 export interface GeneratorInterface {
@@ -42,4 +43,5 @@ export type GeneratorConfigType = {
   flexGrows: typeof FlexGrows;
   borderWidths: typeof BorderWidths;
   borderColors: typeof BorderColors;
+  borderRadiuses: typeof BorderRadiuses;
 };

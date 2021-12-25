@@ -192,3 +192,13 @@ export const BorderColors: Record<BorderColorType, string> = {
   ...Colors,
   transparent: 'transparent',
 };
+
+type BorderRadiusType = '0' | '1' | '2' | '4' | '50%';
+
+export const BorderRadiuses: Record<BorderRadiusType, string> = {
+  '0': '0',
+  '1': '1px',
+  '2': '2px',
+  '4': '4px',
+  '50%': '50%',
+};
