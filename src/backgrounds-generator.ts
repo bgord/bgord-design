@@ -4,7 +4,7 @@ export class BackgroundsGenerator implements GeneratorInterface {
   colors: GeneratorConfigType['grayscale'];
 
   constructor(config: GeneratorConfigType) {
-    this.colors = config.grayscale;
+    this.colors = { ...config.grayscale, ...config.greens };
   }
 
   generateHeader(): string {
