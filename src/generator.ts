@@ -10,7 +10,7 @@ import {
   FlexDirections,
   FontWeights,
   LineHeights,
-  Colors,
+  Grayscale,
   Breakpoints,
   LetterSpacings,
   FlexGrows,
@@ -37,7 +37,7 @@ export type GeneratorConfigType = {
   fontWeights: typeof FontWeights;
   lineHeights: typeof LineHeights;
   flexDirections: typeof FlexDirections;
-  colors: typeof Colors;
+  grayscale: typeof Grayscale;
   breakpoints: typeof Breakpoints;
   letterSpacings: typeof LetterSpacings;
   flexGrows: typeof FlexGrows;

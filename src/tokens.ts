@@ -129,7 +129,7 @@ export const FlexDirections: Record<FlexDirectionType, string> = {
   'column-reverse': 'column-reverse',
 };
 
-type ColorsType =
+type GrayscaleType =
   | 'white'
   | 'gray-100'
   | 'gray-200'
@@ -141,7 +141,7 @@ type ColorsType =
   | 'gray-800'
   | 'black';
 
-export const Colors: Record<ColorsType, string> = {
+export const Grayscale: Record<GrayscaleType, string> = {
   white: '#F9FAFB',
   'gray-100': '#F3F4F6',
   'gray-200': '#E5E7EB',
@@ -186,10 +186,10 @@ export const BorderWidths: Record<BorderWidthType, number> = {
   '12': 12,
 };
 
-type BorderColorType = ColorsType | 'transparent';
+type BorderColorType = GrayscaleType | 'transparent';
 
 export const BorderColors: Record<BorderColorType, string> = {
-  ...Colors,
+  ...Grayscale,
   transparent: 'transparent',
 };
 

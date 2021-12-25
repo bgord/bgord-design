@@ -1,10 +1,10 @@
 import { GeneratorInterface, GeneratorConfigType } from './generator';
 
 export class BackgroundsGenerator implements GeneratorInterface {
-  colors: GeneratorConfigType['colors'];
+  colors: GeneratorConfigType['grayscale'];
 
   constructor(config: GeneratorConfigType) {
-    this.colors = config.colors;
+    this.colors = config.grayscale;
   }
 
   generateHeader(): string {
