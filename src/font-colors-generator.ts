@@ -4,7 +4,12 @@ export class FontColorsGenerator implements GeneratorInterface {
   colors: GeneratorConfigType['grayscale'];
 
   constructor(config: GeneratorConfigType) {
-    this.colors = { ...config.grayscale, ...config.greens, ...config.reds };
+    this.colors = {
+      ...config.grayscale,
+      ...config.greens,
+      ...config.reds,
+      ...config.oranges,
+    };
   }
 
   generateHeader(): string {

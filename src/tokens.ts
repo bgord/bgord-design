@@ -196,6 +196,27 @@ export const Reds: Record<RedType, string> = {
   'red-800': 'hsl(5, 80%, 22.5%)',
 };
 
+type OrangeType =
+  | 'orange-100'
+  | 'orange-200'
+  | 'orange-300'
+  | 'orange-400'
+  | 'orange-500'
+  | 'orange-600'
+  | 'orange-700'
+  | 'orange-800';
+
+export const Oranges: Record<OrangeType, string> = {
+  'orange-100': 'hsl(25, 88%, 85%)',
+  'orange-200': 'hsl(25, 88%, 75%)',
+  'orange-300': 'hsl(25, 88%, 65%)',
+  'orange-400': 'hsl(25, 88%, 55%)',
+  'orange-500': 'hsl(25, 88%, 45%)',
+  'orange-600': 'hsl(25, 88%, 37.5%)',
+  'orange-700': 'hsl(25, 88%, 27.5%)',
+  'orange-800': 'hsl(25, 88%, 20%)',
+};
+
 type BreakpointType = 'md';
 
 export const Breakpoints: Record<BreakpointType, number> = {
