@@ -21,6 +21,7 @@ import {
   BorderColors,
   BorderRadiuses,
   MaxWidths,
+  Transforms,
 } from './tokens';
 
 export interface GeneratorInterface {
@@ -52,4 +53,5 @@ export type GeneratorConfigType = {
   borderColors: typeof BorderColors;
   borderRadiuses: typeof BorderRadiuses;
   maxWidths: typeof MaxWidths;
+  transforms: typeof Transforms;
 };
