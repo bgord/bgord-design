@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.5](https://github.com/bgord/bgord-design/compare/v0.27.4...v0.27.5) (2021-12-28)
+
+
+### Features
+
+* remove step arrows from number input ([4743b9c](https://github.com/bgord/bgord-design/commit/4743b9c4075de7ae56bf9af59aae0701a85d92ce))
+
 ### [0.27.4](https://github.com/bgord/bgord-design/compare/v0.27.3...v0.27.4) (2021-12-28)
 
 
