@@ -1,0 +1,50 @@
+/* Checkbox component */
+
+@supports (appearance: none) {
+  .c-checkbox {
+    position: relative;
+    appearance: none;
+    outline: none;
+
+    min-height: 24px;
+    min-width: 24px;
+    background: white;
+    border: 1px solid #d1d5db;
+  }
+
+  .c-checkbox:hover,
+  .c-checkbox:checked {
+    border-color: #9ca3af;
+    cursor: pointer;
+
+    transition: border-color 400ms;
+  }
+
+  .c-checkbox:checked:hover {
+    border-color: #d1d5db;
+    cursor: pointer;
+
+    transition: border-color 400ms;
+  }
+
+  .c-checkbox:checked::after,
+  .c-checkbox:hover::after {
+    position: absolute;
+    content: '';
+
+    top: 5px;
+    left: 6px;
+    height: 6px;
+    width: 10px;
+    border: 2px solid #374151;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-45deg);
+  }
+
+  .c-checkbox:hover::after {
+    border-color: #9ca3af;
+  }
+}
+
+/* ===================== */
