@@ -230,6 +230,20 @@ button::-moz-focus-inner,
 }
 
 /**
+ * Remove step arrows from the numeric input
+ */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  appearance: textfield;
+}
+
+/**
  * Restore the focus styles unset by the previous rule.
  */
 
