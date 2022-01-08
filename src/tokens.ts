@@ -274,12 +274,18 @@ export const MaxWidths: Record<MaxWidthType, string> = {
   unset: 'unset',
 };
 
-type TransformType = 'uppercase' | 'lowercase' | 'capitalize' | 'none';
+type TransformType =
+  | 'uppercase'
+  | 'lowercase'
+  | 'capitalize'
+  | 'truncate'
+  | 'none';
 
 export const Transforms: Record<TransformType, string> = {
   uppercase: 'uppercase',
   lowercase: 'lowercase',
   capitalize: 'capitalize',
+  truncate: 'truncate',
   none: 'none',
 };
 
