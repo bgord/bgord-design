@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.7](https://github.com/bgord/bgord-design/compare/v0.27.6...v0.27.7) (2022-01-08)
+
+
+### Features
+
+* add overflows ([c0f6b10](https://github.com/bgord/bgord-design/commit/c0f6b10654d16b70a1e7c36feebdcd09928caed4))
+
 ### [0.27.6](https://github.com/bgord/bgord-design/compare/v0.27.4...v0.27.6) (2021-12-28)
 
 
