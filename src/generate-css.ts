@@ -22,6 +22,7 @@ import { BorderColorsGenerator } from './border-colors-generator';
 import { BorderRadiusesGenerator } from './border-radiuses-generator';
 import { MaxWidthsGenerator } from './max-widths-generator';
 import { TransformsGenerator } from './transforms-generator';
+import { OverflowsGenerator } from './overflows-generator';
 
 import {
   Spacing,
@@ -47,6 +48,7 @@ import {
   BorderRadiuses,
   MaxWidths,
   Transforms,
+  Overflows,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -95,6 +97,7 @@ export async function main() {
     borderRadiuses: BorderRadiuses,
     maxWidths: MaxWidths,
     transforms: Transforms,
+    overflows: Overflows,
   };
 
   await new GeneratorProcessor().process([
@@ -124,5 +127,6 @@ export async function main() {
     new BorderRadiusesGenerator(config),
     new MaxWidthsGenerator(config),
     new TransformsGenerator(config),
+    new OverflowsGenerator(config),
   ]);
 }

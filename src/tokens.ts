@@ -282,3 +282,11 @@ export const Transforms: Record<TransformType, string> = {
   capitalize: 'capitalize',
   none: 'none',
 };
+
+type OverflowType = 'auto' | 'scroll' | 'hidden';
+
+export const Overflows: Record<OverflowType, string> = {
+  auto: 'auto',
+  scroll: 'scroll',
+  hidden: 'hidden',
+};
