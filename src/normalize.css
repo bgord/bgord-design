@@ -35,10 +35,12 @@ html {
  * Remove the margin in all browsers, and sans-serif as the default font-family.
  */
 
+html,
 body {
   margin: 0;
   font-family: sans-serif;
   font-size: 16px;
+  height: 100%; /* Allow percentage-based heights in the application */
 }
 
 /**
