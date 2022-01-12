@@ -41,6 +41,7 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   height: 100%; /* Allow percentage-based heights in the application */
+  -webkit-font-smoothing: antialiased;
 }
 
 /**
