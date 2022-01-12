@@ -19,7 +19,9 @@ html {
  * 3. Remove padding/margin by default.
  */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box; /* 1 */
   line-height: 24px; /* 2 */
   padding: 0; /* 3 */
