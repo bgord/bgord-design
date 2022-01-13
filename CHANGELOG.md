@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.11](https://github.com/bgord/bgord-design/compare/v0.27.10...v0.27.11) (2022-01-13)
+
+
+### Features
+
+* remove default padding from the bare button variant ([47b569c](https://github.com/bgord/bgord-design/commit/47b569c67e7737d2a6d9ac6ecd5a3c9c13cdda91))
+
 ### [0.27.10](https://github.com/bgord/bgord-design/compare/v0.27.9...v0.27.10) (2022-01-12)
 
 
