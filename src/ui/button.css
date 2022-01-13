@@ -18,8 +18,6 @@
 .c-button[data-variant='secondary'],
 .c-button[data-variant='bare'],
 .c-button[data-variant='with-icon'] {
-  padding: 0 8px;
-
   font-size: 12px;
   font-weight: 600;
 
@@ -55,11 +53,13 @@
 }
 
 .c-button[data-variant='primary'] {
+  padding: 0 8px;
   background-color: #374151;
   color: #e5e7eb;
   letter-spacing: 0.75px;
 }
 .c-button[data-variant='secondary'] {
+  padding: 0 8px;
   background-color: #d1d5db;
   color: #1f2937;
   letter-spacing: 0.5px;
@@ -71,12 +71,10 @@
   letter-spacing: 0.5px;
 }
 .c-button[data-variant='with-icon'] {
+  padding: 0 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.c-button[data-variant='dyi'] {
 }
 
 /* ===================== */
