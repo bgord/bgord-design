@@ -38,6 +38,15 @@
     border-top: none;
     transform: rotate(45deg);
   }
+
+  .c-select:disabled {
+    opacity: 0.5;
+  }
+
+  .c-select:disabled:hover {
+    cursor: auto;
+    border: 1px solid #d1d5db;
+  }
 }
 
 /* To avoid zooming on select focus on Chrome and Safari on iOS */
