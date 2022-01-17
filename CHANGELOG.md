@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.12](https://github.com/bgord/bgord-design/compare/v0.27.11...v0.27.12) (2022-01-17)
+
+
+### Features
+
+* add disabled select state ([ac48cb8](https://github.com/bgord/bgord-design/commit/ac48cb8ddb20f698120db14a2f1ce40002ce77ca))
+
 ### [0.27.11](https://github.com/bgord/bgord-design/compare/v0.27.10...v0.27.11) (2022-01-13)
 
 
