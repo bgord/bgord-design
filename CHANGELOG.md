@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.13](https://github.com/bgord/bgord-design/compare/v0.27.12...v0.27.13) (2022-01-24)
+
+
+### Features
+
+* remove default ul list-style ([6d465ec](https://github.com/bgord/bgord-design/commit/6d465eccfa36c920d13cd7da9c88b763307ce4fa))
+
 ### [0.27.12](https://github.com/bgord/bgord-design/compare/v0.27.11...v0.27.12) (2022-01-17)
 
 
