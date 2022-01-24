@@ -384,3 +384,11 @@ template {
 [hidden] {
   display: none;
 }
+
+/**
+ * Remove default ul list-style
+ */
+
+ul {
+  list-style: none;
+}
