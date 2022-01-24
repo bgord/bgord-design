@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.15](https://github.com/bgord/bgord-design/compare/v0.27.14...v0.27.15) (2022-01-24)
+
+
+### Features
+
+* add max-width breakpoints ([19d3747](https://github.com/bgord/bgord-design/commit/19d3747ab0e884f1cd4f247891905b63525f5d1e))
+
 ### [0.27.14](https://github.com/bgord/bgord-design/compare/v0.27.13...v0.27.14) (2022-01-24)
 
 ### [0.27.13](https://github.com/bgord/bgord-design/compare/v0.27.12...v0.27.13) (2022-01-24)
