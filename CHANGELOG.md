@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.16](https://github.com/bgord/bgord-design/compare/v0.27.15...v0.27.16) (2022-01-30)
+
+
+### Features
+
+* prevent content repositioning when vertical scrollbar appears ([be8bfec](https://github.com/bgord/bgord-design/commit/be8bfecab1273ec724892bd3c90410fcc0a0fdef))
+
 ### [0.27.15](https://github.com/bgord/bgord-design/compare/v0.27.14...v0.27.15) (2022-01-24)
 
 
