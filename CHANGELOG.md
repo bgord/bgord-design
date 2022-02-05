@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.17](https://github.com/bgord/bgord-design/compare/v0.27.16...v0.27.17) (2022-02-05)
+
+
+### Features
+
+* add responsive displays ([3a59ceb](https://github.com/bgord/bgord-design/commit/3a59ceb708be2573ec4843d5fbc46cd7c95d698b))
+
 ### [0.27.16](https://github.com/bgord/bgord-design/compare/v0.27.15...v0.27.16) (2022-01-30)
 
 
