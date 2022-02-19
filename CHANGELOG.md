@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.23](https://github.com/bgord/bgord-design/compare/v0.27.22...v0.27.23) (2022-02-19)
+
+
+### Features
+
+* add target-blank-referer rule ([59db192](https://github.com/bgord/bgord-design/commit/59db1925c9ab4fea42a411fbf46ed14ed2fd852e))
+
 ### [0.27.22](https://github.com/bgord/bgord-design/compare/v0.27.21...v0.27.22) (2022-02-19)
 
 
