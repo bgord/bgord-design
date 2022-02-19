@@ -1,0 +1,29 @@
+/* Anima */
+
+/* Four anima states */
+
+/* - appearing */
+/* - appeared */
+/* - hidding */
+/* - hidden */
+
+*[data-anima='appeared'] {
+  transition: all var(--duration, 300ms);
+}
+*[data-anima='hidding'] {
+  transition: all var(--duration, 300ms);
+}
+
+/* anima-style = opacity */
+
+*[data-anima-style='opacity'][data-anima='appearing'] {
+  opacity: 0;
+}
+*[data-anima-style='opacity'][data-anima='appeared'] {
+  opacity: 1;
+}
+*[data-anima-style='opacity'][data-anima='hidding'] {
+  opacity: 0;
+}
+
+/* ===================== */
