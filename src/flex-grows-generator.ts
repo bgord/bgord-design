@@ -5,13 +5,10 @@ export class FlexGrowsGenerator extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Line heights');
+
     this.flexGrows = config.flexGrows;
     this.breakpoints = config.breakpoints;
-  }
-
-  generateHeader(): string {
-    return '/* Line heights */\n\n';
   }
 
   generateCss(): string {

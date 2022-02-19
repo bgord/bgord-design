@@ -4,12 +4,8 @@ export class BorderRadiusesGenerator extends AbstractGenerator {
   borderRadiuses: GeneratorConfigType['borderRadiuses'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Border radiuses');
     this.borderRadiuses = config.borderRadiuses;
-  }
-
-  generateHeader(): string {
-    return '/* Border radiuses */\n\n';
   }
 
   generateCss(): string {

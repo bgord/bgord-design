@@ -5,13 +5,10 @@ export class Margins extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Margins');
+
     this.spacing = config.spacing;
     this.breakpoints = config.breakpoints;
-  }
-
-  generateHeader(): string {
-    return '/* Margins */\n\n';
   }
 
   generateCss(): string {

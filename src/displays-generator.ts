@@ -5,13 +5,10 @@ export class DisplaysGenerator extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Displays');
+
     this.displays = config.displays;
     this.breakpoints = config.breakpoints;
-  }
-
-  generateHeader(): string {
-    return '/* Displays */\n\n';
   }
 
   generateCss(): string {

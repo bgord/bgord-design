@@ -5,13 +5,10 @@ export class FontSizeGenerator extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Font sizes');
+
     this.fontSizes = config.fontSizes;
     this.breakpoints = config.breakpoints;
-  }
-
-  generateHeader(): string {
-    return '/* Font sizes */\n\n';
   }
 
   generateCss(): string {

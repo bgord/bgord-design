@@ -4,12 +4,9 @@ export class BorderWidthsGenerator extends AbstractGenerator {
   borderWidths: GeneratorConfigType['borderWidths'];
 
   constructor(config: GeneratorConfigType) {
-    super();
-    this.borderWidths = config.borderWidths;
-  }
+    super('Border widths');
 
-  generateHeader(): string {
-    return '/* Border widths */\n\n';
+    this.borderWidths = config.borderWidths;
   }
 
   generateCss(): string {

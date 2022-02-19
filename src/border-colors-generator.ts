@@ -7,15 +7,12 @@ export class BorderColorsGenerator extends AbstractGenerator {
   reds: GeneratorConfigType['reds'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Border colors');
+
     this.borderColors = config.borderColors;
     this.greens = config.greens;
     this.oranges = config.oranges;
     this.reds = config.reds;
-  }
-
-  generateHeader(): string {
-    return '/* Border colors */\n\n';
   }
 
   generateCss(): string {

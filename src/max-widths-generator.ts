@@ -5,13 +5,10 @@ export class MaxWidthsGenerator extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Max widths');
+
     this.maxWidths = config.maxWidths;
     this.breakpoints = config.breakpoints;
-  }
-
-  generateHeader(): string {
-    return '/* Max widths */\n\n';
   }
 
   generateCss(): string {

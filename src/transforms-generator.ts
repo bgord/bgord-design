@@ -4,12 +4,9 @@ export class TransformsGenerator extends AbstractGenerator {
   transforms: GeneratorConfigType['transforms'];
 
   constructor(config: GeneratorConfigType) {
-    super();
-    this.transforms = config.transforms;
-  }
+    super('Transforms');
 
-  generateHeader(): string {
-    return '/* Transforms */\n\n';
+    this.transforms = config.transforms;
   }
 
   generateCss(): string {

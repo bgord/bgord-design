@@ -4,12 +4,9 @@ export class LetterSpacingsGenerator extends AbstractGenerator {
   letterSpacings: GeneratorConfigType['letterSpacings'];
 
   constructor(config: GeneratorConfigType) {
-    super();
-    this.letterSpacings = config.letterSpacings;
-  }
+    super('Letter spacings');
 
-  generateHeader(): string {
-    return '/* Font sizes */\n\n';
+    this.letterSpacings = config.letterSpacings;
   }
 
   generateCss(): string {

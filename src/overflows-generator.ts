@@ -4,12 +4,9 @@ export class OverflowsGenerator extends AbstractGenerator {
   overflows: GeneratorConfigType['overflows'];
 
   constructor(config: GeneratorConfigType) {
-    super();
-    this.overflows = config.overflows;
-  }
+    super('Overflows');
 
-  generateHeader(): string {
-    return '/* Overflows */\n\n';
+    this.overflows = config.overflows;
   }
 
   generateCss(): string {

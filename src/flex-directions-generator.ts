@@ -5,13 +5,10 @@ export class FlexDirectionsGenerator extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Flex directions');
+
     this.flexDirections = config.flexDirections;
     this.breakpoints = config.breakpoints;
-  }
-
-  generateHeader(): string {
-    return '/* Flex directions */\n\n';
   }
 
   generateCss(): string {

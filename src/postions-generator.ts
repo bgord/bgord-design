@@ -4,12 +4,9 @@ export class PositionsGenerator extends AbstractGenerator {
   positions: GeneratorConfigType['positions'];
 
   constructor(config: GeneratorConfigType) {
-    super();
-    this.positions = config.positions;
-  }
+    super('Positions');
 
-  generateHeader(): string {
-    return '/* Positions */\n\n';
+    this.positions = config.positions;
   }
 
   generateCss(): string {

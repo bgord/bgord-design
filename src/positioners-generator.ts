@@ -1,8 +1,8 @@
 import { AbstractGenerator } from './generator';
 
 export class PositionersGenerator extends AbstractGenerator {
-  generateHeader(): string {
-    return '/* Positioners */\n\n';
+  constructor() {
+    super('Positioners');
   }
 
   generateCss(): string {

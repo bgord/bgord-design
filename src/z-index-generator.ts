@@ -4,12 +4,8 @@ export class ZIndexGenerator extends AbstractGenerator {
   zIndexes: GeneratorConfigType['zIndexes'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Z indexes');
     this.zIndexes = config.zIndexes;
-  }
-
-  generateHeader(): string {
-    return '/* Displays */\n\n';
   }
 
   generateCss(): string {

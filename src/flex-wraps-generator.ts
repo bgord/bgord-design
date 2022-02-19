@@ -4,12 +4,9 @@ export class FlexWrapGenerator extends AbstractGenerator {
   flexWraps: GeneratorConfigType['flexWraps'];
 
   constructor(config: GeneratorConfigType) {
-    super();
-    this.flexWraps = config.flexWraps;
-  }
+    super('Flex wraps');
 
-  generateHeader(): string {
-    return '/* Flex wraps */\n\n';
+    this.flexWraps = config.flexWraps;
   }
 
   generateCss(): string {

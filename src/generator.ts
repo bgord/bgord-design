@@ -26,7 +26,15 @@ import {
 } from './tokens';
 
 export abstract class AbstractGenerator {
-  abstract generateHeader(): string;
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  generateHeader(): string {
+    return `/* ${this.name} */\n\n`;
+  }
   abstract generateCss(): string;
 
   generateFooter(): string {

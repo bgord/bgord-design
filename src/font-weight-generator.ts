@@ -4,12 +4,9 @@ export class FontWeightGenerator extends AbstractGenerator {
   fontWeights: GeneratorConfigType['fontWeights'];
 
   constructor(config: GeneratorConfigType) {
-    super();
-    this.fontWeights = config.fontWeights;
-  }
+    super('Font sizes');
 
-  generateHeader(): string {
-    return '/* Font sizes */\n\n';
+    this.fontWeights = config.fontWeights;
   }
 
   generateCss(): string {

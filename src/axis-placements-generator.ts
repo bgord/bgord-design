@@ -5,13 +5,10 @@ export class AxisPlacementsGenerator extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Axis placements');
+
     this.axisPlacements = config.axisPlacements;
     this.breakpoints = config.breakpoints;
-  }
-
-  generateHeader(): string {
-    return '/* Axis placements */\n\n';
   }
 
   generateCss(): string {

@@ -4,12 +4,9 @@ export class LineHeightsGenerator extends AbstractGenerator {
   lineHeights: GeneratorConfigType['lineHeights'];
 
   constructor(config: GeneratorConfigType) {
-    super();
-    this.lineHeights = config.lineHeights;
-  }
+    super('Line heights');
 
-  generateHeader(): string {
-    return '/* Line heights */\n\n';
+    this.lineHeights = config.lineHeights;
   }
 
   generateCss(): string {

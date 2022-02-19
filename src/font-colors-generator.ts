@@ -4,17 +4,14 @@ export class FontColorsGenerator extends AbstractGenerator {
   colors: GeneratorConfigType['grayscale'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Font colors');
+
     this.colors = {
       ...config.grayscale,
       ...config.greens,
       ...config.reds,
       ...config.oranges,
     };
-  }
-
-  generateHeader(): string {
-    return '/* Font colors */\n\n';
   }
 
   generateCss(): string {

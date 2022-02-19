@@ -5,13 +5,10 @@ export class Paddings extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Paddings');
+
     this.spacing = config.spacing;
     this.breakpoints = config.breakpoints;
-  }
-
-  generateHeader(): string {
-    return '/* Paddings */\n\n';
   }
 
   generateCss(): string {

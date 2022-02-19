@@ -5,13 +5,10 @@ export class WidthsGenerator extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super();
+    super('Widths');
+
     this.widhts = config.widths;
     this.breakpoints = config.breakpoints;
-  }
-
-  generateHeader(): string {
-    return '/* Widths */\n\n';
   }
 
   generateCss(): string {
