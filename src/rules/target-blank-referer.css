@@ -1,0 +1,10 @@
+[target='_blank']:not([rel]) {
+  position: relative;
+}
+
+[target='_blank']:not([rel]):after {
+  background: red;
+  position: absolute;
+  inset: 0;
+  content: 'Rule #2 violation (target-blank-referer)';
+}

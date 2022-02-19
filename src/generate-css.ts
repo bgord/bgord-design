@@ -71,6 +71,7 @@ class GeneratorProcessor {
     output += await new File('src/ui/anima.css').read();
 
     output += await new File('src/rules/title-truncate.css').read();
+    output += await new File('src/rules/target-blank-referer.css').read();
 
     await new File('dist/main.css').save(output);
   }
