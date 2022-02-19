@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.22](https://github.com/bgord/bgord-design/compare/v0.27.21...v0.27.22) (2022-02-19)
+
+
+### Features
+
+* add anima opacity style ([d300f42](https://github.com/bgord/bgord-design/commit/d300f429ac25e30ffc84c1ac652eafd7258521fc))
+
 ### [0.27.21](https://github.com/bgord/bgord-design/compare/v0.27.19...v0.27.21) (2022-02-19)
 
 
