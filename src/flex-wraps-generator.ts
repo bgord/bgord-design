@@ -1,9 +1,10 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class FlexWrapGenerator implements GeneratorInterface {
+export class FlexWrapGenerator extends AbstractGenerator {
   flexWraps: GeneratorConfigType['flexWraps'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.flexWraps = config.flexWraps;
   }
 
@@ -20,9 +21,5 @@ export class FlexWrapGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

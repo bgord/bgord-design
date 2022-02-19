@@ -25,10 +25,13 @@ import {
   Overflows,
 } from './tokens';
 
-export interface GeneratorInterface {
-  generateHeader(): string;
-  generateCss(): string;
-  generateFooter(): string;
+export abstract class AbstractGenerator {
+  abstract generateHeader(): string;
+  abstract generateCss(): string;
+
+  generateFooter(): string {
+    return '/* ===================== */\n\n';
+  }
 }
 
 export type GeneratorConfigType = {

@@ -1,9 +1,10 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class FontColorsGenerator implements GeneratorInterface {
+export class FontColorsGenerator extends AbstractGenerator {
   colors: GeneratorConfigType['grayscale'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.colors = {
       ...config.grayscale,
       ...config.greens,
@@ -25,9 +26,5 @@ export class FontColorsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

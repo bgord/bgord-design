@@ -1,12 +1,13 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class BorderColorsGenerator implements GeneratorInterface {
+export class BorderColorsGenerator extends AbstractGenerator {
   borderColors: GeneratorConfigType['borderColors'];
   greens: GeneratorConfigType['greens'];
   oranges: GeneratorConfigType['oranges'];
   reds: GeneratorConfigType['reds'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.borderColors = config.borderColors;
     this.greens = config.greens;
     this.oranges = config.oranges;
@@ -50,9 +51,5 @@ export class BorderColorsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

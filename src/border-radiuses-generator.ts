@@ -1,9 +1,10 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class BorderRadiusesGenerator implements GeneratorInterface {
+export class BorderRadiusesGenerator extends AbstractGenerator {
   borderRadiuses: GeneratorConfigType['borderRadiuses'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.borderRadiuses = config.borderRadiuses;
   }
 
@@ -19,9 +20,5 @@ export class BorderRadiusesGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

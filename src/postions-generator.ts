@@ -1,9 +1,10 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class PositionsGenerator implements GeneratorInterface {
+export class PositionsGenerator extends AbstractGenerator {
   positions: GeneratorConfigType['positions'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.positions = config.positions;
   }
 
@@ -20,9 +21,5 @@ export class PositionsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

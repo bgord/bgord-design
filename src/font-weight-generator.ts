@@ -1,9 +1,10 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class FontWeightGenerator implements GeneratorInterface {
+export class FontWeightGenerator extends AbstractGenerator {
   fontWeights: GeneratorConfigType['fontWeights'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.fontWeights = config.fontWeights;
   }
 
@@ -20,9 +21,5 @@ export class FontWeightGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

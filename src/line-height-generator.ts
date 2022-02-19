@@ -1,9 +1,10 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class LineHeightsGenerator implements GeneratorInterface {
+export class LineHeightsGenerator extends AbstractGenerator {
   lineHeights: GeneratorConfigType['lineHeights'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.lineHeights = config.lineHeights;
   }
 
@@ -20,9 +21,5 @@ export class LineHeightsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

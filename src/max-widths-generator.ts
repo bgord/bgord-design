@@ -1,10 +1,11 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class MaxWidthsGenerator implements GeneratorInterface {
+export class MaxWidthsGenerator extends AbstractGenerator {
   maxWidths: GeneratorConfigType['maxWidths'];
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.maxWidths = config.maxWidths;
     this.breakpoints = config.breakpoints;
   }
@@ -32,9 +33,5 @@ export class MaxWidthsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

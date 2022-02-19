@@ -1,6 +1,6 @@
-import { GeneratorInterface } from './generator';
+import { AbstractGenerator } from './generator';
 
-export class PositionersGenerator implements GeneratorInterface {
+export class PositionersGenerator extends AbstractGenerator {
   generateHeader(): string {
     return '/* Positioners */\n\n';
   }
@@ -15,9 +15,5 @@ export class PositionersGenerator implements GeneratorInterface {
     output += `*[data-inset='0'] {\n  inset: 0;\n}\n`;
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

@@ -1,10 +1,11 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class FontSizeGenerator implements GeneratorInterface {
+export class FontSizeGenerator extends AbstractGenerator {
   fontSizes: GeneratorConfigType['fontSizes'];
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.fontSizes = config.fontSizes;
     this.breakpoints = config.breakpoints;
   }
@@ -32,9 +33,5 @@ export class FontSizeGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

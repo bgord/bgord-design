@@ -1,9 +1,10 @@
-import {GeneratorInterface, GeneratorConfigType} from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class TransformsGenerator implements GeneratorInterface {
+export class TransformsGenerator extends AbstractGenerator {
   transforms: GeneratorConfigType['transforms'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.transforms = config.transforms;
   }
 
@@ -24,9 +25,5 @@ export class TransformsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

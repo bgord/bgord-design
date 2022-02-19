@@ -1,6 +1,6 @@
 import { File } from './file';
 
-import { GeneratorInterface } from './generator';
+import { AbstractGenerator } from './generator';
 import { Margins } from './margins-generator';
 import { Paddings } from './paddings-generator';
 import { DisplaysGenerator } from './displays-generator';
@@ -53,7 +53,7 @@ import {
 } from './tokens';
 
 class GeneratorProcessor {
-  async process(generators: GeneratorInterface[]) {
+  async process(generators: AbstractGenerator[]) {
     let output = '';
 
     for (const generator of generators) {

@@ -1,9 +1,10 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class ZIndexGenerator implements GeneratorInterface {
+export class ZIndexGenerator extends AbstractGenerator {
   zIndexes: GeneratorConfigType['zIndexes'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.zIndexes = config.zIndexes;
   }
 
@@ -20,9 +21,5 @@ export class ZIndexGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

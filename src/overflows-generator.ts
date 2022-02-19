@@ -1,9 +1,10 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class OverflowsGenerator implements GeneratorInterface {
+export class OverflowsGenerator extends AbstractGenerator {
   overflows: GeneratorConfigType['overflows'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.overflows = config.overflows;
   }
 
@@ -20,9 +21,5 @@ export class OverflowsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

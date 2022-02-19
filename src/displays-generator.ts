@@ -1,10 +1,11 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class DisplaysGenerator implements GeneratorInterface {
+export class DisplaysGenerator extends AbstractGenerator {
   displays: GeneratorConfigType['displays'];
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.displays = config.displays;
     this.breakpoints = config.breakpoints;
   }
@@ -40,9 +41,5 @@ export class DisplaysGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

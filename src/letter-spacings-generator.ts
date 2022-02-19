@@ -1,9 +1,10 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class LetterSpacingsGenerator implements GeneratorInterface {
+export class LetterSpacingsGenerator extends AbstractGenerator {
   letterSpacings: GeneratorConfigType['letterSpacings'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.letterSpacings = config.letterSpacings;
   }
 
@@ -20,9 +21,5 @@ export class LetterSpacingsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

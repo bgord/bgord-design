@@ -1,10 +1,11 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class FlexGrowsGenerator implements GeneratorInterface {
+export class FlexGrowsGenerator extends AbstractGenerator {
   flexGrows: GeneratorConfigType['flexGrows'];
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.flexGrows = config.flexGrows;
     this.breakpoints = config.breakpoints;
   }
@@ -32,9 +33,5 @@ export class FlexGrowsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

@@ -1,10 +1,11 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class Paddings implements GeneratorInterface {
+export class Paddings extends AbstractGenerator {
   spacing: GeneratorConfigType['spacing'];
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.spacing = config.spacing;
     this.breakpoints = config.breakpoints;
   }
@@ -86,9 +87,5 @@ export class Paddings implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }

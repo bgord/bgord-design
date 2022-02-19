@@ -1,10 +1,11 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
-export class AxisPlacementsGenerator implements GeneratorInterface {
+export class AxisPlacementsGenerator extends AbstractGenerator {
   axisPlacements: GeneratorConfigType['axisPlacements'];
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
+    super();
     this.axisPlacements = config.axisPlacements;
     this.breakpoints = config.breakpoints;
   }
@@ -41,9 +42,5 @@ export class AxisPlacementsGenerator implements GeneratorInterface {
     }
 
     return output;
-  }
-
-  generateFooter(): string {
-    return '/* ===================== */\n\n';
   }
 }
