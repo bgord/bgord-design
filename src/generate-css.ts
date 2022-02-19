@@ -131,6 +131,6 @@ export async function main() {
     new MaxWidthsGenerator(config),
     new TransformsGenerator(config),
     new OverflowsGenerator(config),
-    new PositionersGenerator(config),
+    new PositionersGenerator(),
   ]);
 }

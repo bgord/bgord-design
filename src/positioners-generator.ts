@@ -1,8 +1,6 @@
-import { GeneratorInterface, GeneratorConfigType } from './generator';
+import { GeneratorInterface } from './generator';
 
 export class PositionersGenerator implements GeneratorInterface {
-  constructor(config: GeneratorConfigType) {}
-
   generateHeader(): string {
     return '/* Positioners */\n\n';
   }
