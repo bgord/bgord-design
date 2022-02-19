@@ -23,6 +23,7 @@ import { BorderRadiusesGenerator } from './border-radiuses-generator';
 import { MaxWidthsGenerator } from './max-widths-generator';
 import { TransformsGenerator } from './transforms-generator';
 import { OverflowsGenerator } from './overflows-generator';
+import { PositionersGenerator } from './positioners-generator';
 
 import {
   Spacing,
@@ -130,5 +131,6 @@ export async function main() {
     new MaxWidthsGenerator(config),
     new TransformsGenerator(config),
     new OverflowsGenerator(config),
+    new PositionersGenerator(config),
   ]);
 }
