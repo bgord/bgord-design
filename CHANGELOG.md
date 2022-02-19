@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.18](https://github.com/bgord/bgord-design/compare/v0.27.17...v0.27.18) (2022-02-19)
+
+
+### Features
+
+* add title-truncate css rule ([2c8516b](https://github.com/bgord/bgord-design/commit/2c8516b14e9669026fcd38a62fb3eb168cce2f55))
+
 ### [0.27.17](https://github.com/bgord/bgord-design/compare/v0.27.16...v0.27.17) (2022-02-05)
 
 
