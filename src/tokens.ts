@@ -68,9 +68,10 @@ export const FlexWraps: Record<FlexWrapTypes, string> = {
   unset: 'unset',
 };
 
-type ZIndexType = '0' | '1' | '2' | '3';
+type ZIndexType = '-1' | '0' | '1' | '2' | '3';
 
 export const ZIndexes: Record<ZIndexType, string> = {
+  '-1': '-1',
   '0': '0',
   '1': '1',
   '2': '2',
