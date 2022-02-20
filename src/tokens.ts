@@ -282,6 +282,7 @@ type TransformType =
   | 'lowercase'
   | 'capitalize'
   | 'truncate'
+  | 'center'
   | 'none';
 
 export const Transforms: Record<TransformType, string> = {
@@ -289,6 +290,7 @@ export const Transforms: Record<TransformType, string> = {
   lowercase: 'lowercase',
   capitalize: 'capitalize',
   truncate: 'truncate',
+  center: 'center',
   none: 'none',
 };
 

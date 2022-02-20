@@ -18,6 +18,12 @@ export class TransformsGenerator extends AbstractGenerator {
         output += `*[data-transform='${key}'] {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n`;
         continue;
       }
+
+      if (key === 'center') {
+        output += `*[data-transform='${key}'] {\n  text-align: center;\n}\n`;
+        continue;
+      }
+
       output += `*[data-transform='${key}'] {\n  text-transform: ${value};\n}\n`;
     }
 
