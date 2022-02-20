@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.24](https://github.com/bgord/bgord-design/compare/v0.27.23...v0.27.24) (2022-02-20)
+
+
+### Features
+
+* add data-transform center ([614c62d](https://github.com/bgord/bgord-design/commit/614c62d25e0284510a9800d385d8e8670e088b67))
+
 ### [0.27.23](https://github.com/bgord/bgord-design/compare/v0.27.22...v0.27.23) (2022-02-19)
 
 
