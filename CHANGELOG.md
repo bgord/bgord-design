@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.26](https://github.com/bgord/bgord-design/compare/v0.27.25...v0.27.26) (2022-02-21)
+
+
+### Features
+
+* allow multiple data-transform values ([492a9fa](https://github.com/bgord/bgord-design/commit/492a9faa94018b4e5853c773bfeb5787e7e423cb))
+
 ### [0.27.25](https://github.com/bgord/bgord-design/compare/v0.27.24...v0.27.25) (2022-02-21)
 
 ### [0.27.24](https://github.com/bgord/bgord-design/compare/v0.27.23...v0.27.24) (2022-02-20)
