@@ -14,15 +14,15 @@
   transition: all var(--duration, 300ms);
 }
 
-/* anima-style = opacity */
+/* anima-effect = opacity */
 
-*[data-anima-style='opacity'][data-anima='appearing'] {
+*[data-anima-effect='opacity'][data-anima='appearing'] {
   opacity: 0;
 }
-*[data-anima-style='opacity'][data-anima='appeared'] {
+*[data-anima-effect='opacity'][data-anima='appeared'] {
   opacity: 1;
 }
-*[data-anima-style='opacity'][data-anima='hidding'] {
+*[data-anima-effect='opacity'][data-anima='hidding'] {
   opacity: 0;
 }
 
