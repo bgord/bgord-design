@@ -12,19 +12,19 @@ export class TransformsGenerator extends AbstractGenerator {
   generateCss(): string {
     let output = '';
 
-    // Regular display: data-transform="*"
+    // Regular display: data-transform~="*"
     for (const [key, value] of Object.entries(this.transforms)) {
       if (key === 'truncate') {
-        output += `*[data-transform='${key}'] {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n`;
+        output += `*[data-transform~='${key}'] {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n`;
         continue;
       }
 
       if (key === 'center') {
-        output += `*[data-transform='${key}'] {\n  text-align: center;\n}\n`;
+        output += `*[data-transform~='${key}'] {\n  text-align: center;\n}\n`;
         continue;
       }
 
-      output += `*[data-transform='${key}'] {\n  text-transform: ${value};\n}\n`;
+      output += `*[data-transform~='${key}'] {\n  text-transform: ${value};\n}\n`;
     }
 
     return output;
