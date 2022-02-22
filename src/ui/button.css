@@ -6,6 +6,7 @@
   text-transform: uppercase;
   user-select: none; /* Prevents from copying text on mobile */
   white-space: nowrap; /* Prevents from multiline text */
+  touch-action: manipulation; /* Don't wait for second tap */
 
   transition: border-radius 300ms, opacity 400ms;
 }
