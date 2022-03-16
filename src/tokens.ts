@@ -281,6 +281,7 @@ type TransformType =
   | 'uppercase'
   | 'lowercase'
   | 'capitalize'
+  | 'upper-first'
   | 'truncate'
   | 'center'
   | 'none';
@@ -289,6 +290,7 @@ export const Transforms: Record<TransformType, string> = {
   uppercase: 'uppercase',
   lowercase: 'lowercase',
   capitalize: 'capitalize',
+  'upper-first': 'upper-first',
   truncate: 'truncate',
   center: 'center',
   none: 'none',

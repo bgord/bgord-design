@@ -24,6 +24,11 @@ export class TransformsGenerator extends AbstractGenerator {
         continue;
       }
 
+      if (key === 'upper-first') {
+        output += `*[data-transform~='upper-first']:first-letter {\n  text-transform: uppercase;\n}\n`;
+        continue;
+      }
+
       output += `*[data-transform~='${key}'] {\n  text-transform: ${value};\n}\n`;
     }
 
