@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.29](https://github.com/bgord/bgord-design/compare/v0.27.28...v0.27.29) (2022-04-02)
+
+
+### Features
+
+* add max-width 320px ([a8e6a87](https://github.com/bgord/bgord-design/commit/a8e6a87e241bc4147432943bba4ad1966692323d))
+
 ### [0.27.28](https://github.com/bgord/bgord-design/compare/v0.27.27...v0.27.28) (2022-03-16)
 
 
