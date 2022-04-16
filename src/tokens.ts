@@ -32,11 +32,20 @@ export const Displays: Record<DisplayType, string> = {
   none: 'none',
 };
 
-type AxisPlacementType = 'start' | 'end' | 'between' | 'center' | 'baseline';
+type AxisPlacementType =
+  | 'start'
+  | 'end'
+  | 'around'
+  | 'evenly'
+  | 'between'
+  | 'center'
+  | 'baseline';
 
 export const AxisPlacements: Record<AxisPlacementType, string> = {
   start: 'flex-start',
   end: 'flex-end',
+  around: 'space-around',
+  evenly: 'space-evenly',
   between: 'space-between',
   center: 'center',
   baseline: 'baseline',
