@@ -95,6 +95,14 @@ export const Widths: Record<WidthType, string> = {
   unset: 'unset',
 };
 
+type HeightType = '100%' | 'auto' | 'unset';
+
+export const Heights: Record<HeightType, string> = {
+  '100%': '100%',
+  auto: 'auto',
+  unset: 'unset',
+};
+
 type FontSizeType = '12' | '14' | '16' | '20' | '24' | '32' | '36';
 
 export const FontSizes: Record<FontSizeType, string> = {

@@ -67,4 +67,5 @@ export type GeneratorConfigType = {
   maxWidths: typeof MaxWidths;
   transforms: typeof Transforms;
   overflows: typeof Overflows;
+  heights: typeof Heights;
 };

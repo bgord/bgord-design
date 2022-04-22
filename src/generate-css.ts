@@ -24,6 +24,7 @@ import { MaxWidthsGenerator } from './max-widths-generator';
 import { TransformsGenerator } from './transforms-generator';
 import { OverflowsGenerator } from './overflows-generator';
 import { PositionersGenerator } from './positioners-generator';
+import { HeightsGenerator } from './heights-generator';
 
 import {
   Spacing,
@@ -50,6 +51,7 @@ import {
   MaxWidths,
   Transforms,
   Overflows,
+  Heights,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -103,6 +105,7 @@ export async function main() {
     maxWidths: MaxWidths,
     transforms: Transforms,
     overflows: Overflows,
+    heights: Heights,
   };
 
   await new GeneratorProcessor().process([
@@ -134,5 +137,6 @@ export async function main() {
     new TransformsGenerator(config),
     new OverflowsGenerator(config),
     new PositionersGenerator(),
+    new HeightsGenerator(config),
   ]);
 }
