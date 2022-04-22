@@ -23,6 +23,7 @@ import {
   MaxWidths,
   Transforms,
   Overflows,
+  Heights,
 } from './tokens';
 
 export abstract class AbstractGenerator {
