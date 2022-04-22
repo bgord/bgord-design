@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.33](https://github.com/bgord/bgord-design/compare/v0.27.32...v0.27.33) (2022-04-22)
+
+
+### Bug Fixes
+
+* heights generator media query ([377a614](https://github.com/bgord/bgord-design/commit/377a614cee11ba11959f6944308d39654b8dbf1a))
+
 ### [0.27.32](https://github.com/bgord/bgord-design/compare/v0.27.30...v0.27.32) (2022-04-22)
 
 
