@@ -20,7 +20,7 @@ export class HeightsGenerator extends AbstractGenerator {
     }
 
     for (const [name, value] of Object.entries(this.breakpoints)) {
-      output += `@media (max-height: ${value}px) {\n`;
+      output += `@media (max-width: ${value}px) {\n`;
 
       for (const [key, value] of Object.entries(this.heights)) {
         output += `  *[data-${name}-height='${key}'] {\n    height: ${value};\n  }\n`;
