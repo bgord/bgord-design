@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.34](https://github.com/bgord/bgord-design/compare/v0.27.33...v0.27.34) (2022-04-25)
+
+
+### Features
+
+* don't set fixed width for select ([10758b7](https://github.com/bgord/bgord-design/commit/10758b72589e4a14fa3cea4ab5cfd322ecd0b577))
+
 ### [0.27.33](https://github.com/bgord/bgord-design/compare/v0.27.32...v0.27.33) (2022-04-22)
 
 
