@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.35](https://github.com/bgord/bgord-design/compare/v0.27.34...v0.27.35) (2022-04-28)
+
+
+### Features
+
+* add nowrap transform ([88c31f3](https://github.com/bgord/bgord-design/commit/88c31f30fe52a85098e108cfef2288fb020795dd))
+
 ### [0.27.34](https://github.com/bgord/bgord-design/compare/v0.27.33...v0.27.34) (2022-04-25)
 
 
