@@ -302,6 +302,7 @@ type TransformType =
   | 'upper-first'
   | 'truncate'
   | 'center'
+  | 'nowrap'
   | 'none';
 
 export const Transforms: Record<TransformType, string> = {
@@ -311,6 +312,7 @@ export const Transforms: Record<TransformType, string> = {
   'upper-first': 'upper-first',
   truncate: 'truncate',
   center: 'center',
+  nowrap: 'nowrap',
   none: 'none',
 };
 

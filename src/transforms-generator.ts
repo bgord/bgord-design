@@ -29,6 +29,11 @@ export class TransformsGenerator extends AbstractGenerator {
         continue;
       }
 
+      if (key === 'nowrap') {
+        output += `*[data-transform~='nowrap'] {\n  white-space: nowrap;\n}\n`;
+        continue;
+      }
+
       output += `*[data-transform~='${key}'] {\n  text-transform: ${value};\n}\n`;
     }
 
