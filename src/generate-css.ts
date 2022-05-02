@@ -70,6 +70,7 @@ class GeneratorProcessor {
     output += await new File('src/ui/link.css').read();
     output += await new File('src/ui/select.css').read();
     output += await new File('src/ui/checkbox.css').read();
+    output += await new File('src/ui/textarea.css').read();
     output += await new File('src/ui/anima.css').read();
 
     output += await new File('src/rules/title-truncate.css').read();

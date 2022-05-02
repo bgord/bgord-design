@@ -1,0 +1,47 @@
+/* textarea component */
+
+.c-textarea {
+  font-size: 12px;
+  line-height: 16px;
+  color: #374151;
+  padding: 2px 6px 6px 6px;
+  min-height: 96px;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  outline: none;
+  appearance: none;
+  resize: vertical;
+
+  transition: border-radius 300ms, border-color 400ms;
+}
+
+.c-textarea:hover,
+.c-textarea:active,
+.c-textarea:focus {
+  border-color: #9ca3af;
+  border-radius: 0;
+
+  transition: border-radius 300ms, border-color 400ms;
+}
+
+.c-textarea:disabled {
+  opacity: 0.75;
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.c-textarea:placeholder-shown {
+  color: #4b5563;
+}
+
+.c-textarea:invalid:not(:placeholder-shown) {
+  border-color: #b31940;
+}
+
+/* To avoid zooming on textarea focus on iOS Chrome and Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+  .c-textarea {
+    font-size: 16px;
+  }
+}
