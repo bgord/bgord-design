@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.36](https://github.com/bgord/bgord-design/compare/v0.27.35...v0.27.36) (2022-05-02)
+
+
+### Features
+
+* add textarea component ([75142be](https://github.com/bgord/bgord-design/commit/75142be09a2bf2791890bd76059cae627e55e0f5))
+
 ### [0.27.35](https://github.com/bgord/bgord-design/compare/v0.27.34...v0.27.35) (2022-04-28)
 
 
