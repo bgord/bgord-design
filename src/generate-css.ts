@@ -25,6 +25,7 @@ import { TransformsGenerator } from './transforms-generator';
 import { OverflowsGenerator } from './overflows-generator';
 import { PositionersGenerator } from './positioners-generator';
 import { HeightsGenerator } from './heights-generator';
+import { GapGenerator } from './gap-generator';
 
 import {
   Spacing,
@@ -118,6 +119,7 @@ export async function main() {
     new FlexWrapGenerator(config),
     new FlexDirectionsGenerator(config),
     new FlexGrowsGenerator(config),
+    new GapGenerator(config),
 
     new WidthsGenerator(config),
     new PositionsGenerator(config),
