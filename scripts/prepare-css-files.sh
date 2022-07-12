@@ -14,7 +14,7 @@ npx postcss dist/main.css -o dist/main.css
 npx postcss dist/normalize.css -o dist/normalize.css
 
 info "Running doiuse..."
-npx doiuse --browsers " last 2 versions" dist/main.css
+npx doiuse --browsers ">1%" dist/main.css
 
 info "Minifying..."
 npx clean-css-cli dist/main.css -o dist/main.min.css
