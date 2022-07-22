@@ -27,6 +27,10 @@
     transition: border-color 400ms;
   }
 
+  .c-checkbox:focus {
+    border: 2px solid #4b5563;
+  }
+
   .c-checkbox:checked::after,
   .c-checkbox:hover::after {
     position: absolute;
