@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.38](https://github.com/bgord/bgord-design/compare/v0.27.37...v0.27.38) (2022-07-22)
+
+
+### Bug Fixes
+
+* add missing checkbox focus border style ([f77b96c](https://github.com/bgord/bgord-design/commit/f77b96c920adedbc0ad75a849074ca0fdd30056c))
+
 ### [0.27.37](https://github.com/bgord/bgord-design/compare/v0.27.36...v0.27.37) (2022-06-30)
 
 
