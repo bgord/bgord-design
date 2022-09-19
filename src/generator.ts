@@ -25,6 +25,7 @@ import {
   Overflows,
   Heights,
   Cursors,
+  PointerEvents,
 } from './tokens';
 
 export abstract class AbstractGenerator {
@@ -71,4 +72,5 @@ export type GeneratorConfigType = {
   overflows: typeof Overflows;
   heights: typeof Heights;
   cursors: typeof Cursors;
+  pointerEvents: typeof PointerEvents;
 };

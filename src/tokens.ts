@@ -332,3 +332,10 @@ export const Cursors: Record<CursorType, string> = {
   pointer: 'pointer',
   'not-allowed': 'not-allowed',
 };
+
+type PointerEvent = 'none' | 'auto';
+
+export const PointerEvents: Record<PointerEvent, string> = {
+  none: 'none',
+  auto: 'auto',
+};
