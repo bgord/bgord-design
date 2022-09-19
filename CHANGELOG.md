@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.43](https://github.com/bgord/bgord-design/compare/v0.27.42...v0.27.43) (2022-09-19)
+
+
+### Features
+
+* add pointer-events ([0a857d7](https://github.com/bgord/bgord-design/commit/0a857d7e061b344e076c3c6c9e64c733e3b70b2c))
+
 ### [0.27.42](https://github.com/bgord/bgord-design/compare/v0.27.41...v0.27.42) (2022-09-19)
 
 
