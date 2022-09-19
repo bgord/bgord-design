@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.41](https://github.com/bgord/bgord-design/compare/v0.27.40...v0.27.41) (2022-09-19)
+
+
+### Features
+
+* add align-self tokens ([0023ddc](https://github.com/bgord/bgord-design/commit/0023ddc90dd2f593e9780eb3abcf2f91a32c4fbe))
+
 ### [0.27.40](https://github.com/bgord/bgord-design/compare/v0.27.39...v0.27.40) (2022-09-19)
 
 
