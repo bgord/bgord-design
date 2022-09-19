@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.40](https://github.com/bgord/bgord-design/compare/v0.27.39...v0.27.40) (2022-09-19)
+
+
+### Features
+
+* add cursors ([d9f8724](https://github.com/bgord/bgord-design/commit/d9f87244b1a747df0b7a765297488a7ca4b6b758))
+
 ### [0.27.39](https://github.com/bgord/bgord-design/compare/v0.27.38...v0.27.39) (2022-08-22)
 
 ### [0.27.38](https://github.com/bgord/bgord-design/compare/v0.27.37...v0.27.38) (2022-07-22)
