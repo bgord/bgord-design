@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.42](https://github.com/bgord/bgord-design/compare/v0.27.41...v0.27.42) (2022-09-19)
+
+
+### Features
+
+* add image-alt rule ([66b1b58](https://github.com/bgord/bgord-design/commit/66b1b58d4b57b5ad4ebd7c940dc671ab639f49b6))
+
 ### [0.27.41](https://github.com/bgord/bgord-design/compare/v0.27.40...v0.27.41) (2022-09-19)
 
 
