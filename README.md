@@ -83,14 +83,17 @@ Breakpoints
 | ---------- | --------------- |
 | data-main  | justify-content |
 | data-cross | align-items     |
+| data-self  | align-items     |
 
-| Key      |     Value     |
-| -------- | :-----------: |
-| start    |  flex-start   |
-| end      |   flex-end    |
-| between  | space-between |
-| center   |    center     |
-| baseline |   baseline    |
+| Key      |     Value     | Available for data-self |
+| -------- | :-----------: | :---------------------: |
+| start    |  flex-start   |           yes           |
+| end      |   flex-end    |           yes           |
+| around   | space-around  |           no            |
+| between  | space-between |           no            |
+| evenly   | space-evenly  |           no            |
+| center   |    center     |           yes           |
+| baseline |   baseline    |           yes           |
 
 ## Positions
 

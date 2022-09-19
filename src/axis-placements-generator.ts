@@ -1,3 +1,4 @@
+import pick from 'lodash.pick';
 import { AbstractGenerator, GeneratorConfigType } from './generator';
 
 export class AxisPlacementsGenerator extends AbstractGenerator {
@@ -24,6 +25,13 @@ export class AxisPlacementsGenerator extends AbstractGenerator {
       output += `*[data-cross='${key}'] {\n  align-items: ${value};\n}\n`;
     }
 
+    // Self placement alongside the cross axis: data-self="*"
+    for (const [key, value] of Object.entries(
+      pick(this.axisPlacements, ['start', 'end', 'center', 'baseline'])
+    )) {
+      output += `*[data-self='${key}'] {\n  align-self: ${value};\n}\n`;
+    }
+
     for (const [name, value] of Object.entries(this.breakpoints)) {
       output += `@media (max-width: ${value}px) {\n`;
 
@@ -33,6 +41,12 @@ export class AxisPlacementsGenerator extends AbstractGenerator {
 
       for (const [key, value] of Object.entries(this.axisPlacements)) {
         output += `  *[data-${name}-cross='${key}'] {\n    align-items: ${value};\n  }\n`;
+      }
+
+      for (const [key, value] of Object.entries(
+        pick(this.axisPlacements, ['start', 'end', 'center', 'baseline'])
+      )) {
+        output += `  *[data-${name}-self='${key}'] {\n    align-self: ${value};\n  }\n`;
       }
 
       output += `}\n`;
