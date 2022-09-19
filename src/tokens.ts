@@ -323,3 +323,12 @@ export const Overflows: Record<OverflowType, string> = {
   scroll: 'scroll',
   hidden: 'hidden',
 };
+
+type CursorType = 'wait' | 'auto' | 'pointer' | 'not-allowed';
+
+export const Cursors: Record<CursorType, string> = {
+  wait: 'wait',
+  auto: 'auto',
+  pointer: 'pointer',
+  'not-allowed': 'not-allowed',
+};

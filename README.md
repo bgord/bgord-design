@@ -437,3 +437,16 @@ Orange
 | orange-600 | hsl(25, 88%, 37.5%) |
 | orange-700 | hsl(25, 88%, 27.5%) |
 | orange-800 |  hsl(25, 88%, 20%)  |
+
+## Cursors
+
+| Definition  | Value  |
+| ----------- | ------ |
+| data-cursor | cursor |
+
+| Key         |    Value    |
+| ----------- | :---------: |
+| wait        |    wait     |
+| auto        |    auto     |
+| pointer     |   pointer   |
+| not-allowed | not-allowed |

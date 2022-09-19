@@ -26,6 +26,7 @@ import { OverflowsGenerator } from './overflows-generator';
 import { PositionersGenerator } from './positioners-generator';
 import { HeightsGenerator } from './heights-generator';
 import { GapGenerator } from './gap-generator';
+import { CursorsGenerator } from './cursors-generator';
 
 import {
   Spacing,
@@ -53,6 +54,7 @@ import {
   Transforms,
   Overflows,
   Heights,
+  Cursors,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -108,6 +110,7 @@ export async function main() {
     transforms: Transforms,
     overflows: Overflows,
     heights: Heights,
+    cursors: Cursors,
   };
 
   await new GeneratorProcessor().process([
@@ -141,5 +144,6 @@ export async function main() {
     new OverflowsGenerator(config),
     new PositionersGenerator(),
     new HeightsGenerator(config),
+    new CursorsGenerator(config),
   ]);
 }

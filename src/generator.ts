@@ -24,6 +24,7 @@ import {
   Transforms,
   Overflows,
   Heights,
+  Cursors,
 } from './tokens';
 
 export abstract class AbstractGenerator {
@@ -69,4 +70,5 @@ export type GeneratorConfigType = {
   transforms: typeof Transforms;
   overflows: typeof Overflows;
   heights: typeof Heights;
+  cursors: typeof Cursors;
 };
