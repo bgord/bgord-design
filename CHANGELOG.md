@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.44](https://github.com/bgord/bgord-design/compare/v0.27.43...v0.27.44) (2022-09-29)
+
+
+### Features
+
+* add 4 and 6 to letter spacing ([63fd365](https://github.com/bgord/bgord-design/commit/63fd365e1d23ff37e087b48a63c2443015d27f10))
+
 ### [0.27.43](https://github.com/bgord/bgord-design/compare/v0.27.42...v0.27.43) (2022-09-19)
 
 
