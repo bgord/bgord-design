@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.45](https://github.com/bgord/bgord-design/compare/v0.27.44...v0.27.45) (2022-10-24)
+
+
+### Features
+
+* add range component ([19b966f](https://github.com/bgord/bgord-design/commit/19b966f31d72798d422bf397b46c083dfe10afa0))
+
 ### [0.27.44](https://github.com/bgord/bgord-design/compare/v0.27.43...v0.27.44) (2022-09-29)
 
 
