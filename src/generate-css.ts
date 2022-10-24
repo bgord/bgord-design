@@ -77,6 +77,7 @@ class GeneratorProcessor {
     output += await new File('src/ui/checkbox.css').read();
     output += await new File('src/ui/textarea.css').read();
     output += await new File('src/ui/anima.css').read();
+    output += await new File('src/ui/range.css').read();
 
     output += await new File('src/rules/title-truncate.css').read();
     output += await new File('src/rules/target-blank-referer.css').read();

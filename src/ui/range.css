@@ -1,0 +1,58 @@
+/* Button component */
+
+.c-range {
+  appearance: none;
+  height: 8px;
+  border-radius: 8px;
+}
+
+.c-range::-moz-range-thumb,
+.c-range::-ms-thumb {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+}
+
+.c-range::-webkit-slider-thumb {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  margin-top: -3px;
+}
+
+.c-range::-moz-range-track,
+.c-range::-webkit-slider-runnable-track,
+.c-range::-ms-track {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+}
+
+.c-range[data-variant='primary'] {
+  background: #e5e7eb;
+}
+.c-range[data-variant='primary']::-moz-range-thumb {
+  background: #4b5563;
+}
+.c-range[data-variant='primary']::-webkit-slider-thumb {
+  background: #4b5563;
+}
+.c-range[data-variant='primary']::-ms-thumb {
+  background: #4b5563;
+}
+
+.c-range[data-variant='primary'] {
+  background: linear-gradient(
+    to right,
+    #4b5563 var(--percentage),
+    #e5e7eb var(--percentage)
+  );
+}
+
+/* ===================== */
