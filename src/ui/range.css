@@ -6,7 +6,14 @@
   border-radius: 8px;
 }
 
-.c-range::-moz-range-thumb,
+.c-range::-moz-range-thumb {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+}
 .c-range::-ms-thumb {
   appearance: none;
   box-shadow: none;
@@ -15,7 +22,6 @@
   height: 14px;
   width: 14px;
 }
-
 .c-range::-webkit-slider-thumb {
   appearance: none;
   box-shadow: none;
@@ -26,8 +32,16 @@
   margin-top: -3px;
 }
 
-.c-range::-moz-range-track,
-.c-range::-webkit-slider-runnable-track,
+.c-range::-moz-range-track {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+}
+.c-range::-webkit-slider-runnable-track {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+}
 .c-range::-ms-track {
   appearance: none;
   box-shadow: none;
