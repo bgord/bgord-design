@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.46](https://github.com/bgord/bgord-design/compare/v0.27.45...v0.27.46) (2022-10-24)
+
+
+### Bug Fixes
+
+* range styles for different browsers ([8c34588](https://github.com/bgord/bgord-design/commit/8c3458817296c38025a4e4fb2a415b9f59273b7a))
+
 ### [0.27.45](https://github.com/bgord/bgord-design/compare/v0.27.44...v0.27.45) (2022-10-24)
 
 
