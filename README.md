@@ -453,3 +453,14 @@ Orange
 | auto        |    auto     |
 | pointer     |   pointer   |
 | not-allowed | not-allowed |
+
+## Backdrops
+
+| Definition    | Value    |
+| ------------- | -------- |
+| data-backdrop | backdrop |
+
+| Key   |        Value        |
+| ----- | :-----------------: |
+| black | rgba(0, 0, 0, 0.75) |
+| none  |        none         |

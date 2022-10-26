@@ -341,3 +341,10 @@ export const PointerEvents: Record<PointerEvent, string> = {
   none: 'none',
   auto: 'auto',
 };
+
+type Backdrop = 'black' | 'none';
+
+export const Backdrops: Record<Backdrop, string> = {
+  black: 'rgba(0, 0, 0, 0.75)',
+  none: 'none',
+};

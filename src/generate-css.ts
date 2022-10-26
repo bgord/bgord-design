@@ -28,6 +28,7 @@ import { HeightsGenerator } from './heights-generator';
 import { GapGenerator } from './gap-generator';
 import { CursorsGenerator } from './cursors-generator';
 import { PointerEventsGenerator } from './pointer-events-generator';
+import { BackdropsGenerator } from './backdrops-generator';
 
 import {
   Spacing,
@@ -57,6 +58,7 @@ import {
   Heights,
   Cursors,
   PointerEvents,
+  Backdrops,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -116,6 +118,7 @@ export async function main() {
     heights: Heights,
     cursors: Cursors,
     pointerEvents: PointerEvents,
+    backdrops: Backdrops,
   };
 
   await new GeneratorProcessor().process([
@@ -151,5 +154,6 @@ export async function main() {
     new HeightsGenerator(config),
     new CursorsGenerator(config),
     new PointerEventsGenerator(config),
+    new BackdropsGenerator(config),
   ]);
 }
