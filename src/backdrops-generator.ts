@@ -14,7 +14,7 @@ export class BackdropsGenerator extends AbstractGenerator {
 
     // Regular display: data-backdrop="*"
     for (const [key, value] of Object.entries(this.backdrops)) {
-      output += `*[data-backdrop='${key}']::backdrop {\n  backgound: ${value};\n}\n`;
+      output += `*[data-backdrop='${key}']::backdrop {\n  background: ${value};\n}\n`;
     }
 
     return output;
