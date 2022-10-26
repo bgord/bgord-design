@@ -25,7 +25,7 @@ npx gzip dist/main.min.css --extension=gz --extension=br
 npx gzip dist/normalize.min.css --extension=gz --extension=br
 
 info "main.css file sizes:"
-ls -alh dist | grep main | awk '{print $5"\t"$8}'
+ls -alh dist | grep main | awk '{print $5"\t"$9}'
 
 info "normalize.css file sizes:"
-ls -alh dist | grep normalize | awk '{print $5"\t"$8}'
+ls -alh dist | grep normalize | awk '{print $5"\t"$9}'
