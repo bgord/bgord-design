@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.47](https://github.com/bgord/bgord-design/compare/v0.27.46...v0.27.47) (2022-10-26)
+
+
+### Features
+
+* add backdrops ([4a890d0](https://github.com/bgord/bgord-design/commit/4a890d03785069239d63d52bdea2b71b1741d887))
+
+
+### Bug Fixes
+
+* file names in prepare-css-files ([5fe2433](https://github.com/bgord/bgord-design/commit/5fe24330e0dfaba0b5406875a491797d96547adb))
+
 ### [0.27.46](https://github.com/bgord/bgord-design/compare/v0.27.45...v0.27.46) (2022-10-24)
 
 
