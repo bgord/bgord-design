@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.48](https://github.com/bgord/bgord-design/compare/v0.27.47...v0.27.48) (2022-10-26)
+
+
+### Bug Fixes
+
+* background typo ([4b317ae](https://github.com/bgord/bgord-design/commit/4b317aec460c95fa4c23a7cb86900a70b4144654))
+
 ### [0.27.47](https://github.com/bgord/bgord-design/compare/v0.27.46...v0.27.47) (2022-10-26)
 
 
