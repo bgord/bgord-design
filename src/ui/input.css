@@ -38,11 +38,4 @@
   border-color: #b31940;
 }
 
-/* To avoid zooming on input focus on iOS Chrome and Safari */
-@media not all and (min-resolution: 0.001dpcm) {
-  .c-input {
-    font-size: 16px;
-  }
-}
-
 /* ===================== */
