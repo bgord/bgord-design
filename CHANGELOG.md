@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.50](https://github.com/bgord/bgord-design/compare/v0.27.49...v0.27.50) (2023-05-16)
+
+
+### Bug Fixes
+
+* change order of selectors to allow overriding ui components styles ([3411014](https://github.com/bgord/bgord-design/commit/3411014fa46b9e17547567faefbe69164c57db85))
+
 ### [0.27.49](https://github.com/bgord/bgord-design/compare/v0.27.48...v0.27.49) (2023-03-12)
 
 ### [0.27.48](https://github.com/bgord/bgord-design/compare/v0.27.47...v0.27.48) (2022-10-26)
