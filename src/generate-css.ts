@@ -65,12 +65,6 @@ class GeneratorProcessor {
   async process(generators: AbstractGenerator[]) {
     let output = '';
 
-    for (const generator of generators) {
-      output += generator.generateHeader();
-      output += generator.generateCss();
-      output += generator.generateFooter();
-    }
-
     output += await new File('src/ui/button.css').read();
     output += await new File('src/ui/input.css').read();
     output += await new File('src/ui/label.css').read();
@@ -85,6 +79,12 @@ class GeneratorProcessor {
     output += await new File('src/rules/target-blank-referer.css').read();
     output += await new File('src/rules/image-alt.css').read();
     output += await new File('src/rules/button-icon-title.css').read();
+
+    for (const generator of generators) {
+      output += generator.generateHeader();
+      output += generator.generateCss();
+      output += generator.generateFooter();
+    }
 
     await new File('dist/main.css').save(output);
   }
