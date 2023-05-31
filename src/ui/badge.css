@@ -1,0 +1,22 @@
+/* Badge component */
+
+.c-badge {
+  padding: 0 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  color: #4b5563;
+}
+
+.c-badge:hover {
+  opacity: 0.9;
+  transition: opacity 300ms;
+}
+
+/* ===================== */
