@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.51](https://github.com/bgord/bgord-design/compare/v0.27.50...v0.27.51) (2023-05-31)
+
+
+### Features
+
+* add ui/badge ([34d28c8](https://github.com/bgord/bgord-design/commit/34d28c8dc3eabef7656ac611355847f44449a6ac))
+
 ### [0.27.50](https://github.com/bgord/bgord-design/compare/v0.27.49...v0.27.50) (2023-05-16)
 
 
