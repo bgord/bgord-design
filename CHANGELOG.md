@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.53](https://github.com/bgord/bgord-design/compare/v0.27.52...v0.27.53) (2023-06-06)
+
+
+### Bug Fixes
+
+* don't change border-radius on c-button:disabled:hover ([bb19995](https://github.com/bgord/bgord-design/commit/bb199956714c002f9fd410200a00f98a6fffb266))
+
 ### [0.27.52](https://github.com/bgord/bgord-design/compare/v0.27.51...v0.27.52) (2023-06-04)
 
 ### [0.27.51](https://github.com/bgord/bgord-design/compare/v0.27.50...v0.27.51) (2023-05-31)
