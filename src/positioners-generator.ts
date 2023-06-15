@@ -1,18 +1,40 @@
-import { AbstractGenerator } from './generator';
+import { AbstractGenerator, GeneratorConfigType } from './generator';
 
 export class PositionersGenerator extends AbstractGenerator {
-  constructor() {
+  spacing: GeneratorConfigType['spacing'];
+  breakpoints: GeneratorConfigType['breakpoints'];
+
+  constructor(config: GeneratorConfigType) {
     super('Positioners');
+
+    this.spacing = config.spacing;
+    this.breakpoints = config.breakpoints;
   }
 
   generateCss(): string {
     let output = '';
 
-    output += `*[data-top='0'] {\n  top: 0;\n}\n`;
-    output += `*[data-right='0'] {\n  right: 0;\n}\n`;
-    output += `*[data-bottom='0'] {\n  bottom: 0;\n}\n`;
-    output += `*[data-left='0'] {\n  left: 0;\n}\n`;
-    output += `*[data-inset='0'] {\n  inset: 0;\n}\n`;
+    for (const [key, value] of Object.entries(this.spacing)) {
+      output += `*[data-top='${key}'] {\n  top: ${value};\n}\n`;
+      output += `*[data-right='${key}'] {\n  right: ${value};\n}\n`;
+      output += `*[data-bottom='${key}'] {\n  bottom: ${value};\n}\n`;
+      output += `*[data-left='${key}'] {\n  left: ${value};\n}\n`;
+      output += `*[data-inset='${key}'] {\n  inset: ${value};\n}\n`;
+    }
+
+    for (const [name, value] of Object.entries(this.breakpoints)) {
+      output += `@media (max-width: ${value}px) {\n`;
+
+      for (const [key, value] of Object.entries(this.spacing)) {
+        output += `*[data-${name}-top='${key}'] {\n  top: ${value};\n}\n`;
+        output += `*[data-${name}-right='${key}'] {\n  right: ${value};\n}\n`;
+        output += `*[data-${name}-bottom='${key}'] {\n  bottom: ${value};\n}\n`;
+        output += `*[data-${name}-left='${key}'] {\n  left: ${value};\n}\n`;
+        output += `*[data-${name}-inset='${key}'] {\n  inset: ${value};\n}\n`;
+      }
+
+      output += `}\n`;
+    }
 
     return output;
   }

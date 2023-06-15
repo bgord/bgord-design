@@ -152,7 +152,7 @@ export async function main() {
     new MaxWidthsGenerator(config),
     new TransformsGenerator(config),
     new OverflowsGenerator(config),
-    new PositionersGenerator(),
+    new PositionersGenerator(config),
     new HeightsGenerator(config),
     new CursorsGenerator(config),
     new PointerEventsGenerator(config),
