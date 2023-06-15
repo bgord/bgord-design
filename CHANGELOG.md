@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.54](https://github.com/bgord/bgord-design/compare/v0.27.53...v0.27.54) (2023-06-15)
+
+
+### Features
+
+* improve positions generator ([fd3432b](https://github.com/bgord/bgord-design/commit/fd3432bd4012272fc7b82acd0c813985fe160aa4))
+
 ### [0.27.53](https://github.com/bgord/bgord-design/compare/v0.27.52...v0.27.53) (2023-06-06)
 
 
