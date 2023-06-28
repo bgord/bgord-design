@@ -38,10 +38,3 @@
 .c-textarea:invalid:not(:placeholder-shown) {
   border-color: #b31940;
 }
-
-/* To avoid zooming on textarea focus on iOS Chrome and Safari */
-@media not all and (min-resolution: 0.001dpcm) {
-  .c-textarea {
-    font-size: 16px;
-  }
-}
