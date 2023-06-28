@@ -11,7 +11,7 @@
   border-radius: 4px;
   outline: none;
   appearance: none;
-  resize: vertical;
+  resize: none;
 
   transition: border-radius 300ms, border-color 400ms;
 }
