@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.56](https://github.com/bgord/bgord-design/compare/v0.27.55...v0.27.56) (2023-06-28)
+
+
+### Bug Fixes
+
+* remove textarea min-height ([2c6adad](https://github.com/bgord/bgord-design/commit/2c6adad3e6fffa2252ad500704995046ae11497a))
+
 ### [0.27.55](https://github.com/bgord/bgord-design/compare/v0.27.54...v0.27.55) (2023-06-28)
 
 ### [0.27.54](https://github.com/bgord/bgord-design/compare/v0.27.53...v0.27.54) (2023-06-15)
