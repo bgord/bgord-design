@@ -17,6 +17,7 @@ import { BackgroundsGenerator } from './backgrounds-generator';
 import { FontColorsGenerator } from './font-colors-generator';
 import { LetterSpacingsGenerator } from './letter-spacings-generator';
 import { FlexGrowsGenerator } from './flex-grows-generator';
+import { FlexShrinksGenerator } from './flex-shrinks-generator';
 import { BorderWidthsGenerator } from './border-widths-generator';
 import { BorderColorsGenerator } from './border-colors-generator';
 import { BorderRadiusesGenerator } from './border-radiuses-generator';
@@ -49,6 +50,7 @@ import {
   Breakpoints,
   LetterSpacings,
   FlexGrows,
+  FlexShrinks,
   BorderWidths,
   BorderColors,
   BorderRadiuses,
@@ -111,6 +113,7 @@ export async function main() {
     breakpoints: Breakpoints,
     letterSpacings: LetterSpacings,
     flexGrows: FlexGrows,
+    flexShrinks: FlexShrinks,
     borderWidths: BorderWidths,
     borderColors: BorderColors,
     borderRadiuses: BorderRadiuses,
@@ -132,6 +135,7 @@ export async function main() {
     new FlexWrapGenerator(config),
     new FlexDirectionsGenerator(config),
     new FlexGrowsGenerator(config),
+    new FlexShrinksGenerator(config),
     new GapGenerator(config),
 
     new WidthsGenerator(config),

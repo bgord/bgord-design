@@ -17,6 +17,7 @@ import {
   Breakpoints,
   LetterSpacings,
   FlexGrows,
+  FlexShrinks,
   BorderWidths,
   BorderColors,
   BorderRadiuses,
@@ -65,6 +66,7 @@ export type GeneratorConfigType = {
   breakpoints: typeof Breakpoints;
   letterSpacings: typeof LetterSpacings;
   flexGrows: typeof FlexGrows;
+  flexShrinks: typeof FlexShrinks;
   borderWidths: typeof BorderWidths;
   borderColors: typeof BorderColors;
   borderRadiuses: typeof BorderRadiuses;

@@ -241,6 +241,17 @@ Possible values: see the Colors section.
 | 1     |   1   |
 | unset | unset |
 
+## Flex shrinks
+
+| Definition  | Value       |
+| ----------- | ----------- |
+| data-shrink | flex-shrink |
+
+| Key   | Value |
+| ----- | :---: |
+| 0     |   0   |
+| unset | unset |
+
 ## Border widths
 
 | Definition | Value                     |

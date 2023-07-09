@@ -5,7 +5,7 @@ export class FlexGrowsGenerator extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super('Line heights');
+    super('Flex grows');
 
     this.flexGrows = config.flexGrows;
     this.breakpoints = config.breakpoints;

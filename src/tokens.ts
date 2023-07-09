@@ -259,6 +259,13 @@ export const FlexGrows: Record<FlexGrowType, string> = {
   unset: 'unset',
 };
 
+type FlexShrinkType = '0' | 'unset';
+
+export const FlexShrinks: Record<FlexShrinkType, string> = {
+  '0': '0',
+  unset: 'unset',
+};
+
 type BorderWidthType = '1' | '2' | '4' | '6' | '12';
 
 export const BorderWidths: Record<BorderWidthType, number> = {
