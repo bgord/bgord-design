@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.57](https://github.com/bgord/bgord-design/compare/v0.27.56...v0.27.57) (2023-07-09)
+
+
+### Features
+
+* add flex shrink to design system ([bfe9cfc](https://github.com/bgord/bgord-design/commit/bfe9cfc6865ba53d32cfeb180c4b2628582523e3))
+
+
+### Bug Fixes
+
+* generator headers ([bdc0842](https://github.com/bgord/bgord-design/commit/bdc0842432610c0454ab24de244fd6efdab41d58))
+
 ### [0.27.56](https://github.com/bgord/bgord-design/compare/v0.27.55...v0.27.56) (2023-06-28)
 
 
