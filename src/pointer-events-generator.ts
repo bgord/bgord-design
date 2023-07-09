@@ -5,7 +5,7 @@ export class PointerEventsGenerator extends AbstractGenerator {
   breakpoints: GeneratorConfigType['breakpoints'];
 
   constructor(config: GeneratorConfigType) {
-    super('Cursors');
+    super('Pointer events');
 
     this.pointerEvents = config.pointerEvents;
     this.breakpoints = config.breakpoints;
