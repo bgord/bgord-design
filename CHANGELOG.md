@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.58](https://github.com/bgord/bgord-design/compare/v0.27.57...v0.27.58) (2023-07-12)
+
+
+### Features
+
+* add file explorer component ([0265adf](https://github.com/bgord/bgord-design/commit/0265adf2f0a90523a2ae05fa58914ede2b027fa6))
+
 ### [0.27.57](https://github.com/bgord/bgord-design/compare/v0.27.56...v0.27.57) (2023-07-09)
 
 
