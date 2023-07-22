@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.60](https://github.com/bgord/bgord-design/compare/v0.27.59...v0.27.60) (2023-07-22)
+
+
+### Features
+
+* add object fits ([a8858cf](https://github.com/bgord/bgord-design/commit/a8858cfe512d94f625a1e1958eab3c781fb2eb9b))
+
 ### [0.27.59](https://github.com/bgord/bgord-design/compare/v0.27.58...v0.27.59) (2023-07-22)
 
 
