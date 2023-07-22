@@ -489,3 +489,17 @@ Orange
 | fill       |    fill    |
 | scale-down | scale-down |
 | none       |    none    |
+
+## Object positions
+
+| Definition           | Value           |
+| -------------------- | --------------- |
+| data-object-position | object-position |
+
+| Key    | Value  |
+| ------ | :----: |
+| top    |  top   |
+| bottom | bottom |
+| left   |  left  |
+| right  | right  |
+| center | center |

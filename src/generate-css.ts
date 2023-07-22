@@ -31,6 +31,7 @@ import { CursorsGenerator } from './cursors-generator';
 import { PointerEventsGenerator } from './pointer-events-generator';
 import { BackdropsGenerator } from './backdrops-generator';
 import { ObjectFitsGenerator } from './object-fits-generator';
+import { ObjectPositionsGenerator } from './object-positions-generator';
 
 import {
   Spacing,
@@ -63,6 +64,7 @@ import {
   PointerEvents,
   Backdrops,
   ObjectFits,
+  ObjectPositions,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -128,6 +130,7 @@ export async function main() {
     pointerEvents: PointerEvents,
     backdrops: Backdrops,
     objectFits: ObjectFits,
+    objectPositions: ObjectPositions,
   };
 
   await new GeneratorProcessor().process([
@@ -166,5 +169,6 @@ export async function main() {
     new PointerEventsGenerator(config),
     new BackdropsGenerator(config),
     new ObjectFitsGenerator(config),
+    new ObjectPositionsGenerator(config),
   ]);
 }

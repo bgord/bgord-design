@@ -42,6 +42,16 @@ export const ObjectFits: Record<ObjectFitType, string> = {
   none: 'none',
 };
 
+type ObjectPositionType = 'top' | 'bottom' | 'left' | 'right' | 'center';
+
+export const ObjectPositions: Record<ObjectPositionType, string> = {
+  top: 'top',
+  bottom: 'bottom',
+  left: 'left',
+  right: 'right',
+  center: 'center',
+};
+
 type AxisPlacementType =
   | 'start'
   | 'end'
