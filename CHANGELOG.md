@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.59](https://github.com/bgord/bgord-design/compare/v0.27.58...v0.27.59) (2023-07-22)
+
+
+### Bug Fixes
+
+* don't change border on disabled button hover ([23709de](https://github.com/bgord/bgord-design/commit/23709dea0a48056aa21cabdb7bb1ad1a1cf9ed7c))
+
 ### [0.27.58](https://github.com/bgord/bgord-design/compare/v0.27.57...v0.27.58) (2023-07-12)
 
 
