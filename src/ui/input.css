@@ -26,7 +26,7 @@
 
 .c-input:disabled {
   opacity: 0.75;
-  background: #e5e7eb;
+  background: #f3f4f6;
   border-color: #d1d5db;
 }
 .c-button:disabled:hover {
