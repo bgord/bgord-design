@@ -29,6 +29,9 @@
   background: #e5e7eb;
   border-color: #d1d5db;
 }
+.c-button:disabled:hover {
+  border-radius: 4px;
+}
 
 .c-input:placeholder-shown {
   color: #4b5563;
