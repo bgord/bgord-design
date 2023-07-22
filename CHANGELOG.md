@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.61](https://github.com/bgord/bgord-design/compare/v0.27.60...v0.27.61) (2023-07-22)
+
+
+### Features
+
+* add object position ([b86fedc](https://github.com/bgord/bgord-design/commit/b86fedccb888cf08e3f9e0be259423f4db265e38))
+
 ### [0.27.60](https://github.com/bgord/bgord-design/compare/v0.27.59...v0.27.60) (2023-07-22)
 
 
