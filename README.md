@@ -478,9 +478,9 @@ Orange
 
 ## Object fits
 
-| Definition | Value      |
-| ---------- | ---------- |
-| data-fit   | object-fit |
+| Definition      | Value      |
+| --------------- | ---------- |
+| data-object-fit | object-fit |
 
 | Key        |   Value    |
 | ---------- | :--------: |
