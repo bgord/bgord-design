@@ -32,6 +32,16 @@ export const Displays: Record<DisplayType, string> = {
   none: 'none',
 };
 
+type ObjectFitType = 'contain' | 'cover' | 'fill' | 'scale-down' | 'none';
+
+export const ObjectFits: Record<ObjectFitType, string> = {
+  contain: 'contain',
+  cover: 'cover',
+  fill: 'fill',
+  'scale-down': 'scale-down',
+  none: 'none',
+};
+
 type AxisPlacementType =
   | 'start'
   | 'end'

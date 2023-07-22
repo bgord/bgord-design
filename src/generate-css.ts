@@ -30,6 +30,7 @@ import { GapGenerator } from './gap-generator';
 import { CursorsGenerator } from './cursors-generator';
 import { PointerEventsGenerator } from './pointer-events-generator';
 import { BackdropsGenerator } from './backdrops-generator';
+import { ObjectFitsGenerator } from './object-fits-generator';
 
 import {
   Spacing,
@@ -61,6 +62,7 @@ import {
   Cursors,
   PointerEvents,
   Backdrops,
+  ObjectFits,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -125,6 +127,7 @@ export async function main() {
     cursors: Cursors,
     pointerEvents: PointerEvents,
     backdrops: Backdrops,
+    objectFits: ObjectFits,
   };
 
   await new GeneratorProcessor().process([
@@ -162,5 +165,6 @@ export async function main() {
     new CursorsGenerator(config),
     new PointerEventsGenerator(config),
     new BackdropsGenerator(config),
+    new ObjectFitsGenerator(config),
   ]);
 }

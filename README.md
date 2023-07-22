@@ -475,3 +475,17 @@ Orange
 | ----- | :-----------------: |
 | black | rgba(0, 0, 0, 0.75) |
 | none  |        none         |
+
+## Object fits
+
+| Definition | Value      |
+| ---------- | ---------- |
+| data-fit   | object-fit |
+
+| Key        |   Value    |
+| ---------- | :--------: |
+| contain    |  contain   |
+| cover      |   cover    |
+| fill       |    fill    |
+| scale-down | scale-down |
+| none       |    none    |

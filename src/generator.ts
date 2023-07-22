@@ -28,6 +28,7 @@ import {
   Cursors,
   PointerEvents,
   Backdrops,
+  ObjectFits,
 } from './tokens';
 
 export abstract class AbstractGenerator {
@@ -77,4 +78,5 @@ export type GeneratorConfigType = {
   cursors: typeof Cursors;
   pointerEvents: typeof PointerEvents;
   backdrops: typeof Backdrops;
+  objectFits: typeof ObjectFits;
 };
