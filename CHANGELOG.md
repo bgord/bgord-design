@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.62](https://github.com/bgord/bgord-design/compare/v0.27.61...v0.27.62) (2023-07-23)
+
+
+### Features
+
+* add rotate ([1a95095](https://github.com/bgord/bgord-design/commit/1a95095a0a527e06e5e3c629899e55565299c051))
+
 ### [0.27.61](https://github.com/bgord/bgord-design/compare/v0.27.60...v0.27.61) (2023-07-22)
 
 
