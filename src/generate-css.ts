@@ -32,6 +32,7 @@ import { PointerEventsGenerator } from './pointer-events-generator';
 import { BackdropsGenerator } from './backdrops-generator';
 import { ObjectFitsGenerator } from './object-fits-generator';
 import { ObjectPositionsGenerator } from './object-positions-generator';
+import { RotatesGenerator } from './rotates-generator';
 
 import {
   Spacing,
@@ -65,6 +66,7 @@ import {
   Backdrops,
   ObjectFits,
   ObjectPositions,
+  Rotates,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -131,6 +133,7 @@ export async function main() {
     backdrops: Backdrops,
     objectFits: ObjectFits,
     objectPositions: ObjectPositions,
+    rotates: Rotates,
   };
 
   await new GeneratorProcessor().process([
@@ -170,5 +173,6 @@ export async function main() {
     new BackdropsGenerator(config),
     new ObjectFitsGenerator(config),
     new ObjectPositionsGenerator(config),
+    new RotatesGenerator(config),
   ]);
 }

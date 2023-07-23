@@ -375,3 +375,12 @@ export const Backdrops: Record<Backdrop, string> = {
   black: 'rgba(0, 0, 0, 0.75)',
   none: 'none',
 };
+
+type Rotate = '0' | '90' | '180' | '270';
+
+export const Rotates: Record<Rotate, string> = {
+  '0': '0',
+  '90': '90',
+  '180': '180',
+  '270': '270',
+};

@@ -30,6 +30,7 @@ import {
   Backdrops,
   ObjectFits,
   ObjectPositions,
+  Rotates,
 } from './tokens';
 
 export abstract class AbstractGenerator {
@@ -81,4 +82,5 @@ export type GeneratorConfigType = {
   backdrops: typeof Backdrops;
   objectFits: typeof ObjectFits;
   objectPositions: typeof ObjectPositions;
+  rotates: typeof Rotates;
 };

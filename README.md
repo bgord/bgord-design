@@ -503,3 +503,16 @@ Orange
 | left   |  left  |
 | right  | right  |
 | center | center |
+
+## Rotates
+
+| Definition  | Value                    |
+| ----------- | ------------------------ |
+| data-rotate | transform: rotate(x deg) |
+
+| Key | Value |
+| --- | :---: |
+| 0   |   0   |
+| 90  |  90   |
+| 180 |  180  |
+| 270 |  270  |
