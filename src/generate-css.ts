@@ -84,6 +84,7 @@ class GeneratorProcessor {
     output += await new File('src/ui/range.css').read();
     output += await new File('src/ui/badge.css').read();
     output += await new File('src/ui/file-explorer.css').read();
+    output += await new File('src/ui/visually-hidden.css').read();
 
     output += await new File('src/rules/title-truncate.css').read();
     output += await new File('src/rules/target-blank-referer.css').read();
