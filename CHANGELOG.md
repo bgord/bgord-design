@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.63](https://github.com/bgord/bgord-design/compare/v0.27.62...v0.27.63) (2023-07-28)
+
+
+### Features
+
+* add top-left/right object position ([dd8c6e1](https://github.com/bgord/bgord-design/commit/dd8c6e17728ad069bf3d65443171821a3a63b77a))
+* add visually hidden class ([267ed02](https://github.com/bgord/bgord-design/commit/267ed0230c0b8d2581d9af0e0520ab53dfc22b06))
+
 ### [0.27.62](https://github.com/bgord/bgord-design/compare/v0.27.61...v0.27.62) (2023-07-23)
 
 
