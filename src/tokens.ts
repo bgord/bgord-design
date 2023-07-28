@@ -42,7 +42,14 @@ export const ObjectFits: Record<ObjectFitType, string> = {
   none: 'none',
 };
 
-type ObjectPositionType = 'top' | 'bottom' | 'left' | 'right' | 'center';
+type ObjectPositionType =
+  | 'top'
+  | 'bottom'
+  | 'left'
+  | 'right'
+  | 'center'
+  | 'top-left'
+  | 'top-right';
 
 export const ObjectPositions: Record<ObjectPositionType, string> = {
   top: 'top',
@@ -50,6 +57,8 @@ export const ObjectPositions: Record<ObjectPositionType, string> = {
   left: 'left',
   right: 'right',
   center: 'center',
+  'top-left': 'top left',
+  'top-right': 'top right',
 };
 
 type AxisPlacementType =
