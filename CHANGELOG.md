@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.64](https://github.com/bgord/bgord-design/compare/v0.27.63...v0.27.64) (2023-07-28)
+
+
+### Bug Fixes
+
+* slider thumb on webkit ([32bd65b](https://github.com/bgord/bgord-design/commit/32bd65b55b96f1604d313af4ac438dbe3b106e94))
+
 ### [0.27.63](https://github.com/bgord/bgord-design/compare/v0.27.62...v0.27.63) (2023-07-28)
 
 
