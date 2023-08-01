@@ -73,7 +73,7 @@
   letter-spacing: 0.5px;
 }
 .c-button[data-variant='with-icon'] {
-  padding: 0 8px;
+  padding: 0 3px;
   display: flex;
   justify-content: center;
   align-items: center;
