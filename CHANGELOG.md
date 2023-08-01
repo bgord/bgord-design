@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.65](https://github.com/bgord/bgord-design/compare/v0.27.64...v0.27.65) (2023-08-01)
+
+
+### Bug Fixes
+
+* c-button with-icon horizontal padding ([7fde127](https://github.com/bgord/bgord-design/commit/7fde127923b31bf60a724fa4501b7dffec24ca9f))
+
 ### [0.27.64](https://github.com/bgord/bgord-design/compare/v0.27.63...v0.27.64) (2023-07-28)
 
 
