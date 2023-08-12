@@ -333,6 +333,13 @@ export const MaxWidths: Record<MaxWidthType, string> = {
   unset: 'unset',
 };
 
+type MaxHeightType = '100%' | 'unset';
+
+export const MaxHeights: Record<MaxHeightType, string> = {
+  '100%': '100%',
+  unset: 'unset',
+};
+
 type TransformType =
   | 'uppercase'
   | 'lowercase'

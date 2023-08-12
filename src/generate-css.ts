@@ -33,6 +33,7 @@ import { BackdropsGenerator } from './backdrops-generator';
 import { ObjectFitsGenerator } from './object-fits-generator';
 import { ObjectPositionsGenerator } from './object-positions-generator';
 import { RotatesGenerator } from './rotates-generator';
+import { MaxHeightsGenerator } from './max-heights-generator';
 
 import {
   Spacing,
@@ -67,6 +68,7 @@ import {
   ObjectFits,
   ObjectPositions,
   Rotates,
+  MaxHeights,
 } from './tokens';
 
 class GeneratorProcessor {
@@ -135,6 +137,7 @@ export async function main() {
     objectFits: ObjectFits,
     objectPositions: ObjectPositions,
     rotates: Rotates,
+    maxHeights: MaxHeights,
   };
 
   await new GeneratorProcessor().process([
@@ -175,5 +178,6 @@ export async function main() {
     new ObjectFitsGenerator(config),
     new ObjectPositionsGenerator(config),
     new RotatesGenerator(config),
+    new MaxHeightsGenerator(config),
   ]);
 }

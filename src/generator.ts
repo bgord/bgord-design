@@ -31,6 +31,7 @@ import {
   ObjectFits,
   ObjectPositions,
   Rotates,
+  MaxHeights,
 } from './tokens';
 
 export abstract class AbstractGenerator {
@@ -83,4 +84,5 @@ export type GeneratorConfigType = {
   objectFits: typeof ObjectFits;
   objectPositions: typeof ObjectPositions;
   rotates: typeof Rotates;
+  maxHeights: typeof MaxHeights;
 };
