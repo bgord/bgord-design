@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.66](https://github.com/bgord/bgord-design/compare/v0.27.65...v0.27.66) (2023-08-12)
+
+
+### Features
+
+* add max heights ([94e1011](https://github.com/bgord/bgord-design/commit/94e101198508c9e508837acb559accb4aabe0fb3))
+
 ### [0.27.65](https://github.com/bgord/bgord-design/compare/v0.27.64...v0.27.65) (2023-08-01)
 
 
