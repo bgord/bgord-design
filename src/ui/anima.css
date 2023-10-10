@@ -4,13 +4,13 @@
 
 /* - appearing */
 /* - appeared */
-/* - hidding */
+/* - hiding */
 /* - hidden */
 
 *[data-anima='appeared'] {
   transition: all var(--duration, 300ms);
 }
-*[data-anima='hidding'] {
+*[data-anima='hiding'] {
   transition: all var(--duration, 300ms);
 }
 
@@ -22,7 +22,7 @@
 *[data-anima-effect='opacity'][data-anima='appeared'] {
   opacity: 1;
 }
-*[data-anima-effect='opacity'][data-anima='hidding'] {
+*[data-anima-effect='opacity'][data-anima='hiding'] {
   opacity: 0;
 }
 
