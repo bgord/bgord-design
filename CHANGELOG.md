@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.67](https://github.com/bgord/bgord-design/compare/v0.27.66...v0.27.67) (2023-11-03)
+
+
+### Features
+
+* add switch component css ([09a2cb7](https://github.com/bgord/bgord-design/commit/09a2cb7c12803ede69074eb324304d9701bb05e6))
+
+
+### Bug Fixes
+
+* typos ([5700dba](https://github.com/bgord/bgord-design/commit/5700dbaee6363c5bfc6fc59e962e926db3623a8a))
+
 ### [0.27.66](https://github.com/bgord/bgord-design/compare/v0.27.65...v0.27.66) (2023-08-12)
 
 
