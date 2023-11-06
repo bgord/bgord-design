@@ -67,7 +67,7 @@
     "gzip-cli": "^1.2.0",
     "husky": "^7.0.1",
     "postcss": "^8.4.31",
-    "postcss-cli": "^8.3.1",
+    "postcss-cli": "^10.1.0",
     "postcss-preset-env": "^6.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
