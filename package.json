@@ -75,7 +75,7 @@
     "size-limit": "^5.0.1",
     "standard-version": "^9.3.2",
     "tsdx": "^0.14.1",
-    "tslib": "^2.3.0",
+    "tslib": "^2.6.2",
     "typescript": "5.2.2"
   },
   "dependencies": {
