@@ -79,7 +79,6 @@
     "typescript": "5.2.2"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001361",
     "lodash.pick": "^4.4.0"
   }
 }
