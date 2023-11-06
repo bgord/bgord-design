@@ -2026,7 +2026,7 @@
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@6.3.4", "@storybook/addons@^6.3.0", "@storybook/addons@^6.3.4":
+"@storybook/addons@6.3.4", "@storybook/addons@^6.3.0":
   version "6.3.4"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.3.4.tgz#016c5c3e36c78a320eb8b022cf7fe556d81577c2"
   integrity sha512-rf8K8X3JrB43gq5nw5SYgfucQkFg2QgUMWdByf7dQ4MyIl5zet+2MYiSXJ9lfbhGKJZ8orc81rmMtiocW4oBjg==
@@ -2040,6 +2040,15 @@
     core-js "^3.8.2"
     global "^4.4.0"
     regenerator-runtime "^0.13.7"
+
+"@storybook/addons@^7.5.2":
+  version "7.5.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.5.2.tgz#749c597d669ae090864c30c795203e6e04607a46"
+  integrity sha512-hRiy56zQbz72Pwa4F40srUWXKGNIriNkZ1R0j5KPd8ZqoMk1hIeW0S8E7s1vuM/MplnUE/jFJZqu6HQCvbqmGg==
+  dependencies:
+    "@storybook/manager-api" "7.5.2"
+    "@storybook/preview-api" "7.5.2"
+    "@storybook/types" "7.5.2"
 
 "@storybook/api@5.3.21":
   version "5.3.21"
@@ -5823,6 +5832,11 @@ dependency-graph@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/dependency-graph/-/dependency-graph-0.11.0.tgz#ac0ce7ed68a54da22165a85e97a01d53f5eb2e27"
   integrity sha512-JeMq7fEshyepOWDfcfHK06N3MhyPhz++vtqWhMT5O9A3K42rdsEDpfdVqjaqaAhsw6a+ZqeDvQVtD0hFHQWrzg==
+
+dequal@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/dequal/-/dequal-2.0.3.tgz#2644214f1997d39ed0ee0ece72335490a7ac67be"
+  integrity sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==
 
 dequal@^2.0.2:
   version "2.0.3"
