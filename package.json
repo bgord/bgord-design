@@ -19,9 +19,7 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build && yarn prepublish",
     "size": "size-limit",
-    "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "analyze": "size-limit --why"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -53,11 +51,6 @@
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@size-limit/preset-small-lib": "^5.0.1",
-    "@storybook/addon-essentials": "^7.5.2",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/addons": "^7.5.2",
-    "@storybook/react": "^6.3.4",
     "@types/lodash.pick": "^4.4.8",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
