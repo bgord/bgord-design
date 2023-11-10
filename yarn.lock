@@ -2272,6 +2272,21 @@ chokidar@^3.3.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
+chokidar@^3.5.2:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
+  integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
+  dependencies:
+    anymatch "~3.1.2"
+    braces "~3.0.2"
+    glob-parent "~5.1.2"
+    is-binary-path "~2.1.0"
+    is-glob "~4.0.1"
+    normalize-path "~3.0.0"
+    readdirp "~3.6.0"
+  optionalDependencies:
+    fsevents "~2.3.2"
+
 ci-info@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
@@ -2287,19 +2302,20 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-css-cli@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/clean-css-cli/-/clean-css-cli-5.3.0.tgz#e0c4c0a65574321465b472164ca3760b8535fa62"
-  integrity sha512-Jri2KVAcan/Y1JuEDo1rUlm3vUoGvMKSOpIL2YEPgalksvoGur/yL2KbtMF2dPs2VlMVj1afzp76Vu0KjxKfvA==
+clean-css-cli@5.6.2:
+  version "5.6.2"
+  resolved "https://registry.yarnpkg.com/clean-css-cli/-/clean-css-cli-5.6.2.tgz#7b645ebb8025e56e6c66f535f4a92d9c9bba9f19"
+  integrity sha512-GDQkr6zVqHJhO3yWTy3sA22sMCT6iUqaJuBdqZMW6oI25MtiJ2iZXDmWzErpjoRotsB+TYPTpuZSNSgaC1n4lA==
   dependencies:
-    clean-css "^5.1.2"
+    chokidar "^3.5.2"
+    clean-css "^5.3.2"
     commander "7.x"
     glob "^7.1.6"
 
-clean-css@^5.1.2:
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-5.1.3.tgz#42348778c3acb0083946ba340896802be5517ee2"
-  integrity sha512-qGXzUCDpLwAlPx0kYeU4QXjzQIcIYZbJjD4FNm7NnSjoP0hYMVZhHOpUYJ6AwfkMX2cceLRq54MeCgHy/va1cA==
+clean-css@^5.3.2:
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-5.3.2.tgz#70ecc7d4d4114921f5d298349ff86a31a9975224"
+  integrity sha512-JVJbM+f3d3Q704rF4bqQ5UUyTtuJ0JRKNbTKVEeujCCBoMdkEi+V+e8oktO9qGQNSvHrFTM6JZRXrUvGR1czww==
   dependencies:
     source-map "~0.6.0"
 
