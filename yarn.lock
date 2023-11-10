@@ -3846,7 +3846,7 @@ growly@^1.3.0:
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
 
-gzip-cli@^1.2.0:
+gzip-cli@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/gzip-cli/-/gzip-cli-1.2.0.tgz#c85326cc0737ba63b67d8d7940b4010f5bab8965"
   integrity sha512-uMJGySMdAmXrMOoFeTztXDT1NEYQ1n+WoWYvb35ttim1JU3GOxYlGloq9aHXugdkAbldyUrYeLBxlpGBz8NuCg==
