@@ -17,9 +17,7 @@
     "prepublish": "bash scripts/prepare-css-files.sh",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build && yarn prepublish",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
+    "prepare": "tsdx build && yarn prepublish"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -38,19 +36,8 @@
   "name": "@bgord/design",
   "author": "Bartosz Gordon",
   "module": "dist/bgord-design.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/bgord-design.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/bgord-design.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "7.23.3",
-    "@size-limit/preset-small-lib": "^5.0.1",
     "@types/lodash.pick": "^4.4.8",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
@@ -65,7 +52,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
-    "size-limit": "^5.0.1",
     "standard-version": "^9.5.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.6.2",
