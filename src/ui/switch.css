@@ -1,15 +1,19 @@
 /* Switch component */
 
-.c-switch-checkbox {
-  display: none;
-}
-
 .c-switch-checkbox:checked + .c-switch-label {
   background-color: hsl(112, 50%, 45%);
 }
 
 .c-switch-checkbox:not(:checked) + .c-switch-label {
   background-color: #d1d5db;
+}
+
+.c-switch-checkbox:active + .c-switch-label {
+  outline: 1px dotted black;
+}
+
+.c-switch-checkbox:focus + .c-switch-label {
+  outline: 1px dotted black;
 }
 
 .c-switch-label {
