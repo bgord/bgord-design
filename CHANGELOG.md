@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.70](https://github.com/bgord/bgord-design/compare/v0.27.69...v0.27.70) (2023-11-22)
+
+
+### Bug Fixes
+
+* handle switch active and focus states ([cb01e31](https://github.com/bgord/bgord-design/commit/cb01e3106dc265adafe8763e186736f8fb0e54de))
+
 ### [0.27.69](https://github.com/bgord/bgord-design/compare/v0.27.68...v0.27.69) (2023-11-10)
 
 ### [0.27.68](https://github.com/bgord/bgord-design/compare/v0.27.67...v0.27.68) (2023-11-06)
