@@ -1,7 +1,16 @@
 # Changelog
+- 2023-12-11 17:26 89275c5 **Merge pull request #34 from bgord/dependabot/npm_and_yarn/typescript-5.3.3**
+- 2023-12-11 17:25 fa7a3ec **Merge pull request #32 from bgord/dependabot/npm_and_yarn/clean-css-cli-5.6.3**
+- 2023-12-11 17:25 8996c6f **Merge pull request #31 from bgord/dependabot/npm_and_yarn/babel/core-7.23.5**
+- 2023-12-11 17:25 09b1ab1 **Merge pull request #33 from bgord/dependabot/npm_and_yarn/postcss-8.4.32**
 - 2023-12-07 11:07 08946ab **step: add changelog workflow**
 - 2023-12-07 11:03 3b753d3 **step: add changelog workflow**
 - 2023-12-07 11:02 34ba7fe **step: bump bgord/scripts**
+- 2023-12-07 10:07 120007b **docs: generate CHANGELOG**
+- 2023-12-06 20:00 147cd78 **chore(deps-dev): bump typescript from 5.3.2 to 5.3.3**
+- 2023-12-04 19:13 6b100e6 **chore(deps-dev): bump postcss from 8.4.31 to 8.4.32**
+- 2023-11-30 19:23 a98f0a4 **chore(deps-dev): bump clean-css-cli from 5.6.2 to 5.6.3**
+- 2023-11-29 19:24 a12809f **chore(deps-dev): bump @babel/core from 7.23.3 to 7.23.5**
 ## 2023-11-22 13:41 v0.27.70
 - 2023-11-22 13:41 cb01e31 **fix: handle switch active and focus states**
 - 2023-11-22 13:41 91cd174 **chore(release): 0.27.70**
