@@ -1,12 +1,16 @@
 # Changelog
+- 2023-12-11 17:27 62fb18f **Merge branch 'master' into dependabot/npm_and_yarn/postcss-cli-11.0.0**
+- 2023-12-11 17:27 20381ea **Merge pull request #35 from bgord/dependabot/npm_and_yarn/postcss-cli-11.0.0**
 - 2023-12-11 17:26 89275c5 **Merge pull request #34 from bgord/dependabot/npm_and_yarn/typescript-5.3.3**
 - 2023-12-11 17:25 fa7a3ec **Merge pull request #32 from bgord/dependabot/npm_and_yarn/clean-css-cli-5.6.3**
 - 2023-12-11 17:25 8996c6f **Merge pull request #31 from bgord/dependabot/npm_and_yarn/babel/core-7.23.5**
 - 2023-12-11 17:25 09b1ab1 **Merge pull request #33 from bgord/dependabot/npm_and_yarn/postcss-8.4.32**
+- 2023-12-11 16:26 ae35dc4 **docs: generate CHANGELOG**
 - 2023-12-07 11:07 08946ab **step: add changelog workflow**
 - 2023-12-07 11:03 3b753d3 **step: add changelog workflow**
 - 2023-12-07 11:02 34ba7fe **step: bump bgord/scripts**
 - 2023-12-07 10:07 120007b **docs: generate CHANGELOG**
+- 2023-12-06 20:00 b9e7f72 **chore(deps-dev): bump postcss-cli from 10.1.0 to 11.0.0**
 - 2023-12-06 20:00 147cd78 **chore(deps-dev): bump typescript from 5.3.2 to 5.3.3**
 - 2023-12-04 19:13 6b100e6 **chore(deps-dev): bump postcss from 8.4.31 to 8.4.32**
 - 2023-11-30 19:23 a98f0a4 **chore(deps-dev): bump clean-css-cli from 5.6.2 to 5.6.3**
