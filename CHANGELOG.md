@@ -1,10 +1,26 @@
 # Changelog
+<<<<<<< HEAD
+- 2023-12-27 18:21 4d915b5 **feature: add line-clamp transform**
+=======
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.27.71](https://github.com/bgord/bgord-design/compare/v0.27.70...v0.27.71) (2023-12-27)
+
+
+### Features
+
+* add line-clamp transform ([4d915b5](https://github.com/bgord/bgord-design/commit/4d915b5d15d95e9fd7876c98da5c06ad9a9ae1d6))
+
+# Changelog
+>>>>>>> c76de80 (chore(release): 0.27.71)
 - 2023-12-11 17:27 62fb18f **Merge branch 'master' into dependabot/npm_and_yarn/postcss-cli-11.0.0**
 - 2023-12-11 17:27 20381ea **Merge pull request #35 from bgord/dependabot/npm_and_yarn/postcss-cli-11.0.0**
 - 2023-12-11 17:26 89275c5 **Merge pull request #34 from bgord/dependabot/npm_and_yarn/typescript-5.3.3**
 - 2023-12-11 17:25 fa7a3ec **Merge pull request #32 from bgord/dependabot/npm_and_yarn/clean-css-cli-5.6.3**
 - 2023-12-11 17:25 8996c6f **Merge pull request #31 from bgord/dependabot/npm_and_yarn/babel/core-7.23.5**
 - 2023-12-11 17:25 09b1ab1 **Merge pull request #33 from bgord/dependabot/npm_and_yarn/postcss-8.4.32**
+- 2023-12-11 16:27 9d32539 **docs: generate CHANGELOG**
 - 2023-12-11 16:26 ae35dc4 **docs: generate CHANGELOG**
 - 2023-12-07 11:07 08946ab **step: add changelog workflow**
 - 2023-12-07 11:03 3b753d3 **step: add changelog workflow**
