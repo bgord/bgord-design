@@ -1,4 +1,10 @@
 # Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.27.74](https://github.com/bgord/bgord-design/compare/v0.27.73...v0.27.74) (2023-12-27)
+
+# Changelog
 ## 2023-12-27 18:28 v0.27.73
 - 2023-12-27 18:28 f14d4ef **chore(release): 0.27.73**
 ## 2023-12-27 18:23 v0.27.72
