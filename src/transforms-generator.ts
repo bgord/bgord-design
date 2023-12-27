@@ -19,6 +19,11 @@ export class TransformsGenerator extends AbstractGenerator {
         continue;
       }
 
+      if (key === 'line-clamp') {
+        output += `*[data-transform~='${key}'] {\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: var(--lines, 2);\n}\n`;
+        continue;
+      }
+
       if (key === 'center') {
         output += `*[data-transform~='${key}'] {\n  text-align: center;\n}\n`;
         continue;
