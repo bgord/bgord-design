@@ -1,16 +1,13 @@
 # Changelog
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
-### [0.27.74](https://github.com/bgord/bgord-design/compare/v0.27.73...v0.27.74) (2023-12-27)
-
-# Changelog
+## 2023-12-27 18:29 v0.27.74
+- 2023-12-27 18:29 2d2c862 **chore(release): 0.27.74**
 ## 2023-12-27 18:28 v0.27.73
 - 2023-12-27 18:28 f14d4ef **chore(release): 0.27.73**
 ## 2023-12-27 18:23 v0.27.72
 - 2023-12-27 18:23 6651b82 **chore(release): 0.27.72**
 ## 2023-12-27 18:22 v0.27.71
 - 2023-12-27 18:21 4d915b5 **feature: add line-clamp transform**
+- 2023-12-27 17:28 4c029a9 **docs: generate CHANGELOG**
 - 2023-12-27 17:23 063dc5d **docs: generate CHANGELOG**
 - 2023-12-27 17:22 99cc077 **docs: generate CHANGELOG**
 - 2023-12-11 17:27 62fb18f **Merge branch 'master' into dependabot/npm_and_yarn/postcss-cli-11.0.0**
