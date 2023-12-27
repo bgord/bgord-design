@@ -348,7 +348,8 @@ type TransformType =
   | 'truncate'
   | 'center'
   | 'nowrap'
-  | 'none';
+  | 'none'
+  | 'line-clamp';
 
 export const Transforms: Record<TransformType, string> = {
   uppercase: 'uppercase',
@@ -359,6 +360,7 @@ export const Transforms: Record<TransformType, string> = {
   center: 'center',
   nowrap: 'nowrap',
   none: 'none',
+  'line-clamp': 'line-clamp',
 };
 
 type OverflowType = 'auto' | 'scroll' | 'hidden';
