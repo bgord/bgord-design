@@ -1,9 +1,13 @@
 # Changelog
-<<<<<<< HEAD
-- 2023-12-27 18:21 4d915b5 **feature: add line-clamp transform**
-=======
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.27.72](https://github.com/bgord/bgord-design/compare/v0.27.70...v0.27.72) (2023-12-27)
+
+
+### Features
+
+* add line-clamp transform ([4d915b5](https://github.com/bgord/bgord-design/commit/4d915b5d15d95e9fd7876c98da5c06ad9a9ae1d6))
 
 ### [0.27.71](https://github.com/bgord/bgord-design/compare/v0.27.70...v0.27.71) (2023-12-27)
 
