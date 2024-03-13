@@ -1,4 +1,15 @@
 # Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.27.76](https://github.com/bgord/bgord-design/compare/v0.27.74...v0.27.76) (2024-03-13)
+
+
+### Bug Fixes
+
+* add missing overflow hidden to line-clamp transform ([d971e2b](https://github.com/bgord/bgord-design/commit/d971e2b078c2a95ab5489b0fa519d6c394a928e1))
+
+# Changelog
 ## 2023-12-27 18:29 v0.27.74
 - 2023-12-27 18:29 2d2c862 **chore(release): 0.27.74**
 ## 2023-12-27 18:28 v0.27.73
