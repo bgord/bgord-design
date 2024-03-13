@@ -20,7 +20,7 @@ export class TransformsGenerator extends AbstractGenerator {
       }
 
       if (key === 'line-clamp') {
-        output += `*[data-transform~='${key}'] {\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: var(--lines, 2);\n}\n`;
+        output += `*[data-transform~='${key}'] {\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: var(--lines, 2); overflow: hidden;\n}\n`;
         continue;
       }
 
