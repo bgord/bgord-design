@@ -1,4 +1,15 @@
 # Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.27.77](https://github.com/bgord/bgord-design/compare/v0.27.76...v0.27.77) (2024-03-21)
+
+
+### Bug Fixes
+
+* remove padding from c-button with-icon ([26286e8](https://github.com/bgord/bgord-design/commit/26286e8c3f8a1545767541f52a96f722a161c4c9))
+
+# Changelog
 ## 2024-03-13 13:56 v0.27.76
 - 2024-03-13 13:56 5706c7f **chore(release): 0.27.76**
 - 2024-03-13 13:55 d971e2b **fix: add missing overflow hidden to line-clamp transform**
