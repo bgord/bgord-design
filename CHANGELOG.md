@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.79](https://github.com/bgord/bgord-design/compare/v0.27.77...v0.27.79) (2024-03-21)
+
 ### [0.27.77](https://github.com/bgord/bgord-design/compare/v0.27.76...v0.27.77) (2024-03-21)
 
 
