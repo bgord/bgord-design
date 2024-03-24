@@ -1,20 +1,12 @@
 # Changelog
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
-### [0.27.80](https://github.com/bgord/bgord-design/compare/v0.27.79...v0.27.80) (2024-03-24)
-
-
-### Bug Fixes
-
-* add mobile positions ([3c8b173](https://github.com/bgord/bgord-design/commit/3c8b173ce7f9965ae5f4679d76fae15ea55eab3d))
-
-# Changelog
+- 2024-03-24 19:17 bdfc6ba **chore(release): 0.27.80**
+- 2024-03-24 19:16 3c8b173 **fix: add mobile positions**
 ## 2024-03-21 15:36 v0.27.79
 ## 2024-03-21 15:36 v0.27.77
 - 2024-03-21 15:36 bb16228 **chore(release): 0.27.77**
 - 2024-03-21 15:36 5559180 **chore(release): 0.27.79**
 - 2024-03-21 15:35 26286e8 **fix: remove padding from c-button with-icon**
+- 2024-03-21 14:36 ee58f84 **docs: generate CHANGELOG**
 ## 2024-03-13 13:56 v0.27.76
 - 2024-03-13 13:56 5706c7f **chore(release): 0.27.76**
 - 2024-03-13 13:55 d971e2b **fix: add missing overflow hidden to line-clamp transform**
