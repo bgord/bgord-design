@@ -1,6 +1,8 @@
 # Changelog
+- 2024-04-03 15:09 ed67feb **refactor: improve title truncate rule**
 - 2024-03-24 19:17 bdfc6ba **chore(release): 0.27.80**
 - 2024-03-24 19:16 3c8b173 **fix: add mobile positions**
+- 2024-03-24 18:18 cff5f4c **docs: generate CHANGELOG**
 ## 2024-03-21 15:36 v0.27.79
 ## 2024-03-21 15:36 v0.27.77
 - 2024-03-21 15:36 bb16228 **chore(release): 0.27.77**
