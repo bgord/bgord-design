@@ -1,4 +1,15 @@
 # Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.27.81](https://github.com/bgord/bgord-design/compare/v0.27.79...v0.27.81) (2024-04-03)
+
+
+### Bug Fixes
+
+* add mobile positions ([3c8b173](https://github.com/bgord/bgord-design/commit/3c8b173ce7f9965ae5f4679d76fae15ea55eab3d))
+
+# Changelog
 - 2024-03-24 19:17 bdfc6ba **chore(release): 0.27.80**
 - 2024-03-24 19:16 3c8b173 **fix: add mobile positions**
 ## 2024-03-21 15:36 v0.27.79
