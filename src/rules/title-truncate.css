@@ -7,3 +7,13 @@
   inset: 0;
   content: 'Rule #1 violation (title-truncate)';
 }
+
+[data-transform='line-clamp']:not([title]) {
+  position: relative;
+}
+[data-transform='line-clamp']:not([title]):after {
+  background: red;
+  position: absolute;
+  inset: 0;
+  content: 'Rule #1 violation (title-truncate)';
+}
