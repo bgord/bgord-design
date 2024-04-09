@@ -93,6 +93,7 @@ class GeneratorProcessor {
     output += await new File('src/rules/target-blank-referer.css').read();
     output += await new File('src/rules/image-alt.css').read();
     output += await new File('src/rules/button-icon-title.css').read();
+    output += await new File('src/rules/invalid-list-element.css').read();
 
     for (const generator of generators) {
       output += generator.generateHeader();

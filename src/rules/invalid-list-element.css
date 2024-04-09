@@ -1,0 +1,10 @@
+ul > *:not(li) {
+  position: relative;
+}
+
+ul > *:not(li):after {
+  background: red;
+  position: absolute;
+  inset: 0;
+  content: 'Rule #5 violation (invalid-list-element)';
+}
