@@ -37,6 +37,7 @@
   "author": "Bartosz Gordon",
   "module": "dist/bgord-design.esm.js",
   "devDependencies": {
+    "@biomejs/biome": "1.7.3",
     "@babel/core": "7.23.5",
     "@types/lodash.pick": "4.4.9",
     "babel-loader": "9.1.3",
