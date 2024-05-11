@@ -26,7 +26,7 @@ export class FlexGrowsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-grow='${key}'] {\n    flex-grow: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

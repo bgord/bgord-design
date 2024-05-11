@@ -34,7 +34,7 @@ export class DisplaysGenerator extends AbstractGenerator {
         }
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

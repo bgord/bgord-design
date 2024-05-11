@@ -26,7 +26,7 @@ export class WidthsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-width='${key}'] {\n    width: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

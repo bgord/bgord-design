@@ -27,7 +27,7 @@ export class ObjectPositionsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-object-position='${key}'] {\n    object-position: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += "}\n";
     }
 
     return output;

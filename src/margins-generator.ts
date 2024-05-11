@@ -73,7 +73,7 @@ export class Margins extends AbstractGenerator {
         output += `  *[data-${name}-ml='${key}'] {\n    margin-left: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

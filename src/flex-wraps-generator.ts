@@ -27,7 +27,7 @@ export class FlexWrapGenerator extends AbstractGenerator {
         output += `  *[data-${name}-wrap='${key}'] {\n    flex-wrap: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += "}\n";
     }
 
     return output;

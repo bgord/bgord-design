@@ -25,7 +25,7 @@ export class FlexDirectionsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-direction='${key}'] {\n    flex-direction: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += "}\n";
     }
 
     return output;

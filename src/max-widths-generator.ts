@@ -26,7 +26,7 @@ export class MaxWidthsGenerator extends AbstractGenerator {
         output += `*[data-${name}-max-width='${key}'] {\n  max-width: ${value};\n}\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

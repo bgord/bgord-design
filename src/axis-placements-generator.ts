@@ -49,7 +49,7 @@ export class AxisPlacementsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-self='${key}'] {\n    align-self: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

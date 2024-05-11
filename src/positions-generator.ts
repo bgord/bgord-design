@@ -27,7 +27,7 @@ export class PositionsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-position='${key}'] {\n    position: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

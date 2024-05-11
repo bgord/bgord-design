@@ -26,7 +26,7 @@ export class GapGenerator extends AbstractGenerator {
         output += `  *[data-${name}-gap='${key}'] {\n    gap: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

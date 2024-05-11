@@ -26,7 +26,7 @@ export class CursorsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-cursor='${key}'] {\n    cursor: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += "}\n";
     }
 
     return output;

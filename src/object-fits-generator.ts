@@ -27,7 +27,7 @@ export class ObjectFitsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-object-fit='${key}'] {\n    object-fit: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

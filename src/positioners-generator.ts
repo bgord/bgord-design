@@ -33,7 +33,7 @@ export class PositionersGenerator extends AbstractGenerator {
         output += `*[data-${name}-inset='${key}'] {\n  inset: ${value};\n}\n`;
       }
 
-      output += `}\n`;
+      output += "}\n";
     }
 
     return output;

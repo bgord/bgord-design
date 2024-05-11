@@ -27,7 +27,7 @@ export class RotatesGenerator extends AbstractGenerator {
         output += `  *[data-${name}-rotate='${key}'] {\n    transform: rotate(${value}deg);\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

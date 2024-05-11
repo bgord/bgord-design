@@ -80,7 +80,7 @@ export class Paddings extends AbstractGenerator {
         output += `  *[data-${name}-pl='${key}'] {\n    padding-left: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

@@ -26,7 +26,7 @@ export class FontSizeGenerator extends AbstractGenerator {
         output += `  *[data-${name}-fs='${key}'] {\n    font-size: ${value}px;\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

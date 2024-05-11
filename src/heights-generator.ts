@@ -26,7 +26,7 @@ export class HeightsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-height='${key}'] {\n    height: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

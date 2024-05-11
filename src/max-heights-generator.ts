@@ -26,7 +26,7 @@ export class MaxHeightsGenerator extends AbstractGenerator {
         output += `*[data-${name}-max-height='${key}'] {\n  max-height: ${value};\n}\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

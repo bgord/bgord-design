@@ -26,7 +26,7 @@ export class FlexShrinksGenerator extends AbstractGenerator {
         output += `  *[data-${name}-shrink='${key}'] {\n    flex-shrink: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;

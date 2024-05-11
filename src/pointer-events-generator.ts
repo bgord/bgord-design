@@ -26,7 +26,7 @@ export class PointerEventsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-pointer-events='${key}'] {\n    pointer-events: ${value};\n  }\n`;
       }
 
-      output += `}\n`;
+      output += '}\n';
     }
 
     return output;
