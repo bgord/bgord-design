@@ -51,7 +51,9 @@
     "standard-version": "9.5.0",
     "tsdx": "0.14.1",
     "tslib": "2.6.2",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "cspell": "8.8.1",
+    "shellcheck": "2.2.0"
   },
   "dependencies": {
     "lodash.pick": "4.4.0"
