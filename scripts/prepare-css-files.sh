@@ -25,7 +25,9 @@ npx gzip dist/main.min.css --extension=gz --extension=br
 npx gzip dist/normalize.min.css --extension=gz --extension=br
 
 info "main.css file sizes:"
+# shellcheck disable=SC2010
 ls -alh dist | grep main | awk '{print $5"\t"$9}'
 
 info "normalize.css file sizes:"
+# shellcheck disable=SC2010
 ls -alh dist | grep normalize | awk '{print $5"\t"$9}'

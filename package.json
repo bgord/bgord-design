@@ -37,6 +37,8 @@
   "author": "Bartosz Gordon",
   "module": "dist/bgord-design.esm.js",
   "devDependencies": {
+    "@commitlint/cli": "19.4.0",
+    "@commitlint/config-conventional": "19.2.2",
     "@babel/core": "7.23.5",
     "@biomejs/biome": "1.7.3",
     "@types/lodash.pick": "4.4.9",
