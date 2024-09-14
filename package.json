@@ -52,7 +52,6 @@
     "postcss-cli": "11.0.0",
     "postcss-preset-env": "9.3.0",
     "shellcheck": "2.2.0",
-    "standard-version": "9.5.0",
     "tsdx": "0.14.1",
     "tslib": "2.6.2",
     "typescript": "5.3.3"
