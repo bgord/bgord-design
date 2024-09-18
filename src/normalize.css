@@ -11,7 +11,9 @@
 
 html {
   line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-text-size-adjust: none; /* 2 */
+  -webkit-text-size-adjust: none; /* 2 */
+  text-size-adjust: none; /* 2 */
   overflow-y: scroll; /* 3 */
 }
 
