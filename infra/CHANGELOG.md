@@ -1,6 +1,9 @@
 # Changelog
+## 2024-09-18 11:48 v0.28.0
+- 2024-09-18 11:48 05a1ec2 **step: v0.28.0**
 - 2024-09-18 11:46 397a047 **step: balance text wrapping on headings**
 - 2024-09-18 11:46 369c59d **step: improve text size adjustment**
+- 2024-09-18 09:46 10a72be **docs: generate CHANGELOG**
 - 2024-09-14 17:13 f210b83 **step: update gh workflow**
 - 2024-09-14 17:11 dbd945a **step: bump bgord/scripts**
 - 2024-09-14 15:36 a132509 **refactor: remove standard version**
@@ -28,6 +31,7 @@
 - 2024-04-03 15:09 d46fb9e **chore(release): 0.27.81**
 - 2024-04-03 13:09 08e4d09 **docs: generate CHANGELOG**
 - 2024-03-24 19:17 bdfc6ba **chore(release): 0.27.80**
+## 2024-03-24 19:16 v0.27.80
 - 2024-03-24 19:16 3c8b173 **fix: add mobile positions**
 - 2024-03-24 18:18 cff5f4c **docs: generate CHANGELOG**
 ## 2024-03-21 15:36 v0.27.79
