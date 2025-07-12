@@ -8,6 +8,7 @@
     "src"
   ],
   "scripts": {
+    "build:js": "bun build src/index.tsx --format esm --outdir dist",
     "build": "tsdx build",
     "postbuild": "bash scripts/prepare-css-files.sh",
     "prepublish": "bash scripts/prepare-css-files.sh",
