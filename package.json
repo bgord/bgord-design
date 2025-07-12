@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/bgord-design.esm.js",
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
+    "@biomejs/biome": "2.1.1",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@types/bun": "1.2.18",
