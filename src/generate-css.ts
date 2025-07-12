@@ -30,6 +30,8 @@ class GeneratorProcessor {
     output += await Bun.file("src/interactions/rotate-into-focus.css").text();
     output += await Bun.file("src/interactions/subtle-scale.css").text();
 
+    output += await Bun.file("src/animations/shrink-fade-out.css").text();
+
     for (const generator of generators) {
       output += generator.generateHeader();
       output += generator.generateCss();
