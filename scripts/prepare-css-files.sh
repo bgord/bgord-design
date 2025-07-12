@@ -31,3 +31,6 @@ ls -alh dist | grep main | awk '{print $5"\t"$9}'
 info "normalize.css file sizes:"
 # shellcheck disable=SC2010
 ls -alh dist | grep normalize | awk '{print $5"\t"$9}'
+
+info "Removing index.js file"
+rm -rf dist/index.js
