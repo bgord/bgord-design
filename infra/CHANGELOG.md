@@ -1,8 +1,34 @@
 # Changelog
+- 2025-07-12 18:21 c8e862b **step: add workflows**
+- 2025-07-12 18:18 1e4a243 **feature: setup animations**
+- 2025-07-12 18:16 9805df8 **feature: add interactions**
+## 2025-07-12 17:29 v0.29.0
+- 2025-07-12 17:29 6780e8e **0.29.0**
+- 2025-07-12 17:14 a6474dc **feature: add more rules**
+- 2025-07-12 16:49 2bf314a **refactor: clean up tests**
+- 2025-07-12 16:31 53bdfb3 **step: setup tests**
+- 2025-07-12 16:18 d165864 **refactor: improve prepare-css-files**
+- 2025-07-12 16:15 d2ed6b0 **refactor: simplify GeneratorConfigType**
+- 2025-07-12 16:13 0df164c **refactor: simplify generator**
+- 2025-07-12 16:09 4377b29 **step: update packages**
+- 2025-07-12 16:08 7ce7dbb **step: update packages**
+- 2025-07-12 16:08 7072964 **fix: lodash.pick**
+- 2025-07-12 16:05 e571297 **step: format everything**
+- 2025-07-12 15:56 2a298cf **refactor: build process**
+- 2025-07-12 15:49 adfd345 **refactor: move generators to a directory**
+- 2025-07-12 15:48 e86b7d6 **refactor: remove src/file**
+- 2025-07-12 15:40 a94138b **refactor: update packages**
+- 2025-07-12 15:40 0b3fff4 **refactor:**
+- 2025-07-12 15:38 aa31246 **refactor: switch to bun**
+- 2025-07-12 15:35 16a2bca **step: add lefthook**
+- 2025-07-12 15:34 3531345 **refactor: simplify configs**
+- 2025-07-12 15:19 9232e70 **step: bump bgord/scripts**
+- 2025-07-12 15:15 738d766 **step: add shadows generator**
 ## 2024-09-18 11:48 v0.28.0
 - 2024-09-18 11:48 05a1ec2 **step: v0.28.0**
 - 2024-09-18 11:46 397a047 **step: balance text wrapping on headings**
 - 2024-09-18 11:46 369c59d **step: improve text size adjustment**
+- 2024-09-18 09:48 e83a7ef **docs: generate CHANGELOG**
 - 2024-09-18 09:46 10a72be **docs: generate CHANGELOG**
 - 2024-09-14 17:13 f210b83 **step: update gh workflow**
 - 2024-09-14 17:11 dbd945a **step: bump bgord/scripts**
