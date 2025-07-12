@@ -1,39 +1,4 @@
-import {
-  AxisPlacements,
-  Backdrops,
-  BorderColors,
-  BorderRadiuses,
-  BorderWidths,
-  Breakpoints,
-  Cursors,
-  Displays,
-  FlexDirections,
-  FlexGrows,
-  FlexShrinks,
-  FlexWraps,
-  FontSizes,
-  FontWeights,
-  Grayscale,
-  Greens,
-  Heights,
-  LetterSpacings,
-  LineHeights,
-  MaxHeights,
-  MaxWidths,
-  ObjectFits,
-  ObjectPositions,
-  Oranges,
-  Overflows,
-  PointerEvents,
-  Positions,
-  Reds,
-  Rotates,
-  Shadows,
-  Spacing,
-  Transforms,
-  Widths,
-  ZIndexes,
-} from "./tokens";
+import type * as Tokens from "./tokens";
 
 export abstract class AbstractGenerator {
   name: string;
@@ -53,38 +18,38 @@ export abstract class AbstractGenerator {
 }
 
 export type GeneratorConfigType = {
-  Spacing: typeof Spacing;
-  Displays: typeof Displays;
-  AxisPlacements: typeof AxisPlacements;
-  Positions: typeof Positions;
-  FlexWraps: typeof FlexWraps;
-  ZIndexes: typeof ZIndexes;
-  Widths: typeof Widths;
-  FontSizes: typeof FontSizes;
-  FontWeights: typeof FontWeights;
-  LineHeights: typeof LineHeights;
-  FlexDirections: typeof FlexDirections;
-  Grayscale: typeof Grayscale;
-  Greens: typeof Greens;
-  Reds: typeof Reds;
-  Oranges: typeof Oranges;
-  Breakpoints: typeof Breakpoints;
-  LetterSpacings: typeof LetterSpacings;
-  FlexGrows: typeof FlexGrows;
-  FlexShrinks: typeof FlexShrinks;
-  BorderWidths: typeof BorderWidths;
-  BorderColors: typeof BorderColors;
-  BorderRadiuses: typeof BorderRadiuses;
-  MaxWidths: typeof MaxWidths;
-  Transforms: typeof Transforms;
-  Overflows: typeof Overflows;
-  Heights: typeof Heights;
-  Cursors: typeof Cursors;
-  PointerEvents: typeof PointerEvents;
-  Backdrops: typeof Backdrops;
-  ObjectFits: typeof ObjectFits;
-  ObjectPositions: typeof ObjectPositions;
-  Rotates: typeof Rotates;
-  MaxHeights: typeof MaxHeights;
-  Shadows: typeof Shadows;
+  Spacing: typeof Tokens.Spacing;
+  Displays: typeof Tokens.Displays;
+  AxisPlacements: typeof Tokens.AxisPlacements;
+  Positions: typeof Tokens.Positions;
+  FlexWraps: typeof Tokens.FlexWraps;
+  ZIndexes: typeof Tokens.ZIndexes;
+  Widths: typeof Tokens.Widths;
+  FontSizes: typeof Tokens.FontSizes;
+  FontWeights: typeof Tokens.FontWeights;
+  LineHeights: typeof Tokens.LineHeights;
+  FlexDirections: typeof Tokens.FlexDirections;
+  Grayscale: typeof Tokens.Grayscale;
+  Greens: typeof Tokens.Greens;
+  Reds: typeof Tokens.Reds;
+  Oranges: typeof Tokens.Oranges;
+  Breakpoints: typeof Tokens.Breakpoints;
+  LetterSpacings: typeof Tokens.LetterSpacings;
+  FlexGrows: typeof Tokens.FlexGrows;
+  FlexShrinks: typeof Tokens.FlexShrinks;
+  BorderWidths: typeof Tokens.BorderWidths;
+  BorderColors: typeof Tokens.BorderColors;
+  BorderRadiuses: typeof Tokens.BorderRadiuses;
+  MaxWidths: typeof Tokens.MaxWidths;
+  Transforms: typeof Tokens.Transforms;
+  Overflows: typeof Tokens.Overflows;
+  Heights: typeof Tokens.Heights;
+  Cursors: typeof Tokens.Cursors;
+  PointerEvents: typeof Tokens.PointerEvents;
+  Backdrops: typeof Tokens.Backdrops;
+  ObjectFits: typeof Tokens.ObjectFits;
+  ObjectPositions: typeof Tokens.ObjectPositions;
+  Rotates: typeof Tokens.Rotates;
+  MaxHeights: typeof Tokens.MaxHeights;
+  Shadows: typeof Tokens.Shadows;
 };
