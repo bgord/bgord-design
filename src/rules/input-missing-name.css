@@ -1,0 +1,4 @@
+input:not([name]) {
+  border: 2px solid red !important;
+  content: "Rule #10 violation (input-missing-name)";
+}

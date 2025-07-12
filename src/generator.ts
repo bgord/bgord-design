@@ -10,6 +10,7 @@ export abstract class AbstractGenerator {
   generateHeader(): string {
     return `/* ${this.name} */\n\n`;
   }
+
   abstract generateCss(): string;
 
   generateFooter(): string {

@@ -1,0 +1,4 @@
+input:not([id]) {
+  border: 2px solid red !important;
+  content: "Rule #7 violation (input-missing-id)";
+}

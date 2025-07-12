@@ -1,0 +1,5 @@
+/* cspell:disable */
+button:empty:not([aria-label]):not([aria-labelledby]) {
+  border: 2px solid red !important;
+  content: "Rule #9 violation (button-empty-content)";
+}

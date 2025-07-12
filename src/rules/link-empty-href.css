@@ -1,0 +1,5 @@
+a:not([href]),
+a[href=""] {
+  border: 2px solid red !important;
+  content: "Rule #6 violation (link-empty-href)";
+}
