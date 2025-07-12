@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class FontWeightGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Font weights');
+    super("Font weights");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-fw="*"
     for (const [key, value] of Object.entries(this.config.FontWeights)) {

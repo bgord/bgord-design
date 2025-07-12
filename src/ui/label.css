@@ -9,10 +9,10 @@
   color: #4b5563;
 }
 
-.c-label[data-variant='optional']::after {
+.c-label[data-variant="optional"]::after {
   margin-left: 6px;
   text-transform: lowercase;
-  content: '(optional)';
+  content: "(optional)";
 }
 
 /* ===================== */

@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class ZIndexGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Z indexes');
+    super("Z indexes");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-z="*"
     for (const [key, value] of Object.entries(this.config.ZIndexes)) {

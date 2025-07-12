@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
-    'postcss-preset-env': {
-      browsers: '>1%',
+    "postcss-preset-env": {
+      browsers: ">1%",
     },
   },
 };

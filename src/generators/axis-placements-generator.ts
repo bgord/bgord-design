@@ -1,13 +1,13 @@
-import pick from 'lodash.pick';
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import pick from "lodash.pick";
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class AxisPlacementsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Axis placements');
+    super("Axis placements");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Main axis placement: data-main="*"
     for (const [key, value] of Object.entries(this.config.AxisPlacements)) {
@@ -21,7 +21,7 @@ export class AxisPlacementsGenerator extends AbstractGenerator {
 
     // Self placement alongside the cross axis: data-self="*"
     for (const [key, value] of Object.entries(
-      pick(this.config.AxisPlacements, ['start', 'end', 'center', 'baseline'])
+      pick(this.config.AxisPlacements, ["start", "end", "center", "baseline"]),
     )) {
       output += `*[data-self='${key}'] {\n  align-self: ${value};\n}\n`;
     }
@@ -38,12 +38,12 @@ export class AxisPlacementsGenerator extends AbstractGenerator {
       }
 
       for (const [key, value] of Object.entries(
-        pick(this.config.AxisPlacements, ['start', 'end', 'center', 'baseline'])
+        pick(this.config.AxisPlacements, ["start", "end", "center", "baseline"]),
       )) {
         output += `  *[data-${name}-self='${key}'] {\n    align-self: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

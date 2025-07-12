@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class FlexShrinksGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Flex shrinks');
+    super("Flex shrinks");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-shrink="*"
     for (const [key, value] of Object.entries(this.config.FlexShrinks)) {
@@ -20,7 +20,7 @@ export class FlexShrinksGenerator extends AbstractGenerator {
         output += `  *[data-${name}-shrink='${key}'] {\n    flex-shrink: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

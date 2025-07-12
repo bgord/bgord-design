@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class LineHeightsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Line heights');
+    super("Line heights");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-lh="*"
     for (const [key, value] of Object.entries(this.config.LineHeights)) {

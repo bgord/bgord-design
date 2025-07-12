@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class CursorsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Cursors');
+    super("Cursors");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-cursor="*"
     for (const [key, value] of Object.entries(this.config.Cursors)) {
@@ -20,7 +20,7 @@ export class CursorsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-cursor='${key}'] {\n    cursor: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

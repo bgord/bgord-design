@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class FontSizeGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Font sizes');
+    super("Font sizes");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-fs="*"
     for (const [key, value] of Object.entries(this.config.FontSizes)) {
@@ -20,7 +20,7 @@ export class FontSizeGenerator extends AbstractGenerator {
         output += `  *[data-${name}-fs='${key}'] {\n    font-size: ${value}px;\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

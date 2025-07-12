@@ -1,19 +1,19 @@
-[data-transform='truncate']:not([title]) {
+[data-transform="truncate"]:not([title]) {
   position: relative;
 }
-[data-transform='truncate']:not([title]):after {
+[data-transform="truncate"]:not([title]):after {
   background: red;
   position: absolute;
   inset: 0;
-  content: 'Rule #1 violation (title-truncate)';
+  content: "Rule #1 violation (title-truncate)";
 }
 
-[data-transform='line-clamp']:not([title]) {
+[data-transform="line-clamp"]:not([title]) {
   position: relative;
 }
-[data-transform='line-clamp']:not([title]):after {
+[data-transform="line-clamp"]:not([title]):after {
   background: red;
   position: absolute;
   inset: 0;
-  content: 'Rule #1 violation (title-truncate)';
+  content: "Rule #1 violation (title-truncate)";
 }

@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class BorderWidthsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Border widths');
+    super("Border widths");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     for (const [key, value] of Object.entries(this.config.BorderWidths)) {
       output += `*[data-bw='${key}'] {\n  border-width: ${value}px;\n}\n`;

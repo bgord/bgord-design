@@ -1,4 +1,4 @@
 button:not([title]) > svg {
   border: 2px solid red !important;
-  content: 'Rule #4 violation (button-icon-title)';
+  content: "Rule #4 violation (button-icon-title)";
 }

@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class GapGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Gaps');
+    super("Gaps");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular gap: data-gap="*"
     for (const [key, value] of Object.entries(this.config.Spacing)) {
@@ -20,7 +20,7 @@ export class GapGenerator extends AbstractGenerator {
         output += `  *[data-${name}-gap='${key}'] {\n    gap: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

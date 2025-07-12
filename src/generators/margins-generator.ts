@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class Margins extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Margins');
+    super("Margins");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     for (const [key, value] of Object.entries(this.config.Spacing)) {
       output += `*[data-m='${key}'] {\n  margin: ${value};\n}\n`;
@@ -67,7 +67,7 @@ export class Margins extends AbstractGenerator {
         output += `  *[data-${name}-ml='${key}'] {\n    margin-left: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

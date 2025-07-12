@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class MaxHeightsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Max heights');
+    super("Max heights");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-max-height="*"
     for (const [key, value] of Object.entries(this.config.MaxHeights)) {
@@ -20,7 +20,7 @@ export class MaxHeightsGenerator extends AbstractGenerator {
         output += `*[data-${name}-max-height='${key}'] {\n  max-height: ${value};\n}\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

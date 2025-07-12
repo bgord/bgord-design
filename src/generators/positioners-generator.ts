@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class PositionersGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Positioners');
+    super("Positioners");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     for (const [key, value] of Object.entries(this.config.Spacing)) {
       output += `*[data-top='${key}'] {\n  top: ${value};\n}\n`;
@@ -27,7 +27,7 @@ export class PositionersGenerator extends AbstractGenerator {
         output += `*[data-${name}-inset='${key}'] {\n  inset: ${value};\n}\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class FlexWrapGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Flex wraps');
+    super("Flex wraps");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-wrap="*"
     for (const [key, value] of Object.entries(this.config.FlexWraps)) {
@@ -20,7 +20,7 @@ export class FlexWrapGenerator extends AbstractGenerator {
         output += `  *[data-${name}-wrap='${key}'] {\n    flex-wrap: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

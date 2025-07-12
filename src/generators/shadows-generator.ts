@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class ShadowsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Shadows');
+    super("Shadows");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-shadow="*"
     for (const [key, value] of Object.entries(this.config.Shadows)) {

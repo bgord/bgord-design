@@ -1,13 +1,13 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class BorderColorsGenerator extends AbstractGenerator {
-  borderColors: GeneratorConfigType['BorderColors'];
-  greens: GeneratorConfigType['Greens'];
-  oranges: GeneratorConfigType['Oranges'];
-  reds: GeneratorConfigType['Reds'];
+  borderColors: GeneratorConfigType["BorderColors"];
+  greens: GeneratorConfigType["Greens"];
+  oranges: GeneratorConfigType["Oranges"];
+  reds: GeneratorConfigType["Reds"];
 
   constructor(config: GeneratorConfigType) {
-    super('Border colors');
+    super("Border colors");
 
     this.borderColors = config.BorderColors;
     this.greens = config.Greens;
@@ -16,7 +16,7 @@ export class BorderColorsGenerator extends AbstractGenerator {
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     for (const [key, value] of Object.entries({
       ...this.borderColors,

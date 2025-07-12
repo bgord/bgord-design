@@ -1,39 +1,39 @@
 import {
-  Spacing,
-  Displays,
   AxisPlacements,
-  Positions,
-  FlexWraps,
-  ZIndexes,
-  Widths,
-  FontSizes,
-  FlexDirections,
-  FontWeights,
-  LineHeights,
-  Grayscale,
-  Greens,
-  Reds,
-  Oranges,
-  Breakpoints,
-  LetterSpacings,
-  FlexGrows,
-  FlexShrinks,
-  BorderWidths,
+  Backdrops,
   BorderColors,
   BorderRadiuses,
-  MaxWidths,
-  Transforms,
-  Overflows,
-  Heights,
+  BorderWidths,
+  Breakpoints,
   Cursors,
-  PointerEvents,
-  Backdrops,
+  Displays,
+  FlexDirections,
+  FlexGrows,
+  FlexShrinks,
+  FlexWraps,
+  FontSizes,
+  FontWeights,
+  Grayscale,
+  Greens,
+  Heights,
+  LetterSpacings,
+  LineHeights,
+  MaxHeights,
+  MaxWidths,
   ObjectFits,
   ObjectPositions,
+  Oranges,
+  Overflows,
+  PointerEvents,
+  Positions,
+  Reds,
   Rotates,
-  MaxHeights,
   Shadows,
-} from './tokens';
+  Spacing,
+  Transforms,
+  Widths,
+  ZIndexes,
+} from "./tokens";
 
 export abstract class AbstractGenerator {
   name: string;
@@ -48,7 +48,7 @@ export abstract class AbstractGenerator {
   abstract generateCss(): string;
 
   generateFooter(): string {
-    return '/* ===================== */\n\n';
+    return "/* ===================== */\n\n";
   }
 }
 

@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class BackdropsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Backdrops');
+    super("Backdrops");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-backdrop="*"
     for (const [key, value] of Object.entries(this.config.Backdrops)) {

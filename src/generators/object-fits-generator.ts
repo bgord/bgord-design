@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class ObjectFitsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Object fits');
+    super("Object fits");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-object-fit="*"
     for (const [key, value] of Object.entries(this.config.ObjectFits)) {
@@ -20,7 +20,7 @@ export class ObjectFitsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-object-fit='${key}'] {\n    object-fit: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

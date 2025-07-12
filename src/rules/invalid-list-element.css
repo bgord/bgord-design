@@ -6,5 +6,5 @@ ul > *:not(li):after {
   background: red;
   position: absolute;
   inset: 0;
-  content: 'Rule #5 violation (invalid-list-element)';
+  content: "Rule #5 violation (invalid-list-element)";
 }

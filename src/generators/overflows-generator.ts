@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class OverflowsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Overflows');
+    super("Overflows");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-overflow="*"
     for (const [key, value] of Object.entries(this.config.Overflows)) {

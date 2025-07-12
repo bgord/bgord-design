@@ -34,7 +34,7 @@
   .c-checkbox:checked::after,
   .c-checkbox:hover::after {
     position: absolute;
-    content: '';
+    content: "";
 
     top: 6px;
     left: 6px;

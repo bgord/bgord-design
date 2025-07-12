@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class FlexGrowsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Flex grows');
+    super("Flex grows");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-grow="*"
     for (const [key, value] of Object.entries(this.config.FlexGrows)) {
@@ -20,7 +20,7 @@ export class FlexGrowsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-grow='${key}'] {\n    flex-grow: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

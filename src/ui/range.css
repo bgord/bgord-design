@@ -48,25 +48,21 @@
   border: none;
 }
 
-.c-range[data-variant='primary'] {
+.c-range[data-variant="primary"] {
   background: #e5e7eb;
 }
-.c-range[data-variant='primary']::-moz-range-thumb {
+.c-range[data-variant="primary"]::-moz-range-thumb {
   background: #4b5563;
 }
-.c-range[data-variant='primary']::-webkit-slider-thumb {
+.c-range[data-variant="primary"]::-webkit-slider-thumb {
   background: #4b5563;
 }
-.c-range[data-variant='primary']::-ms-thumb {
+.c-range[data-variant="primary"]::-ms-thumb {
   background: #4b5563;
 }
 
-.c-range[data-variant='primary'] {
-  background: linear-gradient(
-    to right,
-    #4b5563 var(--percentage),
-    #e5e7eb var(--percentage)
-  );
+.c-range[data-variant="primary"] {
+  background: linear-gradient(to right, #4b5563 var(--percentage), #e5e7eb var(--percentage));
 }
 
 /* ===================== */

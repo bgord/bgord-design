@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class PointerEventsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Pointer events');
+    super("Pointer events");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-pointer-events="*"
     for (const [key, value] of Object.entries(this.config.PointerEvents)) {
@@ -20,7 +20,7 @@ export class PointerEventsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-pointer-events='${key}'] {\n    pointer-events: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

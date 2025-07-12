@@ -27,7 +27,7 @@
 
   .c-select-wrapper::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 12px;
     right: 8px;
     height: 8px;

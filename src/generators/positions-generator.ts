@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class PositionsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Positions');
+    super("Positions");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-position="*"
     for (const [key, value] of Object.entries(this.config.Positions)) {
@@ -20,7 +20,7 @@ export class PositionsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-position='${key}'] {\n    position: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

@@ -1,10 +1,10 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class FontColorsGenerator extends AbstractGenerator {
-  colors: GeneratorConfigType['Grayscale'];
+  colors: GeneratorConfigType["Grayscale"];
 
   constructor(config: GeneratorConfigType) {
-    super('Font colors');
+    super("Font colors");
 
     this.colors = {
       ...config.Grayscale,
@@ -15,7 +15,7 @@ export class FontColorsGenerator extends AbstractGenerator {
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-color="*"
     for (const [key, value] of Object.entries(this.colors)) {

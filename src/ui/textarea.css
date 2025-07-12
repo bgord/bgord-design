@@ -12,7 +12,9 @@
   appearance: none;
   resize: none;
 
-  transition: border-radius 300ms, border-color 400ms;
+  transition:
+    border-radius 300ms,
+    border-color 400ms;
 }
 
 .c-textarea:hover,
@@ -21,7 +23,9 @@
   border-color: #9ca3af;
   border-radius: 0;
 
-  transition: border-radius 300ms, border-color 400ms;
+  transition:
+    border-radius 300ms,
+    border-color 400ms;
 }
 
 .c-textarea:disabled {

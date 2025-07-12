@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class FlexDirectionsGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Flex directions');
+    super("Flex directions");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     for (const [key, value] of Object.entries(this.config.FlexDirections)) {
       output += `*[data-direction='${key}'] {\n  flex-direction: ${value};\n}\n`;
@@ -19,7 +19,7 @@ export class FlexDirectionsGenerator extends AbstractGenerator {
         output += `  *[data-${name}-direction='${key}'] {\n    flex-direction: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

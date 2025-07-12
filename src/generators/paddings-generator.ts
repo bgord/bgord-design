@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class Paddings extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Paddings');
+    super("Paddings");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular padding: data-p="*"
     for (const [key, value] of Object.entries(this.config.Spacing)) {
@@ -74,7 +74,7 @@ export class Paddings extends AbstractGenerator {
         output += `  *[data-${name}-pl='${key}'] {\n    padding-left: ${value};\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

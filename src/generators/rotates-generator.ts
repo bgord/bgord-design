@@ -1,12 +1,12 @@
-import { AbstractGenerator, GeneratorConfigType } from '../generator';
+import { AbstractGenerator, GeneratorConfigType } from "../generator";
 
 export class RotatesGenerator extends AbstractGenerator {
   constructor(private readonly config: GeneratorConfigType) {
-    super('Rotates');
+    super("Rotates");
   }
 
   generateCss(): string {
-    let output = '';
+    let output = "";
 
     // Regular display: data-rotate="*"
     for (const [key, value] of Object.entries(this.config.Rotates)) {
@@ -20,7 +20,7 @@ export class RotatesGenerator extends AbstractGenerator {
         output += `  *[data-${name}-rotate='${key}'] {\n    transform: rotate(${value}deg);\n  }\n`;
       }
 
-      output += '}\n';
+      output += "}\n";
     }
 
     return output;

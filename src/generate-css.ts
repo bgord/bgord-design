@@ -37,5 +37,5 @@ class GeneratorProcessor {
 }
 
 export async function main() {
-  await new GeneratorProcessor().process(Object.values(Generators).map(generator => new generator(Tokens)));
+  await new GeneratorProcessor().process(Object.values(Generators).map((generator) => new generator(Tokens)));
 }
