@@ -402,3 +402,11 @@ export const Rotates: Record<Rotate, string> = {
   '180': '180',
   '270': '270',
 };
+
+type Shadow = 'sm' | 'md' | 'lg';
+
+export const Shadows: Record<Shadow, string> = {
+  sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+  md: '0 4px 6px 0 rgba(0, 0, 0, 0.08)',
+  lg: '0 8px 12px 2px rgba(0, 0, 0, 0.06)',
+};
