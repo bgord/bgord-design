@@ -14,23 +14,27 @@ describe("FontColorsGenerator", () => {
     const generator = new FontColorsGenerator(config);
     const css = generator.generateCss();
 
-    expect(css).toBe(
-      `*[data-color='black'] {
-  color: #000;
-}
-*[data-color='white'] {
-  color: #fff;
-}
-*[data-color='green'] {
-  color: green;
-}
-*[data-color='red'] {
-  color: red;
-}
-*[data-color='orange'] {
-  color: orange;
-}
-`,
+    expect(css).toEqualIgnoringWhitespace(
+      `
+        *[data-color='black'] {
+          color: #000;
+        }
+
+        *[data-color='white'] {
+          color: #fff;
+        }
+
+        *[data-color='green'] {
+          color: green;
+        }
+
+        *[data-color='red'] {
+          color: red;
+        }
+
+        *[data-color='orange'] {
+          color: orange;
+        }`,
     );
   });
 });

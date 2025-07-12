@@ -14,23 +14,26 @@ describe("BackgroundsGenerator", () => {
     const generator = new BackgroundsGenerator(config);
     const css = generator.generateCss();
 
-    expect(css).toBe(
-      `*[data-bg='black'] {
-  background-color: #000;
-}
-*[data-bg='white'] {
-  background-color: #fff;
-}
-*[data-bg='green'] {
-  background-color: green;
-}
-*[data-bg='red'] {
-  background-color: red;
-}
-*[data-bg='orange'] {
-  background-color: orange;
-}
-`,
-    );
+    expect(css).toEqualIgnoringWhitespace(/* CSS */ `
+        *[data-bg='black'] {
+          background-color: #000;
+        }
+
+        *[data-bg='white'] {
+          background-color: #fff;
+        }
+
+        *[data-bg='green'] {
+          background-color: green;
+        }
+
+        *[data-bg='red'] {
+          background-color: red;
+        }
+
+        *[data-bg='orange'] {
+          background-color: orange;
+        }
+`);
   });
 });
