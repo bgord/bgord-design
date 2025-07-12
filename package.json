@@ -19,20 +19,6 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build && yarn prepublish"
   },
-  "peerDependencies": {
-    "react": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
   "name": "@bgord/design",
   "author": "Bartosz Gordon",
   "module": "dist/bgord-design.esm.js",
@@ -47,7 +33,6 @@
     "cspell": "8.8.1",
     "doiuse": "6.0.2",
     "gzip-cli": "1.2.0",
-    "husky": "9.1.5",
     "postcss": "8.4.32",
     "postcss-cli": "11.0.0",
     "postcss-preset-env": "9.3.0",
