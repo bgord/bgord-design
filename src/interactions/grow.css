@@ -1,0 +1,7 @@
+/* grow interaction */
+
+[data-interaction="grow"] {
+  transition: width 300ms ease-in-out;
+}
+
+/* ===================== */

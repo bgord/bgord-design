@@ -1,0 +1,26 @@
+/* rotate-into-focus interaction */
+
+[data-interaction="rotate-into-focus"] {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+[data-interaction="rotate-into-focus"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+[data-interaction="rotate-into-focus"]:active {
+  transform: scale(1.05);
+}
+
+[data-interaction="rotate-into-focus"] > * {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-interaction="rotate-into-focus"]:hover > * {
+  transform: rotate(90deg);
+}
+
+/* ===================== */

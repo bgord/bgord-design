@@ -26,6 +26,10 @@ class GeneratorProcessor {
     output += await Bun.file("src/rules/button-icon-title.css").text();
     output += await Bun.file("src/rules/invalid-list-element.css").text();
 
+    output += await Bun.file("src/interactions/grow.css").text();
+    output += await Bun.file("src/interactions/rotate-into-focus.css").text();
+    output += await Bun.file("src/interactions/subtle-scale.css").text();
+
     for (const generator of generators) {
       output += generator.generateHeader();
       output += generator.generateCss();
