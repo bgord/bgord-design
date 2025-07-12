@@ -7,16 +7,10 @@
     "dist",
     "src"
   ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
-    "start": "tsdx watch",
     "build": "tsdx build",
     "postbuild": "bash scripts/prepare-css-files.sh",
     "prepublish": "bash scripts/prepare-css-files.sh",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
     "prepare": "tsdx build && yarn prepublish",
     "preinstall": "bunx only-allow bun"
   },
