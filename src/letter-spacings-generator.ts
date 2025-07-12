@@ -1,19 +1,15 @@
 import { AbstractGenerator, GeneratorConfigType } from './generator';
 
 export class LetterSpacingsGenerator extends AbstractGenerator {
-  letterSpacings: GeneratorConfigType['letterSpacings'];
-
-  constructor(config: GeneratorConfigType) {
+  constructor(private readonly config: GeneratorConfigType) {
     super('Letter spacings');
-
-    this.letterSpacings = config.letterSpacings;
   }
 
   generateCss(): string {
     let output = '';
 
     // Regular display: data-ls="*"
-    for (const [key, value] of Object.entries(this.letterSpacings)) {
+    for (const [key, value] of Object.entries(this.config.LetterSpacings)) {
       output += `*[data-ls='${key}'] {\n  letter-spacing: ${value}px;\n}\n`;
     }
 

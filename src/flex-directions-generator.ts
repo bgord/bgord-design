@@ -1,31 +1,25 @@
 import { AbstractGenerator, GeneratorConfigType } from './generator';
 
 export class FlexDirectionsGenerator extends AbstractGenerator {
-  flexDirections: GeneratorConfigType['flexDirections'];
-  breakpoints: GeneratorConfigType['breakpoints'];
-
-  constructor(config: GeneratorConfigType) {
+  constructor(private readonly config: GeneratorConfigType) {
     super('Flex directions');
-
-    this.flexDirections = config.flexDirections;
-    this.breakpoints = config.breakpoints;
   }
 
   generateCss(): string {
     let output = '';
 
-    for (const [key, value] of Object.entries(this.flexDirections)) {
+    for (const [key, value] of Object.entries(this.config.FlexDirections)) {
       output += `*[data-direction='${key}'] {\n  flex-direction: ${value};\n}\n`;
     }
 
-    for (const [name, value] of Object.entries(this.breakpoints)) {
+    for (const [name, value] of Object.entries(this.config.Breakpoints)) {
       output += `@media (max-width: ${value}px) {\n`;
 
-      for (const [key, value] of Object.entries(this.flexDirections)) {
+      for (const [key, value] of Object.entries(this.config.FlexDirections)) {
         output += `  *[data-${name}-direction='${key}'] {\n    flex-direction: ${value};\n  }\n`;
       }
 
-      output += "}\n";
+      output += '}\n';
     }
 
     return output;

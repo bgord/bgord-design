@@ -1,16 +1,16 @@
 import { AbstractGenerator, GeneratorConfigType } from './generator';
 
 export class BackgroundsGenerator extends AbstractGenerator {
-  colors: GeneratorConfigType['grayscale'];
+  colors: GeneratorConfigType['Grayscale'];
 
   constructor(config: GeneratorConfigType) {
     super('Backgrounds');
 
     this.colors = {
-      ...config.grayscale,
-      ...config.greens,
-      ...config.reds,
-      ...config.oranges,
+      ...config.Grayscale,
+      ...config.Greens,
+      ...config.Reds,
+      ...config.Oranges,
     };
   }
 

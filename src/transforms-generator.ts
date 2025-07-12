@@ -1,19 +1,15 @@
 import { AbstractGenerator, GeneratorConfigType } from './generator';
 
 export class TransformsGenerator extends AbstractGenerator {
-  transforms: GeneratorConfigType['transforms'];
-
-  constructor(config: GeneratorConfigType) {
+  constructor(private readonly config: GeneratorConfigType) {
     super('Transforms');
-
-    this.transforms = config.transforms;
   }
 
   generateCss(): string {
     let output = '';
 
     // Regular display: data-transform~="*"
-    for (const [key, value] of Object.entries(this.transforms)) {
+    for (const [key, value] of Object.entries(this.config.Transforms)) {
       if (key === 'truncate') {
         output += `*[data-transform~='${key}'] {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n`;
         continue;

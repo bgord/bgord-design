@@ -1,28 +1,22 @@
 import { AbstractGenerator, GeneratorConfigType } from './generator';
 
 export class WidthsGenerator extends AbstractGenerator {
-  widths: GeneratorConfigType['widths'];
-  breakpoints: GeneratorConfigType['breakpoints'];
-
-  constructor(config: GeneratorConfigType) {
+  constructor(private readonly config: GeneratorConfigType) {
     super('Widths');
-
-    this.widths = config.widths;
-    this.breakpoints = config.breakpoints;
   }
 
   generateCss(): string {
     let output = '';
 
     // Regular display: data-width="*"
-    for (const [key, value] of Object.entries(this.widths)) {
+    for (const [key, value] of Object.entries(this.config.Widths)) {
       output += `*[data-width='${key}'] {\n  width: ${value};\n}\n`;
     }
 
-    for (const [name, value] of Object.entries(this.breakpoints)) {
+    for (const [name, value] of Object.entries(this.config.Breakpoints)) {
       output += `@media (max-width: ${value}px) {\n`;
 
-      for (const [key, value] of Object.entries(this.widths)) {
+      for (const [key, value] of Object.entries(this.config.Widths)) {
         output += `  *[data-${name}-width='${key}'] {\n    width: ${value};\n  }\n`;
       }
 

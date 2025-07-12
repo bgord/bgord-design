@@ -1,21 +1,15 @@
 import { AbstractGenerator, GeneratorConfigType } from './generator';
 
 export class DisplaysGenerator extends AbstractGenerator {
-  displays: GeneratorConfigType['displays'];
-  breakpoints: GeneratorConfigType['breakpoints'];
-
-  constructor(config: GeneratorConfigType) {
+  constructor(private readonly config: GeneratorConfigType) {
     super('Displays');
-
-    this.displays = config.displays;
-    this.breakpoints = config.breakpoints;
   }
 
   generateCss(): string {
     let output = '';
 
     // Regular display: data-display="*"
-    for (const [key, value] of Object.entries(this.displays)) {
+    for (const [key, value] of Object.entries(this.config.Displays)) {
       if (value === 'flex') {
         output += `*[data-display='${key}'] {\n  display: ${value};\nflex-wrap: wrap;\n}\n`;
       } else {
@@ -23,10 +17,10 @@ export class DisplaysGenerator extends AbstractGenerator {
       }
     }
 
-    for (const [name, value] of Object.entries(this.breakpoints)) {
+    for (const [name, value] of Object.entries(this.config.Breakpoints)) {
       output += `@media (max-width: ${value}px) {\n`;
 
-      for (const [key, value] of Object.entries(this.displays)) {
+      for (const [key, value] of Object.entries(this.config.Displays)) {
         if (value === 'flex') {
           output += `*[data-${name}-display='${key}'] {\n  display: ${value};\nflex-wrap: wrap;\n}\n`;
         } else {

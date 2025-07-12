@@ -1,28 +1,22 @@
 import { AbstractGenerator, GeneratorConfigType } from './generator';
 
 export class HeightsGenerator extends AbstractGenerator {
-  heights: GeneratorConfigType['heights'];
-  breakpoints: GeneratorConfigType['breakpoints'];
-
-  constructor(config: GeneratorConfigType) {
+  constructor(private readonly config: GeneratorConfigType) {
     super('Heights');
-
-    this.heights = config.heights;
-    this.breakpoints = config.breakpoints;
   }
 
   generateCss(): string {
     let output = '';
 
     // Regular display: data-height="*"
-    for (const [key, value] of Object.entries(this.heights)) {
+    for (const [key, value] of Object.entries(this.config.Heights)) {
       output += `*[data-height='${key}'] {\n  height: ${value};\n}\n`;
     }
 
-    for (const [name, value] of Object.entries(this.breakpoints)) {
+    for (const [name, value] of Object.entries(this.config.Breakpoints)) {
       output += `@media (max-width: ${value}px) {\n`;
 
-      for (const [key, value] of Object.entries(this.heights)) {
+      for (const [key, value] of Object.entries(this.config.Heights)) {
         output += `  *[data-${name}-height='${key}'] {\n    height: ${value};\n  }\n`;
       }
 
