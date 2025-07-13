@@ -1,5 +1,8 @@
 # Changelog
+- 2025-07-13 17:04 767e331 **step: update packages**
 - 2025-07-13 17:03 601d45e **feature: add grow-fade-in**
+- 2025-07-13 15:04 dc3f82e **docs: generate readme**
+- 2025-07-13 15:04 7937fc0 **docs: generate CHANGELOG**
 - 2025-07-12 18:47 afa28fa **step: add docs package workflow**
 - 2025-07-12 18:47 6d1eed4 **step: bump bgord/scripts**
 ## 2025-07-12 18:21 v0.29.1
