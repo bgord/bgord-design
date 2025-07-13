@@ -1,4 +1,5 @@
 # Changelog
+- 2025-07-13 17:03 601d45e **feature: add grow-fade-in**
 - 2025-07-12 18:47 afa28fa **step: add docs package workflow**
 - 2025-07-12 18:47 6d1eed4 **step: bump bgord/scripts**
 ## 2025-07-12 18:21 v0.29.1
@@ -10,6 +11,8 @@
 - 2025-07-12 17:29 6780e8e **0.29.0**
 - 2025-07-12 17:14 a6474dc **feature: add more rules**
 - 2025-07-12 16:49 2bf314a **refactor: clean up tests**
+- 2025-07-12 16:47 c18b8d8 **docs: generate readme**
+- 2025-07-12 16:47 9dcc598 **docs: generate CHANGELOG**
 - 2025-07-12 16:31 53bdfb3 **step: setup tests**
 - 2025-07-12 16:21 f35d020 **docs: generate CHANGELOG**
 - 2025-07-12 16:21 d13cf56 **docs: generate CHANGELOG**
