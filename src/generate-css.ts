@@ -31,6 +31,7 @@ class GeneratorProcessor {
     output += await Bun.file("src/interactions/subtle-scale.css").text();
 
     output += await Bun.file("src/animations/shrink-fade-out.css").text();
+    output += await Bun.file("src/animations/grow-fade-in.css").text();
 
     for (const generator of generators) {
       output += generator.generateHeader();
