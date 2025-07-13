@@ -12,7 +12,7 @@
   }
 }
 
-[data-exit="grow-fade-in"] {
+[data-animation="grow-fade-in"] {
   animation: grow-fade-in 140ms ease forwards;
 }
 
