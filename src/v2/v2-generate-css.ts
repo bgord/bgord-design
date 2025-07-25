@@ -46,15 +46,17 @@ class GeneratorProcessor {
     output += "}";
 
     const generators = [
+      new UtilityGenerators.BackdropUtilityGenerator(BackdropsTokenGenerator),
+      new UtilityGenerators.BorderWidthUtilityGenerator(BorderWidthTokenGenerator),
       new UtilityGenerators.FontFamilyUtilityGenerator(FontFamilyTokenGenerator),
       new UtilityGenerators.FontSizeUtilityGenerator(FontSizeTokenGenerator),
       new UtilityGenerators.FontWeightUtilityGenerator(FontWeightTokenGenerator),
-      new UtilityGenerators.ZIndexUtilityGenerator(ZIndexTokenGenerator),
-      new UtilityGenerators.ShadowUtilityGenerator(ShadowTokenGenerator),
-      new UtilityGenerators.RadiusUtilityGenerator(RadiusTokenGenerator),
-      new UtilityGenerators.BackdropUtilityGenerator(BackdropsTokenGenerator),
-      new UtilityGenerators.LineHeightUtilityGenerator(LineHeightTokenGenerator),
       new UtilityGenerators.LetterSpacingUtilityGenerator(LetterSpacingTokenGenerator),
+      new UtilityGenerators.LineHeightUtilityGenerator(LineHeightTokenGenerator),
+      new UtilityGenerators.OpacityUtilityGenerator(OpacityTokenGenerator),
+      new UtilityGenerators.RadiusUtilityGenerator(RadiusTokenGenerator),
+      new UtilityGenerators.ShadowUtilityGenerator(ShadowTokenGenerator),
+      new UtilityGenerators.ZIndexUtilityGenerator(ZIndexTokenGenerator),
     ];
 
     for (const generator of generators) {
