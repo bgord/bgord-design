@@ -28,7 +28,7 @@ abstract class TokenGenerator {
   }
 }
 
-export class FontSizeTokenGenerator extends TokenGenerator {
+class FontSizeTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "font-size-xs": "0.75rem", // 12 px
     "font-size-sm": "0.875rem", // 14 px
@@ -46,7 +46,7 @@ export class FontSizeTokenGenerator extends TokenGenerator {
   }
 }
 
-export class SpacingTokenGenerator extends TokenGenerator {
+class SpacingTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "spacing-0": "0rem", // 0 px
     "spacing-0-5": "0.125rem", // 2 px
@@ -68,7 +68,7 @@ export class SpacingTokenGenerator extends TokenGenerator {
   }
 }
 
-export class ZIndexTokenGenerator extends TokenGenerator {
+class ZIndexTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "z-index-negative": "-1",
     "z-index-0": "0",
@@ -82,7 +82,7 @@ export class ZIndexTokenGenerator extends TokenGenerator {
   }
 }
 
-export class FontWeightTokenGenerator extends TokenGenerator {
+class FontWeightTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "font-weight-light": "300",
     "font-weight-regular": "400",
@@ -97,7 +97,7 @@ export class FontWeightTokenGenerator extends TokenGenerator {
   }
 }
 
-export class LineHeightTokenGenerator extends TokenGenerator {
+class LineHeightTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "line-height-none": "1", // tightest, icon buttons
     "line-height-tight": "1.25", // headings h1–h3
@@ -112,7 +112,7 @@ export class LineHeightTokenGenerator extends TokenGenerator {
   }
 }
 
-export class LetterSpacingTokenGenerator extends TokenGenerator {
+class LetterSpacingTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "letter-spacing-tight": "-0.01em", // logo lock-ups, large headlines
     "letter-spacing-normal": "0em", // default
@@ -127,7 +127,7 @@ export class LetterSpacingTokenGenerator extends TokenGenerator {
   }
 }
 
-export class ShadowTokenGenerator extends TokenGenerator {
+class ShadowTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "shadow-none": "none",
     "shadow-xs": "0 1px 2px 0 rgba(0 0 0 / 0.03)",
@@ -144,7 +144,7 @@ export class ShadowTokenGenerator extends TokenGenerator {
   }
 }
 
-export class BackdropsTokenGenerator extends TokenGenerator {
+class BackdropsTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "backdrop-none": "none",
     "backdrop-weak": "rgba(0 0 0 / 0.35)",
@@ -157,7 +157,7 @@ export class BackdropsTokenGenerator extends TokenGenerator {
   }
 }
 
-export class RadiusTokenGenerator extends TokenGenerator {
+class RadiusTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "radius-none": "0",
     "radius-xs": "2px",
@@ -175,7 +175,7 @@ export class RadiusTokenGenerator extends TokenGenerator {
   }
 }
 
-export class BorderWidthTokenGenerator extends TokenGenerator {
+class BorderWidthTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "border-width-none": "0",
     "border-width-hairline": "1px",
@@ -191,13 +191,51 @@ export class BorderWidthTokenGenerator extends TokenGenerator {
   }
 }
 
-export class BreakpointTokenGenerator extends TokenGenerator {
+class BreakpointTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
-    md: "768px",
+    "breakpoint-md": "768px",
   };
 
   constructor(overrides: TokenConfigType = {}) {
     super("Breakpoint", overrides);
+  }
+}
+
+class FontFamilyTokenGenerator extends TokenGenerator {
+  base: TokenConfigType = {
+    "font-family-sans": "system-ui, sans-serif",
+    "font-family-serif": "Georgia, serif",
+    "font-family-mono": '"SFMono-Regular", monospace',
+  };
+
+  constructor(overrides: TokenConfigType = {}) {
+    super("Font family", overrides);
+  }
+}
+
+class MotionTokenGenerator extends TokenGenerator {
+  base: TokenConfigType = {
+    "motion-duration-fast": "150ms",
+    "motion-duration-medium": "300ms",
+    "motion-duration-slow": "500ms",
+    "motion-ease-standard": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "motion-ease-emphasized": "cubic-bezier(0.2, 0, 0, 1)",
+  };
+
+  constructor(overrides: TokenConfigType = {}) {
+    super("Motion", overrides);
+  }
+}
+
+class OpacityTokenGenerator extends TokenGenerator {
+  base: TokenConfigType = {
+    "opacity-high": "0.8",
+    "opacity-medium": "0.5",
+    "opacity-low": "0.2",
+  };
+
+  constructor(overrides: TokenConfigType = {}) {
+    super("Opacity", overrides);
   }
 }
 
@@ -215,6 +253,9 @@ const all = [
   new RadiusTokenGenerator(),
   new BorderWidthTokenGenerator(),
   new BreakpointTokenGenerator(),
+  new FontFamilyTokenGenerator(),
+  new MotionTokenGenerator(),
+  new OpacityTokenGenerator(),
 ];
 
 all.forEach((generator) => console.log(generator.getTokens()));
