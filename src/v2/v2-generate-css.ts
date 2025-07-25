@@ -51,61 +51,112 @@ class GeneratorProcessor {
 
     output += "}";
 
+    const BackdropUtilityGenerator = new UtilityGenerators.BackdropUtilityGenerator(BackdropsTokenGenerator);
+    const BorderWidthUtilityGenerator = new UtilityGenerators.BorderWidthUtilityGenerator(
+      BorderWidthTokenGenerator,
+    );
+    const FontFamilyUtilityGenerator = new UtilityGenerators.FontFamilyUtilityGenerator(
+      FontFamilyTokenGenerator,
+    );
+    const FontSizeUtilityGenerator = new UtilityGenerators.FontSizeUtilityGenerator(FontSizeTokenGenerator);
+    const FontWeightUtilityGenerator = new UtilityGenerators.FontWeightUtilityGenerator(
+      FontWeightTokenGenerator,
+    );
+    const LetterSpacingUtilityGenerator = new UtilityGenerators.LetterSpacingUtilityGenerator(
+      LetterSpacingTokenGenerator,
+    );
+    const LineHeightUtilityGenerator = new UtilityGenerators.LineHeightUtilityGenerator(
+      LineHeightTokenGenerator,
+    );
+    const OpacityUtilityGenerator = new UtilityGenerators.OpacityUtilityGenerator(OpacityTokenGenerator);
+    const RadiusUtilityGenerator = new UtilityGenerators.RadiusUtilityGenerator(RadiusTokenGenerator);
+    const ShadowUtilityGenerator = new UtilityGenerators.ShadowUtilityGenerator(ShadowTokenGenerator);
+    const ZIndexUtilityGenerator = new UtilityGenerators.ZIndexUtilityGenerator(ZIndexTokenGenerator);
+    const FontColorUtilityGenerator = new UtilityGenerators.FontColorUtilityGenerator(
+      GrayscaleTokenGenerator,
+      BrandTokenGenerator,
+      PositiveTokenGenerator,
+      DangerTokenGenerator,
+      WarningTokenGenerator,
+    );
+    const BackgroundUtilityGenerator = new UtilityGenerators.BackgroundUtilityGenerator(
+      GrayscaleTokenGenerator,
+      BrandTokenGenerator,
+      PositiveTokenGenerator,
+      DangerTokenGenerator,
+      WarningTokenGenerator,
+    );
+    const BorderColorUtilityGenerator = new UtilityGenerators.BorderColorUtilityGenerator(
+      GrayscaleTokenGenerator,
+      BrandTokenGenerator,
+      PositiveTokenGenerator,
+      DangerTokenGenerator,
+      WarningTokenGenerator,
+    );
+    const PaddingUtilityGenerator = new UtilityGenerators.PaddingUtilityGenerator(SpacingTokenGenerator);
+    const MarginUtilityGenerator = new UtilityGenerators.MarginUtilityGenerator(SpacingTokenGenerator);
+    const GapUtilityGenerator = new UtilityGenerators.GapUtilityGenerator(SpacingTokenGenerator);
+    const PositionersUtilityGenerator = new UtilityGenerators.PositionersUtilityGenerator(
+      SpacingTokenGenerator,
+    );
+    const MaxWidthUtilityGenerator = new UtilityGenerators.MaxWidthUtilityGenerator(BreakpointTokenGenerator);
+    const MaxHeightUtilityGenerator = new UtilityGenerators.MaxHeightUtilityGenerator(
+      BreakpointTokenGenerator,
+    );
+    const DisplayUtilityGenerator = new UtilityGenerators.DisplayUtilityGenerator();
+    const CursorUtilityGenerator = new UtilityGenerators.CursorUtilityGenerator();
+    const ObjectFitUtilityGenerator = new UtilityGenerators.ObjectFitUtilityGenerator();
+    const PositionUtilityGenerator = new UtilityGenerators.PositionUtilityGenerator();
+    const RotateUtilityGenerator = new UtilityGenerators.RotateUtilityGenerator();
+    const ObjectPositionUtilityGenerator = new UtilityGenerators.ObjectPositionUtilityGenerator();
+    const PointerEventUtilityGenerator = new UtilityGenerators.PointerEventUtilityGenerator();
+    const OverflowUtilityGenerator = new UtilityGenerators.OverflowUtilityGenerator();
+    const FlexDirectionUtilityGenerator = new UtilityGenerators.FlexDirectionUtilityGenerator();
+    const AxisPlacementUtilityGenerator = new UtilityGenerators.AxisPlacementUtilityGenerator();
+    const FlexGrowUtilityGenerator = new UtilityGenerators.FlexGrowUtilityGenerator();
+    const FlexShrinkUtilityGenerator = new UtilityGenerators.FlexShrinkUtilityGenerator();
+    const FlexWrapUtilityGenerator = new UtilityGenerators.FlexWrapUtilityGenerator();
+    const TransformUtilityGenerator = new UtilityGenerators.TransformUtilityGenerator();
+    const WidthUtilityGenerator = new UtilityGenerators.WidthUtilityGenerator();
+    const HeightUtilityGenerator = new UtilityGenerators.HeightUtilityGenerator();
+
     const generators = [
-      new UtilityGenerators.BackdropUtilityGenerator(BackdropsTokenGenerator),
-      new UtilityGenerators.BorderWidthUtilityGenerator(BorderWidthTokenGenerator),
-      new UtilityGenerators.FontFamilyUtilityGenerator(FontFamilyTokenGenerator),
-      new UtilityGenerators.FontSizeUtilityGenerator(FontSizeTokenGenerator),
-      new UtilityGenerators.FontWeightUtilityGenerator(FontWeightTokenGenerator),
-      new UtilityGenerators.LetterSpacingUtilityGenerator(LetterSpacingTokenGenerator),
-      new UtilityGenerators.LineHeightUtilityGenerator(LineHeightTokenGenerator),
-      new UtilityGenerators.OpacityUtilityGenerator(OpacityTokenGenerator),
-      new UtilityGenerators.RadiusUtilityGenerator(RadiusTokenGenerator),
-      new UtilityGenerators.ShadowUtilityGenerator(ShadowTokenGenerator),
-      new UtilityGenerators.ZIndexUtilityGenerator(ZIndexTokenGenerator),
-      new UtilityGenerators.FontColorUtilityGenerator(
-        GrayscaleTokenGenerator,
-        BrandTokenGenerator,
-        PositiveTokenGenerator,
-        DangerTokenGenerator,
-        WarningTokenGenerator,
-      ),
-      new UtilityGenerators.BackgroundUtilityGenerator(
-        GrayscaleTokenGenerator,
-        BrandTokenGenerator,
-        PositiveTokenGenerator,
-        DangerTokenGenerator,
-        WarningTokenGenerator,
-      ),
-      new UtilityGenerators.BorderColorUtilityGenerator(
-        GrayscaleTokenGenerator,
-        BrandTokenGenerator,
-        PositiveTokenGenerator,
-        DangerTokenGenerator,
-        WarningTokenGenerator,
-      ),
-      new UtilityGenerators.PaddingUtilityGenerator(SpacingTokenGenerator),
-      new UtilityGenerators.MarginUtilityGenerator(SpacingTokenGenerator),
-      new UtilityGenerators.GapUtilityGenerator(SpacingTokenGenerator),
-      new UtilityGenerators.PositionersUtilityGenerator(SpacingTokenGenerator),
-      new UtilityGenerators.MaxWidthUtilityGenerator(BreakpointTokenGenerator),
-      new UtilityGenerators.MaxHeightUtilityGenerator(BreakpointTokenGenerator),
-      new UtilityGenerators.DisplayUtilityGenerator(),
-      new UtilityGenerators.CursorUtilityGenerator(),
-      new UtilityGenerators.ObjectFitUtilityGenerator(),
-      new UtilityGenerators.PositionUtilityGenerator(),
-      new UtilityGenerators.RotateUtilityGenerator(),
-      new UtilityGenerators.ObjectPositionUtilityGenerator(),
-      new UtilityGenerators.PointerEventUtilityGenerator(),
-      new UtilityGenerators.OverflowUtilityGenerator(),
-      new UtilityGenerators.FlexDirectionUtilityGenerator(),
-      new UtilityGenerators.AxisPlacementUtilityGenerator(),
-      new UtilityGenerators.FlexGrowUtilityGenerator(),
-      new UtilityGenerators.FlexShrinkUtilityGenerator(),
-      new UtilityGenerators.FlexWrapUtilityGenerator(),
-      new UtilityGenerators.TransformUtilityGenerator(),
-      new UtilityGenerators.WidthUtilityGenerator(),
-      new UtilityGenerators.HeightUtilityGenerator(),
+      BackdropUtilityGenerator,
+      BorderWidthUtilityGenerator,
+      FontFamilyUtilityGenerator,
+      FontSizeUtilityGenerator,
+      FontWeightUtilityGenerator,
+      LetterSpacingUtilityGenerator,
+      LineHeightUtilityGenerator,
+      OpacityUtilityGenerator,
+      RadiusUtilityGenerator,
+      ShadowUtilityGenerator,
+      ZIndexUtilityGenerator,
+      FontColorUtilityGenerator,
+      BackgroundUtilityGenerator,
+      BorderColorUtilityGenerator,
+      PaddingUtilityGenerator,
+      MarginUtilityGenerator,
+      GapUtilityGenerator,
+      PositionersUtilityGenerator,
+      MaxWidthUtilityGenerator,
+      MaxHeightUtilityGenerator,
+      DisplayUtilityGenerator,
+      CursorUtilityGenerator,
+      ObjectFitUtilityGenerator,
+      PositionUtilityGenerator,
+      RotateUtilityGenerator,
+      ObjectPositionUtilityGenerator,
+      PointerEventUtilityGenerator,
+      OverflowUtilityGenerator,
+      FlexDirectionUtilityGenerator,
+      AxisPlacementUtilityGenerator,
+      FlexGrowUtilityGenerator,
+      FlexShrinkUtilityGenerator,
+      FlexWrapUtilityGenerator,
+      TransformUtilityGenerator,
+      WidthUtilityGenerator,
+      HeightUtilityGenerator,
     ];
 
     for (const generator of generators) {
