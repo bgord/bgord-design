@@ -18,6 +18,7 @@ export * from "./height-utility-generator";
 export * from "./letter-spacing-utility-generator";
 export * from "./line-height-utility-generator";
 export * from "./margin-utility-generator";
+export * from "./max-width-utility-generator";
 export * from "./object-fit-utility-generator";
 export * from "./object-position-utility-generator";
 export * from "./opacity-utility-generator";
