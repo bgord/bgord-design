@@ -64,6 +64,13 @@ class GeneratorProcessor {
         DangerTokenGenerator,
         WarningTokenGenerator,
       ),
+      new UtilityGenerators.BackgroundUtilityGenerator(
+        GrayscaleTokenGenerator,
+        BrandTokenGenerator,
+        PositiveTokenGenerator,
+        DangerTokenGenerator,
+        WarningTokenGenerator,
+      ),
     ];
 
     for (const generator of generators) {
