@@ -83,6 +83,7 @@ class GeneratorProcessor {
       new UtilityGenerators.GapUtilityGenerator(SpacingTokenGenerator),
       new UtilityGenerators.PositionersUtilityGenerator(SpacingTokenGenerator),
       new UtilityGenerators.MaxWidthUtilityGenerator(BreakpointTokenGenerator),
+      new UtilityGenerators.MaxHeightUtilityGenerator(BreakpointTokenGenerator),
       new UtilityGenerators.DisplayUtilityGenerator(),
       new UtilityGenerators.CursorUtilityGenerator(),
       new UtilityGenerators.ObjectFitUtilityGenerator(),
