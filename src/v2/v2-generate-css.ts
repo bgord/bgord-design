@@ -53,6 +53,7 @@ class GeneratorProcessor {
       new UtilityGenerators.ShadowUtilityGenerator(ShadowTokenGenerator),
       new UtilityGenerators.RadiusUtilityGenerator(RadiusTokenGenerator),
       new UtilityGenerators.BackdropUtilityGenerator(BackdropsTokenGenerator),
+      new UtilityGenerators.LineHeightUtilityGenerator(LineHeightTokenGenerator),
     ];
 
     for (const generator of generators) {
