@@ -8,6 +8,7 @@ export * from "./font-size-utility-generator";
 export * from "./font-weight-utility-generator";
 export * from "./letter-spacing-utility-generator";
 export * from "./line-height-utility-generator";
+export * from "./margin-utility-generator";
 export * from "./opacity-utility-generator";
 export * from "./padding-utility-generator";
 export * from "./radius-utility-generator";

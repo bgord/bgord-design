@@ -79,6 +79,7 @@ class GeneratorProcessor {
         WarningTokenGenerator,
       ),
       new UtilityGenerators.PaddingUtilityGenerator(SpacingTokenGenerator),
+      new UtilityGenerators.MarginUtilityGenerator(SpacingTokenGenerator),
     ];
 
     for (const generator of generators) {
