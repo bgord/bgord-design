@@ -8,6 +8,6 @@ export class FontFamilyTokenGenerator extends TokenGenerator {
   };
 
   constructor(overrides: TokenConfigType = {}) {
-    super("Font family", overrides);
+    super("FontFamily", overrides);
   }
 }

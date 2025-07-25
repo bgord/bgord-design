@@ -12,6 +12,6 @@ export class BorderWidthTokenGenerator extends TokenGenerator {
   };
 
   constructor(overrides: TokenConfigType = {}) {
-    super("Border width", overrides);
+    super("BorderWidth", overrides);
   }
 }

@@ -11,6 +11,6 @@ export class FontWeightTokenGenerator extends TokenGenerator {
   };
 
   constructor(overrides: TokenConfigType = {}) {
-    super("Font weight", overrides);
+    super("FontWeight", overrides);
   }
 }

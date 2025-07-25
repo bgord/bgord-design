@@ -11,6 +11,6 @@ export class LineHeightTokenGenerator extends TokenGenerator {
   };
 
   constructor(overrides: TokenConfigType = {}) {
-    super("Line height", overrides);
+    super("LineHeight", overrides);
   }
 }

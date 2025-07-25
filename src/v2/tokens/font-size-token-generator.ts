@@ -14,6 +14,6 @@ export class FontSizeTokenGenerator extends TokenGenerator {
   };
 
   constructor(overrides: TokenConfigType = {}) {
-    super("Font size", overrides);
+    super("FontSize", overrides);
   }
 }

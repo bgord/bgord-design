@@ -10,6 +10,6 @@ export class ZIndexTokenGenerator extends TokenGenerator {
   };
 
   constructor(overrides: TokenConfigType = {}) {
-    super("z index", overrides);
+    super("ZIndex", overrides);
   }
 }

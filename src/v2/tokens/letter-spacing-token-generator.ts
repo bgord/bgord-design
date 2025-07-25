@@ -11,6 +11,6 @@ export class LetterSpacingTokenGenerator extends TokenGenerator {
   };
 
   constructor(overrides: TokenConfigType = {}) {
-    super("Letter spacing", overrides);
+    super("LetterSpacing", overrides);
   }
 }
