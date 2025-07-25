@@ -28,4 +28,17 @@ export abstract class TokenGenerator {
 
     return result;
   }
+
+  toTypeScript(): string {
+    const config = this.getConfig();
+
+    return `
+      export const ${this.name}Tokens = ${JSON.stringify(config)} as const;
+
+      export type ${this.name}TokenType = ${Object.keys(config)
+        .map((token) => `"${token}"`)
+        .join(" | ")
+        .toString()};
+    `;
+  }
 }
