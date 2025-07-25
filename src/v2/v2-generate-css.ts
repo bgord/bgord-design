@@ -51,6 +51,7 @@ class GeneratorProcessor {
       new UtilityGenerators.FontFamilyUtilityGenerator(FontFamilyTokenGenerator),
       new UtilityGenerators.FontSizeUtilityGenerator(FontSizeTokenGenerator),
       new UtilityGenerators.FontWeightUtilityGenerator(FontWeightTokenGenerator),
+      new UtilityGenerators.ZIndexUtilityGenerator(ZIndexTokenGenerator),
     ];
 
     for (const generator of generators) {
