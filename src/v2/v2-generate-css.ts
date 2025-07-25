@@ -78,6 +78,7 @@ class GeneratorProcessor {
         DangerTokenGenerator,
         WarningTokenGenerator,
       ),
+      new UtilityGenerators.PaddingUtilityGenerator(SpacingTokenGenerator),
     ];
 
     for (const generator of generators) {

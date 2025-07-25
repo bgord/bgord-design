@@ -9,6 +9,7 @@ export * from "./font-weight-utility-generator";
 export * from "./letter-spacing-utility-generator";
 export * from "./line-height-utility-generator";
 export * from "./opacity-utility-generator";
+export * from "./padding-utility-generator";
 export * from "./radius-utility-generator";
 export * from "./shadow-utility-generator";
 export * from "./z-index-utility-generator";
