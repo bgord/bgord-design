@@ -1,4 +1,5 @@
 import * as TokenGenerators from "./tokens";
+import * as UtilityGenerators from "./utilities";
 
 class GeneratorProcessor {
   static async process() {
@@ -45,6 +46,12 @@ class GeneratorProcessor {
     output += ZIndexTokenGenerator.getTokens();
 
     output += "}";
+
+    const FontSizeUtilityGenerator = new UtilityGenerators.FontSizeUtilityGenerator(FontSizeTokenGenerator);
+
+    output += FontSizeUtilityGenerator.header();
+    output += FontSizeUtilityGenerator.css();
+    output += FontSizeUtilityGenerator.footer();
 
     await Bun.file("dist/v2/main.css").write(output);
   }

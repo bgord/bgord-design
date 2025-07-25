@@ -13,7 +13,8 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
 
     for (const variable of Object.keys(tokens)) {
       const key = variable.replace("font-size-", "");
-      lines.push(`*[data-fs='${key}'] { font-size: var(--${variable}); }`);
+
+      lines.push(`[data-fs='${key}'] { font-size: var(--${variable}); }`);
     }
 
     return lines.join("\n");

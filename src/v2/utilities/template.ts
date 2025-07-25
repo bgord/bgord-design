@@ -6,12 +6,12 @@ export abstract class UtilityGenerator {
   }
 
   header(): string {
-    return `/* ${this.name} */\n\n`;
+    return `\n/* ${this.name} */\n`;
   }
 
   abstract css(): string;
 
   footer(): string {
-    return "/* ===================== */\n\n";
+    return "\n/* ===================== */\n";
   }
 }
