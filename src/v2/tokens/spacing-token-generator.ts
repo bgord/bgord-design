@@ -15,6 +15,7 @@ export class SpacingTokenGenerator extends TokenGenerator {
     "spacing-8": "2rem", //  32 px
     "spacing-12": "3rem", // 48 px
     "spacing-16": "4rem", // 64 px
+    "spacing-auto": "auto",
   };
 
   constructor(overrides: TokenConfigType = {}) {
