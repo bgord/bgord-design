@@ -173,7 +173,7 @@ class GeneratorProcessor {
       tokenTypes += token.toTypeScript();
     }
 
-    await Bun.file("dist/v2/token-types.ts").write(tokenTypes);
+    await Bun.file("dist/v2/token-types.d.ts").write(tokenTypes);
 
     let utilityTypes = `declare module "react" { interface HTMLAttributes<T> {`;
 
@@ -183,7 +183,7 @@ class GeneratorProcessor {
 
     utilityTypes += "}}";
 
-    await Bun.file("dist/v2/utility-types.ts").write(utilityTypes);
+    await Bun.file("dist/v2/utility-types.d.ts").write(utilityTypes);
   }
 }
 
