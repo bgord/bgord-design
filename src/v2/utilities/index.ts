@@ -15,6 +15,7 @@ export * from "./margin-utility-generator";
 export * from "./object-fit-utility-generator";
 export * from "./opacity-utility-generator";
 export * from "./padding-utility-generator";
+export * from "./position-utility-generator";
 export * from "./radius-utility-generator";
 export * from "./shadow-utility-generator";
 export * from "./z-index-utility-generator";
