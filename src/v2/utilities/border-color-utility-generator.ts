@@ -6,28 +6,30 @@ import { WarningTokenGenerator } from "../tokens/warning-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class BorderColorUtilityGenerator extends UtilityGenerator {
+  config = {};
+
   constructor(
-    private readonly GrayscaleTokenGenerator: GrayscaleTokenGenerator,
-    private readonly BrandTokenGenerator: BrandTokenGenerator,
-    private readonly PositiveTokenGenerator: PositiveTokenGenerator,
-    private readonly DangerTokenGenerator: DangerTokenGenerator,
-    private readonly WarningTokenGenerator: WarningTokenGenerator,
+    GrayscaleTokenGenerator: GrayscaleTokenGenerator,
+    BrandTokenGenerator: BrandTokenGenerator,
+    PositiveTokenGenerator: PositiveTokenGenerator,
+    DangerTokenGenerator: DangerTokenGenerator,
+    WarningTokenGenerator: WarningTokenGenerator,
   ) {
     super("Border color utilities");
+
+    this.config = {
+      ...GrayscaleTokenGenerator.getConfig(),
+      ...BrandTokenGenerator.getConfig(),
+      ...PositiveTokenGenerator.getConfig(),
+      ...DangerTokenGenerator.getConfig(),
+      ...WarningTokenGenerator.getConfig(),
+    };
   }
 
-  css(): string {
-    const grayscale = this.GrayscaleTokenGenerator.getConfig();
-    const brand = this.BrandTokenGenerator.getConfig();
-    const positive = this.PositiveTokenGenerator.getConfig();
-    const danger = this.DangerTokenGenerator.getConfig();
-    const warning = this.WarningTokenGenerator.getConfig();
-
-    const tokens = { ...grayscale, ...brand, ...positive, ...danger, ...warning };
-
+  css() {
     const lines: string[] = [];
 
-    for (const variable of Object.keys(tokens)) {
+    for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
       lines.push(`[data-bc='${key}'] { border-color: var(--${variable}); }`);

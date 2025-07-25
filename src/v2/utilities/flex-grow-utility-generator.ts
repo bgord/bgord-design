@@ -1,16 +1,16 @@
 import { UtilityGenerator } from "./template";
 
 export class FlexGrowUtilityGenerator extends UtilityGenerator {
+  config = { "1": "1", unset: "unset" };
+
   constructor() {
     super("Flex grow utilities");
   }
 
-  css(): string {
-    const tokens = { "1": "1", unset: "unset" };
-
+  css() {
     const lines: string[] = [];
 
-    for (const [key, value] of Object.entries(tokens)) {
+    for (const [key, value] of Object.entries(this.config)) {
       lines.push(`[data-grow='${key}'] { flex-grow: ${value}; }`);
     }
 

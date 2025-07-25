@@ -1,26 +1,26 @@
 import { UtilityGenerator } from "./template";
 
 export class TransformUtilityGenerator extends UtilityGenerator {
+  config = {
+    uppercase: "uppercase",
+    lowercase: "lowercase",
+    capitalize: "capitalize",
+    "upper-first": "upper-first",
+    truncate: "truncate",
+    center: "center",
+    nowrap: "nowrap",
+    none: "none",
+    "line-clamp": "line-clamp",
+  };
+
   constructor() {
     super("Transform utilities");
   }
 
-  css(): string {
-    const tokens = {
-      uppercase: "uppercase",
-      lowercase: "lowercase",
-      capitalize: "capitalize",
-      "upper-first": "upper-first",
-      truncate: "truncate",
-      center: "center",
-      nowrap: "nowrap",
-      none: "none",
-      "line-clamp": "line-clamp",
-    };
-
+  css() {
     const lines: string[] = [];
 
-    for (const [key, value] of Object.entries(tokens)) {
+    for (const [key, value] of Object.entries(this.config)) {
       if (key === "truncate") {
         lines.push(
           `[data-transform~='${key}'] {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n`,

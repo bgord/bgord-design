@@ -1,16 +1,16 @@
 import { UtilityGenerator } from "./template";
 
 export class CursorUtilityGenerator extends UtilityGenerator {
+  config = { wait: "wait", auto: "auto", pointer: "pointer", "not-allowed": "not-allowed" };
+
   constructor() {
     super("Cursor utilities");
   }
 
-  css(): string {
-    const tokens = { wait: "wait", auto: "auto", pointer: "pointer", "not-allowed": "not-allowed" };
-
+  css() {
     const lines: string[] = [];
 
-    for (const [key, value] of Object.entries(tokens)) {
+    for (const [key, value] of Object.entries(this.config)) {
       lines.push(`[data-cursor='${key}'] { cursor: ${value}; }`);
     }
 

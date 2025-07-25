@@ -2,16 +2,17 @@ import { LetterSpacingTokenGenerator } from "../tokens/letter-spacing-token-gene
 import { UtilityGenerator } from "./template";
 
 export class LetterSpacingUtilityGenerator extends UtilityGenerator {
-  constructor(private readonly LetterSpacingTokenGenerator: LetterSpacingTokenGenerator) {
+  config = {};
+
+  constructor(LetterSpacingTokenGenerator: LetterSpacingTokenGenerator) {
     super("Letter spacing utilities");
+    this.config = LetterSpacingTokenGenerator.getConfig();
   }
 
-  css(): string {
-    const tokens = this.LetterSpacingTokenGenerator.getConfig();
-
+  css() {
     const lines: string[] = [];
 
-    for (const variable of Object.keys(tokens)) {
+    for (const variable of Object.keys(this.config)) {
       const key = variable.replace("letter-spacing-", "");
 
       lines.push(`[data-ls='${key}'] { letter-spacing: var(--${variable}); }`);

@@ -2,16 +2,17 @@ import { SpacingTokenGenerator } from "../tokens/spacing-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class PaddingUtilityGenerator extends UtilityGenerator {
-  constructor(private readonly SpacingTokenGenerator: SpacingTokenGenerator) {
+  config = {};
+
+  constructor(SpacingTokenGenerator: SpacingTokenGenerator) {
     super("Padding utilities");
+    this.config = SpacingTokenGenerator.getConfig();
   }
 
-  css(): string {
-    const tokens = this.SpacingTokenGenerator.getConfig();
-
+  css() {
     const lines: string[] = [];
 
-    for (const variable of Object.keys(tokens)) {
+    for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
 
       lines.push(`[data-p='${key}'] { padding: var(--${variable}); }`);

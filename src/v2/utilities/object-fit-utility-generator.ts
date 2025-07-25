@@ -1,22 +1,22 @@
 import { UtilityGenerator } from "./template";
 
 export class ObjectFitUtilityGenerator extends UtilityGenerator {
+  config = {
+    contain: "contain",
+    cover: "cover",
+    fill: "fill",
+    "scale-down": "scale-down",
+    none: "none",
+  };
+
   constructor() {
     super("Object fit utilities");
   }
 
-  css(): string {
-    const tokens = {
-      contain: "contain",
-      cover: "cover",
-      fill: "fill",
-      "scale-down": "scale-down",
-      none: "none",
-    };
-
+  css() {
     const lines: string[] = [];
 
-    for (const [key, value] of Object.entries(tokens)) {
+    for (const [key, value] of Object.entries(this.config)) {
       lines.push(`[data-object-fit='${key}'] { object-fit: ${value}; }`);
     }
 
