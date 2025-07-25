@@ -14,7 +14,6 @@ class GeneratorProcessor {
     const GrayscaleTokenGenerator = new TokenGenerators.GrayscaleTokenGenerator();
     const LetterSpacingTokenGenerator = new TokenGenerators.LetterSpacingTokenGenerator();
     const LineHeightTokenGenerator = new TokenGenerators.LineHeightTokenGenerator();
-    const MotionTokenGenerator = new TokenGenerators.MotionTokenGenerator();
     const OpacityTokenGenerator = new TokenGenerators.OpacityTokenGenerator();
     const PositiveTokenGenerator = new TokenGenerators.PositiveTokenGenerator();
     const RadiusTokenGenerator = new TokenGenerators.RadiusTokenGenerator();
@@ -36,7 +35,6 @@ class GeneratorProcessor {
     output += GrayscaleTokenGenerator.getTokens();
     output += LetterSpacingTokenGenerator.getTokens();
     output += LineHeightTokenGenerator.getTokens();
-    output += MotionTokenGenerator.getTokens();
     output += OpacityTokenGenerator.getTokens();
     output += PositiveTokenGenerator.getTokens();
     output += RadiusTokenGenerator.getTokens();
