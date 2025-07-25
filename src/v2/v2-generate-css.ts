@@ -10,7 +10,7 @@ class GeneratorProcessor {
     ).generate();
 
     console.log(output);
-    await Bun.file("dist/v2-main.css").write(output);
+    await Bun.file("dist/v2/main.css").write(output);
   }
 }
 
