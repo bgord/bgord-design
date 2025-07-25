@@ -1,3 +1,4 @@
+export * from "./backdrop-utility-generator";
 export * from "./font-family-utility-generator";
 export * from "./font-size-utility-generator";
 export * from "./font-weight-utility-generator";
