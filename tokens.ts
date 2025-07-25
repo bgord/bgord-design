@@ -278,7 +278,47 @@ class BrandTokenGenerator extends TokenGenerator {
   }
 }
 
-// Generate
+class PositiveTokenGenerator extends TokenGenerator {
+  base: TokenConfigType = {
+    "color-positive-100": "oklch(0.93 0.06 145)",
+    "color-positive-300": "oklch(0.78 0.11 145)",
+    "color-positive-500": "oklch(0.46 0.18 145)",
+    "color-positive-700": "oklch(0.30 0.15 145)",
+    "color-positive-900": "oklch(0.18 0.12 145)",
+  };
+
+  constructor(overrides: TokenConfigType = {}) {
+    super("Positive", overrides);
+  }
+}
+
+class WarningTokenGenerator extends TokenGenerator {
+  base: TokenConfigType = {
+    "color-warning-100": "oklch(0.97 0.06 85)",
+    "color-warning-300": "oklch(0.86 0.12 85)",
+    "color-warning-500": "oklch(0.67 0.20 85)",
+    "color-warning-700": "oklch(0.46 0.18 85)",
+    "color-warning-900": "oklch(0.30 0.14 85)",
+  };
+
+  constructor(overrides: TokenConfigType = {}) {
+    super("Warning", overrides);
+  }
+}
+
+class DangerTokenGenerator extends TokenGenerator {
+  base: TokenConfigType = {
+    "color-danger-100": "oklch(0.93 0.06 25)",
+    "color-danger-300": "oklch(0.78 0.12 25)",
+    "color-danger-500": "oklch(0.46 0.22 25)",
+    "color-danger-700": "oklch(0.30 0.18 25)",
+    "color-danger-900": "oklch(0.18 0.12 25)",
+  };
+
+  constructor(overrides: TokenConfigType = {}) {
+    super("Danger", overrides);
+  }
+}
 
 const all = [
   new FontSizeTokenGenerator(),
@@ -297,6 +337,9 @@ const all = [
   new OpacityTokenGenerator(),
   new GrayscaleTokenGenerator(),
   new BrandTokenGenerator(),
+  new PositiveTokenGenerator(),
+  new WarningTokenGenerator(),
+  new DangerTokenGenerator(),
 ];
 
 console.log(`:root { ${all.map((generator) => generator.getTokens()).join(" ")} }`);
