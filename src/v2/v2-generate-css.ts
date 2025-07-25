@@ -115,6 +115,14 @@ class GeneratorProcessor {
     }
 
     await Bun.file("dist/v2/main.css").write(output);
+
+    let tokenTypes = "";
+
+    for (const token of tokens) {
+      tokenTypes += token.toTypeScript();
+    }
+
+    await Bun.file("dist/v2/token-types.ts").write(tokenTypes);
   }
 }
 
