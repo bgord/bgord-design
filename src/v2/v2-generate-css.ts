@@ -54,6 +54,7 @@ class GeneratorProcessor {
       new UtilityGenerators.RadiusUtilityGenerator(RadiusTokenGenerator),
       new UtilityGenerators.BackdropUtilityGenerator(BackdropsTokenGenerator),
       new UtilityGenerators.LineHeightUtilityGenerator(LineHeightTokenGenerator),
+      new UtilityGenerators.LetterSpacingUtilityGenerator(LetterSpacingTokenGenerator),
     ];
 
     for (const generator of generators) {
