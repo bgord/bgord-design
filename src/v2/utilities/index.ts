@@ -16,6 +16,7 @@ export * from "./object-fit-utility-generator";
 export * from "./object-position-utility-generator";
 export * from "./opacity-utility-generator";
 export * from "./padding-utility-generator";
+export * from "./pointer-event-utility-generator";
 export * from "./position-utility-generator";
 export * from "./positioners-utility-generator";
 export * from "./radius-utility-generator";
