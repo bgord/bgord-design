@@ -1,4 +1,5 @@
 # Changelog
+- 2025-07-25 17:38 4fe05bf **step: update packages**
 ## 2025-07-13 17:06 v0.29.3
 - 2025-07-13 17:06 f074800 **fix: animation selectors**
 - 2025-07-13 17:06 df6b1d1 **0.29.3**
@@ -7,6 +8,7 @@
 - 2025-07-13 17:04 767e331 **step: update packages**
 - 2025-07-13 17:03 601d45e **feature: add grow-fade-in**
 - 2025-07-13 15:06 b8f3eac **docs: generate CHANGELOG**
+- 2025-07-13 15:06 49aec5b **docs: generate CHANGELOG**
 - 2025-07-13 15:05 5cd6607 **docs: generate CHANGELOG**
 - 2025-07-13 15:04 dc3f82e **docs: generate readme**
 - 2025-07-13 15:04 c10600d **docs: generate CHANGELOG**
