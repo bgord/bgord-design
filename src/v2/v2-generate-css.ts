@@ -48,6 +48,7 @@ class GeneratorProcessor {
     output += "}";
 
     const generators = [
+      new UtilityGenerators.FontFamilyUtilityGenerator(FontFamilyTokenGenerator),
       new UtilityGenerators.FontSizeUtilityGenerator(FontSizeTokenGenerator),
       new UtilityGenerators.FontWeightUtilityGenerator(FontWeightTokenGenerator),
     ];
