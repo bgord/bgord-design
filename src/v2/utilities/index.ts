@@ -1,3 +1,4 @@
+export * from "./axis-placement-utility-generator";
 export * from "./backdrop-utility-generator";
 export * from "./background-utility-generator";
 export * from "./border-color-utility-generator";

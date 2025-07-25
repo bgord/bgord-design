@@ -91,6 +91,7 @@ class GeneratorProcessor {
       new UtilityGenerators.PointerEventUtilityGenerator(),
       new UtilityGenerators.OverflowUtilityGenerator(),
       new UtilityGenerators.FlexDirectionUtilityGenerator(),
+      new UtilityGenerators.AxisPlacementUtilityGenerator(),
     ];
 
     for (const generator of generators) {
