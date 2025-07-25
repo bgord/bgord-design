@@ -19,17 +19,15 @@ html {
 
 /**
  * 1. Add default box-sizing.
- * 2. Set default line-height.
- * 3. Remove padding/margin by default.
+ * 2. Remove padding/margin by default.
  */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box; /* 1 */
-  line-height: 24px; /* 2 */
-  padding: 0; /* 3 */
-  margin: 0; /* 3 */
+  padding: 0; /* 2 */
+  margin: 0; /* 2 */
 }
 
 /* Sections
@@ -138,15 +136,6 @@ kbd,
 samp {
   font-family: monospace; /* 1 */
   font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-  display: block;
-  font-size: 12px;
 }
 
 /**
