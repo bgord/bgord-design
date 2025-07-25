@@ -20,4 +20,12 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
 
     return lines.join("\n");
   }
+
+  toTypeScript() {
+    const type = Object.keys(this.config)
+      .map((key) => `"${key.replace("font-size-", "")}"`)
+      .join(" | ");
+
+    return `"data-fs"?: ${type};`;
+  }
 }
