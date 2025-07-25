@@ -6,6 +6,7 @@ export * from "./border-width-utility-generator";
 export * from "./cursor-utility-generator";
 export * from "./display-utility-generator";
 export * from "./flex-direction-utility-generator";
+export * from "./flex-grow-utility-generator";
 export * from "./font-color-utility-generator";
 export * from "./font-family-utility-generator";
 export * from "./font-size-utility-generator";
