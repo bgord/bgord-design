@@ -80,6 +80,7 @@ class GeneratorProcessor {
       ),
       new UtilityGenerators.PaddingUtilityGenerator(SpacingTokenGenerator),
       new UtilityGenerators.MarginUtilityGenerator(SpacingTokenGenerator),
+      new UtilityGenerators.GapUtilityGenerator(SpacingTokenGenerator),
     ];
 
     for (const generator of generators) {
