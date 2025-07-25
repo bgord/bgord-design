@@ -95,6 +95,7 @@ class GeneratorProcessor {
       new UtilityGenerators.FlexGrowUtilityGenerator(),
       new UtilityGenerators.FlexShrinkUtilityGenerator(),
       new UtilityGenerators.FlexWrapUtilityGenerator(),
+      new UtilityGenerators.TransformUtilityGenerator(),
     ];
 
     for (const generator of generators) {

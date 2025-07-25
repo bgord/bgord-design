@@ -28,4 +28,5 @@ export * from "./positioners-utility-generator";
 export * from "./radius-utility-generator";
 export * from "./rotate-utility-generator";
 export * from "./shadow-utility-generator";
+export * from "./transform-utility-generator";
 export * from "./z-index-utility-generator";
