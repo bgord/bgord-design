@@ -2,7 +2,7 @@ import { UtilityGenerator } from "./template";
 
 export class FlexShrinkUtilityGenerator extends UtilityGenerator {
   constructor() {
-    super("Flex shrink");
+    super("Flex shrink utilities");
   }
 
   css(): string {

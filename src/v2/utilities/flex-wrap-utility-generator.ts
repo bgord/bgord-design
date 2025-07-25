@@ -2,7 +2,7 @@ import { UtilityGenerator } from "./template";
 
 export class FlexWrapUtilityGenerator extends UtilityGenerator {
   constructor() {
-    super("Flex wrap");
+    super("Flex wrap utilities");
   }
 
   css(): string {

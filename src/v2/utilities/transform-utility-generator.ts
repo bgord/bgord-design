@@ -2,7 +2,7 @@ import { UtilityGenerator } from "./template";
 
 export class TransformUtilityGenerator extends UtilityGenerator {
   constructor() {
-    super("Transform");
+    super("Transform utilities");
   }
 
   css(): string {

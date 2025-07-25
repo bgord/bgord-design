@@ -2,7 +2,7 @@ import { UtilityGenerator } from "./template";
 
 export class FlexDirectionUtilityGenerator extends UtilityGenerator {
   constructor() {
-    super("Flex direction");
+    super("Flex direction utilities");
   }
 
   css(): string {

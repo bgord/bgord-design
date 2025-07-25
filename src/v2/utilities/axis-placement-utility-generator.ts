@@ -2,7 +2,7 @@ import { UtilityGenerator } from "./template";
 
 export class AxisPlacementUtilityGenerator extends UtilityGenerator {
   constructor() {
-    super("Axis placement");
+    super("Axis placement utilities");
   }
 
   css(): string {

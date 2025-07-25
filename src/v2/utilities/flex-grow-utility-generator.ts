@@ -2,7 +2,7 @@ import { UtilityGenerator } from "./template";
 
 export class FlexGrowUtilityGenerator extends UtilityGenerator {
   constructor() {
-    super("Flex grow");
+    super("Flex grow utilities");
   }
 
   css(): string {
