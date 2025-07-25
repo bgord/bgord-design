@@ -57,6 +57,13 @@ class GeneratorProcessor {
       new UtilityGenerators.RadiusUtilityGenerator(RadiusTokenGenerator),
       new UtilityGenerators.ShadowUtilityGenerator(ShadowTokenGenerator),
       new UtilityGenerators.ZIndexUtilityGenerator(ZIndexTokenGenerator),
+      new UtilityGenerators.FontColorUtilityGenerator(
+        GrayscaleTokenGenerator,
+        BrandTokenGenerator,
+        PositiveTokenGenerator,
+        DangerTokenGenerator,
+        WarningTokenGenerator,
+      ),
     ];
 
     for (const generator of generators) {
