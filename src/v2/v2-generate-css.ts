@@ -22,26 +22,32 @@ class GeneratorProcessor {
     const WarningTokenGenerator = new TokenGenerators.WarningTokenGenerator();
     const ZIndexTokenGenerator = new TokenGenerators.ZIndexTokenGenerator();
 
+    const tokens = [
+      BackdropsTokenGenerator,
+      BorderWidthTokenGenerator,
+      BrandTokenGenerator,
+      BreakpointTokenGenerator,
+      DangerTokenGenerator,
+      FontFamilyTokenGenerator,
+      FontSizeTokenGenerator,
+      FontWeightTokenGenerator,
+      GrayscaleTokenGenerator,
+      LetterSpacingTokenGenerator,
+      LineHeightTokenGenerator,
+      OpacityTokenGenerator,
+      PositiveTokenGenerator,
+      RadiusTokenGenerator,
+      ShadowTokenGenerator,
+      SpacingTokenGenerator,
+      WarningTokenGenerator,
+      ZIndexTokenGenerator,
+    ];
+
     let output = ":root {";
 
-    output += BackdropsTokenGenerator.getTokens();
-    output += BorderWidthTokenGenerator.getTokens();
-    output += BrandTokenGenerator.getTokens();
-    output += BreakpointTokenGenerator.getTokens();
-    output += DangerTokenGenerator.getTokens();
-    output += FontFamilyTokenGenerator.getTokens();
-    output += FontSizeTokenGenerator.getTokens();
-    output += FontWeightTokenGenerator.getTokens();
-    output += GrayscaleTokenGenerator.getTokens();
-    output += LetterSpacingTokenGenerator.getTokens();
-    output += LineHeightTokenGenerator.getTokens();
-    output += OpacityTokenGenerator.getTokens();
-    output += PositiveTokenGenerator.getTokens();
-    output += RadiusTokenGenerator.getTokens();
-    output += ShadowTokenGenerator.getTokens();
-    output += SpacingTokenGenerator.getTokens();
-    output += WarningTokenGenerator.getTokens();
-    output += ZIndexTokenGenerator.getTokens();
+    for (const token of tokens) {
+      output += token.getTokens();
+    }
 
     output += "}";
 
