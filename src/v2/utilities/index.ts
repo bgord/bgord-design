@@ -17,5 +17,6 @@ export * from "./opacity-utility-generator";
 export * from "./padding-utility-generator";
 export * from "./position-utility-generator";
 export * from "./radius-utility-generator";
+export * from "./rotate-utility-generator";
 export * from "./shadow-utility-generator";
 export * from "./z-index-utility-generator";
