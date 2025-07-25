@@ -14,6 +14,7 @@ export * from "./font-family-utility-generator";
 export * from "./font-size-utility-generator";
 export * from "./font-weight-utility-generator";
 export * from "./gap-utility-generator";
+export * from "./height-utility-generator";
 export * from "./letter-spacing-utility-generator";
 export * from "./line-height-utility-generator";
 export * from "./margin-utility-generator";
