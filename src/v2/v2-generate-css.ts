@@ -9,7 +9,6 @@ class GeneratorProcessor {
       Object.values(TokenGenerators).map((TokenGenerator) => new TokenGenerator()),
     ).generate();
 
-    console.log(output);
     await Bun.file("dist/v2/main.css").write(output);
   }
 }
