@@ -17,4 +17,8 @@ export abstract class UtilityGenerator {
   footer(): string {
     return "\n/* ===================== */\n";
   }
+
+  toTypeScript(): string {
+    return "";
+  }
 }
