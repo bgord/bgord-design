@@ -1,4 +1,6 @@
-export type TokenConfigType = Record<string, string>;
+export type TokenType = string;
+
+export type TokenConfigType = Record<string, TokenType>;
 
 export abstract class TokenGenerator {
   abstract base: TokenConfigType;
