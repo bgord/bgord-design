@@ -82,6 +82,8 @@ class GeneratorProcessor {
       new UtilityGenerators.MarginUtilityGenerator(SpacingTokenGenerator),
       new UtilityGenerators.GapUtilityGenerator(SpacingTokenGenerator),
       new UtilityGenerators.DisplayUtilityGenerator(),
+      new UtilityGenerators.CursorUtilityGenerator(),
+      new UtilityGenerators.ObjectFitUtilityGenerator(),
     ];
 
     for (const generator of generators) {
