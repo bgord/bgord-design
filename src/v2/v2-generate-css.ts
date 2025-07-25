@@ -47,11 +47,16 @@ class GeneratorProcessor {
 
     output += "}";
 
-    const FontSizeUtilityGenerator = new UtilityGenerators.FontSizeUtilityGenerator(FontSizeTokenGenerator);
+    const generators = [
+      new UtilityGenerators.FontSizeUtilityGenerator(FontSizeTokenGenerator),
+      new UtilityGenerators.FontWeightUtilityGenerator(FontWeightTokenGenerator),
+    ];
 
-    output += FontSizeUtilityGenerator.header();
-    output += FontSizeUtilityGenerator.css();
-    output += FontSizeUtilityGenerator.footer();
+    for (const generator of generators) {
+      output += generator.header();
+      output += generator.css();
+      output += generator.footer();
+    }
 
     await Bun.file("dist/v2/main.css").write(output);
   }
