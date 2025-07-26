@@ -24,4 +24,13 @@ export class PositionersUtilityGenerator extends UtilityGenerator {
 
     return lines.join("\n");
   }
+
+  toTypeScript() {
+    const type = Object.keys(this.config)
+      .map((key) => key.replace("spacing-", ""))
+      .map((key) => `"${key}"`)
+      .join(" | ");
+
+    return `"data-top"?: ${type}; "data-right"?: ${type}; "data-bottom"?: ${type}; "data-left"?: ${type}; "data-inset"?: ${type};`;
+  }
 }

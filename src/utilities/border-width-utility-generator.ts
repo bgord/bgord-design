@@ -20,4 +20,13 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
 
     return lines.join("\n");
   }
+
+  toTypeScript() {
+    const type = Object.keys(this.config)
+      .map((key) => key.replace("border-width-", ""))
+      .map((key) => `"${key}"`)
+      .join(" | ");
+
+    return `"data-bw"?: ${type};`;
+  }
 }

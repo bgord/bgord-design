@@ -37,4 +37,13 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
 
     return lines.join("\n");
   }
+
+  toTypeScript() {
+    const type = Object.keys(this.config)
+      .map((key) => key.replace("color-", ""))
+      .map((key) => `"${key}"`)
+      .join(" | ");
+
+    return `"data-bc"?: ${type};`;
+  }
 }

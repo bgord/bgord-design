@@ -18,7 +18,5 @@ export abstract class UtilityGenerator {
     return "\n/* ===================== */\n";
   }
 
-  toTypeScript(): string {
-    return "";
-  }
+  abstract toTypeScript(): string;
 }

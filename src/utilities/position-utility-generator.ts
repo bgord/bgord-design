@@ -23,4 +23,12 @@ export class PositionUtilityGenerator extends UtilityGenerator {
 
     return lines.join("\n");
   }
+
+  toTypeScript() {
+    const type = Object.keys(this.config)
+      .map((key) => `"${key}"`)
+      .join(" | ");
+
+    return `"data-position"?: ${type};`;
+  }
 }

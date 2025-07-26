@@ -28,4 +28,15 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
 
     return lines.join("\n");
   }
+
+  toTypeScript() {
+    const type = Object.keys(this.config)
+      .map((key) => key.replace("spacing-", ""))
+      .map((key) => `"${key}"`)
+      .join(" | ");
+
+    const lines = ["p", "pt", "pr", "pb", "pl", "px", "py"].map((abbr) => `"data-${abbr}"?: ${type};`);
+
+    return lines.join(" ");
+  }
 }

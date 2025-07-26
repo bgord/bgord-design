@@ -28,4 +28,15 @@ export class MarginUtilityGenerator extends UtilityGenerator {
 
     return lines.join("\n");
   }
+
+  toTypeScript() {
+    const type = Object.keys(this.config)
+      .map((key) => key.replace("spacing-", ""))
+      .map((key) => `"${key}"`)
+      .join(" | ");
+
+    const lines = ["m", "mt", "mr", "mb", "ml", "mx", "my"].map((abbr) => `"data-${abbr}"?: ${type};`);
+
+    return lines.join(" ");
+  }
 }
