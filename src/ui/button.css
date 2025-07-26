@@ -1,85 +1,93 @@
-/* Button component */
-
-/* Attributes that are non-modifiable */
 .c-button {
   height: 36px;
   text-transform: uppercase;
-  user-select: none; /* Prevents from copying text on mobile */
-  white-space: nowrap; /* Prevents from multiline text */
-  touch-action: manipulation; /* Don't wait for second tap */
+  user-select: none;
+  white-space: nowrap;
+  touch-action: manipulation;
 
   transition:
-    border-radius 300ms,
-    opacity 400ms;
+    border-radius var(--timing-medium, 300ms) var(--ease-standard, ease),
+    opacity var(--timing-slow, 400ms) var(--ease-standard, ease);
 }
 
-/*
-  Attributes that are modifiable,
-  but common to all variants.
-*/
 .c-button[data-variant="primary"],
 .c-button[data-variant="secondary"],
 .c-button[data-variant="bare"],
 .c-button[data-variant="with-icon"] {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-wide);
 
-  letter-spacing: 0.5px;
-
-  border-radius: 4px;
-  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  border: var(--border-width-md) solid transparent;
   background-color: transparent;
 }
 
+/* ---------- Interactive states ---------- */
 .c-button:hover,
 .c-button:active,
 .c-button:focus {
   cursor: pointer;
-
-  opacity: 0.75;
-  border-radius: 0;
-
+  opacity: var(--opacity-hover, 0.75);
+  border-radius: 0; /* square on hover */
   transition:
-    border-radius 300ms,
-    opacity 400ms;
+    border-radius var(--timing-medium, 300ms) var(--ease-standard, ease),
+    opacity var(--timing-slow, 400ms) var(--ease-standard, ease);
 }
 
 .c-button:active {
-  border: 2px solid transparent !important;
+  border: var(--border-width-md) solid transparent !important;
 }
 
 .c-button:disabled {
-  opacity: 0.5;
-
-  transition: opacity 300ms;
+  opacity: var(--opacity-disabled, 0.5);
+  transition: opacity var(--timing-medium, 300ms) var(--ease-standard, ease);
 }
 .c-button:disabled:hover {
   cursor: auto;
-  border-radius: 4px;
+  border-radius: var(--radius-sm, 4px);
 }
 
+/* --- Primary (highest prominence) --- */
 .c-button[data-variant="primary"] {
-  padding: 0 8px;
-  background-color: #374151;
-  color: #e5e7eb;
-  letter-spacing: 0.75px;
+  padding-inline: var(--spacing-2, 8px);
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-900);
+  letter-spacing: var(--tracking-wider, 0.75px);
 }
-.c-button[data-variant="secondary"] {
-  padding: 0 8px;
-  background-color: #d1d5db;
-  color: #1f2937;
-  letter-spacing: 0.5px;
-}
-.c-button[data-variant="bare"],
-.c-button[data-variant="with-icon"] {
-  background-color: transparent;
-  color: #1f2937;
-  letter-spacing: 0.5px;
-}
-.c-button[data-variant="with-icon"] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.c-button[data-variant="primary"]:hover:not(:disabled) {
+  background-color: var(--color-neutral-100);
 }
 
-/* ===================== */
+/* --- Secondary (mid prominence) --- */
+.c-button[data-variant="secondary"] {
+  padding-inline: var(--spacing-2, 8px);
+  background-color: var(--color-neutral-700);
+  color: var(--color-neutral-200);
+  letter-spacing: var(--tracking-wide, 0.5px);
+}
+.c-button[data-variant="secondary"]:hover:not(:disabled) {
+  background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
+}
+
+/* --- Bare (text-only) --- */
+.c-button[data-variant="bare"] {
+  background-color: transparent;
+  color: var(--color-neutral-300);
+  letter-spacing: var(--tracking-wide, 0.5px);
+}
+.c-button[data-variant="bare"]:hover:not(:disabled) {
+  color: var(--color-neutral-100);
+}
+
+.c-button[data-variant="with-icon"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1, 4px);
+  background-color: transparent;
+  color: var(--color-neutral-300);
+}
+.c-button[data-variant="with-icon"]:hover:not(:disabled) {
+  color: var(--color-neutral-100);
+}
