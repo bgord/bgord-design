@@ -163,6 +163,8 @@ class GeneratorProcessor {
       output += generator.css();
     }
 
+    output += await Bun.file("src/ui/button.css").text();
+
     await Bun.file("dist/main.css").write(output);
 
     let lib = "";
