@@ -30,15 +30,13 @@ export abstract class TokenGenerator {
   }
 
   toTypeScript(): string {
-    const config = this.getConfig();
+    const cfg = this.getConfig();
+    const constName = `${this.name}Tokens`;
 
-    return `
-      export const ${this.name}Tokens = ${JSON.stringify(config)} as const;
-
-      export type ${this.name}TokenType = ${Object.keys(config)
-        .map((token) => `"${token}"`)
-        .join(" | ")
-        .toString()};
-    `;
+    return [
+      `export const ${constName} = ${JSON.stringify(cfg, null, 2)} as const;`,
+      `export type ${this.name}TokenType = keyof typeof ${constName};`,
+      "",
+    ].join("\n");
   }
 }
