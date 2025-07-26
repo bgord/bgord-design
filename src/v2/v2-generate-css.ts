@@ -167,15 +167,13 @@ class GeneratorProcessor {
 
     await Bun.file("dist/v2/main.css").write(output);
 
-    let tokenTypes = "";
+    let types = "";
 
-    for (const token of tokens) {
-      tokenTypes += token.toTypeScript();
-    }
+    // for (const token of tokens) {
+    //   types += token.toTypeScript();
+    // }
 
-    await Bun.file("dist/v2/token-types.ts").write(tokenTypes);
-
-    let utilityTypes = `
+    types += `
       export {};
 
       import "react";
@@ -183,12 +181,12 @@ class GeneratorProcessor {
     `;
 
     for (const generator of generators) {
-      utilityTypes += generator.toTypeScript();
+      types += generator.toTypeScript();
     }
 
-    utilityTypes += "}}";
+    types += "}}";
 
-    await Bun.file("dist/v2/utility-types.d.ts").write(utilityTypes);
+    await Bun.file("dist/v2/index.d.ts").write(types);
   }
 }
 
