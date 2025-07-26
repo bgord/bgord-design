@@ -1,18 +1,16 @@
-/* Label component */
-
 .c-label {
-  line-height: 24px;
-  font-size: 12px;
+  display: block;
+  margin-block-end: var(--spacing-1-5);
+
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  color: #4b5563;
-}
 
-.c-label[data-variant="optional"]::after {
-  margin-left: 6px;
-  text-transform: lowercase;
-  content: "(optional)";
-}
+  color: var(--color-neutral-300);
 
-/* ===================== */
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--timing-medium) var(--ease-standard);
+}
