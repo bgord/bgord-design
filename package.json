@@ -2,8 +2,6 @@
   "name": "@bgord/design",
   "version": "0.29.4",
   "author": "Bartosz Gordon",
-  "main": "dist/index.js",
-  "module": "dist/bgord-design.esm.js",
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
     "@commitlint/cli": "19.8.1",
@@ -24,10 +22,10 @@
     "shellcheck": "3.1.0",
     "typescript": "5.8.3"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
+  "dependencies": {
+    "culori": "^4.0.2",
+    "lodash": "4.17.21"
+  },
   "license": "MIT",
   "scripts": {
     "build": "bun build src/index.ts --format esm --outdir dist",
@@ -35,13 +33,17 @@
     "prepublish": "bash scripts/prepare-css-files.sh",
     "preinstall": "bunx only-allow bun"
   },
+  "type": "module",
+  "main": "./dist/lib.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    "import": "./dist/index.js",
-    "types": "./dist/index.d.ts"
+    ".": {
+      "import": "./dist/lib.js",
+      "require": "./dist/lib.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "dependencies": {
-    "culori": "^4.0.2",
-    "lodash": "4.17.21"
-  }
+  "files": [
+    "dist/**/*"
+  ]
 }
