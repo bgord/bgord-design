@@ -1,6 +1,6 @@
 {
   "name": "@bgord/design",
-  "version": "0.29.3",
+  "version": "0.29.4",
   "author": "Bartosz Gordon",
   "main": "dist/index.js",
   "module": "dist/bgord-design.esm.js",
