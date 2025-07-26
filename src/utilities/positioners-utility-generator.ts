@@ -31,6 +31,12 @@ export class PositionersUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-top"?: ${type}; "data-right"?: ${type}; "data-bottom"?: ${type}; "data-left"?: ${type}; "data-inset"?: ${type};`;
+    return [
+      `"data-top"?: ${type}`,
+      `"data-right"?: ${type}`,
+      `"data-bottom"?: ${type}`,
+      `"data-left"?: ${type}`,
+      `"data-inset"?: ${type}`,
+    ].join("");
   }
 }

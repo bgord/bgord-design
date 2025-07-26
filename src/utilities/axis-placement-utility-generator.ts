@@ -31,6 +31,6 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-main"?: ${type}; "data-cross"?: ${type};`;
+    return [`"data-main"?: ${type};`, `"data-cross"?: ${type};`].join(" ");
   }
 }
