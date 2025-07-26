@@ -31,12 +31,11 @@ export abstract class TokenGenerator {
 
   toTypeScript(): string {
     const cfg = this.getConfig();
-    const constName = `${this.name}Tokens`;
+    const token = `${this.name}Tokens`;
 
     return [
-      `export const ${constName} = ${JSON.stringify(cfg, null, 2)} as const;`,
-      `export type ${this.name}TokenType = keyof typeof ${constName};`,
-      "",
+      `export const ${token} = ${JSON.stringify(cfg, null, 2)} as const;`,
+      `export type ${this.name}TokenType = keyof typeof ${token};`,
     ].join("\n");
   }
 }
