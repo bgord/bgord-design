@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link as="style" rel="stylesheet preload" href="./dist/normalize.min.css" />
+    <link as="style" rel="stylesheet preload" href="./dist/main.min.css" />
+
+    <style>
+      body {
+        font-family: "Inter" !important;
+      }
+
+      .c-button {
+        height: 36px;
+        text-transform: uppercase;
+        user-select: none;
+        white-space: nowrap;
+        touch-action: manipulation;
+
+        transition:
+          border-radius var(--timing-medium, 300ms) var(--ease-standard, ease),
+          opacity var(--timing-slow, 400ms) var(--ease-standard, ease);
+      }
+
+      .c-button[data-variant="primary"],
+      .c-button[data-variant="secondary"],
+      .c-button[data-variant="bare"],
+      .c-button[data-variant="with-icon"] {
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: var(--tracking-wide);
+
+        border-radius: var(--radius-sm);
+        border: var(--border-width-md) solid transparent;
+        background-color: transparent;
+      }
+
+      /* ---------- Interactive states ---------- */
+      .c-button:hover,
+      .c-button:active,
+      .c-button:focus {
+        cursor: pointer;
+        opacity: var(--opacity-hover, 0.75);
+        border-radius: 0; /* square on hover */
+        transition:
+          border-radius var(--timing-medium, 300ms) var(--ease-standard, ease),
+          opacity var(--timing-slow, 400ms) var(--ease-standard, ease);
+      }
+
+      .c-button:active {
+        border: var(--border-width-md) solid transparent !important;
+      }
+
+      .c-button:disabled {
+        opacity: var(--opacity-disabled, 0.5);
+        transition: opacity var(--timing-medium, 300ms) var(--ease-standard, ease);
+      }
+      .c-button:disabled:hover {
+        cursor: auto;
+        border-radius: var(--radius-sm, 4px);
+      }
+
+      /* --- Primary (highest prominence) --- */
+      .c-button[data-variant="primary"] {
+        padding-inline: var(--spacing-2, 8px);
+        background-color: var(--color-neutral-200);
+        color: var(--color-neutral-900);
+        letter-spacing: var(--tracking-wider, 0.75px);
+      }
+      .c-button[data-variant="primary"]:hover:not(:disabled) {
+        background-color: var(--color-neutral-100);
+      }
+
+      /* --- Secondary (mid prominence) --- */
+      .c-button[data-variant="secondary"] {
+        padding-inline: var(--spacing-2, 8px);
+        background-color: var(--color-neutral-700);
+        color: var(--color-neutral-200);
+        letter-spacing: var(--tracking-wide, 0.5px);
+      }
+      .c-button[data-variant="secondary"]:hover:not(:disabled) {
+        background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
+      }
+
+      /* --- Bare (text-only) --- */
+      .c-button[data-variant="bare"] {
+        background-color: transparent;
+        color: var(--color-neutral-300);
+        letter-spacing: var(--tracking-wide, 0.5px);
+      }
+      .c-button[data-variant="bare"]:hover:not(:disabled) {
+        color: var(--color-neutral-100);
+      }
+
+      .c-button[data-variant="with-icon"] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-1, 4px);
+        background-color: transparent;
+        color: var(--color-neutral-300);
+      }
+      .c-button[data-variant="with-icon"]:hover:not(:disabled) {
+        color: var(--color-neutral-100);
+      }
+    </style>
+  </head>
+  <body data-p="8" data-bg="neutral-950">
+    <button class="c-button" data-variant="primary" data-mr="4">Register</button>
+    <button class="c-button" data-variant="secondary" data-mr="4">Register</button>
+    <button class="c-button" data-variant="bare">Register</button>
+
+    <div
+      data-display="flex"
+      data-direction="column"
+      data-main="center"
+      data-cross="center"
+      data-mt="8"
+      data-gap="6"
+      data-bg="neutral-800"
+      data-shadow="lg"
+      style="width: 300px; height: 150px"
+    >
+      <div data-color="neutral-100" data-fs="base">Sign in to get all the benefits.</div>
+      <div data-display="flex" data-gap="5">
+        <button class="c-button" data-variant="primary">Register</button>
+        <button class="c-button" data-variant="secondary">Go back</button>
+        <button class="c-button" data-variant="bare">Cancel</button>
+      </div>
+    </div>
+
+    <div
+      data-display="flex"
+      data-direction="column"
+      data-main="center"
+      data-cross="center"
+      data-mt="8"
+      data-gap="6"
+      data-bg="neutral-900"
+      data-shadow="lg"
+      style="width: 300px; height: 150px"
+    >
+      <div data-color="neutral-200" data-fs="base">Sign in to get all the benefits.</div>
+      <div data-display="flex" data-gap="5">
+        <button class="c-button" data-variant="primary">Register</button>
+        <button class="c-button" data-variant="secondary">Go back</button>
+        <button class="c-button" data-variant="bare">Cancel</button>
+      </div>
+    </div>
+  </body>
+</html>
