@@ -9,6 +9,7 @@ export * from "./font-weight-token-generator";
 export * from "./grayscale-token-generator";
 export * from "./letter-spacing-token-generator";
 export * from "./line-height-token-generator";
+export * from "./motion-token-generator";
 export * from "./opacity-token-generator";
 export * from "./positive-token-generator";
 export * from "./radius-token-generator";
