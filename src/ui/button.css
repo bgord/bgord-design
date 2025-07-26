@@ -85,3 +85,16 @@
 .c-button[data-variant="icon"]:hover:not(:disabled) {
   color: var(--color-neutral-100);
 }
+
+.c-button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--color-neutral-950),
+    var(--color-focus-ring, var(--color-neutral-400));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-button {
+    transition: none;
+  }
+}
