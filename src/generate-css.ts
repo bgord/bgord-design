@@ -176,6 +176,8 @@ class GeneratorProcessor {
     await Bun.file("dist/lib.ts").write(lib);
 
     let types = `
+      export * from "./lib";
+
       export {};
 
       import "react";
