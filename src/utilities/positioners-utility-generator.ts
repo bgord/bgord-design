@@ -32,11 +32,11 @@ export class PositionersUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     return [
-      `"data-top"?: ${type}`,
-      `"data-right"?: ${type}`,
-      `"data-bottom"?: ${type}`,
-      `"data-left"?: ${type}`,
-      `"data-inset"?: ${type}`,
+      `"data-top"?: ${type};`,
+      `"data-right"?: ${type};`,
+      `"data-bottom"?: ${type};`,
+      `"data-left"?: ${type};`,
+      `"data-inset"?: ${type};`,
     ].join("");
   }
 }
