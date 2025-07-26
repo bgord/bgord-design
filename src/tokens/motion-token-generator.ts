@@ -5,7 +5,7 @@ export class MotionTokenGenerator extends TokenGenerator {
     "motion-instant": "75ms", // ultra-fast feedback (hover ripple, press state)
     "motion-fast": "150ms", // quick interactions (opacity fades, simple toggles)
     "motion-medium": "300ms", // standard transitions (radius wipe, border-color)
-    "motion-slow": "500ms", // larger shifts (modal/dialog enter & exit)
+    "motion-slow": "400ms", // larger shifts (modal/dialog enter & exit)
   };
 
   constructor(overrides: TokenConfigType = {}) {

@@ -22,6 +22,7 @@ class GeneratorProcessor {
     const WarningTokenGenerator = new TokenGenerators.WarningTokenGenerator();
     const ZIndexTokenGenerator = new TokenGenerators.ZIndexTokenGenerator();
     const SizeTokenGenerator = new TokenGenerators.SizeTokenGenerator();
+    const MotionTokenGenerator = new TokenGenerators.MotionTokenGenerator();
 
     const tokens = [
       BackdropsTokenGenerator,
@@ -43,6 +44,7 @@ class GeneratorProcessor {
       SpacingTokenGenerator,
       WarningTokenGenerator,
       ZIndexTokenGenerator,
+      MotionTokenGenerator,
     ];
 
     let output = ":root {";

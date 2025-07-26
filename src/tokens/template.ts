@@ -1,4 +1,4 @@
-export type TokenType = string;
+type TokenType = string;
 
 export type TokenConfigType = Record<string, TokenType>;
 

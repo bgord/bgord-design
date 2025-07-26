@@ -10,14 +10,14 @@ describe("MotionTokenGenerator", () => {
         --motion-instant: 75ms;
         --motion-fast: 150ms;
         --motion-medium: 300ms;
-        --motion-slow: 500ms;
+        --motion-slow: 400ms;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const MotionTokens = {
         "motion-instant": "75ms",
         "motion-fast": "150ms",
         "motion-medium": "300ms",
-        "motion-slow": "500ms"
+        "motion-slow": "400ms"
       } as const;
 
       export type MotionTokenType = keyof typeof MotionTokens;
@@ -33,7 +33,7 @@ describe("MotionTokenGenerator", () => {
         --motion-instant: 75ms;
         --motion-fast: 150ms;
         --motion-medium: 300ms;
-        --motion-slow: 500ms;
+        --motion-slow: 400ms;
         --motion-custom: 10rem;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -41,7 +41,7 @@ describe("MotionTokenGenerator", () => {
         "motion-instant": "75ms",
         "motion-fast": "150ms",
         "motion-medium": "300ms",
-        "motion-slow": "500ms",
+        "motion-slow": "400ms",
         "motion-custom": "10rem"
       } as const;
 
