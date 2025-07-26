@@ -1,26 +1,19 @@
 .c-button {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wider);
+  border-radius: var(--radius-sm);
+  border: var(--border-width-md) solid transparent;
+  background-color: transparent;
+
   height: 36px;
   text-transform: uppercase;
   user-select: none;
   white-space: nowrap;
   touch-action: manipulation;
-
   transition:
-    border-radius var(--timing-medium, 300ms) var(--ease-standard, ease),
-    opacity var(--timing-slow, 400ms) var(--ease-standard, ease);
-}
-
-.c-button[data-variant="primary"],
-.c-button[data-variant="secondary"],
-.c-button[data-variant="bare"],
-.c-button[data-variant="with-icon"] {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--tracking-wide);
-
-  border-radius: var(--radius-sm);
-  border: var(--border-width-md) solid transparent;
-  background-color: transparent;
+    border-radius 300ms ease,
+    opacity 400ms ease;
 }
 
 /* ---------- Interactive states ---------- */
@@ -28,11 +21,11 @@
 .c-button:active,
 .c-button:focus {
   cursor: pointer;
-  opacity: var(--opacity-hover, 0.75);
-  border-radius: 0; /* square on hover */
+  opacity: var(--opacity-high);
+  border-radius: 0;
   transition:
-    border-radius var(--timing-medium, 300ms) var(--ease-standard, ease),
-    opacity var(--timing-slow, 400ms) var(--ease-standard, ease);
+    border-radius 300ms ease,
+    opacity 400ms ease;
 }
 
 .c-button:active {
@@ -40,20 +33,19 @@
 }
 
 .c-button:disabled {
-  opacity: var(--opacity-disabled, 0.5);
-  transition: opacity var(--timing-medium, 300ms) var(--ease-standard, ease);
+  opacity: var(--opacity-medium);
+  transition: opacity 300ms ease;
 }
 .c-button:disabled:hover {
   cursor: auto;
-  border-radius: var(--radius-sm, 4px);
+  border-radius: var(--radius-sm);
 }
 
 /* --- Primary (highest prominence) --- */
 .c-button[data-variant="primary"] {
-  padding-inline: var(--spacing-2, 8px);
+  padding-inline: var(--spacing-2);
   background-color: var(--color-neutral-200);
   color: var(--color-neutral-900);
-  letter-spacing: var(--tracking-wider, 0.75px);
 }
 .c-button[data-variant="primary"]:hover:not(:disabled) {
   background-color: var(--color-neutral-100);
@@ -61,10 +53,9 @@
 
 /* --- Secondary (mid prominence) --- */
 .c-button[data-variant="secondary"] {
-  padding-inline: var(--spacing-2, 8px);
+  padding-inline: var(--spacing-2);
   background-color: var(--color-neutral-700);
   color: var(--color-neutral-200);
-  letter-spacing: var(--tracking-wide, 0.5px);
 }
 .c-button[data-variant="secondary"]:hover:not(:disabled) {
   background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
@@ -74,7 +65,6 @@
 .c-button[data-variant="bare"] {
   background-color: transparent;
   color: var(--color-neutral-300);
-  letter-spacing: var(--tracking-wide, 0.5px);
 }
 .c-button[data-variant="bare"]:hover:not(:disabled) {
   color: var(--color-neutral-100);
@@ -84,7 +74,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-1, 4px);
+  gap: var(--spacing-1);
   background-color: transparent;
   color: var(--color-neutral-300);
 }
