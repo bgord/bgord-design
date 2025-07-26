@@ -16,6 +16,16 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("border-width-", "");
 
       lines.push(`[data-bw='${key}'] { border-width: var(--${variable}); }`);
+      lines.push(`[data-bwt='${key}'] { border-top-width: var(--${variable}); }`);
+      lines.push(`[data-bwr='${key}'] { border-right-width: var(--${variable}); }`);
+      lines.push(`[data-bwb='${key}'] { border-bottom-width: var(--${variable}); }`);
+      lines.push(`[data-bwl='${key}'] { border-left-width: var(--${variable}); }`);
+      lines.push(
+        `[data-bwx='${key}'] { border-left-width: var(--${variable}); border-right-width: var(--${variable}); }`,
+      );
+      lines.push(
+        `[data-bwy='${key}'] { border-top-width: var(--${variable}); border-bottom-width: var(--${variable}); }`,
+      );
     }
 
     return lines.join("\n");
