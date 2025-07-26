@@ -165,7 +165,7 @@ class GeneratorProcessor {
       output += generator.footer();
     }
 
-    await Bun.file("dist/v2/main.css").write(output);
+    await Bun.file("dist/main.css").write(output);
 
     let types = "";
 
@@ -186,7 +186,7 @@ class GeneratorProcessor {
 
     types += "}}";
 
-    await Bun.file("dist/v2/index.d.ts").write(types);
+    await Bun.file("dist/index.d.ts").write(types);
   }
 }
 

@@ -30,15 +30,15 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "bun build src/v2/index.ts --format esm --outdir dist/v2",
-    "postbuild": "bash scripts/v2-prepare-css-files.sh",
-    "prepublish": "bash scripts/v2-prepare-css-files.sh",
+    "build": "bun build src/index.ts --format esm --outdir dist",
+    "postbuild": "bash scripts/prepare-css-files.sh",
+    "prepublish": "bash scripts/prepare-css-files.sh",
     "preinstall": "bunx only-allow bun"
   },
-  "types": "./dist/v2/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     "import": "./dist/index.js",
-    "types": "./dist/v2/index.d.ts"
+    "types": "./dist/index.d.ts"
   },
   "dependencies": {
     "culori": "^4.0.2",
