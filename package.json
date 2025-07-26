@@ -30,7 +30,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "v1-build": "bun build src/index.ts --format esm --outdir dist",
     "build": "bun build src/v2/index.ts --format esm --outdir dist/v2",
     "postbuild": "bash scripts/v2-prepare-css-files.sh",
     "prepublish": "bash scripts/v2-prepare-css-files.sh",
