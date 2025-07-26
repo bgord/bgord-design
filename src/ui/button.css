@@ -63,6 +63,7 @@
 
 /* --- Bare (text-only) --- */
 .c-button[data-variant="bare"] {
+  padding-inline: var(--spacing-1);
   background-color: transparent;
   color: var(--color-neutral-300);
 }
@@ -70,8 +71,7 @@
   color: var(--color-neutral-100);
 }
 
-/* --- Icon (+text) --- */
-.c-button[data-variant="icon"] {
+.c-button[data-variant="with-icon"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +79,7 @@
   background-color: transparent;
   color: var(--color-neutral-300);
 }
-.c-button[data-variant="icon"]:hover:not(:disabled) {
+.c-button[data-variant="with-icon"]:hover:not(:disabled) {
   color: var(--color-neutral-100);
 }
 
@@ -87,7 +87,7 @@
   outline: none;
   box-shadow:
     0 0 0 2px var(--color-neutral-950),
-    var(--color-focus-ring, var(--color-neutral-400));
+    0 0 0 4px var(--color-neutral-400);
 }
 
 @media (prefers-reduced-motion: reduce) {
