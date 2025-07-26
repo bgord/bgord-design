@@ -33,7 +33,6 @@
     "prepublish": "bash scripts/prepare-css-files.sh",
     "preinstall": "bunx only-allow bun"
   },
-  "type": "module",
   "main": "./dist/lib.js",
   "types": "./dist/index.d.ts",
   "exports": {
