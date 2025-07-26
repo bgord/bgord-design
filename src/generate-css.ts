@@ -170,6 +170,7 @@ class GeneratorProcessor {
     output += await Bun.file("src/ui/select.css").text();
     output += await Bun.file("src/ui/visually-hidden.css").text();
     output += await Bun.file("src/ui/badge.css").text();
+    output += await Bun.file("src/ui/link.css").text();
 
     await Bun.file("dist/main.css").write(output);
 

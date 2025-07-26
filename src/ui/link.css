@@ -1,17 +1,35 @@
-/* Link component */
-
 .c-link {
-  text-underline-offset: 4px;
-  letter-spacing: 0.5px;
-}
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
 
-.c-link:hover {
-  opacity: 0.75;
-  transition: opacity 300ms;
-}
-
-.c-link[data-variant="bare"] {
+  color: var(--color-brand-500);
   text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    color 300ms ease,
+    text-decoration-color 400ms ease;
 }
 
-/* ===================== */
+.c-link:hover,
+.c-link:focus {
+  color: var(--color-brand-400);
+  text-decoration: underline;
+  text-decoration-color: var(--color-brand-400);
+}
+
+.c-link:active {
+  color: var(--color-brand-500);
+}
+
+.c-link:visited {
+  color: var(--color-brand-500);
+}
+
+.c-link:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--color-neutral-950),
+    0 0 0 4px var(--color-focus-ring);
+}
