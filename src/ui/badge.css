@@ -1,18 +1,27 @@
 .c-badge {
   padding: 0 6px;
 
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: var(--line-height-loose);
+
+  color: var(--color-neutral-300);
+  background-color: var(--color-neutral-700);
+  border-radius: var(--radius-sm);
+
   text-align: center;
   text-transform: uppercase;
-
-  background-color: var(--color-neutral-600);
-  border-radius: 4px;
-  color: var(--color-neutral-200);
 }
 
 .c-badge:hover {
-  opacity: 0.9;
+  opacity: var(--opacity-high);
   transition: opacity 300ms;
+  background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
+}
+
+.c-badge[data-variant="outline"] {
+  color: var(--color-neutral-300);
+  border: var(--border-width-hairline) solid var(--color-neutral-300);
+  background-color: transparent;
 }
