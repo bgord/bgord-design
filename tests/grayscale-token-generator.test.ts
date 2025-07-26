@@ -16,8 +16,9 @@ describe("GrayscaleTokenGenerator", () => {
       --color-neutral-500: oklch(0.49  0.01  275);
       --color-neutral-600: oklch(0.38  0.01  275);
       --color-neutral-700: oklch(0.27  0.01  275);
-      --color-neutral-800: oklch(0.18  0.01  275);
-      --color-neutral-900: oklch(0.12  0.01  275);
+      --color-neutral-800: oklch(0.22  0.01  275);
+      --color-neutral-900: oklch(0.18  0.01  275);
+      --color-neutral-950: oklch(0.12  0.01  275);
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const GrayscaleTokens = {
@@ -30,8 +31,9 @@ describe("GrayscaleTokenGenerator", () => {
         "color-neutral-500": "oklch(0.49  0.01  275)",
         "color-neutral-600": "oklch(0.38  0.01  275)",
         "color-neutral-700": "oklch(0.27  0.01  275)",
-        "color-neutral-800": "oklch(0.18  0.01  275)",
-        "color-neutral-900": "oklch(0.12  0.01  275)"
+        "color-neutral-800": "oklch(0.22  0.01  275)",
+        "color-neutral-900": "oklch(0.18  0.01  275)",
+        "color-neutral-950": "oklch(0.12  0.01  275)"
       } as const;
 
       export type GrayscaleTokenType = keyof typeof GrayscaleTokens;
@@ -53,8 +55,9 @@ describe("GrayscaleTokenGenerator", () => {
       --color-neutral-500: oklch(0.49  0.01  275);
       --color-neutral-600: oklch(0.38  0.01  275);
       --color-neutral-700: oklch(0.27  0.01  275);
-      --color-neutral-800: oklch(0.18  0.01  275);
-      --color-neutral-900: oklch(0.12  0.01  275);
+      --color-neutral-800: oklch(0.22  0.01  275);
+      --color-neutral-900: oklch(0.18  0.01  275);
+      --color-neutral-950: oklch(0.12  0.01  275);
       --color-neutral-custom: oklch(0.5 0.5 275);
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -68,8 +71,9 @@ describe("GrayscaleTokenGenerator", () => {
         "color-neutral-500": "oklch(0.49  0.01  275)",
         "color-neutral-600": "oklch(0.38  0.01  275)",
         "color-neutral-700": "oklch(0.27  0.01  275)",
-        "color-neutral-800": "oklch(0.18  0.01  275)",
-        "color-neutral-900": "oklch(0.12  0.01  275)",
+        "color-neutral-800": "oklch(0.22  0.01  275)",
+        "color-neutral-900": "oklch(0.18  0.01  275)",
+        "color-neutral-950": "oklch(0.12  0.01  275)",
         "color-neutral-custom": "oklch(0.5 0.5 275)"
       } as const;
 
