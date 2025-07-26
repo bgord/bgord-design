@@ -160,9 +160,7 @@ class GeneratorProcessor {
     ];
 
     for (const generator of generators) {
-      output += generator.header();
       output += generator.css();
-      output += generator.footer();
     }
 
     await Bun.file("dist/main.css").write(output);
