@@ -37,6 +37,14 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-bw"?: ${type};`;
+    return [
+      `"data-bw"?: ${type};`,
+      `"data-bwt"?: ${type};`,
+      `"data-bwr"?: ${type};`,
+      `"data-bwb"?: ${type};`,
+      `"data-bwl"?: ${type};`,
+      `"data-bwx"?: ${type};`,
+      `"data-bwy"?: ${type};`,
+    ].join(" ");
   }
 }

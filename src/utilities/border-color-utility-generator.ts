@@ -40,7 +40,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       lines.push(
         `[data-bcb='${key}'] { border-bottom-color: var(--${variable}); border-bottom-style: solid; }`,
       );
-      lines.push(`[data-bcl='${key}'] { border-left-color: var(--${variable}); -style: solid; }`);
+      lines.push(`[data-bcl='${key}'] { border-left-color: var(--${variable}); border-left-style: solid; }`);
       lines.push(
         `[data-bcx='${key}'] { border-left-color: var(--${variable}); border-right-color: var(--${variable}); border-left-style: solid; border-right-style: solid; }`,
       );
@@ -58,6 +58,14 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-bc"?: ${type};`;
+    return [
+      `"data-bc"?: ${type};`,
+      `"data-bct"?: ${type};`,
+      `"data-bcr"?: ${type};`,
+      `"data-bcb"?: ${type};`,
+      `"data-bcl"?: ${type};`,
+      `"data-bcx"?: ${type};`,
+      `"data-bcy"?: ${type};`,
+    ].join(" ");
   }
 }
