@@ -50,6 +50,9 @@
 .c-button[data-variant="primary"]:hover:not(:disabled) {
   background-color: var(--color-neutral-100);
 }
+.c-button[data-variant="primary"]:hover:not(:disabled) {
+  background-color: color-mix(in oklch, var(--color-neutral-200) 80%, var(--color-neutral-50) 20%);
+}
 
 /* --- Secondary (mid prominence) --- */
 .c-button[data-variant="secondary"] {
@@ -70,7 +73,8 @@
   color: var(--color-neutral-100);
 }
 
-.c-button[data-variant="with-icon"] {
+/* --- Icon (+text) --- */
+.c-button[data-variant="icon"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -78,6 +82,6 @@
   background-color: transparent;
   color: var(--color-neutral-300);
 }
-.c-button[data-variant="with-icon"]:hover:not(:disabled) {
+.c-button[data-variant="icon"]:hover:not(:disabled) {
   color: var(--color-neutral-100);
 }
