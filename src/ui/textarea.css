@@ -1,43 +1,39 @@
-/* textarea component */
-
 .c-textarea {
-  font-size: 12px;
-  line-height: 16px;
-  color: #374151;
-  padding: 2px 6px 6px 6px;
-  background: white;
-  border: 1px solid #d1d5db;
-  border-radius: 4px;
-  outline: none;
+  min-height: 72px;
+  padding: var(--spacing-1-5);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-base);
+  color: var(--color-neutral-100);
+
+  background-color: var(--color-neutral-800);
+  border: var(--border-width-hairline) solid var(--color-neutral-800);
+  border-radius: var(--radius-sm);
+
   appearance: none;
   resize: none;
-
+  outline: none;
   transition:
-    border-radius 300ms,
-    border-color 400ms;
+    border-radius 300ms ease,
+    border-color 400ms ease;
 }
 
-.c-textarea:hover,
-.c-textarea:active,
-.c-textarea:focus {
-  border-color: #9ca3af;
+.c-textarea:is(:hover, :focus) {
+  border-color: var(--color-neutral-600);
   border-radius: 0;
-
-  transition:
-    border-radius 300ms,
-    border-color 400ms;
 }
 
 .c-textarea:disabled {
-  opacity: 0.75;
-  background: #e5e7eb;
-  border-color: #d1d5db;
+  opacity: var(--opacity-medium);
+  background-color: var(--color-neutral-900);
+  border-color: var(--color-neutral-800);
+  pointer-events: none;
 }
 
-.c-textarea:placeholder-shown {
-  color: #4b5563;
+.c-textarea::placeholder {
+  color: var(--color-neutral-400);
+  opacity: 1;
 }
 
 .c-textarea:invalid:not(:placeholder-shown) {
-  border-color: #b31940;
+  border-color: var(--color-danger-500);
 }
