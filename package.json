@@ -36,7 +36,11 @@
     "prepublish": "bash scripts/prepare-css-files.sh",
     "preinstall": "bunx only-allow bun"
   },
-  "typings": "dist/index.d.ts",
+  "types": "./dist/v2/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "types": "./dist/v2/index.d.ts"
+  },
   "dependencies": {
     "culori": "^4.0.2",
     "lodash": "4.17.21"
