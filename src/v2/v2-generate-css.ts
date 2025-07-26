@@ -173,9 +173,14 @@ class GeneratorProcessor {
       tokenTypes += token.toTypeScript();
     }
 
-    await Bun.file("dist/v2/token-types.d.ts").write(tokenTypes);
+    await Bun.file("dist/v2/token-types.ts").write(tokenTypes);
 
-    let utilityTypes = `declare module "react" { interface HTMLAttributes<T> {`;
+    let utilityTypes = `
+      export {};
+
+      import "react";
+      declare module "react" { interface HTMLAttributes<T> {
+    `;
 
     for (const generator of generators) {
       utilityTypes += generator.toTypeScript();
