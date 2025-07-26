@@ -167,6 +167,7 @@ class GeneratorProcessor {
     output += await Bun.file("src/ui/input.css").text();
     output += await Bun.file("src/ui/label.css").text();
     output += await Bun.file("src/ui/textarea.css").text();
+    output += await Bun.file("src/ui/select.css").text();
 
     await Bun.file("dist/main.css").write(output);
 

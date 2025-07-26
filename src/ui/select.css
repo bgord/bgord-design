@@ -2,23 +2,36 @@
 
 @supports (appearance: none) {
   .c-select {
-    appearance: none;
-    line-height: 24px;
-    margin: 0;
-    padding: 0 24px 0 6px;
     height: 36px;
-    font-size: 12px;
-    background: white;
-    border: 1px solid #d1d5db;
-    color: #374151;
+    padding-right: var(--spacing-8);
+    padding-left: var(--spacing-1-5);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-base);
+
+    color: var(--color-neutral-100);
+    background-color: var(--color-neutral-800);
+    border: var(--border-width-hairline) solid var(--color-neutral-800);
+    border-radius: var(--radius-sm);
+
     text-overflow: ellipsis;
+    appearance: none;
     outline: none;
+    transition:
+      border-radius 300ms ease,
+      border-color 400ms ease;
   }
 
-  .c-select:hover,
-  .c-select:focus {
+  .c-select:is(:hover, :focus) {
     cursor: pointer;
-    border: 1px solid #9ca3af;
+    border-color: var(--color-neutral-600);
+    border-radius: 0;
+  }
+
+  .c-select:disabled {
+    opacity: var(--opacity-medium);
+    background-color: var(--color-neutral-900);
+    border-color: var(--color-neutral-800);
+    pointer-events: none;
   }
 
   .c-select-wrapper {
@@ -32,26 +45,17 @@
     right: 8px;
     height: 8px;
     width: 8px;
-    border: 2px solid #1f2937;
+    border: 2px solid var(--color-neutral-300);
     border-left: none;
     border-top: none;
     transform: rotate(45deg);
-  }
-
-  .c-select:disabled {
-    opacity: 0.5;
-  }
-
-  .c-select:disabled:hover {
-    cursor: auto;
-    border: 1px solid #d1d5db;
   }
 }
 
 /* To avoid zooming on select focus on Chrome and Safari on iOS */
 @media not all and (min-resolution: 0.001dpcm) {
   .c-select {
-    font-size: 16px;
+    font-size: var(--font-size-base);
   }
 }
 
