@@ -30,8 +30,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "bun build src/index.ts --format esm --outdir dist",
-    "v2-build": "bun build src/v2/index.ts --format esm --outdir dist/v2/index.js && bash scripts/v2-prepare-css-files.sh",
+    "v1-build": "bun build src/index.ts --format esm --outdir dist",
+    "build": "bun build src/v2/index.ts --format esm --outdir dist/v2/index.js && bash scripts/v2-prepare-css-files.sh",
     "postbuild": "bash scripts/prepare-css-files.sh",
     "prepublish": "bash scripts/prepare-css-files.sh",
     "preinstall": "bunx only-allow bun"
