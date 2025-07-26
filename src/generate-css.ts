@@ -167,13 +167,15 @@ class GeneratorProcessor {
 
     await Bun.file("dist/main.css").write(output);
 
-    let types = "";
+    let lib = "";
 
-    // for (const token of tokens) {
-    //   types += token.toTypeScript();
-    // }
+    for (const token of tokens) {
+      lib += token.toTypeScript();
+    }
 
-    types += `
+    await Bun.file("dist/lib.ts").write(lib);
+
+    let types = `
       export {};
 
       import "react";
