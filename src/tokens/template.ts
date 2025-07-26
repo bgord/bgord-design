@@ -20,21 +20,15 @@ export abstract class TokenGenerator {
   getTokens(): string {
     const config = this.getConfig();
 
-    let result = "";
-
-    for (const [name, value] of Object.entries(config)) {
-      result += `--${name}: ${value};\n`;
-    }
-
-    return result;
+    return Object.entries(config).reduce((result, [name, value]) => (result += `--${name}: ${value};\n`), "");
   }
 
   toTypeScript(): string {
-    const cfg = this.getConfig();
+    const config = this.getConfig();
     const token = `${this.name}Tokens`;
 
     return [
-      `export const ${token} = ${JSON.stringify(cfg, null, 2)} as const;`,
+      `export const ${token} = ${JSON.stringify(config, null, 2)} as const;`,
       `export type ${this.name}TokenType = keyof typeof ${token};`,
     ].join("\n");
   }
