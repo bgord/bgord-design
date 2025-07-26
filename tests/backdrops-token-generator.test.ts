@@ -7,7 +7,6 @@ describe("BackdropsTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Backdrops */
       --backdrop-none: none;
       --backdrop-weak: rgba(0 0 0 / 0.35);
       --backdrop-medium: rgba(0 0 0 / 0.6);
@@ -31,7 +30,6 @@ describe("BackdropsTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Backdrops */
       --backdrop-none: none;
       --backdrop-weak: rgba(0 0 0 / 0.35);
       --backdrop-medium: rgba(0 0 0 / 0.6);

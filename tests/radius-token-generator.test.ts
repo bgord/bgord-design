@@ -7,7 +7,6 @@ describe("RadiusTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Radius */
       --radius-none: 0;
       --radius-xs: 2px;
       --radius-sm: 4px;
@@ -41,7 +40,6 @@ describe("RadiusTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Radius */
       --radius-none: 0;
       --radius-xs: 2px;
       --radius-sm: 4px;

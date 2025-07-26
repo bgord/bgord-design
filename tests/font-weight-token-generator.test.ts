@@ -7,7 +7,6 @@ describe("FontWeightTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* FontWeight */
       --font-weight-light: 300;
       --font-weight-regular: 400;
       --font-weight-medium: 500;
@@ -35,7 +34,6 @@ describe("FontWeightTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* FontWeight */
       --font-weight-light: 300;
       --font-weight-regular: 400;
       --font-weight-medium: 500;

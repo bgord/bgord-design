@@ -7,7 +7,6 @@ describe("OpacityTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Opacity */
       --opacity-high: 0.8;
       --opacity-medium: 0.5;
       --opacity-low: 0.2;
@@ -29,7 +28,6 @@ describe("OpacityTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Opacity */
       --opacity-high: 0.8;
       --opacity-medium: 0.5;
       --opacity-low: 0.2;

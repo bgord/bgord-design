@@ -7,7 +7,6 @@ describe("WarningTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Warning */
       --color-warning-100: oklch(0.97 0.06 85);
       --color-warning-300: oklch(0.86 0.12 85);
       --color-warning-500: oklch(0.67 0.20 85);
@@ -33,7 +32,6 @@ describe("WarningTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Warning */
       --color-warning-100: oklch(0.97 0.06 85);
       --color-warning-300: oklch(0.86 0.12 85);
       --color-warning-500: oklch(0.67 0.20 85);

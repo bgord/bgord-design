@@ -7,7 +7,6 @@ describe("GrayscaleTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Grayscale */
       --color-neutral-0: oklch(0.98  0.01  275);
       --color-neutral-50: oklch(0.95  0.01  275);
       --color-neutral-100: oklch(0.90  0.01  275);
@@ -45,7 +44,6 @@ describe("GrayscaleTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Grayscale */
       --color-neutral-0: oklch(0.98  0.01  275);
       --color-neutral-50: oklch(0.95  0.01  275);
       --color-neutral-100: oklch(0.90  0.01  275);

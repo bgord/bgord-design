@@ -7,7 +7,6 @@ describe("LetterSpacingTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* LetterSpacing */
       --letter-spacing-tight: -0.01em;
       --letter-spacing-normal: 0em;
       --letter-spacing-wide: 0.025em;
@@ -35,7 +34,6 @@ describe("LetterSpacingTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* LetterSpacing */
       --letter-spacing-tight: -0.01em;
       --letter-spacing-normal: 0em;
       --letter-spacing-wide: 0.025em;

@@ -7,7 +7,6 @@ describe("LineHeightTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* LineHeight */
       --line-height-none: 1;
       --line-height-tight: 1.25;
       --line-height-base: 1.5;
@@ -35,7 +34,6 @@ describe("LineHeightTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* LineHeight */
       --line-height-none: 1;
       --line-height-tight: 1.25;
       --line-height-base: 1.5;

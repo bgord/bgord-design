@@ -7,7 +7,6 @@ describe("ZIndexTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* ZIndex */
       --z-index-negative: -1;
       --z-index-0: 0;
       --z-index-1: 1;
@@ -33,7 +32,6 @@ describe("ZIndexTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* ZIndex */
       --z-index-negative: -1;
       --z-index-0: 0;
       --z-index-1: 1;

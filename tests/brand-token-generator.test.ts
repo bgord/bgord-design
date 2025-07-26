@@ -7,7 +7,6 @@ describe("BrandTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Brand */
       --color-brand-50: oklch(0.94  0.07  255);
       --color-brand-100: oklch(0.86  0.10  255);
       --color-brand-200: oklch(0.78  0.12  255);
@@ -43,7 +42,6 @@ describe("BrandTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Brand */
       --color-brand-50: oklch(0.94  0.07  255);
       --color-brand-100: oklch(0.86  0.10  255);
       --color-brand-200: oklch(0.78  0.12  255);

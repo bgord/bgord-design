@@ -7,7 +7,6 @@ describe("FontSizeTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* FontSize */
       --font-size-xs: 0.75rem;
       --font-size-sm: 0.875rem;
       --font-size-base: 1rem;
@@ -41,7 +40,6 @@ describe("FontSizeTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* FontSize */
       --font-size-xs: 0.75rem;
       --font-size-sm: 0.875rem;
       --font-size-base: 1rem;

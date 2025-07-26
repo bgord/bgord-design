@@ -14,7 +14,6 @@ describe("FontFamilyTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(expectedConfig);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* FontFamily */
       --font-family-sans: system-ui, sans-serif;
       --font-family-serif: Georgia, serif;
       --font-family-mono: "SFMono-Regular", monospace;
@@ -35,7 +34,6 @@ describe("FontFamilyTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(expectedConfig);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* FontFamily */
       --font-family-sans: system-ui, sans-serif;
       --font-family-serif: Georgia, serif;
       --font-family-mono: "SFMono-Regular", monospace;

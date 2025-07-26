@@ -7,7 +7,6 @@ describe("PositiveTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Positive */
       --color-positive-100: oklch(0.93 0.06 145);
       --color-positive-300: oklch(0.78 0.11 145);
       --color-positive-500: oklch(0.46 0.18 145);
@@ -33,7 +32,6 @@ describe("PositiveTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Positive */
       --color-positive-100: oklch(0.93 0.06 145);
       --color-positive-300: oklch(0.78 0.11 145);
       --color-positive-500: oklch(0.46 0.18 145);

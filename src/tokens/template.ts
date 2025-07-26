@@ -20,7 +20,7 @@ export abstract class TokenGenerator {
   getTokens(): string {
     const config = this.getConfig();
 
-    let result = `/* ${this.name} */\n`;
+    let result = "";
 
     for (const [name, value] of Object.entries(config)) {
       result += `--${name}: ${value};\n`;

@@ -7,7 +7,6 @@ describe("DangerTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Danger */
       --color-danger-100: oklch(0.93 0.06 25);
       --color-danger-300: oklch(0.78 0.12 25);
       --color-danger-500: oklch(0.46 0.22 25);
@@ -33,7 +32,6 @@ describe("DangerTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Danger */
       --color-danger-100: oklch(0.93 0.06 25);
       --color-danger-300: oklch(0.78 0.12 25);
       --color-danger-500: oklch(0.46 0.22 25);

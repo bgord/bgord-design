@@ -7,7 +7,6 @@ describe("SpacingTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Spacing */
       --spacing-0: 0rem;
       --spacing-0-5: 0.125rem;
       --spacing-1: 0.25rem;
@@ -51,7 +50,6 @@ describe("SpacingTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Spacing */
       --spacing-0: 0rem;
       --spacing-0-5: 0.125rem;
       --spacing-1: 0.25rem;

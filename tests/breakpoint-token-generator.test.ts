@@ -7,7 +7,6 @@ describe("BreakpointTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Breakpoint */
       --breakpoint-md: 768px;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -25,7 +24,6 @@ describe("BreakpointTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Breakpoint */
       --breakpoint-md: 768px;
       --breakpoint-lg: 1024px;
     `);

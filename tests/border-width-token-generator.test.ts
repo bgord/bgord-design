@@ -7,7 +7,6 @@ describe("BorderWidthTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* BorderWidth */
       --border-width-none: 0;
       --border-width-hairline: 1px;
       --border-width-thin: 2px;
@@ -37,7 +36,6 @@ describe("BorderWidthTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* BorderWidth */
       --border-width-none: 0;
       --border-width-hairline: 1px;
       --border-width-thin: 2px;

@@ -7,7 +7,6 @@ describe("ShadowTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Shadow */
       --shadow-none: none;
       --shadow-xs: 0 1px 2px 0 rgba(0 0 0 / 0.03);
       --shadow-sm: 0 1px 3px 0 rgba(0 0 0 / 0.05), 0 1px 2px -1px rgba(0 0 0 / 0.05);
@@ -39,7 +38,6 @@ describe("ShadowTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
-      /* Shadow */
       --shadow-none: none;
       --shadow-xs: 0 1px 2px 0 rgba(0 0 0 / 0.03);
       --shadow-sm: 0 1px 3px 0 rgba(0 0 0 / 0.05), 0 1px 2px -1px rgba(0 0 0 / 0.05);
