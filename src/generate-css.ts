@@ -21,6 +21,7 @@ class GeneratorProcessor {
     const SpacingTokenGenerator = new TokenGenerators.SpacingTokenGenerator();
     const WarningTokenGenerator = new TokenGenerators.WarningTokenGenerator();
     const ZIndexTokenGenerator = new TokenGenerators.ZIndexTokenGenerator();
+    const SizeTokenGenerator = new TokenGenerators.SizeTokenGenerator();
 
     const tokens = [
       BackdropsTokenGenerator,
@@ -38,6 +39,7 @@ class GeneratorProcessor {
       PositiveTokenGenerator,
       RadiusTokenGenerator,
       ShadowTokenGenerator,
+      SizeTokenGenerator,
       SpacingTokenGenerator,
       WarningTokenGenerator,
       ZIndexTokenGenerator,

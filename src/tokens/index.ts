@@ -13,6 +13,7 @@ export * from "./opacity-token-generator";
 export * from "./positive-token-generator";
 export * from "./radius-token-generator";
 export * from "./shadow-token-generator";
+export * from "./size-token-generator";
 export * from "./spacing-token-generator";
 export * from "./warning-token-generator";
 export * from "./z-index-token-generator";
