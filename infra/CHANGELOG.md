@@ -1,8 +1,11 @@
 # Changelog
+## 2025-07-27 17:41 v1.0.1
+- 2025-07-27 17:41 cdc0f18 **1.0.1**
 - 2025-07-27 17:39 58368d0 **step: shorten maxw**
 - 2025-07-27 17:38 0d497d3 **step: shorten maxh**
 - 2025-07-27 17:36 bc897e9 **step: shorten flex-dir**
 - 2025-07-27 17:35 3e6d21e **step: shorten data-disp**
+- 2025-07-27 15:41 453835f **docs: generate CHANGELOG**
 - 2025-07-27 15:16 a2f5020 **Merge pull request #40 from bgord/refactor**
 ## 2025-07-27 15:15 v1.0.0
 - 2025-07-27 15:15 d795ef6 **1.0.0**
