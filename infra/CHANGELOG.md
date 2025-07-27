@@ -1,5 +1,165 @@
 # Changelog
+- 2025-07-27 15:16 a2f5020 **Merge pull request #40 from bgord/refactor**
+## 2025-07-27 15:15 v1.0.0
+- 2025-07-27 15:15 d795ef6 **1.0.0**
+- 2025-07-27 15:10 a4268cc **step: pinpoint installs**
+- 2025-07-27 15:09 5e1b67b **step: make playground local**
+- 2025-07-27 15:05 5e3ebc7 **refactor: adjust range**
+- 2025-07-27 14:52 6747b96 **refactor: remove legacy switch**
+- 2025-07-27 14:51 96f4bd9 **step: restore range**
+- 2025-07-27 14:48 3366986 **step: add file explorer**
+- 2025-07-27 14:47 0e814c4 **step: add checkbox**
+- 2025-07-27 14:32 bcb6a60 **step: setup checkbox**
+- 2025-07-27 14:22 97e5fa7 **step: allow badge customization**
+- 2025-07-27 14:15 51307d2 **step: make interactions and animations typesafe**
+- 2025-07-27 13:59 76e7ac4 **refactor: use motions everywhere**
+- 2025-07-27 13:53 3f2ac8a **refactor: simplify generators**
+- 2025-07-27 13:48 da1c4e6 **fix: max-height**
+- 2025-07-27 13:46 507e608 **refactor: extract generate types**
+- 2025-07-27 13:44 d94fbaa **step: make generate-css more readable**
+- 2025-07-27 13:43 9da1267 **refactor: remove old index.html showcase**
+- 2025-07-27 13:38 eda8c55 **step: add generate-lib class**
+- 2025-07-27 13:35 ab02d14 **step: turn generate-css into an export util**
+- 2025-07-27 13:34 48a40f3 **step: generate interactions**
+- 2025-07-27 13:31 fed50ef **step: restore animations**
+- 2025-07-27 13:20 c9e477d **step: increase font size in input and textarea**
+- 2025-07-27 13:19 9ee11a6 **fix: max-width**
+- 2025-07-27 13:19 633cfe7 **fix: badge alignment**
+## 2025-07-26 23:28 v0.29.6
+- 2025-07-26 23:28 f1d9ebb **0.29.6**
+- 2025-07-26 23:20 55ba095 **step: change slow motion**
+- 2025-07-26 23:13 fe9519d **step: add size util test**
+- 2025-07-26 22:56 64ae4e2 **step: add motion tokens**
+- 2025-07-26 22:44 6cefec1 **step: add size util generator**
+- 2025-07-26 22:41 1924807 **step: add size token generator**
+- 2025-07-26 22:35 2b64346 **fix: tests**
+- 2025-07-26 22:18 74d2644 **step: setup link**
+- 2025-07-26 22:06 84fa396 **step: improve badge**
+- 2025-07-26 21:53 5aed275 **step: change colors**
+- 2025-07-26 21:52 1dc6aca **step: add badge**
+- 2025-07-26 19:14 f0109f9 **step: add visually hidden**
+- 2025-07-26 19:13 9f23737 **step: add select**
+- 2025-07-26 18:57 807dce6 **step: add textarea**
+- 2025-07-26 18:42 4722b08 **step: add label**
+- 2025-07-26 18:31 164aec3 **step: add input**
+- 2025-07-26 18:23 eaac2cf **fix: focus ring**
+- 2025-07-26 17:56 3ba510e **step: add button to output**
+- 2025-07-26 17:55 bb86a1b **step: setup template**
+- 2025-07-26 17:53 a84afd7 **refactor: remove duplicate rule**
+- 2025-07-26 17:52 91750f8 **step: add focus ring**
+- 2025-07-26 17:45 100d9b5 **step: add button effect for primary**
+- 2025-07-26 17:37 d76275d **step: simplify button**
+- 2025-07-26 17:29 b25866a **step: adjust opacity**
+- 2025-07-26 17:29 1218b26 **step: add html wip**
+- 2025-07-26 17:22 30781e2 **feature: add refined button**
+- 2025-07-26 17:20 96f0533 **step: improve grayscale**
+- 2025-07-26 15:27 9b3d27d **fix: positioners**
+- 2025-07-26 15:22 3d1810e **step: update tests**
+- 2025-07-26 15:21 550b8b5 **step: add data- attributes**
+- 2025-07-26 15:17 4b7f608 **refactor: adjust template**
+- 2025-07-26 15:15 3f962d2 **step: cover all borders**
+- 2025-07-26 15:06 0516997 **step: simplify utility generators**
+- 2025-07-26 14:28 8beb374 **refactor: remove header and footer in template**
+- 2025-07-26 14:25 b7cf585 **step: improve getTokens**
+- 2025-07-26 14:21 2334a21 **step: cleanup output**
+- 2025-07-26 14:19 9033b08 **step: simplify token template**
+- 2025-07-26 14:17 a672ded **step: add all tests**
+- 2025-07-26 13:52 556253e **step: write first utility generator**
+- 2025-07-26 13:43 d5d9221 **step: add token tests**
+- 2025-07-26 13:34 cd3d4cf **step: add first token test**
+## 2025-07-26 12:39 v0.29.5
+- 2025-07-26 12:39 d28f5a8 **0.29.5**
+- 2025-07-26 12:38 4b80f6a **step: remove type module**
+- 2025-07-26 12:37 37ce83d **step: add correct package.json fields**
+- 2025-07-26 12:37 168a07a **step: expose lib in index.d.ts**
+- 2025-07-26 12:34 8a8c1e1 **step: update packages**
+- 2025-07-26 12:34 3583097 **step: generate lib**
+- 2025-07-26 12:16 5315e90 **step: simplify lib.ts**
+- 2025-07-26 12:16 38526b1 **step: output lib.ts**
+- 2025-07-26 11:49 ea43c14 **step: add typescript definitions**
+- 2025-07-26 11:28 7de5945 **step: remove additional build scripts**
+- 2025-07-26 11:27 4be6a5a **step: move from v2 to src/**
+- 2025-07-26 11:25 2f127ab **step: remove old generators**
+- 2025-07-26 11:24 8ff45f6 **step: remove old script**
+- 2025-07-26 11:24 17be3db **step: remove old tests**
+## 2025-07-26 11:13 v0.29.4
+- 2025-07-26 11:13 3d26623 **0.29.4**
+- 2025-07-26 11:12 c82ffae **step: use v2 to build**
+- 2025-07-26 11:04 11be20d **step: add new build script**
+- 2025-07-26 11:03 8d365c4 **step: change types path in generator**
+- 2025-07-26 11:03 4d48bbf **step: add package.json types**
+- 2025-07-26 03:02 66621d5 **fix: types**
+- 2025-07-26 01:55 e0ed06e **step: rename ts files**
+- 2025-07-26 01:49 9ec6a85 **step: make fs util typesafe**
+- 2025-07-26 01:49 8c3a486 **step: setup utility types**
+- 2025-07-26 01:34 4435d22 **step: reorganize generators**
+- 2025-07-26 01:29 f256e99 **step: define to typescript on template**
+- 2025-07-26 01:27 5d67d58 **step: unify config in utility generators**
+- 2025-07-26 01:03 5fbe10b **step: generate token types file**
+- 2025-07-26 01:01 265d484 **step: add token tempalte to typescript**
+- 2025-07-26 00:59 088bc3b **step: simplify tokens generation**
+- 2025-07-26 00:44 ebce088 **step: make token names typescript friendly**
+- 2025-07-26 00:38 a6dd128 **step: define token type**
+- 2025-07-26 00:33 435383d **step: simplify naming**
+- 2025-07-26 00:31 3e239bc **step: add  max height**
+- 2025-07-26 00:30 16760d3 **step: add max width**
+- 2025-07-26 00:27 c619fc6 **step: add height**
+- 2025-07-26 00:26 48f4c10 **step: add width**
+- 2025-07-26 00:25 a656cb8 **step: add transform**
+- 2025-07-26 00:22 56bce87 **step: add flex wrap**
+- 2025-07-26 00:20 2831d01 **step: add flex shrink**
+- 2025-07-26 00:19 070a59a **step: add flex grow**
+- 2025-07-26 00:18 b35f355 **step: add axis placement**
+- 2025-07-26 00:17 b1e8531 **step: add flex direction**
+- 2025-07-26 00:15 46811b9 **step: add overflow generator**
+- 2025-07-26 00:14 79171ea **step: add pointer event**
+- 2025-07-26 00:12 99309b4 **step: add positioners**
+- 2025-07-26 00:10 9316f54 **step: add object position**
+- 2025-07-26 00:07 2c467a1 **step: add rotate**
+- 2025-07-26 00:05 2966c0b **step: add position**
+- 2025-07-26 00:04 1171d02 **step: add object fit**
+- 2025-07-26 00:02 e39ca43 **step: add cursor**
+- 2025-07-26 00:00 5b29df5 **step: add display**
+- 2025-07-25 23:53 504ac98 **step: add auto spacing**
+- 2025-07-25 23:52 ab54067 **step: add gap**
+- 2025-07-25 23:51 9e16518 **step: add margin**
+- 2025-07-25 23:49 d5a6027 **step: add padding**
+- 2025-07-25 23:44 eb81861 **step: add border color**
+- 2025-07-25 23:41 fe7e0af **step: add bg**
+- 2025-07-25 23:39 cc7eab6 **step: add font color**
+- 2025-07-25 23:31 ef29538 **step: add opacity and border width**
+- 2025-07-25 23:26 0eb2d77 **step: add letter spacing**
+- 2025-07-25 23:24 3046aac **step: add line height**
+- 2025-07-25 23:23 3e9d92c **step: add backdrop**
+- 2025-07-25 23:20 3b2b867 **refactor: remove motion tokens for now**
+- 2025-07-25 23:17 705d612 **step: add radius util gen**
+- 2025-07-25 23:15 ab70fa8 **step: add shadow util gen**
+- 2025-07-25 23:12 595ecdf **step: add zind**
+- 2025-07-25 23:09 fad4691 **step: font family util gen**
+- 2025-07-25 23:07 8adf4bd **step: add fw util gen**
+- 2025-07-25 23:00 1a7bfe4 **step: add font-size utility generator**
+- 2025-07-25 22:55 194e9d3 **step: define token generators in place**
+- 2025-07-25 22:49 e04012b **step: setup v2 font size utility generator**
+- 2025-07-25 22:32 c1d45f4 **step: add v2-build preparation**
+- 2025-07-25 22:32 91ff301 **step: add v2-prepare-css-files**
+- 2025-07-25 22:29 9a847bc **step: add v2-build separately**
+- 2025-07-25 22:27 5112301 **step: add v2-build**
+- 2025-07-25 22:26 4761afc **step: add v2 generate css**
+- 2025-07-25 22:19 ff06599 **step: extract token generator processor**
+- 2025-07-25 22:18 38256d2 **step: add token generator processor**
+- 2025-07-25 22:15 d2386d0 **step: move tokens into separate classes**
+- 2025-07-25 21:56 d808b40 **step: add accent colors**
+- 2025-07-25 21:56 cb724df **step: install culori**
+- 2025-07-25 21:30 6498874 **step: add brand**
+- 2025-07-25 21:27 3a137d9 **step: add grayscale**
+- 2025-07-25 21:05 8e3ca7b **step: add all token generators**
+- 2025-07-25 20:55 2502a8e **step: implement basic tokens**
+- 2025-07-25 20:40 ee27603 **step: port font weights**
+- 2025-07-25 20:35 214ab5d **step: add basic tokens generator**
+- 2025-07-25 19:01 b71d107 **step: setup line heights**
+- 2025-07-25 18:48 2e3bf20 **step: remove normalise global css line height**
 - 2025-07-25 17:38 4fe05bf **step: update packages**
+- 2025-07-25 15:38 52ff9df **docs: generate CHANGELOG**
 ## 2025-07-13 17:06 v0.29.3
 - 2025-07-13 17:06 f074800 **fix: animation selectors**
 - 2025-07-13 17:06 df6b1d1 **0.29.3**
