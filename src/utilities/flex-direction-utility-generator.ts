@@ -16,7 +16,7 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
     const lines: string[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-direction='${key}'] { flex-direction: ${value}; }`);
+      lines.push(`[data-dir='${key}'] { flex-direction: ${value}; }`);
     }
 
     return lines.join("\n");
@@ -27,6 +27,6 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-direction"?: ${type};`;
+    return `"data-dir"?: ${type};`;
   }
 }
