@@ -1,3 +1,5 @@
-import { main } from "./generate-css";
+import { GenerateCSS } from "./generate-css";
 
-main();
+(async function main() {
+  await GenerateCSS.process();
+})();

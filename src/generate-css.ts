@@ -1,7 +1,7 @@
 import * as TokenGenerators from "./tokens";
 import * as UtilityGenerators from "./utilities";
 
-class GeneratorProcessor {
+export class GenerateCSS {
   static async process() {
     const BackdropsTokenGenerator = new TokenGenerators.BackdropsTokenGenerator();
     const BorderWidthTokenGenerator = new TokenGenerators.BorderWidthTokenGenerator();
@@ -212,8 +212,4 @@ class GeneratorProcessor {
 
     await Bun.file("dist/index.d.ts").write(types);
   }
-}
-
-export async function main() {
-  await GeneratorProcessor.process();
 }
