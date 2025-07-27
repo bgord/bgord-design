@@ -1,7 +1,3 @@
-/* grow interaction */
-
 [data-interaction="grow"] {
-  transition: width 300ms ease-in-out;
+  transition: width var(--motion-medium) ease-in-out;
 }
-
-/* ===================== */
