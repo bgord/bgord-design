@@ -12,9 +12,9 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
 
     for (const [key, value] of Object.entries(this.config)) {
       if (key === "flex") {
-        lines.push(`[data-display='${key}'] { display: flex; flex-wrap: wrap; }`);
+        lines.push(`[data-disp='${key}'] { display: flex; flex-wrap: wrap; }`);
       }
-      lines.push(`[data-display='${key}'] { display: ${value}; }`);
+      lines.push(`[data-disp='${key}'] { display: ${value}; }`);
     }
 
     return lines.join("\n");
@@ -25,6 +25,6 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-display"?: ${type};`;
+    return `"data-disp"?: ${type};`;
   }
 }

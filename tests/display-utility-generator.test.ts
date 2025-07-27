@@ -6,15 +6,15 @@ describe("DisplayUtilityGenerator", () => {
     const generator = new DisplayUtilityGenerator();
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
-      [data-display='flex'] { display: flex; flex-wrap: wrap; }
-      [data-display='flex'] { display: flex; }
-      [data-display='block'] { display: block; }
-      [data-display='inline-block'] { display: inline-block; }
-      [data-display='none'] { display: none; }
+      [data-disp='flex'] { display: flex; flex-wrap: wrap; }
+      [data-disp='flex'] { display: flex; }
+      [data-disp='block'] { display: block; }
+      [data-disp='inline-block'] { display: inline-block; }
+      [data-disp='none'] { display: none; }
     `);
 
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-display"?: "flex" | "block" | "inline-block" | "none";
+      "data-disp"?: "flex" | "block" | "inline-block" | "none";
     `);
   });
 });
