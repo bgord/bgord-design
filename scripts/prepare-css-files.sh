@@ -34,3 +34,17 @@ ls -alh dist | grep normalize | awk '{print $5"\t"$9}'
 
 info "Removing index.js file"
 rm -rf dist/index.js
+
+info "Building lib.ts"
+bun build dist/lib.ts --outfile dist/lib.js --format esm
+
+info "Generating lib.d.ts"
+bunx tsc dist/lib.ts \
+  --declaration \
+  --emitDeclarationOnly \
+  --module esnext \
+  --skipLibCheck \
+  --outDir dist
+
+info "Cleaning up"
+rm dist/lib.ts

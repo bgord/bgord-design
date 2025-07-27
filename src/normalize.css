@@ -9,8 +9,24 @@
  * 3. Prevent content repositioning when vertical scrollbar appears.
  */
 
+:root {
+  --lh-base: 1.5; /* body text */
+  --lh-tight: 1.25; /* headings */
+}
+
 html {
-  line-height: 1.15; /* 1 */
+  line-height: 1.15;
+} /* keep normalize’s fix */
+body {
+  line-height: var(--lh-base);
+} /* readable default */
+h1,
+h2,
+h3 {
+  line-height: var(--lh-tight);
+}
+
+html {
   -moz-text-size-adjust: none; /* 2 */
   -webkit-text-size-adjust: none; /* 2 */
   text-size-adjust: none; /* 2 */
@@ -19,17 +35,15 @@ html {
 
 /**
  * 1. Add default box-sizing.
- * 2. Set default line-height.
- * 3. Remove padding/margin by default.
+ * 2. Remove padding/margin by default.
  */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box; /* 1 */
-  line-height: 24px; /* 2 */
-  padding: 0; /* 3 */
-  margin: 0; /* 3 */
+  padding: 0; /* 2 */
+  margin: 0; /* 2 */
 }
 
 /* Sections
@@ -138,15 +152,6 @@ kbd,
 samp {
   font-family: monospace; /* 1 */
   font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-  display: block;
-  font-size: 12px;
 }
 
 /**

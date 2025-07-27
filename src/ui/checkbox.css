@@ -6,29 +6,32 @@
     appearance: none;
     outline: none;
 
-    min-height: 24px;
-    min-width: 24px;
-    background: white;
-    border: 1px solid #d1d5db;
+    min-height: var(--size-lg);
+    min-width: var(--size-lg);
+
+    background-color: var(--color-neutral-800);
+    border: var(--border-width-hairline) solid var(--color-neutral-700);
+    border-radius: var(--radius-xs);
+
+    transition:
+      border-radius var(--motion-medium) ease,
+      border-color var(--motion-slow) ease;
   }
 
   .c-checkbox:hover,
   .c-checkbox:checked {
-    border-color: #9ca3af;
+    border-color: var(--color-neutral-300);
+    border-radius: 0;
     cursor: pointer;
-
-    transition: border-color 400ms;
   }
 
   .c-checkbox:checked:hover {
-    border-color: #d1d5db;
+    border-color: var(--color-neutral-300);
     cursor: pointer;
-
-    transition: border-color 400ms;
   }
 
   .c-checkbox:focus {
-    border: 2px solid #4b5563;
+    border: var(--border-width-hairline) solid var(--color-neutral-300);
   }
 
   .c-checkbox:checked::after,
@@ -40,14 +43,14 @@
     left: 6px;
     height: 6px;
     width: 10px;
-    border: 2px solid #374151;
+    border: var(--border-width-thin) solid var(--color-neutral-300);
     border-top: 0;
     border-right: 0;
     transform: rotate(-45deg);
   }
 
   .c-checkbox:hover::after {
-    border-color: #9ca3af;
+    border-color: var(--color-neutral-400);
   }
 }
 

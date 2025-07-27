@@ -1,9 +1,7 @@
-/* rotate-into-focus interaction */
-
 [data-interaction="rotate-into-focus"] {
   transition:
-    transform 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
+    transform var(--motion-fast) ease-in-out,
+    box-shadow var(--motion-fast) ease-in-out;
 }
 
 [data-interaction="rotate-into-focus"]:hover {
@@ -16,11 +14,9 @@
 }
 
 [data-interaction="rotate-into-focus"] > * {
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform var(--motion-medium) cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 [data-interaction="rotate-into-focus"]:hover > * {
   transform: rotate(90deg);
 }
-
-/* ===================== */

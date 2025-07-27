@@ -1,11 +1,7 @@
-/* subtle-scale interaction */
-
 [data-interaction="subtle-scale"] {
-  transition: transform 0.3s ease-in-out;
+  transition: transform var(--motion-medium) ease-in-out;
 }
 
 [data-interaction="subtle-scale"]:hover {
   transform: scale(1.25);
 }
-
-/* ===================== */

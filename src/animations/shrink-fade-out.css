@@ -1,15 +1,10 @@
-/* shrink-fade-out animation */
-
 @keyframes shrink-fade-out {
-  /* 140 ms → fade + scale */
   to {
-    opacity: 0;
+    opacity: var(--opacity-low);
     scale: 0.9;
   }
 }
 
 [data-animation="shrink-fade-out"] {
-  animation: shrink-fade-out 140ms ease forwards;
+  animation: shrink-fade-out var(--motion-fast) ease forwards;
 }
-
-/* ===================== */

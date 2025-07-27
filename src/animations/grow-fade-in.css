@@ -1,8 +1,6 @@
-/* grow-fade-in animation */
-
 @keyframes grow-fade-in {
   from {
-    opacity: 0.5;
+    opacity: var(--opacity-high);
     scale: 0.9;
   }
 
@@ -13,7 +11,5 @@
 }
 
 [data-animation="grow-fade-in"] {
-  animation: grow-fade-in 140ms ease forwards;
+  animation: grow-fade-in var(--motion-fast) ease forwards;
 }
-
-/* ===================== */

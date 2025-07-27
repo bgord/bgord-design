@@ -1,22 +1,32 @@
-/* Badge component */
-
 .c-badge {
-  padding: 0 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  padding: 0 var(--spacing-1-5);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: var(--line-height-loose);
   text-align: center;
   text-transform: uppercase;
-
-  background-color: #e5e7eb;
-  border-radius: 4px;
-  color: #4b5563;
 }
 
 .c-badge:hover {
-  opacity: 0.9;
-  transition: opacity 300ms;
+  opacity: var(--opacity-high);
+  transition: opacity var(--motion-medium);
+  background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
 }
 
-/* ===================== */
+.c-badge[data-variant="primary"] {
+  color: var(--color-neutral-300);
+  background-color: var(--color-neutral-700);
+  border-radius: var(--radius-sm);
+}
+
+.c-badge[data-variant="outline"] {
+  color: var(--color-neutral-300);
+  border: var(--border-width-hairline) solid var(--color-neutral-300);
+  background-color: transparent;
+}

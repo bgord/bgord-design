@@ -1,35 +1,41 @@
-/* Button component */
-
 .c-range {
   appearance: none;
   height: 8px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(
+    to right,
+    var(--color-neutral-500) var(--percentage, 15%),
+    var(--color-neutral-700) var(--percentage, 15%)
+  );
 }
 
 .c-range::-moz-range-thumb {
   appearance: none;
   box-shadow: none;
   border: none;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   height: 14px;
   width: 14px;
+  background: var(--color-neutral-300);
 }
 .c-range::-ms-thumb {
   appearance: none;
   box-shadow: none;
   border: none;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   height: 14px;
   width: 14px;
+  background: var(--color-neutral-300);
 }
 .c-range::-webkit-slider-thumb {
   appearance: none;
   box-shadow: none;
   border: none;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   height: 14px;
   width: 14px;
   margin-top: 0;
+  background: var(--color-neutral-300);
 }
 
 .c-range::-moz-range-track {
@@ -46,23 +52,6 @@
   appearance: none;
   box-shadow: none;
   border: none;
-}
-
-.c-range[data-variant="primary"] {
-  background: #e5e7eb;
-}
-.c-range[data-variant="primary"]::-moz-range-thumb {
-  background: #4b5563;
-}
-.c-range[data-variant="primary"]::-webkit-slider-thumb {
-  background: #4b5563;
-}
-.c-range[data-variant="primary"]::-ms-thumb {
-  background: #4b5563;
-}
-
-.c-range[data-variant="primary"] {
-  background: linear-gradient(to right, #4b5563 var(--percentage), #e5e7eb var(--percentage));
 }
 
 /* ===================== */
