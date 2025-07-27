@@ -187,14 +187,6 @@ export class GenerateCSS {
 
     await Bun.file("dist/main.css").write(output);
 
-    let lib = "";
-
-    for (const token of tokens) {
-      lib += token.toTypeScript();
-    }
-
-    await Bun.file("dist/lib.ts").write(lib);
-
     let types = `
       export * from "./lib";
 
