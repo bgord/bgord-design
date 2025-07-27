@@ -44,8 +44,8 @@ describe("BorderColorUtilityGenerator", () => {
     const ts = generator.toTypeScript();
     expect(ts).toContain('"neutral-900"');
     expect(ts).toContain('"brand-500"');
-    expect(ts).toContain('"positive-500"');
-    expect(ts).toContain('"danger-500"');
+    expect(ts).toContain('"positive-600"');
+    expect(ts).toContain('"danger-600"');
     expect(ts).toContain('"warning-500"');
     expect(ts).toContain('"data-bc"?:');
     expect(ts).toContain('"data-bct"?:');
