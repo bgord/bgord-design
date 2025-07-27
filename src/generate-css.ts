@@ -23,6 +23,7 @@ export class GenerateCSS {
     output += await Bun.file("src/ui/visually-hidden.css").text();
     output += await Bun.file("src/ui/badge.css").text();
     output += await Bun.file("src/ui/link.css").text();
+    output += await Bun.file("src/ui/checkbox.css").text();
 
     output += await Bun.file("src/animations/grow-fade-in.css").text();
     output += await Bun.file("src/animations/shrink-fade-out.css").text();

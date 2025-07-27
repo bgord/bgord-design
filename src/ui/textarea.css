@@ -12,6 +12,7 @@
   appearance: none;
   resize: none;
   outline: none;
+
   transition:
     border-radius var(--motion-medium) ease,
     border-color var(--motion-slow) ease;
