@@ -10,7 +10,7 @@ describe("MaxHeightUtilityGenerator", () => {
     const css = generator.css();
     expect(css).toContain("[data-max-height='100%'] { max-height: 100%; }");
     expect(css).toContain("[data-max-height='unset'] { max-height: unset; }");
-    expect(css).toContain("[data-max-height='breakpoint-md'] { max-height: 768px; }");
+    expect(css).toContain("[data-max-height='md'] { max-height: 768px; }");
 
     const ts = generator.toTypeScript();
     expect(ts).toContain('"100%"');
@@ -22,7 +22,7 @@ describe("MaxHeightUtilityGenerator", () => {
     const BreakpointTokenGenerator = new Tokens.BreakpointTokenGenerator({ "breakpoint-full-hd": "1920px" });
     const generator = new MaxHeightUtilityGenerator(BreakpointTokenGenerator);
 
-    expect(generator.css()).toContain("[data-max-height='breakpoint-full-hd'] { max-height: 1920px; }");
+    expect(generator.css()).toContain("[data-max-height='full-hd'] { max-height: 1920px; }");
     expect(generator.toTypeScript()).toContain('"full-hd"');
   });
 });

@@ -12,7 +12,8 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
   css() {
     const lines: string[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
+    for (const [variable, value] of Object.entries(this.config)) {
+      const key = variable.replace("breakpoint-", "");
       lines.push(`[data-max-height='${key}'] { max-height: ${value}; }`);
     }
 
