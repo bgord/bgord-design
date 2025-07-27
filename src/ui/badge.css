@@ -2,17 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 6px;
+
+  padding: 0 var(--spacing-1-5);
 
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-wide);
   line-height: var(--line-height-loose);
-
-  color: var(--color-neutral-300);
-  background-color: var(--color-neutral-700);
-  border-radius: var(--radius-sm);
-
   text-align: center;
   text-transform: uppercase;
 }
@@ -21,6 +17,12 @@
   opacity: var(--opacity-high);
   transition: opacity var(--motion-medium);
   background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
+}
+
+.c-badge[data-variant="primary"] {
+  color: var(--color-neutral-300);
+  background-color: var(--color-neutral-700);
+  border-radius: var(--radius-sm);
 }
 
 .c-badge[data-variant="outline"] {
