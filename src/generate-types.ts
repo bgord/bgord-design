@@ -1,7 +1,7 @@
 import * as TokenGenerators from "./tokens";
 import * as UtilityGenerators from "./utilities";
 
-export class GenerateCSS {
+export class GenerateTyps {
   static async process() {
     const BackdropsTokenGenerator = new TokenGenerators.BackdropsTokenGenerator();
     const BorderWidthTokenGenerator = new TokenGenerators.BorderWidthTokenGenerator();
@@ -22,30 +22,6 @@ export class GenerateCSS {
     const WarningTokenGenerator = new TokenGenerators.WarningTokenGenerator();
     const ZIndexTokenGenerator = new TokenGenerators.ZIndexTokenGenerator();
     const SizeTokenGenerator = new TokenGenerators.SizeTokenGenerator();
-    const MotionTokenGenerator = new TokenGenerators.MotionTokenGenerator();
-
-    const tokens = [
-      BackdropsTokenGenerator,
-      BorderWidthTokenGenerator,
-      BrandTokenGenerator,
-      BreakpointTokenGenerator,
-      DangerTokenGenerator,
-      FontFamilyTokenGenerator,
-      FontSizeTokenGenerator,
-      FontWeightTokenGenerator,
-      GrayscaleTokenGenerator,
-      LetterSpacingTokenGenerator,
-      LineHeightTokenGenerator,
-      OpacityTokenGenerator,
-      PositiveTokenGenerator,
-      RadiusTokenGenerator,
-      ShadowTokenGenerator,
-      SizeTokenGenerator,
-      SpacingTokenGenerator,
-      WarningTokenGenerator,
-      ZIndexTokenGenerator,
-      MotionTokenGenerator,
-    ];
 
     const BackdropUtilityGenerator = new UtilityGenerators.BackdropUtilityGenerator(BackdropsTokenGenerator);
     const BorderWidthUtilityGenerator = new UtilityGenerators.BorderWidthUtilityGenerator(
@@ -157,34 +133,21 @@ export class GenerateCSS {
       ZIndexUtilityGenerator,
     ];
 
-    let output = ":root {";
+    let types = `
+      export * from "./lib";
 
-    for (const token of tokens) {
-      output += token.getTokens();
-    }
+      export {};
 
-    output += "}";
+      import "react";
+      declare module "react" { interface HTMLAttributes<T> {
+    `;
 
     for (const generator of generators) {
-      output += generator.css();
+      types += generator.toTypeScript();
     }
 
-    output += await Bun.file("src/ui/button.css").text();
-    output += await Bun.file("src/ui/input.css").text();
-    output += await Bun.file("src/ui/label.css").text();
-    output += await Bun.file("src/ui/textarea.css").text();
-    output += await Bun.file("src/ui/select.css").text();
-    output += await Bun.file("src/ui/visually-hidden.css").text();
-    output += await Bun.file("src/ui/badge.css").text();
-    output += await Bun.file("src/ui/link.css").text();
+    types += "}}";
 
-    output += await Bun.file("src/animations/grow-fade-in.css").text();
-    output += await Bun.file("src/animations/shrink-fade-out.css").text();
-
-    output += await Bun.file("src/interactions/grow.css").text();
-    output += await Bun.file("src/interactions/rotate-into-focus.css").text();
-    output += await Bun.file("src/interactions/subtle-scale.css").text();
-
-    await Bun.file("dist/main.css").write(output);
+    await Bun.file("dist/index.d.ts").write(types);
   }
 }
