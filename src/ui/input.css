@@ -1,6 +1,6 @@
 .c-input {
   height: 36px;
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   line-height: var(--line-height-tight);
   color: var(--color-neutral-100);
   padding-inline: var(--spacing-1-5);
