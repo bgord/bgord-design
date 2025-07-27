@@ -1,6 +1,6 @@
 {
   "name": "@bgord/design",
-  "version": "0.29.6",
+  "version": "1.0.0",
   "author": "Bartosz Gordon",
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
