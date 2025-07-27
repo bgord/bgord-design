@@ -1,10 +1,8 @@
-import * as TokenGenerators from "./tokens";
+import { TokenGenerator } from "./tokens/template";
 
 export class GenerateLib {
-  static async process() {
+  static async process(tokens: TokenGenerator[]) {
     let lib = "";
-
-    const tokens = Object.values(TokenGenerators).map((TokenGenerator) => new TokenGenerator());
 
     for (const token of tokens) {
       lib += token.toTypeScript();
