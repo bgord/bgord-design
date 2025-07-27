@@ -178,6 +178,9 @@ class GeneratorProcessor {
     output += await Bun.file("src/ui/badge.css").text();
     output += await Bun.file("src/ui/link.css").text();
 
+    output += await Bun.file("src/animations/grow-fade-in.css").text();
+    output += await Bun.file("src/animations/shrink-fade-out.css").text();
+
     await Bun.file("dist/main.css").write(output);
 
     let lib = "";
