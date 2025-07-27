@@ -14,7 +14,7 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
 
     for (const [variable, value] of Object.entries(this.config)) {
       const key = variable.replace("breakpoint-", "");
-      lines.push(`[data-max-height='${key}'] { max-height: ${value}; }`);
+      lines.push(`[data-maxh='${key}'] { max-height: ${value}; }`);
     }
 
     return lines.join("\n");
@@ -26,6 +26,6 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-max-height"?: ${type};`;
+    return `"data-maxh"?: ${type};`;
   }
 }
