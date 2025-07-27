@@ -47,14 +47,6 @@ export class GenerateCSS {
       MotionTokenGenerator,
     ];
 
-    let output = ":root {";
-
-    for (const token of tokens) {
-      output += token.getTokens();
-    }
-
-    output += "}";
-
     const BackdropUtilityGenerator = new UtilityGenerators.BackdropUtilityGenerator(BackdropsTokenGenerator);
     const BorderWidthUtilityGenerator = new UtilityGenerators.BorderWidthUtilityGenerator(
       BorderWidthTokenGenerator,
@@ -164,6 +156,14 @@ export class GenerateCSS {
       WidthUtilityGenerator,
       ZIndexUtilityGenerator,
     ];
+
+    let output = ":root {";
+
+    for (const token of tokens) {
+      output += token.getTokens();
+    }
+
+    output += "}";
 
     for (const generator of generators) {
       output += generator.css();
