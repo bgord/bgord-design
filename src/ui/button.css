@@ -12,8 +12,8 @@
   white-space: nowrap;
   touch-action: manipulation;
   transition:
-    border-radius 300ms ease,
-    opacity 400ms ease;
+    border-radius var(--motion-medium) ease,
+    opacity var(--motion-slow) ease;
 }
 
 /* ---------- Interactive states ---------- */
@@ -24,8 +24,8 @@
   opacity: var(--opacity-high);
   border-radius: 0;
   transition:
-    border-radius 300ms ease,
-    opacity 400ms ease;
+    border-radius var(--motion-medium) ease,
+    opacity var(--motion-slow) ease;
 }
 
 .c-button:active {
@@ -34,7 +34,7 @@
 
 .c-button:disabled {
   opacity: var(--opacity-medium);
-  transition: opacity 300ms ease;
+  transition: opacity var(--motion-medium) ease;
 }
 .c-button:disabled:hover {
   cursor: auto;

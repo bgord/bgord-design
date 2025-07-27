@@ -17,14 +17,14 @@
     border-color: #9ca3af;
     cursor: pointer;
 
-    transition: border-color 400ms;
+    transition: border-color var(--motion-slow);
   }
 
   .c-checkbox:checked:hover {
     border-color: #d1d5db;
     cursor: pointer;
 
-    transition: border-color 400ms;
+    transition: border-color var(--motion-slow);
   }
 
   .c-checkbox:focus {

@@ -19,7 +19,7 @@
 
 .c-badge:hover {
   opacity: var(--opacity-high);
-  transition: opacity 300ms;
+  transition: opacity var(--motion-medium);
   background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
 }
 

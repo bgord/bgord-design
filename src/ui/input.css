@@ -10,8 +10,8 @@
   outline: none;
   appearance: none;
   transition:
-    border-radius 300ms ease,
-    border-color 400ms ease;
+    border-radius var(--motion-medium) ease,
+    border-color var(--motion-slow) ease;
 }
 
 .c-input:is(:hover, :focus) {

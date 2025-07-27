@@ -8,8 +8,8 @@
   cursor: pointer;
 
   transition:
-    color 300ms ease,
-    text-decoration-color 400ms ease;
+    color var(--motion-medium) ease,
+    text-decoration-color var(--motion-slow) ease;
 }
 
 .c-link:hover,
