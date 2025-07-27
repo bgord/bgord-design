@@ -14,7 +14,7 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
 
     for (const [variable, value] of Object.entries(this.config)) {
       const key = variable.replace("breakpoint-", "");
-      lines.push(`[data-max-width='${key}'] { max-width: ${value}; }`);
+      lines.push(`[data-maxw='${key}'] { max-width: ${value}; }`);
     }
 
     return lines.join("\n");
@@ -26,6 +26,6 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-max-width"?: ${type};`;
+    return `"data-maxw"?: ${type};`;
   }
 }

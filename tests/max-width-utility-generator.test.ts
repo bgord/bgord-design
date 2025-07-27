@@ -8,9 +8,9 @@ describe("MaxWidthUtilityGenerator", () => {
     const generator = new MaxWidthUtilityGenerator(BreakpointTokenGenerator);
 
     const css = generator.css();
-    expect(css).toContain("[data-max-width='100%'] { max-width: 100%; }");
-    expect(css).toContain("[data-max-width='unset'] { max-width: unset; }");
-    expect(css).toContain("[data-max-width='md'] { max-width: 768px; }");
+    expect(css).toContain("[data-maxw='100%'] { max-width: 100%; }");
+    expect(css).toContain("[data-maxw='unset'] { max-width: unset; }");
+    expect(css).toContain("[data-maxw='md'] { max-width: 768px; }");
 
     const ts = generator.toTypeScript();
     expect(ts).toContain('"100%"');
@@ -22,7 +22,7 @@ describe("MaxWidthUtilityGenerator", () => {
     const BreakpointTokenGenerator = new Tokens.BreakpointTokenGenerator({ "breakpoint-full-hd": "1920px" });
     const generator = new MaxWidthUtilityGenerator(BreakpointTokenGenerator);
 
-    expect(generator.css()).toContain("[data-max-width='full-hd'] { max-width: 1920px; }");
+    expect(generator.css()).toContain("[data-maxw='full-hd'] { max-width: 1920px; }");
     expect(generator.toTypeScript()).toContain('"full-hd"');
   });
 });
