@@ -1,6 +1,9 @@
 # Changelog
+## 2025-07-28 22:33 v1.0.3
+- 2025-07-28 22:33 3790d7b **1.0.3**
 - 2025-07-28 22:30 855a5c0 **step: add stronger backdrop**
 - 2025-07-28 22:27 8aefc70 **step: make textarea min-height smaller**
+- 2025-07-28 20:33 ef41169 **docs: generate CHANGELOG**
 ## 2025-07-27 18:56 v1.0.2
 - 2025-07-27 18:56 79446ba **1.0.2**
 - 2025-07-27 18:54 40d5d38 **step: add new positive and danger color palette**
