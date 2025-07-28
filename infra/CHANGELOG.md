@@ -1,4 +1,6 @@
 # Changelog
+- 2025-07-28 22:30 855a5c0 **step: add stronger backdrop**
+- 2025-07-28 22:27 8aefc70 **step: make textarea min-height smaller**
 ## 2025-07-27 18:56 v1.0.2
 - 2025-07-27 18:56 79446ba **1.0.2**
 - 2025-07-27 18:54 40d5d38 **step: add new positive and danger color palette**
@@ -8,6 +10,7 @@
 - 2025-07-27 17:38 0d497d3 **step: shorten maxh**
 - 2025-07-27 17:36 bc897e9 **step: shorten flex-dir**
 - 2025-07-27 17:35 3e6d21e **step: shorten data-disp**
+- 2025-07-27 16:56 ce258f5 **docs: generate CHANGELOG**
 - 2025-07-27 16:54 78710a3 **docs: generate CHANGELOG**
 - 2025-07-27 15:41 453835f **docs: generate CHANGELOG**
 - 2025-07-27 15:41 28d551b **docs: generate CHANGELOG**
