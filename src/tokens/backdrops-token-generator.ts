@@ -6,6 +6,7 @@ export class BackdropsTokenGenerator extends TokenGenerator {
     "backdrop-weak": "rgba(0 0 0 / 0.35)",
     "backdrop-medium": "rgba(0 0 0 / 0.6)",
     "backdrop-strong": "rgba(0 0 0 / 0.75)",
+    "backdrop-stronger": "rgba(0 0 0 / 0.85)",
   };
 
   constructor(overrides: TokenConfigType = {}) {
