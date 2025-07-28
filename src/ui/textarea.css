@@ -1,5 +1,5 @@
 .c-textarea {
-  min-height: 72px;
+  min-height: 64px;
   padding: var(--spacing-1-5);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
