@@ -1,6 +1,8 @@
 # Changelog
+- 2025-07-31 21:58 0557410 **step: format output files**
 - 2025-07-31 21:44 cc8659c **feature: introduce layers**
 - 2025-07-31 21:41 5edfb3b **step: make normalize.css sit into reset layer**
+- 2025-07-31 19:51 837cf82 **docs: generate CHANGELOG**
 - 2025-07-31 19:50 7d6b4e6 **step: fix margin/padding conflicts**
 ## 2025-07-28 22:33 v1.0.3
 - 2025-07-28 22:33 3790d7b **1.0.3**
