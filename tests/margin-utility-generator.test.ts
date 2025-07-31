@@ -13,8 +13,8 @@ describe("MarginUtilityGenerator", () => {
     expect(css).toContain("[data-mr='4'] { margin-right: var(--spacing-4); }");
     expect(css).toContain("[data-mb='4'] { margin-bottom: var(--spacing-4); }");
     expect(css).toContain("[data-ml='4'] { margin-left: var(--spacing-4); }");
-    expect(css).toContain("[data-mx='4'] { margin: 0 var(--spacing-4); }");
-    expect(css).toContain("[data-my='4'] { margin: var(--spacing-4) 0; }");
+    expect(css).toContain("[data-mx='4'] { margin-left: var(--spacing-4); margin-right: var(--spacing-4); }");
+    expect(css).toContain("[data-my='4'] { margin-top: var(--spacing-4); margin-bottom: var(--spacing-4); }");
 
     const ts = generator.toTypeScript();
     expect(ts).toContain('"data-m"');

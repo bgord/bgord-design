@@ -23,12 +23,16 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      lines.push(`[data-px='${key}'] { padding: 0 var(--${variable}); }`);
+      lines.push(
+        `[data-px='${key}'] { padding-left: var(--${variable}); padding-right: var(--${variable}); }`,
+      );
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      lines.push(`[data-py='${key}'] { padding: var(--${variable}) 0; }`);
+      lines.push(
+        `[data-py='${key}'] { padding-top: var(--${variable}); padding-bottom: var(--${variable}); }`,
+      );
     }
 
     for (const variable of Object.keys(this.config)) {

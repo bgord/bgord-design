@@ -13,8 +13,12 @@ describe("PaddingUtilityGenerator", () => {
     expect(css).toContain("[data-pr='4'] { padding-right: var(--spacing-4); }");
     expect(css).toContain("[data-pb='4'] { padding-bottom: var(--spacing-4); }");
     expect(css).toContain("[data-pl='4'] { padding-left: var(--spacing-4); }");
-    expect(css).toContain("[data-px='4'] { padding: 0 var(--spacing-4); }");
-    expect(css).toContain("[data-py='4'] { padding: var(--spacing-4) 0; }");
+    expect(css).toContain(
+      "[data-px='4'] { padding-left: var(--spacing-4); padding-right: var(--spacing-4); }",
+    );
+    expect(css).toContain(
+      "[data-py='4'] { padding-top: var(--spacing-4); padding-bottom: var(--spacing-4); }",
+    );
 
     const ts = generator.toTypeScript();
     expect(ts).toContain('"data-p"');

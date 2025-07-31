@@ -23,12 +23,12 @@ export class MarginUtilityGenerator extends UtilityGenerator {
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      lines.push(`[data-mx='${key}'] { margin: 0 var(--${variable}); }`);
+      lines.push(`[data-mx='${key}'] { margin-left: var(--${variable}); margin-right: var(--${variable}); }`);
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      lines.push(`[data-my='${key}'] { margin: var(--${variable}) 0; }`);
+      lines.push(`[data-my='${key}'] { margin-top: var(--${variable}); margin-bottom: var(--${variable}); }`);
     }
 
     for (const variable of Object.keys(this.config)) {
