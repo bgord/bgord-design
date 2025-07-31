@@ -43,3 +43,4 @@ bunx tsc dist/lib.ts \
 
 info "Cleaning up"
 rm dist/lib.ts
+rm dist/main.css
