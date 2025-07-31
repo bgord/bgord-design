@@ -1,8 +1,12 @@
 # Changelog
+- 2025-07-31 21:44 cc8659c **feature: introduce layers**
+- 2025-07-31 21:41 5edfb3b **step: make normalize.css sit into reset layer**
+- 2025-07-31 19:50 7d6b4e6 **step: fix margin/padding conflicts**
 ## 2025-07-28 22:33 v1.0.3
 - 2025-07-28 22:33 3790d7b **1.0.3**
 - 2025-07-28 22:30 855a5c0 **step: add stronger backdrop**
 - 2025-07-28 22:27 8aefc70 **step: make textarea min-height smaller**
+- 2025-07-28 20:34 13897d5 **docs: generate CHANGELOG**
 - 2025-07-28 20:33 ef41169 **docs: generate CHANGELOG**
 ## 2025-07-27 18:56 v1.0.2
 - 2025-07-27 18:56 79446ba **1.0.2**
