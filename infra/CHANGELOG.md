@@ -1,4 +1,9 @@
 # Changelog
+- 2025-07-31 23:35 e911552 **refactor: remove separate normalize.css**
+- 2025-07-31 23:35 04f2481 **step: cleanup intermediate main.css**
+- 2025-07-31 23:33 92f08bc **step: add normalize.css to main.css bundle**
+- 2025-07-31 23:26 4a56c79 **step: change normalize**
+- 2025-07-31 23:24 dd3a36a **fix: button center text alignment**
 ## 2025-07-31 22:32 v1.2.0
 - 2025-07-31 22:32 ec518ef **1.2.0**
 - 2025-07-31 22:30 7f53d97 **step: update ts**
@@ -11,6 +16,7 @@
 - 2025-07-31 21:58 0557410 **step: format output files**
 - 2025-07-31 21:44 cc8659c **feature: introduce layers**
 - 2025-07-31 21:41 5edfb3b **step: make normalize.css sit into reset layer**
+- 2025-07-31 20:33 5e0c806 **docs: generate CHANGELOG**
 - 2025-07-31 20:31 243fbd5 **docs: generate CHANGELOG**
 - 2025-07-31 19:59 830c308 **docs: generate CHANGELOG**
 - 2025-07-31 19:58 bbbf33e **docs: generate CHANGELOG**
