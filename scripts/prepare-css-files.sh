@@ -16,20 +16,21 @@ bunx @biomejs/biome format --write dist/index.d.ts
 bunx @biomejs/biome format --write dist/lib.d.ts
 bunx @biomejs/biome format --write dist/lib.js
 
-info "Running postcss..."
-bunx postcss dist/main.css -o dist/main.css
-bunx postcss dist/normalize.css -o dist/normalize.css
+info "Processing..."
 
-info "Running doiuse..."
-bunx doiuse --browsers ">1%" --ignore "css-touch-action,css-appearance,css-media-resolution,css-resize" dist/main.css
+bunx lightningcss-cli dist/main.css \
+  --targets ">1%, not dead" \
+  --minify \
+  --bundle \
+  -o dist/main.min.css
 
-info "Minifying..."
-bunx clean-css-cli dist/main.css -o dist/main.min.css
-bunx clean-css-cli dist/normalize.css -o dist/normalize.min.css
+bunx lightningcss-cli dist/normalize.css \
+  --targets ">1%, not dead" \
+  --minify \
+  -o dist/normalize.min.css
 
 info "Compressing..."
-bunx gzip dist/main.min.css --extension=gz --extension=br
-bunx gzip dist/normalize.min.css --extension=gz --extension=br
+bunx gzip dist/*.min.css --extension=gz --extension=br
 
 info "main.css file sizes:"
 # shellcheck disable=SC2010
