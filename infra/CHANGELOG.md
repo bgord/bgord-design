@@ -1,4 +1,6 @@
 # Changelog
+## 2025-07-31 23:36 v1.3.0
+- 2025-07-31 23:36 b29d597 **1.3.0**
 - 2025-07-31 23:35 e911552 **refactor: remove separate normalize.css**
 - 2025-07-31 23:35 04f2481 **step: cleanup intermediate main.css**
 - 2025-07-31 23:33 92f08bc **step: add normalize.css to main.css bundle**
@@ -16,6 +18,7 @@
 - 2025-07-31 21:58 0557410 **step: format output files**
 - 2025-07-31 21:44 cc8659c **feature: introduce layers**
 - 2025-07-31 21:41 5edfb3b **step: make normalize.css sit into reset layer**
+- 2025-07-31 21:36 792fcd1 **docs: generate CHANGELOG**
 - 2025-07-31 20:33 5e0c806 **docs: generate CHANGELOG**
 - 2025-07-31 20:31 243fbd5 **docs: generate CHANGELOG**
 - 2025-07-31 19:59 830c308 **docs: generate CHANGELOG**
