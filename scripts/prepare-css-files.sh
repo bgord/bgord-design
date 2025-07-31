@@ -9,6 +9,13 @@ bun dist/index.js
 info "Copying normalize.css to dist..."
 cp src/normalize.css dist/
 
+info "Formatting the files..."
+bunx @biomejs/biome format --write dist/main.css
+bunx @biomejs/biome format --write dist/normalize.css
+bunx @biomejs/biome format --write dist/index.d.ts
+bunx @biomejs/biome format --write dist/lib.d.ts
+bunx @biomejs/biome format --write dist/lib.js
+
 info "Running postcss..."
 bunx postcss dist/main.css -o dist/main.css
 bunx postcss dist/normalize.css -o dist/normalize.css
