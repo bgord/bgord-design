@@ -1,4 +1,6 @@
 # Changelog
+## 2025-07-31 22:32 v1.2.0
+- 2025-07-31 22:32 ec518ef **1.2.0**
 - 2025-07-31 22:30 7f53d97 **step: update ts**
 - 2025-07-31 22:29 c4544d8 **refactor: replace everything with lightningcss**
 - 2025-07-31 22:27 d78bcd7 **step: remove doiuse**
@@ -9,6 +11,7 @@
 - 2025-07-31 21:58 0557410 **step: format output files**
 - 2025-07-31 21:44 cc8659c **feature: introduce layers**
 - 2025-07-31 21:41 5edfb3b **step: make normalize.css sit into reset layer**
+- 2025-07-31 20:31 243fbd5 **docs: generate CHANGELOG**
 - 2025-07-31 19:59 830c308 **docs: generate CHANGELOG**
 - 2025-07-31 19:58 bbbf33e **docs: generate CHANGELOG**
 - 2025-07-31 19:51 837cf82 **docs: generate CHANGELOG**
