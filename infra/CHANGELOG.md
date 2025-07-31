@@ -1,9 +1,15 @@
 # Changelog
+- 2025-07-31 22:30 7f53d97 **step: update ts**
+- 2025-07-31 22:29 c4544d8 **refactor: replace everything with lightningcss**
+- 2025-07-31 22:27 d78bcd7 **step: remove doiuse**
+- 2025-07-31 22:18 c482d08 **step: install lighningcss**
+- 2025-07-31 22:18 359c8ae **refactor: remove postcss and clean-css-cli**
 ## 2025-07-31 21:59 v1.1.0
 - 2025-07-31 21:59 1c5ce9d **1.1.0**
 - 2025-07-31 21:58 0557410 **step: format output files**
 - 2025-07-31 21:44 cc8659c **feature: introduce layers**
 - 2025-07-31 21:41 5edfb3b **step: make normalize.css sit into reset layer**
+- 2025-07-31 19:59 830c308 **docs: generate CHANGELOG**
 - 2025-07-31 19:58 bbbf33e **docs: generate CHANGELOG**
 - 2025-07-31 19:51 837cf82 **docs: generate CHANGELOG**
 - 2025-07-31 19:50 7d6b4e6 **step: fix margin/padding conflicts**
