@@ -8,6 +8,7 @@
 
   height: 36px;
   text-transform: uppercase;
+  text-align: center;
   user-select: none;
   white-space: nowrap;
   touch-action: manipulation;
