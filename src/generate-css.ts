@@ -3,7 +3,7 @@ import { UtilityGenerator } from "./utilities/template";
 
 export class GenerateCSS {
   static async process(tokens: TokenGenerator[], utilities: UtilityGenerator[]) {
-    let output = "@layer reset, components, utilities;\n\n";
+    let output = `@import "../src/normalize.css" layer(reset);\n\n`;
 
     output += ":root {\n";
     for (const token of tokens) {
