@@ -115,6 +115,7 @@ src/
     ├── rotate-utility-generator.ts
     ├── shadow-utility-generator.ts
     ├── size-utility-generator.ts
+    ├── stack-utility-generator.ts
     ├── template.ts
     ├── transform-utility-generator.ts
     ├── width-utility-generator.ts
