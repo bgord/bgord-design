@@ -1,10 +1,12 @@
 # Changelog
+- 2025-08-02 23:18 e91e93a **step: add user-select none for c-select**
 ## 2025-08-02 16:53 v1.3.2
 - 2025-08-02 16:53 a758f02 **1.3.2**
 ## 2025-08-02 16:51 v1.3.1
 - 2025-08-02 16:51 359b48e **step: add date input specific styles**
 - 2025-08-02 16:51 2ba20c5 **1.3.1**
 - 2025-08-02 16:49 23a856c **step: add stack utility**
+- 2025-08-02 14:53 1f8e5f5 **docs: generate CHANGELOG**
 - 2025-08-02 14:52 5830dc0 **docs: generate CHANGELOG**
 - 2025-08-02 14:51 c6c8999 **docs: generate readme**
 - 2025-08-02 14:51 49cfcd7 **docs: generate CHANGELOG**
