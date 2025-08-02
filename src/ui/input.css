@@ -37,3 +37,12 @@
 .c-input:invalid:not(:placeholder-shown) {
   border-color: var(--color-danger-500);
 }
+
+.c-input[type="date"] {
+  font-size: var(--font-size-xs);
+  border: var(--border-width-hairline) solid var(--color-neutral-900);
+}
+
+.c-input[type="date"]:placeholder-shown {
+  font-size: var(--font-size-xs);
+}
