@@ -1,6 +1,9 @@
 # Changelog
 - 2025-08-02 16:51 359b48e **step: add date input specific styles**
+- 2025-08-02 16:51 2ba20c5 **1.3.1**
 - 2025-08-02 16:49 23a856c **step: add stack utility**
+- 2025-08-02 14:51 c6c8999 **docs: generate readme**
+- 2025-08-02 14:51 49cfcd7 **docs: generate CHANGELOG**
 ## 2025-07-31 23:36 v1.3.0
 - 2025-07-31 23:36 b29d597 **1.3.0**
 - 2025-07-31 23:35 e911552 **refactor: remove separate normalize.css**
