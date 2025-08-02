@@ -15,6 +15,7 @@
 
     text-overflow: ellipsis;
     appearance: none;
+    user-select: none;
     outline: none;
     transition:
       border-radius var(--motion-medium) ease,
