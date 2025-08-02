@@ -116,6 +116,7 @@ import * as UtilityGenerators from "./utilities";
   const WidthUtilityGenerator = new UtilityGenerators.WidthUtilityGenerator();
   const HeightUtilityGenerator = new UtilityGenerators.HeightUtilityGenerator();
   const SizeUtilityGenerator = new UtilityGenerators.SizeUtilityGenerator(SizeTokenGenerator);
+  const StackUtilityGenerator = new UtilityGenerators.StackUtilityGenerator();
 
   const generators = [
     AxisPlacementUtilityGenerator,
@@ -152,6 +153,7 @@ import * as UtilityGenerators from "./utilities";
     RotateUtilityGenerator,
     ShadowUtilityGenerator,
     SizeUtilityGenerator,
+    StackUtilityGenerator,
     TransformUtilityGenerator,
     WidthUtilityGenerator,
     ZIndexUtilityGenerator,
