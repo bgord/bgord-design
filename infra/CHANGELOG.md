@@ -1,9 +1,11 @@
 # Changelog
+- 2025-08-14 00:21 29a6a74 **step: bump bgord/scripts**
 - 2025-08-13 23:33 324c016 **step: bump bgord/scripts**
 - 2025-08-13 23:32 a28c3b4 **step: update packages**
 ## 2025-08-13 22:20 v1.3.3
 - 2025-08-13 22:20 9f03c4a **1.3.3**
 - 2025-08-13 22:20 87a5bac **step: update packages**
+- 2025-08-13 21:33 72e6ceb **docs: generate CHANGELOG**
 - 2025-08-13 20:21 8a5502a **docs: generate CHANGELOG**
 - 2025-08-13 20:20 c9d1fb3 **docs: generate CHANGELOG**
 - 2025-08-02 23:18 e91e93a **step: add user-select none for c-select**
