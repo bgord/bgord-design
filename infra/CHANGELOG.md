@@ -1,5 +1,7 @@
 # Changelog
+- 2025-08-13 22:20 87a5bac **step: update packages**
 - 2025-08-02 23:18 e91e93a **step: add user-select none for c-select**
+- 2025-08-02 21:18 a0942bd **docs: generate CHANGELOG**
 ## 2025-08-02 16:53 v1.3.2
 - 2025-08-02 16:53 a758f02 **1.3.2**
 ## 2025-08-02 16:51 v1.3.1
