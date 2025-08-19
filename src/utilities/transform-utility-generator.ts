@@ -11,6 +11,7 @@ export class TransformUtilityGenerator extends UtilityGenerator {
     nowrap: "nowrap",
     none: "none",
     "line-clamp": "line-clamp",
+    "font-variant-numeric": "tabular-nums",
   };
 
   constructor() {
@@ -47,6 +48,11 @@ export class TransformUtilityGenerator extends UtilityGenerator {
 
       if (key === "nowrap") {
         lines.push(`[data-transform~='nowrap'] {\n  white-space: nowrap;\n}\n`);
+        continue;
+      }
+
+      if (key === "font-variant-numeric") {
+        lines.push(`[data-transform~='font-variant-numeric'] {\n  font-variant-numeric;\n}\n`);
         continue;
       }
 
