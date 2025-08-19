@@ -52,7 +52,7 @@ export class TransformUtilityGenerator extends UtilityGenerator {
       }
 
       if (key === "font-variant-numeric") {
-        lines.push(`[data-transform~='font-variant-numeric'] {\n  font-variant-numeric;\n}\n`);
+        lines.push(`[data-transform~='font-variant-numeric'] {\n  font-variant-numeric: tabular-nums;\n}\n`);
         continue;
       }
 

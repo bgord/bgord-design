@@ -18,7 +18,9 @@ describe("TransformUtilityGenerator", () => {
       "[data-transform~='upper-first']:first-letter {\n  text-transform: uppercase;\n}\n",
     );
     expect(css).toContain("[data-transform~='nowrap'] {\n  white-space: nowrap;\n}\n");
-    expect(css).toContain(`[data-transform~='font-variant-numeric'] {\n  font-variant-numeric;\n}\n`);
+    expect(css).toContain(
+      `[data-transform~='font-variant-numeric'] {\n  font-variant-numeric: tabular-nums;\n}\n`,
+    );
 
     const ts = generator.toTypeScript();
     expect(ts).toEqualIgnoringWhitespace(
