@@ -1,4 +1,4 @@
-import { FontWeightTokenGenerator } from "../tokens/font-weight-token-generator";
+import type { FontWeightTokenGenerator } from "../tokens/font-weight-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class FontWeightUtilityGenerator extends UtilityGenerator {

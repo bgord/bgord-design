@@ -1,5 +1,5 @@
-import { TokenGenerator } from "./tokens/template";
-import { UtilityGenerator } from "./utilities/template";
+import type { TokenGenerator } from "./tokens/template";
+import type { UtilityGenerator } from "./utilities/template";
 
 export class GenerateCSS {
   static async process(tokens: TokenGenerator[], utilities: UtilityGenerator[]) {

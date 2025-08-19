@@ -1,8 +1,8 @@
-import { BrandTokenGenerator } from "../tokens/brand-token-generator";
-import { DangerTokenGenerator } from "../tokens/danger-token-generator";
-import { GrayscaleTokenGenerator } from "../tokens/grayscale-token-generator";
-import { PositiveTokenGenerator } from "../tokens/positive-token-generator";
-import { WarningTokenGenerator } from "../tokens/warning-token-generator";
+import type { BrandTokenGenerator } from "../tokens/brand-token-generator";
+import type { DangerTokenGenerator } from "../tokens/danger-token-generator";
+import type { GrayscaleTokenGenerator } from "../tokens/grayscale-token-generator";
+import type { PositiveTokenGenerator } from "../tokens/positive-token-generator";
+import type { WarningTokenGenerator } from "../tokens/warning-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class BackgroundUtilityGenerator extends UtilityGenerator {

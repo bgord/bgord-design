@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./utilities/template";
+import type { UtilityGenerator } from "./utilities/template";
 
 export class GenerateTyps {
   static async process(utilities: UtilityGenerator[]) {

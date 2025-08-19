@@ -1,4 +1,4 @@
-import { ZIndexTokenGenerator } from "../tokens/z-index-token-generator";
+import type { ZIndexTokenGenerator } from "../tokens/z-index-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class ZIndexUtilityGenerator extends UtilityGenerator {

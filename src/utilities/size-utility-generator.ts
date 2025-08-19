@@ -1,4 +1,4 @@
-import { SizeTokenGenerator } from "../tokens/size-token-generator";
+import type { SizeTokenGenerator } from "../tokens/size-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class SizeUtilityGenerator extends UtilityGenerator {

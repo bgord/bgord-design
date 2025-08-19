@@ -1,4 +1,4 @@
-import { BackdropsTokenGenerator } from "../tokens/backdrops-token-generator";
+import type { BackdropsTokenGenerator } from "../tokens/backdrops-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class BackdropUtilityGenerator extends UtilityGenerator {

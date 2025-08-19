@@ -1,4 +1,4 @@
-import { OpacityTokenGenerator } from "../tokens/opacity-token-generator";
+import type { OpacityTokenGenerator } from "../tokens/opacity-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class OpacityUtilityGenerator extends UtilityGenerator {

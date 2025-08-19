@@ -1,4 +1,4 @@
-import { TokenConfigType, TokenGenerator } from "./template";
+import { type TokenConfigType, TokenGenerator } from "./template";
 
 export class BreakpointTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {

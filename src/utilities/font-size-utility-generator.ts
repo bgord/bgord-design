@@ -1,4 +1,4 @@
-import { FontSizeTokenGenerator } from "../tokens/font-size-token-generator";
+import type { FontSizeTokenGenerator } from "../tokens/font-size-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class FontSizeUtilityGenerator extends UtilityGenerator {

@@ -1,4 +1,4 @@
-import { LineHeightTokenGenerator } from "../tokens/line-height-token-generator";
+import type { LineHeightTokenGenerator } from "../tokens/line-height-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class LineHeightUtilityGenerator extends UtilityGenerator {

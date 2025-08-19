@@ -1,4 +1,4 @@
-import { TokenConfigType, TokenGenerator } from "./template";
+import { type TokenConfigType, TokenGenerator } from "./template";
 
 export class PositiveTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {

@@ -1,4 +1,4 @@
-import { TokenConfigType } from "../tokens/template";
+import type { TokenConfigType } from "../tokens/template";
 
 export abstract class UtilityGenerator {
   abstract config: TokenConfigType;

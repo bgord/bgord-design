@@ -1,4 +1,4 @@
-import { TokenGenerator } from "./tokens/template";
+import type { TokenGenerator } from "./tokens/template";
 
 export class GenerateLib {
   static async process(tokens: TokenGenerator[]) {

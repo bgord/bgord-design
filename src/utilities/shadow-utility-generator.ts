@@ -1,4 +1,4 @@
-import { ShadowTokenGenerator } from "../tokens/shadow-token-generator";
+import type { ShadowTokenGenerator } from "../tokens/shadow-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class ShadowUtilityGenerator extends UtilityGenerator {

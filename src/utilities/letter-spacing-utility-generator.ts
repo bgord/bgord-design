@@ -1,4 +1,4 @@
-import { LetterSpacingTokenGenerator } from "../tokens/letter-spacing-token-generator";
+import type { LetterSpacingTokenGenerator } from "../tokens/letter-spacing-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class LetterSpacingUtilityGenerator extends UtilityGenerator {

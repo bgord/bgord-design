@@ -1,4 +1,4 @@
-import { FontFamilyTokenGenerator } from "../tokens/font-family-token-generator";
+import type { FontFamilyTokenGenerator } from "../tokens/font-family-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class FontFamilyUtilityGenerator extends UtilityGenerator {

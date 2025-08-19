@@ -1,4 +1,4 @@
-import { SpacingTokenGenerator } from "../tokens/spacing-token-generator";
+import type { SpacingTokenGenerator } from "../tokens/spacing-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class PaddingUtilityGenerator extends UtilityGenerator {

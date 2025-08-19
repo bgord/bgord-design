@@ -1,4 +1,4 @@
-import { RadiusTokenGenerator } from "../tokens/radius-token-generator";
+import type { RadiusTokenGenerator } from "../tokens/radius-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class RadiusUtilityGenerator extends UtilityGenerator {

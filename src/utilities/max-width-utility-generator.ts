@@ -1,4 +1,4 @@
-import { BreakpointTokenGenerator } from "../tokens/breakpoint-token-generator";
+import type { BreakpointTokenGenerator } from "../tokens/breakpoint-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class MaxWidthUtilityGenerator extends UtilityGenerator {

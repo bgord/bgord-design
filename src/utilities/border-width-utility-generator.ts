@@ -1,4 +1,4 @@
-import { BorderWidthTokenGenerator } from "../tokens/border-width-token-generator";
+import type { BorderWidthTokenGenerator } from "../tokens/border-width-token-generator";
 import { UtilityGenerator } from "./template";
 
 export class BorderWidthUtilityGenerator extends UtilityGenerator {
