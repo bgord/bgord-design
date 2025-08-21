@@ -11,7 +11,7 @@
     "@types/lodash": "4.17.20",
     "cspell": "9.2.0",
     "gzip-cli": "1.2.0",
-    "knip": "5.62.0",
+    "knip": "5.63.0",
     "lefthook": "1.12.3",
     "lightningcss-cli": "1.30.1",
     "only-allow": "1.2.1",
