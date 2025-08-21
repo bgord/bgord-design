@@ -1,4 +1,5 @@
 # Changelog
+- 2025-08-21 16:38 3a14c4d **step: update packages**
 ## 2025-08-19 20:21 v1.4.0
 - 2025-08-19 20:21 2d7d1ad **1.4.0**
 - 2025-08-19 20:19 d653708 **fix: transform font variant numeric**
@@ -6,6 +7,7 @@
 ## 2025-08-19 20:14 v1.3.4
 - 2025-08-19 20:12 6c764ff **step: add font-variant-numeric**
 - 2025-08-19 20:12 1a8a35c **step: bump bgord/scripts**
+- 2025-08-19 18:21 c4d4326 **docs: generate CHANGELOG**
 - 2025-08-19 18:20 0e9d631 **docs: generate CHANGELOG**
 - 2025-08-19 18:15 ed4a632 **docs: generate CHANGELOG**
 - 2025-08-19 18:13 1186bef **docs: generate CHANGELOG**
