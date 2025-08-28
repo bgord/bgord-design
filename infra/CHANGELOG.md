@@ -1,5 +1,7 @@
 # Changelog
+- 2025-08-28 23:53 aef3bc3 **step: update packages**
 - 2025-08-21 16:38 3a14c4d **step: update packages**
+- 2025-08-21 14:39 2151a64 **docs: generate CHANGELOG**
 ## 2025-08-19 20:21 v1.4.0
 - 2025-08-19 20:21 2d7d1ad **1.4.0**
 - 2025-08-19 20:19 d653708 **fix: transform font variant numeric**
