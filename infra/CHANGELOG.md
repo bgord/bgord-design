@@ -1,5 +1,8 @@
 # Changelog
+## 2025-08-30 23:35 v1.4.1
+- 2025-08-30 23:35 92895ec **1.4.1**
 - 2025-08-28 23:53 aef3bc3 **step: update packages**
+- 2025-08-28 21:53 5d69e6a **docs: generate CHANGELOG**
 - 2025-08-21 16:38 3a14c4d **step: update packages**
 - 2025-08-21 14:39 2151a64 **docs: generate CHANGELOG**
 ## 2025-08-19 20:21 v1.4.0
