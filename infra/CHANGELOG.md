@@ -1,4 +1,5 @@
 # Changelog
+- 2025-09-16 09:44 45e1f6d **step: update packages**
 ## 2025-09-08 17:22 v1.4.2
 - 2025-09-08 17:22 8ba1f81 **1.4.2**
 - 2025-09-08 17:21 90f8a20 **step: bump bgord/scripts**
@@ -6,6 +7,7 @@
 - 2025-09-08 17:11 a887166 **step: update packages**
 - 2025-09-08 17:10 56f845d **step: bump bgord/scripts**
 - 2025-09-08 15:22 fc9535c **docs: generate CHANGELOG**
+- 2025-09-08 15:22 7c0a115 **docs: generate CHANGELOG**
 - 2025-09-08 15:11 ceaecf7 **docs: generate CHANGELOG**
 ## 2025-08-30 23:35 v1.4.1
 - 2025-08-30 23:35 92895ec **1.4.1**
