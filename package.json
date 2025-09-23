@@ -24,7 +24,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "bun build src/index.ts --format esm --outdir dist",
+    "build": "bash scripts/package-build.sh",
     "postbuild": "bash scripts/prepare-css-files.sh",
     "prepublish": "bash scripts/prepare-css-files.sh",
     "preinstall": "bunx only-allow bun"
