@@ -4,19 +4,19 @@
   "author": "Bartosz Gordon",
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
-    "@commitlint/cli": "20.0.0",
+    "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
-    "@types/bun": "1.2.22",
+    "@types/bun": "1.2.23",
     "@types/culori": "4.0.1",
     "@types/lodash": "4.17.20",
     "cspell": "9.2.1",
     "gzip-cli": "1.2.0",
-    "knip": "5.64.0",
-    "lefthook": "1.13.4",
-    "lightningcss-cli": "1.30.1",
+    "knip": "5.64.1",
+    "lefthook": "1.13.6",
+    "lightningcss-cli": "1.30.2",
     "only-allow": "1.2.1",
     "shellcheck": "4.1.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "dependencies": {
     "culori": "4.0.2",
