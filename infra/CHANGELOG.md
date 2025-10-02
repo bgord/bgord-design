@@ -1,7 +1,9 @@
 # Changelog
+- 2025-10-02 10:42 77e4e34 **step: bump bgord/scripts**
 ## 2025-10-01 11:13 v1.4.5
 - 2025-10-01 11:13 dcdf6c6 **1.4.5**
 - 2025-10-01 11:12 e298e4b **step: update packages**
+- 2025-10-01 09:13 d44138c **docs: generate CHANGELOG**
 - 2025-10-01 09:12 13694bf **docs: generate CHANGELOG**
 ## 2025-09-26 11:39 v1.4.4
 - 2025-09-26 11:39 d66d88d **1.4.4**
