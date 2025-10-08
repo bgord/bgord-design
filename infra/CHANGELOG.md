@@ -1,5 +1,8 @@
 # Changelog
+- 2025-10-08 10:50 c22a3f5 **step: update packages**
+- 2025-10-08 10:50 351f965 **step: slightly scale active buttons**
 - 2025-10-02 10:42 77e4e34 **step: bump bgord/scripts**
+- 2025-10-02 08:43 d58c48e **docs: generate CHANGELOG**
 ## 2025-10-01 11:13 v1.4.5
 - 2025-10-01 11:13 dcdf6c6 **1.4.5**
 - 2025-10-01 11:12 e298e4b **step: update packages**
