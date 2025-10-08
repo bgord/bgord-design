@@ -31,6 +31,7 @@
 
 .c-button:active {
   border: var(--border-width-md) solid transparent !important;
+  scale: 0.97;
 }
 
 .c-button:disabled {
