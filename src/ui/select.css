@@ -36,6 +36,7 @@
   }
 
   .c-select-wrapper {
+    width: fit-content;
     position: relative;
   }
 
