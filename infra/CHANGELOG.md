@@ -1,5 +1,9 @@
 # Changelog
+- 2025-10-23 23:21 99c7375 **step: update packages**
+- 2025-10-23 23:21 2859035 **step: bump bgord/scripts**
+- 2025-10-23 23:20 69c12c2 **fix: c-select-wrapper to fit content**
 - 2025-10-16 15:30 320442a **step: update packages**
+- 2025-10-16 13:30 2af6f40 **docs: generate CHANGELOG**
 ## 2025-10-08 10:51 v1.4.6
 - 2025-10-08 10:51 ea60860 **1.4.6**
 - 2025-10-08 10:50 c22a3f5 **step: update packages**
