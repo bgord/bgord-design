@@ -116,3 +116,7 @@ meter {
 ::-webkit-details-marker {
   display: none;
 }
+
+output {
+  display: flex;
+}
