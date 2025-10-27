@@ -7,12 +7,14 @@ describe("OpacityTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
+      --opacity-full: 1;
       --opacity-high: 0.7;
       --opacity-medium: 0.5;
       --opacity-low: 0.2;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const OpacityTokens = {
+        "opacity-full": "1",
         "opacity-high": "0.7",
         "opacity-medium": "0.5",
         "opacity-low": "0.2"
@@ -28,6 +30,7 @@ describe("OpacityTokenGenerator", () => {
 
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
+      --opacity-full: 1;
       --opacity-high: 0.7;
       --opacity-medium: 0.5;
       --opacity-low: 0.2;
@@ -35,6 +38,7 @@ describe("OpacityTokenGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const OpacityTokens = {
+        "opacity-full": "1",
         "opacity-high": "0.7",
         "opacity-medium": "0.5",
         "opacity-low": "0.2",
