@@ -1,9 +1,13 @@
 # Changelog
+- 2025-10-27 22:09 ae4ee99 **step: update packages**
+- 2025-10-27 22:05 cf06c82 **step: add full opacity token**
+- 2025-10-27 22:02 d491ae0 **step: add output display flex**
 ## 2025-10-23 23:22 v1.4.7
 - 2025-10-23 23:22 779d3f6 **1.4.7**
 - 2025-10-23 23:21 99c7375 **step: update packages**
 - 2025-10-23 23:21 2859035 **step: bump bgord/scripts**
 - 2025-10-23 23:20 69c12c2 **fix: c-select-wrapper to fit content**
+- 2025-10-23 21:22 8019eec **docs: generate CHANGELOG**
 - 2025-10-23 21:21 c31c23c **docs: generate CHANGELOG**
 - 2025-10-16 15:30 320442a **step: update packages**
 - 2025-10-16 13:30 2af6f40 **docs: generate CHANGELOG**
