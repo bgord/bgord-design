@@ -1,9 +1,11 @@
 # Changelog
+- 2025-10-30 08:58 42251bc **step: update packages**
 ## 2025-10-27 22:11 v1.4.8
 - 2025-10-27 22:11 0d508dc **1.4.8**
 - 2025-10-27 22:09 ae4ee99 **step: update packages**
 - 2025-10-27 22:05 cf06c82 **step: add full opacity token**
 - 2025-10-27 22:02 d491ae0 **step: add output display flex**
+- 2025-10-27 21:11 9b104a1 **docs: generate CHANGELOG**
 - 2025-10-27 21:09 7a1d1c0 **docs: generate CHANGELOG**
 ## 2025-10-23 23:22 v1.4.7
 - 2025-10-23 23:22 779d3f6 **1.4.7**
