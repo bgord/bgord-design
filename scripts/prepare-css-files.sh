@@ -27,10 +27,6 @@ step_start "Files compress"
 bunx gzip dist/*.min.css --extension=gz --extension=br
 step_end "Files compress"
 
-# info "main.css file sizes:"
-# # shellcheck disable=SC2010
-# ls -alh dist | grep main | awk '{print $5"\t"$9}'
-
 step_start "index.js remove"
 rm -rf dist/index.js
 step_end "index.js remove"
