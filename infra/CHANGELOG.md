@@ -1,5 +1,8 @@
 # Changelog
+## 2025-11-01 22:54 v1.4.10
+- 2025-11-01 22:54 33267a9 **1.4.10**
 - 2025-11-01 22:52 6df3091 **step: unify button link use case**
+- 2025-11-01 21:52 5fb1103 **docs: generate CHANGELOG**
 - 2025-10-31 11:46 833e62d **refactor: remove unused step**
 ## 2025-10-30 08:59 v1.4.9
 - 2025-10-30 08:59 7999b5a **1.4.9**
