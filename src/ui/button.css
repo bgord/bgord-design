@@ -92,6 +92,12 @@
     0 0 0 4px var(--color-neutral-400);
 }
 
+a.c-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .c-button {
     transition: none;
