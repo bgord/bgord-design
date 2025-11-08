@@ -1,7 +1,11 @@
 # Changelog
+- 2025-11-08 19:28 e08164e **step: bump bgord/scripts**
+- 2025-11-08 19:27 42a5d82 **step: update packages**
+- 2025-11-08 19:27 409f5ff **step: update bun**
 ## 2025-11-01 22:54 v1.4.10
 - 2025-11-01 22:54 33267a9 **1.4.10**
 - 2025-11-01 22:52 6df3091 **step: unify button link use case**
+- 2025-11-01 21:54 1c946d9 **docs: generate CHANGELOG**
 - 2025-11-01 21:52 5fb1103 **docs: generate CHANGELOG**
 - 2025-10-31 11:46 833e62d **refactor: remove unused step**
 ## 2025-10-30 08:59 v1.4.9
