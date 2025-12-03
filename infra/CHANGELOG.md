@@ -1,9 +1,11 @@
 # Changelog
+- 2025-12-03 10:25 50c43e4 **step: update packages**
 - 2025-12-01 11:51 dab1cdb **step: bump bgord/scripts**
 ## 2025-12-01 11:49 v1.4.12
 - 2025-12-01 11:49 f55e47f **step: remove lodash**
 - 2025-12-01 11:49 7888991 **1.4.12**
 - 2025-12-01 11:49 283704a **step: update packages**
+- 2025-12-01 10:51 9c6d34a **docs: generate CHANGELOG**
 - 2025-12-01 10:50 d0cee70 **docs: generate CHANGELOG**
 ## 2025-11-14 17:01 v1.4.11
 - 2025-11-14 17:01 e56f694 **1.4.11**
