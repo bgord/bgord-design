@@ -5,7 +5,7 @@
 Clone the repository
 
 ```
-git clone git@github.com:bgord/journal.git --recurse-submodules
+git clone git@github.com:bgord/bgord-design.git --recurse-submodules
 ```
 
 Install packages
