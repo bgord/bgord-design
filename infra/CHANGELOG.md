@@ -1,6 +1,10 @@
 # Changelog
+## 2025-12-09 20:58 v1.4.13
+- 2025-12-09 20:58 bcfed45 **1.4.13**
 - 2025-12-09 20:57 6a61489 **step: update packages**
 - 2025-12-09 20:56 4d17078 **step: bump bgord/scripts**
+- 2025-12-09 19:57 887c6ab **docs: generate CHANGELOG**
+- 2025-12-09 19:57 4afc811 **docs: generate readme**
 - 2025-12-03 11:43 aea87ee **step: bump bgord/scripts**
 - 2025-12-03 10:43 424bc44 **docs: generate CHANGELOG**
 - 2025-12-03 10:25 50c43e4 **step: update packages**
