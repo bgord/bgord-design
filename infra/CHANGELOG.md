@@ -1,5 +1,7 @@
 # Changelog
+- 2025-12-12 13:46 033e04f **step: update packages**
 - 2025-12-11 23:12 c80470a **step: update packages**
+- 2025-12-11 22:12 d22a138 **docs: generate CHANGELOG**
 ## 2025-12-09 20:58 v1.4.13
 - 2025-12-09 20:58 bcfed45 **1.4.13**
 - 2025-12-09 20:57 6a61489 **step: update packages**
