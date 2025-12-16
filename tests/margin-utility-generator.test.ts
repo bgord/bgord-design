@@ -8,6 +8,7 @@ describe("MarginUtilityGenerator", () => {
     const generator = new MarginUtilityGenerator(SpacingTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-m='4'] { margin: var(--spacing-4); }");
     expect(css).toContain("[data-mt='4'] { margin-top: var(--spacing-4); }");
     expect(css).toContain("[data-mr='4'] { margin-right: var(--spacing-4); }");
@@ -17,6 +18,7 @@ describe("MarginUtilityGenerator", () => {
     expect(css).toContain("[data-my='4'] { margin-top: var(--spacing-4); margin-bottom: var(--spacing-4); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"data-m"');
     expect(ts).toContain('"data-mt"');
     expect(ts).toContain('"data-mr"');

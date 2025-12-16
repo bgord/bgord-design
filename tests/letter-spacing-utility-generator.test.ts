@@ -8,6 +8,7 @@ describe("LetterSpacingUtilityGenerator", () => {
     const generator = new LetterSpacingUtilityGenerator(LetterSpacingTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }");
     expect(css).toContain("[data-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }");
     expect(css).toContain("[data-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }");
@@ -16,6 +17,7 @@ describe("LetterSpacingUtilityGenerator", () => {
     expect(css).toContain("[data-ls='unset'] { letter-spacing: var(--letter-spacing-unset); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toEqualIgnoringWhitespace(`
       "data-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset";
     `);

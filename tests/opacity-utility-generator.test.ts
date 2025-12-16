@@ -8,11 +8,13 @@ describe("OpacityUtilityGenerator", () => {
     const generator = new OpacityUtilityGenerator(OpacityTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-opacity='high'] { opacity: var(--opacity-high); }");
     expect(css).toContain("[data-opacity='medium'] { opacity: var(--opacity-medium); }");
     expect(css).toContain("[data-opacity='low'] { opacity: var(--opacity-low); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"high"');
     expect(ts).toContain('"medium"');
     expect(ts).toContain('"low"');

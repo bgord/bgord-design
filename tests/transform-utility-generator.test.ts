@@ -6,6 +6,7 @@ describe("TransformUtilityGenerator", () => {
     const generator = new TransformUtilityGenerator();
 
     const css = generator.css();
+
     expect(css).toContain("[data-transform~='uppercase'] {\n  text-transform: uppercase;\n}\n");
     expect(css).toContain(
       "[data-transform~='truncate'] {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n",
@@ -23,6 +24,7 @@ describe("TransformUtilityGenerator", () => {
     );
 
     const ts = generator.toTypeScript();
+
     expect(ts).toEqualIgnoringWhitespace(
       `"data-transform"?: "uppercase" | "lowercase" | "capitalize" | "upper-first" | "truncate" | "center" | "nowrap" | "none" | "line-clamp" | "font-variant-numeric";`,
     );

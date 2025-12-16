@@ -8,6 +8,7 @@ describe("PositionersUtilityGenerator", () => {
     const generator = new PositionersUtilityGenerator(SpacingTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-top='4'] { top: var(--spacing-4); }");
     expect(css).toContain("[data-right='4'] { right: var(--spacing-4); }");
     expect(css).toContain("[data-bottom='4'] { bottom: var(--spacing-4); }");
@@ -15,6 +16,7 @@ describe("PositionersUtilityGenerator", () => {
     expect(css).toContain("[data-inset='4'] { inset: var(--spacing-4); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"data-top"');
     expect(ts).toContain('"data-right"');
     expect(ts).toContain('"data-bottom"');

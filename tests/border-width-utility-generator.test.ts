@@ -8,6 +8,7 @@ describe("BorderWidthUtilityGenerator", () => {
     const generator = new BorderWidthUtilityGenerator(BorderWidthTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-bw='base'] { border-width: var(--border-width-base); }");
     expect(css).toContain("[data-bwt='base'] { border-top-width: var(--border-width-base); }");
     expect(css).toContain("[data-bwr='base'] { border-right-width: var(--border-width-base); }");
@@ -21,6 +22,7 @@ describe("BorderWidthUtilityGenerator", () => {
     );
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"data-bw"?:');
     expect(ts).toContain('"data-bwt"?:');
     expect(ts).toContain('"data-bwr"?:');

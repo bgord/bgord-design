@@ -9,7 +9,6 @@ describe("FontColorUtilityGenerator", () => {
     const PositiveTokenGenerator = new Tokens.PositiveTokenGenerator();
     const DangerTokenGenerator = new Tokens.DangerTokenGenerator();
     const WarningTokenGenerator = new Tokens.WarningTokenGenerator();
-
     const generator = new FontColorUtilityGenerator(
       GrayscaleTokenGenerator,
       BrandTokenGenerator,
@@ -19,6 +18,7 @@ describe("FontColorUtilityGenerator", () => {
     );
 
     const css = generator.css();
+
     expect(css).toContain("[data-color='neutral-900'] { color: var(--color-neutral-900); }");
     expect(css).toContain("[data-color='brand-500'] { color: var(--color-brand-500); }");
     expect(css).toContain("[data-color='positive-600'] { color: var(--color-positive-600); }");
@@ -26,6 +26,7 @@ describe("FontColorUtilityGenerator", () => {
     expect(css).toContain("[data-color='warning-500'] { color: var(--color-warning-500); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"neutral-900"');
     expect(ts).toContain('"brand-500"');
     expect(ts).toContain('"positive-600"');
@@ -40,7 +41,6 @@ describe("FontColorUtilityGenerator", () => {
     const PositiveTokenGenerator = new Tokens.PositiveTokenGenerator();
     const DangerTokenGenerator = new Tokens.DangerTokenGenerator();
     const WarningTokenGenerator = new Tokens.WarningTokenGenerator();
-
     const generator = new FontColorUtilityGenerator(
       GrayscaleTokenGenerator,
       BrandTokenGenerator,
@@ -50,9 +50,11 @@ describe("FontColorUtilityGenerator", () => {
     );
 
     const css = generator.css();
+
     expect(css).toContain("[data-color='foo'] { color: var(--color-foo); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"foo"');
   });
 });

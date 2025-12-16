@@ -21,7 +21,6 @@ describe("AxisPlacementUtilityGenerator", () => {
       [data-main='baseline'] { justify-content: baseline; }
       [data-cross='baseline'] { align-items: baseline; }
     `);
-
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-main"?: "start" | "end" | "around" | "evenly" | "between" | "center" | "baseline"; "data-cross"?: "start" | "end" | "around" | "evenly" | "between" | "center" | "baseline";
     `);

@@ -8,11 +8,13 @@ describe("GapUtilityGenerator", () => {
     const generator = new GapUtilityGenerator(SpacingTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-gap='0'] { gap: var(--spacing-0); }");
     expect(css).toContain("[data-gap='1'] { gap: var(--spacing-1); }");
     expect(css).toContain("[data-gap='4'] { gap: var(--spacing-4); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"0"');
     expect(ts).toContain('"1"');
     expect(ts).toContain('"4"');

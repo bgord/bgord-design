@@ -8,11 +8,13 @@ describe("MaxHeightUtilityGenerator", () => {
     const generator = new MaxHeightUtilityGenerator(BreakpointTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-maxh='100%'] { max-height: 100%; }");
     expect(css).toContain("[data-maxh='unset'] { max-height: unset; }");
     expect(css).toContain("[data-maxh='md'] { max-height: 768px; }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"100%"');
     expect(ts).toContain('"unset"');
     expect(ts).toContain('"md"');

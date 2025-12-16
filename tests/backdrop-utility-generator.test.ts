@@ -8,6 +8,7 @@ describe("BackdropUtilityGenerator", () => {
     const generator = new BackdropUtilityGenerator(BackdropsTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-backdrop='none']::backdrop { background: var(--backdrop-none); }");
     expect(css).toContain("[data-backdrop='weak']::backdrop { background: var(--backdrop-weak); }");
     expect(css).toContain("[data-backdrop='medium']::backdrop { background: var(--backdrop-medium); }");
@@ -15,6 +16,7 @@ describe("BackdropUtilityGenerator", () => {
     expect(css).toContain("[data-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"none"');
     expect(ts).toContain('"weak"');
     expect(ts).toContain('"medium"');

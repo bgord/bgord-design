@@ -9,7 +9,6 @@ describe("BorderColorUtilityGenerator", () => {
     const PositiveTokenGenerator = new Tokens.PositiveTokenGenerator();
     const DangerTokenGenerator = new Tokens.DangerTokenGenerator();
     const WarningTokenGenerator = new Tokens.WarningTokenGenerator();
-
     const generator = new BorderColorUtilityGenerator(
       GrayscaleTokenGenerator,
       BrandTokenGenerator,
@@ -19,6 +18,7 @@ describe("BorderColorUtilityGenerator", () => {
     );
 
     const css = generator.css();
+
     expect(css).toContain(
       "[data-bc='neutral-900'] { border-color: var(--color-neutral-900); border-style: solid; }",
     );
@@ -42,6 +42,7 @@ describe("BorderColorUtilityGenerator", () => {
     );
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"neutral-900"');
     expect(ts).toContain('"brand-500"');
     expect(ts).toContain('"positive-600"');
@@ -62,7 +63,6 @@ describe("BorderColorUtilityGenerator", () => {
     const PositiveTokenGenerator = new Tokens.PositiveTokenGenerator();
     const DangerTokenGenerator = new Tokens.DangerTokenGenerator();
     const WarningTokenGenerator = new Tokens.WarningTokenGenerator();
-
     const generator = new BorderColorUtilityGenerator(
       GrayscaleTokenGenerator,
       BrandTokenGenerator,
@@ -72,9 +72,11 @@ describe("BorderColorUtilityGenerator", () => {
     );
 
     const css = generator.css();
+
     expect(css).toContain("[data-bc='foo'] { border-color: var(--color-foo); border-style: solid; }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"foo"');
   });
 });

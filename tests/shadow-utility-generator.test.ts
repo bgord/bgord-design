@@ -8,10 +8,12 @@ describe("ShadowUtilityGenerator", () => {
     const generator = new ShadowUtilityGenerator(ShadowTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-shadow='sm'] { box-shadow: var(--shadow-sm); }");
     expect(css).toContain("[data-shadow='lg'] { box-shadow: var(--shadow-lg); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"sm"');
     expect(ts).toContain('"lg"');
   });

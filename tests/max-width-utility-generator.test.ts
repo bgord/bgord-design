@@ -8,11 +8,13 @@ describe("MaxWidthUtilityGenerator", () => {
     const generator = new MaxWidthUtilityGenerator(BreakpointTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-maxw='100%'] { max-width: 100%; }");
     expect(css).toContain("[data-maxw='unset'] { max-width: unset; }");
     expect(css).toContain("[data-maxw='md'] { max-width: 768px; }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"100%"');
     expect(ts).toContain('"unset"');
     expect(ts).toContain('"md"');

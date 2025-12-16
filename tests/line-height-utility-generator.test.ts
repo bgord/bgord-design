@@ -8,6 +8,7 @@ describe("LineHeightUtilityGenerator", () => {
     const generator = new LineHeightUtilityGenerator(LineHeightTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-lh='none'] { line-height: var(--line-height-none); }");
     expect(css).toContain("[data-lh='tight'] { line-height: var(--line-height-tight); }");
     expect(css).toContain("[data-lh='base'] { line-height: var(--line-height-base); }");
@@ -16,6 +17,7 @@ describe("LineHeightUtilityGenerator", () => {
     expect(css).toContain("[data-lh='unset'] { line-height: var(--line-height-unset); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toEqualIgnoringWhitespace(`
       "data-lh"?: "none" | "tight" | "base" | "loose" | "display" | "unset";
     `);

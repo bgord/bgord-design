@@ -8,6 +8,7 @@ describe("PaddingUtilityGenerator", () => {
     const generator = new PaddingUtilityGenerator(SpacingTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-p='4'] { padding: var(--spacing-4); }");
     expect(css).toContain("[data-pt='4'] { padding-top: var(--spacing-4); }");
     expect(css).toContain("[data-pr='4'] { padding-right: var(--spacing-4); }");
@@ -21,6 +22,7 @@ describe("PaddingUtilityGenerator", () => {
     );
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"data-p"');
     expect(ts).toContain('"data-pt"');
     expect(ts).toContain('"data-pr"');

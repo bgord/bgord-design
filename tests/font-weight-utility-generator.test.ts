@@ -8,6 +8,7 @@ describe("FontWeightUtilityGenerator", () => {
     const generator = new FontWeightUtilityGenerator(FontWeightTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-fw='light'] { font-weight: var(--font-weight-light); }");
     expect(css).toContain("[data-fw='regular'] { font-weight: var(--font-weight-regular); }");
     expect(css).toContain("[data-fw='medium'] { font-weight: var(--font-weight-medium); }");
@@ -16,6 +17,7 @@ describe("FontWeightUtilityGenerator", () => {
     expect(css).toContain("[data-fw='unset'] { font-weight: var(--font-weight-unset); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toEqualIgnoringWhitespace(`
       "data-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset";
     `);

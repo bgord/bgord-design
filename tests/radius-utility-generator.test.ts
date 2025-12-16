@@ -8,11 +8,13 @@ describe("RadiusUtilityGenerator", () => {
     const generator = new RadiusUtilityGenerator(RadiusTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-br='none'] { border-radius: var(--radius-none); }");
     expect(css).toContain("[data-br='sm'] { border-radius: var(--radius-sm); }");
     expect(css).toContain("[data-br='pill'] { border-radius: var(--radius-pill); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"none"');
     expect(ts).toContain('"sm"');
     expect(ts).toContain('"pill"');

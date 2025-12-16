@@ -8,6 +8,7 @@ describe("ZIndexUtilityGenerator", () => {
     const generator = new ZIndexUtilityGenerator(ZIndexTokenGenerator);
 
     const css = generator.css();
+
     expect(css).toContain("[data-z='negative'] { z-index: var(--z-index-negative); }");
     expect(css).toContain("[data-z='0'] { z-index: var(--z-index-0); }");
     expect(css).toContain("[data-z='1'] { z-index: var(--z-index-1); }");
@@ -15,6 +16,7 @@ describe("ZIndexUtilityGenerator", () => {
     expect(css).toContain("[data-z='3'] { z-index: var(--z-index-3); }");
 
     const ts = generator.toTypeScript();
+
     expect(ts).toContain('"negative"');
     expect(ts).toContain('"0"');
     expect(ts).toContain('"1"');
