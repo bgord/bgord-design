@@ -1,5 +1,8 @@
 # Changelog
+- 2025-12-25 12:21 ae13b55 **step: update packages**
+- 2025-12-17 23:07 41db542 **step: update packages**
 - 2025-12-16 11:26 3b21c84 **refactor: arrange act assert**
+- 2025-12-16 10:27 9da647f **docs: generate CHANGELOG**
 ## 2025-12-16 09:13 v1.4.15
 - 2025-12-16 09:13 3a50781 **1.4.15**
 - 2025-12-16 09:13 216ce1b **step: update packages**
