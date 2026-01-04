@@ -1,6 +1,9 @@
 # Changelog
+- 2026-01-04 16:11 d9bf5a1 **step: install stryker**
+- 2026-01-04 16:09 7210170 **step: update packages**
 - 2026-01-04 16:08 45377e1 **step: bump bgord/scripts**
 - 2026-01-04 16:06 a25236d **step: bump bgord/scripts**
+- 2026-01-04 15:08 d445b01 **docs: generate CHANGELOG**
 ## 2025-12-29 16:57 v1.4.16
 - 2025-12-29 16:57 9ed9415 **1.4.16**
 - 2025-12-29 16:56 1f2f0cd **step: update packages**
