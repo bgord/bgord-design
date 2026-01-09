@@ -9,6 +9,7 @@ describe("MarginUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Margin utilities");
     expect(css).toContain("[data-m='4'] { margin: var(--spacing-4); }");
     expect(css).toContain("[data-mt='4'] { margin-top: var(--spacing-4); }");
     expect(css).toContain("[data-mr='4'] { margin-right: var(--spacing-4); }");

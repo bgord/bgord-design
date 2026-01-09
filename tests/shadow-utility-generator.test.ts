@@ -9,6 +9,7 @@ describe("ShadowUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Shadow utilities");
     expect(css).toContain("[data-shadow='sm'] { box-shadow: var(--shadow-sm); }");
     expect(css).toContain("[data-shadow='lg'] { box-shadow: var(--shadow-lg); }");
 

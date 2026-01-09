@@ -7,6 +7,7 @@ describe("FontSizeUtilityGenerator", () => {
     const FontSizeTokenGenerator = new Tokens.FontSizeTokenGenerator();
     const generator = new FontSizeUtilityGenerator(FontSizeTokenGenerator);
 
+    expect(generator.name).toEqual("Font-size utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-fs='xs'] { font-size: var(--font-size-xs); }
       [data-fs='sm'] { font-size: var(--font-size-sm); }
@@ -18,7 +19,6 @@ describe("FontSizeUtilityGenerator", () => {
       [data-fs='4xl'] { font-size: var(--font-size-4xl); }
       [data-fs='5xl'] { font-size: var(--font-size-5xl); }
     `);
-
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
     `);
@@ -40,7 +40,6 @@ describe("FontSizeUtilityGenerator", () => {
       [data-fs='5xl'] { font-size: var(--font-size-5xl); }
       [data-fs='biggie'] { font-size: var(--font-size-biggie); }
     `);
-
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "biggie";
     `);

@@ -9,6 +9,7 @@ describe("RadiusUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Radius utilities");
     expect(css).toContain("[data-br='none'] { border-radius: var(--radius-none); }");
     expect(css).toContain("[data-br='sm'] { border-radius: var(--radius-sm); }");
     expect(css).toContain("[data-br='pill'] { border-radius: var(--radius-pill); }");

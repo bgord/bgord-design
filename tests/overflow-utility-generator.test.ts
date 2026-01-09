@@ -5,12 +5,12 @@ describe("OverflowUtilityGenerator", () => {
   test("basic usage", () => {
     const generator = new OverflowUtilityGenerator();
 
+    expect(generator.name).toEqual("Overflow utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-overflow='auto'] { overflow: auto; }
       [data-overflow='scroll'] { overflow: scroll; }
       [data-overflow='hidden'] { overflow: hidden; }
     `);
-
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-overflow"?: "auto" | "scroll" | "hidden";
     `);

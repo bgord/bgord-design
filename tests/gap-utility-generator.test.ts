@@ -9,6 +9,7 @@ describe("GapUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Gap utilities");
     expect(css).toContain("[data-gap='0'] { gap: var(--spacing-0); }");
     expect(css).toContain("[data-gap='1'] { gap: var(--spacing-1); }");
     expect(css).toContain("[data-gap='4'] { gap: var(--spacing-4); }");

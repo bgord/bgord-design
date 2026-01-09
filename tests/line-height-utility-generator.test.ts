@@ -9,6 +9,7 @@ describe("LineHeightUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Line height utilities");
     expect(css).toContain("[data-lh='none'] { line-height: var(--line-height-none); }");
     expect(css).toContain("[data-lh='tight'] { line-height: var(--line-height-tight); }");
     expect(css).toContain("[data-lh='base'] { line-height: var(--line-height-base); }");

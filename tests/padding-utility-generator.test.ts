@@ -9,6 +9,7 @@ describe("PaddingUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Padding utilities");
     expect(css).toContain("[data-p='4'] { padding: var(--spacing-4); }");
     expect(css).toContain("[data-pt='4'] { padding-top: var(--spacing-4); }");
     expect(css).toContain("[data-pr='4'] { padding-right: var(--spacing-4); }");

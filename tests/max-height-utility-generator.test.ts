@@ -9,6 +9,7 @@ describe("MaxHeightUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Max height utilities");
     expect(css).toContain("[data-maxh='100%'] { max-height: 100%; }");
     expect(css).toContain("[data-maxh='unset'] { max-height: unset; }");
     expect(css).toContain("[data-maxh='md'] { max-height: 768px; }");

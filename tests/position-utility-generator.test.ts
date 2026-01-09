@@ -5,6 +5,7 @@ describe("PositionUtilityGenerator", () => {
   test("basic usage", () => {
     const generator = new PositionUtilityGenerator();
 
+    expect(generator.name).toEqual("Position utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-position='static'] { position: static; }
       [data-position='relative'] { position: relative; }
@@ -13,7 +14,6 @@ describe("PositionUtilityGenerator", () => {
       [data-position='sticky'] { position: sticky; }
       [data-position='unset'] { position: unset; }
     `);
-
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-position"?: "static" | "relative" | "absolute" | "fixed" | "sticky" | "unset";
     `);

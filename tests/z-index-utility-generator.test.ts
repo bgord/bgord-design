@@ -9,6 +9,7 @@ describe("ZIndexUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Z-index utilities");
     expect(css).toContain("[data-z='negative'] { z-index: var(--z-index-negative); }");
     expect(css).toContain("[data-z='0'] { z-index: var(--z-index-0); }");
     expect(css).toContain("[data-z='1'] { z-index: var(--z-index-1); }");

@@ -9,6 +9,7 @@ describe("LetterSpacingUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Letter spacing utilities");
     expect(css).toContain("[data-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }");
     expect(css).toContain("[data-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }");
     expect(css).toContain("[data-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }");

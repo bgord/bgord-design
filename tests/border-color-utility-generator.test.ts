@@ -19,6 +19,7 @@ describe("BorderColorUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Border color utilities");
     expect(css).toContain(
       "[data-bc='neutral-900'] { border-color: var(--color-neutral-900); border-style: solid; }",
     );

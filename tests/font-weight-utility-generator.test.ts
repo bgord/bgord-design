@@ -9,6 +9,7 @@ describe("FontWeightUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Font-weight utilities");
     expect(css).toContain("[data-fw='light'] { font-weight: var(--font-weight-light); }");
     expect(css).toContain("[data-fw='regular'] { font-weight: var(--font-weight-regular); }");
     expect(css).toContain("[data-fw='medium'] { font-weight: var(--font-weight-medium); }");

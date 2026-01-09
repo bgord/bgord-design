@@ -7,6 +7,7 @@ describe("StackUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Stack utilities");
     expect(css).toContain("[data-stack='x'] { display: flex; flex-wrap: wrap; }");
     expect(css).toContain("[data-stack='y'] { display: flex; flex-wrap: wrap; flex-direction: column; }");
 

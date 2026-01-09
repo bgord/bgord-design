@@ -19,6 +19,7 @@ describe("BackgroundUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Background utilities");
     expect(css).toContain("[data-bg='neutral-900'] { background: var(--color-neutral-900); }");
     expect(css).toContain("[data-bg='brand-500'] { background: var(--color-brand-500); }");
     expect(css).toContain("[data-bg='positive-600'] { background: var(--color-positive-600); }");

@@ -5,6 +5,7 @@ describe("AxisPlacementUtilityGenerator", () => {
   test("basic usage", () => {
     const generator = new AxisPlacementUtilityGenerator();
 
+    expect(generator.name).toEqual("Axis placement utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-main='start'] { justify-content: flex-start; }
       [data-cross='start'] { align-items: flex-start; }

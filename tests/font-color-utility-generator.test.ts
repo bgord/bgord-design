@@ -19,6 +19,7 @@ describe("FontColorUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Font-color utilities");
     expect(css).toContain("[data-color='neutral-900'] { color: var(--color-neutral-900); }");
     expect(css).toContain("[data-color='brand-500'] { color: var(--color-brand-500); }");
     expect(css).toContain("[data-color='positive-600'] { color: var(--color-positive-600); }");

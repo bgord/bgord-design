@@ -7,12 +7,12 @@ describe("FontFamilyUtilityGenerator", () => {
     const FontFamilyTokenGenerator = new Tokens.FontFamilyTokenGenerator();
     const generator = new FontFamilyUtilityGenerator(FontFamilyTokenGenerator);
 
+    expect(generator.name).toEqual("Font-family utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-ff='sans'] { font-family: var(--font-family-sans); }
       [data-ff='serif'] { font-family: var(--font-family-serif); }
       [data-ff='mono'] { font-family: var(--font-family-mono); }
     `);
-
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-ff"?: "sans" | "serif" | "mono";
     `);

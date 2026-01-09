@@ -9,6 +9,7 @@ describe("BackdropUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Backdrop utilities");
     expect(css).toContain("[data-backdrop='none']::backdrop { background: var(--backdrop-none); }");
     expect(css).toContain("[data-backdrop='weak']::backdrop { background: var(--backdrop-weak); }");
     expect(css).toContain("[data-backdrop='medium']::backdrop { background: var(--backdrop-medium); }");

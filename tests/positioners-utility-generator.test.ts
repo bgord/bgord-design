@@ -9,6 +9,7 @@ describe("PositionersUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Positioners utilities");
     expect(css).toContain("[data-top='4'] { top: var(--spacing-4); }");
     expect(css).toContain("[data-right='4'] { right: var(--spacing-4); }");
     expect(css).toContain("[data-bottom='4'] { bottom: var(--spacing-4); }");

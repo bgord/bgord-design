@@ -7,6 +7,7 @@ describe("TransformUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Transform utilities");
     expect(css).toContain("[data-transform~='uppercase'] {\n  text-transform: uppercase;\n}\n");
     expect(css).toContain(
       "[data-transform~='truncate'] {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n",

@@ -9,6 +9,7 @@ describe("OpacityUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Opacity utilities");
     expect(css).toContain("[data-opacity='high'] { opacity: var(--opacity-high); }");
     expect(css).toContain("[data-opacity='medium'] { opacity: var(--opacity-medium); }");
     expect(css).toContain("[data-opacity='low'] { opacity: var(--opacity-low); }");

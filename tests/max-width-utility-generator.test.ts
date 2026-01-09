@@ -9,6 +9,7 @@ describe("MaxWidthUtilityGenerator", () => {
 
     const css = generator.css();
 
+    expect(generator.name).toEqual("Max width utilities");
     expect(css).toContain("[data-maxw='100%'] { max-width: 100%; }");
     expect(css).toContain("[data-maxw='unset'] { max-width: unset; }");
     expect(css).toContain("[data-maxw='md'] { max-width: 768px; }");

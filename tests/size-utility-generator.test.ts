@@ -7,6 +7,7 @@ describe("SizeUtilityGenerator", () => {
     const tokenGenerator = new SizeTokenGenerator();
     const generator = new SizeUtilityGenerator(tokenGenerator);
 
+    expect(generator.name).toEqual("Size utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-size='xs'] { height: var(--size-xs); width: var(--size-xs); }
       [data-size='sm'] { height: var(--size-sm); width: var(--size-sm); }
@@ -15,7 +16,6 @@ describe("SizeUtilityGenerator", () => {
       [data-size='xl'] { height: var(--size-xl); width: var(--size-xl); }
       [data-size='2xl'] { height: var(--size-2xl); width: var(--size-2xl); }
     `);
-
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-size"?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
     `);
