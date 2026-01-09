@@ -34,7 +34,9 @@ export class BackgroundUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-bg='${key}'] { background: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

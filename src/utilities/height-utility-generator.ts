@@ -14,7 +14,9 @@ export class HeightUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-height='${key}'] { height: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

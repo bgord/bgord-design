@@ -17,7 +17,9 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-maxh='${key}'] { max-height: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

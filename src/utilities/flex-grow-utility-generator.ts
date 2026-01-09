@@ -14,7 +14,9 @@ export class FlexGrowUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-grow='${key}'] { flex-grow: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

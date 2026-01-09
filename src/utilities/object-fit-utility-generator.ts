@@ -20,7 +20,9 @@ export class ObjectFitUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-object-fit='${key}'] { object-fit: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

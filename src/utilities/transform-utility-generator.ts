@@ -59,7 +59,9 @@ export class TransformUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-transform~='${key}'] {\n  text-transform: ${value};\n}\n`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

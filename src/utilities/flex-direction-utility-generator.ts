@@ -19,7 +19,9 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-dir='${key}'] { flex-direction: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

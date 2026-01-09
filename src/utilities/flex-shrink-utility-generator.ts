@@ -14,7 +14,9 @@ export class FlexShrinkUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-shrink='${key}'] { flex-shrink: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

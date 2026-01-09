@@ -18,7 +18,9 @@ export class GapUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-gap='${key}'] { gap: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

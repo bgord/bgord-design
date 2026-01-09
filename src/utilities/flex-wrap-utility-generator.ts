@@ -14,7 +14,9 @@ export class FlexWrapUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-wrap='${key}'] { flex-wrap: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

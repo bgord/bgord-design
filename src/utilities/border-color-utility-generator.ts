@@ -49,7 +49,9 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       );
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

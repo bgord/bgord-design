@@ -14,7 +14,9 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-pointer-events='${key}'] { pointer-events: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

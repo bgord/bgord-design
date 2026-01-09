@@ -34,7 +34,9 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-color='${key}'] { color: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

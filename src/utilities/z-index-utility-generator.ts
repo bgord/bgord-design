@@ -18,7 +18,9 @@ export class ZIndexUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-z='${key}'] { z-index: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

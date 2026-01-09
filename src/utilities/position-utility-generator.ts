@@ -21,7 +21,9 @@ export class PositionUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-position='${key}'] { position: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

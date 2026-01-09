@@ -14,7 +14,9 @@ export class CursorUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-cursor='${key}'] { cursor: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

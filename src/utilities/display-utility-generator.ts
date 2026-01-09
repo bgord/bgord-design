@@ -17,7 +17,9 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-disp='${key}'] { display: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

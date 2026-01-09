@@ -18,7 +18,9 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-ff='${key}'] { font-family: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

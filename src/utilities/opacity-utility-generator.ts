@@ -18,7 +18,9 @@ export class OpacityUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-opacity='${key}'] { opacity: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

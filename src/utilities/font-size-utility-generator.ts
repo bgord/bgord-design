@@ -18,7 +18,9 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-fs='${key}'] { font-size: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

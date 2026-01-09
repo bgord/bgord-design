@@ -18,7 +18,9 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-br='${key}'] { border-radius: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

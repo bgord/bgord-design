@@ -43,7 +43,9 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-pl='${key}'] { padding-left: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

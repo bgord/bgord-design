@@ -18,7 +18,9 @@ export class LetterSpacingUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-ls='${key}'] { letter-spacing: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

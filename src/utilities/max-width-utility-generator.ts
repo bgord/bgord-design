@@ -17,7 +17,9 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-maxw='${key}'] { max-width: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

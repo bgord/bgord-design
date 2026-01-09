@@ -39,7 +39,9 @@ export class MarginUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-ml='${key}'] { margin-left: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

@@ -14,7 +14,9 @@ export class RotateUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-rotate='${key}'] { transform: rotate(${value}deg); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

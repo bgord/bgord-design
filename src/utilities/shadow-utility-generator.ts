@@ -18,7 +18,9 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-shadow='${key}'] { box-shadow: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

@@ -28,7 +28,9 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
       );
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

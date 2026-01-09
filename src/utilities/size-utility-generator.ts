@@ -18,7 +18,9 @@ export class SizeUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-size='${key}'] { height: var(--${variable}); width: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

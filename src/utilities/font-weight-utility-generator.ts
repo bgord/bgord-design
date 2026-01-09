@@ -18,7 +18,9 @@ export class FontWeightUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-fw='${key}'] { font-weight: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

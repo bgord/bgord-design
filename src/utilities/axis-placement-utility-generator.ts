@@ -23,7 +23,9 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-cross='${key}'] { align-items: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

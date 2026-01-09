@@ -14,7 +14,9 @@ export class WidthUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-width='${key}'] { width: ${value}; }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {

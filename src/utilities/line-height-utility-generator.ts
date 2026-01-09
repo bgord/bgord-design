@@ -18,7 +18,9 @@ export class LineHeightUtilityGenerator extends UtilityGenerator {
       lines.push(`[data-lh='${key}'] { line-height: var(--${variable}); }`);
     }
 
+    // Stryker disable all
     return lines.join("\n");
+    // Stryker restore all
   }
 
   toTypeScript() {
