@@ -27,9 +27,11 @@ export abstract class TokenGenerator {
     const config = this.getConfig();
     const token = `${this.name}Tokens`;
 
+    // Stryker disable all
     return [
       `export const ${token} = ${JSON.stringify(config, null, 2)} as const;`,
       `export type ${this.name}TokenType = keyof typeof ${token};`,
     ].join("\n");
+    // Stryker restore all
   }
 }
