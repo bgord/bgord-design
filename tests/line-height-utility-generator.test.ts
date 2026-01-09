@@ -7,19 +7,16 @@ describe("LineHeightUtilityGenerator", () => {
     const LineHeightTokenGenerator = new Tokens.LineHeightTokenGenerator();
     const generator = new LineHeightUtilityGenerator(LineHeightTokenGenerator);
 
-    const css = generator.css();
-
     expect(generator.name).toEqual("Line height utilities");
-    expect(css).toContain("[data-lh='none'] { line-height: var(--line-height-none); }");
-    expect(css).toContain("[data-lh='tight'] { line-height: var(--line-height-tight); }");
-    expect(css).toContain("[data-lh='base'] { line-height: var(--line-height-base); }");
-    expect(css).toContain("[data-lh='loose'] { line-height: var(--line-height-loose); }");
-    expect(css).toContain("[data-lh='display'] { line-height: var(--line-height-display); }");
-    expect(css).toContain("[data-lh='unset'] { line-height: var(--line-height-unset); }");
-
-    const ts = generator.toTypeScript();
-
-    expect(ts).toEqualIgnoringWhitespace(`
+    expect(generator.css()).toEqualIgnoringWhitespace(`
+      [data-lh='none'] { line-height: var(--line-height-none); }
+      [data-lh='tight'] { line-height: var(--line-height-tight); }
+      [data-lh='base'] { line-height: var(--line-height-base); }
+      [data-lh='loose'] { line-height: var(--line-height-loose); }
+      [data-lh='display'] { line-height: var(--line-height-display); }
+      [data-lh='unset'] { line-height: var(--line-height-unset); }
+    `);
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-lh"?: "none" | "tight" | "base" | "loose" | "display" | "unset";
     `);
   });
@@ -28,7 +25,17 @@ describe("LineHeightUtilityGenerator", () => {
     const LineHeightTokenGenerator = new Tokens.LineHeightTokenGenerator({ "line-height-huge": "3" });
     const generator = new LineHeightUtilityGenerator(LineHeightTokenGenerator);
 
-    expect(generator.css()).toContain("[data-lh='huge'] { line-height: var(--line-height-huge); }");
-    expect(generator.toTypeScript()).toContain('"huge"');
+    expect(generator.css()).toEqualIgnoringWhitespace(`
+      [data-lh='none'] { line-height: var(--line-height-none); }
+      [data-lh='tight'] { line-height: var(--line-height-tight); }
+      [data-lh='base'] { line-height: var(--line-height-base); }
+      [data-lh='loose'] { line-height: var(--line-height-loose); }
+      [data-lh='display'] { line-height: var(--line-height-display); }
+      [data-lh='unset'] { line-height: var(--line-height-unset); }
+      [data-lh='huge'] { line-height: var(--line-height-huge); }
+    `);
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
+      "data-lh"?: "none" | "tight" | "base" | "loose" | "display" | "unset" | "huge";
+    `);
   });
 });

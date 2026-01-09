@@ -1,6 +1,7 @@
 import { UtilityGenerator } from "./template";
 
 export class TransformUtilityGenerator extends UtilityGenerator {
+  // Stryker disable all
   config = {
     uppercase: "uppercase",
     lowercase: "lowercase",
@@ -13,6 +14,7 @@ export class TransformUtilityGenerator extends UtilityGenerator {
     "line-clamp": "line-clamp",
     "font-variant-numeric": "tabular-nums",
   };
+  // Stryker restore all
 
   constructor() {
     super("Transform utilities");

@@ -7,28 +7,33 @@ describe("BackdropUtilityGenerator", () => {
     const BackdropsTokenGenerator = new Tokens.BackdropsTokenGenerator();
     const generator = new BackdropUtilityGenerator(BackdropsTokenGenerator);
 
-    const css = generator.css();
-
     expect(generator.name).toEqual("Backdrop utilities");
-    expect(css).toContain("[data-backdrop='none']::backdrop { background: var(--backdrop-none); }");
-    expect(css).toContain("[data-backdrop='weak']::backdrop { background: var(--backdrop-weak); }");
-    expect(css).toContain("[data-backdrop='medium']::backdrop { background: var(--backdrop-medium); }");
-    expect(css).toContain("[data-backdrop='strong']::backdrop { background: var(--backdrop-strong); }");
-    expect(css).toContain("[data-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }");
-
-    const ts = generator.toTypeScript();
-
-    expect(ts).toContain('"none"');
-    expect(ts).toContain('"weak"');
-    expect(ts).toContain('"medium"');
-    expect(ts).toContain('"strong"');
+    expect(generator.css()).toEqualIgnoringWhitespace(`
+      [data-backdrop='none']::backdrop { background: var(--backdrop-none); }
+      [data-backdrop='weak']::backdrop { background: var(--backdrop-weak); }
+      [data-backdrop='medium']::backdrop { background: var(--backdrop-medium); }
+      [data-backdrop='strong']::backdrop { background: var(--backdrop-strong); }
+      [data-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }
+    `);
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(
+      `"data-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger";`,
+    );
   });
 
   test("with overrides", () => {
     const BackdropsTokenGenerator = new Tokens.BackdropsTokenGenerator({ "backdrop-new": "new-value" });
     const generator = new BackdropUtilityGenerator(BackdropsTokenGenerator);
 
-    expect(generator.css()).toContain("[data-backdrop='new']::backdrop { background: var(--backdrop-new); }");
-    expect(generator.toTypeScript()).toContain('"new"');
+    expect(generator.css()).toEqualIgnoringWhitespace(`
+      [data-backdrop='none']::backdrop { background: var(--backdrop-none); }
+      [data-backdrop='weak']::backdrop { background: var(--backdrop-weak); }
+      [data-backdrop='medium']::backdrop { background: var(--backdrop-medium); }
+      [data-backdrop='strong']::backdrop { background: var(--backdrop-strong); }
+      [data-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }
+      [data-backdrop='new']::backdrop { background: var(--backdrop-new); }
+    `);
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(
+      `"data-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger" | "new";`,
+    );
   });
 });

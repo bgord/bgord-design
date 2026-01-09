@@ -5,16 +5,13 @@ describe("StackUtilityGenerator", () => {
   test("basic usage", () => {
     const generator = new StackUtilityGenerator();
 
-    const css = generator.css();
-
     expect(generator.name).toEqual("Stack utilities");
-    expect(css).toContain("[data-stack='x'] { display: flex; flex-wrap: wrap; }");
-    expect(css).toContain("[data-stack='y'] { display: flex; flex-wrap: wrap; flex-direction: column; }");
-
-    const ts = generator.toTypeScript();
-
-    expect(ts).toContain('"x"');
-    expect(ts).toContain('"y"');
-    expect(ts).toMatch(/^"data-stack"\?:/);
+    expect(generator.css()).toEqualIgnoringWhitespace(`
+      [data-stack='x'] { display: flex; flex-wrap: wrap; }
+      [data-stack='y'] { display: flex; flex-wrap: wrap; flex-direction: column; }
+    `);
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
+      "data-stack"?: "x" | "y";
+   `);
   });
 });

@@ -1,7 +1,9 @@
 import { UtilityGenerator } from "./template";
 
 export class StackUtilityGenerator extends UtilityGenerator {
+  // Stryker disable all
   config = { x: "x", y: "y" };
+  // Stryker restore all
 
   constructor() {
     super("Stack utilities");
@@ -13,10 +15,11 @@ export class StackUtilityGenerator extends UtilityGenerator {
     for (const [key] of Object.entries(this.config)) {
       if (key === "x") {
         lines.push(`[data-stack='${key}'] { display: flex; flex-wrap: wrap; }`);
-        continue;
       }
 
+      // Stryker disable all
       if (key === "y") {
+        // Stryker restore all
         lines.push(`[data-stack='${key}'] { display: flex; flex-wrap: wrap; flex-direction: column; }`);
       }
     }

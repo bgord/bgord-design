@@ -7,19 +7,16 @@ describe("LetterSpacingUtilityGenerator", () => {
     const LetterSpacingTokenGenerator = new Tokens.LetterSpacingTokenGenerator();
     const generator = new LetterSpacingUtilityGenerator(LetterSpacingTokenGenerator);
 
-    const css = generator.css();
-
     expect(generator.name).toEqual("Letter spacing utilities");
-    expect(css).toContain("[data-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }");
-    expect(css).toContain("[data-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }");
-    expect(css).toContain("[data-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }");
-    expect(css).toContain("[data-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }");
-    expect(css).toContain("[data-ls='widest'] { letter-spacing: var(--letter-spacing-widest); }");
-    expect(css).toContain("[data-ls='unset'] { letter-spacing: var(--letter-spacing-unset); }");
-
-    const ts = generator.toTypeScript();
-
-    expect(ts).toEqualIgnoringWhitespace(`
+    expect(generator.css()).toEqualIgnoringWhitespace(`
+      [data-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }
+      [data-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }
+      [data-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }
+      [data-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }
+      [data-ls='widest'] { letter-spacing: var(--letter-spacing-widest); }
+      [data-ls='unset'] { letter-spacing: var(--letter-spacing-unset); }
+    `);
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset";
     `);
   });
@@ -30,7 +27,17 @@ describe("LetterSpacingUtilityGenerator", () => {
     });
     const generator = new LetterSpacingUtilityGenerator(LetterSpacingTokenGenerator);
 
-    expect(generator.css()).toContain("[data-ls='insane'] { letter-spacing: var(--letter-spacing-insane); }");
-    expect(generator.toTypeScript()).toContain('"insane"');
+    expect(generator.css()).toEqualIgnoringWhitespace(`
+      [data-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }
+      [data-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }
+      [data-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }
+      [data-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }
+      [data-ls='widest'] { letter-spacing: var(--letter-spacing-widest); }
+      [data-ls='unset'] { letter-spacing: var(--letter-spacing-unset); }
+      [data-ls='insane'] { letter-spacing: var(--letter-spacing-insane); }
+    `);
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
+      "data-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset" | "insane";
+    `);
   });
 });
