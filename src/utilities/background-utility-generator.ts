@@ -3,7 +3,7 @@ import type { DangerTokenGenerator } from "../tokens/danger-token-generator";
 import type { GrayscaleTokenGenerator } from "../tokens/grayscale-token-generator";
 import type { PositiveTokenGenerator } from "../tokens/positive-token-generator";
 import type { WarningTokenGenerator } from "../tokens/warning-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class BackgroundUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -26,16 +26,16 @@ export class BackgroundUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      lines.push(`[data-bg='${key}'] { background: var(--${variable}); }`);
+      rules.push(new CssRule(`[data-bg='${key}']`, [["background", `var(--${variable})`]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
