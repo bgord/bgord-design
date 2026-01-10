@@ -1,5 +1,5 @@
 import type { LetterSpacingTokenGenerator } from "../tokens/letter-spacing-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class LetterSpacingUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -10,16 +10,16 @@ export class LetterSpacingUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("letter-spacing-", "");
 
-      lines.push(`[data-ls='${key}'] { letter-spacing: var(--${variable}); }`);
+      rules.push(new CssRule(`[data-ls='${key}']`, [["letter-spacing", `var(--${variable})`]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
