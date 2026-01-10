@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class FlexDirectionUtilityGenerator extends UtilityGenerator {
   config = {
@@ -13,14 +13,14 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-dir='${key}'] { flex-direction: ${value}; }`);
+      rules.push(new CssRule(`[data-dir='${key}']`, [["flex-direction", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
