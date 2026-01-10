@@ -1,8 +1,20 @@
 # Changelog
+- 2026-01-10 15:14 ce59d96 **step: update packages**
+- 2026-01-10 15:14 40d46f7 **step: bump bgord/scripts**
+- 2026-01-10 15:10 4e13dbe **step: test generate css**
+- 2026-01-10 14:59 f64f577 **step: add test setup**
+- 2026-01-10 14:58 8f537b4 **step: test generate lib**
+- 2026-01-10 14:54 baad2cb **step: test generate types**
+- 2026-01-09 17:01 cb50a8d **step: test full output**
+- 2026-01-09 16:06 43e6ecf **step: ignore joins in utility generators**
+- 2026-01-09 16:01 f703819 **step: test utility generator names**
+- 2026-01-09 15:47 ec63a05 **fix: tokens mutants**
+- 2026-01-04 16:18 b57a2ea **step: gitignore stryker**
 - 2026-01-04 16:11 d9bf5a1 **step: install stryker**
 - 2026-01-04 16:09 7210170 **step: update packages**
 - 2026-01-04 16:08 45377e1 **step: bump bgord/scripts**
 - 2026-01-04 16:06 a25236d **step: bump bgord/scripts**
+- 2026-01-04 15:11 0976bd6 **docs: generate CHANGELOG**
 - 2026-01-04 15:08 d445b01 **docs: generate CHANGELOG**
 ## 2025-12-29 16:57 v1.4.16
 - 2025-12-29 16:57 9ed9415 **1.4.16**
