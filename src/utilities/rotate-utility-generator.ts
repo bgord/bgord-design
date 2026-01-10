@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class RotateUtilityGenerator extends UtilityGenerator {
   config = { "0": "0", "90": "90", "180": "180", "270": "270" };
@@ -8,14 +8,14 @@ export class RotateUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-rotate='${key}'] { transform: rotate(${value}deg); }`);
+      rules.push(new CssRule(`[data-rotate='${key}']`, [["transform", `rotate(${value}deg)`]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
