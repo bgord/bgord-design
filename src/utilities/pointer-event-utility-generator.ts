@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class PointerEventUtilityGenerator extends UtilityGenerator {
   config = { none: "none", auto: "auto" };
@@ -8,14 +8,14 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-pointer-events='${key}'] { pointer-events: ${value}; }`);
+      rules.push(new CssRule(`[data-pointer-events='${key}']`, [["pointer-events", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
