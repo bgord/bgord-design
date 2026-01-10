@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class OverflowUtilityGenerator extends UtilityGenerator {
   config = { auto: "auto", scroll: "scroll", hidden: "hidden" };
@@ -8,14 +8,14 @@ export class OverflowUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-overflow='${key}'] { overflow: ${value}; }`);
+      rules.push(new CssRule(`[data-overflow='${key}']`, [["overflow", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
