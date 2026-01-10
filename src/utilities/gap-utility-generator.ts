@@ -1,5 +1,5 @@
 import type { SpacingTokenGenerator } from "../tokens/spacing-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class GapUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -10,16 +10,16 @@ export class GapUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
 
-      lines.push(`[data-gap='${key}'] { gap: var(--${variable}); }`);
+      rules.push(new CssRule(`[data-gap='${key}']`, [["gap", `var(--${variable})`]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
