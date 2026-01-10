@@ -1,5 +1,5 @@
 import type { FontWeightTokenGenerator } from "../tokens/font-weight-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class FontWeightUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -10,16 +10,16 @@ export class FontWeightUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("font-weight-", "");
 
-      lines.push(`[data-fw='${key}'] { font-weight: var(--${variable}); }`);
+      rules.push(new CssRule(`[data-fw='${key}']`, [["font-weight", `var(--${variable})`]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
