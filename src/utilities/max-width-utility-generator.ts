@@ -1,5 +1,5 @@
 import type { BreakpointTokenGenerator } from "../tokens/breakpoint-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class MaxWidthUtilityGenerator extends UtilityGenerator {
   config = { "100%": "100%", unset: "unset" };
@@ -10,15 +10,16 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [variable, value] of Object.entries(this.config)) {
       const key = variable.replace("breakpoint-", "");
-      lines.push(`[data-maxw='${key}'] { max-width: ${value}; }`);
+
+      rules.push(new CssRule(`[data-maxw='${key}']`, [["max-width", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
