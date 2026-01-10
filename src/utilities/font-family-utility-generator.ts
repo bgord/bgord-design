@@ -1,5 +1,5 @@
 import type { FontFamilyTokenGenerator } from "../tokens/font-family-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class FontFamilyUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -10,16 +10,16 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("font-family-", "");
 
-      lines.push(`[data-ff='${key}'] { font-family: var(--${variable}); }`);
+      rules.push(new CssRule(`[data-ff='${key}']`, [["font-family", `var(--${variable})`]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
