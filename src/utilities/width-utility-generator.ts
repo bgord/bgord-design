@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class WidthUtilityGenerator extends UtilityGenerator {
   config = { "100%": "100%", auto: "auto", unset: "unset" };
@@ -8,14 +8,14 @@ export class WidthUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-width='${key}'] { width: ${value}; }`);
+      rules.push(new CssRule(`[data-width='${key}']`, [["width", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
