@@ -22,6 +22,6 @@ export class CssRule {
   ) {}
 
   get(): string {
-    return `${this.selector} { ${this.lines.map(([key, value]) => `${key}: ${value};`)} }`;
+    return `${this.selector} { ${this.lines.map(([key, value]) => `${key}: ${value};`).join("\n")} }`;
   }
 }
