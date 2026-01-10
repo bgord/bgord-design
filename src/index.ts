@@ -1,6 +1,6 @@
 import { GenerateCSS } from "./generate-css";
 import { GenerateLib } from "./generate-lib";
-import { GenerateTyps } from "./generate-types";
+import { GenerateTypes } from "./generate-types";
 import * as TokenGenerators from "./tokens";
 import * as UtilityGenerators from "./utilities";
 
@@ -161,5 +161,5 @@ import * as UtilityGenerators from "./utilities";
 
   await GenerateCSS.process(tokens, generators);
   await GenerateLib.process(tokens);
-  await GenerateTyps.process(generators);
+  await GenerateTypes.process(generators);
 })();

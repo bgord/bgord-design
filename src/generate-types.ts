@@ -1,6 +1,6 @@
 import type { UtilityGenerator } from "./utilities/template";
 
-export class GenerateTyps {
+export class GenerateTypes {
   static async process(utilities: UtilityGenerator[]) {
     const interactions = ["grow", "rotate-into-focus", "subtle-scale"]
       .map((interaction) => `"${interaction}"`)
@@ -26,6 +26,6 @@ export class GenerateTyps {
 
     types += "}}";
 
-    await Bun.file("dist/index.d.ts").write(types);
+    await Bun.write("dist/index.d.ts", types);
   }
 }
