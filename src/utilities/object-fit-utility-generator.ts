@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class ObjectFitUtilityGenerator extends UtilityGenerator {
   config = {
@@ -14,14 +14,14 @@ export class ObjectFitUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-object-fit='${key}'] { object-fit: ${value}; }`);
+      rules.push(new CssRule(`[data-object-fit='${key}']`, [["object-fit", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
