@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class FlexShrinkUtilityGenerator extends UtilityGenerator {
   config = { "0": "0", unset: "unset" };
@@ -8,14 +8,14 @@ export class FlexShrinkUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-shrink='${key}'] { flex-shrink: ${value}; }`);
+      rules.push(new CssRule(`[data-shrink='${key}']`, [["flex-shrink", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
