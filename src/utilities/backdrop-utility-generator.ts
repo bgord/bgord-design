@@ -1,5 +1,5 @@
 import type { BackdropsTokenGenerator } from "../tokens/backdrops-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class BackdropUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -10,15 +10,15 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("backdrop-", "");
 
-      lines.push(`[data-backdrop='${key}']::backdrop { background: var(--${variable}); }`);
+      rules.push(new CssRule(`[data-backdrop='${key}']::backdrop`, [["background", `var(--${variable})`]]));
     }
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
