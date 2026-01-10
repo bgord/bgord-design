@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class PositionUtilityGenerator extends UtilityGenerator {
   config = {
@@ -15,14 +15,14 @@ export class PositionUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-position='${key}'] { position: ${value}; }`);
+      rules.push(new CssRule(`[data-position='${key}']`, [["position", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
