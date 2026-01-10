@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class AxisPlacementUtilityGenerator extends UtilityGenerator {
   config = {
@@ -16,15 +16,18 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      lines.push(`[data-main='${key}'] { justify-content: ${value}; }`);
-      lines.push(`[data-cross='${key}'] { align-items: ${value}; }`);
+      rules.push(new CssRule(`[data-main='${key}']`, [["justify-content", value]]));
+    }
+
+    for (const [key, value] of Object.entries(this.config)) {
+      rules.push(new CssRule(`[data-cross='${key}']`, [["align-items", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 

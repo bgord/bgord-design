@@ -67,19 +67,21 @@ describe("GenerateLib", async () => {
 
       @layer utilities {
         [data-main='start'] { justify-content: flex-start; }
-        [data-cross='start'] { align-items: flex-start; }
         [data-main='end'] { justify-content: flex-end; }
-        [data-cross='end'] { align-items: flex-end; }
         [data-main='around'] { justify-content: space-around; }
-        [data-cross='around'] { align-items: space-around; }
         [data-main='evenly'] { justify-content: space-evenly; }
-        [data-cross='evenly'] { align-items: space-evenly; }
         [data-main='between'] { justify-content: space-between; }
-        [data-cross='between'] { align-items: space-between; }
         [data-main='center'] { justify-content: center; }
-        [data-cross='center'] { align-items: center; }
         [data-main='baseline'] { justify-content: baseline; }
-        [data-cross='baseline'] { align-items: baseline; }}
+
+        [data-cross='start'] { align-items: flex-start; }
+        [data-cross='end'] { align-items: flex-end; }
+        [data-cross='around'] { align-items: space-around; }
+        [data-cross='evenly'] { align-items: space-evenly; }
+        [data-cross='between'] { align-items: space-between; }
+        [data-cross='center'] { align-items: center; }
+        [data-cross='baseline'] { align-items: baseline; }
+      }
     `);
   });
 });
