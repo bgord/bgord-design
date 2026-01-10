@@ -8,6 +8,6 @@ export class GenerateLib {
       lib += token.toTypeScript();
     }
 
-    await Bun.file("dist/lib.ts").write(lib);
+    await Bun.write("dist/lib.ts", lib);
   }
 }
