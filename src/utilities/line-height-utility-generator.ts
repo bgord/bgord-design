@@ -1,5 +1,5 @@
 import type { LineHeightTokenGenerator } from "../tokens/line-height-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class LineHeightUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -10,16 +10,16 @@ export class LineHeightUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("line-height-", "");
 
-      lines.push(`[data-lh='${key}'] { line-height: var(--${variable}); }`);
+      rules.push(new CssRule(`[data-lh='${key}']`, [["line-height", `var(--${variable})`]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
