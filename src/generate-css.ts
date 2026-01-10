@@ -38,6 +38,6 @@ export class GenerateCSS {
     }
     output += "}\n\n";
 
-    await Bun.file("dist/main.css").write(output);
+    await Bun.write("dist/main.css", output);
   }
 }

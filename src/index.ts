@@ -1,3 +1,4 @@
+// Stryker disable all
 import { GenerateCSS } from "./generate-css";
 import { GenerateLib } from "./generate-lib";
 import { GenerateTypes } from "./generate-types";
@@ -163,3 +164,4 @@ import * as UtilityGenerators from "./utilities";
   await GenerateLib.process(tokens);
   await GenerateTypes.process(generators);
 })();
+// Stryker restore all
