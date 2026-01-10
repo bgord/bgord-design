@@ -1,5 +1,5 @@
 import type { RadiusTokenGenerator } from "../tokens/radius-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class RadiusUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -10,16 +10,16 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("radius-", "");
 
-      lines.push(`[data-br='${key}'] { border-radius: var(--${variable}); }`);
+      rules.push(new CssRule(`[data-br='${key}']`, [["border-radius", `var(--${variable})`]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
