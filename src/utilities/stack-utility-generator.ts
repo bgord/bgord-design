@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class StackUtilityGenerator extends UtilityGenerator {
   // Stryker disable all
@@ -10,22 +10,31 @@ export class StackUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key] of Object.entries(this.config)) {
       if (key === "x") {
-        lines.push(`[data-stack='${key}'] { display: flex; flex-wrap: wrap; }`);
+        rules.push(
+          new CssRule(`[data-stack='${key}']`, [
+            ["display", "flex"],
+            ["flex-wrap", "wrap"],
+          ]),
+        );
       }
 
-      // Stryker disable all
       if (key === "y") {
-        // Stryker restore all
-        lines.push(`[data-stack='${key}'] { display: flex; flex-wrap: wrap; flex-direction: column; }`);
+        rules.push(
+          new CssRule(`[data-stack='${key}']`, [
+            ["display", "flex"],
+            ["flex-wrap", "wrap"],
+            ["flex-direction", "column"],
+          ]),
+        );
       }
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 

@@ -1,5 +1,5 @@
 import type { BorderWidthTokenGenerator } from "../tokens/border-width-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class BorderWidthUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -10,26 +10,32 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
 
-      lines.push(`[data-bw='${key}'] { border-width: var(--${variable}); }`);
-      lines.push(`[data-bwt='${key}'] { border-top-width: var(--${variable}); }`);
-      lines.push(`[data-bwr='${key}'] { border-right-width: var(--${variable}); }`);
-      lines.push(`[data-bwb='${key}'] { border-bottom-width: var(--${variable}); }`);
-      lines.push(`[data-bwl='${key}'] { border-left-width: var(--${variable}); }`);
-      lines.push(
-        `[data-bwx='${key}'] { border-left-width: var(--${variable}); border-right-width: var(--${variable}); }`,
+      rules.push(new CssRule(`[data-bw='${key}']`, [["border-width", `var(--${variable})`]]));
+      rules.push(new CssRule(`[data-bwt='${key}']`, [["border-top-width", `var(--${variable})`]]));
+      rules.push(new CssRule(`[data-bwr='${key}']`, [["border-right-width", `var(--${variable})`]]));
+      rules.push(new CssRule(`[data-bwb='${key}']`, [["border-bottom-width", `var(--${variable})`]]));
+      rules.push(new CssRule(`[data-bwl='${key}']`, [["border-left-width", `var(--${variable})`]]));
+      rules.push(
+        new CssRule(`[data-bwx='${key}']`, [
+          ["border-left-width", `var(--${variable})`],
+          ["border-right-width", `var(--${variable})`],
+        ]),
       );
-      lines.push(
-        `[data-bwy='${key}'] { border-top-width: var(--${variable}); border-bottom-width: var(--${variable}); }`,
+      rules.push(
+        new CssRule(`[data-bwy='${key}']`, [
+          ["border-top-width", `var(--${variable})`],
+          ["border-bottom-width", `var(--${variable})`],
+        ]),
       );
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
