@@ -1,5 +1,5 @@
 import type { SpacingTokenGenerator } from "../tokens/spacing-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class PositionersUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -10,20 +10,35 @@ export class PositionersUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
+      rules.push(new CssRule(`[data-top='${key}']`, [["top", `var(--${variable})`]]));
+    }
 
-      lines.push(`[data-top='${key}'] { top: var(--${variable}); }`);
-      lines.push(`[data-right='${key}'] { right: var(--${variable}); }`);
-      lines.push(`[data-bottom='${key}'] { bottom: var(--${variable}); }`);
-      lines.push(`[data-left='${key}'] { left: var(--${variable}); }`);
-      lines.push(`[data-inset='${key}'] { inset: var(--${variable}); }`);
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("spacing-", "");
+      rules.push(new CssRule(`[data-right='${key}']`, [["right", `var(--${variable})`]]));
+    }
+
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("spacing-", "");
+      rules.push(new CssRule(`[data-bottom='${key}']`, [["bottom", `var(--${variable})`]]));
+    }
+
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("spacing-", "");
+      rules.push(new CssRule(`[data-left='${key}']`, [["left", `var(--${variable})`]]));
+    }
+
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("spacing-", "");
+      rules.push(new CssRule(`[data-inset='${key}']`, [["inset", `var(--${variable})`]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
