@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class DisplayUtilityGenerator extends UtilityGenerator {
   config = { flex: "flex", block: "block", "inline-block": "inline-block", none: "none" };
@@ -8,17 +8,22 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
       if (key === "flex") {
-        lines.push(`[data-disp='${key}'] { display: flex; flex-wrap: wrap; }`);
+        rules.push(
+          new CssRule(`[data-disp='${key}']`, [
+            ["display", value],
+            ["flex-wrap", "wrap"],
+          ]),
+        );
       }
-      lines.push(`[data-disp='${key}'] { display: ${value}; }`);
+      rules.push(new CssRule(`[data-disp='${key}']`, [["display", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
