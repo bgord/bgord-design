@@ -21,6 +21,18 @@ describe("RadiusUtilityGenerator", () => {
       [data-br='pill'] { border-radius: var(--radius-pill); }
       [data-br='circle'] { border-radius: var(--radius-circle); }
       [data-br='unset'] { border-radius: var(--radius-unset); }
+
+      @media (max-width: 768px) {
+        [data-md-br='none'] { border-radius: var(--radius-none); }
+        [data-md-br='xs'] { border-radius: var(--radius-xs); }
+        [data-md-br='sm'] { border-radius: var(--radius-sm); }
+        [data-md-br='md'] { border-radius: var(--radius-md); }
+        [data-md-br='lg'] { border-radius: var(--radius-lg); }
+        [data-md-br='xl'] { border-radius: var(--radius-xl); }
+        [data-md-br='pill'] { border-radius: var(--radius-pill); }
+        [data-md-br='circle'] { border-radius: var(--radius-circle); }
+        [data-md-br='unset'] { border-radius: var(--radius-unset); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-br"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "pill" | "circle" | "unset";
@@ -42,6 +54,19 @@ describe("RadiusUtilityGenerator", () => {
       [data-br='circle'] { border-radius: var(--radius-circle); }
       [data-br='unset'] { border-radius: var(--radius-unset); }
       [data-br='egg'] { border-radius: var(--radius-egg); }
+
+      @media (max-width: 768px) {
+        [data-md-br='none'] { border-radius: var(--radius-none); }
+        [data-md-br='xs'] { border-radius: var(--radius-xs); }
+        [data-md-br='sm'] { border-radius: var(--radius-sm); }
+        [data-md-br='md'] { border-radius: var(--radius-md); }
+        [data-md-br='lg'] { border-radius: var(--radius-lg); }
+        [data-md-br='xl'] { border-radius: var(--radius-xl); }
+        [data-md-br='pill'] { border-radius: var(--radius-pill); }
+        [data-md-br='circle'] { border-radius: var(--radius-circle); }
+        [data-md-br='unset'] { border-radius: var(--radius-unset); }
+        [data-md-br='egg'] { border-radius: var(--radius-egg); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-br"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "pill" | "circle" | "unset" | "egg";
