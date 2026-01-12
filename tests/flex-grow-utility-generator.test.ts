@@ -12,6 +12,11 @@ describe("FlexGrowUtilityGenerator", () => {
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-grow='1'] { flex-grow: 1; }
       [data-grow='unset'] { flex-grow: unset; }
+
+      @media (max-width: 768px) {
+        [data-md-grow='1'] { flex-grow: 1; }
+        [data-md-grow='unset'] { flex-grow: unset; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-grow"?: "1" | "unset";
