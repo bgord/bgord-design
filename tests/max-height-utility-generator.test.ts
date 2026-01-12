@@ -15,6 +15,12 @@ describe("MaxHeightUtilityGenerator", () => {
       [data-maxh='100%'] { max-height: 100%; }
       [data-maxh='unset'] { max-height: unset; }
       [data-maxh='md'] { max-height: 768px; }
+
+      @media (max-width: 768px) {
+        [data-md-maxh='100%'] { max-height: 100%; }
+        [data-md-maxh='unset'] { max-height: unset; }
+        [data-md-maxh='md'] { max-height: 768px; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-maxh"?: "100%" | "unset" | "md";
@@ -30,6 +36,13 @@ describe("MaxHeightUtilityGenerator", () => {
       [data-maxh='unset'] { max-height: unset; }
       [data-maxh='md'] { max-height: 768px; }
       [data-maxh='full-hd'] { max-height: 1920px; }
+
+      @media (max-width: 768px) {
+        [data-md-maxh='100%'] { max-height: 100%; }
+        [data-md-maxh='unset'] { max-height: unset; }
+        [data-md-maxh='md'] { max-height: 768px; }
+        [data-md-maxh='full-hd'] { max-height: 1920px; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-maxh"?: "100%" | "unset" | "md" | "full-hd";
