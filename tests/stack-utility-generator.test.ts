@@ -12,6 +12,11 @@ describe("StackUtilityGenerator", () => {
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-stack='x'] { display: flex; flex-wrap: wrap; }
       [data-stack='y'] { display: flex; flex-wrap: wrap; flex-direction: column; }
+
+      @media (max-width: 768px) {
+        [data-md-stack='x'] { display: flex; flex-wrap: wrap; }
+        [data-md-stack='y'] { display: flex; flex-wrap: wrap; flex-direction: column; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-stack"?: "x" | "y";

@@ -39,6 +39,37 @@ export class StackUtilityGenerator extends UtilityGenerator {
 
     result += regular.map((rule) => rule.get()).join("\n");
 
+    for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
+      const responsive: CssRuleRegular[] = [];
+
+      result += `@media (max-width: ${breakpoint}px) { `;
+
+      for (const [key] of Object.entries(this.config)) {
+        if (key === "x") {
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-stack='${key}']`, [
+              ["display", "flex"],
+              ["flex-wrap", "wrap"],
+            ]),
+          );
+        }
+
+        if (key === "y") {
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-stack='${key}']`, [
+              ["display", "flex"],
+              ["flex-wrap", "wrap"],
+              ["flex-direction", "column"],
+            ]),
+          );
+        }
+      }
+
+      result += responsive.map((rule) => rule.get()).join("\n");
+
+      result += "}";
+    }
+
     return result;
   }
 
