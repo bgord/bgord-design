@@ -34,7 +34,7 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(new CssRuleRegular(`[data-color='${key}']`, [["color", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-color='${key}']`, ["color", `var(--${variable})`]));
     }
 
     // Stryker disable all

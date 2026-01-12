@@ -50,30 +50,30 @@ export class TransformUtilityGenerator extends UtilityGenerator {
       }
 
       if (key === "center") {
-        rules.push(new CssRuleRegular(`[data-transform~='${key}']`, [["text-align", "center"]]));
+        rules.push(new CssRuleRegular(`[data-transform~='${key}']`, ["text-align", "center"]));
         continue;
       }
 
       if (key === "upper-first") {
         rules.push(
-          new CssRuleRegular(`[data-transform~='${key}']:first-letter`, [["text-transform", "uppercase"]]),
+          new CssRuleRegular(`[data-transform~='${key}']:first-letter`, ["text-transform", "uppercase"]),
         );
         continue;
       }
 
       if (key === "nowrap") {
-        rules.push(new CssRuleRegular(`[data-transform~='${key}']`, [["white-space", "nowrap"]]));
+        rules.push(new CssRuleRegular(`[data-transform~='${key}']`, ["white-space", "nowrap"]));
         continue;
       }
 
       if (key === "font-variant-numeric") {
         rules.push(
-          new CssRuleRegular(`[data-transform~='${key}']`, [["font-variant-numeric", "tabular-nums"]]),
+          new CssRuleRegular(`[data-transform~='${key}']`, ["font-variant-numeric", "tabular-nums"]),
         );
         continue;
       }
 
-      rules.push(new CssRuleRegular(`[data-transform~='${key}']`, [["text-transform", value]]));
+      rules.push(new CssRuleRegular(`[data-transform~='${key}']`, ["text-transform", value]));
     }
 
     // Stryker disable all

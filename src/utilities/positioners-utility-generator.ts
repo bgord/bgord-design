@@ -19,27 +19,27 @@ export class PositionersUtilityGenerator extends UtilityGenerator {
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-top='${key}']`, [["top", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-top='${key}']`, ["top", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-right='${key}']`, [["right", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-right='${key}']`, ["right", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-bottom='${key}']`, [["bottom", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-bottom='${key}']`, ["bottom", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-left='${key}']`, [["left", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-left='${key}']`, ["left", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-inset='${key}']`, [["inset", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-inset='${key}']`, ["inset", `var(--${variable})`]));
     }
 
     // Stryker disable all

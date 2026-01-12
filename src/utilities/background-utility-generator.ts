@@ -34,7 +34,7 @@ export class BackgroundUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(new CssRuleRegular(`[data-bg='${key}']`, [["background", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-bg='${key}']`, ["background", `var(--${variable})`]));
     }
 
     // Stryker disable all

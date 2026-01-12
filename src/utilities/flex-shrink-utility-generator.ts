@@ -13,7 +13,7 @@ export class FlexShrinkUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-shrink='${key}']`, [["flex-shrink", value]]));
+      rules.push(new CssRuleRegular(`[data-shrink='${key}']`, ["flex-shrink", value]));
     }
 
     // Stryker disable all

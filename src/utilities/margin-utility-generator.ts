@@ -23,7 +23,7 @@ export class MarginUtilityGenerator extends UtilityGenerator {
     */
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-m='${key}']`, [["margin", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-m='${key}']`, ["margin", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
@@ -48,22 +48,22 @@ export class MarginUtilityGenerator extends UtilityGenerator {
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-mt='${key}']`, [["margin-top", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-mt='${key}']`, ["margin-top", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-mr='${key}']`, [["margin-right", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-mr='${key}']`, ["margin-right", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-mb='${key}']`, [["margin-bottom", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-mb='${key}']`, ["margin-bottom", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRuleRegular(`[data-ml='${key}']`, [["margin-left", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-ml='${key}']`, ["margin-left", `var(--${variable})`]));
     }
 
     // Stryker disable all

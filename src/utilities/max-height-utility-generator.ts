@@ -20,7 +20,7 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
     for (const [variable, value] of Object.entries(this.config)) {
       const key = variable.replace("breakpoint-", "");
 
-      rules.push(new CssRuleRegular(`[data-maxh='${key}']`, [["max-height", value]]));
+      rules.push(new CssRuleRegular(`[data-maxh='${key}']`, ["max-height", value]));
     }
 
     // Stryker disable all

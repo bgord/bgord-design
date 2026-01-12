@@ -20,7 +20,7 @@ export class FontWeightUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("font-weight-", "");
 
-      rules.push(new CssRuleRegular(`[data-fw='${key}']`, [["font-weight", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-fw='${key}']`, ["font-weight", `var(--${variable})`]));
     }
 
     // Stryker disable all

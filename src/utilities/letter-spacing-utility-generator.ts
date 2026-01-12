@@ -20,7 +20,7 @@ export class LetterSpacingUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("letter-spacing-", "");
 
-      rules.push(new CssRuleRegular(`[data-ls='${key}']`, [["letter-spacing", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-ls='${key}']`, ["letter-spacing", `var(--${variable})`]));
     }
 
     // Stryker disable all

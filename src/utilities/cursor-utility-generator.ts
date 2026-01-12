@@ -13,7 +13,7 @@ export class CursorUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-cursor='${key}']`, [["cursor", value]]));
+      rules.push(new CssRuleRegular(`[data-cursor='${key}']`, ["cursor", value]));
     }
 
     // Stryker disable all

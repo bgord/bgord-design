@@ -21,7 +21,7 @@ export class ObjectPositionUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-object-position='${key}']`, [["object-position", value]]));
+      rules.push(new CssRuleRegular(`[data-object-position='${key}']`, ["object-position", value]));
     }
 
     // Stryker disable all

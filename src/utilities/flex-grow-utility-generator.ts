@@ -13,7 +13,7 @@ export class FlexGrowUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-grow='${key}']`, [["flex-grow", value]]));
+      rules.push(new CssRuleRegular(`[data-grow='${key}']`, ["flex-grow", value]));
     }
 
     // Stryker disable all

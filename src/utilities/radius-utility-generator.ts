@@ -20,7 +20,7 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("radius-", "");
 
-      rules.push(new CssRuleRegular(`[data-br='${key}']`, [["border-radius", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-br='${key}']`, ["border-radius", `var(--${variable})`]));
     }
 
     // Stryker disable all

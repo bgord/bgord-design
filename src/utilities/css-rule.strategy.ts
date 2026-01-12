@@ -7,10 +7,13 @@ export interface CssRuleStrategy {
 export class CssRuleRegular implements CssRuleStrategy {
   constructor(
     private readonly selector: string,
-    private readonly lines: CssRuleLineType[],
+    private readonly lines: CssRuleLineType[] | CssRuleLineType,
   ) {}
 
   get(): string {
-    return `${this.selector} { ${this.lines.map(([key, value]) => `${key}: ${value};`).join("\n")} }`;
+    if (Array.isArray(this.lines[0])) {
+      return `${this.selector} { ${this.lines.map(([key, value]) => `${key}: ${value};`).join("\n")} }`;
+    }
+    return `${this.selector} { ${this.lines[0]}: ${this.lines[1]}; }`;
   }
 }

@@ -13,7 +13,7 @@ export class HeightUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-height='${key}']`, [["height", value]]));
+      rules.push(new CssRuleRegular(`[data-height='${key}']`, ["height", value]));
     }
 
     // Stryker disable all

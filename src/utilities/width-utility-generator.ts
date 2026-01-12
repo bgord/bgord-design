@@ -13,7 +13,7 @@ export class WidthUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-width='${key}']`, [["width", value]]));
+      rules.push(new CssRuleRegular(`[data-width='${key}']`, ["width", value]));
     }
 
     // Stryker disable all

@@ -20,7 +20,7 @@ export class OpacityUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("opacity-", "");
 
-      rules.push(new CssRuleRegular(`[data-opacity='${key}']`, [["opacity", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-opacity='${key}']`, ["opacity", `var(--${variable})`]));
     }
 
     // Stryker disable all

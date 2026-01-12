@@ -13,7 +13,7 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-pointer-events='${key}']`, [["pointer-events", value]]));
+      rules.push(new CssRuleRegular(`[data-pointer-events='${key}']`, ["pointer-events", value]));
     }
 
     // Stryker disable all

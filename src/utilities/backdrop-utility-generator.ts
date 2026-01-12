@@ -21,7 +21,7 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("backdrop-", "");
 
       rules.push(
-        new CssRuleRegular(`[data-backdrop='${key}']::backdrop`, [["background", `var(--${variable})`]]),
+        new CssRuleRegular(`[data-backdrop='${key}']::backdrop`, ["background", `var(--${variable})`]),
       );
     }
     // Stryker disable all

@@ -19,7 +19,7 @@ export class ObjectFitUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-object-fit='${key}']`, [["object-fit", value]]));
+      rules.push(new CssRuleRegular(`[data-object-fit='${key}']`, ["object-fit", value]));
     }
 
     // Stryker disable all

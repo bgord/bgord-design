@@ -21,7 +21,7 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
           ]),
         );
       }
-      rules.push(new CssRuleRegular(`[data-disp='${key}']`, [["display", value]]));
+      rules.push(new CssRuleRegular(`[data-disp='${key}']`, ["display", value]));
     }
 
     // Stryker disable all

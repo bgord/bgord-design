@@ -20,7 +20,7 @@ export class GapUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
 
-      rules.push(new CssRuleRegular(`[data-gap='${key}']`, [["gap", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-gap='${key}']`, ["gap", `var(--${variable})`]));
     }
 
     // Stryker disable all

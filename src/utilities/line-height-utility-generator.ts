@@ -20,7 +20,7 @@ export class LineHeightUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("line-height-", "");
 
-      rules.push(new CssRuleRegular(`[data-lh='${key}']`, [["line-height", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-lh='${key}']`, ["line-height", `var(--${variable})`]));
     }
 
     // Stryker disable all

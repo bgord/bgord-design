@@ -13,7 +13,7 @@ export class FlexWrapUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-wrap='${key}']`, [["flex-wrap", value]]));
+      rules.push(new CssRuleRegular(`[data-wrap='${key}']`, ["flex-wrap", value]));
     }
 
     // Stryker disable all

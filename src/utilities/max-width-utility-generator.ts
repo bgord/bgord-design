@@ -20,7 +20,7 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
     for (const [variable, value] of Object.entries(this.config)) {
       const key = variable.replace("breakpoint-", "");
 
-      rules.push(new CssRuleRegular(`[data-maxw='${key}']`, [["max-width", value]]));
+      rules.push(new CssRuleRegular(`[data-maxw='${key}']`, ["max-width", value]));
     }
 
     // Stryker disable all

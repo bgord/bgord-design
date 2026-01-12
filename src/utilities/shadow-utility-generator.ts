@@ -20,7 +20,7 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("shadow-", "");
 
-      rules.push(new CssRuleRegular(`[data-shadow='${key}']`, [["box-shadow", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-shadow='${key}']`, ["box-shadow", `var(--${variable})`]));
     }
 
     // Stryker disable all

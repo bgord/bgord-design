@@ -20,7 +20,7 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("font-size-", "");
 
-      rules.push(new CssRuleRegular(`[data-fs='${key}']`, [["font-size", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-fs='${key}']`, ["font-size", `var(--${variable})`]));
     }
 
     // Stryker disable all

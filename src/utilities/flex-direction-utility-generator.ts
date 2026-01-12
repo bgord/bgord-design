@@ -18,7 +18,7 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-dir='${key}']`, [["flex-direction", value]]));
+      rules.push(new CssRuleRegular(`[data-dir='${key}']`, ["flex-direction", value]));
     }
 
     // Stryker disable all

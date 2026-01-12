@@ -13,7 +13,7 @@ export class OverflowUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-overflow='${key}']`, [["overflow", value]]));
+      rules.push(new CssRuleRegular(`[data-overflow='${key}']`, ["overflow", value]));
     }
 
     // Stryker disable all

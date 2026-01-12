@@ -13,7 +13,7 @@ export class RotateUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-rotate='${key}']`, [["transform", `rotate(${value}deg)`]]));
+      rules.push(new CssRuleRegular(`[data-rotate='${key}']`, ["transform", `rotate(${value}deg)`]));
     }
 
     // Stryker disable all

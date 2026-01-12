@@ -20,7 +20,7 @@ export class ZIndexUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("z-index-", "");
 
-      rules.push(new CssRuleRegular(`[data-z='${key}']`, [["z-index", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-z='${key}']`, ["z-index", `var(--${variable})`]));
     }
 
     // Stryker disable all

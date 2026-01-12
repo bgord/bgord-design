@@ -21,11 +21,11 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
     const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-main='${key}']`, [["justify-content", value]]));
+      rules.push(new CssRuleRegular(`[data-main='${key}']`, ["justify-content", value]));
     }
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRuleRegular(`[data-cross='${key}']`, [["align-items", value]]));
+      rules.push(new CssRuleRegular(`[data-cross='${key}']`, ["align-items", value]));
     }
 
     // Stryker disable all
