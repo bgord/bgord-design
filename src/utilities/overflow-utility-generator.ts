@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class OverflowUtilityGenerator extends UtilityGenerator {
   config = { auto: "auto", scroll: "scroll", hidden: "hidden" };
@@ -9,10 +10,10 @@ export class OverflowUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRule(`[data-overflow='${key}']`, [["overflow", value]]));
+      rules.push(new CssRuleRegular(`[data-overflow='${key}']`, [["overflow", value]]));
     }
 
     // Stryker disable all

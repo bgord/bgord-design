@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { SizeTokenGenerator } from "../tokens/size-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class SizeUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,13 +15,13 @@ export class SizeUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("size-", "");
 
       rules.push(
-        new CssRule(`[data-size='${key}']`, [
+        new CssRuleRegular(`[data-size='${key}']`, [
           ["height", `var(--${variable})`],
           ["width", `var(--${variable})`],
         ]),

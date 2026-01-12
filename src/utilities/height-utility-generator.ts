@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class HeightUtilityGenerator extends UtilityGenerator {
   config = { "100%": "100%", auto: "auto", unset: "unset" };
@@ -9,10 +10,10 @@ export class HeightUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRule(`[data-height='${key}']`, [["height", value]]));
+      rules.push(new CssRuleRegular(`[data-height='${key}']`, [["height", value]]));
     }
 
     // Stryker disable all

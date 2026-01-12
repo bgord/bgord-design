@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class FlexWrapUtilityGenerator extends UtilityGenerator {
   config = { nowrap: "nowrap", wrap: "wrap", "wrap-reverse": "wrap-reverse", unset: "unset" };
@@ -9,10 +10,10 @@ export class FlexWrapUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRule(`[data-wrap='${key}']`, [["flex-wrap", value]]));
+      rules.push(new CssRuleRegular(`[data-wrap='${key}']`, [["flex-wrap", value]]));
     }
 
     // Stryker disable all

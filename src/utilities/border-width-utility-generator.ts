@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { BorderWidthTokenGenerator } from "../tokens/border-width-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class BorderWidthUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,37 +15,37 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRule(`[data-bw='${key}']`, [["border-width", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-bw='${key}']`, [["border-width", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRule(`[data-bwt='${key}']`, [["border-top-width", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-bwt='${key}']`, [["border-top-width", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRule(`[data-bwr='${key}']`, [["border-right-width", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-bwr='${key}']`, [["border-right-width", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRule(`[data-bwb='${key}']`, [["border-bottom-width", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-bwb='${key}']`, [["border-bottom-width", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRule(`[data-bwl='${key}']`, [["border-left-width", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-bwl='${key}']`, [["border-left-width", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
       rules.push(
-        new CssRule(`[data-bwx='${key}']`, [
+        new CssRuleRegular(`[data-bwx='${key}']`, [
           ["border-left-width", `var(--${variable})`],
           ["border-right-width", `var(--${variable})`],
         ]),
@@ -54,7 +55,7 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
       rules.push(
-        new CssRule(`[data-bwy='${key}']`, [
+        new CssRuleRegular(`[data-bwy='${key}']`, [
           ["border-top-width", `var(--${variable})`],
           ["border-bottom-width", `var(--${variable})`],
         ]),

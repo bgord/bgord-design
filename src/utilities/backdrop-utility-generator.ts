@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { BackdropsTokenGenerator } from "../tokens/backdrops-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class BackdropUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,14 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("backdrop-", "");
 
-      rules.push(new CssRule(`[data-backdrop='${key}']::backdrop`, [["background", `var(--${variable})`]]));
+      rules.push(
+        new CssRuleRegular(`[data-backdrop='${key}']::backdrop`, [["background", `var(--${variable})`]]),
+      );
     }
     // Stryker disable all
     return rules.map((rule) => rule.get()).join("\n");

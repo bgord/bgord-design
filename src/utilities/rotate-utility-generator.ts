@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class RotateUtilityGenerator extends UtilityGenerator {
   config = { "0": "0", "90": "90", "180": "180", "270": "270" };
@@ -9,10 +10,10 @@ export class RotateUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRule(`[data-rotate='${key}']`, [["transform", `rotate(${value}deg)`]]));
+      rules.push(new CssRuleRegular(`[data-rotate='${key}']`, [["transform", `rotate(${value}deg)`]]));
     }
 
     // Stryker disable all

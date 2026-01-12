@@ -4,7 +4,8 @@ import type { DangerTokenGenerator } from "../tokens/danger-token-generator";
 import type { GrayscaleTokenGenerator } from "../tokens/grayscale-token-generator";
 import type { PositiveTokenGenerator } from "../tokens/positive-token-generator";
 import type { WarningTokenGenerator } from "../tokens/warning-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class BorderColorUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -29,13 +30,13 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
       rules.push(
-        new CssRule(`[data-bc='${key}']`, [
+        new CssRuleRegular(`[data-bc='${key}']`, [
           ["border-color", `var(--${variable})`],
           ["border-style", "solid"],
         ]),
@@ -46,7 +47,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("color-", "");
 
       rules.push(
-        new CssRule(`[data-bcx='${key}']`, [
+        new CssRuleRegular(`[data-bcx='${key}']`, [
           ["border-left-color", `var(--${variable})`],
           ["border-right-color", `var(--${variable})`],
           ["border-left-style", "solid"],
@@ -59,7 +60,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("color-", "");
 
       rules.push(
-        new CssRule(`[data-bcy='${key}']`, [
+        new CssRuleRegular(`[data-bcy='${key}']`, [
           ["border-top-color", `var(--${variable})`],
           ["border-bottom-color", `var(--${variable})`],
           ["border-top-style", "solid"],
@@ -72,7 +73,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("color-", "");
 
       rules.push(
-        new CssRule(`[data-bct='${key}']`, [
+        new CssRuleRegular(`[data-bct='${key}']`, [
           ["border-top-color", `var(--${variable})`],
           ["border-top-style", "solid"],
         ]),
@@ -83,7 +84,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("color-", "");
 
       rules.push(
-        new CssRule(`[data-bcr='${key}']`, [
+        new CssRuleRegular(`[data-bcr='${key}']`, [
           ["border-right-color", `var(--${variable})`],
           ["border-right-style", "solid"],
         ]),
@@ -94,7 +95,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("color-", "");
 
       rules.push(
-        new CssRule(`[data-bcb='${key}']`, [
+        new CssRuleRegular(`[data-bcb='${key}']`, [
           ["border-bottom-color", `var(--${variable})`],
           ["border-bottom-style", "solid"],
         ]),
@@ -105,7 +106,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("color-", "");
 
       rules.push(
-        new CssRule(`[data-bcl='${key}']`, [
+        new CssRuleRegular(`[data-bcl='${key}']`, [
           ["border-left-color", `var(--${variable})`],
           ["border-left-style", "solid"],
         ]),

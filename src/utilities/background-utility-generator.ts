@@ -4,7 +4,8 @@ import type { DangerTokenGenerator } from "../tokens/danger-token-generator";
 import type { GrayscaleTokenGenerator } from "../tokens/grayscale-token-generator";
 import type { PositiveTokenGenerator } from "../tokens/positive-token-generator";
 import type { WarningTokenGenerator } from "../tokens/warning-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class BackgroundUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -28,12 +29,12 @@ export class BackgroundUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(new CssRule(`[data-bg='${key}']`, [["background", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-bg='${key}']`, [["background", `var(--${variable})`]]));
     }
 
     // Stryker disable all

@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { SpacingTokenGenerator } from "../tokens/spacing-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class GapUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class GapUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
 
-      rules.push(new CssRule(`[data-gap='${key}']`, [["gap", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-gap='${key}']`, [["gap", `var(--${variable})`]]));
     }
 
     // Stryker disable all

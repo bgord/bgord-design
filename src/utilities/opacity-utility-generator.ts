@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { OpacityTokenGenerator } from "../tokens/opacity-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class OpacityUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class OpacityUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("opacity-", "");
 
-      rules.push(new CssRule(`[data-opacity='${key}']`, [["opacity", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-opacity='${key}']`, [["opacity", `var(--${variable})`]]));
     }
 
     // Stryker disable all

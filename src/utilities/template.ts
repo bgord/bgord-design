@@ -12,16 +12,3 @@ export abstract class UtilityGenerator {
 
   abstract toTypeScript(): string;
 }
-
-type CssRuleLineType = [string, string];
-
-export class CssRule {
-  constructor(
-    private readonly selector: string,
-    private readonly lines: CssRuleLineType[],
-  ) {}
-
-  get(): string {
-    return `${this.selector} { ${this.lines.map(([key, value]) => `${key}: ${value};`).join("\n")} }`;
-  }
-}

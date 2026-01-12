@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { RadiusTokenGenerator } from "../tokens/radius-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class RadiusUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("radius-", "");
 
-      rules.push(new CssRule(`[data-br='${key}']`, [["border-radius", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-br='${key}']`, [["border-radius", `var(--${variable})`]]));
     }
 
     // Stryker disable all

@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class CursorUtilityGenerator extends UtilityGenerator {
   config = { wait: "wait", auto: "auto", pointer: "pointer", "not-allowed": "not-allowed" };
@@ -9,10 +10,10 @@ export class CursorUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRule(`[data-cursor='${key}']`, [["cursor", value]]));
+      rules.push(new CssRuleRegular(`[data-cursor='${key}']`, [["cursor", value]]));
     }
 
     // Stryker disable all

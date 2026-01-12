@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { FontWeightTokenGenerator } from "../tokens/font-weight-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class FontWeightUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class FontWeightUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("font-weight-", "");
 
-      rules.push(new CssRule(`[data-fw='${key}']`, [["font-weight", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-fw='${key}']`, [["font-weight", `var(--${variable})`]]));
     }
 
     // Stryker disable all

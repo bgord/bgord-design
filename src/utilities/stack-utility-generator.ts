@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class StackUtilityGenerator extends UtilityGenerator {
   // Stryker disable all
@@ -11,12 +12,12 @@ export class StackUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key] of Object.entries(this.config)) {
       if (key === "x") {
         rules.push(
-          new CssRule(`[data-stack='${key}']`, [
+          new CssRuleRegular(`[data-stack='${key}']`, [
             ["display", "flex"],
             ["flex-wrap", "wrap"],
           ]),
@@ -25,7 +26,7 @@ export class StackUtilityGenerator extends UtilityGenerator {
 
       if (key === "y") {
         rules.push(
-          new CssRule(`[data-stack='${key}']`, [
+          new CssRuleRegular(`[data-stack='${key}']`, [
             ["display", "flex"],
             ["flex-wrap", "wrap"],
             ["flex-direction", "column"],

@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { LetterSpacingTokenGenerator } from "../tokens/letter-spacing-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class LetterSpacingUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class LetterSpacingUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("letter-spacing-", "");
 
-      rules.push(new CssRule(`[data-ls='${key}']`, [["letter-spacing", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-ls='${key}']`, [["letter-spacing", `var(--${variable})`]]));
     }
 
     // Stryker disable all

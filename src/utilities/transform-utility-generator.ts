@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class TransformUtilityGenerator extends UtilityGenerator {
   // Stryker disable all
@@ -22,12 +23,12 @@ export class TransformUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
       if (key === "truncate") {
         rules.push(
-          new CssRule(`[data-transform~='${key}']`, [
+          new CssRuleRegular(`[data-transform~='${key}']`, [
             ["overflow", "hidden"],
             ["white-space", "nowrap"],
             ["text-overflow", "ellipsis"],
@@ -38,7 +39,7 @@ export class TransformUtilityGenerator extends UtilityGenerator {
 
       if (key === "line-clamp") {
         rules.push(
-          new CssRule(`[data-transform~='${key}']`, [
+          new CssRuleRegular(`[data-transform~='${key}']`, [
             ["display", "-webkit-box"],
             ["-webkit-box-orient", "vertical"],
             ["-webkit-line-clamp", "var(--lines, 2)"],
@@ -49,26 +50,30 @@ export class TransformUtilityGenerator extends UtilityGenerator {
       }
 
       if (key === "center") {
-        rules.push(new CssRule(`[data-transform~='${key}']`, [["text-align", "center"]]));
+        rules.push(new CssRuleRegular(`[data-transform~='${key}']`, [["text-align", "center"]]));
         continue;
       }
 
       if (key === "upper-first") {
-        rules.push(new CssRule(`[data-transform~='${key}']:first-letter`, [["text-transform", "uppercase"]]));
+        rules.push(
+          new CssRuleRegular(`[data-transform~='${key}']:first-letter`, [["text-transform", "uppercase"]]),
+        );
         continue;
       }
 
       if (key === "nowrap") {
-        rules.push(new CssRule(`[data-transform~='${key}']`, [["white-space", "nowrap"]]));
+        rules.push(new CssRuleRegular(`[data-transform~='${key}']`, [["white-space", "nowrap"]]));
         continue;
       }
 
       if (key === "font-variant-numeric") {
-        rules.push(new CssRule(`[data-transform~='${key}']`, [["font-variant-numeric", "tabular-nums"]]));
+        rules.push(
+          new CssRuleRegular(`[data-transform~='${key}']`, [["font-variant-numeric", "tabular-nums"]]),
+        );
         continue;
       }
 
-      rules.push(new CssRule(`[data-transform~='${key}']`, [["text-transform", value]]));
+      rules.push(new CssRuleRegular(`[data-transform~='${key}']`, [["text-transform", value]]));
     }
 
     // Stryker disable all

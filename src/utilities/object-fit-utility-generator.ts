@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class ObjectFitUtilityGenerator extends UtilityGenerator {
   config = {
@@ -15,10 +16,10 @@ export class ObjectFitUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRule(`[data-object-fit='${key}']`, [["object-fit", value]]));
+      rules.push(new CssRuleRegular(`[data-object-fit='${key}']`, [["object-fit", value]]));
     }
 
     // Stryker disable all

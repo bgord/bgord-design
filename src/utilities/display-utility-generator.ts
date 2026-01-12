@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class DisplayUtilityGenerator extends UtilityGenerator {
   config = { flex: "flex", block: "block", "inline-block": "inline-block", none: "none" };
@@ -9,18 +10,18 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
       if (key === "flex") {
         rules.push(
-          new CssRule(`[data-disp='${key}']`, [
+          new CssRuleRegular(`[data-disp='${key}']`, [
             ["display", value],
             ["flex-wrap", "wrap"],
           ]),
         );
       }
-      rules.push(new CssRule(`[data-disp='${key}']`, [["display", value]]));
+      rules.push(new CssRuleRegular(`[data-disp='${key}']`, [["display", value]]));
     }
 
     // Stryker disable all

@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { ZIndexTokenGenerator } from "../tokens/z-index-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class ZIndexUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class ZIndexUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("z-index-", "");
 
-      rules.push(new CssRule(`[data-z='${key}']`, [["z-index", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-z='${key}']`, [["z-index", `var(--${variable})`]]));
     }
 
     // Stryker disable all

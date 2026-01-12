@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class FlexDirectionUtilityGenerator extends UtilityGenerator {
   config = {
@@ -14,10 +15,10 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRule(`[data-dir='${key}']`, [["flex-direction", value]]));
+      rules.push(new CssRuleRegular(`[data-dir='${key}']`, [["flex-direction", value]]));
     }
 
     // Stryker disable all

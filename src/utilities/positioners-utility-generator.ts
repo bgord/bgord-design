@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { SpacingTokenGenerator } from "../tokens/spacing-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class PositionersUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,31 +15,31 @@ export class PositionersUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-top='${key}']`, [["top", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-top='${key}']`, [["top", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-right='${key}']`, [["right", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-right='${key}']`, [["right", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-bottom='${key}']`, [["bottom", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-bottom='${key}']`, [["bottom", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-left='${key}']`, [["left", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-left='${key}']`, [["left", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-inset='${key}']`, [["inset", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-inset='${key}']`, [["inset", `var(--${variable})`]]));
     }
 
     // Stryker disable all

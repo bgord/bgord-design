@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { FontFamilyTokenGenerator } from "../tokens/font-family-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class FontFamilyUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("font-family-", "");
 
-      rules.push(new CssRule(`[data-ff='${key}']`, [["font-family", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-ff='${key}']`, [["font-family", `var(--${variable})`]]));
     }
 
     // Stryker disable all

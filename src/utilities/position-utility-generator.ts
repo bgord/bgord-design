@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class PositionUtilityGenerator extends UtilityGenerator {
   config = {
@@ -16,10 +17,10 @@ export class PositionUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
-      rules.push(new CssRule(`[data-position='${key}']`, [["position", value]]));
+      rules.push(new CssRuleRegular(`[data-position='${key}']`, [["position", value]]));
     }
 
     // Stryker disable all

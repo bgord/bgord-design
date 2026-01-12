@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { FontSizeTokenGenerator } from "../tokens/font-size-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class FontSizeUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("font-size-", "");
 
-      rules.push(new CssRule(`[data-fs='${key}']`, [["font-size", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-fs='${key}']`, [["font-size", `var(--${variable})`]]));
     }
 
     // Stryker disable all

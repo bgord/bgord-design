@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { SpacingTokenGenerator } from "../tokens/spacing-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class PaddingUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,7 +15,7 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     /* It is important to output the utils in this order,
        so the p is extendable by px/py, 
@@ -22,13 +23,13 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
     */
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-p='${key}']`, [["padding", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-p='${key}']`, [["padding", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
       rules.push(
-        new CssRule(`[data-px='${key}']`, [
+        new CssRuleRegular(`[data-px='${key}']`, [
           ["padding-left", `var(--${variable})`],
           ["padding-right", `var(--${variable})`],
         ]),
@@ -38,7 +39,7 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
       rules.push(
-        new CssRule(`[data-py='${key}']`, [
+        new CssRuleRegular(`[data-py='${key}']`, [
           ["padding-top", `var(--${variable})`],
           ["padding-bottom", `var(--${variable})`],
         ]),
@@ -47,22 +48,22 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-pt='${key}']`, [["padding-top", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-pt='${key}']`, [["padding-top", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-pr='${key}']`, [["padding-right", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-pr='${key}']`, [["padding-right", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-pb='${key}']`, [["padding-bottom", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-pb='${key}']`, [["padding-bottom", `var(--${variable})`]]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("spacing-", "");
-      rules.push(new CssRule(`[data-pl='${key}']`, [["padding-left", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-pl='${key}']`, [["padding-left", `var(--${variable})`]]));
     }
 
     // Stryker disable all

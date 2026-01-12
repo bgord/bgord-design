@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { ShadowTokenGenerator } from "../tokens/shadow-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class ShadowUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("shadow-", "");
 
-      rules.push(new CssRule(`[data-shadow='${key}']`, [["box-shadow", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-shadow='${key}']`, [["box-shadow", `var(--${variable})`]]));
     }
 
     // Stryker disable all

@@ -1,6 +1,7 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { LineHeightTokenGenerator } from "../tokens/line-height-token-generator";
-import { CssRule, UtilityGenerator } from "./template";
+import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { UtilityGenerator } from "./template";
 
 export class LineHeightUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -14,12 +15,12 @@ export class LineHeightUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRule[] = [];
+    const rules: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("line-height-", "");
 
-      rules.push(new CssRule(`[data-lh='${key}']`, [["line-height", `var(--${variable})`]]));
+      rules.push(new CssRuleRegular(`[data-lh='${key}']`, [["line-height", `var(--${variable})`]]));
     }
 
     // Stryker disable all
