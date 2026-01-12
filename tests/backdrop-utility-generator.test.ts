@@ -26,9 +26,10 @@ describe("BackdropUtilityGenerator", () => {
         [data-md-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }
       }
     `);
-    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(
-      `"data-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger";`,
-    );
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
+      "data-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger";
+      "data-md-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger";
+    `);
   });
 
   test("with overrides", () => {
@@ -52,8 +53,9 @@ describe("BackdropUtilityGenerator", () => {
         [data-md-backdrop='new']::backdrop { background: var(--backdrop-new); }
       }
     `);
-    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(
-      `"data-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger" | "new";`,
-    );
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
+      "data-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger" | "new";
+      "data-md-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger" | "new";
+    `);
   });
 });

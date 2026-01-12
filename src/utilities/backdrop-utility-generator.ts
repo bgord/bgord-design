@@ -59,6 +59,8 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-backdrop"?: ${type};`].join(" ");
+    return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }
