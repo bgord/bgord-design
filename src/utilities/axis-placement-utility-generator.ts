@@ -58,6 +58,12 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-main"?: ${type};`, `"data-cross"?: ${type};`].join(" ");
+    return [
+      `"data-main"?: ${type};`,
+      `"data-cross"?: ${type};`,
+
+      ...this.breakpointRegistry.entries.map(([name]) => `"data-${name}-main"?: ${type};`),
+      ...this.breakpointRegistry.entries.map(([name]) => `"data-${name}-cross"?: ${type};`),
+    ].join(" ");
   }
 }

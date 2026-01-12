@@ -47,6 +47,8 @@ describe("AxisPlacementUtilityGenerator", () => {
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-main"?: "start" | "end" | "around" | "evenly" | "between" | "center" | "baseline";
       "data-cross"?: "start" | "end" | "around" | "evenly" | "between" | "center" | "baseline";
+      "data-md-main"?: "start" | "end" | "around" | "evenly" | "between" | "center" | "baseline";
+      "data-md-cross"?: "start" | "end" | "around" | "evenly" | "between" | "center" | "baseline";
     `);
   });
 });
