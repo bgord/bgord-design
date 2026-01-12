@@ -13,6 +13,12 @@ describe("OverflowUtilityGenerator", () => {
       [data-overflow='auto'] { overflow: auto; }
       [data-overflow='scroll'] { overflow: scroll; }
       [data-overflow='hidden'] { overflow: hidden; }
+
+      @media (max-width: 768px) {
+        [data-md-overflow='auto'] { overflow: auto; }
+        [data-md-overflow='scroll'] { overflow: scroll; }
+        [data-md-overflow='hidden'] { overflow: hidden; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-overflow"?: "auto" | "scroll" | "hidden";
