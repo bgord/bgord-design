@@ -42,6 +42,8 @@ export class OverflowUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-overflow"?: ${type};`].join(" ");
+    return ["overflow", ...this.breakpointRegistry.entries.map(([name]) => `${name}-overflow`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

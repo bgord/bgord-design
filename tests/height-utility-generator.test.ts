@@ -22,6 +22,7 @@ describe("HeightUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-height"?: "100%" | "auto" | "unset";
+      "data-md-height"?: "100%" | "auto" | "unset";
     `);
   });
 });

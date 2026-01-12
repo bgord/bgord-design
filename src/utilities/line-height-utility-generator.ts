@@ -54,6 +54,8 @@ export class LineHeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-lh"?: ${type};`].join(" ");
+    return ["lh", ...this.breakpointRegistry.entries.map(([name]) => `${name}-lh`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

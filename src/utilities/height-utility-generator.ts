@@ -42,6 +42,8 @@ export class HeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-height"?: ${type};`].join(" ");
+    return ["height", ...this.breakpointRegistry.entries.map(([name]) => `${name}-height`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

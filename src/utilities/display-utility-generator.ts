@@ -59,5 +59,8 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     return [`"data-disp"?: ${type};`].join(" ");
+    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
+    //   .map((key) => `"data-${key}"?: ${type};`)
+    //   .join(" ");
   }
 }

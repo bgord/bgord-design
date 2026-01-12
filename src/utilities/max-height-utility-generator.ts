@@ -52,6 +52,8 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-maxh"?: ${type};`].join(" ");
+    return ["maxh", ...this.breakpointRegistry.entries.map(([name]) => `${name}-maxh`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

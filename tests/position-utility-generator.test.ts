@@ -28,6 +28,7 @@ describe("PositionUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-position"?: "static" | "relative" | "absolute" | "fixed" | "sticky" | "unset";
+      "data-md-position"?: "static" | "relative" | "absolute" | "fixed" | "sticky" | "unset";
     `);
   });
 });

@@ -48,6 +48,8 @@ export class ObjectFitUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-object-fit"?: ${type};`].join(" ");
+    return ["object-fit", ...this.breakpointRegistry.entries.map(([name]) => `${name}-object-fit`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

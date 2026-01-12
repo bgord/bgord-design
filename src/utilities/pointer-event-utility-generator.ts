@@ -44,6 +44,8 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-pointer-events"?: ${type};`].join(" ");
+    return ["pointer-events", ...this.breakpointRegistry.entries.map(([name]) => `${name}-pointer-events`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

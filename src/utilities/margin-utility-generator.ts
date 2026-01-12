@@ -143,5 +143,8 @@ export class MarginUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     return ["m", "mt", "mr", "mb", "ml", "mx", "my"].map((abbr) => `"data-${abbr}"?: ${type};`).join(" ");
+    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
+    //   .map((key) => `"data-${key}"?: ${type};`)
+    //   .join(" ");
   }
 }

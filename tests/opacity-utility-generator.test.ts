@@ -26,6 +26,7 @@ describe("OpacityUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-opacity"?: "full" | "high" | "medium" | "low";
+      "data-md-opacity"?: "full" | "high" | "medium" | "low";
     `);
   });
 
@@ -50,6 +51,7 @@ describe("OpacityUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-opacity"?: "full" | "high" | "medium" | "low" | "25";
+      "data-md-opacity"?: "full" | "high" | "medium" | "low" | "25";
     `);
   });
 });

@@ -30,6 +30,7 @@ describe("LineHeightUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-lh"?: "none" | "tight" | "base" | "loose" | "display" | "unset";
+      "data-md-lh"?: "none" | "tight" | "base" | "loose" | "display" | "unset";
     `);
   });
 
@@ -58,6 +59,7 @@ describe("LineHeightUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-lh"?: "none" | "tight" | "base" | "loose" | "display" | "unset" | "huge";
+      "data-md-lh"?: "none" | "tight" | "base" | "loose" | "display" | "unset" | "huge";
     `);
   });
 });

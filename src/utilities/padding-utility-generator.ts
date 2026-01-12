@@ -143,5 +143,8 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     return ["p", "pt", "pr", "pb", "pl", "px", "py"].map((abbr) => `"data-${abbr}"?: ${type};`).join(" ");
+    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
+    //   .map((key) => `"data-${key}"?: ${type};`)
+    //   .join(" ");
   }
 }

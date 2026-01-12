@@ -54,6 +54,8 @@ export class LetterSpacingUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-ls"?: ${type};`].join(" ");
+    return ["ls", ...this.breakpointRegistry.entries.map(([name]) => `${name}-ls`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

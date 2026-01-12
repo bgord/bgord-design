@@ -44,6 +44,8 @@ export class RotateUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-rotate"?: ${type};`].join(" ");
+    return ["rotate", ...this.breakpointRegistry.entries.map(([name]) => `${name}-rotate`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

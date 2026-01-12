@@ -30,6 +30,7 @@ describe("LetterSpacingUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset";
+      "data-md-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset";
     `);
   });
 
@@ -60,6 +61,7 @@ describe("LetterSpacingUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset" | "insane";
+      "data-md-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset" | "insane";
     `);
   });
 });

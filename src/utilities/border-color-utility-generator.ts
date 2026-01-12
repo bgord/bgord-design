@@ -226,5 +226,8 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       `"data-bcx"?: ${type};`,
       `"data-bcy"?: ${type};`,
     ].join(" ");
+    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
+    //   .map((key) => `"data-${key}"?: ${type};`)
+    //   .join(" ");
   }
 }

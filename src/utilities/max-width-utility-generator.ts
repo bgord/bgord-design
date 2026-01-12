@@ -52,6 +52,8 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-maxw"?: ${type};`].join(" ");
+    return ["maxw", ...this.breakpointRegistry.entries.map(([name]) => `${name}-maxw`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

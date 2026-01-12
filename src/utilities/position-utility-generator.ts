@@ -49,6 +49,8 @@ export class PositionUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-position"?: ${type};`].join(" ");
+    return ["position", ...this.breakpointRegistry.entries.map(([name]) => `${name}-position`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

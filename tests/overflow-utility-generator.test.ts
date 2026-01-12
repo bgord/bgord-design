@@ -22,6 +22,7 @@ describe("OverflowUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-overflow"?: "auto" | "scroll" | "hidden";
+      "data-md-overflow"?: "auto" | "scroll" | "hidden";
     `);
   });
 });

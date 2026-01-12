@@ -30,6 +30,7 @@ describe("ObjectPositionUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-object-position"?: "top" | "bottom" | "left" | "right" | "center" | "top-left" | "top-right";
+      "data-md-object-position"?: "top" | "bottom" | "left" | "right" | "center" | "top-left" | "top-right";
     `);
   });
 });

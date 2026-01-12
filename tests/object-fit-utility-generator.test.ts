@@ -26,6 +26,7 @@ describe("ObjectFitUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-object-fit"?: "contain" | "cover" | "fill" | "scale-down" | "none";
+      "data-md-object-fit"?: "contain" | "cover" | "fill" | "scale-down" | "none";
     `);
   });
 });

@@ -36,6 +36,7 @@ describe("RadiusUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-br"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "pill" | "circle" | "unset";
+      "data-md-br"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "pill" | "circle" | "unset";
     `);
   });
 
@@ -70,6 +71,7 @@ describe("RadiusUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-br"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "pill" | "circle" | "unset" | "egg";
+      "data-md-br"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "pill" | "circle" | "unset" | "egg";
     `);
   });
 });

@@ -24,6 +24,7 @@ describe("RotateUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-rotate"?: "0" | "90" | "180" | "270";
+      "data-md-rotate"?: "0" | "90" | "180" | "270";
     `);
   });
 });

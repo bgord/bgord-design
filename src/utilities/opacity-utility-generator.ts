@@ -54,6 +54,8 @@ export class OpacityUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-opacity"?: ${type};`].join(" ");
+    return ["opacity", ...this.breakpointRegistry.entries.map(([name]) => `${name}-opacity`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

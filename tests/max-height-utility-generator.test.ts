@@ -24,6 +24,7 @@ describe("MaxHeightUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-maxh"?: "100%" | "unset" | "md";
+      "data-md-maxh"?: "100%" | "unset" | "md";
    `);
   });
 
@@ -46,6 +47,7 @@ describe("MaxHeightUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-maxh"?: "100%" | "unset" | "md" | "full-hd";
+      "data-md-maxh"?: "100%" | "unset" | "md" | "full-hd";
    `);
   });
 });

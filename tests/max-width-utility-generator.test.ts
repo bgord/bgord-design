@@ -24,6 +24,7 @@ describe("MaxWidthUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-maxw"?: "100%" | "unset" | "md";
+      "data-md-maxw"?: "100%" | "unset" | "md";
     `);
   });
 
@@ -46,6 +47,7 @@ describe("MaxWidthUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-maxw"?: "100%" | "unset" | "md" | "full-hd";
+      "data-md-maxw"?: "100%" | "unset" | "md" | "full-hd";
     `);
   });
 });

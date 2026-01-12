@@ -20,6 +20,7 @@ describe("PointerEventUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-pointer-events"?: "none" | "auto";
+      "data-md-pointer-events"?: "none" | "auto";
     `);
   });
 });

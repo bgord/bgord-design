@@ -52,6 +52,8 @@ export class ObjectPositionUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-object-position"?: ${type};`].join(" ");
+    return ["object-position", ...this.breakpointRegistry.entries.map(([name]) => `${name}-object-position`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

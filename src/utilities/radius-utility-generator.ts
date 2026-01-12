@@ -54,6 +54,8 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-br"?: ${type};`].join(" ");
+    return ["br", ...this.breakpointRegistry.entries.map(([name]) => `${name}-br`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

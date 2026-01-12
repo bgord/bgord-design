@@ -43,5 +43,8 @@ export class CursorUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     return [`"data-cursor"?: ${type};`].join(" ");
+    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
+    //   .map((key) => `"data-${key}"?: ${type};`)
+    //   .join(" ");
   }
 }
