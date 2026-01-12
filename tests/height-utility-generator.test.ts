@@ -13,6 +13,12 @@ describe("HeightUtilityGenerator", () => {
       [data-height='100%'] { height: 100%; }
       [data-height='auto'] { height: auto; }
       [data-height='unset'] { height: unset; }
+
+      @media (max-width: 768px) {
+        [data-md-height='100%'] { height: 100%; }
+        [data-md-height='auto'] { height: auto; }
+        [data-md-height='unset'] { height: unset; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-height"?: "100%" | "auto" | "unset";
