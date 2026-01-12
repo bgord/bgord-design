@@ -13,6 +13,12 @@ describe("WidthUtilityGenerator", () => {
       [data-width='100%'] { width: 100%; }
       [data-width='auto'] { width: auto; }
       [data-width='unset'] { width: unset; }
+
+      @media (max-width: 768px) {
+        [data-md-width='100%'] { width: 100%; }
+        [data-md-width='auto'] { width: auto; }
+        [data-md-width='unset'] { width: unset; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-width"?: "100%" | "auto" | "unset";
