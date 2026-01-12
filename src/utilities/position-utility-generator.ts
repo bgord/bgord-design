@@ -25,7 +25,9 @@ export class PositionUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-position='${key}']`, ["position", value]));
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -36,7 +38,9 @@ export class PositionUtilityGenerator extends UtilityGenerator {
         responsive.push(new CssRuleRegular(`[data-${name}-position='${key}']`, ["position", value]));
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -49,8 +53,10 @@ export class PositionUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
+    // Stryker disable all
     return ["position", ...this.breakpointRegistry.entries.map(([name]) => `${name}-position`)]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

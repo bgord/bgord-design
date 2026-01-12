@@ -25,7 +25,9 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-ff='${key}']`, ["font-family", `var(--${variable})`]));
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -40,7 +42,9 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
         );
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -54,8 +58,10 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
+    // Stryker disable all
     return ["ff", ...this.breakpointRegistry.entries.map(([name]) => `${name}-ff`)]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

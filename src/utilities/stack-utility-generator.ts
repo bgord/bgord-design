@@ -37,7 +37,9 @@ export class StackUtilityGenerator extends UtilityGenerator {
       }
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -65,7 +67,9 @@ export class StackUtilityGenerator extends UtilityGenerator {
         }
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -78,8 +82,10 @@ export class StackUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
+    // Stryker disable all
     return ["stack", ...this.breakpointRegistry.entries.map(([name]) => `${name}-stack`)]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

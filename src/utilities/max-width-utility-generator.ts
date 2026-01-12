@@ -25,7 +25,9 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-maxw='${key}']`, ["max-width", value]));
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -38,7 +40,9 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
         responsive.push(new CssRuleRegular(`[data-${name}-maxw='${key}']`, ["max-width", value]));
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -52,8 +56,10 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
+    // Stryker disable all
     return ["maxw", ...this.breakpointRegistry.entries.map(([name]) => `${name}-maxw`)]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

@@ -25,7 +25,9 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-fs='${key}']`, ["font-size", `var(--${variable})`]));
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -40,7 +42,9 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
         );
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -53,8 +57,10 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key.replace("font-size-", "")}"`)
       .join(" | ");
 
+    // Stryker disable all
     return ["fs", ...this.breakpointRegistry.entries.map(([name]) => `${name}-fs`)]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

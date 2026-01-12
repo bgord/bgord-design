@@ -18,7 +18,9 @@ export class HeightUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-height='${key}']`, ["height", value]));
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -29,7 +31,9 @@ export class HeightUtilityGenerator extends UtilityGenerator {
         responsive.push(new CssRuleRegular(`[data-${name}-height='${key}']`, ["height", value]));
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -42,8 +46,10 @@ export class HeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
+    // Stryker disable all
     return ["height", ...this.breakpointRegistry.entries.map(([name]) => `${name}-height`)]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

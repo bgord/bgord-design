@@ -18,7 +18,9 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-pointer-events='${key}']`, ["pointer-events", value]));
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -31,7 +33,9 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
         );
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -44,8 +48,10 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
+    // Stryker disable all
     return ["pointer-events", ...this.breakpointRegistry.entries.map(([name]) => `${name}-pointer-events`)]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

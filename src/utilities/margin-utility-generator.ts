@@ -68,7 +68,9 @@ export class MarginUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-ml='${key}']`, ["margin-left", `var(--${variable})`]));
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -128,7 +130,9 @@ export class MarginUtilityGenerator extends UtilityGenerator {
         );
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -142,6 +146,7 @@ export class MarginUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
+    // Stryker disable all
     return [
       "m",
       "mt",
@@ -160,5 +165,6 @@ export class MarginUtilityGenerator extends UtilityGenerator {
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

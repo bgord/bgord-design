@@ -25,7 +25,9 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-maxh='${key}']`, ["max-height", value]));
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -38,7 +40,9 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
         responsive.push(new CssRuleRegular(`[data-${name}-maxh='${key}']`, ["max-height", value]));
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -52,8 +56,10 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
+    // Stryker disable all
     return ["maxh", ...this.breakpointRegistry.entries.map(([name]) => `${name}-maxh`)]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

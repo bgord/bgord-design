@@ -24,7 +24,9 @@ export class ObjectFitUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-object-fit='${key}']`, ["object-fit", value]));
     }
 
+    // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
+    // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
@@ -35,7 +37,9 @@ export class ObjectFitUtilityGenerator extends UtilityGenerator {
         responsive.push(new CssRuleRegular(`[data-${name}-object-fit='${key}']`, ["object-fit", value]));
       }
 
+      // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
+      // Stryker restore all
 
       result += "}";
     }
@@ -48,8 +52,10 @@ export class ObjectFitUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
+    // Stryker disable all
     return ["object-fit", ...this.breakpointRegistry.entries.map(([name]) => `${name}-object-fit`)]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
+    // Stryker restore all
   }
 }

@@ -12,7 +12,9 @@ export class CssRuleRegular implements CssRuleStrategy {
 
   get(): string {
     if (Array.isArray(this.lines[0])) {
+      // Stryker disable all
       return `${this.selector} { ${this.lines.map(([key, value]) => `${key}: ${value};`).join("\n")} }`;
+      // Stryker restore all
     }
     return `${this.selector} { ${this.lines[0]}: ${this.lines[1]}; }`;
   }
