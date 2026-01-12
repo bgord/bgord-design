@@ -17,6 +17,14 @@ describe("BackdropUtilityGenerator", () => {
       [data-backdrop='medium']::backdrop { background: var(--backdrop-medium); }
       [data-backdrop='strong']::backdrop { background: var(--backdrop-strong); }
       [data-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }
+
+      @media (min-width: 768px) {
+        [data-md-backdrop='none']::backdrop { background: var(--backdrop-none); }
+        [data-md-backdrop='weak']::backdrop { background: var(--backdrop-weak); }
+        [data-md-backdrop='medium']::backdrop { background: var(--backdrop-medium); }
+        [data-md-backdrop='strong']::backdrop { background: var(--backdrop-strong); }
+        [data-md-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(
       `"data-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger";`,
@@ -34,6 +42,15 @@ describe("BackdropUtilityGenerator", () => {
       [data-backdrop='strong']::backdrop { background: var(--backdrop-strong); }
       [data-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }
       [data-backdrop='new']::backdrop { background: var(--backdrop-new); }
+
+      @media (min-width: 768px) {
+        [data-md-backdrop='none']::backdrop { background: var(--backdrop-none); }
+        [data-md-backdrop='weak']::backdrop { background: var(--backdrop-weak); }
+        [data-md-backdrop='medium']::backdrop { background: var(--backdrop-medium); }
+        [data-md-backdrop='strong']::backdrop { background: var(--backdrop-strong); }
+        [data-md-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }
+        [data-md-backdrop='new']::backdrop { background: var(--backdrop-new); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(
       `"data-backdrop"?: "none" | "weak" | "medium" | "strong" | "stronger" | "new";`,

@@ -29,6 +29,27 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
 
     result += regular.map((rule) => rule.get()).join("\n");
 
+    for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
+      const responsive: CssRuleRegular[] = [];
+
+      result += `@media (min-width: ${breakpoint}px) { `;
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("backdrop-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-backdrop='${key}']::backdrop`, [
+            "background",
+            `var(--${variable})`,
+          ]),
+        );
+      }
+
+      result += responsive.map((rule) => rule.get()).join("\n");
+
+      result += "}";
+    }
+
     return result;
   }
 
