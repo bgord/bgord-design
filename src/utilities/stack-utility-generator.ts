@@ -39,7 +39,7 @@ export class StackUtilityGenerator extends UtilityGenerator {
 
     result += regular.map((rule) => rule.get()).join("\n");
 
-    for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
+    for (const [name, breakpoint] of this.breakpointRegistry.entries) {
       const responsive: CssRuleRegular[] = [];
 
       result += `@media (max-width: ${breakpoint}px) { `;
