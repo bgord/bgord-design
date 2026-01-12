@@ -20,6 +20,20 @@ export class FlexShrinkUtilityGenerator extends UtilityGenerator {
 
     result += regular.map((rule) => rule.get()).join("\n");
 
+    for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
+      const responsive: CssRuleRegular[] = [];
+
+      result += `@media (max-width: ${breakpoint}px) { `;
+
+      for (const [key, value] of Object.entries(this.config)) {
+        responsive.push(new CssRuleRegular(`[data-${name}-shrink='${key}']`, ["flex-shrink", value]));
+      }
+
+      result += responsive.map((rule) => rule.get()).join("\n");
+
+      result += "}";
+    }
+
     return result;
   }
 

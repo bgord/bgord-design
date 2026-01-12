@@ -12,6 +12,11 @@ describe("FlexShrinkUtilityGenerator", () => {
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-shrink='0'] { flex-shrink: 0; }
       [data-shrink='unset'] { flex-shrink: unset; }
+
+      @media (max-width: 768px) {
+        [data-md-shrink='0'] { flex-shrink: 0; }
+        [data-md-shrink='unset'] { flex-shrink: unset; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-shrink"?: "0" | "unset";
