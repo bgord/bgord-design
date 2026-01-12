@@ -16,6 +16,13 @@ describe("OpacityUtilityGenerator", () => {
       [data-opacity='high'] { opacity: var(--opacity-high); }
       [data-opacity='medium'] { opacity: var(--opacity-medium); }
       [data-opacity='low'] { opacity: var(--opacity-low); }
+
+      @media (max-width: 768px) {
+        [data-md-opacity='full'] { opacity: var(--opacity-full); }
+        [data-md-opacity='high'] { opacity: var(--opacity-high); }
+        [data-md-opacity='medium'] { opacity: var(--opacity-medium); }
+        [data-md-opacity='low'] { opacity: var(--opacity-low); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-opacity"?: "full" | "high" | "medium" | "low";
@@ -32,6 +39,14 @@ describe("OpacityUtilityGenerator", () => {
       [data-opacity='medium'] { opacity: var(--opacity-medium); }
       [data-opacity='low'] { opacity: var(--opacity-low); }
       [data-opacity='25'] { opacity: var(--opacity-25); }
+
+      @media (max-width: 768px) {
+        [data-md-opacity='full'] { opacity: var(--opacity-full); }
+        [data-md-opacity='high'] { opacity: var(--opacity-high); }
+        [data-md-opacity='medium'] { opacity: var(--opacity-medium); }
+        [data-md-opacity='low'] { opacity: var(--opacity-low); }
+        [data-md-opacity='25'] { opacity: var(--opacity-25); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-opacity"?: "full" | "high" | "medium" | "low" | "25";
