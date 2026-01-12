@@ -12,7 +12,7 @@ import * as UtilityGenerators from "./utilities";
   const BackdropsTokenGenerator = new TokenGenerators.BackdropsTokenGenerator();
   const BorderWidthTokenGenerator = new TokenGenerators.BorderWidthTokenGenerator();
   const BrandTokenGenerator = new TokenGenerators.BrandTokenGenerator();
-  const BreakpointTokenGenerator = new TokenGenerators.BreakpointTokenGenerator();
+  const BreakpointTokenGenerator = new TokenGenerators.BreakpointTokenGenerator(breakpointRegistry);
   const DangerTokenGenerator = new TokenGenerators.DangerTokenGenerator();
   const FontFamilyTokenGenerator = new TokenGenerators.FontFamilyTokenGenerator();
   const FontSizeTokenGenerator = new TokenGenerators.FontSizeTokenGenerator();
