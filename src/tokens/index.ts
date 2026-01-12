@@ -1,4 +1,5 @@
 export * from "./backdrops-token-generator";
+export * from "./border-style-token-generator";
 export * from "./border-width-token-generator";
 export * from "./brand-token-generator";
 export * from "./breakpoint-token-generator";

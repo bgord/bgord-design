@@ -11,6 +11,7 @@ import * as UtilityGenerators from "./utilities";
 
   const BackdropsTokenGenerator = new TokenGenerators.BackdropsTokenGenerator();
   const BorderWidthTokenGenerator = new TokenGenerators.BorderWidthTokenGenerator();
+  const BorderStyleTokenGenerator = new TokenGenerators.BorderStyleTokenGenerator();
   const BrandTokenGenerator = new TokenGenerators.BrandTokenGenerator();
   const BreakpointTokenGenerator = new TokenGenerators.BreakpointTokenGenerator(breakpointRegistry);
   const DangerTokenGenerator = new TokenGenerators.DangerTokenGenerator();
@@ -33,6 +34,7 @@ import * as UtilityGenerators from "./utilities";
   const tokens = [
     BackdropsTokenGenerator,
     BorderWidthTokenGenerator,
+    BorderStyleTokenGenerator,
     BrandTokenGenerator,
     BreakpointTokenGenerator,
     DangerTokenGenerator,
