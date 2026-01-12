@@ -1,5 +1,5 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRuleRegular, CssRuleResponsive } from "./css-rule.strategy";
+import { CssRuleRegular } from "./css-rule.strategy";
 import { UtilityGenerator } from "./template";
 
 export class AxisPlacementUtilityGenerator extends UtilityGenerator {
