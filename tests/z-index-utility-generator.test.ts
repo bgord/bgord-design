@@ -28,6 +28,7 @@ describe("ZIndexUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-z"?: "negative" | "0" | "1" | "2" | "3";
+      "data-md-z"?: "negative" | "0" | "1" | "2" | "3";
     `);
   });
 
@@ -54,6 +55,7 @@ describe("ZIndexUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-z"?: "negative" | "0" | "1" | "2" | "3" | "top";
+      "data-md-z"?: "negative" | "0" | "1" | "2" | "3" | "top";
     `);
   });
 });

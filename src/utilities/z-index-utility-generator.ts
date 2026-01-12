@@ -52,6 +52,8 @@ export class ZIndexUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-z"?: ${type};`].join(" ");
+    return ["z", ...this.breakpointRegistry.entries.map(([name]) => `${name}-z`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }
