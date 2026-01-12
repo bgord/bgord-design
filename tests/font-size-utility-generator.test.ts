@@ -21,6 +21,18 @@ describe("FontSizeUtilityGenerator", () => {
       [data-fs='3xl'] { font-size: var(--font-size-3xl); }
       [data-fs='4xl'] { font-size: var(--font-size-4xl); }
       [data-fs='5xl'] { font-size: var(--font-size-5xl); }
+
+      @media (max-width: 768px) {
+        [data-md-fs='xs'] { font-size: var(--font-size-xs); }
+        [data-md-fs='sm'] { font-size: var(--font-size-sm); }
+        [data-md-fs='base'] { font-size: var(--font-size-base); }
+        [data-md-fs='lg'] { font-size: var(--font-size-lg); }
+        [data-md-fs='xl'] { font-size: var(--font-size-xl); }
+        [data-md-fs='2xl'] { font-size: var(--font-size-2xl); }
+        [data-md-fs='3xl'] { font-size: var(--font-size-3xl); }
+        [data-md-fs='4xl'] { font-size: var(--font-size-4xl); }
+        [data-md-fs='5xl'] { font-size: var(--font-size-5xl); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
@@ -42,6 +54,19 @@ describe("FontSizeUtilityGenerator", () => {
       [data-fs='4xl'] { font-size: var(--font-size-4xl); }
       [data-fs='5xl'] { font-size: var(--font-size-5xl); }
       [data-fs='biggie'] { font-size: var(--font-size-biggie); }
+
+      @media (max-width: 768px) {
+        [data-md-fs='xs'] { font-size: var(--font-size-xs); }
+        [data-md-fs='sm'] { font-size: var(--font-size-sm); }
+        [data-md-fs='base'] { font-size: var(--font-size-base); }
+        [data-md-fs='lg'] { font-size: var(--font-size-lg); }
+        [data-md-fs='xl'] { font-size: var(--font-size-xl); }
+        [data-md-fs='2xl'] { font-size: var(--font-size-2xl); }
+        [data-md-fs='3xl'] { font-size: var(--font-size-3xl); }
+        [data-md-fs='4xl'] { font-size: var(--font-size-4xl); }
+        [data-md-fs='5xl'] { font-size: var(--font-size-5xl); }
+        [data-md-fs='biggie'] { font-size: var(--font-size-biggie); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "biggie";
