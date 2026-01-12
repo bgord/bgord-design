@@ -17,6 +17,16 @@ describe("ObjectPositionUtilityGenerator", () => {
       [data-object-position='center'] { object-position: center; }
       [data-object-position='top-left'] { object-position: top left; }
       [data-object-position='top-right'] { object-position: top right; }
+
+      @media (max-width: 768px) {
+        [data-md-object-position='top'] { object-position: top; }
+        [data-md-object-position='bottom'] { object-position: bottom; }
+        [data-md-object-position='left'] { object-position: left; }
+        [data-md-object-position='right'] { object-position: right; }
+        [data-md-object-position='center'] { object-position: center; }
+        [data-md-object-position='top-left'] { object-position: top left; }
+        [data-md-object-position='top-right'] { object-position: top right; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-object-position"?: "top" | "bottom" | "left" | "right" | "center" | "top-left" | "top-right";
