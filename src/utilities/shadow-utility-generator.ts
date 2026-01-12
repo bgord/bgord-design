@@ -54,6 +54,8 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-shadow"?: ${type};`].join(" ");
+    return ["shadow", ...this.breakpointRegistry.entries.map(([name]) => `${name}-shadow`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }
