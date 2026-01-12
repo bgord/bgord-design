@@ -15,6 +15,14 @@ describe("ObjectFitUtilityGenerator", () => {
       [data-object-fit='fill'] { object-fit: fill; }
       [data-object-fit='scale-down'] { object-fit: scale-down; }
       [data-object-fit='none'] { object-fit: none; }
+
+      @media (max-width: 768px) {
+        [data-md-object-fit='contain'] { object-fit: contain; }
+        [data-md-object-fit='cover'] { object-fit: cover; }
+        [data-md-object-fit='fill'] { object-fit: fill; }
+        [data-md-object-fit='scale-down'] { object-fit: scale-down; }
+        [data-md-object-fit='none'] { object-fit: none; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-object-fit"?: "contain" | "cover" | "fill" | "scale-down" | "none";
