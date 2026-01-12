@@ -1,9 +1,68 @@
 # Changelog
+- 2026-01-12 22:26 19b791b **fix: mutants**
+- 2026-01-12 17:54 50bb839 **step: setup new ts definitions**
+- 2026-01-12 17:48 0eae60f **step: setup new ts definitions**
+- 2026-01-12 17:46 5bb6dec **step: update types for shadow**
+- 2026-01-12 17:45 e0b3ab1 **step: update types for stack**
+- 2026-01-12 17:45 20517e5 **step: update types for size**
+- 2026-01-12 17:44 ac4e211 **step: update types for transform**
+- 2026-01-12 17:43 b57c4cf **step: update types for width**
+- 2026-01-12 17:43 1aee4f6 **step: update types for zindex**
+- 2026-01-12 17:42 1e1fb83 **step: update types for backdrop**
+- 2026-01-12 17:38 b7f7fe8 **refactor: prepare for responsive ts definitions**
+- 2026-01-12 17:32 dcc7c0d **step: update types for axis**
+- 2026-01-12 17:31 6f90e90 **refactor: simplify breakpoint entries**
+- 2026-01-12 17:24 68b98ce **step: add responsive utilities for border color**
+- 2026-01-12 17:16 32a2583 **step: add responsive utilities for padding**
+- 2026-01-12 17:14 54b48fe **step: add responsive utilities for margin**
+- 2026-01-12 16:14 fe1d7c6 **step: add responsive utilities for border width**
+- 2026-01-12 16:11 0527616 **step: add responsive utilities for font color**
+- 2026-01-12 16:09 0efa9cc **step: add responsive utilities for transform**
+- 2026-01-12 16:07 1cb1c70 **step: add responsive utilities for positioners**
+- 2026-01-12 16:01 2537190 **step: add responsive utilities for stack**
+- 2026-01-12 16:00 f299022 **step: add responsive utilities for shadow**
+- 2026-01-12 16:00 7dc8172 **step: add responsive utilities for size**
+- 2026-01-12 15:58 7d9d4a1 **step: add responsive utilities for rotate**
+- 2026-01-12 15:57 b280b12 **step: add responsive utilities for radius**
+- 2026-01-12 15:56 b6d7226 **step: add responsive utilities for position**
+- 2026-01-12 15:55 f74e59b **step: add responsive utilities for overflow**
+- 2026-01-12 15:55 3504a61 **step: add responsive utilities for pointer events**
+- 2026-01-12 15:54 01a9d21 **step: add responsive utilities for opacity**
+- 2026-01-12 15:53 c2c4e33 **step: add responsive utilities for object position**
+- 2026-01-12 15:52 b27c199 **step: add responsive utilities for object fit**
+- 2026-01-12 15:51 b0a1fdf **step: add responsive utilities for maxw**
+- 2026-01-12 15:50 5cd5c68 **step: add responsive utilities for maxh**
+- 2026-01-12 15:49 5f07bec **step: add responsive utilities for line height**
+- 2026-01-12 15:48 b5df74f **step: add responsive utilities for letter spacing**
+- 2026-01-12 15:47 5418470 **step: add responsive utilities for height**
+- 2026-01-12 15:46 4e344d7 **step: add responsive utilities for gap**
+- 2026-01-12 15:45 de8540c **step: add responsive utilities for font weight**
+- 2026-01-12 15:43 09a332d **step: add responsive utilities for font size**
+- 2026-01-12 15:41 5b76575 **step: add responsive utilities for font family**
+- 2026-01-12 15:40 01f5550 **step: add responsive utilities for flex wrap**
+- 2026-01-12 15:39 7f61e95 **step: add responsive utilities for flex shrink**
+- 2026-01-12 15:38 fc33042 **step: add responsive utilities for flex grow**
+- 2026-01-12 15:37 e39d31e **step: add responsive utilities for flex direction**
+- 2026-01-12 15:36 02d07a8 **step: add responsive utilities for display**
+- 2026-01-12 15:35 f59a3bc **step: add responsive utilities for cursor**
+- 2026-01-12 15:34 7797b42 **step: add responsive utilities for width**
+- 2026-01-12 15:33 4147c23 **step: add responsive utilities for zindex**
+- 2026-01-12 15:31 e26a2b9 **step: add responsive utilities for background**
+- 2026-01-12 15:24 eeeae7b **fix: max wdth in media queries**
+- 2026-01-12 15:23 fdde8fa **step: add responsive utilities for backdrop**
+- 2026-01-12 15:20 858ae89 **refactor: remove redundant css rule class**
+- 2026-01-12 14:54 4523ec0 **step: add responsive utils for axis**
+- 2026-01-12 14:41 4ec66f7 **refactor: prepare for multiple rule sets**
+- 2026-01-12 14:26 3a14229 **refactor: simplify nested arrays**
+- 2026-01-12 14:20 46d4d71 **refactor: extract css rule regular**
+- 2026-01-12 13:57 a434216 **step: inject breakpoint registry**
+- 2026-01-12 13:49 c386efe **step: define breakpoint registry**
 - 2026-01-12 13:21 4521a64 **step: update packages**
 - 2026-01-12 12:58 5dad372 **step: border color**
 - 2026-01-12 12:49 a5a51e3 **step: transform utility**
 - 2026-01-12 12:37 56fdec2 **step: padding**
 - 2026-01-12 12:29 c4d24c8 **step: margin**
+- 2026-01-12 12:21 10be13f **docs: generate CHANGELOG**
 - 2026-01-11 13:20 10581c3 **step: border width**
 - 2026-01-11 12:52 9386f67 **step: use css rule in stack**
 - 2026-01-11 12:50 eed59b4 **step: use css rule in positioners**
