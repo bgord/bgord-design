@@ -20,6 +20,17 @@ describe("ShadowUtilityGenerator", () => {
       [data-shadow='xl'] { box-shadow: var(--shadow-xl); }
       [data-shadow='inner'] { box-shadow: var(--shadow-inner); }
       [data-shadow='unset'] { box-shadow: var(--shadow-unset); }
+
+      @media (max-width: 768px) {
+        [data-md-shadow='none'] { box-shadow: var(--shadow-none); }
+        [data-md-shadow='xs'] { box-shadow: var(--shadow-xs); }
+        [data-md-shadow='sm'] { box-shadow: var(--shadow-sm); }
+        [data-md-shadow='md'] { box-shadow: var(--shadow-md); }
+        [data-md-shadow='lg'] { box-shadow: var(--shadow-lg); }
+        [data-md-shadow='xl'] { box-shadow: var(--shadow-xl); }
+        [data-md-shadow='inner'] { box-shadow: var(--shadow-inner); }
+        [data-md-shadow='unset'] { box-shadow: var(--shadow-unset); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
@@ -40,6 +51,18 @@ describe("ShadowUtilityGenerator", () => {
       [data-shadow='inner'] { box-shadow: var(--shadow-inner); }
       [data-shadow='unset'] { box-shadow: var(--shadow-unset); }
       [data-shadow='huge'] { box-shadow: var(--shadow-huge); }
+
+      @media (max-width: 768px) {
+        [data-md-shadow='none'] { box-shadow: var(--shadow-none); }
+        [data-md-shadow='xs'] { box-shadow: var(--shadow-xs); }
+        [data-md-shadow='sm'] { box-shadow: var(--shadow-sm); }
+        [data-md-shadow='md'] { box-shadow: var(--shadow-md); }
+        [data-md-shadow='lg'] { box-shadow: var(--shadow-lg); }
+        [data-md-shadow='xl'] { box-shadow: var(--shadow-xl); }
+        [data-md-shadow='inner'] { box-shadow: var(--shadow-inner); }
+        [data-md-shadow='unset'] { box-shadow: var(--shadow-unset); }
+        [data-md-shadow='huge'] { box-shadow: var(--shadow-huge); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
