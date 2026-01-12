@@ -30,6 +30,7 @@ describe("SizeUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-size"?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
+      "data-md-size"?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
     `);
   });
 });

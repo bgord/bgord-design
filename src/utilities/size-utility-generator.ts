@@ -62,6 +62,8 @@ export class SizeUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-size"?: ${type};`].join(" ");
+    return ["size", ...this.breakpointRegistry.entries.map(([name]) => `${name}-size`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }
