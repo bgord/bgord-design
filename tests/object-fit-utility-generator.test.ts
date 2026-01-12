@@ -1,9 +1,12 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { ObjectFitUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("ObjectFitUtilityGenerator", () => {
   test("basic usage", () => {
-    const generator = new ObjectFitUtilityGenerator();
+    const generator = new ObjectFitUtilityGenerator(breakpoints);
 
     expect(generator.name).toEqual("Object fit utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`

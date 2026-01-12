@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { GapUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("GapUtilityGenerator", () => {
   test("basic usage", () => {
     const SpacingTokenGenerator = new Tokens.SpacingTokenGenerator();
-    const generator = new GapUtilityGenerator(SpacingTokenGenerator);
+    const generator = new GapUtilityGenerator(breakpoints, SpacingTokenGenerator);
 
     expect(generator.name).toEqual("Gap utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -31,7 +34,7 @@ describe("GapUtilityGenerator", () => {
 
   test("with overrides", () => {
     const SpacingTokenGenerator = new Tokens.SpacingTokenGenerator({ "spacing-huge": "100rem" });
-    const generator = new GapUtilityGenerator(SpacingTokenGenerator);
+    const generator = new GapUtilityGenerator(breakpoints, SpacingTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-gap='0'] { gap: var(--spacing-0); }

@@ -1,9 +1,10 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class FlexGrowUtilityGenerator extends UtilityGenerator {
   config = { "1": "1", unset: "unset" };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Flex grow utilities");
   }
 

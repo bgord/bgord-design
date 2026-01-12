@@ -1,9 +1,10 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class CursorUtilityGenerator extends UtilityGenerator {
   config = { wait: "wait", auto: "auto", pointer: "pointer", "not-allowed": "not-allowed" };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Cursor utilities");
   }
 

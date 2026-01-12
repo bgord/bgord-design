@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { SpacingTokenGenerator } from "../tokens/spacing-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class PositionersUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(SpacingTokenGenerator: SpacingTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    SpacingTokenGenerator: SpacingTokenGenerator,
+  ) {
     super("Positioners utilities");
     this.config = SpacingTokenGenerator.getConfig();
   }

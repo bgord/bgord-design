@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { OpacityUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("OpacityUtilityGenerator", () => {
   test("basic usage", () => {
     const OpacityTokenGenerator = new Tokens.OpacityTokenGenerator();
-    const generator = new OpacityUtilityGenerator(OpacityTokenGenerator);
+    const generator = new OpacityUtilityGenerator(breakpoints, OpacityTokenGenerator);
 
     expect(generator.name).toEqual("Opacity utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -21,7 +24,7 @@ describe("OpacityUtilityGenerator", () => {
 
   test("with overrides", () => {
     const OpacityTokenGenerator = new Tokens.OpacityTokenGenerator({ "opacity-25": "0.25" });
-    const generator = new OpacityUtilityGenerator(OpacityTokenGenerator);
+    const generator = new OpacityUtilityGenerator(breakpoints, OpacityTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-opacity='full'] { opacity: var(--opacity-full); }

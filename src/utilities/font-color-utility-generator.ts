@@ -1,3 +1,4 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { BrandTokenGenerator } from "../tokens/brand-token-generator";
 import type { DangerTokenGenerator } from "../tokens/danger-token-generator";
 import type { GrayscaleTokenGenerator } from "../tokens/grayscale-token-generator";
@@ -9,6 +10,7 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
   config = {};
 
   constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
     GrayscaleTokenGenerator: GrayscaleTokenGenerator,
     BrandTokenGenerator: BrandTokenGenerator,
     PositiveTokenGenerator: PositiveTokenGenerator,

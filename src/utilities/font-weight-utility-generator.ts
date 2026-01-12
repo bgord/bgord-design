@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { FontWeightTokenGenerator } from "../tokens/font-weight-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class FontWeightUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(FontWeightTokenGenerator: FontWeightTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    FontWeightTokenGenerator: FontWeightTokenGenerator,
+  ) {
     super("Font-weight utilities");
     this.config = FontWeightTokenGenerator.getConfig();
   }

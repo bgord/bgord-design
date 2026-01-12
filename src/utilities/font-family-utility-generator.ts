@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { FontFamilyTokenGenerator } from "../tokens/font-family-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class FontFamilyUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(FontFamilyTokenGenerator: FontFamilyTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    FontFamilyTokenGenerator: FontFamilyTokenGenerator,
+  ) {
     super("Font-family utilities");
     this.config = FontFamilyTokenGenerator.getConfig();
   }

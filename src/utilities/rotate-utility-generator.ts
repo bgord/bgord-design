@@ -1,9 +1,10 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class RotateUtilityGenerator extends UtilityGenerator {
   config = { "0": "0", "90": "90", "180": "180", "270": "270" };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Rotate utilities");
   }
 

@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { BreakpointTokenGenerator } from "../tokens/breakpoint-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class MaxWidthUtilityGenerator extends UtilityGenerator {
   config = { "100%": "100%", unset: "unset" };
 
-  constructor(BreakpointTokenGenerator: BreakpointTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    BreakpointTokenGenerator: BreakpointTokenGenerator,
+  ) {
     super("Max width utilities");
     this.config = { ...this.config, ...BreakpointTokenGenerator.getConfig() };
   }

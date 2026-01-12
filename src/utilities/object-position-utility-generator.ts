@@ -1,3 +1,4 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class ObjectPositionUtilityGenerator extends UtilityGenerator {
@@ -11,7 +12,7 @@ export class ObjectPositionUtilityGenerator extends UtilityGenerator {
     "top-right": "top right",
   };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Object position utilities");
   }
 

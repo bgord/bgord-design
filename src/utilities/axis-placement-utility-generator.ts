@@ -1,3 +1,4 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class AxisPlacementUtilityGenerator extends UtilityGenerator {
@@ -11,7 +12,7 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
     baseline: "baseline",
   };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Axis placement utilities");
   }
 

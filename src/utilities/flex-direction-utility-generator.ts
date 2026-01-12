@@ -1,3 +1,4 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class FlexDirectionUtilityGenerator extends UtilityGenerator {
@@ -8,7 +9,7 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
     "column-reverse": "column-reverse",
   };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Flex direction utilities");
   }
 

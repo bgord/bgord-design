@@ -1,3 +1,4 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class StackUtilityGenerator extends UtilityGenerator {
@@ -5,7 +6,7 @@ export class StackUtilityGenerator extends UtilityGenerator {
   config = { x: "x", y: "y" };
   // Stryker restore all
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Stack utilities");
   }
 

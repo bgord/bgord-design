@@ -1,6 +1,9 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { BorderColorUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("BorderColorUtilityGenerator", () => {
   test("basic usage", () => {
@@ -10,6 +13,7 @@ describe("BorderColorUtilityGenerator", () => {
     const DangerTokenGenerator = new Tokens.DangerTokenGenerator();
     const WarningTokenGenerator = new Tokens.WarningTokenGenerator();
     const generator = new BorderColorUtilityGenerator(
+      breakpoints,
       GrayscaleTokenGenerator,
       BrandTokenGenerator,
       PositiveTokenGenerator,
@@ -371,6 +375,7 @@ describe("BorderColorUtilityGenerator", () => {
     const DangerTokenGenerator = new Tokens.DangerTokenGenerator();
     const WarningTokenGenerator = new Tokens.WarningTokenGenerator();
     const generator = new BorderColorUtilityGenerator(
+      breakpoints,
       GrayscaleTokenGenerator,
       BrandTokenGenerator,
       PositiveTokenGenerator,

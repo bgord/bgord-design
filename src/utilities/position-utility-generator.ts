@@ -1,3 +1,4 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class PositionUtilityGenerator extends UtilityGenerator {
@@ -10,7 +11,7 @@ export class PositionUtilityGenerator extends UtilityGenerator {
     unset: "unset",
   };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Position utilities");
   }
 

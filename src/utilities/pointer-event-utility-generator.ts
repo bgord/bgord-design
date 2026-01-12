@@ -1,9 +1,10 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class PointerEventUtilityGenerator extends UtilityGenerator {
   config = { none: "none", auto: "auto" };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Pointer event utilities");
   }
 

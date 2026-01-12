@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { BackdropsTokenGenerator } from "../tokens/backdrops-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class BackdropUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(BackdropsTokenGenerator: BackdropsTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    BackdropsTokenGenerator: BackdropsTokenGenerator,
+  ) {
     super("Backdrop utilities");
     this.config = BackdropsTokenGenerator.getConfig();
   }

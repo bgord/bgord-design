@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { SizeTokenGenerator } from "../tokens/size-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class SizeUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(SizeTokenGenerator: SizeTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    SizeTokenGenerator: SizeTokenGenerator,
+  ) {
     super("Size utilities");
     this.config = SizeTokenGenerator.getConfig();
   }

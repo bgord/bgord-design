@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { MaxHeightUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("MaxHeightUtilityGenerator", () => {
   test("basic usage", () => {
     const BreakpointTokenGenerator = new Tokens.BreakpointTokenGenerator();
-    const generator = new MaxHeightUtilityGenerator(BreakpointTokenGenerator);
+    const generator = new MaxHeightUtilityGenerator(breakpoints, BreakpointTokenGenerator);
 
     expect(generator.name).toEqual("Max height utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -20,7 +23,7 @@ describe("MaxHeightUtilityGenerator", () => {
 
   test("with overrides", () => {
     const BreakpointTokenGenerator = new Tokens.BreakpointTokenGenerator({ "breakpoint-full-hd": "1920px" });
-    const generator = new MaxHeightUtilityGenerator(BreakpointTokenGenerator);
+    const generator = new MaxHeightUtilityGenerator(breakpoints, BreakpointTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-maxh='100%'] { max-height: 100%; }

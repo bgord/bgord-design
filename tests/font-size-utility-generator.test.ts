@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { FontSizeUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("FontSizeUtilityGenerator", () => {
   test("basic usage", () => {
     const FontSizeTokenGenerator = new Tokens.FontSizeTokenGenerator();
-    const generator = new FontSizeUtilityGenerator(FontSizeTokenGenerator);
+    const generator = new FontSizeUtilityGenerator(breakpoints, FontSizeTokenGenerator);
 
     expect(generator.name).toEqual("Font-size utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -26,7 +29,7 @@ describe("FontSizeUtilityGenerator", () => {
 
   test("with overrides", () => {
     const FontSizeTokenGenerator = new Tokens.FontSizeTokenGenerator({ "font-size-biggie": "100px" });
-    const generator = new FontSizeUtilityGenerator(FontSizeTokenGenerator);
+    const generator = new FontSizeUtilityGenerator(breakpoints, FontSizeTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-fs='xs'] { font-size: var(--font-size-xs); }

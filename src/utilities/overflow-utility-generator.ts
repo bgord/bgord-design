@@ -1,9 +1,10 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class OverflowUtilityGenerator extends UtilityGenerator {
   config = { auto: "auto", scroll: "scroll", hidden: "hidden" };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Overflow utilities");
   }
 

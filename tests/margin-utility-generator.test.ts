@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { MarginUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("MarginUtilityGenerator", () => {
   test("basic usage", () => {
     const SpacingTokenGenerator = new Tokens.SpacingTokenGenerator();
-    const generator = new MarginUtilityGenerator(SpacingTokenGenerator);
+    const generator = new MarginUtilityGenerator(breakpoints, SpacingTokenGenerator);
 
     expect(generator.name).toEqual("Margin utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -127,7 +130,7 @@ describe("MarginUtilityGenerator", () => {
 
   test("with overrides", () => {
     const SpacingTokenGenerator = new Tokens.SpacingTokenGenerator({ "spacing-huge": "100rem" });
-    const generator = new MarginUtilityGenerator(SpacingTokenGenerator);
+    const generator = new MarginUtilityGenerator(breakpoints, SpacingTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-m='0'] { margin: var(--spacing-0); }

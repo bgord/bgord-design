@@ -1,9 +1,10 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class FlexShrinkUtilityGenerator extends UtilityGenerator {
   config = { "0": "0", unset: "unset" };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Flex shrink utilities");
   }
 

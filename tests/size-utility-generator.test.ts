@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { SizeTokenGenerator } from "../src/tokens/size-token-generator";
 import { SizeUtilityGenerator } from "../src/utilities/size-utility-generator";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("SizeUtilityGenerator", () => {
   test("basic usage", () => {
     const tokenGenerator = new SizeTokenGenerator();
-    const generator = new SizeUtilityGenerator(tokenGenerator);
+    const generator = new SizeUtilityGenerator(breakpoints, tokenGenerator);
 
     expect(generator.name).toEqual("Size utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`

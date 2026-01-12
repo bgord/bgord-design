@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { BackdropUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("BackdropUtilityGenerator", () => {
   test("basic usage", () => {
     const BackdropsTokenGenerator = new Tokens.BackdropsTokenGenerator();
-    const generator = new BackdropUtilityGenerator(BackdropsTokenGenerator);
+    const generator = new BackdropUtilityGenerator(breakpoints, BackdropsTokenGenerator);
 
     expect(generator.name).toEqual("Backdrop utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -22,7 +25,7 @@ describe("BackdropUtilityGenerator", () => {
 
   test("with overrides", () => {
     const BackdropsTokenGenerator = new Tokens.BackdropsTokenGenerator({ "backdrop-new": "new-value" });
-    const generator = new BackdropUtilityGenerator(BackdropsTokenGenerator);
+    const generator = new BackdropUtilityGenerator(breakpoints, BackdropsTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-backdrop='none']::backdrop { background: var(--backdrop-none); }

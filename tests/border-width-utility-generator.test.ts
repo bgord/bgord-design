@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { BorderWidthUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("BorderWidthUtilityGenerator", () => {
   test("basic usage", () => {
     const BorderWidthTokenGenerator = new Tokens.BorderWidthTokenGenerator();
-    const generator = new BorderWidthUtilityGenerator(BorderWidthTokenGenerator);
+    const generator = new BorderWidthUtilityGenerator(breakpoints, BorderWidthTokenGenerator);
 
     expect(generator.name).toEqual("Border width utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -78,7 +81,7 @@ describe("BorderWidthUtilityGenerator", () => {
 
   test("with overrides", () => {
     const BorderWidthTokenGenerator = new Tokens.BorderWidthTokenGenerator({ "border-width-huge": "10px" });
-    const generator = new BorderWidthUtilityGenerator(BorderWidthTokenGenerator);
+    const generator = new BorderWidthUtilityGenerator(breakpoints, BorderWidthTokenGenerator);
 
     expect(generator.css()).toContain("");
     expect(generator.toTypeScript()).toContain("");

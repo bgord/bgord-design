@@ -1,9 +1,12 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { CursorUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("CursorUtilityGenerator", () => {
   test("basic usage", () => {
-    const generator = new CursorUtilityGenerator();
+    const generator = new CursorUtilityGenerator(breakpoints);
 
     expect(generator.name).toEqual("Cursor utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`

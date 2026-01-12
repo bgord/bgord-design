@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { PositionersUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("PositionersUtilityGenerator", () => {
   test("basic usage", () => {
     const SpacingTokenGenerator = new Tokens.SpacingTokenGenerator();
-    const generator = new PositionersUtilityGenerator(SpacingTokenGenerator);
+    const generator = new PositionersUtilityGenerator(breakpoints, SpacingTokenGenerator);
 
     expect(generator.name).toEqual("Positioners utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -95,7 +98,7 @@ describe("PositionersUtilityGenerator", () => {
 
   test("with overrides", () => {
     const SpacingTokenGenerator = new Tokens.SpacingTokenGenerator({ "spacing-huge": "100rem" });
-    const generator = new PositionersUtilityGenerator(SpacingTokenGenerator);
+    const generator = new PositionersUtilityGenerator(breakpoints, SpacingTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-top='0'] { top: var(--spacing-0); }

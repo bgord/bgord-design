@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { RadiusTokenGenerator } from "../tokens/radius-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class RadiusUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(RadiusTokenGenerator: RadiusTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    RadiusTokenGenerator: RadiusTokenGenerator,
+  ) {
     super("Radius utilities");
     this.config = RadiusTokenGenerator.getConfig();
   }

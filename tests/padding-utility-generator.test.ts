@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { PaddingUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("PaddingUtilityGenerator", () => {
   test("basic usage", () => {
     const SpacingTokenGenerator = new Tokens.SpacingTokenGenerator();
-    const generator = new PaddingUtilityGenerator(SpacingTokenGenerator);
+    const generator = new PaddingUtilityGenerator(breakpoints, SpacingTokenGenerator);
 
     expect(generator.name).toEqual("Padding utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -127,7 +130,7 @@ describe("PaddingUtilityGenerator", () => {
 
   test("with overrides", () => {
     const SpacingTokenGenerator = new Tokens.SpacingTokenGenerator({ "spacing-huge": "100rem" });
-    const generator = new PaddingUtilityGenerator(SpacingTokenGenerator);
+    const generator = new PaddingUtilityGenerator(breakpoints, SpacingTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-p='0'] { padding: var(--spacing-0); }

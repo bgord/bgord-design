@@ -1,9 +1,12 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { AxisPlacementUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("AxisPlacementUtilityGenerator", () => {
   test("basic usage", () => {
-    const generator = new AxisPlacementUtilityGenerator();
+    const generator = new AxisPlacementUtilityGenerator(breakpoints);
 
     expect(generator.name).toEqual("Axis placement utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`

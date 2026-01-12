@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { RadiusUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("RadiusUtilityGenerator", () => {
   test("basic usage", () => {
     const RadiusTokenGenerator = new Tokens.RadiusTokenGenerator();
-    const generator = new RadiusUtilityGenerator(RadiusTokenGenerator);
+    const generator = new RadiusUtilityGenerator(breakpoints, RadiusTokenGenerator);
 
     expect(generator.name).toEqual("Radius utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -26,7 +29,7 @@ describe("RadiusUtilityGenerator", () => {
 
   test("with overrides", () => {
     const RadiusTokenGenerator = new Tokens.RadiusTokenGenerator({ "radius-egg": "50% 20%" });
-    const generator = new RadiusUtilityGenerator(RadiusTokenGenerator);
+    const generator = new RadiusUtilityGenerator(breakpoints, RadiusTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-br='none'] { border-radius: var(--radius-none); }

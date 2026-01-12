@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { FontSizeTokenGenerator } from "../tokens/font-size-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class FontSizeUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(FontSizeTokenGenerator: FontSizeTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    FontSizeTokenGenerator: FontSizeTokenGenerator,
+  ) {
     super("Font-size utilities");
     this.config = FontSizeTokenGenerator.getConfig();
   }

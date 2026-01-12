@@ -1,9 +1,12 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { PositionUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("PositionUtilityGenerator", () => {
   test("basic usage", () => {
-    const generator = new PositionUtilityGenerator();
+    const generator = new PositionUtilityGenerator(breakpoints);
 
     expect(generator.name).toEqual("Position utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`

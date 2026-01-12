@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { ShadowTokenGenerator } from "../tokens/shadow-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class ShadowUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(ShadowTokenGenerator: ShadowTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    ShadowTokenGenerator: ShadowTokenGenerator,
+  ) {
     super("Shadow utilities");
     this.config = ShadowTokenGenerator.getConfig();
   }

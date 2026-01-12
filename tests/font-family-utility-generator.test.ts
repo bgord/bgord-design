@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { FontFamilyUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("FontFamilyUtilityGenerator", () => {
   test("basic usage", () => {
     const FontFamilyTokenGenerator = new Tokens.FontFamilyTokenGenerator();
-    const generator = new FontFamilyUtilityGenerator(FontFamilyTokenGenerator);
+    const generator = new FontFamilyUtilityGenerator(breakpoints, FontFamilyTokenGenerator);
 
     expect(generator.name).toEqual("Font-family utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -22,7 +25,7 @@ describe("FontFamilyUtilityGenerator", () => {
     const FontFamilyTokenGenerator = new Tokens.FontFamilyTokenGenerator({
       "font-family-comic": "Comic Sans",
     });
-    const generator = new FontFamilyUtilityGenerator(FontFamilyTokenGenerator);
+    const generator = new FontFamilyUtilityGenerator(breakpoints, FontFamilyTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-ff='sans'] { font-family: var(--font-family-sans); }

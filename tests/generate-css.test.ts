@@ -1,10 +1,13 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { GenerateCSS } from "../src/generate-css";
 import * as TokensGenerators from "../src/tokens";
 import * as UtilityGenerators from "../src/utilities";
 
+const breakpoints = new BreakpointRegistry({ md: 768 });
+
 const BackdropsTokenGenerator = new TokensGenerators.BackdropsTokenGenerator();
-const AxisPlacementUtilityGenerator = new UtilityGenerators.AxisPlacementUtilityGenerator();
+const AxisPlacementUtilityGenerator = new UtilityGenerators.AxisPlacementUtilityGenerator(breakpoints);
 
 const generators = [BackdropsTokenGenerator];
 const tokens = [AxisPlacementUtilityGenerator];

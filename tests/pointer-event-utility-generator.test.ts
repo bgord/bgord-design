@@ -1,9 +1,12 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { PointerEventUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("PointerEventUtilityGenerator", () => {
   test("basic usage", () => {
-    const generator = new PointerEventUtilityGenerator();
+    const generator = new PointerEventUtilityGenerator(breakpoints);
 
     expect(generator.name).toEqual("Pointer event utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`

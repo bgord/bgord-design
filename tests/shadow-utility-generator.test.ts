@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { ShadowUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("ShadowUtilityGenerator", () => {
   test("basic usage", () => {
     const ShadowTokenGenerator = new Tokens.ShadowTokenGenerator();
-    const generator = new ShadowUtilityGenerator(ShadowTokenGenerator);
+    const generator = new ShadowUtilityGenerator(breakpoints, ShadowTokenGenerator);
 
     expect(generator.name).toEqual("Shadow utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -25,7 +28,7 @@ describe("ShadowUtilityGenerator", () => {
 
   test("with overrides", () => {
     const ShadowTokenGenerator = new Tokens.ShadowTokenGenerator({ "shadow-huge": "10px 10px 10px black" });
-    const generator = new ShadowUtilityGenerator(ShadowTokenGenerator);
+    const generator = new ShadowUtilityGenerator(breakpoints, ShadowTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-shadow='none'] { box-shadow: var(--shadow-none); }

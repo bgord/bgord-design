@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { ZIndexTokenGenerator } from "../tokens/z-index-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class ZIndexUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(ZIndexTokenGenerator: ZIndexTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    ZIndexTokenGenerator: ZIndexTokenGenerator,
+  ) {
     super("Z-index utilities");
     this.config = ZIndexTokenGenerator.getConfig();
   }

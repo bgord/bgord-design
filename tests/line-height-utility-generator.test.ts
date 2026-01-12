@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { LineHeightUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("LineHeightUtilityGenerator", () => {
   test("basic usage", () => {
     const LineHeightTokenGenerator = new Tokens.LineHeightTokenGenerator();
-    const generator = new LineHeightUtilityGenerator(LineHeightTokenGenerator);
+    const generator = new LineHeightUtilityGenerator(breakpoints, LineHeightTokenGenerator);
 
     expect(generator.name).toEqual("Line height utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -23,7 +26,7 @@ describe("LineHeightUtilityGenerator", () => {
 
   test("with overrides", () => {
     const LineHeightTokenGenerator = new Tokens.LineHeightTokenGenerator({ "line-height-huge": "3" });
-    const generator = new LineHeightUtilityGenerator(LineHeightTokenGenerator);
+    const generator = new LineHeightUtilityGenerator(breakpoints, LineHeightTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-lh='none'] { line-height: var(--line-height-none); }

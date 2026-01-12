@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { LetterSpacingUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("LetterSpacingUtilityGenerator", () => {
   test("basic usage", () => {
     const LetterSpacingTokenGenerator = new Tokens.LetterSpacingTokenGenerator();
-    const generator = new LetterSpacingUtilityGenerator(LetterSpacingTokenGenerator);
+    const generator = new LetterSpacingUtilityGenerator(breakpoints, LetterSpacingTokenGenerator);
 
     expect(generator.name).toEqual("Letter spacing utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -25,7 +28,7 @@ describe("LetterSpacingUtilityGenerator", () => {
     const LetterSpacingTokenGenerator = new Tokens.LetterSpacingTokenGenerator({
       "letter-spacing-insane": "1em",
     });
-    const generator = new LetterSpacingUtilityGenerator(LetterSpacingTokenGenerator);
+    const generator = new LetterSpacingUtilityGenerator(breakpoints, LetterSpacingTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }

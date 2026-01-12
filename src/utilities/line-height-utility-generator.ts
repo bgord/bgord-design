@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { LineHeightTokenGenerator } from "../tokens/line-height-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class LineHeightUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(LineHeightTokenGenerator: LineHeightTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    LineHeightTokenGenerator: LineHeightTokenGenerator,
+  ) {
     super("Line height utilities");
     this.config = LineHeightTokenGenerator.getConfig();
   }

@@ -1,9 +1,12 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { FlexWrapUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("FlexWrapUtilityGenerator", () => {
   test("basic usage", () => {
-    const generator = new FlexWrapUtilityGenerator();
+    const generator = new FlexWrapUtilityGenerator(breakpoints);
 
     expect(generator.name).toEqual("Flex wrap utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`

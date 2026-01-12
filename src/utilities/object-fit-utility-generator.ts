@@ -1,3 +1,4 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class ObjectFitUtilityGenerator extends UtilityGenerator {
@@ -9,7 +10,7 @@ export class ObjectFitUtilityGenerator extends UtilityGenerator {
     none: "none",
   };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Object fit utilities");
   }
 

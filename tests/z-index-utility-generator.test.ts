@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { ZIndexUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("ZIndexUtilityGenerator", () => {
   test("basic usage", () => {
     const ZIndexTokenGenerator = new Tokens.ZIndexTokenGenerator();
-    const generator = new ZIndexUtilityGenerator(ZIndexTokenGenerator);
+    const generator = new ZIndexUtilityGenerator(breakpoints, ZIndexTokenGenerator);
 
     expect(generator.name).toEqual("Z-index utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -22,7 +25,7 @@ describe("ZIndexUtilityGenerator", () => {
 
   test("with overrides", () => {
     const ZIndexTokenGenerator = new Tokens.ZIndexTokenGenerator({ "z-index-top": "9999" });
-    const generator = new ZIndexUtilityGenerator(ZIndexTokenGenerator);
+    const generator = new ZIndexUtilityGenerator(breakpoints, ZIndexTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-z='negative'] { z-index: var(--z-index-negative); }

@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { FontWeightUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("FontWeightUtilityGenerator", () => {
   test("basic usage", () => {
     const FontWeightTokenGenerator = new Tokens.FontWeightTokenGenerator();
-    const generator = new FontWeightUtilityGenerator(FontWeightTokenGenerator);
+    const generator = new FontWeightUtilityGenerator(breakpoints, FontWeightTokenGenerator);
 
     expect(generator.name).toEqual("Font-weight utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -23,7 +26,7 @@ describe("FontWeightUtilityGenerator", () => {
 
   test("with overrides", () => {
     const FontWeightTokenGenerator = new Tokens.FontWeightTokenGenerator({ "font-weight-super": "1000" });
-    const generator = new FontWeightUtilityGenerator(FontWeightTokenGenerator);
+    const generator = new FontWeightUtilityGenerator(breakpoints, FontWeightTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-fw='light'] { font-weight: var(--font-weight-light); }

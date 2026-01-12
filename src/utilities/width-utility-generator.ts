@@ -1,9 +1,10 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class WidthUtilityGenerator extends UtilityGenerator {
   config = { "100%": "100%", auto: "auto", unset: "unset" };
 
-  constructor() {
+  constructor(readonly breakpointRegistry: BreakpointRegistry) {
     super("Width utilities");
   }
 

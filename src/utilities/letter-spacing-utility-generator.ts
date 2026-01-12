@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { LetterSpacingTokenGenerator } from "../tokens/letter-spacing-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class LetterSpacingUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(LetterSpacingTokenGenerator: LetterSpacingTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    LetterSpacingTokenGenerator: LetterSpacingTokenGenerator,
+  ) {
     super("Letter spacing utilities");
     this.config = LetterSpacingTokenGenerator.getConfig();
   }

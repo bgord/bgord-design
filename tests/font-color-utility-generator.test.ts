@@ -1,6 +1,9 @@
 import { describe, expect, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { FontColorUtilityGenerator } from "../src/utilities";
+
+const breakpoints = new BreakpointRegistry({ md: 768 });
 
 describe("FontColorUtilityGenerator", () => {
   test("basic usage", () => {
@@ -10,6 +13,7 @@ describe("FontColorUtilityGenerator", () => {
     const DangerTokenGenerator = new Tokens.DangerTokenGenerator();
     const WarningTokenGenerator = new Tokens.WarningTokenGenerator();
     const generator = new FontColorUtilityGenerator(
+      breakpoints,
       GrayscaleTokenGenerator,
       BrandTokenGenerator,
       PositiveTokenGenerator,
@@ -77,6 +81,7 @@ describe("FontColorUtilityGenerator", () => {
     const DangerTokenGenerator = new Tokens.DangerTokenGenerator();
     const WarningTokenGenerator = new Tokens.WarningTokenGenerator();
     const generator = new FontColorUtilityGenerator(
+      breakpoints,
       GrayscaleTokenGenerator,
       BrandTokenGenerator,
       PositiveTokenGenerator,

@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { OpacityTokenGenerator } from "../tokens/opacity-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class OpacityUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(OpacityTokenGenerator: OpacityTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    OpacityTokenGenerator: OpacityTokenGenerator,
+  ) {
     super("Opacity utilities");
     this.config = OpacityTokenGenerator.getConfig();
   }

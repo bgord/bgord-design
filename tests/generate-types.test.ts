@@ -1,8 +1,11 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
+import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { GenerateTypes } from "../src/generate-types";
 import * as UtilityGenerators from "../src/utilities";
 
-const AxisPlacementUtilityGenerator = new UtilityGenerators.AxisPlacementUtilityGenerator();
+const breakpoints = new BreakpointRegistry({ md: 768 });
+
+const AxisPlacementUtilityGenerator = new UtilityGenerators.AxisPlacementUtilityGenerator(breakpoints);
 
 const generators = [AxisPlacementUtilityGenerator];
 

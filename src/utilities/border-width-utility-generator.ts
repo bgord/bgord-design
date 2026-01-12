@@ -1,10 +1,14 @@
+import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { BorderWidthTokenGenerator } from "../tokens/border-width-token-generator";
 import { CssRule, UtilityGenerator } from "./template";
 
 export class BorderWidthUtilityGenerator extends UtilityGenerator {
   config = {};
 
-  constructor(BorderWidthTokenGenerator: BorderWidthTokenGenerator) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    BorderWidthTokenGenerator: BorderWidthTokenGenerator,
+  ) {
     super("Border width utilities");
     this.config = BorderWidthTokenGenerator.getConfig();
   }
