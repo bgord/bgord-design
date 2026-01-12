@@ -30,12 +30,14 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-bc='${key}']`, [
           ["border-color", `var(--${variable})`],
           ["border-style", "solid"],
@@ -46,7 +48,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-bcx='${key}']`, [
           ["border-left-color", `var(--${variable})`],
           ["border-right-color", `var(--${variable})`],
@@ -59,7 +61,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-bcy='${key}']`, [
           ["border-top-color", `var(--${variable})`],
           ["border-bottom-color", `var(--${variable})`],
@@ -72,7 +74,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-bct='${key}']`, [
           ["border-top-color", `var(--${variable})`],
           ["border-top-style", "solid"],
@@ -83,7 +85,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-bcr='${key}']`, [
           ["border-right-color", `var(--${variable})`],
           ["border-right-style", "solid"],
@@ -94,7 +96,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-bcb='${key}']`, [
           ["border-bottom-color", `var(--${variable})`],
           ["border-bottom-style", "solid"],
@@ -105,7 +107,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-bcl='${key}']`, [
           ["border-left-color", `var(--${variable})`],
           ["border-left-style", "solid"],
@@ -113,9 +115,9 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       );
     }
 
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {

@@ -15,17 +15,19 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const [variable, value] of Object.entries(this.config)) {
       const key = variable.replace("breakpoint-", "");
 
-      rules.push(new CssRuleRegular(`[data-maxh='${key}']`, ["max-height", value]));
+      regular.push(new CssRuleRegular(`[data-maxh='${key}']`, ["max-height", value]));
     }
 
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {

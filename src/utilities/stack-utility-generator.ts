@@ -12,11 +12,13 @@ export class StackUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const [key] of Object.entries(this.config)) {
       if (key === "x") {
-        rules.push(
+        regular.push(
           new CssRuleRegular(`[data-stack='${key}']`, [
             ["display", "flex"],
             ["flex-wrap", "wrap"],
@@ -25,7 +27,7 @@ export class StackUtilityGenerator extends UtilityGenerator {
       }
 
       if (key === "y") {
-        rules.push(
+        regular.push(
           new CssRuleRegular(`[data-stack='${key}']`, [
             ["display", "flex"],
             ["flex-wrap", "wrap"],
@@ -35,9 +37,9 @@ export class StackUtilityGenerator extends UtilityGenerator {
       }
     }
 
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {

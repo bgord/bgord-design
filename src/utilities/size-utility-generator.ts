@@ -15,12 +15,14 @@ export class SizeUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("size-", "");
 
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-size='${key}']`, [
           ["height", `var(--${variable})`],
           ["width", `var(--${variable})`],
@@ -28,9 +30,9 @@ export class SizeUtilityGenerator extends UtilityGenerator {
       );
     }
 
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {

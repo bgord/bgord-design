@@ -1,3 +1,6 @@
+export type BreakpointNameType = string;
+export type BreakpointValueType = number;
+
 export class BreakpointRegistry {
-  constructor(readonly breakpoints: Record<string, number>) {}
+  constructor(readonly breakpoints: Record<BreakpointNameType, BreakpointValueType>) {}
 }

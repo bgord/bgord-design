@@ -23,11 +23,13 @@ export class TransformUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
       if (key === "truncate") {
-        rules.push(
+        regular.push(
           new CssRuleRegular(`[data-transform~='${key}']`, [
             ["overflow", "hidden"],
             ["white-space", "nowrap"],
@@ -38,7 +40,7 @@ export class TransformUtilityGenerator extends UtilityGenerator {
       }
 
       if (key === "line-clamp") {
-        rules.push(
+        regular.push(
           new CssRuleRegular(`[data-transform~='${key}']`, [
             ["display", "-webkit-box"],
             ["-webkit-box-orient", "vertical"],
@@ -50,35 +52,35 @@ export class TransformUtilityGenerator extends UtilityGenerator {
       }
 
       if (key === "center") {
-        rules.push(new CssRuleRegular(`[data-transform~='${key}']`, ["text-align", "center"]));
+        regular.push(new CssRuleRegular(`[data-transform~='${key}']`, ["text-align", "center"]));
         continue;
       }
 
       if (key === "upper-first") {
-        rules.push(
+        regular.push(
           new CssRuleRegular(`[data-transform~='${key}']:first-letter`, ["text-transform", "uppercase"]),
         );
         continue;
       }
 
       if (key === "nowrap") {
-        rules.push(new CssRuleRegular(`[data-transform~='${key}']`, ["white-space", "nowrap"]));
+        regular.push(new CssRuleRegular(`[data-transform~='${key}']`, ["white-space", "nowrap"]));
         continue;
       }
 
       if (key === "font-variant-numeric") {
-        rules.push(
+        regular.push(
           new CssRuleRegular(`[data-transform~='${key}']`, ["font-variant-numeric", "tabular-nums"]),
         );
         continue;
       }
 
-      rules.push(new CssRuleRegular(`[data-transform~='${key}']`, ["text-transform", value]));
+      regular.push(new CssRuleRegular(`[data-transform~='${key}']`, ["text-transform", value]));
     }
 
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {

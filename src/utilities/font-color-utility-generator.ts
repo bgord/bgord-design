@@ -29,17 +29,19 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      rules.push(new CssRuleRegular(`[data-color='${key}']`, ["color", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-color='${key}']`, ["color", `var(--${variable})`]));
     }
 
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {

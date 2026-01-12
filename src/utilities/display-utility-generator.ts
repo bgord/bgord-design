@@ -10,23 +10,25 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
       if (key === "flex") {
-        rules.push(
+        regular.push(
           new CssRuleRegular(`[data-disp='${key}']`, [
             ["display", value],
             ["flex-wrap", "wrap"],
           ]),
         );
       }
-      rules.push(new CssRuleRegular(`[data-disp='${key}']`, ["display", value]));
+      regular.push(new CssRuleRegular(`[data-disp='${key}']`, ["display", value]));
     }
 
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {

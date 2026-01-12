@@ -15,18 +15,21 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("backdrop-", "");
 
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-backdrop='${key}']::backdrop`, ["background", `var(--${variable})`]),
       );
     }
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {

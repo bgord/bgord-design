@@ -15,36 +15,38 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRuleRegular(`[data-bw='${key}']`, ["border-width", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-bw='${key}']`, ["border-width", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRuleRegular(`[data-bwt='${key}']`, ["border-top-width", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-bwt='${key}']`, ["border-top-width", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRuleRegular(`[data-bwr='${key}']`, ["border-right-width", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-bwr='${key}']`, ["border-right-width", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRuleRegular(`[data-bwb='${key}']`, ["border-bottom-width", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-bwb='${key}']`, ["border-bottom-width", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(new CssRuleRegular(`[data-bwl='${key}']`, ["border-left-width", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-bwl='${key}']`, ["border-left-width", `var(--${variable})`]));
     }
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-bwx='${key}']`, [
           ["border-left-width", `var(--${variable})`],
           ["border-right-width", `var(--${variable})`],
@@ -54,7 +56,7 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("border-width-", "");
-      rules.push(
+      regular.push(
         new CssRuleRegular(`[data-bwy='${key}']`, [
           ["border-top-width", `var(--${variable})`],
           ["border-bottom-width", `var(--${variable})`],
@@ -62,9 +64,9 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
       );
     }
 
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {

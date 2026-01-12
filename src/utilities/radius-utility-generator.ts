@@ -15,17 +15,19 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const rules: CssRuleStrategy[] = [];
+    let result = "";
+
+    const regular: CssRuleStrategy[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("radius-", "");
 
-      rules.push(new CssRuleRegular(`[data-br='${key}']`, ["border-radius", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-br='${key}']`, ["border-radius", `var(--${variable})`]));
     }
 
-    // Stryker disable all
-    return rules.map((rule) => rule.get()).join("\n");
-    // Stryker restore all
+    result += regular.map((rule) => rule.get()).join("\n");
+
+    return result;
   }
 
   toTypeScript() {
