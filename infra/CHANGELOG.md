@@ -1,10 +1,50 @@
 # Changelog
+- 2026-01-12 13:21 4521a64 **step: update packages**
+- 2026-01-12 12:58 5dad372 **step: border color**
+- 2026-01-12 12:49 a5a51e3 **step: transform utility**
+- 2026-01-12 12:37 56fdec2 **step: padding**
+- 2026-01-12 12:29 c4d24c8 **step: margin**
+- 2026-01-11 13:20 10581c3 **step: border width**
+- 2026-01-11 12:52 9386f67 **step: use css rule in stack**
+- 2026-01-11 12:50 eed59b4 **step: use css rule in positioners**
+- 2026-01-11 12:43 9c46a98 **step: use css rule in display**
+- 2026-01-10 18:54 2d0d831 **step: use css rule in size**
+- 2026-01-10 18:52 422e7f7 **step: use css rule in shadow**
+- 2026-01-10 18:49 19b16b4 **step: use css rule in rotate**
+- 2026-01-10 18:48 b86dc45 **step: use css rule in position utility**
+- 2026-01-10 18:48 8fd8455 **step: use css rule in radius**
+- 2026-01-10 18:47 b71abc1 **step: use css rule in pointer event**
+- 2026-01-10 18:46 1483008 **step: use css rule in overflow**
+- 2026-01-10 18:45 b7aff79 **step: use css rule in opacity**
+- 2026-01-10 18:44 fd6aec7 **step: use css rule in object position**
+- 2026-01-10 18:43 3852505 **step: use css rule in max width**
+- 2026-01-10 18:43 335d16c **step: use css rule in object fit**
+- 2026-01-10 18:42 f8e12b8 **step: use css rule in max height**
+- 2026-01-10 18:41 4d63eff **step: use css rule in line height**
+- 2026-01-10 18:39 5bb91f8 **step: use css rule in letter spacing**
+- 2026-01-10 18:38 d328e66 **step: use css rule in gap**
+- 2026-01-10 18:38 85b6b22 **step: use css rule in height**
+- 2026-01-10 18:36 5f0ea23 **step: use css rule in font weight**
+- 2026-01-10 18:35 67bd695 **step: use css rule in font size**
+- 2026-01-10 18:34 7fb6116 **step: use css rule in font family**
+- 2026-01-10 18:33 2a32d4b **step: use css rule in font color**
+- 2026-01-10 18:30 4a14be0 **step: use css rule in flex shrink**
+- 2026-01-10 18:29 9ccc77a **step: use css rule in flex grow**
+- 2026-01-10 18:28 b8c8f08 **step: use css rule in flex direction**
+- 2026-01-10 18:27 79c544a **step: use css rule in cursor**
+- 2026-01-10 18:26 ba42246 **step: use css rule in background**
+- 2026-01-10 18:25 f3a19b5 **step: use css rule in backdrop**
+- 2026-01-10 18:23 05dd477 **step: use css rule in width**
+- 2026-01-10 18:22 873d8af **step: use css rule in z index**
+- 2026-01-10 17:59 84e0655 **step: use css rule in axis placement**
+- 2026-01-10 17:55 bec63ea **step: define css class**
 - 2026-01-10 15:14 ce59d96 **step: update packages**
 - 2026-01-10 15:14 40d46f7 **step: bump bgord/scripts**
 - 2026-01-10 15:10 4e13dbe **step: test generate css**
 - 2026-01-10 14:59 f64f577 **step: add test setup**
 - 2026-01-10 14:58 8f537b4 **step: test generate lib**
 - 2026-01-10 14:54 baad2cb **step: test generate types**
+- 2026-01-10 14:14 17c0c9d **docs: generate CHANGELOG**
 - 2026-01-09 17:01 cb50a8d **step: test full output**
 - 2026-01-09 16:06 43e6ecf **step: ignore joins in utility generators**
 - 2026-01-09 16:01 f703819 **step: test utility generator names**
