@@ -1,5 +1,9 @@
 # Changelog
+## 2026-01-12 22:45 v1.4.17
+- 2026-01-12 22:45 4b904ce **1.4.17**
 - 2026-01-12 22:26 19b791b **fix: mutants**
+- 2026-01-12 21:37 a3ed1db **docs: generate readme**
+- 2026-01-12 21:37 0f1ba70 **docs: generate CHANGELOG**
 - 2026-01-12 17:54 50bb839 **step: setup new ts definitions**
 - 2026-01-12 17:48 0eae60f **step: setup new ts definitions**
 - 2026-01-12 17:46 5bb6dec **step: update types for shadow**
