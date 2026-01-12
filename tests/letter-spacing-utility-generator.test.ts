@@ -18,6 +18,15 @@ describe("LetterSpacingUtilityGenerator", () => {
       [data-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }
       [data-ls='widest'] { letter-spacing: var(--letter-spacing-widest); }
       [data-ls='unset'] { letter-spacing: var(--letter-spacing-unset); }
+
+      @media (max-width: 768px) {
+        [data-md-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }
+        [data-md-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }
+        [data-md-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }
+        [data-md-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }
+        [data-md-ls='widest'] { letter-spacing: var(--letter-spacing-widest); }
+        [data-md-ls='unset'] { letter-spacing: var(--letter-spacing-unset); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset";
@@ -38,6 +47,16 @@ describe("LetterSpacingUtilityGenerator", () => {
       [data-ls='widest'] { letter-spacing: var(--letter-spacing-widest); }
       [data-ls='unset'] { letter-spacing: var(--letter-spacing-unset); }
       [data-ls='insane'] { letter-spacing: var(--letter-spacing-insane); }
+
+      @media (max-width: 768px) {
+        [data-md-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }
+        [data-md-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }
+        [data-md-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }
+        [data-md-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }
+        [data-md-ls='widest'] { letter-spacing: var(--letter-spacing-widest); }
+        [data-md-ls='unset'] { letter-spacing: var(--letter-spacing-unset); }
+        [data-md-ls='insane'] { letter-spacing: var(--letter-spacing-insane); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset" | "insane";
