@@ -16,6 +16,15 @@ describe("PositionUtilityGenerator", () => {
       [data-position='fixed'] { position: fixed; }
       [data-position='sticky'] { position: sticky; }
       [data-position='unset'] { position: unset; }
+
+      @media (max-width: 768px) {
+        [data-md-position='static'] { position: static; }
+        [data-md-position='relative'] { position: relative; }
+        [data-md-position='absolute'] { position: absolute; }
+        [data-md-position='fixed'] { position: fixed; }
+        [data-md-position='sticky'] { position: sticky; }
+        [data-md-position='unset'] { position: unset; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-position"?: "static" | "relative" | "absolute" | "fixed" | "sticky" | "unset";
