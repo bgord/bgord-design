@@ -25,6 +25,24 @@ describe("AxisPlacementUtilityGenerator", () => {
       [data-cross='between'] { align-items: space-between; }
       [data-cross='center'] { align-items: center; }
       [data-cross='baseline'] { align-items: baseline; }
+
+      @media (min-width: 768px) {
+        [data-md-main='start'] { justify-content: flex-start; }
+        [data-md-main='end'] { justify-content: flex-end; }
+        [data-md-main='around'] { justify-content: space-around; }
+        [data-md-main='evenly'] { justify-content: space-evenly; }
+        [data-md-main='between'] { justify-content: space-between; }
+        [data-md-main='center'] { justify-content: center; }
+        [data-md-main='baseline'] { justify-content: baseline; }
+
+        [data-md-cross='start'] { align-items: flex-start; }
+        [data-md-cross='end'] { align-items: flex-end; }
+        [data-md-cross='around'] { align-items: space-around; }
+        [data-md-cross='evenly'] { align-items: space-evenly; }
+        [data-md-cross='between'] { align-items: space-between; }
+        [data-md-cross='center'] { align-items: center; }
+        [data-md-cross='baseline'] { align-items: baseline; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-main"?: "start" | "end" | "around" | "evenly" | "between" | "center" | "baseline";

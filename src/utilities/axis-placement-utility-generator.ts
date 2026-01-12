@@ -1,5 +1,5 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
-import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
+import { CssRuleRegular, CssRuleResponsive } from "./css-rule.strategy";
 import { UtilityGenerator } from "./template";
 
 export class AxisPlacementUtilityGenerator extends UtilityGenerator {
@@ -20,7 +20,7 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
   css() {
     let result = "";
 
-    const regular: CssRuleStrategy[] = [];
+    const regular: CssRuleRegular[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
       regular.push(new CssRuleRegular(`[data-main='${key}']`, ["justify-content", value]));
@@ -31,6 +31,24 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
     }
 
     result += regular.map((rule) => rule.get()).join("\n");
+
+    for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
+      const responsive: CssRuleRegular[] = [];
+
+      result += `@media (min-width: ${breakpoint}px) { `;
+
+      for (const [key, value] of Object.entries(this.config)) {
+        responsive.push(new CssRuleRegular(`[data-${name}-main='${key}']`, ["justify-content", value]));
+      }
+
+      for (const [key, value] of Object.entries(this.config)) {
+        responsive.push(new CssRuleRegular(`[data-${name}-cross='${key}']`, ["align-items", value]));
+      }
+
+      result += responsive.map((rule) => rule.get()).join("\n");
+
+      result += "}";
+    }
 
     return result;
   }
