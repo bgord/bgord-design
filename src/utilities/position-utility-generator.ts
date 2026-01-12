@@ -49,6 +49,6 @@ export class PositionUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-position"?: ${type};`;
+    return [`"data-position"?: ${type};`].join(" ");
   }
 }

@@ -52,6 +52,6 @@ export class GapUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-gap"?: ${type};`;
+    return [`"data-gap"?: ${type};`].join(" ");
   }
 }

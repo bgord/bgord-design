@@ -53,6 +53,6 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key.replace("font-size-", "")}"`)
       .join(" | ");
 
-    return `"data-fs"?: ${type};`;
+    return [`"data-fs"?: ${type};`].join(" ");
   }
 }

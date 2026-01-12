@@ -54,6 +54,6 @@ export class LineHeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-lh"?: ${type};`;
+    return [`"data-lh"?: ${type};`].join(" ");
   }
 }

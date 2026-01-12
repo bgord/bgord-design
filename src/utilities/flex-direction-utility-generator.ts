@@ -47,6 +47,6 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-dir"?: ${type};`;
+    return [`"data-dir"?: ${type};`].join(" ");
   }
 }

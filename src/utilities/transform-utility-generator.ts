@@ -157,6 +157,6 @@ export class TransformUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-transform"?: ${type};`;
+    return [`"data-transform"?: ${type};`].join(" ");
   }
 }

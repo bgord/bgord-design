@@ -66,6 +66,6 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-color"?: ${type};`;
+    return [`"data-color"?: ${type};`].join(" ");
   }
 }

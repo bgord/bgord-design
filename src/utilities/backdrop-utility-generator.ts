@@ -59,6 +59,6 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-backdrop"?: ${type};`;
+    return [`"data-backdrop"?: ${type};`].join(" ");
   }
 }

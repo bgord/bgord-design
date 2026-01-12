@@ -42,6 +42,6 @@ export class WidthUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-width"?: ${type};`;
+    return [`"data-width"?: ${type};`].join(" ");
   }
 }

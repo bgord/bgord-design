@@ -42,6 +42,6 @@ export class FlexWrapUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-wrap"?: ${type};`;
+    return [`"data-wrap"?: ${type};`].join(" ");
   }
 }

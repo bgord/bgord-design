@@ -52,6 +52,6 @@ export class ObjectPositionUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-object-position"?: ${type};`;
+    return [`"data-object-position"?: ${type};`].join(" ");
   }
 }

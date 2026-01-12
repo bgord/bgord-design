@@ -42,6 +42,6 @@ export class OverflowUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-overflow"?: ${type};`;
+    return [`"data-overflow"?: ${type};`].join(" ");
   }
 }

@@ -62,6 +62,6 @@ export class SizeUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-size"?: ${type};`;
+    return [`"data-size"?: ${type};`].join(" ");
   }
 }

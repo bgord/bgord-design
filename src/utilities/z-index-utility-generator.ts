@@ -52,6 +52,6 @@ export class ZIndexUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-z"?: ${type};`;
+    return [`"data-z"?: ${type};`].join(" ");
   }
 }

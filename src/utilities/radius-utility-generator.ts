@@ -54,6 +54,6 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-br"?: ${type};`;
+    return [`"data-br"?: ${type};`].join(" ");
   }
 }

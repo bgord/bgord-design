@@ -42,6 +42,6 @@ export class FlexShrinkUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-shrink"?: ${type};`;
+    return [`"data-shrink"?: ${type};`].join(" ");
   }
 }

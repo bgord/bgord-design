@@ -54,6 +54,6 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-shadow"?: ${type};`;
+    return [`"data-shadow"?: ${type};`].join(" ");
   }
 }

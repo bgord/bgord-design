@@ -42,6 +42,6 @@ export class HeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-height"?: ${type};`;
+    return [`"data-height"?: ${type};`].join(" ");
   }
 }

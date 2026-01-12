@@ -44,6 +44,6 @@ export class RotateUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-rotate"?: ${type};`;
+    return [`"data-rotate"?: ${type};`].join(" ");
   }
 }

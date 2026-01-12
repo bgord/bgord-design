@@ -44,6 +44,6 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-pointer-events"?: ${type};`;
+    return [`"data-pointer-events"?: ${type};`].join(" ");
   }
 }

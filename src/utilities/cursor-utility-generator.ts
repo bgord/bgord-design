@@ -42,6 +42,6 @@ export class CursorUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-cursor"?: ${type};`;
+    return [`"data-cursor"?: ${type};`].join(" ");
   }
 }

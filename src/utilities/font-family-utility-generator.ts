@@ -54,6 +54,6 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-ff"?: ${type};`;
+    return [`"data-ff"?: ${type};`].join(" ");
   }
 }

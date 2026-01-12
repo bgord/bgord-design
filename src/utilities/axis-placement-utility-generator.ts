@@ -61,7 +61,6 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
     return [
       `"data-main"?: ${type};`,
       `"data-cross"?: ${type};`,
-
       ...this.breakpointRegistry.entries.map(([name]) => `"data-${name}-main"?: ${type};`),
       ...this.breakpointRegistry.entries.map(([name]) => `"data-${name}-cross"?: ${type};`),
     ].join(" ");

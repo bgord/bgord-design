@@ -78,6 +78,6 @@ export class StackUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-stack"?: ${type};`;
+    return [`"data-stack"?: ${type};`].join(" ");
   }
 }

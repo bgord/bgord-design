@@ -68,6 +68,6 @@ export class BackgroundUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-bg"?: ${type};`;
+    return [`"data-bg"?: ${type};`].join(" ");
   }
 }

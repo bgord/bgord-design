@@ -52,6 +52,6 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return `"data-maxh"?: ${type};`;
+    return [`"data-maxh"?: ${type};`].join(" ");
   }
 }
