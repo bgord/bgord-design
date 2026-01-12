@@ -34,8 +34,9 @@ describe("TransformUtilityGenerator", () => {
         [data-md-transform~='font-variant-numeric'] {  font-variant-numeric: tabular-nums; }
       }
     `);
-    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(
-      `"data-transform"?: "uppercase" | "lowercase" | "capitalize" | "upper-first" | "truncate" | "center" | "nowrap" | "none" | "line-clamp" | "font-variant-numeric";`,
-    );
+    expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
+     "data-transform"?: "uppercase" | "lowercase" | "capitalize" | "upper-first" | "truncate" | "center" | "nowrap" | "none" | "line-clamp" | "font-variant-numeric";
+     "data-md-transform"?: "uppercase" | "lowercase" | "capitalize" | "upper-first" | "truncate" | "center" | "nowrap" | "none" | "line-clamp" | "font-variant-numeric";
+    `);
   });
 });

@@ -157,6 +157,8 @@ export class TransformUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-transform"?: ${type};`].join(" ");
+    return ["transform", ...this.breakpointRegistry.entries.map(([name]) => `${name}-transform`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }
