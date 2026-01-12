@@ -70,6 +70,69 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
 
     result += regular.map((rule) => rule.get()).join("\n");
 
+    for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
+      const responsive: CssRuleRegular[] = [];
+
+      result += `@media (max-width: ${breakpoint}px) { `;
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("spacing-", "");
+        responsive.push(new CssRuleRegular(`[data-${name}-p='${key}']`, ["padding", `var(--${variable})`]));
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("spacing-", "");
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-px='${key}']`, [
+            ["padding-left", `var(--${variable})`],
+            ["padding-right", `var(--${variable})`],
+          ]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("spacing-", "");
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-py='${key}']`, [
+            ["padding-top", `var(--${variable})`],
+            ["padding-bottom", `var(--${variable})`],
+          ]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("spacing-", "");
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-pt='${key}']`, ["padding-top", `var(--${variable})`]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("spacing-", "");
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-pr='${key}']`, ["padding-right", `var(--${variable})`]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("spacing-", "");
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-pb='${key}']`, ["padding-bottom", `var(--${variable})`]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("spacing-", "");
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-pl='${key}']`, ["padding-left", `var(--${variable})`]),
+        );
+      }
+
+      result += responsive.map((rule) => rule.get()).join("\n");
+
+      result += "}";
+    }
+
     return result;
   }
 
