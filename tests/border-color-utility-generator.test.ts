@@ -350,6 +350,336 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcl='warning-500'] { border-left-color: var(--color-warning-500); border-left-style: solid; }
       [data-bcl='warning-700'] { border-left-color: var(--color-warning-700); border-left-style: solid; }
       [data-bcl='warning-900'] { border-left-color: var(--color-warning-900); border-left-style: solid; }
+
+      @media (max-width: 768px) {
+        [data-md-bc='neutral-0'] { border-color: var(--color-neutral-0); border-style: solid; }
+        [data-md-bc='neutral-50'] { border-color: var(--color-neutral-50); border-style: solid; }
+        [data-md-bc='neutral-100'] { border-color: var(--color-neutral-100); border-style: solid; } 
+        [data-md-bc='neutral-200'] { border-color: var(--color-neutral-200); border-style: solid; }
+        [data-md-bc='neutral-300'] { border-color: var(--color-neutral-300); border-style: solid; }
+        [data-md-bc='neutral-400'] { border-color: var(--color-neutral-400); border-style: solid; }
+        [data-md-bc='neutral-500'] { border-color: var(--color-neutral-500); border-style: solid; }
+        [data-md-bc='neutral-600'] { border-color: var(--color-neutral-600); border-style: solid; }
+        [data-md-bc='neutral-700'] { border-color: var(--color-neutral-700); border-style: solid; }
+        [data-md-bc='neutral-800'] { border-color: var(--color-neutral-800); border-style: solid; }
+        [data-md-bc='neutral-900'] { border-color: var(--color-neutral-900); border-style: solid; }
+        [data-md-bc='neutral-950'] { border-color: var(--color-neutral-950); border-style: solid; }
+
+        [data-md-bc='brand-50'] { border-color: var(--color-brand-50); border-style: solid; }
+        [data-md-bc='brand-100'] { border-color: var(--color-brand-100); border-style: solid; }
+        [data-md-bc='brand-200'] { border-color: var(--color-brand-200); border-style: solid; }
+        [data-md-bc='brand-300'] { border-color: var(--color-brand-300); border-style: solid; }
+        [data-md-bc='brand-400'] { border-color: var(--color-brand-400); border-style: solid; }
+        [data-md-bc='brand-500'] { border-color: var(--color-brand-500); border-style: solid; }
+        [data-md-bc='brand-600'] { border-color: var(--color-brand-600); border-style: solid; }
+        [data-md-bc='brand-700'] { border-color: var(--color-brand-700); border-style: solid; }
+        [data-md-bc='brand-800'] { border-color: var(--color-brand-800); border-style: solid; }
+        [data-md-bc='brand-900'] { border-color: var(--color-brand-900); border-style: solid; }
+
+        [data-md-bc='positive-0'] { border-color: var(--color-positive-0); border-style: solid; }
+        [data-md-bc='positive-100'] { border-color: var(--color-positive-100); border-style: solid; }
+        [data-md-bc='positive-200'] { border-color: var(--color-positive-200); border-style: solid; }
+        [data-md-bc='positive-400'] { border-color: var(--color-positive-400); border-style: solid; }
+        [data-md-bc='positive-600'] { border-color: var(--color-positive-600); border-style: solid; }
+        [data-md-bc='positive-800'] { border-color: var(--color-positive-800); border-style: solid; }
+        [data-md-bc='positive-900'] { border-color: var(--color-positive-900); border-style: solid; }
+
+        [data-md-bc='danger-0'] { border-color: var(--color-danger-0); border-style: solid; }
+        [data-md-bc='danger-100'] { border-color: var(--color-danger-100); border-style: solid; }
+        [data-md-bc='danger-200'] { border-color: var(--color-danger-200); border-style: solid; }
+        [data-md-bc='danger-400'] { border-color: var(--color-danger-400); border-style: solid; }
+        [data-md-bc='danger-600'] { border-color: var(--color-danger-600); border-style: solid; }
+        [data-md-bc='danger-800'] { border-color: var(--color-danger-800); border-style: solid; }
+        [data-md-bc='danger-900'] { border-color: var(--color-danger-900); border-style: solid; }
+
+        [data-md-bc='warning-100'] { border-color: var(--color-warning-100); border-style: solid; }
+        [data-md-bc='warning-300'] { border-color: var(--color-warning-300); border-style: solid; }
+        [data-md-bc='warning-500'] { border-color: var(--color-warning-500); border-style: solid; }
+        [data-md-bc='warning-700'] { border-color: var(--color-warning-700); border-style: solid; }
+        [data-md-bc='warning-900'] { border-color: var(--color-warning-900); border-style: solid; }
+
+
+        [data-md-bcx='neutral-0'] { border-left-color: var(--color-neutral-0); border-right-color: var(--color-neutral-0); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-50'] { border-left-color: var(--color-neutral-50); border-right-color: var(--color-neutral-50); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-100'] { border-left-color: var(--color-neutral-100); border-right-color: var(--color-neutral-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-200'] { border-left-color: var(--color-neutral-200); border-right-color: var(--color-neutral-200); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-300'] { border-left-color: var(--color-neutral-300); border-right-color: var(--color-neutral-300); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-400'] { border-left-color: var(--color-neutral-400); border-right-color: var(--color-neutral-400); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-500'] { border-left-color: var(--color-neutral-500); border-right-color: var(--color-neutral-500); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-600'] { border-left-color: var(--color-neutral-600); border-right-color: var(--color-neutral-600); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-700'] { border-left-color: var(--color-neutral-700); border-right-color: var(--color-neutral-700); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-800'] { border-left-color: var(--color-neutral-800); border-right-color: var(--color-neutral-800); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-900'] { border-left-color: var(--color-neutral-900); border-right-color: var(--color-neutral-900); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-950'] { border-left-color: var(--color-neutral-950); border-right-color: var(--color-neutral-950); border-left-style: solid; border-right-style: solid; }
+
+        [data-md-bcx='brand-50'] { border-left-color: var(--color-brand-50); border-right-color: var(--color-brand-50); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-100'] { border-left-color: var(--color-brand-100); border-right-color: var(--color-brand-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-200'] { border-left-color: var(--color-brand-200); border-right-color: var(--color-brand-200); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-300'] { border-left-color: var(--color-brand-300); border-right-color: var(--color-brand-300); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-400'] { border-left-color: var(--color-brand-400); border-right-color: var(--color-brand-400); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-500'] { border-left-color: var(--color-brand-500); border-right-color: var(--color-brand-500); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-600'] { border-left-color: var(--color-brand-600); border-right-color: var(--color-brand-600); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-700'] { border-left-color: var(--color-brand-700); border-right-color: var(--color-brand-700); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-800'] { border-left-color: var(--color-brand-800); border-right-color: var(--color-brand-800); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-900'] { border-left-color: var(--color-brand-900); border-right-color: var(--color-brand-900); border-left-style: solid; border-right-style: solid; }
+
+        [data-md-bcx='positive-0'] { border-left-color: var(--color-positive-0); border-right-color: var(--color-positive-0); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-100'] { border-left-color: var(--color-positive-100); border-right-color: var(--color-positive-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-200'] { border-left-color: var(--color-positive-200); border-right-color: var(--color-positive-200); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-400'] { border-left-color: var(--color-positive-400); border-right-color: var(--color-positive-400); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-600'] { border-left-color: var(--color-positive-600); border-right-color: var(--color-positive-600); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-800'] { border-left-color: var(--color-positive-800); border-right-color: var(--color-positive-800); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-900'] { border-left-color: var(--color-positive-900); border-right-color: var(--color-positive-900); border-left-style: solid; border-right-style: solid; }
+
+        [data-md-bcx='danger-0'] { border-left-color: var(--color-danger-0); border-right-color: var(--color-danger-0); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-100'] { border-left-color: var(--color-danger-100); border-right-color: var(--color-danger-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-200'] { border-left-color: var(--color-danger-200); border-right-color: var(--color-danger-200); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-400'] { border-left-color: var(--color-danger-400); border-right-color: var(--color-danger-400); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-600'] { border-left-color: var(--color-danger-600); border-right-color: var(--color-danger-600); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-800'] { border-left-color: var(--color-danger-800); border-right-color: var(--color-danger-800); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-900'] { border-left-color: var(--color-danger-900); border-right-color: var(--color-danger-900); border-left-style: solid; border-right-style: solid; }
+
+        [data-md-bcx='warning-100'] { border-left-color: var(--color-warning-100); border-right-color: var(--color-warning-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='warning-300'] { border-left-color: var(--color-warning-300); border-right-color: var(--color-warning-300); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='warning-500'] { border-left-color: var(--color-warning-500); border-right-color: var(--color-warning-500); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='warning-700'] { border-left-color: var(--color-warning-700); border-right-color: var(--color-warning-700); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='warning-900'] { border-left-color: var(--color-warning-900); border-right-color: var(--color-warning-900); border-left-style: solid; border-right-style: solid; }
+
+
+        [data-md-bcy='neutral-0'] { border-top-color: var(--color-neutral-0); border-bottom-color: var(--color-neutral-0); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-50'] { border-top-color: var(--color-neutral-50); border-bottom-color: var(--color-neutral-50); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-100'] { border-top-color: var(--color-neutral-100); border-bottom-color: var(--color-neutral-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-200'] { border-top-color: var(--color-neutral-200); border-bottom-color: var(--color-neutral-200); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-300'] { border-top-color: var(--color-neutral-300); border-bottom-color: var(--color-neutral-300); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-400'] { border-top-color: var(--color-neutral-400); border-bottom-color: var(--color-neutral-400); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-500'] { border-top-color: var(--color-neutral-500); border-bottom-color: var(--color-neutral-500); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-600'] { border-top-color: var(--color-neutral-600); border-bottom-color: var(--color-neutral-600); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-700'] { border-top-color: var(--color-neutral-700); border-bottom-color: var(--color-neutral-700); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-800'] { border-top-color: var(--color-neutral-800); border-bottom-color: var(--color-neutral-800); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-900'] { border-top-color: var(--color-neutral-900); border-bottom-color: var(--color-neutral-900); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-950'] { border-top-color: var(--color-neutral-950); border-bottom-color: var(--color-neutral-950); border-top-style: solid; border-bottom-style: solid; }
+
+        [data-md-bcy='brand-50'] { border-top-color: var(--color-brand-50); border-bottom-color: var(--color-brand-50); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-100'] { border-top-color: var(--color-brand-100); border-bottom-color: var(--color-brand-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-200'] { border-top-color: var(--color-brand-200); border-bottom-color: var(--color-brand-200); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-300'] { border-top-color: var(--color-brand-300); border-bottom-color: var(--color-brand-300); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-400'] { border-top-color: var(--color-brand-400); border-bottom-color: var(--color-brand-400); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-500'] { border-top-color: var(--color-brand-500); border-bottom-color: var(--color-brand-500); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-600'] { border-top-color: var(--color-brand-600); border-bottom-color: var(--color-brand-600); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-700'] { border-top-color: var(--color-brand-700); border-bottom-color: var(--color-brand-700); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-800'] { border-top-color: var(--color-brand-800); border-bottom-color: var(--color-brand-800); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-900'] { border-top-color: var(--color-brand-900); border-bottom-color: var(--color-brand-900); border-top-style: solid; border-bottom-style: solid; }
+
+        [data-md-bcy='positive-0'] { border-top-color: var(--color-positive-0); border-bottom-color: var(--color-positive-0); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-100'] { border-top-color: var(--color-positive-100); border-bottom-color: var(--color-positive-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-200'] { border-top-color: var(--color-positive-200); border-bottom-color: var(--color-positive-200); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-400'] { border-top-color: var(--color-positive-400); border-bottom-color: var(--color-positive-400); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-600'] { border-top-color: var(--color-positive-600); border-bottom-color: var(--color-positive-600); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-800'] { border-top-color: var(--color-positive-800); border-bottom-color: var(--color-positive-800); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-900'] { border-top-color: var(--color-positive-900); border-bottom-color: var(--color-positive-900); border-top-style: solid; border-bottom-style: solid; }
+
+        [data-md-bcy='danger-0'] { border-top-color: var(--color-danger-0); border-bottom-color: var(--color-danger-0); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-100'] { border-top-color: var(--color-danger-100); border-bottom-color: var(--color-danger-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-200'] { border-top-color: var(--color-danger-200); border-bottom-color: var(--color-danger-200); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-400'] { border-top-color: var(--color-danger-400); border-bottom-color: var(--color-danger-400); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-600'] { border-top-color: var(--color-danger-600); border-bottom-color: var(--color-danger-600); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-800'] { border-top-color: var(--color-danger-800); border-bottom-color: var(--color-danger-800); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-900'] { border-top-color: var(--color-danger-900); border-bottom-color: var(--color-danger-900); border-top-style: solid; border-bottom-style: solid; }
+
+        [data-md-bcy='warning-100'] { border-top-color: var(--color-warning-100); border-bottom-color: var(--color-warning-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='warning-300'] { border-top-color: var(--color-warning-300); border-bottom-color: var(--color-warning-300); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='warning-500'] { border-top-color: var(--color-warning-500); border-bottom-color: var(--color-warning-500); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='warning-700'] { border-top-color: var(--color-warning-700); border-bottom-color: var(--color-warning-700); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='warning-900'] { border-top-color: var(--color-warning-900); border-bottom-color: var(--color-warning-900); border-top-style: solid; border-bottom-style: solid; }
+
+
+        [data-md-bct='neutral-0'] { border-top-color: var(--color-neutral-0); border-top-style: solid; }
+        [data-md-bct='neutral-50'] { border-top-color: var(--color-neutral-50); border-top-style: solid; }
+        [data-md-bct='neutral-100'] { border-top-color: var(--color-neutral-100); border-top-style: solid; }
+        [data-md-bct='neutral-200'] { border-top-color: var(--color-neutral-200); border-top-style: solid; }
+        [data-md-bct='neutral-300'] { border-top-color: var(--color-neutral-300); border-top-style: solid; }
+        [data-md-bct='neutral-400'] { border-top-color: var(--color-neutral-400); border-top-style: solid; }
+        [data-md-bct='neutral-500'] { border-top-color: var(--color-neutral-500); border-top-style: solid; }
+        [data-md-bct='neutral-600'] { border-top-color: var(--color-neutral-600); border-top-style: solid; }
+        [data-md-bct='neutral-700'] { border-top-color: var(--color-neutral-700); border-top-style: solid; }
+        [data-md-bct='neutral-800'] { border-top-color: var(--color-neutral-800); border-top-style: solid; }
+        [data-md-bct='neutral-900'] { border-top-color: var(--color-neutral-900); border-top-style: solid; }
+        [data-md-bct='neutral-950'] { border-top-color: var(--color-neutral-950); border-top-style: solid; }
+
+        [data-md-bct='brand-50'] { border-top-color: var(--color-brand-50); border-top-style: solid; }
+        [data-md-bct='brand-100'] { border-top-color: var(--color-brand-100); border-top-style: solid; }
+        [data-md-bct='brand-200'] { border-top-color: var(--color-brand-200); border-top-style: solid; }
+        [data-md-bct='brand-300'] { border-top-color: var(--color-brand-300); border-top-style: solid; }
+        [data-md-bct='brand-400'] { border-top-color: var(--color-brand-400); border-top-style: solid; }
+        [data-md-bct='brand-500'] { border-top-color: var(--color-brand-500); border-top-style: solid; }
+        [data-md-bct='brand-600'] { border-top-color: var(--color-brand-600); border-top-style: solid; }
+        [data-md-bct='brand-700'] { border-top-color: var(--color-brand-700); border-top-style: solid; }
+        [data-md-bct='brand-800'] { border-top-color: var(--color-brand-800); border-top-style: solid; }
+        [data-md-bct='brand-900'] { border-top-color: var(--color-brand-900); border-top-style: solid; }
+
+        [data-md-bct='positive-0'] { border-top-color: var(--color-positive-0); border-top-style: solid; }
+        [data-md-bct='positive-100'] { border-top-color: var(--color-positive-100); border-top-style: solid; }
+        [data-md-bct='positive-200'] { border-top-color: var(--color-positive-200); border-top-style: solid; }
+        [data-md-bct='positive-400'] { border-top-color: var(--color-positive-400); border-top-style: solid; }
+        [data-md-bct='positive-600'] { border-top-color: var(--color-positive-600); border-top-style: solid; }
+        [data-md-bct='positive-800'] { border-top-color: var(--color-positive-800); border-top-style: solid; }
+        [data-md-bct='positive-900'] { border-top-color: var(--color-positive-900); border-top-style: solid; }
+
+        [data-md-bct='danger-0'] { border-top-color: var(--color-danger-0); border-top-style: solid; }
+        [data-md-bct='danger-100'] { border-top-color: var(--color-danger-100); border-top-style: solid; }
+        [data-md-bct='danger-200'] { border-top-color: var(--color-danger-200); border-top-style: solid; }
+        [data-md-bct='danger-400'] { border-top-color: var(--color-danger-400); border-top-style: solid; }
+        [data-md-bct='danger-600'] { border-top-color: var(--color-danger-600); border-top-style: solid; }
+        [data-md-bct='danger-800'] { border-top-color: var(--color-danger-800); border-top-style: solid; }
+        [data-md-bct='danger-900'] { border-top-color: var(--color-danger-900); border-top-style: solid; }
+
+        [data-md-bct='warning-100'] { border-top-color: var(--color-warning-100); border-top-style: solid; }
+        [data-md-bct='warning-300'] { border-top-color: var(--color-warning-300); border-top-style: solid; }
+        [data-md-bct='warning-500'] { border-top-color: var(--color-warning-500); border-top-style: solid; }
+        [data-md-bct='warning-700'] { border-top-color: var(--color-warning-700); border-top-style: solid; }
+        [data-md-bct='warning-900'] { border-top-color: var(--color-warning-900); border-top-style: solid; }
+
+
+        [data-md-bcr='neutral-0'] { border-right-color: var(--color-neutral-0); border-right-style: solid; }
+        [data-md-bcr='neutral-50'] { border-right-color: var(--color-neutral-50); border-right-style: solid; }
+        [data-md-bcr='neutral-100'] { border-right-color: var(--color-neutral-100); border-right-style: solid; }
+        [data-md-bcr='neutral-200'] { border-right-color: var(--color-neutral-200); border-right-style: solid; }
+        [data-md-bcr='neutral-300'] { border-right-color: var(--color-neutral-300); border-right-style: solid; }
+        [data-md-bcr='neutral-400'] { border-right-color: var(--color-neutral-400); border-right-style: solid; }
+        [data-md-bcr='neutral-500'] { border-right-color: var(--color-neutral-500); border-right-style: solid; }
+        [data-md-bcr='neutral-600'] { border-right-color: var(--color-neutral-600); border-right-style: solid; }
+        [data-md-bcr='neutral-700'] { border-right-color: var(--color-neutral-700); border-right-style: solid; }
+        [data-md-bcr='neutral-800'] { border-right-color: var(--color-neutral-800); border-right-style: solid; }
+        [data-md-bcr='neutral-900'] { border-right-color: var(--color-neutral-900); border-right-style: solid; }
+        [data-md-bcr='neutral-950'] { border-right-color: var(--color-neutral-950); border-right-style: solid; }
+
+        [data-md-bcr='brand-50'] { border-right-color: var(--color-brand-50); border-right-style: solid; }
+        [data-md-bcr='brand-100'] { border-right-color: var(--color-brand-100); border-right-style: solid; }
+        [data-md-bcr='brand-200'] { border-right-color: var(--color-brand-200); border-right-style: solid; }
+        [data-md-bcr='brand-300'] { border-right-color: var(--color-brand-300); border-right-style: solid; }
+        [data-md-bcr='brand-400'] { border-right-color: var(--color-brand-400); border-right-style: solid; }
+        [data-md-bcr='brand-500'] { border-right-color: var(--color-brand-500); border-right-style: solid; }
+        [data-md-bcr='brand-600'] { border-right-color: var(--color-brand-600); border-right-style: solid; }
+        [data-md-bcr='brand-700'] { border-right-color: var(--color-brand-700); border-right-style: solid; }
+        [data-md-bcr='brand-800'] { border-right-color: var(--color-brand-800); border-right-style: solid; }
+        [data-md-bcr='brand-900'] { border-right-color: var(--color-brand-900); border-right-style: solid; }
+
+        [data-md-bcr='positive-0'] { border-right-color: var(--color-positive-0); border-right-style: solid; }
+        [data-md-bcr='positive-100'] { border-right-color: var(--color-positive-100); border-right-style: solid; }
+        [data-md-bcr='positive-200'] { border-right-color: var(--color-positive-200); border-right-style: solid; }
+        [data-md-bcr='positive-400'] { border-right-color: var(--color-positive-400); border-right-style: solid; }
+        [data-md-bcr='positive-600'] { border-right-color: var(--color-positive-600); border-right-style: solid; }
+        [data-md-bcr='positive-800'] { border-right-color: var(--color-positive-800); border-right-style: solid; }
+        [data-md-bcr='positive-900'] { border-right-color: var(--color-positive-900); border-right-style: solid; }
+
+        [data-md-bcr='danger-0'] { border-right-color: var(--color-danger-0); border-right-style: solid; }
+        [data-md-bcr='danger-100'] { border-right-color: var(--color-danger-100); border-right-style: solid; }
+        [data-md-bcr='danger-200'] { border-right-color: var(--color-danger-200); border-right-style: solid; }
+        [data-md-bcr='danger-400'] { border-right-color: var(--color-danger-400); border-right-style: solid; }
+        [data-md-bcr='danger-600'] { border-right-color: var(--color-danger-600); border-right-style: solid; }
+        [data-md-bcr='danger-800'] { border-right-color: var(--color-danger-800); border-right-style: solid; }
+        [data-md-bcr='danger-900'] { border-right-color: var(--color-danger-900); border-right-style: solid; }
+
+        [data-md-bcr='warning-100'] { border-right-color: var(--color-warning-100); border-right-style: solid; }
+        [data-md-bcr='warning-300'] { border-right-color: var(--color-warning-300); border-right-style: solid; }
+        [data-md-bcr='warning-500'] { border-right-color: var(--color-warning-500); border-right-style: solid; }
+        [data-md-bcr='warning-700'] { border-right-color: var(--color-warning-700); border-right-style: solid; }
+        [data-md-bcr='warning-900'] { border-right-color: var(--color-warning-900); border-right-style: solid; }
+
+
+        [data-md-bcb='neutral-0'] { border-bottom-color: var(--color-neutral-0); border-bottom-style: solid; }
+        [data-md-bcb='neutral-50'] { border-bottom-color: var(--color-neutral-50); border-bottom-style: solid; }
+        [data-md-bcb='neutral-100'] { border-bottom-color: var(--color-neutral-100); border-bottom-style: solid; }
+        [data-md-bcb='neutral-200'] { border-bottom-color: var(--color-neutral-200); border-bottom-style: solid; }
+        [data-md-bcb='neutral-300'] { border-bottom-color: var(--color-neutral-300); border-bottom-style: solid; }
+        [data-md-bcb='neutral-400'] { border-bottom-color: var(--color-neutral-400); border-bottom-style: solid; }
+        [data-md-bcb='neutral-500'] { border-bottom-color: var(--color-neutral-500); border-bottom-style: solid; }
+        [data-md-bcb='neutral-600'] { border-bottom-color: var(--color-neutral-600); border-bottom-style: solid; }
+        [data-md-bcb='neutral-700'] { border-bottom-color: var(--color-neutral-700); border-bottom-style: solid; }
+        [data-md-bcb='neutral-800'] { border-bottom-color: var(--color-neutral-800); border-bottom-style: solid; }
+        [data-md-bcb='neutral-900'] { border-bottom-color: var(--color-neutral-900); border-bottom-style: solid; }
+        [data-md-bcb='neutral-950'] { border-bottom-color: var(--color-neutral-950); border-bottom-style: solid; }
+
+        [data-md-bcb='brand-50'] { border-bottom-color: var(--color-brand-50); border-bottom-style: solid; }
+        [data-md-bcb='brand-100'] { border-bottom-color: var(--color-brand-100); border-bottom-style: solid; }
+        [data-md-bcb='brand-200'] { border-bottom-color: var(--color-brand-200); border-bottom-style: solid; }
+        [data-md-bcb='brand-300'] { border-bottom-color: var(--color-brand-300); border-bottom-style: solid; }
+        [data-md-bcb='brand-400'] { border-bottom-color: var(--color-brand-400); border-bottom-style: solid; }
+        [data-md-bcb='brand-500'] { border-bottom-color: var(--color-brand-500); border-bottom-style: solid; }
+        [data-md-bcb='brand-600'] { border-bottom-color: var(--color-brand-600); border-bottom-style: solid; }
+        [data-md-bcb='brand-700'] { border-bottom-color: var(--color-brand-700); border-bottom-style: solid; }
+        [data-md-bcb='brand-800'] { border-bottom-color: var(--color-brand-800); border-bottom-style: solid; }
+        [data-md-bcb='brand-900'] { border-bottom-color: var(--color-brand-900); border-bottom-style: solid; }
+
+        [data-md-bcb='positive-0'] { border-bottom-color: var(--color-positive-0); border-bottom-style: solid; }
+        [data-md-bcb='positive-100'] { border-bottom-color: var(--color-positive-100); border-bottom-style: solid; }
+        [data-md-bcb='positive-200'] { border-bottom-color: var(--color-positive-200); border-bottom-style: solid; }
+        [data-md-bcb='positive-400'] { border-bottom-color: var(--color-positive-400); border-bottom-style: solid; }
+        [data-md-bcb='positive-600'] { border-bottom-color: var(--color-positive-600); border-bottom-style: solid; }
+        [data-md-bcb='positive-800'] { border-bottom-color: var(--color-positive-800); border-bottom-style: solid; }
+        [data-md-bcb='positive-900'] { border-bottom-color: var(--color-positive-900); border-bottom-style: solid; }
+
+        [data-md-bcb='danger-0'] { border-bottom-color: var(--color-danger-0); border-bottom-style: solid; }
+        [data-md-bcb='danger-100'] { border-bottom-color: var(--color-danger-100); border-bottom-style: solid; }
+        [data-md-bcb='danger-200'] { border-bottom-color: var(--color-danger-200); border-bottom-style: solid; }
+        [data-md-bcb='danger-400'] { border-bottom-color: var(--color-danger-400); border-bottom-style: solid; }
+        [data-md-bcb='danger-600'] { border-bottom-color: var(--color-danger-600); border-bottom-style: solid; }
+        [data-md-bcb='danger-800'] { border-bottom-color: var(--color-danger-800); border-bottom-style: solid; }
+        [data-md-bcb='danger-900'] { border-bottom-color: var(--color-danger-900); border-bottom-style: solid; }
+
+        [data-md-bcb='warning-100'] { border-bottom-color: var(--color-warning-100); border-bottom-style: solid; }
+        [data-md-bcb='warning-300'] { border-bottom-color: var(--color-warning-300); border-bottom-style: solid; }
+        [data-md-bcb='warning-500'] { border-bottom-color: var(--color-warning-500); border-bottom-style: solid; }
+        [data-md-bcb='warning-700'] { border-bottom-color: var(--color-warning-700); border-bottom-style: solid; }
+        [data-md-bcb='warning-900'] { border-bottom-color: var(--color-warning-900); border-bottom-style: solid; }
+
+
+        [data-md-bcl='neutral-0'] { border-left-color: var(--color-neutral-0); border-left-style: solid; }
+        [data-md-bcl='neutral-50'] { border-left-color: var(--color-neutral-50); border-left-style: solid; }
+        [data-md-bcl='neutral-100'] { border-left-color: var(--color-neutral-100); border-left-style: solid; }
+        [data-md-bcl='neutral-200'] { border-left-color: var(--color-neutral-200); border-left-style: solid; }
+        [data-md-bcl='neutral-300'] { border-left-color: var(--color-neutral-300); border-left-style: solid; }
+        [data-md-bcl='neutral-400'] { border-left-color: var(--color-neutral-400); border-left-style: solid; }
+        [data-md-bcl='neutral-500'] { border-left-color: var(--color-neutral-500); border-left-style: solid; }
+        [data-md-bcl='neutral-600'] { border-left-color: var(--color-neutral-600); border-left-style: solid; }
+        [data-md-bcl='neutral-700'] { border-left-color: var(--color-neutral-700); border-left-style: solid; }
+        [data-md-bcl='neutral-800'] { border-left-color: var(--color-neutral-800); border-left-style: solid; }
+        [data-md-bcl='neutral-900'] { border-left-color: var(--color-neutral-900); border-left-style: solid; }
+        [data-md-bcl='neutral-950'] { border-left-color: var(--color-neutral-950); border-left-style: solid; }
+
+        [data-md-bcl='brand-50'] { border-left-color: var(--color-brand-50); border-left-style: solid; }
+        [data-md-bcl='brand-100'] { border-left-color: var(--color-brand-100); border-left-style: solid; }
+        [data-md-bcl='brand-200'] { border-left-color: var(--color-brand-200); border-left-style: solid; }
+        [data-md-bcl='brand-300'] { border-left-color: var(--color-brand-300); border-left-style: solid; }
+        [data-md-bcl='brand-400'] { border-left-color: var(--color-brand-400); border-left-style: solid; }
+        [data-md-bcl='brand-500'] { border-left-color: var(--color-brand-500); border-left-style: solid; }
+        [data-md-bcl='brand-600'] { border-left-color: var(--color-brand-600); border-left-style: solid; }
+        [data-md-bcl='brand-700'] { border-left-color: var(--color-brand-700); border-left-style: solid; }
+        [data-md-bcl='brand-800'] { border-left-color: var(--color-brand-800); border-left-style: solid; }
+        [data-md-bcl='brand-900'] { border-left-color: var(--color-brand-900); border-left-style: solid; }
+
+        [data-md-bcl='positive-0'] { border-left-color: var(--color-positive-0); border-left-style: solid; }
+        [data-md-bcl='positive-100'] { border-left-color: var(--color-positive-100); border-left-style: solid; }
+        [data-md-bcl='positive-200'] { border-left-color: var(--color-positive-200); border-left-style: solid; }
+        [data-md-bcl='positive-400'] { border-left-color: var(--color-positive-400); border-left-style: solid; }
+        [data-md-bcl='positive-600'] { border-left-color: var(--color-positive-600); border-left-style: solid; }
+        [data-md-bcl='positive-800'] { border-left-color: var(--color-positive-800); border-left-style: solid; }
+        [data-md-bcl='positive-900'] { border-left-color: var(--color-positive-900); border-left-style: solid; }
+
+        [data-md-bcl='danger-0'] { border-left-color: var(--color-danger-0); border-left-style: solid; }
+        [data-md-bcl='danger-100'] { border-left-color: var(--color-danger-100); border-left-style: solid; }
+        [data-md-bcl='danger-200'] { border-left-color: var(--color-danger-200); border-left-style: solid; }
+        [data-md-bcl='danger-400'] { border-left-color: var(--color-danger-400); border-left-style: solid; }
+        [data-md-bcl='danger-600'] { border-left-color: var(--color-danger-600); border-left-style: solid; }
+        [data-md-bcl='danger-800'] { border-left-color: var(--color-danger-800); border-left-style: solid; }
+        [data-md-bcl='danger-900'] { border-left-color: var(--color-danger-900); border-left-style: solid; }
+
+        [data-md-bcl='warning-100'] { border-left-color: var(--color-warning-100); border-left-style: solid; }
+        [data-md-bcl='warning-300'] { border-left-color: var(--color-warning-300); border-left-style: solid; }
+        [data-md-bcl='warning-500'] { border-left-color: var(--color-warning-500); border-left-style: solid; }
+        [data-md-bcl='warning-700'] { border-left-color: var(--color-warning-700); border-left-style: solid; }
+        [data-md-bcl='warning-900'] { border-left-color: var(--color-warning-900); border-left-style: solid; }
+      }
    `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
@@ -725,6 +1055,350 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcl='warning-500'] { border-left-color: var(--color-warning-500); border-left-style: solid; }
       [data-bcl='warning-700'] { border-left-color: var(--color-warning-700); border-left-style: solid; }
       [data-bcl='warning-900'] { border-left-color: var(--color-warning-900); border-left-style: solid; }
+
+      @media (max-width: 768px) {
+        [data-md-bc='neutral-0'] { border-color: var(--color-neutral-0); border-style: solid; }
+        [data-md-bc='neutral-50'] { border-color: var(--color-neutral-50); border-style: solid; }
+        [data-md-bc='neutral-100'] { border-color: var(--color-neutral-100); border-style: solid; } 
+        [data-md-bc='neutral-200'] { border-color: var(--color-neutral-200); border-style: solid; }
+        [data-md-bc='neutral-300'] { border-color: var(--color-neutral-300); border-style: solid; }
+        [data-md-bc='neutral-400'] { border-color: var(--color-neutral-400); border-style: solid; }
+        [data-md-bc='neutral-500'] { border-color: var(--color-neutral-500); border-style: solid; }
+        [data-md-bc='neutral-600'] { border-color: var(--color-neutral-600); border-style: solid; }
+        [data-md-bc='neutral-700'] { border-color: var(--color-neutral-700); border-style: solid; }
+        [data-md-bc='neutral-800'] { border-color: var(--color-neutral-800); border-style: solid; }
+        [data-md-bc='neutral-900'] { border-color: var(--color-neutral-900); border-style: solid; }
+        [data-md-bc='neutral-950'] { border-color: var(--color-neutral-950); border-style: solid; }
+
+        [data-md-bc='foo'] { border-color: var(--color-foo); border-style: solid; }
+
+        [data-md-bc='brand-50'] { border-color: var(--color-brand-50); border-style: solid; }
+        [data-md-bc='brand-100'] { border-color: var(--color-brand-100); border-style: solid; }
+        [data-md-bc='brand-200'] { border-color: var(--color-brand-200); border-style: solid; }
+        [data-md-bc='brand-300'] { border-color: var(--color-brand-300); border-style: solid; }
+        [data-md-bc='brand-400'] { border-color: var(--color-brand-400); border-style: solid; }
+        [data-md-bc='brand-500'] { border-color: var(--color-brand-500); border-style: solid; }
+        [data-md-bc='brand-600'] { border-color: var(--color-brand-600); border-style: solid; }
+        [data-md-bc='brand-700'] { border-color: var(--color-brand-700); border-style: solid; }
+        [data-md-bc='brand-800'] { border-color: var(--color-brand-800); border-style: solid; }
+        [data-md-bc='brand-900'] { border-color: var(--color-brand-900); border-style: solid; }
+
+        [data-md-bc='positive-0'] { border-color: var(--color-positive-0); border-style: solid; }
+        [data-md-bc='positive-100'] { border-color: var(--color-positive-100); border-style: solid; }
+        [data-md-bc='positive-200'] { border-color: var(--color-positive-200); border-style: solid; }
+        [data-md-bc='positive-400'] { border-color: var(--color-positive-400); border-style: solid; }
+        [data-md-bc='positive-600'] { border-color: var(--color-positive-600); border-style: solid; }
+        [data-md-bc='positive-800'] { border-color: var(--color-positive-800); border-style: solid; }
+        [data-md-bc='positive-900'] { border-color: var(--color-positive-900); border-style: solid; }
+
+        [data-md-bc='danger-0'] { border-color: var(--color-danger-0); border-style: solid; }
+        [data-md-bc='danger-100'] { border-color: var(--color-danger-100); border-style: solid; }
+        [data-md-bc='danger-200'] { border-color: var(--color-danger-200); border-style: solid; }
+        [data-md-bc='danger-400'] { border-color: var(--color-danger-400); border-style: solid; }
+        [data-md-bc='danger-600'] { border-color: var(--color-danger-600); border-style: solid; }
+        [data-md-bc='danger-800'] { border-color: var(--color-danger-800); border-style: solid; }
+        [data-md-bc='danger-900'] { border-color: var(--color-danger-900); border-style: solid; }
+
+        [data-md-bc='warning-100'] { border-color: var(--color-warning-100); border-style: solid; }
+        [data-md-bc='warning-300'] { border-color: var(--color-warning-300); border-style: solid; }
+        [data-md-bc='warning-500'] { border-color: var(--color-warning-500); border-style: solid; }
+        [data-md-bc='warning-700'] { border-color: var(--color-warning-700); border-style: solid; }
+        [data-md-bc='warning-900'] { border-color: var(--color-warning-900); border-style: solid; }
+
+
+        [data-md-bcx='neutral-0'] { border-left-color: var(--color-neutral-0); border-right-color: var(--color-neutral-0); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-50'] { border-left-color: var(--color-neutral-50); border-right-color: var(--color-neutral-50); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-100'] { border-left-color: var(--color-neutral-100); border-right-color: var(--color-neutral-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-200'] { border-left-color: var(--color-neutral-200); border-right-color: var(--color-neutral-200); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-300'] { border-left-color: var(--color-neutral-300); border-right-color: var(--color-neutral-300); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-400'] { border-left-color: var(--color-neutral-400); border-right-color: var(--color-neutral-400); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-500'] { border-left-color: var(--color-neutral-500); border-right-color: var(--color-neutral-500); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-600'] { border-left-color: var(--color-neutral-600); border-right-color: var(--color-neutral-600); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-700'] { border-left-color: var(--color-neutral-700); border-right-color: var(--color-neutral-700); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-800'] { border-left-color: var(--color-neutral-800); border-right-color: var(--color-neutral-800); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-900'] { border-left-color: var(--color-neutral-900); border-right-color: var(--color-neutral-900); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='neutral-950'] { border-left-color: var(--color-neutral-950); border-right-color: var(--color-neutral-950); border-left-style: solid; border-right-style: solid; }
+
+        [data-md-bcx='foo'] { border-left-color: var(--color-foo); border-right-color: var(--color-foo); border-left-style: solid; border-right-style: solid; }
+
+        [data-md-bcx='brand-50'] { border-left-color: var(--color-brand-50); border-right-color: var(--color-brand-50); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-100'] { border-left-color: var(--color-brand-100); border-right-color: var(--color-brand-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-200'] { border-left-color: var(--color-brand-200); border-right-color: var(--color-brand-200); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-300'] { border-left-color: var(--color-brand-300); border-right-color: var(--color-brand-300); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-400'] { border-left-color: var(--color-brand-400); border-right-color: var(--color-brand-400); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-500'] { border-left-color: var(--color-brand-500); border-right-color: var(--color-brand-500); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-600'] { border-left-color: var(--color-brand-600); border-right-color: var(--color-brand-600); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-700'] { border-left-color: var(--color-brand-700); border-right-color: var(--color-brand-700); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-800'] { border-left-color: var(--color-brand-800); border-right-color: var(--color-brand-800); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='brand-900'] { border-left-color: var(--color-brand-900); border-right-color: var(--color-brand-900); border-left-style: solid; border-right-style: solid; }
+
+        [data-md-bcx='positive-0'] { border-left-color: var(--color-positive-0); border-right-color: var(--color-positive-0); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-100'] { border-left-color: var(--color-positive-100); border-right-color: var(--color-positive-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-200'] { border-left-color: var(--color-positive-200); border-right-color: var(--color-positive-200); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-400'] { border-left-color: var(--color-positive-400); border-right-color: var(--color-positive-400); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-600'] { border-left-color: var(--color-positive-600); border-right-color: var(--color-positive-600); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-800'] { border-left-color: var(--color-positive-800); border-right-color: var(--color-positive-800); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='positive-900'] { border-left-color: var(--color-positive-900); border-right-color: var(--color-positive-900); border-left-style: solid; border-right-style: solid; }
+
+        [data-md-bcx='danger-0'] { border-left-color: var(--color-danger-0); border-right-color: var(--color-danger-0); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-100'] { border-left-color: var(--color-danger-100); border-right-color: var(--color-danger-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-200'] { border-left-color: var(--color-danger-200); border-right-color: var(--color-danger-200); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-400'] { border-left-color: var(--color-danger-400); border-right-color: var(--color-danger-400); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-600'] { border-left-color: var(--color-danger-600); border-right-color: var(--color-danger-600); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-800'] { border-left-color: var(--color-danger-800); border-right-color: var(--color-danger-800); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='danger-900'] { border-left-color: var(--color-danger-900); border-right-color: var(--color-danger-900); border-left-style: solid; border-right-style: solid; }
+
+        [data-md-bcx='warning-100'] { border-left-color: var(--color-warning-100); border-right-color: var(--color-warning-100); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='warning-300'] { border-left-color: var(--color-warning-300); border-right-color: var(--color-warning-300); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='warning-500'] { border-left-color: var(--color-warning-500); border-right-color: var(--color-warning-500); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='warning-700'] { border-left-color: var(--color-warning-700); border-right-color: var(--color-warning-700); border-left-style: solid; border-right-style: solid; }
+        [data-md-bcx='warning-900'] { border-left-color: var(--color-warning-900); border-right-color: var(--color-warning-900); border-left-style: solid; border-right-style: solid; }
+
+
+        [data-md-bcy='neutral-0'] { border-top-color: var(--color-neutral-0); border-bottom-color: var(--color-neutral-0); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-50'] { border-top-color: var(--color-neutral-50); border-bottom-color: var(--color-neutral-50); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-100'] { border-top-color: var(--color-neutral-100); border-bottom-color: var(--color-neutral-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-200'] { border-top-color: var(--color-neutral-200); border-bottom-color: var(--color-neutral-200); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-300'] { border-top-color: var(--color-neutral-300); border-bottom-color: var(--color-neutral-300); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-400'] { border-top-color: var(--color-neutral-400); border-bottom-color: var(--color-neutral-400); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-500'] { border-top-color: var(--color-neutral-500); border-bottom-color: var(--color-neutral-500); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-600'] { border-top-color: var(--color-neutral-600); border-bottom-color: var(--color-neutral-600); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-700'] { border-top-color: var(--color-neutral-700); border-bottom-color: var(--color-neutral-700); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-800'] { border-top-color: var(--color-neutral-800); border-bottom-color: var(--color-neutral-800); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-900'] { border-top-color: var(--color-neutral-900); border-bottom-color: var(--color-neutral-900); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='neutral-950'] { border-top-color: var(--color-neutral-950); border-bottom-color: var(--color-neutral-950); border-top-style: solid; border-bottom-style: solid; }
+
+        [data-md-bcy='foo'] { border-top-color: var(--color-foo); border-bottom-color: var(--color-foo); border-top-style: solid; border-bottom-style: solid; }
+
+        [data-md-bcy='brand-50'] { border-top-color: var(--color-brand-50); border-bottom-color: var(--color-brand-50); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-100'] { border-top-color: var(--color-brand-100); border-bottom-color: var(--color-brand-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-200'] { border-top-color: var(--color-brand-200); border-bottom-color: var(--color-brand-200); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-300'] { border-top-color: var(--color-brand-300); border-bottom-color: var(--color-brand-300); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-400'] { border-top-color: var(--color-brand-400); border-bottom-color: var(--color-brand-400); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-500'] { border-top-color: var(--color-brand-500); border-bottom-color: var(--color-brand-500); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-600'] { border-top-color: var(--color-brand-600); border-bottom-color: var(--color-brand-600); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-700'] { border-top-color: var(--color-brand-700); border-bottom-color: var(--color-brand-700); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-800'] { border-top-color: var(--color-brand-800); border-bottom-color: var(--color-brand-800); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='brand-900'] { border-top-color: var(--color-brand-900); border-bottom-color: var(--color-brand-900); border-top-style: solid; border-bottom-style: solid; }
+
+        [data-md-bcy='positive-0'] { border-top-color: var(--color-positive-0); border-bottom-color: var(--color-positive-0); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-100'] { border-top-color: var(--color-positive-100); border-bottom-color: var(--color-positive-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-200'] { border-top-color: var(--color-positive-200); border-bottom-color: var(--color-positive-200); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-400'] { border-top-color: var(--color-positive-400); border-bottom-color: var(--color-positive-400); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-600'] { border-top-color: var(--color-positive-600); border-bottom-color: var(--color-positive-600); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-800'] { border-top-color: var(--color-positive-800); border-bottom-color: var(--color-positive-800); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='positive-900'] { border-top-color: var(--color-positive-900); border-bottom-color: var(--color-positive-900); border-top-style: solid; border-bottom-style: solid; }
+
+        [data-md-bcy='danger-0'] { border-top-color: var(--color-danger-0); border-bottom-color: var(--color-danger-0); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-100'] { border-top-color: var(--color-danger-100); border-bottom-color: var(--color-danger-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-200'] { border-top-color: var(--color-danger-200); border-bottom-color: var(--color-danger-200); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-400'] { border-top-color: var(--color-danger-400); border-bottom-color: var(--color-danger-400); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-600'] { border-top-color: var(--color-danger-600); border-bottom-color: var(--color-danger-600); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-800'] { border-top-color: var(--color-danger-800); border-bottom-color: var(--color-danger-800); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='danger-900'] { border-top-color: var(--color-danger-900); border-bottom-color: var(--color-danger-900); border-top-style: solid; border-bottom-style: solid; }
+
+        [data-md-bcy='warning-100'] { border-top-color: var(--color-warning-100); border-bottom-color: var(--color-warning-100); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='warning-300'] { border-top-color: var(--color-warning-300); border-bottom-color: var(--color-warning-300); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='warning-500'] { border-top-color: var(--color-warning-500); border-bottom-color: var(--color-warning-500); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='warning-700'] { border-top-color: var(--color-warning-700); border-bottom-color: var(--color-warning-700); border-top-style: solid; border-bottom-style: solid; }
+        [data-md-bcy='warning-900'] { border-top-color: var(--color-warning-900); border-bottom-color: var(--color-warning-900); border-top-style: solid; border-bottom-style: solid; }
+
+
+        [data-md-bct='neutral-0'] { border-top-color: var(--color-neutral-0); border-top-style: solid; }
+        [data-md-bct='neutral-50'] { border-top-color: var(--color-neutral-50); border-top-style: solid; }
+        [data-md-bct='neutral-100'] { border-top-color: var(--color-neutral-100); border-top-style: solid; }
+        [data-md-bct='neutral-200'] { border-top-color: var(--color-neutral-200); border-top-style: solid; }
+        [data-md-bct='neutral-300'] { border-top-color: var(--color-neutral-300); border-top-style: solid; }
+        [data-md-bct='neutral-400'] { border-top-color: var(--color-neutral-400); border-top-style: solid; }
+        [data-md-bct='neutral-500'] { border-top-color: var(--color-neutral-500); border-top-style: solid; }
+        [data-md-bct='neutral-600'] { border-top-color: var(--color-neutral-600); border-top-style: solid; }
+        [data-md-bct='neutral-700'] { border-top-color: var(--color-neutral-700); border-top-style: solid; }
+        [data-md-bct='neutral-800'] { border-top-color: var(--color-neutral-800); border-top-style: solid; }
+        [data-md-bct='neutral-900'] { border-top-color: var(--color-neutral-900); border-top-style: solid; }
+        [data-md-bct='neutral-950'] { border-top-color: var(--color-neutral-950); border-top-style: solid; }
+
+        [data-md-bct='foo'] { border-top-color: var(--color-foo); border-top-style: solid; }
+
+        [data-md-bct='brand-50'] { border-top-color: var(--color-brand-50); border-top-style: solid; }
+        [data-md-bct='brand-100'] { border-top-color: var(--color-brand-100); border-top-style: solid; }
+        [data-md-bct='brand-200'] { border-top-color: var(--color-brand-200); border-top-style: solid; }
+        [data-md-bct='brand-300'] { border-top-color: var(--color-brand-300); border-top-style: solid; }
+        [data-md-bct='brand-400'] { border-top-color: var(--color-brand-400); border-top-style: solid; }
+        [data-md-bct='brand-500'] { border-top-color: var(--color-brand-500); border-top-style: solid; }
+        [data-md-bct='brand-600'] { border-top-color: var(--color-brand-600); border-top-style: solid; }
+        [data-md-bct='brand-700'] { border-top-color: var(--color-brand-700); border-top-style: solid; }
+        [data-md-bct='brand-800'] { border-top-color: var(--color-brand-800); border-top-style: solid; }
+        [data-md-bct='brand-900'] { border-top-color: var(--color-brand-900); border-top-style: solid; }
+
+        [data-md-bct='positive-0'] { border-top-color: var(--color-positive-0); border-top-style: solid; }
+        [data-md-bct='positive-100'] { border-top-color: var(--color-positive-100); border-top-style: solid; }
+        [data-md-bct='positive-200'] { border-top-color: var(--color-positive-200); border-top-style: solid; }
+        [data-md-bct='positive-400'] { border-top-color: var(--color-positive-400); border-top-style: solid; }
+        [data-md-bct='positive-600'] { border-top-color: var(--color-positive-600); border-top-style: solid; }
+        [data-md-bct='positive-800'] { border-top-color: var(--color-positive-800); border-top-style: solid; }
+        [data-md-bct='positive-900'] { border-top-color: var(--color-positive-900); border-top-style: solid; }
+
+        [data-md-bct='danger-0'] { border-top-color: var(--color-danger-0); border-top-style: solid; }
+        [data-md-bct='danger-100'] { border-top-color: var(--color-danger-100); border-top-style: solid; }
+        [data-md-bct='danger-200'] { border-top-color: var(--color-danger-200); border-top-style: solid; }
+        [data-md-bct='danger-400'] { border-top-color: var(--color-danger-400); border-top-style: solid; }
+        [data-md-bct='danger-600'] { border-top-color: var(--color-danger-600); border-top-style: solid; }
+        [data-md-bct='danger-800'] { border-top-color: var(--color-danger-800); border-top-style: solid; }
+        [data-md-bct='danger-900'] { border-top-color: var(--color-danger-900); border-top-style: solid; }
+
+        [data-md-bct='warning-100'] { border-top-color: var(--color-warning-100); border-top-style: solid; }
+        [data-md-bct='warning-300'] { border-top-color: var(--color-warning-300); border-top-style: solid; }
+        [data-md-bct='warning-500'] { border-top-color: var(--color-warning-500); border-top-style: solid; }
+        [data-md-bct='warning-700'] { border-top-color: var(--color-warning-700); border-top-style: solid; }
+        [data-md-bct='warning-900'] { border-top-color: var(--color-warning-900); border-top-style: solid; }
+
+
+        [data-md-bcr='neutral-0'] { border-right-color: var(--color-neutral-0); border-right-style: solid; }
+        [data-md-bcr='neutral-50'] { border-right-color: var(--color-neutral-50); border-right-style: solid; }
+        [data-md-bcr='neutral-100'] { border-right-color: var(--color-neutral-100); border-right-style: solid; }
+        [data-md-bcr='neutral-200'] { border-right-color: var(--color-neutral-200); border-right-style: solid; }
+        [data-md-bcr='neutral-300'] { border-right-color: var(--color-neutral-300); border-right-style: solid; }
+        [data-md-bcr='neutral-400'] { border-right-color: var(--color-neutral-400); border-right-style: solid; }
+        [data-md-bcr='neutral-500'] { border-right-color: var(--color-neutral-500); border-right-style: solid; }
+        [data-md-bcr='neutral-600'] { border-right-color: var(--color-neutral-600); border-right-style: solid; }
+        [data-md-bcr='neutral-700'] { border-right-color: var(--color-neutral-700); border-right-style: solid; }
+        [data-md-bcr='neutral-800'] { border-right-color: var(--color-neutral-800); border-right-style: solid; }
+        [data-md-bcr='neutral-900'] { border-right-color: var(--color-neutral-900); border-right-style: solid; }
+        [data-md-bcr='neutral-950'] { border-right-color: var(--color-neutral-950); border-right-style: solid; }
+
+        [data-md-bcr='foo'] { border-right-color: var(--color-foo); border-right-style: solid; }
+
+        [data-md-bcr='brand-50'] { border-right-color: var(--color-brand-50); border-right-style: solid; }
+        [data-md-bcr='brand-100'] { border-right-color: var(--color-brand-100); border-right-style: solid; }
+        [data-md-bcr='brand-200'] { border-right-color: var(--color-brand-200); border-right-style: solid; }
+        [data-md-bcr='brand-300'] { border-right-color: var(--color-brand-300); border-right-style: solid; }
+        [data-md-bcr='brand-400'] { border-right-color: var(--color-brand-400); border-right-style: solid; }
+        [data-md-bcr='brand-500'] { border-right-color: var(--color-brand-500); border-right-style: solid; }
+        [data-md-bcr='brand-600'] { border-right-color: var(--color-brand-600); border-right-style: solid; }
+        [data-md-bcr='brand-700'] { border-right-color: var(--color-brand-700); border-right-style: solid; }
+        [data-md-bcr='brand-800'] { border-right-color: var(--color-brand-800); border-right-style: solid; }
+        [data-md-bcr='brand-900'] { border-right-color: var(--color-brand-900); border-right-style: solid; }
+
+        [data-md-bcr='positive-0'] { border-right-color: var(--color-positive-0); border-right-style: solid; }
+        [data-md-bcr='positive-100'] { border-right-color: var(--color-positive-100); border-right-style: solid; }
+        [data-md-bcr='positive-200'] { border-right-color: var(--color-positive-200); border-right-style: solid; }
+        [data-md-bcr='positive-400'] { border-right-color: var(--color-positive-400); border-right-style: solid; }
+        [data-md-bcr='positive-600'] { border-right-color: var(--color-positive-600); border-right-style: solid; }
+        [data-md-bcr='positive-800'] { border-right-color: var(--color-positive-800); border-right-style: solid; }
+        [data-md-bcr='positive-900'] { border-right-color: var(--color-positive-900); border-right-style: solid; }
+
+        [data-md-bcr='danger-0'] { border-right-color: var(--color-danger-0); border-right-style: solid; }
+        [data-md-bcr='danger-100'] { border-right-color: var(--color-danger-100); border-right-style: solid; }
+        [data-md-bcr='danger-200'] { border-right-color: var(--color-danger-200); border-right-style: solid; }
+        [data-md-bcr='danger-400'] { border-right-color: var(--color-danger-400); border-right-style: solid; }
+        [data-md-bcr='danger-600'] { border-right-color: var(--color-danger-600); border-right-style: solid; }
+        [data-md-bcr='danger-800'] { border-right-color: var(--color-danger-800); border-right-style: solid; }
+        [data-md-bcr='danger-900'] { border-right-color: var(--color-danger-900); border-right-style: solid; }
+
+        [data-md-bcr='warning-100'] { border-right-color: var(--color-warning-100); border-right-style: solid; }
+        [data-md-bcr='warning-300'] { border-right-color: var(--color-warning-300); border-right-style: solid; }
+        [data-md-bcr='warning-500'] { border-right-color: var(--color-warning-500); border-right-style: solid; }
+        [data-md-bcr='warning-700'] { border-right-color: var(--color-warning-700); border-right-style: solid; }
+        [data-md-bcr='warning-900'] { border-right-color: var(--color-warning-900); border-right-style: solid; }
+
+
+        [data-md-bcb='neutral-0'] { border-bottom-color: var(--color-neutral-0); border-bottom-style: solid; }
+        [data-md-bcb='neutral-50'] { border-bottom-color: var(--color-neutral-50); border-bottom-style: solid; }
+        [data-md-bcb='neutral-100'] { border-bottom-color: var(--color-neutral-100); border-bottom-style: solid; }
+        [data-md-bcb='neutral-200'] { border-bottom-color: var(--color-neutral-200); border-bottom-style: solid; }
+        [data-md-bcb='neutral-300'] { border-bottom-color: var(--color-neutral-300); border-bottom-style: solid; }
+        [data-md-bcb='neutral-400'] { border-bottom-color: var(--color-neutral-400); border-bottom-style: solid; }
+        [data-md-bcb='neutral-500'] { border-bottom-color: var(--color-neutral-500); border-bottom-style: solid; }
+        [data-md-bcb='neutral-600'] { border-bottom-color: var(--color-neutral-600); border-bottom-style: solid; }
+        [data-md-bcb='neutral-700'] { border-bottom-color: var(--color-neutral-700); border-bottom-style: solid; }
+        [data-md-bcb='neutral-800'] { border-bottom-color: var(--color-neutral-800); border-bottom-style: solid; }
+        [data-md-bcb='neutral-900'] { border-bottom-color: var(--color-neutral-900); border-bottom-style: solid; }
+        [data-md-bcb='neutral-950'] { border-bottom-color: var(--color-neutral-950); border-bottom-style: solid; }
+
+        [data-md-bcb='foo'] { border-bottom-color: var(--color-foo); border-bottom-style: solid; }
+
+        [data-md-bcb='brand-50'] { border-bottom-color: var(--color-brand-50); border-bottom-style: solid; }
+        [data-md-bcb='brand-100'] { border-bottom-color: var(--color-brand-100); border-bottom-style: solid; }
+        [data-md-bcb='brand-200'] { border-bottom-color: var(--color-brand-200); border-bottom-style: solid; }
+        [data-md-bcb='brand-300'] { border-bottom-color: var(--color-brand-300); border-bottom-style: solid; }
+        [data-md-bcb='brand-400'] { border-bottom-color: var(--color-brand-400); border-bottom-style: solid; }
+        [data-md-bcb='brand-500'] { border-bottom-color: var(--color-brand-500); border-bottom-style: solid; }
+        [data-md-bcb='brand-600'] { border-bottom-color: var(--color-brand-600); border-bottom-style: solid; }
+        [data-md-bcb='brand-700'] { border-bottom-color: var(--color-brand-700); border-bottom-style: solid; }
+        [data-md-bcb='brand-800'] { border-bottom-color: var(--color-brand-800); border-bottom-style: solid; }
+        [data-md-bcb='brand-900'] { border-bottom-color: var(--color-brand-900); border-bottom-style: solid; }
+
+        [data-md-bcb='positive-0'] { border-bottom-color: var(--color-positive-0); border-bottom-style: solid; }
+        [data-md-bcb='positive-100'] { border-bottom-color: var(--color-positive-100); border-bottom-style: solid; }
+        [data-md-bcb='positive-200'] { border-bottom-color: var(--color-positive-200); border-bottom-style: solid; }
+        [data-md-bcb='positive-400'] { border-bottom-color: var(--color-positive-400); border-bottom-style: solid; }
+        [data-md-bcb='positive-600'] { border-bottom-color: var(--color-positive-600); border-bottom-style: solid; }
+        [data-md-bcb='positive-800'] { border-bottom-color: var(--color-positive-800); border-bottom-style: solid; }
+        [data-md-bcb='positive-900'] { border-bottom-color: var(--color-positive-900); border-bottom-style: solid; }
+
+        [data-md-bcb='danger-0'] { border-bottom-color: var(--color-danger-0); border-bottom-style: solid; }
+        [data-md-bcb='danger-100'] { border-bottom-color: var(--color-danger-100); border-bottom-style: solid; }
+        [data-md-bcb='danger-200'] { border-bottom-color: var(--color-danger-200); border-bottom-style: solid; }
+        [data-md-bcb='danger-400'] { border-bottom-color: var(--color-danger-400); border-bottom-style: solid; }
+        [data-md-bcb='danger-600'] { border-bottom-color: var(--color-danger-600); border-bottom-style: solid; }
+        [data-md-bcb='danger-800'] { border-bottom-color: var(--color-danger-800); border-bottom-style: solid; }
+        [data-md-bcb='danger-900'] { border-bottom-color: var(--color-danger-900); border-bottom-style: solid; }
+
+        [data-md-bcb='warning-100'] { border-bottom-color: var(--color-warning-100); border-bottom-style: solid; }
+        [data-md-bcb='warning-300'] { border-bottom-color: var(--color-warning-300); border-bottom-style: solid; }
+        [data-md-bcb='warning-500'] { border-bottom-color: var(--color-warning-500); border-bottom-style: solid; }
+        [data-md-bcb='warning-700'] { border-bottom-color: var(--color-warning-700); border-bottom-style: solid; }
+        [data-md-bcb='warning-900'] { border-bottom-color: var(--color-warning-900); border-bottom-style: solid; }
+
+
+        [data-md-bcl='neutral-0'] { border-left-color: var(--color-neutral-0); border-left-style: solid; }
+        [data-md-bcl='neutral-50'] { border-left-color: var(--color-neutral-50); border-left-style: solid; }
+        [data-md-bcl='neutral-100'] { border-left-color: var(--color-neutral-100); border-left-style: solid; }
+        [data-md-bcl='neutral-200'] { border-left-color: var(--color-neutral-200); border-left-style: solid; }
+        [data-md-bcl='neutral-300'] { border-left-color: var(--color-neutral-300); border-left-style: solid; }
+        [data-md-bcl='neutral-400'] { border-left-color: var(--color-neutral-400); border-left-style: solid; }
+        [data-md-bcl='neutral-500'] { border-left-color: var(--color-neutral-500); border-left-style: solid; }
+        [data-md-bcl='neutral-600'] { border-left-color: var(--color-neutral-600); border-left-style: solid; }
+        [data-md-bcl='neutral-700'] { border-left-color: var(--color-neutral-700); border-left-style: solid; }
+        [data-md-bcl='neutral-800'] { border-left-color: var(--color-neutral-800); border-left-style: solid; }
+        [data-md-bcl='neutral-900'] { border-left-color: var(--color-neutral-900); border-left-style: solid; }
+        [data-md-bcl='neutral-950'] { border-left-color: var(--color-neutral-950); border-left-style: solid; }
+
+        [data-md-bcl='foo'] { border-left-color: var(--color-foo); border-left-style: solid; }
+
+        [data-md-bcl='brand-50'] { border-left-color: var(--color-brand-50); border-left-style: solid; }
+        [data-md-bcl='brand-100'] { border-left-color: var(--color-brand-100); border-left-style: solid; }
+        [data-md-bcl='brand-200'] { border-left-color: var(--color-brand-200); border-left-style: solid; }
+        [data-md-bcl='brand-300'] { border-left-color: var(--color-brand-300); border-left-style: solid; }
+        [data-md-bcl='brand-400'] { border-left-color: var(--color-brand-400); border-left-style: solid; }
+        [data-md-bcl='brand-500'] { border-left-color: var(--color-brand-500); border-left-style: solid; }
+        [data-md-bcl='brand-600'] { border-left-color: var(--color-brand-600); border-left-style: solid; }
+        [data-md-bcl='brand-700'] { border-left-color: var(--color-brand-700); border-left-style: solid; }
+        [data-md-bcl='brand-800'] { border-left-color: var(--color-brand-800); border-left-style: solid; }
+        [data-md-bcl='brand-900'] { border-left-color: var(--color-brand-900); border-left-style: solid; }
+
+        [data-md-bcl='positive-0'] { border-left-color: var(--color-positive-0); border-left-style: solid; }
+        [data-md-bcl='positive-100'] { border-left-color: var(--color-positive-100); border-left-style: solid; }
+        [data-md-bcl='positive-200'] { border-left-color: var(--color-positive-200); border-left-style: solid; }
+        [data-md-bcl='positive-400'] { border-left-color: var(--color-positive-400); border-left-style: solid; }
+        [data-md-bcl='positive-600'] { border-left-color: var(--color-positive-600); border-left-style: solid; }
+        [data-md-bcl='positive-800'] { border-left-color: var(--color-positive-800); border-left-style: solid; }
+        [data-md-bcl='positive-900'] { border-left-color: var(--color-positive-900); border-left-style: solid; }
+
+        [data-md-bcl='danger-0'] { border-left-color: var(--color-danger-0); border-left-style: solid; }
+        [data-md-bcl='danger-100'] { border-left-color: var(--color-danger-100); border-left-style: solid; }
+        [data-md-bcl='danger-200'] { border-left-color: var(--color-danger-200); border-left-style: solid; }
+        [data-md-bcl='danger-400'] { border-left-color: var(--color-danger-400); border-left-style: solid; }
+        [data-md-bcl='danger-600'] { border-left-color: var(--color-danger-600); border-left-style: solid; }
+        [data-md-bcl='danger-800'] { border-left-color: var(--color-danger-800); border-left-style: solid; }
+        [data-md-bcl='danger-900'] { border-left-color: var(--color-danger-900); border-left-style: solid; }
+
+        [data-md-bcl='warning-100'] { border-left-color: var(--color-warning-100); border-left-style: solid; }
+        [data-md-bcl='warning-300'] { border-left-color: var(--color-warning-300); border-left-style: solid; }
+        [data-md-bcl='warning-500'] { border-left-color: var(--color-warning-500); border-left-style: solid; }
+        [data-md-bcl='warning-700'] { border-left-color: var(--color-warning-700); border-left-style: solid; }
+        [data-md-bcl='warning-900'] { border-left-color: var(--color-warning-900); border-left-style: solid; }
+      }
    `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";

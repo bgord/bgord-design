@@ -117,6 +117,97 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
 
     result += regular.map((rule) => rule.get()).join("\n");
 
+    for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
+      const responsive: CssRuleRegular[] = [];
+
+      result += `@media (max-width: ${breakpoint}px) { `;
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("color-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bc='${key}']`, [
+            ["border-color", `var(--${variable})`],
+            ["border-style", "solid"],
+          ]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("color-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bcx='${key}']`, [
+            ["border-left-color", `var(--${variable})`],
+            ["border-right-color", `var(--${variable})`],
+            ["border-left-style", "solid"],
+            ["border-right-style", "solid"],
+          ]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("color-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bcy='${key}']`, [
+            ["border-top-color", `var(--${variable})`],
+            ["border-bottom-color", `var(--${variable})`],
+            ["border-top-style", "solid"],
+            ["border-bottom-style", "solid"],
+          ]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("color-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bct='${key}']`, [
+            ["border-top-color", `var(--${variable})`],
+            ["border-top-style", "solid"],
+          ]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("color-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bcr='${key}']`, [
+            ["border-right-color", `var(--${variable})`],
+            ["border-right-style", "solid"],
+          ]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("color-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bcb='${key}']`, [
+            ["border-bottom-color", `var(--${variable})`],
+            ["border-bottom-style", "solid"],
+          ]),
+        );
+      }
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("color-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bcl='${key}']`, [
+            ["border-left-color", `var(--${variable})`],
+            ["border-left-style", "solid"],
+          ]),
+        );
+      }
+
+      result += responsive.map((rule) => rule.get()).join("\n");
+
+      result += "}";
+    }
+
     return result;
   }
 
