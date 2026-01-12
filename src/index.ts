@@ -63,6 +63,10 @@ import * as UtilityGenerators from "./utilities";
     breakpointRegistry,
     BorderWidthTokenGenerator,
   );
+  const BorderStyleUtilityGenerator = new UtilityGenerators.BorderStyleUtilityGenerator(
+    breakpointRegistry,
+    BorderStyleTokenGenerator,
+  );
   const FontFamilyUtilityGenerator = new UtilityGenerators.FontFamilyUtilityGenerator(
     breakpointRegistry,
     FontFamilyTokenGenerator,
@@ -181,6 +185,7 @@ import * as UtilityGenerators from "./utilities";
     BackgroundUtilityGenerator,
     BorderColorUtilityGenerator,
     BorderWidthUtilityGenerator,
+    BorderStyleUtilityGenerator,
     CursorUtilityGenerator,
     DisplayUtilityGenerator,
     FlexDirectionUtilityGenerator,

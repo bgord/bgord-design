@@ -2,6 +2,7 @@ export * from "./axis-placement-utility-generator";
 export * from "./backdrop-utility-generator";
 export * from "./background-utility-generator";
 export * from "./border-color-utility-generator";
+export * from "./border-style-utility-generator";
 export * from "./border-width-utility-generator";
 export * from "./cursor-utility-generator";
 export * from "./display-utility-generator";
