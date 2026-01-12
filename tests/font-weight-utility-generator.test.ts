@@ -18,6 +18,15 @@ describe("FontWeightUtilityGenerator", () => {
       [data-fw='bold'] { font-weight: var(--font-weight-bold); }
       [data-fw='black'] { font-weight: var(--font-weight-black); }
       [data-fw='unset'] { font-weight: var(--font-weight-unset); }
+
+      @media (max-width: 768px) {
+        [data-md-fw='light'] { font-weight: var(--font-weight-light); }
+        [data-md-fw='regular'] { font-weight: var(--font-weight-regular); }
+        [data-md-fw='medium'] { font-weight: var(--font-weight-medium); }
+        [data-md-fw='bold'] { font-weight: var(--font-weight-bold); }
+        [data-md-fw='black'] { font-weight: var(--font-weight-black); }
+        [data-md-fw='unset'] { font-weight: var(--font-weight-unset); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset";
@@ -36,6 +45,16 @@ describe("FontWeightUtilityGenerator", () => {
       [data-fw='black'] { font-weight: var(--font-weight-black); }
       [data-fw='unset'] { font-weight: var(--font-weight-unset); }
       [data-fw='super'] { font-weight: var(--font-weight-super); }
+
+      @media (max-width: 768px) {
+        [data-md-fw='light'] { font-weight: var(--font-weight-light); }
+        [data-md-fw='regular'] { font-weight: var(--font-weight-regular); }
+        [data-md-fw='medium'] { font-weight: var(--font-weight-medium); }
+        [data-md-fw='bold'] { font-weight: var(--font-weight-bold); }
+        [data-md-fw='black'] { font-weight: var(--font-weight-black); }
+        [data-md-fw='unset'] { font-weight: var(--font-weight-unset); }
+        [data-md-fw='super'] { font-weight: var(--font-weight-super); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset" | "super";
