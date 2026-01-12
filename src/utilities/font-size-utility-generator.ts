@@ -53,9 +53,8 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key.replace("font-size-", "")}"`)
       .join(" | ");
 
-    return [`"data-fs"?: ${type};`].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return ["fs", ...this.breakpointRegistry.entries.map(([name]) => `${name}-fs`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

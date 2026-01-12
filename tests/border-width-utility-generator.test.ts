@@ -134,6 +134,13 @@ describe("BorderWidthUtilityGenerator", () => {
       "data-bwl"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
       "data-bwx"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
       "data-bwy"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
+      "data-md-bw"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
+      "data-md-bwt"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
+      "data-md-bwr"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
+      "data-md-bwb"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
+      "data-md-bwl"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
+      "data-md-bwx"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
+      "data-md-bwy"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset";
    `);
   });
 
@@ -282,6 +289,13 @@ describe("BorderWidthUtilityGenerator", () => {
       "data-bwl"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
       "data-bwx"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
       "data-bwy"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
+      "data-md-bw"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
+      "data-md-bwt"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
+      "data-md-bwr"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
+      "data-md-bwb"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
+      "data-md-bwl"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
+      "data-md-bwx"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
+      "data-md-bwy"?: "none" | "hairline" | "thin" | "base" | "thick" | "heavy" | "unset" | "huge";
    `);
   });
 });

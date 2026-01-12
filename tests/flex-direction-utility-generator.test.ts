@@ -24,6 +24,7 @@ describe("FlexDirectionUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-dir"?: "row" | "row-reverse" | "column" | "column-reverse";
+      "data-md-dir"?: "row" | "row-reverse" | "column" | "column-reverse";
     `);
   });
 });

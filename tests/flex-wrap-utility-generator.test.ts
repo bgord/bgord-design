@@ -24,6 +24,7 @@ describe("FlexWrapUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-wrap"?: "nowrap" | "wrap" | "wrap-reverse" | "unset";
+      "data-md-wrap"?: "nowrap" | "wrap" | "wrap-reverse" | "unset";
     `);
   });
 });

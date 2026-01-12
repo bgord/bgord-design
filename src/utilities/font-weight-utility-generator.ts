@@ -54,9 +54,8 @@ export class FontWeightUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-fw"?: ${type};`].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return ["fw", ...this.breakpointRegistry.entries.map(([name]) => `${name}-fw`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

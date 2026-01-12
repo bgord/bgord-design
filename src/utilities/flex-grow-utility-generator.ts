@@ -42,9 +42,8 @@ export class FlexGrowUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-grow"?: ${type};`].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return ["grow", ...this.breakpointRegistry.entries.map(([name]) => `${name}-grow`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

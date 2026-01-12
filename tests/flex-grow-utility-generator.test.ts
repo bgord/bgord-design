@@ -20,6 +20,7 @@ describe("FlexGrowUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-grow"?: "1" | "unset";
+      "data-md-grow"?: "1" | "unset";
     `);
   });
 });

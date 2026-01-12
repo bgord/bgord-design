@@ -58,9 +58,8 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-disp"?: ${type};`].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return ["disp", ...this.breakpointRegistry.entries.map(([name]) => `${name}-disp`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

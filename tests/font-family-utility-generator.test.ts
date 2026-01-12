@@ -24,6 +24,7 @@ describe("FontFamilyUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-ff"?: "sans" | "serif" | "mono";
+      "data-md-ff"?: "sans" | "serif" | "mono";
     `);
   });
 
@@ -48,6 +49,7 @@ describe("FontFamilyUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-ff"?: "sans" | "serif" | "mono" | "comic";
+      "data-md-ff"?: "sans" | "serif" | "mono" | "comic";
     `);
   });
 });

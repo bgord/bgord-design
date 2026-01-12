@@ -20,6 +20,7 @@ describe("FlexShrinkUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-shrink"?: "0" | "unset";
+      "data-md-shrink"?: "0" | "unset";
     `);
   });
 });

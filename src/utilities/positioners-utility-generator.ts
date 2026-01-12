@@ -93,14 +93,18 @@ export class PositionersUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     return [
-      `"data-top"?: ${type};`,
-      `"data-right"?: ${type};`,
-      `"data-bottom"?: ${type};`,
-      `"data-left"?: ${type};`,
-      `"data-inset"?: ${type};`,
-    ].join("");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "inset",
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-top`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-right`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bottom`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-left`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-inset`),
+    ]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

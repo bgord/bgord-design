@@ -26,6 +26,7 @@ describe("DisplayUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-disp"?: "flex" | "block" | "inline-block" | "none";
+      "data-md-disp"?: "flex" | "block" | "inline-block" | "none";
     `);
   });
 });

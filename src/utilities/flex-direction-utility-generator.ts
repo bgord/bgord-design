@@ -47,9 +47,8 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-dir"?: ${type};`].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return ["dir", ...this.breakpointRegistry.entries.map(([name]) => `${name}-dir`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

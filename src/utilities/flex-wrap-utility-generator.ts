@@ -42,9 +42,8 @@ export class FlexWrapUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-wrap"?: ${type};`].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return ["wrap", ...this.breakpointRegistry.entries.map(([name]) => `${name}-wrap`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

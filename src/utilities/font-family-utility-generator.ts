@@ -54,9 +54,8 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-ff"?: ${type};`].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return ["ff", ...this.breakpointRegistry.entries.map(([name]) => `${name}-ff`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

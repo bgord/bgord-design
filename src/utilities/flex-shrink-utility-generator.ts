@@ -42,9 +42,8 @@ export class FlexShrinkUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-shrink"?: ${type};`].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return ["shrink", ...this.breakpointRegistry.entries.map(([name]) => `${name}-shrink`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

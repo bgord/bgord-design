@@ -218,16 +218,22 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     return [
-      `"data-bc"?: ${type};`,
-      `"data-bct"?: ${type};`,
-      `"data-bcr"?: ${type};`,
-      `"data-bcb"?: ${type};`,
-      `"data-bcl"?: ${type};`,
-      `"data-bcx"?: ${type};`,
-      `"data-bcy"?: ${type};`,
-    ].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+      "bc",
+      "bct",
+      "bcr",
+      "bcb",
+      "bcl",
+      "bcx",
+      "bcy",
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bc`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bct`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bcr`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bcb`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bcl`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bcx`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bcy`),
+    ]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

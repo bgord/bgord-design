@@ -142,9 +142,23 @@ export class MarginUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return ["m", "mt", "mr", "mb", "ml", "mx", "my"].map((abbr) => `"data-${abbr}"?: ${type};`).join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return [
+      "m",
+      "mt",
+      "mr",
+      "mb",
+      "ml",
+      "mx",
+      "my",
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-m`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-mt`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-mr`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-mb`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-ml`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-mx`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-my`),
+    ]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

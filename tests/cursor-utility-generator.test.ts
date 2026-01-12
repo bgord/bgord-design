@@ -24,6 +24,7 @@ describe("CursorUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-cursor"?: "wait" | "auto" | "pointer" | "not-allowed";
+      "data-md-cursor"?: "wait" | "auto" | "pointer" | "not-allowed";
     `);
   });
 });

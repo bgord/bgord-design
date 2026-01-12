@@ -141,16 +141,22 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     return [
-      `"data-bw"?: ${type};`,
-      `"data-bwt"?: ${type};`,
-      `"data-bwr"?: ${type};`,
-      `"data-bwb"?: ${type};`,
-      `"data-bwl"?: ${type};`,
-      `"data-bwx"?: ${type};`,
-      `"data-bwy"?: ${type};`,
-    ].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+      "bw",
+      "bwt",
+      "bwr",
+      "bwb",
+      "bwl",
+      "bwx",
+      "bwy",
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bw`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwt`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwr`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwb`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwl`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwx`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwy`),
+    ]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

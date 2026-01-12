@@ -66,9 +66,8 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-color"?: ${type};`].join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return ["color", ...this.breakpointRegistry.entries.map(([name]) => `${name}-color`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

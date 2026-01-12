@@ -142,9 +142,23 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return ["p", "pt", "pr", "pb", "pl", "px", "py"].map((abbr) => `"data-${abbr}"?: ${type};`).join(" ");
-    // return ["backdrop", ...this.breakpointRegistry.entries.map(([name]) => `${name}-backdrop`)]
-    //   .map((key) => `"data-${key}"?: ${type};`)
-    //   .join(" ");
+    return [
+      "p",
+      "pt",
+      "pr",
+      "pb",
+      "pl",
+      "px",
+      "py",
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-p`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-pt`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-pr`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-pb`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-pl`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-px`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-py`),
+    ]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }

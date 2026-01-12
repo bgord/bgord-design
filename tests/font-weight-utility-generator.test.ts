@@ -30,6 +30,7 @@ describe("FontWeightUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset";
+      "data-md-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset";
     `);
   });
 
@@ -58,6 +59,7 @@ describe("FontWeightUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset" | "super";
+      "data-md-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset" | "super";
     `);
   });
 });
