@@ -4,7 +4,7 @@ import { GenerateCSS } from "../src/generate-css";
 import * as TokensGenerators from "../src/tokens";
 import * as UtilityGenerators from "../src/utilities";
 
-const breakpoints = new BreakpointRegistry({ md: 768 });
+const breakpoints = new BreakpointRegistry({ md: "768" });
 
 const BackdropsTokenGenerator = new TokensGenerators.BackdropsTokenGenerator();
 const AxisPlacementUtilityGenerator = new UtilityGenerators.AxisPlacementUtilityGenerator(breakpoints);

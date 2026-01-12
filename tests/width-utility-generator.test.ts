@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { WidthUtilityGenerator } from "../src/utilities";
 
-const breakpoints = new BreakpointRegistry({ md: 768 });
+const breakpoints = new BreakpointRegistry({ md: "768" });
 
 describe("WidthUtilityGenerator", () => {
   test("basic usage", () => {

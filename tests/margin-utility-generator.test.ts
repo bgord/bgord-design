@@ -3,7 +3,7 @@ import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";
 import { MarginUtilityGenerator } from "../src/utilities";
 
-const breakpoints = new BreakpointRegistry({ md: 768 });
+const breakpoints = new BreakpointRegistry({ md: "768" });
 
 describe("MarginUtilityGenerator", () => {
   test("basic usage", () => {

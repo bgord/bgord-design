@@ -3,7 +3,7 @@ import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { GenerateTypes } from "../src/generate-types";
 import * as UtilityGenerators from "../src/utilities";
 
-const breakpoints = new BreakpointRegistry({ md: 768 });
+const breakpoints = new BreakpointRegistry({ md: "768" });
 
 const AxisPlacementUtilityGenerator = new UtilityGenerators.AxisPlacementUtilityGenerator(breakpoints);
 

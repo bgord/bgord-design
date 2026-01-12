@@ -3,7 +3,7 @@ import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { SizeTokenGenerator } from "../src/tokens/size-token-generator";
 import { SizeUtilityGenerator } from "../src/utilities/size-utility-generator";
 
-const breakpoints = new BreakpointRegistry({ md: 768 });
+const breakpoints = new BreakpointRegistry({ md: "768" });
 
 describe("SizeUtilityGenerator", () => {
   test("basic usage", () => {

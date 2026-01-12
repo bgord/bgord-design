@@ -7,7 +7,7 @@ import * as TokenGenerators from "./tokens";
 import * as UtilityGenerators from "./utilities";
 
 (async function main() {
-  const breakpointRegistry = new BreakpointRegistry({ md: 768 });
+  const breakpointRegistry = new BreakpointRegistry({ md: "768" });
 
   const BackdropsTokenGenerator = new TokenGenerators.BackdropsTokenGenerator();
   const BorderWidthTokenGenerator = new TokenGenerators.BorderWidthTokenGenerator();
