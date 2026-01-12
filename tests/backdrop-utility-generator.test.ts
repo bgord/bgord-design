@@ -18,7 +18,7 @@ describe("BackdropUtilityGenerator", () => {
       [data-backdrop='strong']::backdrop { background: var(--backdrop-strong); }
       [data-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }
 
-      @media (min-width: 768px) {
+      @media (max-width: 768px) {
         [data-md-backdrop='none']::backdrop { background: var(--backdrop-none); }
         [data-md-backdrop='weak']::backdrop { background: var(--backdrop-weak); }
         [data-md-backdrop='medium']::backdrop { background: var(--backdrop-medium); }
@@ -43,7 +43,7 @@ describe("BackdropUtilityGenerator", () => {
       [data-backdrop='stronger']::backdrop { background: var(--backdrop-stronger); }
       [data-backdrop='new']::backdrop { background: var(--backdrop-new); }
 
-      @media (min-width: 768px) {
+      @media (max-width: 768px) {
         [data-md-backdrop='none']::backdrop { background: var(--backdrop-none); }
         [data-md-backdrop='weak']::backdrop { background: var(--backdrop-weak); }
         [data-md-backdrop='medium']::backdrop { background: var(--backdrop-medium); }

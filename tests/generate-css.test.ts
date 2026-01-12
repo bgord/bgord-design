@@ -85,7 +85,7 @@ describe("GenerateCSS", async () => {
         [data-cross='center'] { align-items: center; }
         [data-cross='baseline'] { align-items: baseline; }
 
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
           [data-md-main='start'] { justify-content: flex-start; }
           [data-md-main='end'] { justify-content: flex-end; }
           [data-md-main='around'] { justify-content: space-around; }

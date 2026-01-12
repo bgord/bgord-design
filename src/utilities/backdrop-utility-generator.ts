@@ -32,7 +32,7 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
     for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
       const responsive: CssRuleRegular[] = [];
 
-      result += `@media (min-width: ${breakpoint}px) { `;
+      result += `@media (max-width: ${breakpoint}px) { `;
 
       for (const variable of Object.keys(this.config)) {
         const key = variable.replace("backdrop-", "");

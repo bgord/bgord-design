@@ -35,7 +35,7 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
     for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
       const responsive: CssRuleRegular[] = [];
 
-      result += `@media (min-width: ${breakpoint}px) { `;
+      result += `@media (max-width: ${breakpoint}px) { `;
 
       for (const [key, value] of Object.entries(this.config)) {
         responsive.push(new CssRuleRegular(`[data-${name}-main='${key}']`, ["justify-content", value]));
