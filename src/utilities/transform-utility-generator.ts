@@ -80,6 +80,75 @@ export class TransformUtilityGenerator extends UtilityGenerator {
 
     result += regular.map((rule) => rule.get()).join("\n");
 
+    for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
+      const responsive: CssRuleRegular[] = [];
+
+      result += `@media (max-width: ${breakpoint}px) { `;
+
+      for (const [key, value] of Object.entries(this.config)) {
+        if (key === "truncate") {
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, [
+              ["overflow", "hidden"],
+              ["white-space", "nowrap"],
+              ["text-overflow", "ellipsis"],
+            ]),
+          );
+          continue;
+        }
+
+        if (key === "line-clamp") {
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, [
+              ["display", "-webkit-box"],
+              ["-webkit-box-orient", "vertical"],
+              ["-webkit-line-clamp", "var(--lines, 2)"],
+              ["overflow", "hidden"],
+            ]),
+          );
+          continue;
+        }
+
+        if (key === "center") {
+          responsive.push(new CssRuleRegular(`[data-${name}-transform~='${key}']`, ["text-align", "center"]));
+          continue;
+        }
+
+        if (key === "upper-first") {
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-transform~='${key}']:first-letter`, [
+              "text-transform",
+              "uppercase",
+            ]),
+          );
+          continue;
+        }
+
+        if (key === "nowrap") {
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, ["white-space", "nowrap"]),
+          );
+          continue;
+        }
+
+        if (key === "font-variant-numeric") {
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, [
+              "font-variant-numeric",
+              "tabular-nums",
+            ]),
+          );
+          continue;
+        }
+
+        responsive.push(new CssRuleRegular(`[data-${name}-transform~='${key}']`, ["text-transform", value]));
+      }
+
+      result += responsive.map((rule) => rule.get()).join("\n");
+
+      result += "}";
+    }
+
     return result;
   }
 
