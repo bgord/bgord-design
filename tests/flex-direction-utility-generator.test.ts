@@ -14,6 +14,13 @@ describe("FlexDirectionUtilityGenerator", () => {
       [data-dir='row-reverse'] { flex-direction: row-reverse; }
       [data-dir='column'] { flex-direction: column; }
       [data-dir='column-reverse'] { flex-direction: column-reverse; }
+
+      @media (max-width: 768px) {
+        [data-md-dir='row'] { flex-direction: row; }
+        [data-md-dir='row-reverse'] { flex-direction: row-reverse; }
+        [data-md-dir='column'] { flex-direction: column; }
+        [data-md-dir='column-reverse'] { flex-direction: column-reverse; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-dir"?: "row" | "row-reverse" | "column" | "column-reverse";
