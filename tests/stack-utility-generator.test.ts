@@ -20,6 +20,7 @@ describe("StackUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-stack"?: "x" | "y";
+      "data-md-stack"?: "x" | "y";
    `);
   });
 });

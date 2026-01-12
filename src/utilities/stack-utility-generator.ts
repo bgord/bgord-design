@@ -78,6 +78,8 @@ export class StackUtilityGenerator extends UtilityGenerator {
       .map((key) => `"${key}"`)
       .join(" | ");
 
-    return [`"data-stack"?: ${type};`].join(" ");
+    return ["stack", ...this.breakpointRegistry.entries.map(([name]) => `${name}-stack`)]
+      .map((key) => `"data-${key}"?: ${type};`)
+      .join(" ");
   }
 }
