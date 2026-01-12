@@ -27,6 +27,24 @@ export class LineHeightUtilityGenerator extends UtilityGenerator {
 
     result += regular.map((rule) => rule.get()).join("\n");
 
+    for (const [name, breakpoint] of Object.entries(this.breakpointRegistry.breakpoints)) {
+      const responsive: CssRuleRegular[] = [];
+
+      result += `@media (max-width: ${breakpoint}px) { `;
+
+      for (const variable of Object.keys(this.config)) {
+        const key = variable.replace("line-height-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-lh='${key}']`, ["line-height", `var(--${variable})`]),
+        );
+      }
+
+      result += responsive.map((rule) => rule.get()).join("\n");
+
+      result += "}";
+    }
+
     return result;
   }
 

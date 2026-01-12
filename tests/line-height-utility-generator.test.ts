@@ -18,6 +18,15 @@ describe("LineHeightUtilityGenerator", () => {
       [data-lh='loose'] { line-height: var(--line-height-loose); }
       [data-lh='display'] { line-height: var(--line-height-display); }
       [data-lh='unset'] { line-height: var(--line-height-unset); }
+
+      @media (max-width: 768px) {
+        [data-md-lh='none'] { line-height: var(--line-height-none); }
+        [data-md-lh='tight'] { line-height: var(--line-height-tight); }
+        [data-md-lh='base'] { line-height: var(--line-height-base); }
+        [data-md-lh='loose'] { line-height: var(--line-height-loose); }
+        [data-md-lh='display'] { line-height: var(--line-height-display); }
+        [data-md-lh='unset'] { line-height: var(--line-height-unset); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-lh"?: "none" | "tight" | "base" | "loose" | "display" | "unset";
@@ -36,6 +45,16 @@ describe("LineHeightUtilityGenerator", () => {
       [data-lh='display'] { line-height: var(--line-height-display); }
       [data-lh='unset'] { line-height: var(--line-height-unset); }
       [data-lh='huge'] { line-height: var(--line-height-huge); }
+
+      @media (max-width: 768px) {
+        [data-md-lh='none'] { line-height: var(--line-height-none); }
+        [data-md-lh='tight'] { line-height: var(--line-height-tight); }
+        [data-md-lh='base'] { line-height: var(--line-height-base); }
+        [data-md-lh='loose'] { line-height: var(--line-height-loose); }
+        [data-md-lh='display'] { line-height: var(--line-height-display); }
+        [data-md-lh='unset'] { line-height: var(--line-height-unset); }
+        [data-md-lh='huge'] { line-height: var(--line-height-huge); }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-lh"?: "none" | "tight" | "base" | "loose" | "display" | "unset" | "huge";
