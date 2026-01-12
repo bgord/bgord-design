@@ -14,6 +14,13 @@ describe("CursorUtilityGenerator", () => {
       [data-cursor='auto'] { cursor: auto; }
       [data-cursor='pointer'] { cursor: pointer; }
       [data-cursor='not-allowed'] { cursor: not-allowed; }
+
+      @media (max-width: 768px) {
+        [data-md-cursor='wait'] { cursor: wait; }
+        [data-md-cursor='auto'] { cursor: auto; }
+        [data-md-cursor='pointer'] { cursor: pointer; }
+        [data-md-cursor='not-allowed'] { cursor: not-allowed; }
+      }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-cursor"?: "wait" | "auto" | "pointer" | "not-allowed";
