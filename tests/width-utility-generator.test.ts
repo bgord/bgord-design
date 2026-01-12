@@ -22,6 +22,7 @@ describe("WidthUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-width"?: "100%" | "auto" | "unset";
+      "data-md-width"?: "100%" | "auto" | "unset";
     `);
   });
 });
