@@ -1,4 +1,4 @@
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class TransformUtilityGenerator extends UtilityGenerator {
   // Stryker disable all
@@ -21,48 +21,57 @@ export class TransformUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const [key, value] of Object.entries(this.config)) {
       if (key === "truncate") {
-        lines.push(
-          `[data-transform~='${key}'] {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n`,
+        rules.push(
+          new CssRule(`[data-transform~='${key}']`, [
+            ["overflow", "hidden"],
+            ["white-space", "nowrap"],
+            ["text-overflow", "ellipsis"],
+          ]),
         );
         continue;
       }
 
       if (key === "line-clamp") {
-        lines.push(
-          `[data-transform~='${key}'] {\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: var(--lines, 2); overflow: hidden;\n}\n`,
+        rules.push(
+          new CssRule(`[data-transform~='${key}']`, [
+            ["display", "-webkit-box"],
+            ["-webkit-box-orient", "vertical"],
+            ["-webkit-line-clamp", "var(--lines, 2)"],
+            ["overflow", "hidden"],
+          ]),
         );
         continue;
       }
 
       if (key === "center") {
-        lines.push(`[data-transform~='${key}'] {\n  text-align: center;\n}\n`);
+        rules.push(new CssRule(`[data-transform~='${key}']`, [["text-align", "center"]]));
         continue;
       }
 
       if (key === "upper-first") {
-        lines.push(`[data-transform~='upper-first']:first-letter {\n  text-transform: uppercase;\n}\n`);
+        rules.push(new CssRule(`[data-transform~='${key}']:first-letter`, [["text-transform", "uppercase"]]));
         continue;
       }
 
       if (key === "nowrap") {
-        lines.push(`[data-transform~='nowrap'] {\n  white-space: nowrap;\n}\n`);
+        rules.push(new CssRule(`[data-transform~='${key}']`, [["white-space", "nowrap"]]));
         continue;
       }
 
       if (key === "font-variant-numeric") {
-        lines.push(`[data-transform~='font-variant-numeric'] {\n  font-variant-numeric: tabular-nums;\n}\n`);
+        rules.push(new CssRule(`[data-transform~='${key}']`, [["font-variant-numeric", "tabular-nums"]]));
         continue;
       }
 
-      lines.push(`[data-transform~='${key}'] {\n  text-transform: ${value};\n}\n`);
+      rules.push(new CssRule(`[data-transform~='${key}']`, [["text-transform", value]]));
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 
