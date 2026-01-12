@@ -3,7 +3,7 @@ import type { DangerTokenGenerator } from "../tokens/danger-token-generator";
 import type { GrayscaleTokenGenerator } from "../tokens/grayscale-token-generator";
 import type { PositiveTokenGenerator } from "../tokens/positive-token-generator";
 import type { WarningTokenGenerator } from "../tokens/warning-token-generator";
-import { UtilityGenerator } from "./template";
+import { CssRule, UtilityGenerator } from "./template";
 
 export class BorderColorUtilityGenerator extends UtilityGenerator {
   config = {};
@@ -27,30 +27,91 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const lines: string[] = [];
+    const rules: CssRule[] = [];
 
     for (const variable of Object.keys(this.config)) {
       const key = variable.replace("color-", "");
 
-      lines.push(`[data-bc='${key}'] { border-color: var(--${variable}); border-style: solid; }`);
-      lines.push(`[data-bct='${key}'] { border-top-color: var(--${variable}); border-top-style: solid; }`);
-      lines.push(
-        `[data-bcr='${key}'] { border-right-color: var(--${variable}); border-right-style: solid; }`,
+      rules.push(
+        new CssRule(`[data-bc='${key}']`, [
+          ["border-color", `var(--${variable})`],
+          ["border-style", "solid"],
+        ]),
       );
-      lines.push(
-        `[data-bcb='${key}'] { border-bottom-color: var(--${variable}); border-bottom-style: solid; }`,
+    }
+
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("color-", "");
+
+      rules.push(
+        new CssRule(`[data-bcx='${key}']`, [
+          ["border-left-color", `var(--${variable})`],
+          ["border-right-color", `var(--${variable})`],
+          ["border-left-style", "solid"],
+          ["border-right-style", "solid"],
+        ]),
       );
-      lines.push(`[data-bcl='${key}'] { border-left-color: var(--${variable}); border-left-style: solid; }`);
-      lines.push(
-        `[data-bcx='${key}'] { border-left-color: var(--${variable}); border-right-color: var(--${variable}); border-left-style: solid; border-right-style: solid; }`,
+    }
+
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("color-", "");
+
+      rules.push(
+        new CssRule(`[data-bcy='${key}']`, [
+          ["border-top-color", `var(--${variable})`],
+          ["border-bottom-color", `var(--${variable})`],
+          ["border-top-style", "solid"],
+          ["border-bottom-style", "solid"],
+        ]),
       );
-      lines.push(
-        `[data-bcy='${key}'] { border-top-color: var(--${variable}); border-bottom-color: var(--${variable}); border-top-style: solid; border-bottom-style: solid; }`,
+    }
+
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("color-", "");
+
+      rules.push(
+        new CssRule(`[data-bct='${key}']`, [
+          ["border-top-color", `var(--${variable})`],
+          ["border-top-style", "solid"],
+        ]),
+      );
+    }
+
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("color-", "");
+
+      rules.push(
+        new CssRule(`[data-bcr='${key}']`, [
+          ["border-right-color", `var(--${variable})`],
+          ["border-right-style", "solid"],
+        ]),
+      );
+    }
+
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("color-", "");
+
+      rules.push(
+        new CssRule(`[data-bcb='${key}']`, [
+          ["border-bottom-color", `var(--${variable})`],
+          ["border-bottom-style", "solid"],
+        ]),
+      );
+    }
+
+    for (const variable of Object.keys(this.config)) {
+      const key = variable.replace("color-", "");
+
+      rules.push(
+        new CssRule(`[data-bcl='${key}']`, [
+          ["border-left-color", `var(--${variable})`],
+          ["border-left-style", "solid"],
+        ]),
       );
     }
 
     // Stryker disable all
-    return lines.join("\n");
+    return rules.map((rule) => rule.get()).join("\n");
     // Stryker restore all
   }
 

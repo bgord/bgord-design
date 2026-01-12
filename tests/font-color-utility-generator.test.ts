@@ -31,6 +31,7 @@ describe("FontColorUtilityGenerator", () => {
       [data-color='neutral-800'] { color: var(--color-neutral-800); }
       [data-color='neutral-900'] { color: var(--color-neutral-900); }
       [data-color='neutral-950'] { color: var(--color-neutral-950); }
+
       [data-color='brand-50'] { color: var(--color-brand-50); }
       [data-color='brand-100'] { color: var(--color-brand-100); }
       [data-color='brand-200'] { color: var(--color-brand-200); }
@@ -41,6 +42,7 @@ describe("FontColorUtilityGenerator", () => {
       [data-color='brand-700'] { color: var(--color-brand-700); }
       [data-color='brand-800'] { color: var(--color-brand-800); }
       [data-color='brand-900'] { color: var(--color-brand-900); }
+
       [data-color='positive-0'] { color: var(--color-positive-0); }
       [data-color='positive-100'] { color: var(--color-positive-100); }
       [data-color='positive-200'] { color: var(--color-positive-200); }
@@ -48,6 +50,7 @@ describe("FontColorUtilityGenerator", () => {
       [data-color='positive-600'] { color: var(--color-positive-600); }
       [data-color='positive-800'] { color: var(--color-positive-800); }
       [data-color='positive-900'] { color: var(--color-positive-900); }
+
       [data-color='danger-0'] { color: var(--color-danger-0); }
       [data-color='danger-100'] { color: var(--color-danger-100); }
       [data-color='danger-200'] { color: var(--color-danger-200); }
@@ -55,6 +58,7 @@ describe("FontColorUtilityGenerator", () => {
       [data-color='danger-600'] { color: var(--color-danger-600); }
       [data-color='danger-800'] { color: var(--color-danger-800); }
       [data-color='danger-900'] { color: var(--color-danger-900); }
+
       [data-color='warning-100'] { color: var(--color-warning-100); }
       [data-color='warning-300'] { color: var(--color-warning-300); }
       [data-color='warning-500'] { color: var(--color-warning-500); }
@@ -93,7 +97,9 @@ describe("FontColorUtilityGenerator", () => {
       [data-color='neutral-800'] { color: var(--color-neutral-800); }
       [data-color='neutral-900'] { color: var(--color-neutral-900); }
       [data-color='neutral-950'] { color: var(--color-neutral-950); }
+
       [data-color='foo'] { color: var(--color-foo); }
+
       [data-color='brand-50'] { color: var(--color-brand-50); }
       [data-color='brand-100'] { color: var(--color-brand-100); }
       [data-color='brand-200'] { color: var(--color-brand-200); }
@@ -104,6 +110,7 @@ describe("FontColorUtilityGenerator", () => {
       [data-color='brand-700'] { color: var(--color-brand-700); }
       [data-color='brand-800'] { color: var(--color-brand-800); }
       [data-color='brand-900'] { color: var(--color-brand-900); }
+
       [data-color='positive-0'] { color: var(--color-positive-0); }
       [data-color='positive-100'] { color: var(--color-positive-100); }
       [data-color='positive-200'] { color: var(--color-positive-200); }
@@ -111,6 +118,7 @@ describe("FontColorUtilityGenerator", () => {
       [data-color='positive-600'] { color: var(--color-positive-600); }
       [data-color='positive-800'] { color: var(--color-positive-800); }
       [data-color='positive-900'] { color: var(--color-positive-900); }
+
       [data-color='danger-0'] { color: var(--color-danger-0); }
       [data-color='danger-100'] { color: var(--color-danger-100); }
       [data-color='danger-200'] { color: var(--color-danger-200); }
@@ -118,6 +126,7 @@ describe("FontColorUtilityGenerator", () => {
       [data-color='danger-600'] { color: var(--color-danger-600); }
       [data-color='danger-800'] { color: var(--color-danger-800); }
       [data-color='danger-900'] { color: var(--color-danger-900); }
+
       [data-color='warning-100'] { color: var(--color-warning-100); }
       [data-color='warning-300'] { color: var(--color-warning-300); }
       [data-color='warning-500'] { color: var(--color-warning-500); }

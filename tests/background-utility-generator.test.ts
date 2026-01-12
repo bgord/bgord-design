@@ -31,6 +31,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='neutral-800'] { background: var(--color-neutral-800); }
       [data-bg='neutral-900'] { background: var(--color-neutral-900); }
       [data-bg='neutral-950'] { background: var(--color-neutral-950); }
+
       [data-bg='brand-50'] { background: var(--color-brand-50); }
       [data-bg='brand-100'] { background: var(--color-brand-100); }
       [data-bg='brand-200'] { background: var(--color-brand-200); }
@@ -41,6 +42,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='brand-700'] { background: var(--color-brand-700); }
       [data-bg='brand-800'] { background: var(--color-brand-800); }
       [data-bg='brand-900'] { background: var(--color-brand-900); }
+
       [data-bg='positive-0'] { background: var(--color-positive-0); }
       [data-bg='positive-100'] { background: var(--color-positive-100); }
       [data-bg='positive-200'] { background: var(--color-positive-200); }
@@ -48,6 +50,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='positive-600'] { background: var(--color-positive-600); }
       [data-bg='positive-800'] { background: var(--color-positive-800); }
       [data-bg='positive-900'] { background: var(--color-positive-900); }
+
       [data-bg='danger-0'] { background: var(--color-danger-0); }
       [data-bg='danger-100'] { background: var(--color-danger-100); }
       [data-bg='danger-200'] { background: var(--color-danger-200); }
@@ -55,6 +58,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='danger-600'] { background: var(--color-danger-600); }
       [data-bg='danger-800'] { background: var(--color-danger-800); }
       [data-bg='danger-900'] { background: var(--color-danger-900); }
+
       [data-bg='warning-100'] { background: var(--color-warning-100); }
       [data-bg='warning-300'] { background: var(--color-warning-300); }
       [data-bg='warning-500'] { background: var(--color-warning-500); }
@@ -94,7 +98,9 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='neutral-800'] { background: var(--color-neutral-800); }
       [data-bg='neutral-900'] { background: var(--color-neutral-900); }
       [data-bg='neutral-950'] { background: var(--color-neutral-950); }
+
       [data-bg='foo'] { background: var(--color-foo); }
+
       [data-bg='brand-50'] { background: var(--color-brand-50); }
       [data-bg='brand-100'] { background: var(--color-brand-100); }
       [data-bg='brand-200'] { background: var(--color-brand-200); }
@@ -105,6 +111,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='brand-700'] { background: var(--color-brand-700); }
       [data-bg='brand-800'] { background: var(--color-brand-800); }
       [data-bg='brand-900'] { background: var(--color-brand-900); }
+
       [data-bg='positive-0'] { background: var(--color-positive-0); }
       [data-bg='positive-100'] { background: var(--color-positive-100); }
       [data-bg='positive-200'] { background: var(--color-positive-200); }
@@ -112,6 +119,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='positive-600'] { background: var(--color-positive-600); }
       [data-bg='positive-800'] { background: var(--color-positive-800); }
       [data-bg='positive-900'] { background: var(--color-positive-900); }
+
       [data-bg='danger-0'] { background: var(--color-danger-0); }
       [data-bg='danger-100'] { background: var(--color-danger-100); }
       [data-bg='danger-200'] { background: var(--color-danger-200); }
@@ -119,6 +127,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='danger-600'] { background: var(--color-danger-600); }
       [data-bg='danger-800'] { background: var(--color-danger-800); }
       [data-bg='danger-900'] { background: var(--color-danger-900); }
+
       [data-bg='warning-100'] { background: var(--color-warning-100); }
       [data-bg='warning-300'] { background: var(--color-warning-300); }
       [data-bg='warning-500'] { background: var(--color-warning-500); }
