@@ -4,7 +4,7 @@ import { StateRegistry } from "../src/state-registry";
 import * as Tokens from "../src/tokens";
 import { ShadowUtilityGenerator } from "../src/utilities";
 
-const states = new StateRegistry({ hover: true });
+const states = new StateRegistry({ hover: true, focus: true });
 const breakpoints = new BreakpointRegistry({ md: "768" });
 
 describe("ShadowUtilityGenerator", () => {
@@ -33,6 +33,17 @@ describe("ShadowUtilityGenerator", () => {
       [data-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
       [data-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
 
+
+      [data-focus-shadow='none']:focus-visible { box-shadow: var(--shadow-none); }
+      [data-focus-shadow='xs']:focus-visible { box-shadow: var(--shadow-xs); }
+      [data-focus-shadow='sm']:focus-visible { box-shadow: var(--shadow-sm); }
+      [data-focus-shadow='md']:focus-visible { box-shadow: var(--shadow-md); }
+      [data-focus-shadow='lg']:focus-visible { box-shadow: var(--shadow-lg); }
+      [data-focus-shadow='xl']:focus-visible { box-shadow: var(--shadow-xl); }
+      [data-focus-shadow='inner']:focus-visible { box-shadow: var(--shadow-inner); }
+      [data-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
+
+
       @media (max-width: 768px) {
         [data-md-shadow='none'] { box-shadow: var(--shadow-none); }
         [data-md-shadow='xs'] { box-shadow: var(--shadow-xs); }
@@ -47,6 +58,7 @@ describe("ShadowUtilityGenerator", () => {
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
       "data-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
+      "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
       "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
     `);
   });
@@ -77,6 +89,16 @@ describe("ShadowUtilityGenerator", () => {
       [data-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
       [data-hover-shadow='huge']:hover:not(:disabled) { box-shadow: var(--shadow-huge); }
 
+      [data-focus-shadow='none']:focus-visible { box-shadow: var(--shadow-none); }
+      [data-focus-shadow='xs']:focus-visible { box-shadow: var(--shadow-xs); }
+      [data-focus-shadow='sm']:focus-visible { box-shadow: var(--shadow-sm); }
+      [data-focus-shadow='md']:focus-visible { box-shadow: var(--shadow-md); }
+      [data-focus-shadow='lg']:focus-visible { box-shadow: var(--shadow-lg); }
+      [data-focus-shadow='xl']:focus-visible { box-shadow: var(--shadow-xl); }
+      [data-focus-shadow='inner']:focus-visible { box-shadow: var(--shadow-inner); }
+      [data-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
+      [data-focus-shadow='huge']:focus-visible { box-shadow: var(--shadow-huge); }
+
       @media (max-width: 768px) {
         [data-md-shadow='none'] { box-shadow: var(--shadow-none); }
         [data-md-shadow='xs'] { box-shadow: var(--shadow-xs); }
@@ -92,6 +114,7 @@ describe("ShadowUtilityGenerator", () => {
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
       "data-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
+      "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
       "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
     `);
   });

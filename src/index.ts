@@ -101,7 +101,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const ShadowUtilityGenerator = new UtilityGenerators.ShadowUtilityGenerator(
     breakpointRegistry,
-    new StateRegistry({ hover: true }),
+    new StateRegistry({ hover: true, focus: true }),
     ShadowTokenGenerator,
   );
   const ZIndexUtilityGenerator = new UtilityGenerators.ZIndexUtilityGenerator(
