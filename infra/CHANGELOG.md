@@ -1,7 +1,10 @@
 # Changelog
+- 2026-01-13 14:20 54e5930 **step: provide default neutral focus ring**
 - 2026-01-13 14:07 156d5a0 **refactor: remove outline from predefined components**
 - 2026-01-13 14:03 4545ed5 **step: add focus ring utility generator**
 - 2026-01-13 13:46 bdd5e88 **step: add focus ring token generator**
+- 2026-01-13 13:13 f94fcd0 **docs: generate readme**
+- 2026-01-13 13:13 5361153 **docs: generate CHANGELOG**
 ## 2026-01-13 12:00 v1.4.18
 - 2026-01-13 12:00 ae71aa8 **1.4.18**
 - 2026-01-13 11:59 b5f8c5c **step: update packages**
