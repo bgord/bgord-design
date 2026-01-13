@@ -3,6 +3,7 @@ import { BreakpointRegistry } from "./breakpoint-registry";
 import { GenerateCSS } from "./generate-css";
 import { GenerateLib } from "./generate-lib";
 import { GenerateTypes } from "./generate-types";
+import { StateRegistry } from "./state-registry";
 import * as TokenGenerators from "./tokens";
 import * as UtilityGenerators from "./utilities";
 
@@ -115,6 +116,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const BackgroundUtilityGenerator = new UtilityGenerators.BackgroundUtilityGenerator(
     breakpointRegistry,
+    new StateRegistry({ hover: true }),
     GrayscaleTokenGenerator,
     BrandTokenGenerator,
     PositiveTokenGenerator,
