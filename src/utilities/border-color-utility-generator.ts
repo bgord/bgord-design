@@ -175,6 +175,18 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
         );
       }
 
+      for (const [state, selector] of this.stateRegistry.entries) {
+        for (const variable of config) {
+          const key = variable.replace("color-", "");
+
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-${state}-bc='${key}']${selector}`, {
+              "border-color": `var(--${variable})`,
+            }),
+          );
+        }
+      }
+
       // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
       // Stryker restore all
@@ -208,6 +220,9 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bcl`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bcx`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bcy`),
+      ...this.breakpointRegistry.entries.flatMap(([name]) =>
+        this.stateRegistry.entries.map(([state]) => `${name}-${state}-bc`),
+      ),
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
