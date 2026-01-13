@@ -10,5 +10,5 @@
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
 
-  transition: color var(--timing-medium) var(--ease-standard);
+  transition: color var(--motion-medium) var(--ease-standard);
 }
