@@ -5,7 +5,7 @@ import * as Tokens from "../src/tokens";
 import { OpacityUtilityGenerator } from "../src/utilities";
 
 const breakpoints = new BreakpointRegistry({ md: "768" });
-const states = new StateRegistry({ hover: true, focus: true });
+const states = new StateRegistry({ hover: true, focus: true, active: true });
 
 describe("OpacityUtilityGenerator", () => {
   test("basic usage", () => {
@@ -35,6 +35,13 @@ describe("OpacityUtilityGenerator", () => {
       [data-focus-opacity='none']:focus-visible { opacity: var(--opacity-none); }
 
 
+      [data-active-opacity='full']:active { opacity: var(--opacity-full); }
+      [data-active-opacity='high']:active { opacity: var(--opacity-high); }
+      [data-active-opacity='medium']:active { opacity: var(--opacity-medium); }
+      [data-active-opacity='low']:active { opacity: var(--opacity-low); }
+      [data-active-opacity='none']:active { opacity: var(--opacity-none); }
+
+
       @media (max-width: 768px) {
         [data-md-opacity='full'] { opacity: var(--opacity-full); }
         [data-md-opacity='high'] { opacity: var(--opacity-high); }
@@ -47,6 +54,7 @@ describe("OpacityUtilityGenerator", () => {
       "data-opacity"?: "full" | "high" | "medium" | "low" | "none";
       "data-hover-opacity"?: "full" | "high" | "medium" | "low" | "none";
       "data-focus-opacity"?: "full" | "high" | "medium" | "low" | "none";
+      "data-active-opacity"?: "full" | "high" | "medium" | "low" | "none";
       "data-md-opacity"?: "full" | "high" | "medium" | "low" | "none";
     `);
   });
@@ -80,6 +88,14 @@ describe("OpacityUtilityGenerator", () => {
       [data-focus-opacity='25']:focus-visible { opacity: var(--opacity-25); }
 
 
+      [data-active-opacity='full']:active { opacity: var(--opacity-full); }
+      [data-active-opacity='high']:active { opacity: var(--opacity-high); }
+      [data-active-opacity='medium']:active { opacity: var(--opacity-medium); }
+      [data-active-opacity='low']:active { opacity: var(--opacity-low); }
+      [data-active-opacity='none']:active { opacity: var(--opacity-none); }
+      [data-active-opacity='25']:active { opacity: var(--opacity-25); }
+
+
       @media (max-width: 768px) {
         [data-md-opacity='full'] { opacity: var(--opacity-full); }
         [data-md-opacity='high'] { opacity: var(--opacity-high); }
@@ -93,6 +109,7 @@ describe("OpacityUtilityGenerator", () => {
       "data-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
       "data-hover-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
       "data-focus-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
+      "data-active-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
       "data-md-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
     `);
   });

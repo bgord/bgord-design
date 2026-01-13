@@ -92,7 +92,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const OpacityUtilityGenerator = new UtilityGenerators.OpacityUtilityGenerator(
     breakpointRegistry,
-    new StateRegistry({ hover: true, focus: true }),
+    new StateRegistry({ hover: true, focus: true, active: true }),
     OpacityTokenGenerator,
   );
   const RadiusUtilityGenerator = new UtilityGenerators.RadiusUtilityGenerator(
@@ -101,7 +101,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const ShadowUtilityGenerator = new UtilityGenerators.ShadowUtilityGenerator(
     breakpointRegistry,
-    new StateRegistry({ hover: true, focus: true }),
+    new StateRegistry({ hover: true, focus: true, active: true }),
     ShadowTokenGenerator,
   );
   const ZIndexUtilityGenerator = new UtilityGenerators.ZIndexUtilityGenerator(

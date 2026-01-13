@@ -4,7 +4,7 @@ import { StateRegistry } from "../src/state-registry";
 import * as Tokens from "../src/tokens";
 import { ShadowUtilityGenerator } from "../src/utilities";
 
-const states = new StateRegistry({ hover: true, focus: true });
+const states = new StateRegistry({ hover: true, focus: true, active: true });
 const breakpoints = new BreakpointRegistry({ md: "768" });
 
 describe("ShadowUtilityGenerator", () => {
@@ -44,6 +44,16 @@ describe("ShadowUtilityGenerator", () => {
       [data-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
 
 
+      [data-active-shadow='none']:active { box-shadow: var(--shadow-none); }
+      [data-active-shadow='xs']:active { box-shadow: var(--shadow-xs); }
+      [data-active-shadow='sm']:active { box-shadow: var(--shadow-sm); }
+      [data-active-shadow='md']:active { box-shadow: var(--shadow-md); }
+      [data-active-shadow='lg']:active { box-shadow: var(--shadow-lg); }
+      [data-active-shadow='xl']:active { box-shadow: var(--shadow-xl); }
+      [data-active-shadow='inner']:active { box-shadow: var(--shadow-inner); }
+      [data-active-shadow='unset']:active { box-shadow: var(--shadow-unset); }
+
+
       @media (max-width: 768px) {
         [data-md-shadow='none'] { box-shadow: var(--shadow-none); }
         [data-md-shadow='xs'] { box-shadow: var(--shadow-xs); }
@@ -59,6 +69,7 @@ describe("ShadowUtilityGenerator", () => {
       "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
       "data-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
       "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
+      "data-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
       "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
     `);
   });
@@ -99,6 +110,18 @@ describe("ShadowUtilityGenerator", () => {
       [data-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
       [data-focus-shadow='huge']:focus-visible { box-shadow: var(--shadow-huge); }
 
+
+      [data-active-shadow='none']:active { box-shadow: var(--shadow-none); }
+      [data-active-shadow='xs']:active { box-shadow: var(--shadow-xs); }
+      [data-active-shadow='sm']:active { box-shadow: var(--shadow-sm); }
+      [data-active-shadow='md']:active { box-shadow: var(--shadow-md); }
+      [data-active-shadow='lg']:active { box-shadow: var(--shadow-lg); }
+      [data-active-shadow='xl']:active { box-shadow: var(--shadow-xl); }
+      [data-active-shadow='inner']:active { box-shadow: var(--shadow-inner); }
+      [data-active-shadow='unset']:active { box-shadow: var(--shadow-unset); }
+      [data-active-shadow='huge']:active { box-shadow: var(--shadow-huge); }
+
+
       @media (max-width: 768px) {
         [data-md-shadow='none'] { box-shadow: var(--shadow-none); }
         [data-md-shadow='xs'] { box-shadow: var(--shadow-xs); }
@@ -115,6 +138,7 @@ describe("ShadowUtilityGenerator", () => {
       "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
       "data-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
       "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
+      "data-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
       "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
     `);
   });
