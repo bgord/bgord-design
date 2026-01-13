@@ -1,14 +1,16 @@
 import { describe, expect, test } from "bun:test";
 import { BreakpointRegistry } from "../src/breakpoint-registry";
+import { StateRegistry } from "../src/state-registry";
 import * as Tokens from "../src/tokens";
 import { OpacityUtilityGenerator } from "../src/utilities";
 
 const breakpoints = new BreakpointRegistry({ md: "768" });
+const states = new StateRegistry({ hover: true });
 
 describe("OpacityUtilityGenerator", () => {
   test("basic usage", () => {
     const OpacityTokenGenerator = new Tokens.OpacityTokenGenerator();
-    const generator = new OpacityUtilityGenerator(breakpoints, OpacityTokenGenerator);
+    const generator = new OpacityUtilityGenerator(breakpoints, states, OpacityTokenGenerator);
 
     expect(generator.name).toEqual("Opacity utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
@@ -17,6 +19,13 @@ describe("OpacityUtilityGenerator", () => {
       [data-opacity='medium'] { opacity: var(--opacity-medium); }
       [data-opacity='low'] { opacity: var(--opacity-low); }
       [data-opacity='none'] { opacity: var(--opacity-none); }
+
+
+      [data-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
+      [data-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
+      [data-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
+      [data-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
+      [data-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
 
       @media (max-width: 768px) {
         [data-md-opacity='full'] { opacity: var(--opacity-full); }
@@ -28,13 +37,14 @@ describe("OpacityUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-opacity"?: "full" | "high" | "medium" | "low" | "none";
+      "data-hover-opacity"?: "full" | "high" | "medium" | "low" | "none";
       "data-md-opacity"?: "full" | "high" | "medium" | "low" | "none";
     `);
   });
 
   test("with overrides", () => {
     const OpacityTokenGenerator = new Tokens.OpacityTokenGenerator({ "opacity-25": "0.25" });
-    const generator = new OpacityUtilityGenerator(breakpoints, OpacityTokenGenerator);
+    const generator = new OpacityUtilityGenerator(breakpoints, states, OpacityTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-opacity='full'] { opacity: var(--opacity-full); }
@@ -43,6 +53,14 @@ describe("OpacityUtilityGenerator", () => {
       [data-opacity='low'] { opacity: var(--opacity-low); }
       [data-opacity='none'] { opacity: var(--opacity-none); }
       [data-opacity='25'] { opacity: var(--opacity-25); }
+
+
+      [data-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
+      [data-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
+      [data-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
+      [data-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
+      [data-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
+      [data-hover-opacity='25']:hover:not(:disabled) { opacity: var(--opacity-25); }
 
       @media (max-width: 768px) {
         [data-md-opacity='full'] { opacity: var(--opacity-full); }
@@ -55,6 +73,7 @@ describe("OpacityUtilityGenerator", () => {
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
+      "data-hover-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
       "data-md-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
     `);
   });
