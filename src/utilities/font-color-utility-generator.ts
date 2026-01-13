@@ -68,6 +68,18 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
         responsive.push(new CssRuleRegular(`[data-${name}-color='${key}']`, { color: `var(--${variable})` }));
       }
 
+      for (const [state, selector] of this.stateRegistry.entries) {
+        for (const variable of config) {
+          const key = variable.replace("color-", "");
+
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-${state}-color='${key}']${selector}`, {
+              color: `var(--${variable})`,
+            }),
+          );
+        }
+      }
+
       // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
       // Stryker restore all
@@ -89,6 +101,9 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
       "color",
       ...this.stateRegistry.entries.map(([state]) => `${state}-color`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-color`),
+      ...this.breakpointRegistry.entries.flatMap(([name]) =>
+        this.stateRegistry.entries.map(([state]) => `${name}-${state}-color`),
+      ),
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
