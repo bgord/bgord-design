@@ -1,8 +1,11 @@
 .c-file-explorer {
-  overflow: hidden;
   position: absolute;
-  z-index: -1;
-  width: 0.1px;
-  height: 0.1px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
   opacity: var(--opacity-none);
 }
