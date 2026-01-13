@@ -21,7 +21,7 @@
   .c-checkbox:hover,
   .c-checkbox:checked {
     border-color: var(--color-neutral-300);
-    border-radius: 0;
+    border-radius: var(--radius-none);
     cursor: pointer;
   }
 

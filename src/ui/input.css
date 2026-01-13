@@ -16,7 +16,7 @@
 
 .c-input:is(:hover, :focus) {
   border-color: var(--color-neutral-400);
-  border-radius: 0;
+  border-radius: var(--radius-none);
 }
 
 .c-input:disabled {

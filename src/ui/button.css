@@ -23,7 +23,7 @@
 .c-button:focus {
   cursor: pointer;
   opacity: var(--opacity-high);
-  border-radius: 0;
+  border-radius: var(--radius-none);
   transition:
     border-radius var(--motion-medium) ease,
     opacity var(--motion-slow) ease;

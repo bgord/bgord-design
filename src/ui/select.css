@@ -25,7 +25,7 @@
   .c-select:is(:hover, :focus) {
     cursor: pointer;
     border-color: var(--color-neutral-600);
-    border-radius: 0;
+    border-radius: var(--radius-none);
   }
 
   .c-select:disabled {
