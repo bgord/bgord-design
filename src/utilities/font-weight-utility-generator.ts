@@ -15,14 +15,16 @@ export class FontWeightUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("font-weight-", "");
 
-      regular.push(new CssRuleRegular(`[data-fw='${key}']`, ["font-weight", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-fw='${key}']`, { "font-weight": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -34,11 +36,11 @@ export class FontWeightUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("font-weight-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-fw='${key}']`, ["font-weight", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-fw='${key}']`, { "font-weight": `var(--${variable})` }),
         );
       }
 

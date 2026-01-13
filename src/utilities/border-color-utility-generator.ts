@@ -30,62 +30,64 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("color-", "");
 
-      regular.push(new CssRuleRegular(`[data-bc='${key}']`, [["border-color", `var(--${variable})`]]));
+      regular.push(new CssRuleRegular(`[data-bc='${key}']`, { "border-color": `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("color-", "");
 
       regular.push(
-        new CssRuleRegular(`[data-bcx='${key}']`, [
-          ["border-left-color", `var(--${variable})`],
-          ["border-right-color", `var(--${variable})`],
-        ]),
+        new CssRuleRegular(`[data-bcx='${key}']`, {
+          "border-left-color": `var(--${variable})`,
+          "border-right-color": `var(--${variable})`,
+        }),
       );
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("color-", "");
 
       regular.push(
-        new CssRuleRegular(`[data-bcy='${key}']`, [
-          ["border-top-color", `var(--${variable})`],
-          ["border-bottom-color", `var(--${variable})`],
-        ]),
+        new CssRuleRegular(`[data-bcy='${key}']`, {
+          "border-top-color": `var(--${variable})`,
+          "border-bottom-color": `var(--${variable})`,
+        }),
       );
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("color-", "");
 
-      regular.push(new CssRuleRegular(`[data-bct='${key}']`, [["border-top-color", `var(--${variable})`]]));
+      regular.push(new CssRuleRegular(`[data-bct='${key}']`, { "border-top-color": `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("color-", "");
 
-      regular.push(new CssRuleRegular(`[data-bcr='${key}']`, [["border-right-color", `var(--${variable})`]]));
+      regular.push(new CssRuleRegular(`[data-bcr='${key}']`, { "border-right-color": `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("color-", "");
 
       regular.push(
-        new CssRuleRegular(`[data-bcb='${key}']`, [["border-bottom-color", `var(--${variable})`]]),
+        new CssRuleRegular(`[data-bcb='${key}']`, { "border-bottom-color": `var(--${variable})` }),
       );
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("color-", "");
 
-      regular.push(new CssRuleRegular(`[data-bcl='${key}']`, [["border-left-color", `var(--${variable})`]]));
+      regular.push(new CssRuleRegular(`[data-bcl='${key}']`, { "border-left-color": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -97,65 +99,65 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("color-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bc='${key}']`, [["border-color", `var(--${variable})`]]),
+          new CssRuleRegular(`[data-${name}-bc='${key}']`, { "border-color": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("color-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bcx='${key}']`, [
-            ["border-left-color", `var(--${variable})`],
-            ["border-right-color", `var(--${variable})`],
-          ]),
+          new CssRuleRegular(`[data-${name}-bcx='${key}']`, {
+            "border-left-color": `var(--${variable})`,
+            "border-right-color": `var(--${variable})`,
+          }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("color-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bcy='${key}']`, [
-            ["border-top-color", `var(--${variable})`],
-            ["border-bottom-color", `var(--${variable})`],
-          ]),
+          new CssRuleRegular(`[data-${name}-bcy='${key}']`, {
+            "border-top-color": `var(--${variable})`,
+            "border-bottom-color": `var(--${variable})`,
+          }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("color-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bct='${key}']`, [["border-top-color", `var(--${variable})`]]),
+          new CssRuleRegular(`[data-${name}-bct='${key}']`, { "border-top-color": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("color-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bcr='${key}']`, [["border-right-color", `var(--${variable})`]]),
+          new CssRuleRegular(`[data-${name}-bcr='${key}']`, { "border-right-color": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("color-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bcb='${key}']`, [["border-bottom-color", `var(--${variable})`]]),
+          new CssRuleRegular(`[data-${name}-bcb='${key}']`, { "border-bottom-color": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("color-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bcl='${key}']`, [["border-left-color", `var(--${variable})`]]),
+          new CssRuleRegular(`[data-${name}-bcl='${key}']`, { "border-left-color": `var(--${variable})` }),
         );
       }
 

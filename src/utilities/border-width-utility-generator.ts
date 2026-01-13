@@ -15,52 +15,56 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("border-width-", "");
-      regular.push(new CssRuleRegular(`[data-bw='${key}']`, ["border-width", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-bw='${key}']`, { "border-width": `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("border-width-", "");
-      regular.push(new CssRuleRegular(`[data-bwt='${key}']`, ["border-top-width", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-bwt='${key}']`, { "border-top-width": `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("border-width-", "");
-      regular.push(new CssRuleRegular(`[data-bwr='${key}']`, ["border-right-width", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-bwr='${key}']`, { "border-right-width": `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
-      const key = variable.replace("border-width-", "");
-      regular.push(new CssRuleRegular(`[data-bwb='${key}']`, ["border-bottom-width", `var(--${variable})`]));
-    }
-
-    for (const variable of Object.keys(this.config)) {
-      const key = variable.replace("border-width-", "");
-      regular.push(new CssRuleRegular(`[data-bwl='${key}']`, ["border-left-width", `var(--${variable})`]));
-    }
-
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("border-width-", "");
       regular.push(
-        new CssRuleRegular(`[data-bwx='${key}']`, [
-          ["border-left-width", `var(--${variable})`],
-          ["border-right-width", `var(--${variable})`],
-        ]),
+        new CssRuleRegular(`[data-bwb='${key}']`, { "border-bottom-width": `var(--${variable})` }),
       );
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
+      const key = variable.replace("border-width-", "");
+      regular.push(new CssRuleRegular(`[data-bwl='${key}']`, { "border-left-width": `var(--${variable})` }));
+    }
+
+    for (const variable of config) {
       const key = variable.replace("border-width-", "");
       regular.push(
-        new CssRuleRegular(`[data-bwy='${key}']`, [
-          ["border-top-width", `var(--${variable})`],
-          ["border-bottom-width", `var(--${variable})`],
-        ]),
+        new CssRuleRegular(`[data-bwx='${key}']`, {
+          "border-left-width": `var(--${variable})`,
+          "border-right-width": `var(--${variable})`,
+        }),
+      );
+    }
+
+    for (const variable of config) {
+      const key = variable.replace("border-width-", "");
+      regular.push(
+        new CssRuleRegular(`[data-bwy='${key}']`, {
+          "border-top-width": `var(--${variable})`,
+          "border-bottom-width": `var(--${variable})`,
+        }),
       );
     }
 
@@ -73,58 +77,58 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("border-width-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bw='${key}']`, ["border-width", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-bw='${key}']`, { "border-width": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("border-width-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bwt='${key}']`, ["border-top-width", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-bwt='${key}']`, { "border-top-width": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("border-width-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bwr='${key}']`, ["border-right-width", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-bwr='${key}']`, { "border-right-width": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("border-width-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bwb='${key}']`, ["border-bottom-width", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-bwb='${key}']`, { "border-bottom-width": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("border-width-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bwl='${key}']`, ["border-left-width", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-bwl='${key}']`, { "border-left-width": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("border-width-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bwx='${key}']`, [
-            ["border-left-width", `var(--${variable})`],
-            ["border-right-width", `var(--${variable})`],
-          ]),
+          new CssRuleRegular(`[data-${name}-bwx='${key}']`, {
+            "border-left-width": `var(--${variable})`,
+            "border-right-width": `var(--${variable})`,
+          }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("border-width-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bwy='${key}']`, [
-            ["border-top-width", `var(--${variable})`],
-            ["border-bottom-width", `var(--${variable})`],
-          ]),
+          new CssRuleRegular(`[data-${name}-bwy='${key}']`, {
+            "border-top-width": `var(--${variable})`,
+            "border-bottom-width": `var(--${variable})`,
+          }),
         );
       }
 

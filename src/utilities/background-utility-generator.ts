@@ -29,14 +29,16 @@ export class BackgroundUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("color-", "");
 
-      regular.push(new CssRuleRegular(`[data-bg='${key}']`, ["background", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-bg='${key}']`, { background: `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -48,11 +50,11 @@ export class BackgroundUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("color-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bg='${key}']`, ["background", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-bg='${key}']`, { background: `var(--${variable})` }),
         );
       }
 

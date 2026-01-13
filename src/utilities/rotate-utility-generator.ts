@@ -10,12 +10,14 @@ export class RotateUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-rotate='${key}']`, ["transform", `rotate(${value}deg)`]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-rotate='${key}']`, { transform: `rotate(${value}deg)` }));
     }
 
     // Stryker disable all
@@ -27,9 +29,9 @@ export class RotateUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
+      for (const [key, value] of config) {
         responsive.push(
-          new CssRuleRegular(`[data-${name}-rotate='${key}']`, ["transform", `rotate(${value}deg)`]),
+          new CssRuleRegular(`[data-${name}-rotate='${key}']`, { transform: `rotate(${value}deg)` }),
         );
       }
 

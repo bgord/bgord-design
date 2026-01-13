@@ -15,14 +15,16 @@ export class GapUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("spacing-", "");
 
-      regular.push(new CssRuleRegular(`[data-gap='${key}']`, ["gap", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-gap='${key}']`, { gap: `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -34,10 +36,10 @@ export class GapUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("spacing-", "");
 
-        responsive.push(new CssRuleRegular(`[data-${name}-gap='${key}']`, ["gap", `var(--${variable})`]));
+        responsive.push(new CssRuleRegular(`[data-${name}-gap='${key}']`, { gap: `var(--${variable})` }));
       }
 
       // Stryker disable all

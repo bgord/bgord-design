@@ -15,15 +15,17 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("backdrop-", "");
 
       regular.push(
-        new CssRuleRegular(`[data-backdrop='${key}']::backdrop`, ["background", `var(--${variable})`]),
+        new CssRuleRegular(`[data-backdrop='${key}']::backdrop`, { background: `var(--${variable})` }),
       );
     }
 
@@ -36,14 +38,13 @@ export class BackdropUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("backdrop-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-backdrop='${key}']::backdrop`, [
-            "background",
-            `var(--${variable})`,
-          ]),
+          new CssRuleRegular(`[data-${name}-backdrop='${key}']::backdrop`, {
+            background: `var(--${variable})`,
+          }),
         );
       }
 

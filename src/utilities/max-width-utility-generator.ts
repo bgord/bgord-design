@@ -15,14 +15,16 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [variable, value] of Object.entries(this.config)) {
+    for (const [variable, value] of config) {
       const key = variable.replace("breakpoint-", "");
 
-      regular.push(new CssRuleRegular(`[data-maxw='${key}']`, ["max-width", value]));
+      regular.push(new CssRuleRegular(`[data-maxw='${key}']`, { "max-width": value }));
     }
 
     // Stryker disable all
@@ -34,10 +36,10 @@ export class MaxWidthUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [variable, value] of Object.entries(this.config)) {
+      for (const [variable, value] of config) {
         const key = variable.replace("breakpoint-", "");
 
-        responsive.push(new CssRuleRegular(`[data-${name}-maxw='${key}']`, ["max-width", value]));
+        responsive.push(new CssRuleRegular(`[data-${name}-maxw='${key}']`, { "max-width": value }));
       }
 
       // Stryker disable all

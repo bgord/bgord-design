@@ -17,12 +17,14 @@ export class SelfPlacementUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleRegular[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-self='${key}']`, ["align-self", value]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-self='${key}']`, { "align-self": value }));
     }
 
     // Stryker disable all
@@ -34,8 +36,8 @@ export class SelfPlacementUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
-        responsive.push(new CssRuleRegular(`[data-${name}-self='${key}']`, ["align-self", value]));
+      for (const [key, value] of config) {
+        responsive.push(new CssRuleRegular(`[data-${name}-self='${key}']`, { "align-self": value }));
       }
 
       // Stryker disable all

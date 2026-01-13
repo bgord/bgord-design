@@ -15,18 +15,20 @@ export class SizeUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("size-", "");
 
       regular.push(
-        new CssRuleRegular(`[data-size='${key}']`, [
-          ["height", `var(--${variable})`],
-          ["width", `var(--${variable})`],
-        ]),
+        new CssRuleRegular(`[data-size='${key}']`, {
+          height: `var(--${variable})`,
+          width: `var(--${variable})`,
+        }),
       );
     }
 
@@ -39,14 +41,14 @@ export class SizeUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("size-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-size='${key}']`, [
-            ["height", `var(--${variable})`],
-            ["width", `var(--${variable})`],
-          ]),
+          new CssRuleRegular(`[data-${name}-size='${key}']`, {
+            height: `var(--${variable})`,
+            width: `var(--${variable})`,
+          }),
         );
       }
 

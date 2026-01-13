@@ -15,14 +15,16 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("font-family-", "");
 
-      regular.push(new CssRuleRegular(`[data-ff='${key}']`, ["font-family", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-ff='${key}']`, { "font-family": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -34,11 +36,11 @@ export class FontFamilyUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("font-family-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-ff='${key}']`, ["font-family", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-ff='${key}']`, { "font-family": `var(--${variable})` }),
         );
       }
 

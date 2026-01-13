@@ -15,14 +15,16 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("font-size-", "");
 
-      regular.push(new CssRuleRegular(`[data-fs='${key}']`, ["font-size", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-fs='${key}']`, { "font-size": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -34,11 +36,11 @@ export class FontSizeUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("font-size-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-fs='${key}']`, ["font-size", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-fs='${key}']`, { "font-size": `var(--${variable})` }),
         );
       }
 

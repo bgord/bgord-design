@@ -15,12 +15,14 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-dir='${key}']`, ["flex-direction", value]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-dir='${key}']`, { "flex-direction": value }));
     }
 
     // Stryker disable all
@@ -32,8 +34,8 @@ export class FlexDirectionUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
-        responsive.push(new CssRuleRegular(`[data-${name}-dir='${key}']`, ["flex-direction", value]));
+      for (const [key, value] of config) {
+        responsive.push(new CssRuleRegular(`[data-${name}-dir='${key}']`, { "flex-direction": value }));
       }
 
       // Stryker disable all

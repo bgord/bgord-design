@@ -23,59 +23,61 @@ export class TransformUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
+    for (const [key, value] of config) {
       if (key === "truncate") {
         regular.push(
-          new CssRuleRegular(`[data-transform~='${key}']`, [
-            ["overflow", "hidden"],
-            ["white-space", "nowrap"],
-            ["text-overflow", "ellipsis"],
-          ]),
+          new CssRuleRegular(`[data-transform~='${key}']`, {
+            overflow: "hidden",
+            "white-space": "nowrap",
+            "text-overflow": "ellipsis",
+          }),
         );
         continue;
       }
 
       if (key === "line-clamp") {
         regular.push(
-          new CssRuleRegular(`[data-transform~='${key}']`, [
-            ["display", "-webkit-box"],
-            ["-webkit-box-orient", "vertical"],
-            ["-webkit-line-clamp", "var(--lines, 2)"],
-            ["overflow", "hidden"],
-          ]),
+          new CssRuleRegular(`[data-transform~='${key}']`, {
+            display: "-webkit-box",
+            "-webkit-box-orient": "vertical",
+            "-webkit-line-clamp": "var(--lines, 2)",
+            overflow: "hidden",
+          }),
         );
         continue;
       }
 
       if (key === "center") {
-        regular.push(new CssRuleRegular(`[data-transform~='${key}']`, ["text-align", "center"]));
+        regular.push(new CssRuleRegular(`[data-transform~='${key}']`, { "text-align": "center" }));
         continue;
       }
 
       if (key === "upper-first") {
         regular.push(
-          new CssRuleRegular(`[data-transform~='${key}']:first-letter`, ["text-transform", "uppercase"]),
+          new CssRuleRegular(`[data-transform~='${key}']:first-letter`, { "text-transform": "uppercase" }),
         );
         continue;
       }
 
       if (key === "nowrap") {
-        regular.push(new CssRuleRegular(`[data-transform~='${key}']`, ["white-space", "nowrap"]));
+        regular.push(new CssRuleRegular(`[data-transform~='${key}']`, { "white-space": "nowrap" }));
         continue;
       }
 
       if (key === "font-variant-numeric") {
         regular.push(
-          new CssRuleRegular(`[data-transform~='${key}']`, ["font-variant-numeric", "tabular-nums"]),
+          new CssRuleRegular(`[data-transform~='${key}']`, { "font-variant-numeric": "tabular-nums" }),
         );
         continue;
       }
 
-      regular.push(new CssRuleRegular(`[data-transform~='${key}']`, ["text-transform", value]));
+      regular.push(new CssRuleRegular(`[data-transform~='${key}']`, { "text-transform": value }));
     }
 
     // Stryker disable all
@@ -87,63 +89,65 @@ export class TransformUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
+      for (const [key, value] of config) {
         if (key === "truncate") {
           responsive.push(
-            new CssRuleRegular(`[data-${name}-transform~='${key}']`, [
-              ["overflow", "hidden"],
-              ["white-space", "nowrap"],
-              ["text-overflow", "ellipsis"],
-            ]),
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, {
+              overflow: "hidden",
+              "white-space": "nowrap",
+              "text-overflow": "ellipsis",
+            }),
           );
           continue;
         }
 
         if (key === "line-clamp") {
           responsive.push(
-            new CssRuleRegular(`[data-${name}-transform~='${key}']`, [
-              ["display", "-webkit-box"],
-              ["-webkit-box-orient", "vertical"],
-              ["-webkit-line-clamp", "var(--lines, 2)"],
-              ["overflow", "hidden"],
-            ]),
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, {
+              display: "-webkit-box",
+              "-webkit-box-orient": "vertical",
+              "-webkit-line-clamp": "var(--lines, 2)",
+              overflow: "hidden",
+            }),
           );
           continue;
         }
 
         if (key === "center") {
-          responsive.push(new CssRuleRegular(`[data-${name}-transform~='${key}']`, ["text-align", "center"]));
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, { "text-align": "center" }),
+          );
           continue;
         }
 
         if (key === "upper-first") {
           responsive.push(
-            new CssRuleRegular(`[data-${name}-transform~='${key}']:first-letter`, [
-              "text-transform",
-              "uppercase",
-            ]),
+            new CssRuleRegular(`[data-${name}-transform~='${key}']:first-letter`, {
+              "text-transform": "uppercase",
+            }),
           );
           continue;
         }
 
         if (key === "nowrap") {
           responsive.push(
-            new CssRuleRegular(`[data-${name}-transform~='${key}']`, ["white-space", "nowrap"]),
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, { "white-space": "nowrap" }),
           );
           continue;
         }
 
         if (key === "font-variant-numeric") {
           responsive.push(
-            new CssRuleRegular(`[data-${name}-transform~='${key}']`, [
-              "font-variant-numeric",
-              "tabular-nums",
-            ]),
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, {
+              "font-variant-numeric": "tabular-nums",
+            }),
           );
           continue;
         }
 
-        responsive.push(new CssRuleRegular(`[data-${name}-transform~='${key}']`, ["text-transform", value]));
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-transform~='${key}']`, { "text-transform": value }),
+        );
       }
 
       // Stryker disable all

@@ -15,14 +15,16 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [variable, value] of Object.entries(this.config)) {
+    for (const [variable, value] of config) {
       const key = variable.replace("breakpoint-", "");
 
-      regular.push(new CssRuleRegular(`[data-maxh='${key}']`, ["max-height", value]));
+      regular.push(new CssRuleRegular(`[data-maxh='${key}']`, { "max-height": value }));
     }
 
     // Stryker disable all
@@ -34,10 +36,10 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [variable, value] of Object.entries(this.config)) {
+      for (const [variable, value] of config) {
         const key = variable.replace("breakpoint-", "");
 
-        responsive.push(new CssRuleRegular(`[data-${name}-maxh='${key}']`, ["max-height", value]));
+        responsive.push(new CssRuleRegular(`[data-${name}-maxh='${key}']`, { "max-height": value }));
       }
 
       // Stryker disable all

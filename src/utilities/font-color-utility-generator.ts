@@ -29,14 +29,16 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("color-", "");
 
-      regular.push(new CssRuleRegular(`[data-color='${key}']`, ["color", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-color='${key}']`, { color: `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -48,10 +50,10 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("color-", "");
 
-        responsive.push(new CssRuleRegular(`[data-${name}-color='${key}']`, ["color", `var(--${variable})`]));
+        responsive.push(new CssRuleRegular(`[data-${name}-color='${key}']`, { color: `var(--${variable})` }));
       }
 
       // Stryker disable all

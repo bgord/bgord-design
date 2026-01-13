@@ -15,14 +15,16 @@ export class OpacityUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("opacity-", "");
 
-      regular.push(new CssRuleRegular(`[data-opacity='${key}']`, ["opacity", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-opacity='${key}']`, { opacity: `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -34,11 +36,11 @@ export class OpacityUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("opacity-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-opacity='${key}']`, ["opacity", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-opacity='${key}']`, { opacity: `var(--${variable})` }),
         );
       }
 

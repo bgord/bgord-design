@@ -17,12 +17,14 @@ export class PositionUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-position='${key}']`, ["position", value]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-position='${key}']`, { position: value }));
     }
 
     // Stryker disable all
@@ -34,8 +36,8 @@ export class PositionUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
-        responsive.push(new CssRuleRegular(`[data-${name}-position='${key}']`, ["position", value]));
+      for (const [key, value] of config) {
+        responsive.push(new CssRuleRegular(`[data-${name}-position='${key}']`, { position: value }));
       }
 
       // Stryker disable all

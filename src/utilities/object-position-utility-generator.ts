@@ -18,12 +18,14 @@ export class ObjectPositionUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-object-position='${key}']`, ["object-position", value]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-object-position='${key}']`, { "object-position": value }));
     }
 
     // Stryker disable all
@@ -35,9 +37,9 @@ export class ObjectPositionUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
+      for (const [key, value] of config) {
         responsive.push(
-          new CssRuleRegular(`[data-${name}-object-position='${key}']`, ["object-position", value]),
+          new CssRuleRegular(`[data-${name}-object-position='${key}']`, { "object-position": value }),
         );
       }
 

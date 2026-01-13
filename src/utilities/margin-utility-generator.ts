@@ -15,6 +15,8 @@ export class MarginUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
@@ -23,49 +25,49 @@ export class MarginUtilityGenerator extends UtilityGenerator {
        so the m is extendable by mx/my,
        and mx/my are extendable by mt/mr/mb/ml.
     */
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("spacing-", "");
-      regular.push(new CssRuleRegular(`[data-m='${key}']`, ["margin", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-m='${key}']`, { margin: `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("spacing-", "");
       regular.push(
-        new CssRuleRegular(`[data-mx='${key}']`, [
-          ["margin-left", `var(--${variable})`],
-          ["margin-right", `var(--${variable})`],
-        ]),
+        new CssRuleRegular(`[data-mx='${key}']`, {
+          "margin-left": `var(--${variable})`,
+          "margin-right": `var(--${variable})`,
+        }),
       );
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("spacing-", "");
       regular.push(
-        new CssRuleRegular(`[data-my='${key}']`, [
-          ["margin-top", `var(--${variable})`],
-          ["margin-bottom", `var(--${variable})`],
-        ]),
+        new CssRuleRegular(`[data-my='${key}']`, {
+          "margin-top": `var(--${variable})`,
+          "margin-bottom": `var(--${variable})`,
+        }),
       );
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("spacing-", "");
-      regular.push(new CssRuleRegular(`[data-mt='${key}']`, ["margin-top", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-mt='${key}']`, { "margin-top": `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("spacing-", "");
-      regular.push(new CssRuleRegular(`[data-mr='${key}']`, ["margin-right", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-mr='${key}']`, { "margin-right": `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("spacing-", "");
-      regular.push(new CssRuleRegular(`[data-mb='${key}']`, ["margin-bottom", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-mb='${key}']`, { "margin-bottom": `var(--${variable})` }));
     }
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("spacing-", "");
-      regular.push(new CssRuleRegular(`[data-ml='${key}']`, ["margin-left", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-ml='${key}']`, { "margin-left": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -77,56 +79,56 @@ export class MarginUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("spacing-", "");
-        responsive.push(new CssRuleRegular(`[data-${name}-m='${key}']`, ["margin", `var(--${variable})`]));
+        responsive.push(new CssRuleRegular(`[data-${name}-m='${key}']`, { margin: `var(--${variable})` }));
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("spacing-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-mx='${key}']`, [
-            ["margin-left", `var(--${variable})`],
-            ["margin-right", `var(--${variable})`],
-          ]),
+          new CssRuleRegular(`[data-${name}-mx='${key}']`, {
+            "margin-left": `var(--${variable})`,
+            "margin-right": `var(--${variable})`,
+          }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("spacing-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-my='${key}']`, [
-            ["margin-top", `var(--${variable})`],
-            ["margin-bottom", `var(--${variable})`],
-          ]),
+          new CssRuleRegular(`[data-${name}-my='${key}']`, {
+            "margin-top": `var(--${variable})`,
+            "margin-bottom": `var(--${variable})`,
+          }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("spacing-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-mt='${key}']`, ["margin-top", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-mt='${key}']`, { "margin-top": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("spacing-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-mr='${key}']`, ["margin-right", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-mr='${key}']`, { "margin-right": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("spacing-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-mb='${key}']`, ["margin-bottom", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-mb='${key}']`, { "margin-bottom": `var(--${variable})` }),
         );
       }
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("spacing-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-ml='${key}']`, ["margin-left", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-ml='${key}']`, { "margin-left": `var(--${variable})` }),
         );
       }
 

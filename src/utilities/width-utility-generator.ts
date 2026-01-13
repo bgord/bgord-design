@@ -10,12 +10,14 @@ export class WidthUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-width='${key}']`, ["width", value]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-width='${key}']`, { width: value }));
     }
 
     // Stryker disable all
@@ -27,8 +29,8 @@ export class WidthUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
-        responsive.push(new CssRuleRegular(`[data-${name}-width='${key}']`, ["width", value]));
+      for (const [key, value] of config) {
+        responsive.push(new CssRuleRegular(`[data-${name}-width='${key}']`, { width: value }));
       }
 
       // Stryker disable all

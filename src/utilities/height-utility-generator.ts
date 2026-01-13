@@ -10,12 +10,14 @@ export class HeightUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-height='${key}']`, ["height", value]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-height='${key}']`, { height: value }));
     }
 
     // Stryker disable all
@@ -27,8 +29,8 @@ export class HeightUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
-        responsive.push(new CssRuleRegular(`[data-${name}-height='${key}']`, ["height", value]));
+      for (const [key, value] of config) {
+        responsive.push(new CssRuleRegular(`[data-${name}-height='${key}']`, { height: value }));
       }
 
       // Stryker disable all

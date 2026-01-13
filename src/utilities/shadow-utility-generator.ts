@@ -15,14 +15,16 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("shadow-", "");
 
-      regular.push(new CssRuleRegular(`[data-shadow='${key}']`, ["box-shadow", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-shadow='${key}']`, { "box-shadow": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -34,11 +36,11 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("shadow-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-shadow='${key}']`, ["box-shadow", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-shadow='${key}']`, { "box-shadow": `var(--${variable})` }),
         );
       }
 

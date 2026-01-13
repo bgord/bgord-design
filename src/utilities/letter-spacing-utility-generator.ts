@@ -15,14 +15,16 @@ export class LetterSpacingUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("letter-spacing-", "");
 
-      regular.push(new CssRuleRegular(`[data-ls='${key}']`, ["letter-spacing", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-ls='${key}']`, { "letter-spacing": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -34,11 +36,11 @@ export class LetterSpacingUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("letter-spacing-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-ls='${key}']`, ["letter-spacing", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-ls='${key}']`, { "letter-spacing": `var(--${variable})` }),
         );
       }
 

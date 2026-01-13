@@ -15,14 +15,16 @@ export class ZIndexUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("z-index-", "");
 
-      regular.push(new CssRuleRegular(`[data-z='${key}']`, ["z-index", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-z='${key}']`, { "z-index": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -34,10 +36,10 @@ export class ZIndexUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("z-index-", "");
 
-        responsive.push(new CssRuleRegular(`[data-${name}-z='${key}']`, ["z-index", `var(--${variable})`]));
+        responsive.push(new CssRuleRegular(`[data-${name}-z='${key}']`, { "z-index": `var(--${variable})` }));
       }
 
       // Stryker disable all

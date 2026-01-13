@@ -10,20 +10,17 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
+    for (const [key, value] of config) {
       if (key === "flex") {
-        regular.push(
-          new CssRuleRegular(`[data-disp='${key}']`, [
-            ["display", value],
-            ["flex-wrap", "wrap"],
-          ]),
-        );
+        regular.push(new CssRuleRegular(`[data-disp='${key}']`, { display: value, "flex-wrap": "wrap" }));
       }
-      regular.push(new CssRuleRegular(`[data-disp='${key}']`, ["display", value]));
+      regular.push(new CssRuleRegular(`[data-disp='${key}']`, { display: value }));
     }
 
     // Stryker disable all
@@ -35,16 +32,13 @@ export class DisplayUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
+      for (const [key, value] of config) {
         if (key === "flex") {
           responsive.push(
-            new CssRuleRegular(`[data-${name}-disp='${key}']`, [
-              ["display", value],
-              ["flex-wrap", "wrap"],
-            ]),
+            new CssRuleRegular(`[data-${name}-disp='${key}']`, { display: value, "flex-wrap": "wrap" }),
           );
         }
-        responsive.push(new CssRuleRegular(`[data-${name}-disp='${key}']`, ["display", value]));
+        responsive.push(new CssRuleRegular(`[data-${name}-disp='${key}']`, { display: value }));
       }
 
       // Stryker disable all

@@ -10,12 +10,14 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-pointer-events='${key}']`, ["pointer-events", value]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-pointer-events='${key}']`, { "pointer-events": value }));
     }
 
     // Stryker disable all
@@ -27,9 +29,9 @@ export class PointerEventUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
+      for (const [key, value] of config) {
         responsive.push(
-          new CssRuleRegular(`[data-${name}-pointer-events='${key}']`, ["pointer-events", value]),
+          new CssRuleRegular(`[data-${name}-pointer-events='${key}']`, { "pointer-events": value }),
         );
       }
 

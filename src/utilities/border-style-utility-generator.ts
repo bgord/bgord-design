@@ -15,13 +15,16 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("border-style-", "");
-      regular.push(new CssRuleRegular(`[data-bs='${key}']`, ["border-style", `var(--${variable})`]));
+
+      regular.push(new CssRuleRegular(`[data-bs='${key}']`, { "border-style": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -33,10 +36,10 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("border-style-", "");
         responsive.push(
-          new CssRuleRegular(`[data-${name}-bs='${key}']`, ["border-style", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-bs='${key}']`, { "border-style": `var(--${variable})` }),
         );
       }
 

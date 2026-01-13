@@ -18,16 +18,18 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleRegular[] = [];
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-main='${key}']`, ["justify-content", value]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-main='${key}']`, { "justify-content": value }));
     }
 
-    for (const [key, value] of Object.entries(this.config)) {
-      regular.push(new CssRuleRegular(`[data-cross='${key}']`, ["align-items", value]));
+    for (const [key, value] of config) {
+      regular.push(new CssRuleRegular(`[data-cross='${key}']`, { "align-items": value }));
     }
 
     // Stryker disable all
@@ -39,12 +41,12 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of Object.entries(this.config)) {
-        responsive.push(new CssRuleRegular(`[data-${name}-main='${key}']`, ["justify-content", value]));
+      for (const [key, value] of config) {
+        responsive.push(new CssRuleRegular(`[data-${name}-main='${key}']`, { "justify-content": value }));
       }
 
-      for (const [key, value] of Object.entries(this.config)) {
-        responsive.push(new CssRuleRegular(`[data-${name}-cross='${key}']`, ["align-items", value]));
+      for (const [key, value] of config) {
+        responsive.push(new CssRuleRegular(`[data-${name}-cross='${key}']`, { "align-items": value }));
       }
 
       // Stryker disable all

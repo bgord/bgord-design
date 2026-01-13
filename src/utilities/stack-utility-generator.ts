@@ -12,27 +12,24 @@ export class StackUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.entries(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const [key] of Object.entries(this.config)) {
+    for (const [key] of config) {
       if (key === "x") {
-        regular.push(
-          new CssRuleRegular(`[data-stack='${key}']`, [
-            ["display", "flex"],
-            ["flex-wrap", "wrap"],
-          ]),
-        );
+        regular.push(new CssRuleRegular(`[data-stack='${key}']`, { display: "flex", "flex-wrap": "wrap" }));
       }
 
       if (key === "y") {
         regular.push(
-          new CssRuleRegular(`[data-stack='${key}']`, [
-            ["display", "flex"],
-            ["flex-wrap", "wrap"],
-            ["flex-direction", "column"],
-          ]),
+          new CssRuleRegular(`[data-stack='${key}']`, {
+            display: "flex",
+            "flex-wrap": "wrap",
+            "flex-direction": "column",
+          }),
         );
       }
     }
@@ -46,23 +43,20 @@ export class StackUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key] of Object.entries(this.config)) {
+      for (const [key] of config) {
         if (key === "x") {
           responsive.push(
-            new CssRuleRegular(`[data-${name}-stack='${key}']`, [
-              ["display", "flex"],
-              ["flex-wrap", "wrap"],
-            ]),
+            new CssRuleRegular(`[data-${name}-stack='${key}']`, { display: "flex", "flex-wrap": "wrap" }),
           );
         }
 
         if (key === "y") {
           responsive.push(
-            new CssRuleRegular(`[data-${name}-stack='${key}']`, [
-              ["display", "flex"],
-              ["flex-wrap", "wrap"],
-              ["flex-direction", "column"],
-            ]),
+            new CssRuleRegular(`[data-${name}-stack='${key}']`, {
+              display: "flex",
+              "flex-wrap": "wrap",
+              "flex-direction": "column",
+            }),
           );
         }
       }

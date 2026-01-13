@@ -15,14 +15,16 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
+    const config = Object.keys(this.config);
+
     let result = "";
 
     const regular: CssRuleStrategy[] = [];
 
-    for (const variable of Object.keys(this.config)) {
+    for (const variable of config) {
       const key = variable.replace("radius-", "");
 
-      regular.push(new CssRuleRegular(`[data-br='${key}']`, ["border-radius", `var(--${variable})`]));
+      regular.push(new CssRuleRegular(`[data-br='${key}']`, { "border-radius": `var(--${variable})` }));
     }
 
     // Stryker disable all
@@ -34,11 +36,11 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const variable of Object.keys(this.config)) {
+      for (const variable of config) {
         const key = variable.replace("radius-", "");
 
         responsive.push(
-          new CssRuleRegular(`[data-${name}-br='${key}']`, ["border-radius", `var(--${variable})`]),
+          new CssRuleRegular(`[data-${name}-br='${key}']`, { "border-radius": `var(--${variable})` }),
         );
       }
 
