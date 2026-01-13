@@ -11,13 +11,15 @@ describe("OpacityTokenGenerator", () => {
       --opacity-high: 0.7;
       --opacity-medium: 0.5;
       --opacity-low: 0.2;
+      --opacity-none: 0;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const OpacityTokens = {
         "opacity-full": "1",
         "opacity-high": "0.7",
         "opacity-medium": "0.5",
-        "opacity-low": "0.2"
+        "opacity-low": "0.2",
+        "opacity-none": "0"
       } as const;
 
       export type OpacityTokenType = keyof typeof OpacityTokens;
@@ -34,6 +36,7 @@ describe("OpacityTokenGenerator", () => {
       --opacity-high: 0.7;
       --opacity-medium: 0.5;
       --opacity-low: 0.2;
+      --opacity-none: 0;
       --opacity-custom: 0.1;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -42,6 +45,7 @@ describe("OpacityTokenGenerator", () => {
         "opacity-high": "0.7",
         "opacity-medium": "0.5",
         "opacity-low": "0.2",
+        "opacity-none": "0",
         "opacity-custom": "0.1"
       } as const;
 

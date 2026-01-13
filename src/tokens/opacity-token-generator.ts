@@ -6,6 +6,7 @@ export class OpacityTokenGenerator extends TokenGenerator {
     "opacity-high": "0.7",
     "opacity-medium": "0.5",
     "opacity-low": "0.2",
+    "opacity-none": "0",
   };
 
   constructor(overrides: TokenConfigType = {}) {
