@@ -128,7 +128,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const BorderColorUtilityGenerator = new UtilityGenerators.BorderColorUtilityGenerator(
     breakpointRegistry,
-    new StateRegistry({ hover: true }),
+    new StateRegistry({ hover: true, focus: true }),
     GrayscaleTokenGenerator,
     BrandTokenGenerator,
     PositiveTokenGenerator,
