@@ -54,6 +54,7 @@ src/
 │   ├── brand-token-generator.ts
 │   ├── breakpoint-token-generator.ts
 │   ├── danger-token-generator.ts
+│   ├── focus-ring-token-generator.ts
 │   ├── font-family-token-generator.ts
 │   ├── font-size-token-generator.ts
 │   ├── font-weight-token-generator.ts
@@ -96,6 +97,7 @@ src/
     ├── flex-grow-utility-generator.ts
     ├── flex-shrink-utility-generator.ts
     ├── flex-wrap-utility-generator.ts
+    ├── focus-ring-utility-generator.ts
     ├── font-color-utility-generator.ts
     ├── font-family-utility-generator.ts
     ├── font-size-utility-generator.ts
