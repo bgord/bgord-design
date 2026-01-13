@@ -32,7 +32,7 @@
 
 .c-textarea::placeholder {
   color: var(--color-neutral-400);
-  opacity: 1;
+  opacity: var(--opacity-full);
 }
 
 .c-textarea:invalid:not(:placeholder-shown) {

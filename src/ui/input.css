@@ -31,7 +31,7 @@
 
 .c-input::placeholder {
   color: var(--color-neutral-400);
-  opacity: 1;
+  opacity: var(--opacity-full);
 }
 
 .c-input:invalid:not(:placeholder-shown) {
