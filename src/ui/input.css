@@ -35,9 +35,6 @@
   background-color: var(--color-neutral-900);
   border-color: var(--color-neutral-800);
 }
-.c-input:disabled:hover {
-  border-radius: var(--radius-sm);
-}
 
 .c-input::placeholder {
   color: var(--color-neutral-400);
