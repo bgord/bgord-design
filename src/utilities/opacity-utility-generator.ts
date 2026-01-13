@@ -58,6 +58,18 @@ export class OpacityUtilityGenerator extends UtilityGenerator {
         );
       }
 
+      for (const [state, selector] of this.stateRegistry.entries) {
+        for (const variable of config) {
+          const key = variable.replace("opacity-", "");
+
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-${state}-opacity='${key}']${selector}`, {
+              opacity: `var(--${variable})`,
+            }),
+          );
+        }
+      }
+
       // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
       // Stryker restore all
@@ -79,6 +91,9 @@ export class OpacityUtilityGenerator extends UtilityGenerator {
       "opacity",
       ...this.stateRegistry.entries.map(([state]) => `${state}-opacity`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-opacity`),
+      ...this.breakpointRegistry.entries.flatMap(([name]) =>
+        this.stateRegistry.entries.map(([state]) => `${name}-${state}-opacity`),
+      ),
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");

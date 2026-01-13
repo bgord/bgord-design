@@ -48,6 +48,27 @@ describe("OpacityUtilityGenerator", () => {
         [data-md-opacity='medium'] { opacity: var(--opacity-medium); }
         [data-md-opacity='low'] { opacity: var(--opacity-low); }
         [data-md-opacity='none'] { opacity: var(--opacity-none); }
+
+
+        [data-md-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
+        [data-md-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
+        [data-md-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
+        [data-md-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
+        [data-md-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
+
+
+        [data-md-focus-opacity='full']:focus-visible { opacity: var(--opacity-full); }
+        [data-md-focus-opacity='high']:focus-visible { opacity: var(--opacity-high); }
+        [data-md-focus-opacity='medium']:focus-visible { opacity: var(--opacity-medium); }
+        [data-md-focus-opacity='low']:focus-visible { opacity: var(--opacity-low); }
+        [data-md-focus-opacity='none']:focus-visible { opacity: var(--opacity-none); }
+
+
+        [data-md-active-opacity='full']:active { opacity: var(--opacity-full); }
+        [data-md-active-opacity='high']:active { opacity: var(--opacity-high); }
+        [data-md-active-opacity='medium']:active { opacity: var(--opacity-medium); }
+        [data-md-active-opacity='low']:active { opacity: var(--opacity-low); }
+        [data-md-active-opacity='none']:active { opacity: var(--opacity-none); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -56,6 +77,9 @@ describe("OpacityUtilityGenerator", () => {
       "data-focus-opacity"?: "full" | "high" | "medium" | "low" | "none";
       "data-active-opacity"?: "full" | "high" | "medium" | "low" | "none";
       "data-md-opacity"?: "full" | "high" | "medium" | "low" | "none";
+      "data-md-hover-opacity"?: "full" | "high" | "medium" | "low" | "none";
+      "data-md-focus-opacity"?: "full" | "high" | "medium" | "low" | "none";
+      "data-md-active-opacity"?: "full" | "high" | "medium" | "low" | "none";
     `);
   });
 
@@ -103,6 +127,30 @@ describe("OpacityUtilityGenerator", () => {
         [data-md-opacity='low'] { opacity: var(--opacity-low); }
         [data-md-opacity='none'] { opacity: var(--opacity-none); }
         [data-md-opacity='25'] { opacity: var(--opacity-25); }
+
+
+        [data-md-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
+        [data-md-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
+        [data-md-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
+        [data-md-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
+        [data-md-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
+        [data-md-hover-opacity='25']:hover:not(:disabled) { opacity: var(--opacity-25); }
+
+
+        [data-md-focus-opacity='full']:focus-visible { opacity: var(--opacity-full); }
+        [data-md-focus-opacity='high']:focus-visible { opacity: var(--opacity-high); }
+        [data-md-focus-opacity='medium']:focus-visible { opacity: var(--opacity-medium); }
+        [data-md-focus-opacity='low']:focus-visible { opacity: var(--opacity-low); }
+        [data-md-focus-opacity='none']:focus-visible { opacity: var(--opacity-none); }
+        [data-md-focus-opacity='25']:focus-visible { opacity: var(--opacity-25); }
+
+
+        [data-md-active-opacity='full']:active { opacity: var(--opacity-full); }
+        [data-md-active-opacity='high']:active { opacity: var(--opacity-high); }
+        [data-md-active-opacity='medium']:active { opacity: var(--opacity-medium); }
+        [data-md-active-opacity='low']:active { opacity: var(--opacity-low); }
+        [data-md-active-opacity='none']:active { opacity: var(--opacity-none); }
+        [data-md-active-opacity='25']:active { opacity: var(--opacity-25); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -111,6 +159,9 @@ describe("OpacityUtilityGenerator", () => {
       "data-focus-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
       "data-active-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
       "data-md-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
+      "data-md-hover-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
+      "data-md-focus-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
+      "data-md-active-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
     `);
   });
 });
