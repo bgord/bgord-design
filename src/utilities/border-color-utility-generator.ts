@@ -13,6 +13,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
 
   constructor(
     readonly breakpointRegistry: BreakpointRegistry,
+    readonly stateRegistry: StateRegistry,
     GrayscaleTokenGenerator: GrayscaleTokenGenerator,
     BrandTokenGenerator: BrandTokenGenerator,
     PositiveTokenGenerator: PositiveTokenGenerator,
@@ -89,6 +90,18 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("color-", "");
 
       regular.push(new CssRuleRegular(`[data-bcl='${key}']`, { "border-left-color": `var(--${variable})` }));
+    }
+
+    for (const [state, selector] of this.stateRegistry.entries) {
+      for (const variable of config) {
+        const key = variable.replace("color-", "");
+
+        regular.push(
+          new CssRuleRegular(`[data-${state}-bc='${key}']${selector}`, {
+            "border-color": `var(--${variable})`,
+          }),
+        );
+      }
     }
 
     // Stryker disable all
@@ -187,6 +200,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       "bcl",
       "bcx",
       "bcy",
+      ...this.stateRegistry.entries.map(([state]) => `${state}-bc`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bc`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bct`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bcr`),
