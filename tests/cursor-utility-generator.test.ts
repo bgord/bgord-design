@@ -32,6 +32,16 @@ describe("CursorUtilityGenerator", () => {
         [data-md-cursor='auto'] { cursor: auto; }
         [data-md-cursor='pointer'] { cursor: pointer; }
         [data-md-cursor='not-allowed'] { cursor: not-allowed; }
+
+        [data-md-hover-cursor='wait']:hover:not(:disabled) { cursor: wait; }
+        [data-md-hover-cursor='auto']:hover:not(:disabled) { cursor: auto; }
+        [data-md-hover-cursor='pointer']:hover:not(:disabled) { cursor: pointer; }
+        [data-md-hover-cursor='not-allowed']:hover:not(:disabled) { cursor: not-allowed; }
+
+        [data-md-focus-cursor='wait']:focus-visible { cursor: wait; }
+        [data-md-focus-cursor='auto']:focus-visible { cursor: auto; }
+        [data-md-focus-cursor='pointer']:focus-visible { cursor: pointer; }
+        [data-md-focus-cursor='not-allowed']:focus-visible { cursor: not-allowed; }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -39,6 +49,8 @@ describe("CursorUtilityGenerator", () => {
       "data-hover-cursor"?: "wait" | "auto" | "pointer" | "not-allowed";
       "data-focus-cursor"?: "wait" | "auto" | "pointer" | "not-allowed";
       "data-md-cursor"?: "wait" | "auto" | "pointer" | "not-allowed";
+      "data-md-hover-cursor"?: "wait" | "auto" | "pointer" | "not-allowed";
+      "data-md-focus-cursor"?: "wait" | "auto" | "pointer" | "not-allowed";
     `);
   });
 });
