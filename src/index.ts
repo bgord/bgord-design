@@ -119,7 +119,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const BackgroundUtilityGenerator = new UtilityGenerators.BackgroundUtilityGenerator(
     breakpointRegistry,
-    new StateRegistry({ hover: true }),
+    new StateRegistry({ hover: true, focus: true }),
     GrayscaleTokenGenerator,
     BrandTokenGenerator,
     PositiveTokenGenerator,
