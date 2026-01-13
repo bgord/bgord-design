@@ -1,5 +1,3 @@
-/* Select component */
-
 @supports (appearance: none) {
   .c-select {
     height: 36px;
@@ -65,5 +63,3 @@
     font-size: var(--font-size-base);
   }
 }
-
-/* ===================== */

@@ -17,7 +17,6 @@
     opacity var(--motion-slow) ease;
 }
 
-/* ---------- Interactive states ---------- */
 .c-button:hover,
 .c-button:active,
 .c-button:focus {
@@ -43,7 +42,6 @@
   border-radius: var(--radius-sm);
 }
 
-/* --- Primary (highest prominence) --- */
 .c-button[data-variant="primary"] {
   padding-inline: var(--spacing-2);
   background-color: var(--color-neutral-200);
@@ -53,7 +51,6 @@
   background-color: color-mix(in oklch, var(--color-neutral-200) 80%, var(--color-neutral-50) 20%);
 }
 
-/* --- Secondary (mid prominence) --- */
 .c-button[data-variant="secondary"] {
   padding-inline: var(--spacing-2);
   background-color: var(--color-neutral-700);
@@ -63,7 +60,6 @@
   background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
 }
 
-/* --- Bare (text-only) --- */
 .c-button[data-variant="bare"] {
   padding-inline: var(--spacing-1);
   background-color: transparent;
