@@ -49,6 +49,7 @@ src/
 │   └── title-truncate.css
 ├── tokens
 │   ├── backdrops-token-generator.ts
+│   ├── border-style-token-generator.ts
 │   ├── border-width-token-generator.ts
 │   ├── brand-token-generator.ts
 │   ├── breakpoint-token-generator.ts
@@ -86,6 +87,7 @@ src/
     ├── backdrop-utility-generator.ts
     ├── background-utility-generator.ts
     ├── border-color-utility-generator.ts
+    ├── border-style-utility-generator.ts
     ├── border-width-utility-generator.ts
     ├── css-rule.strategy.ts
     ├── cursor-utility-generator.ts
@@ -115,6 +117,7 @@ src/
     ├── positioners-utility-generator.ts
     ├── radius-utility-generator.ts
     ├── rotate-utility-generator.ts
+    ├── self-placement-utility-generator.ts
     ├── shadow-utility-generator.ts
     ├── size-utility-generator.ts
     ├── stack-utility-generator.ts
