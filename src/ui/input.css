@@ -28,6 +28,8 @@
 .c-input:focus-visible {
   outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
   outline-offset: var(--border-width-thin);
+  border-color: var(--color-neutral-600);
+  border-radius: var(--radius-sm);
 }
 
 .c-input:disabled {
@@ -41,8 +43,12 @@
   opacity: var(--opacity-full);
 }
 
-.c-input:invalid:not(:placeholder-shown) {
-  border-color: var(--color-danger-500);
+.c-input:user-invalid {
+  border-color: var(--color-danger-600);
+}
+
+.c-input:invalid:not(:focus-visible) {
+  border-color: var(--color-danger-600);
 }
 
 .c-input[type="date"] {
