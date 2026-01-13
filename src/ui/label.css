@@ -9,6 +9,4 @@
   font-weight: var(--font-weight-medium);
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
-
-  transition: color var(--motion-medium) var(--ease-standard);
 }
