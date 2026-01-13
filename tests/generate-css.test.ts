@@ -20,7 +20,7 @@ describe("GenerateCSS", async () => {
 
     await GenerateCSS.process(generators, tokens);
 
-    expect(bunFile).toHaveBeenCalledTimes(16);
+    expect(bunFile).toHaveBeenCalledTimes(15);
     // @ts-expect-error
     expect(bunFile.mock.calls[0][0]).toEqual("src/ui/button.css");
     // @ts-expect-error
@@ -40,19 +40,17 @@ describe("GenerateCSS", async () => {
     // @ts-expect-error
     expect(bunFile.mock.calls[8][0]).toEqual("src/ui/checkbox.css");
     // @ts-expect-error
-    expect(bunFile.mock.calls[9][0]).toEqual("src/ui/file-explorer.css");
+    expect(bunFile.mock.calls[9][0]).toEqual("src/ui/range.css");
     // @ts-expect-error
-    expect(bunFile.mock.calls[10][0]).toEqual("src/ui/range.css");
+    expect(bunFile.mock.calls[10][0]).toEqual("src/animations/grow-fade-in.css");
     // @ts-expect-error
-    expect(bunFile.mock.calls[11][0]).toEqual("src/animations/grow-fade-in.css");
+    expect(bunFile.mock.calls[11][0]).toEqual("src/animations/shrink-fade-out.css");
     // @ts-expect-error
-    expect(bunFile.mock.calls[12][0]).toEqual("src/animations/shrink-fade-out.css");
+    expect(bunFile.mock.calls[12][0]).toEqual("src/interactions/grow.css");
     // @ts-expect-error
-    expect(bunFile.mock.calls[13][0]).toEqual("src/interactions/grow.css");
+    expect(bunFile.mock.calls[13][0]).toEqual("src/interactions/rotate-into-focus.css");
     // @ts-expect-error
-    expect(bunFile.mock.calls[14][0]).toEqual("src/interactions/rotate-into-focus.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[15][0]).toEqual("src/interactions/subtle-scale.css");
+    expect(bunFile.mock.calls[14][0]).toEqual("src/interactions/subtle-scale.css");
 
     expect(bunWrite.mock.calls[0][0]).toEqual("dist/main.css");
     expect(bunWrite.mock.calls[0][1]).toEqualIgnoringWhitespace(`

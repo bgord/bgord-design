@@ -21,7 +21,6 @@ export class GenerateCSS {
     output += await Bun.file("src/ui/badge.css").text();
     output += await Bun.file("src/ui/link.css").text();
     output += await Bun.file("src/ui/checkbox.css").text();
-    output += await Bun.file("src/ui/file-explorer.css").text();
     output += await Bun.file("src/ui/range.css").text();
     output += "}\n\n";
 
