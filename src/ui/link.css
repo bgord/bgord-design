@@ -5,7 +5,6 @@
 
   color: var(--color-brand-500);
   text-decoration: none;
-  cursor: pointer;
 
   transition:
     color var(--motion-medium) ease,
