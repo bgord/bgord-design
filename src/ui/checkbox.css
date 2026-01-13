@@ -34,6 +34,11 @@
     border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-300);
   }
 
+  .c-checkbox:focus-visible {
+    outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
+    outline-offset: var(--border-width-thin);
+  }
+
   .c-checkbox:checked::after,
   .c-checkbox:hover::after {
     position: absolute;

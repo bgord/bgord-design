@@ -35,6 +35,11 @@
   opacity: var(--opacity-full);
 }
 
+.c-textarea:focus-visible {
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
+  outline-offset: var(--border-width-thin);
+}
+
 .c-textarea:invalid:not(:placeholder-shown) {
   border-color: var(--color-danger-500);
 }

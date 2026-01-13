@@ -38,6 +38,11 @@
   border-color: var(--color-danger-500);
 }
 
+.c-input:focus-visible {
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
+  outline-offset: var(--border-width-thin);
+}
+
 .c-input[type="date"] {
   font-size: var(--font-size-xs);
   border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-900);
