@@ -1,4 +1,5 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
+import type { StateRegistry } from "../state-registry";
 import type { ShadowTokenGenerator } from "../tokens/shadow-token-generator";
 import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
 import { UtilityGenerator } from "./template";
@@ -8,6 +9,7 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
 
   constructor(
     readonly breakpointRegistry: BreakpointRegistry,
+    readonly stateRegistry: StateRegistry,
     ShadowTokenGenerator: ShadowTokenGenerator,
   ) {
     super("Shadow utilities");
@@ -25,6 +27,18 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("shadow-", "");
 
       regular.push(new CssRuleRegular(`[data-shadow='${key}']`, { "box-shadow": `var(--${variable})` }));
+    }
+
+    for (const [state, selector] of this.stateRegistry.entries) {
+      for (const variable of config) {
+        const key = variable.replace("shadow-", "");
+
+        regular.push(
+          new CssRuleRegular(`[data-${state}-shadow='${key}']${selector}`, {
+            "box-shadow": `var(--${variable})`,
+          }),
+        );
+      }
     }
 
     // Stryker disable all
@@ -61,7 +75,11 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     // Stryker disable all
-    return ["shadow", ...this.breakpointRegistry.entries.map(([name]) => `${name}-shadow`)]
+    return [
+      "shadow",
+      ...this.stateRegistry.entries.map(([state]) => `${state}-shadow`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-shadow`),
+    ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
     // Stryker restore all

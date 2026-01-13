@@ -92,6 +92,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const OpacityUtilityGenerator = new UtilityGenerators.OpacityUtilityGenerator(
     breakpointRegistry,
+    new StateRegistry({ hover: true }),
     OpacityTokenGenerator,
   );
   const RadiusUtilityGenerator = new UtilityGenerators.RadiusUtilityGenerator(
@@ -100,6 +101,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const ShadowUtilityGenerator = new UtilityGenerators.ShadowUtilityGenerator(
     breakpointRegistry,
+    new StateRegistry({ hover: true }),
     ShadowTokenGenerator,
   );
   const ZIndexUtilityGenerator = new UtilityGenerators.ZIndexUtilityGenerator(
@@ -157,7 +159,10 @@ import * as UtilityGenerators from "./utilities";
     BreakpointTokenGenerator,
   );
   const DisplayUtilityGenerator = new UtilityGenerators.DisplayUtilityGenerator(breakpointRegistry);
-  const CursorUtilityGenerator = new UtilityGenerators.CursorUtilityGenerator(breakpointRegistry);
+  const CursorUtilityGenerator = new UtilityGenerators.CursorUtilityGenerator(
+    breakpointRegistry,
+    new StateRegistry({ hover: true }),
+  );
   const ObjectFitUtilityGenerator = new UtilityGenerators.ObjectFitUtilityGenerator(breakpointRegistry);
   const PositionUtilityGenerator = new UtilityGenerators.PositionUtilityGenerator(breakpointRegistry);
   const RotateUtilityGenerator = new UtilityGenerators.RotateUtilityGenerator(breakpointRegistry);
