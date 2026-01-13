@@ -3,7 +3,7 @@
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-wider);
   border-radius: var(--radius-sm);
-  border: var(--border-width-md) solid transparent;
+  border: var(--border-width-md) var(--border-style-solid) transparent;
   background-color: transparent;
 
   height: 36px;
@@ -30,7 +30,7 @@
 }
 
 .c-button:active {
-  border: var(--border-width-md) solid transparent !important;
+  border: var(--border-width-md) var(--border-style-solid) transparent !important;
   scale: 0.97;
 }
 

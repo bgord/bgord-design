@@ -27,6 +27,6 @@
 
 .c-badge[data-variant="outline"] {
   color: var(--color-neutral-300);
-  border: var(--border-width-hairline) solid var(--color-neutral-300);
+  border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-300);
   background-color: transparent;
 }
