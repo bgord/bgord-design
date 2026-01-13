@@ -1,7 +1,22 @@
 # Changelog
+- 2026-01-13 11:59 b5f8c5c **step: update packages**
+- 2026-01-13 11:48 e97459d **refactor: simplify config**
+- 2026-01-13 10:34 6f29d20 **refactor: use opacity none**
+- 2026-01-13 10:32 a9f9131 **step: add opacity none**
+- 2026-01-13 10:30 7dfd50e **refactor: use opacity full**
+- 2026-01-13 10:29 e3a1ffc **refactor: use spacing 0**
+- 2026-01-13 10:29 1b0b888 **refactor: use radius none**
+- 2026-01-13 10:23 0a21117 **refactor: use border style tokens**
+- 2026-01-13 10:21 91168a0 **step: remove implicit border style**
+- 2026-01-13 10:04 57a7791 **feature: self alignment**
+- 2026-01-13 00:02 416e2a5 **step: add border style utility generator**
+- 2026-01-12 23:54 7075906 **feature: border style token generator**
+- 2026-01-12 23:36 813113c **refactor: unify breakpoint registry value to string**
+- 2026-01-12 23:31 0cd8226 **refactor: use breakpoint registry in breakpoint token generator**
 ## 2026-01-12 22:45 v1.4.17
 - 2026-01-12 22:45 4b904ce **1.4.17**
 - 2026-01-12 22:26 19b791b **fix: mutants**
+- 2026-01-12 21:46 34cf6df **docs: generate CHANGELOG**
 - 2026-01-12 21:37 a3ed1db **docs: generate readme**
 - 2026-01-12 21:37 0f1ba70 **docs: generate CHANGELOG**
 - 2026-01-12 17:54 50bb839 **step: setup new ts definitions**
