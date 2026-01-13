@@ -70,6 +70,18 @@ export class BackgroundUtilityGenerator extends UtilityGenerator {
         );
       }
 
+      for (const [state, selector] of this.stateRegistry.entries) {
+        for (const variable of config) {
+          const key = variable.replace("color-", "");
+
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-${state}-bg='${key}']${selector}`, {
+              background: `var(--${variable})`,
+            }),
+          );
+        }
+      }
+
       // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
       // Stryker restore all
@@ -91,6 +103,9 @@ export class BackgroundUtilityGenerator extends UtilityGenerator {
       "bg",
       ...this.stateRegistry.entries.map(([state]) => `${state}-bg`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bg`),
+      ...this.breakpointRegistry.entries.flatMap(([name]) =>
+        this.stateRegistry.entries.map(([state]) => `${name}-${state}-bg`),
+      ),
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");

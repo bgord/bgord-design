@@ -212,6 +212,99 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-bg='warning-500'] { background: var(--color-warning-500); }
         [data-md-bg='warning-700'] { background: var(--color-warning-700); }
         [data-md-bg='warning-900'] { background: var(--color-warning-900); }
+
+        [data-md-hover-bg='neutral-0']:hover:not(:disabled) { background: var(--color-neutral-0); }
+        [data-md-hover-bg='neutral-50']:hover:not(:disabled) { background: var(--color-neutral-50); }
+        [data-md-hover-bg='neutral-100']:hover:not(:disabled) { background: var(--color-neutral-100); }
+        [data-md-hover-bg='neutral-200']:hover:not(:disabled) { background: var(--color-neutral-200); }
+        [data-md-hover-bg='neutral-300']:hover:not(:disabled) { background: var(--color-neutral-300); }
+        [data-md-hover-bg='neutral-400']:hover:not(:disabled) { background: var(--color-neutral-400); }
+        [data-md-hover-bg='neutral-500']:hover:not(:disabled) { background: var(--color-neutral-500); }
+        [data-md-hover-bg='neutral-600']:hover:not(:disabled) { background: var(--color-neutral-600); }
+        [data-md-hover-bg='neutral-700']:hover:not(:disabled) { background: var(--color-neutral-700); }
+        [data-md-hover-bg='neutral-800']:hover:not(:disabled) { background: var(--color-neutral-800); }
+        [data-md-hover-bg='neutral-900']:hover:not(:disabled) { background: var(--color-neutral-900); }
+        [data-md-hover-bg='neutral-950']:hover:not(:disabled) { background: var(--color-neutral-950); }
+
+        [data-md-hover-bg='brand-50']:hover:not(:disabled) { background: var(--color-brand-50); }
+        [data-md-hover-bg='brand-100']:hover:not(:disabled) { background: var(--color-brand-100); }
+        [data-md-hover-bg='brand-200']:hover:not(:disabled) { background: var(--color-brand-200); }
+        [data-md-hover-bg='brand-300']:hover:not(:disabled) { background: var(--color-brand-300); }
+        [data-md-hover-bg='brand-400']:hover:not(:disabled) { background: var(--color-brand-400); }
+        [data-md-hover-bg='brand-500']:hover:not(:disabled) { background: var(--color-brand-500); }
+        [data-md-hover-bg='brand-600']:hover:not(:disabled) { background: var(--color-brand-600); }
+        [data-md-hover-bg='brand-700']:hover:not(:disabled) { background: var(--color-brand-700); }
+        [data-md-hover-bg='brand-800']:hover:not(:disabled) { background: var(--color-brand-800); }
+        [data-md-hover-bg='brand-900']:hover:not(:disabled) { background: var(--color-brand-900); }
+
+        [data-md-hover-bg='positive-0']:hover:not(:disabled) { background: var(--color-positive-0); }
+        [data-md-hover-bg='positive-100']:hover:not(:disabled) { background: var(--color-positive-100); }
+        [data-md-hover-bg='positive-200']:hover:not(:disabled) { background: var(--color-positive-200); }
+        [data-md-hover-bg='positive-400']:hover:not(:disabled) { background: var(--color-positive-400); }
+        [data-md-hover-bg='positive-600']:hover:not(:disabled) { background: var(--color-positive-600); }
+        [data-md-hover-bg='positive-800']:hover:not(:disabled) { background: var(--color-positive-800); }
+        [data-md-hover-bg='positive-900']:hover:not(:disabled) { background: var(--color-positive-900); }
+
+        [data-md-hover-bg='danger-0']:hover:not(:disabled) { background: var(--color-danger-0); }
+        [data-md-hover-bg='danger-100']:hover:not(:disabled) { background: var(--color-danger-100); }
+        [data-md-hover-bg='danger-200']:hover:not(:disabled) { background: var(--color-danger-200); }
+        [data-md-hover-bg='danger-400']:hover:not(:disabled) { background: var(--color-danger-400); }
+        [data-md-hover-bg='danger-600']:hover:not(:disabled) { background: var(--color-danger-600); }
+        [data-md-hover-bg='danger-800']:hover:not(:disabled) { background: var(--color-danger-800); }
+        [data-md-hover-bg='danger-900']:hover:not(:disabled) { background: var(--color-danger-900); }
+
+        [data-md-hover-bg='warning-100']:hover:not(:disabled) { background: var(--color-warning-100); }
+        [data-md-hover-bg='warning-300']:hover:not(:disabled) { background: var(--color-warning-300); }
+        [data-md-hover-bg='warning-500']:hover:not(:disabled) { background: var(--color-warning-500); }
+        [data-md-hover-bg='warning-700']:hover:not(:disabled) { background: var(--color-warning-700); }
+        [data-md-hover-bg='warning-900']:hover:not(:disabled) { background: var(--color-warning-900); }
+
+
+        [data-md-focus-bg='neutral-0']:focus-visible { background: var(--color-neutral-0); }
+        [data-md-focus-bg='neutral-50']:focus-visible { background: var(--color-neutral-50); }
+        [data-md-focus-bg='neutral-100']:focus-visible { background: var(--color-neutral-100); }
+        [data-md-focus-bg='neutral-200']:focus-visible { background: var(--color-neutral-200); }
+        [data-md-focus-bg='neutral-300']:focus-visible { background: var(--color-neutral-300); }
+        [data-md-focus-bg='neutral-400']:focus-visible { background: var(--color-neutral-400); }
+        [data-md-focus-bg='neutral-500']:focus-visible { background: var(--color-neutral-500); }
+        [data-md-focus-bg='neutral-600']:focus-visible { background: var(--color-neutral-600); }
+        [data-md-focus-bg='neutral-700']:focus-visible { background: var(--color-neutral-700); }
+        [data-md-focus-bg='neutral-800']:focus-visible { background: var(--color-neutral-800); }
+        [data-md-focus-bg='neutral-900']:focus-visible { background: var(--color-neutral-900); }
+        [data-md-focus-bg='neutral-950']:focus-visible { background: var(--color-neutral-950); }
+
+        [data-md-focus-bg='brand-50']:focus-visible { background: var(--color-brand-50); }
+        [data-md-focus-bg='brand-100']:focus-visible { background: var(--color-brand-100); }
+        [data-md-focus-bg='brand-200']:focus-visible { background: var(--color-brand-200); }
+        [data-md-focus-bg='brand-300']:focus-visible { background: var(--color-brand-300); }
+        [data-md-focus-bg='brand-400']:focus-visible { background: var(--color-brand-400); }
+        [data-md-focus-bg='brand-500']:focus-visible { background: var(--color-brand-500); }
+        [data-md-focus-bg='brand-600']:focus-visible { background: var(--color-brand-600); }
+        [data-md-focus-bg='brand-700']:focus-visible { background: var(--color-brand-700); }
+        [data-md-focus-bg='brand-800']:focus-visible { background: var(--color-brand-800); }
+        [data-md-focus-bg='brand-900']:focus-visible { background: var(--color-brand-900); }
+
+        [data-md-focus-bg='positive-0']:focus-visible { background: var(--color-positive-0); }
+        [data-md-focus-bg='positive-100']:focus-visible { background: var(--color-positive-100); }
+        [data-md-focus-bg='positive-200']:focus-visible { background: var(--color-positive-200); }
+        [data-md-focus-bg='positive-400']:focus-visible { background: var(--color-positive-400); }
+        [data-md-focus-bg='positive-600']:focus-visible { background: var(--color-positive-600); }
+        [data-md-focus-bg='positive-800']:focus-visible { background: var(--color-positive-800); }
+        [data-md-focus-bg='positive-900']:focus-visible { background: var(--color-positive-900); }
+
+        [data-md-focus-bg='danger-0']:focus-visible { background: var(--color-danger-0); }
+        [data-md-focus-bg='danger-100']:focus-visible { background: var(--color-danger-100); }
+        [data-md-focus-bg='danger-200']:focus-visible { background: var(--color-danger-200); }
+        [data-md-focus-bg='danger-400']:focus-visible { background: var(--color-danger-400); }
+        [data-md-focus-bg='danger-600']:focus-visible { background: var(--color-danger-600); }
+        [data-md-focus-bg='danger-800']:focus-visible { background: var(--color-danger-800); }
+        [data-md-focus-bg='danger-900']:focus-visible { background: var(--color-danger-900); }
+
+        [data-md-focus-bg='warning-100']:focus-visible { background: var(--color-warning-100); }
+        [data-md-focus-bg='warning-300']:focus-visible { background: var(--color-warning-300); }
+        [data-md-focus-bg='warning-500']:focus-visible { background: var(--color-warning-500); }
+        [data-md-focus-bg='warning-700']:focus-visible { background: var(--color-warning-700); }
+        [data-md-focus-bg='warning-900']:focus-visible { background: var(--color-warning-900); }
       }
     `);
 
@@ -220,6 +313,8 @@ describe("BackgroundUtilityGenerator", () => {
       "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
       "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
       "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
    `);
   });
 
@@ -435,6 +530,103 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-bg='warning-500'] { background: var(--color-warning-500); }
         [data-md-bg='warning-700'] { background: var(--color-warning-700); }
         [data-md-bg='warning-900'] { background: var(--color-warning-900); }
+
+        [data-md-hover-bg='neutral-0']:hover:not(:disabled) { background: var(--color-neutral-0); }
+        [data-md-hover-bg='neutral-50']:hover:not(:disabled) { background: var(--color-neutral-50); }
+        [data-md-hover-bg='neutral-100']:hover:not(:disabled) { background: var(--color-neutral-100); }
+        [data-md-hover-bg='neutral-200']:hover:not(:disabled) { background: var(--color-neutral-200); }
+        [data-md-hover-bg='neutral-300']:hover:not(:disabled) { background: var(--color-neutral-300); }
+        [data-md-hover-bg='neutral-400']:hover:not(:disabled) { background: var(--color-neutral-400); }
+        [data-md-hover-bg='neutral-500']:hover:not(:disabled) { background: var(--color-neutral-500); }
+        [data-md-hover-bg='neutral-600']:hover:not(:disabled) { background: var(--color-neutral-600); }
+        [data-md-hover-bg='neutral-700']:hover:not(:disabled) { background: var(--color-neutral-700); }
+        [data-md-hover-bg='neutral-800']:hover:not(:disabled) { background: var(--color-neutral-800); }
+        [data-md-hover-bg='neutral-900']:hover:not(:disabled) { background: var(--color-neutral-900); }
+        [data-md-hover-bg='neutral-950']:hover:not(:disabled) { background: var(--color-neutral-950); }
+
+        [data-md-hover-bg='foo']:hover:not(:disabled) { background: var(--color-foo); }
+
+        [data-md-hover-bg='brand-50']:hover:not(:disabled) { background: var(--color-brand-50); }
+        [data-md-hover-bg='brand-100']:hover:not(:disabled) { background: var(--color-brand-100); }
+        [data-md-hover-bg='brand-200']:hover:not(:disabled) { background: var(--color-brand-200); }
+        [data-md-hover-bg='brand-300']:hover:not(:disabled) { background: var(--color-brand-300); }
+        [data-md-hover-bg='brand-400']:hover:not(:disabled) { background: var(--color-brand-400); }
+        [data-md-hover-bg='brand-500']:hover:not(:disabled) { background: var(--color-brand-500); }
+        [data-md-hover-bg='brand-600']:hover:not(:disabled) { background: var(--color-brand-600); }
+        [data-md-hover-bg='brand-700']:hover:not(:disabled) { background: var(--color-brand-700); }
+        [data-md-hover-bg='brand-800']:hover:not(:disabled) { background: var(--color-brand-800); }
+        [data-md-hover-bg='brand-900']:hover:not(:disabled) { background: var(--color-brand-900); }
+
+        [data-md-hover-bg='positive-0']:hover:not(:disabled) { background: var(--color-positive-0); }
+        [data-md-hover-bg='positive-100']:hover:not(:disabled) { background: var(--color-positive-100); }
+        [data-md-hover-bg='positive-200']:hover:not(:disabled) { background: var(--color-positive-200); }
+        [data-md-hover-bg='positive-400']:hover:not(:disabled) { background: var(--color-positive-400); }
+        [data-md-hover-bg='positive-600']:hover:not(:disabled) { background: var(--color-positive-600); }
+        [data-md-hover-bg='positive-800']:hover:not(:disabled) { background: var(--color-positive-800); }
+        [data-md-hover-bg='positive-900']:hover:not(:disabled) { background: var(--color-positive-900); }
+
+        [data-md-hover-bg='danger-0']:hover:not(:disabled) { background: var(--color-danger-0); }
+        [data-md-hover-bg='danger-100']:hover:not(:disabled) { background: var(--color-danger-100); }
+        [data-md-hover-bg='danger-200']:hover:not(:disabled) { background: var(--color-danger-200); }
+        [data-md-hover-bg='danger-400']:hover:not(:disabled) { background: var(--color-danger-400); }
+        [data-md-hover-bg='danger-600']:hover:not(:disabled) { background: var(--color-danger-600); }
+        [data-md-hover-bg='danger-800']:hover:not(:disabled) { background: var(--color-danger-800); }
+        [data-md-hover-bg='danger-900']:hover:not(:disabled) { background: var(--color-danger-900); }
+
+        [data-md-hover-bg='warning-100']:hover:not(:disabled) { background: var(--color-warning-100); }
+        [data-md-hover-bg='warning-300']:hover:not(:disabled) { background: var(--color-warning-300); }
+        [data-md-hover-bg='warning-500']:hover:not(:disabled) { background: var(--color-warning-500); }
+        [data-md-hover-bg='warning-700']:hover:not(:disabled) { background: var(--color-warning-700); }
+        [data-md-hover-bg='warning-900']:hover:not(:disabled) { background: var(--color-warning-900); }
+
+
+        [data-md-focus-bg='neutral-0']:focus-visible { background: var(--color-neutral-0); }
+        [data-md-focus-bg='neutral-50']:focus-visible { background: var(--color-neutral-50); }
+        [data-md-focus-bg='neutral-100']:focus-visible { background: var(--color-neutral-100); }
+        [data-md-focus-bg='neutral-200']:focus-visible { background: var(--color-neutral-200); }
+        [data-md-focus-bg='neutral-300']:focus-visible { background: var(--color-neutral-300); }
+        [data-md-focus-bg='neutral-400']:focus-visible { background: var(--color-neutral-400); }
+        [data-md-focus-bg='neutral-500']:focus-visible { background: var(--color-neutral-500); }
+        [data-md-focus-bg='neutral-600']:focus-visible { background: var(--color-neutral-600); }
+        [data-md-focus-bg='neutral-700']:focus-visible { background: var(--color-neutral-700); }
+        [data-md-focus-bg='neutral-800']:focus-visible { background: var(--color-neutral-800); }
+        [data-md-focus-bg='neutral-900']:focus-visible { background: var(--color-neutral-900); }
+        [data-md-focus-bg='neutral-950']:focus-visible { background: var(--color-neutral-950); }
+
+        [data-md-focus-bg='foo']:focus-visible { background: var(--color-foo); }
+
+        [data-md-focus-bg='brand-50']:focus-visible { background: var(--color-brand-50); }
+        [data-md-focus-bg='brand-100']:focus-visible { background: var(--color-brand-100); }
+        [data-md-focus-bg='brand-200']:focus-visible { background: var(--color-brand-200); }
+        [data-md-focus-bg='brand-300']:focus-visible { background: var(--color-brand-300); }
+        [data-md-focus-bg='brand-400']:focus-visible { background: var(--color-brand-400); }
+        [data-md-focus-bg='brand-500']:focus-visible { background: var(--color-brand-500); }
+        [data-md-focus-bg='brand-600']:focus-visible { background: var(--color-brand-600); }
+        [data-md-focus-bg='brand-700']:focus-visible { background: var(--color-brand-700); }
+        [data-md-focus-bg='brand-800']:focus-visible { background: var(--color-brand-800); }
+        [data-md-focus-bg='brand-900']:focus-visible { background: var(--color-brand-900); }
+
+        [data-md-focus-bg='positive-0']:focus-visible { background: var(--color-positive-0); }
+        [data-md-focus-bg='positive-100']:focus-visible { background: var(--color-positive-100); }
+        [data-md-focus-bg='positive-200']:focus-visible { background: var(--color-positive-200); }
+        [data-md-focus-bg='positive-400']:focus-visible { background: var(--color-positive-400); }
+        [data-md-focus-bg='positive-600']:focus-visible { background: var(--color-positive-600); }
+        [data-md-focus-bg='positive-800']:focus-visible { background: var(--color-positive-800); }
+        [data-md-focus-bg='positive-900']:focus-visible { background: var(--color-positive-900); }
+
+        [data-md-focus-bg='danger-0']:focus-visible { background: var(--color-danger-0); }
+        [data-md-focus-bg='danger-100']:focus-visible { background: var(--color-danger-100); }
+        [data-md-focus-bg='danger-200']:focus-visible { background: var(--color-danger-200); }
+        [data-md-focus-bg='danger-400']:focus-visible { background: var(--color-danger-400); }
+        [data-md-focus-bg='danger-600']:focus-visible { background: var(--color-danger-600); }
+        [data-md-focus-bg='danger-800']:focus-visible { background: var(--color-danger-800); }
+        [data-md-focus-bg='danger-900']:focus-visible { background: var(--color-danger-900); }
+
+        [data-md-focus-bg='warning-100']:focus-visible { background: var(--color-warning-100); }
+        [data-md-focus-bg='warning-300']:focus-visible { background: var(--color-warning-300); }
+        [data-md-focus-bg='warning-500']:focus-visible { background: var(--color-warning-500); }
+        [data-md-focus-bg='warning-700']:focus-visible { background: var(--color-warning-700); }
+        [data-md-focus-bg='warning-900']:focus-visible { background: var(--color-warning-900); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -442,6 +634,8 @@ describe("BackgroundUtilityGenerator", () => {
       "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
       "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
       "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
     `);
   });
 });
