@@ -1,4 +1,5 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
+import type { StateRegistry } from "../state-registry";
 import type { BrandTokenGenerator } from "../tokens/brand-token-generator";
 import type { DangerTokenGenerator } from "../tokens/danger-token-generator";
 import type { GrayscaleTokenGenerator } from "../tokens/grayscale-token-generator";
@@ -12,6 +13,7 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
 
   constructor(
     readonly breakpointRegistry: BreakpointRegistry,
+    readonly stateRegistry: StateRegistry,
     GrayscaleTokenGenerator: GrayscaleTokenGenerator,
     BrandTokenGenerator: BrandTokenGenerator,
     PositiveTokenGenerator: PositiveTokenGenerator,
@@ -39,6 +41,16 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
       const key = variable.replace("color-", "");
 
       regular.push(new CssRuleRegular(`[data-color='${key}']`, { color: `var(--${variable})` }));
+    }
+
+    for (const [state, selector] of this.stateRegistry.entries) {
+      for (const variable of config) {
+        const key = variable.replace("color-", "");
+
+        regular.push(
+          new CssRuleRegular(`[data-${state}-color='${key}']${selector}`, { color: `var(--${variable})` }),
+        );
+      }
     }
 
     // Stryker disable all
@@ -73,7 +85,11 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     // Stryker disable all
-    return ["color", ...this.breakpointRegistry.entries.map(([name]) => `${name}-color`)]
+    return [
+      "color",
+      ...this.stateRegistry.entries.map(([state]) => `${state}-color`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-color`),
+    ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
     // Stryker restore all

@@ -108,6 +108,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const FontColorUtilityGenerator = new UtilityGenerators.FontColorUtilityGenerator(
     breakpointRegistry,
+    new StateRegistry({ hover: true }),
     GrayscaleTokenGenerator,
     BrandTokenGenerator,
     PositiveTokenGenerator,
