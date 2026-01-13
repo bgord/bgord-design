@@ -4,6 +4,7 @@ export * from "./border-width-token-generator";
 export * from "./brand-token-generator";
 export * from "./breakpoint-token-generator";
 export * from "./danger-token-generator";
+export * from "./focus-ring-token-generator";
 export * from "./font-family-token-generator";
 export * from "./font-size-token-generator";
 export * from "./font-weight-token-generator";

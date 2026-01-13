@@ -30,6 +30,7 @@ import * as UtilityGenerators from "./utilities";
   const ZIndexTokenGenerator = new TokenGenerators.ZIndexTokenGenerator();
   const SizeTokenGenerator = new TokenGenerators.SizeTokenGenerator();
   const MotionTokenGenerator = new TokenGenerators.MotionTokenGenerator();
+  const FocusRingTokenGenerator = new TokenGenerators.FocusRingTokenGenerator();
 
   const tokens = [
     BackdropsTokenGenerator,
@@ -53,6 +54,7 @@ import * as UtilityGenerators from "./utilities";
     WarningTokenGenerator,
     ZIndexTokenGenerator,
     MotionTokenGenerator,
+    FocusRingTokenGenerator,
   ];
 
   const BackdropUtilityGenerator = new UtilityGenerators.BackdropUtilityGenerator(
