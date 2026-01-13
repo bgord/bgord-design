@@ -1,6 +1,10 @@
 # Changelog
+## 2026-01-13 12:00 v1.4.18
+- 2026-01-13 12:00 ae71aa8 **1.4.18**
 - 2026-01-13 11:59 b5f8c5c **step: update packages**
 - 2026-01-13 11:48 e97459d **refactor: simplify config**
+- 2026-01-13 10:59 a253af1 **docs: generate CHANGELOG**
+- 2026-01-13 10:59 27bd6da **docs: generate readme**
 - 2026-01-13 10:34 6f29d20 **refactor: use opacity none**
 - 2026-01-13 10:32 a9f9131 **step: add opacity none**
 - 2026-01-13 10:30 7dfd50e **refactor: use opacity full**
