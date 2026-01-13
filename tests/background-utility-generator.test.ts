@@ -166,6 +166,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-focus-bg='warning-700']:focus-visible { background: var(--color-warning-700); }
       [data-focus-bg='warning-900']:focus-visible { background: var(--color-warning-900); }
 
+
       @media (max-width: 768px) {
         [data-md-bg='neutral-0'] { background: var(--color-neutral-0); }
         [data-md-bg='neutral-50'] { background: var(--color-neutral-50); }
@@ -213,6 +214,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-bg='warning-700'] { background: var(--color-warning-700); }
         [data-md-bg='warning-900'] { background: var(--color-warning-900); }
 
+        
         [data-md-hover-bg='neutral-0']:hover:not(:disabled) { background: var(--color-neutral-0); }
         [data-md-hover-bg='neutral-50']:hover:not(:disabled) { background: var(--color-neutral-50); }
         [data-md-hover-bg='neutral-100']:hover:not(:disabled) { background: var(--color-neutral-100); }
@@ -530,6 +532,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-bg='warning-500'] { background: var(--color-warning-500); }
         [data-md-bg='warning-700'] { background: var(--color-warning-700); }
         [data-md-bg='warning-900'] { background: var(--color-warning-900); }
+
 
         [data-md-hover-bg='neutral-0']:hover:not(:disabled) { background: var(--color-neutral-0); }
         [data-md-hover-bg='neutral-50']:hover:not(:disabled) { background: var(--color-neutral-50); }

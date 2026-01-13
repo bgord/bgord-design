@@ -72,7 +72,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bc='warning-700'] { border-color: var(--color-warning-700); }
       [data-bc='warning-900'] { border-color: var(--color-warning-900); }
 
-
       [data-bcx='neutral-0'] { border-left-color: var(--color-neutral-0); border-right-color: var(--color-neutral-0); }
       [data-bcx='neutral-50'] { border-left-color: var(--color-neutral-50); border-right-color: var(--color-neutral-50); }
       [data-bcx='neutral-100'] { border-left-color: var(--color-neutral-100); border-right-color: var(--color-neutral-100); }
@@ -118,7 +117,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcx='warning-500'] { border-left-color: var(--color-warning-500); border-right-color: var(--color-warning-500); }
       [data-bcx='warning-700'] { border-left-color: var(--color-warning-700); border-right-color: var(--color-warning-700); }
       [data-bcx='warning-900'] { border-left-color: var(--color-warning-900); border-right-color: var(--color-warning-900); }
-
 
       [data-bcy='neutral-0'] { border-top-color: var(--color-neutral-0); border-bottom-color: var(--color-neutral-0); }
       [data-bcy='neutral-50'] { border-top-color: var(--color-neutral-50); border-bottom-color: var(--color-neutral-50); }
@@ -166,7 +164,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcy='warning-700'] { border-top-color: var(--color-warning-700); border-bottom-color: var(--color-warning-700); }
       [data-bcy='warning-900'] { border-top-color: var(--color-warning-900); border-bottom-color: var(--color-warning-900); }
 
-
       [data-bct='neutral-0'] { border-top-color: var(--color-neutral-0); }
       [data-bct='neutral-50'] { border-top-color: var(--color-neutral-50); }
       [data-bct='neutral-100'] { border-top-color: var(--color-neutral-100); }
@@ -212,7 +209,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bct='warning-500'] { border-top-color: var(--color-warning-500); }
       [data-bct='warning-700'] { border-top-color: var(--color-warning-700); }
       [data-bct='warning-900'] { border-top-color: var(--color-warning-900); }
-
 
       [data-bcr='neutral-0'] { border-right-color: var(--color-neutral-0); }
       [data-bcr='neutral-50'] { border-right-color: var(--color-neutral-50); }
@@ -260,7 +256,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcr='warning-700'] { border-right-color: var(--color-warning-700); }
       [data-bcr='warning-900'] { border-right-color: var(--color-warning-900); }
 
-
       [data-bcb='neutral-0'] { border-bottom-color: var(--color-neutral-0); }
       [data-bcb='neutral-50'] { border-bottom-color: var(--color-neutral-50); }
       [data-bcb='neutral-100'] { border-bottom-color: var(--color-neutral-100); }
@@ -306,7 +301,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcb='warning-500'] { border-bottom-color: var(--color-warning-500); }
       [data-bcb='warning-700'] { border-bottom-color: var(--color-warning-700); }
       [data-bcb='warning-900'] { border-bottom-color: var(--color-warning-900); }
-
 
       [data-bcl='neutral-0'] { border-left-color: var(--color-neutral-0); }
       [data-bcl='neutral-50'] { border-left-color: var(--color-neutral-50); }
@@ -496,7 +490,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bc='warning-700'] { border-color: var(--color-warning-700); }
         [data-md-bc='warning-900'] { border-color: var(--color-warning-900); }
 
-
         [data-md-bcx='neutral-0'] { border-left-color: var(--color-neutral-0); border-right-color: var(--color-neutral-0); }
         [data-md-bcx='neutral-50'] { border-left-color: var(--color-neutral-50); border-right-color: var(--color-neutral-50); }
         [data-md-bcx='neutral-100'] { border-left-color: var(--color-neutral-100); border-right-color: var(--color-neutral-100); }
@@ -542,7 +535,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcx='warning-500'] { border-left-color: var(--color-warning-500); border-right-color: var(--color-warning-500); }
         [data-md-bcx='warning-700'] { border-left-color: var(--color-warning-700); border-right-color: var(--color-warning-700); }
         [data-md-bcx='warning-900'] { border-left-color: var(--color-warning-900); border-right-color: var(--color-warning-900); }
-
 
         [data-md-bcy='neutral-0'] { border-top-color: var(--color-neutral-0); border-bottom-color: var(--color-neutral-0); }
         [data-md-bcy='neutral-50'] { border-top-color: var(--color-neutral-50); border-bottom-color: var(--color-neutral-50); }
@@ -590,7 +582,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcy='warning-700'] { border-top-color: var(--color-warning-700); border-bottom-color: var(--color-warning-700); }
         [data-md-bcy='warning-900'] { border-top-color: var(--color-warning-900); border-bottom-color: var(--color-warning-900); }
 
-
         [data-md-bct='neutral-0'] { border-top-color: var(--color-neutral-0); }
         [data-md-bct='neutral-50'] { border-top-color: var(--color-neutral-50); }
         [data-md-bct='neutral-100'] { border-top-color: var(--color-neutral-100); }
@@ -636,7 +627,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bct='warning-500'] { border-top-color: var(--color-warning-500); }
         [data-md-bct='warning-700'] { border-top-color: var(--color-warning-700); }
         [data-md-bct='warning-900'] { border-top-color: var(--color-warning-900); }
-
 
         [data-md-bcr='neutral-0'] { border-right-color: var(--color-neutral-0); }
         [data-md-bcr='neutral-50'] { border-right-color: var(--color-neutral-50); }
@@ -684,7 +674,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcr='warning-700'] { border-right-color: var(--color-warning-700); }
         [data-md-bcr='warning-900'] { border-right-color: var(--color-warning-900); }
 
-
         [data-md-bcb='neutral-0'] { border-bottom-color: var(--color-neutral-0); }
         [data-md-bcb='neutral-50'] { border-bottom-color: var(--color-neutral-50); }
         [data-md-bcb='neutral-100'] { border-bottom-color: var(--color-neutral-100); }
@@ -731,7 +720,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcb='warning-700'] { border-bottom-color: var(--color-warning-700); }
         [data-md-bcb='warning-900'] { border-bottom-color: var(--color-warning-900); }
 
-
         [data-md-bcl='neutral-0'] { border-left-color: var(--color-neutral-0); }
         [data-md-bcl='neutral-50'] { border-left-color: var(--color-neutral-50); }
         [data-md-bcl='neutral-100'] { border-left-color: var(--color-neutral-100); }
@@ -777,6 +765,7 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcl='warning-500'] { border-left-color: var(--color-warning-500); }
         [data-md-bcl='warning-700'] { border-left-color: var(--color-warning-700); }
         [data-md-bcl='warning-900'] { border-left-color: var(--color-warning-900); }
+
 
         [data-md-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
         [data-md-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
@@ -874,36 +863,21 @@ describe("BorderColorUtilityGenerator", () => {
    `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bct"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcr"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcb"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcl"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcx"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcy"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-hover-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
       "data-focus-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bct"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcr"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcb"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcl"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcx"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcy"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-hover-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
       "data-md-focus-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
     `);
@@ -974,7 +948,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bc='warning-700'] { border-color: var(--color-warning-700); }
       [data-bc='warning-900'] { border-color: var(--color-warning-900); }
 
-
       [data-bcx='neutral-0'] { border-left-color: var(--color-neutral-0); border-right-color: var(--color-neutral-0); }
       [data-bcx='neutral-50'] { border-left-color: var(--color-neutral-50); border-right-color: var(--color-neutral-50); }
       [data-bcx='neutral-100'] { border-left-color: var(--color-neutral-100); border-right-color: var(--color-neutral-100); }
@@ -1022,7 +995,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcx='warning-500'] { border-left-color: var(--color-warning-500); border-right-color: var(--color-warning-500); }
       [data-bcx='warning-700'] { border-left-color: var(--color-warning-700); border-right-color: var(--color-warning-700); }
       [data-bcx='warning-900'] { border-left-color: var(--color-warning-900); border-right-color: var(--color-warning-900); }
-
 
       [data-bcy='neutral-0'] { border-top-color: var(--color-neutral-0); border-bottom-color: var(--color-neutral-0); }
       [data-bcy='neutral-50'] { border-top-color: var(--color-neutral-50); border-bottom-color: var(--color-neutral-50); }
@@ -1072,7 +1044,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcy='warning-700'] { border-top-color: var(--color-warning-700); border-bottom-color: var(--color-warning-700); }
       [data-bcy='warning-900'] { border-top-color: var(--color-warning-900); border-bottom-color: var(--color-warning-900); }
 
-
       [data-bct='neutral-0'] { border-top-color: var(--color-neutral-0); }
       [data-bct='neutral-50'] { border-top-color: var(--color-neutral-50); }
       [data-bct='neutral-100'] { border-top-color: var(--color-neutral-100); }
@@ -1120,7 +1091,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bct='warning-500'] { border-top-color: var(--color-warning-500); }
       [data-bct='warning-700'] { border-top-color: var(--color-warning-700); }
       [data-bct='warning-900'] { border-top-color: var(--color-warning-900); }
-
 
       [data-bcr='neutral-0'] { border-right-color: var(--color-neutral-0); }
       [data-bcr='neutral-50'] { border-right-color: var(--color-neutral-50); }
@@ -1170,7 +1140,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcr='warning-700'] { border-right-color: var(--color-warning-700); }
       [data-bcr='warning-900'] { border-right-color: var(--color-warning-900); }
 
-
       [data-bcb='neutral-0'] { border-bottom-color: var(--color-neutral-0); }
       [data-bcb='neutral-50'] { border-bottom-color: var(--color-neutral-50); }
       [data-bcb='neutral-100'] { border-bottom-color: var(--color-neutral-100); }
@@ -1218,7 +1187,6 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcb='warning-500'] { border-bottom-color: var(--color-warning-500); }
       [data-bcb='warning-700'] { border-bottom-color: var(--color-warning-700); }
       [data-bcb='warning-900'] { border-bottom-color: var(--color-warning-900); }
-
 
       [data-bcl='neutral-0'] { border-left-color: var(--color-neutral-0); }
       [data-bcl='neutral-50'] { border-left-color: var(--color-neutral-50); }
@@ -1416,7 +1384,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bc='warning-700'] { border-color: var(--color-warning-700); }
         [data-md-bc='warning-900'] { border-color: var(--color-warning-900); }
 
-
         [data-md-bcx='neutral-0'] { border-left-color: var(--color-neutral-0); border-right-color: var(--color-neutral-0); }
         [data-md-bcx='neutral-50'] { border-left-color: var(--color-neutral-50); border-right-color: var(--color-neutral-50); }
         [data-md-bcx='neutral-100'] { border-left-color: var(--color-neutral-100); border-right-color: var(--color-neutral-100); }
@@ -1464,7 +1431,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcx='warning-500'] { border-left-color: var(--color-warning-500); border-right-color: var(--color-warning-500); }
         [data-md-bcx='warning-700'] { border-left-color: var(--color-warning-700); border-right-color: var(--color-warning-700); }
         [data-md-bcx='warning-900'] { border-left-color: var(--color-warning-900); border-right-color: var(--color-warning-900); }
-
 
         [data-md-bcy='neutral-0'] { border-top-color: var(--color-neutral-0); border-bottom-color: var(--color-neutral-0); }
         [data-md-bcy='neutral-50'] { border-top-color: var(--color-neutral-50); border-bottom-color: var(--color-neutral-50); }
@@ -1514,7 +1480,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcy='warning-700'] { border-top-color: var(--color-warning-700); border-bottom-color: var(--color-warning-700); }
         [data-md-bcy='warning-900'] { border-top-color: var(--color-warning-900); border-bottom-color: var(--color-warning-900); }
 
-
         [data-md-bct='neutral-0'] { border-top-color: var(--color-neutral-0); }
         [data-md-bct='neutral-50'] { border-top-color: var(--color-neutral-50); }
         [data-md-bct='neutral-100'] { border-top-color: var(--color-neutral-100); }
@@ -1562,7 +1527,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bct='warning-500'] { border-top-color: var(--color-warning-500); }
         [data-md-bct='warning-700'] { border-top-color: var(--color-warning-700); }
         [data-md-bct='warning-900'] { border-top-color: var(--color-warning-900); }
-
 
         [data-md-bcr='neutral-0'] { border-right-color: var(--color-neutral-0); }
         [data-md-bcr='neutral-50'] { border-right-color: var(--color-neutral-50); }
@@ -1612,7 +1576,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcr='warning-700'] { border-right-color: var(--color-warning-700); }
         [data-md-bcr='warning-900'] { border-right-color: var(--color-warning-900); }
 
-
         [data-md-bcb='neutral-0'] { border-bottom-color: var(--color-neutral-0); }
         [data-md-bcb='neutral-50'] { border-bottom-color: var(--color-neutral-50); }
         [data-md-bcb='neutral-100'] { border-bottom-color: var(--color-neutral-100); }
@@ -1661,7 +1624,6 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcb='warning-700'] { border-bottom-color: var(--color-warning-700); }
         [data-md-bcb='warning-900'] { border-bottom-color: var(--color-warning-900); }
 
-
         [data-md-bcl='neutral-0'] { border-left-color: var(--color-neutral-0); }
         [data-md-bcl='neutral-50'] { border-left-color: var(--color-neutral-50); }
         [data-md-bcl='neutral-100'] { border-left-color: var(--color-neutral-100); }
@@ -1709,6 +1671,7 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcl='warning-500'] { border-left-color: var(--color-warning-500); }
         [data-md-bcl='warning-700'] { border-left-color: var(--color-warning-700); }
         [data-md-bcl='warning-900'] { border-left-color: var(--color-warning-900); }
+
 
         [data-md-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
         [data-md-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
@@ -1810,34 +1773,20 @@ describe("BorderColorUtilityGenerator", () => {
    `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bct"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" |"brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcr"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcb"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcl"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcx"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-bcy"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-hover-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
       "data-focus-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bct"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" |"brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcr"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcb"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcl"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcx"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-
       "data-md-bcy"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
       "data-md-hover-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
       "data-md-focus-bc"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";

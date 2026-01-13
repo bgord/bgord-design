@@ -214,6 +214,7 @@ describe("FontColorUtilityGenerator", () => {
         [data-md-color='warning-700'] { color: var(--color-warning-700); }
         [data-md-color='warning-900'] { color: var(--color-warning-900); }
 
+
         [data-md-hover-color='neutral-0']:hover:not(:disabled) { color: var(--color-neutral-0); }
         [data-md-hover-color='neutral-50']:hover:not(:disabled) { color: var(--color-neutral-50); }
         [data-md-hover-color='neutral-100']:hover:not(:disabled) { color: var(--color-neutral-100); }

@@ -278,7 +278,6 @@ describe("BorderWidthUtilityGenerator", () => {
         [data-md-bwy='heavy'] { border-top-width: var(--border-width-heavy); border-bottom-width: var(--border-width-heavy); }
         [data-md-bwy='unset'] { border-top-width: var(--border-width-unset); border-bottom-width: var(--border-width-unset); }
         [data-md-bwy='huge'] { border-top-width: var(--border-width-huge); border-bottom-width: var(--border-width-huge); }
-
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`

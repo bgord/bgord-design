@@ -17,10 +17,12 @@ describe("CursorUtilityGenerator", () => {
       [data-cursor='pointer'] { cursor: pointer; }
       [data-cursor='not-allowed'] { cursor: not-allowed; }
 
+
       [data-hover-cursor='wait']:hover:not(:disabled) { cursor: wait; }
       [data-hover-cursor='auto']:hover:not(:disabled) { cursor: auto; }
       [data-hover-cursor='pointer']:hover:not(:disabled) { cursor: pointer; }
       [data-hover-cursor='not-allowed']:hover:not(:disabled) { cursor: not-allowed; }
+
 
       [data-focus-cursor='wait']:focus-visible { cursor: wait; }
       [data-focus-cursor='auto']:focus-visible { cursor: auto; }
@@ -33,10 +35,12 @@ describe("CursorUtilityGenerator", () => {
         [data-md-cursor='pointer'] { cursor: pointer; }
         [data-md-cursor='not-allowed'] { cursor: not-allowed; }
 
+
         [data-md-hover-cursor='wait']:hover:not(:disabled) { cursor: wait; }
         [data-md-hover-cursor='auto']:hover:not(:disabled) { cursor: auto; }
         [data-md-hover-cursor='pointer']:hover:not(:disabled) { cursor: pointer; }
         [data-md-hover-cursor='not-allowed']:hover:not(:disabled) { cursor: not-allowed; }
+
 
         [data-md-focus-cursor='wait']:focus-visible { cursor: wait; }
         [data-md-focus-cursor='auto']:focus-visible { cursor: auto; }
