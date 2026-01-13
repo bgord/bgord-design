@@ -11,22 +11,25 @@
   line-height: var(--line-height-loose);
   text-align: center;
   text-transform: uppercase;
+
+  transition:
+    opacity var(--motion-medium),
+    background-color var(--motion-medium);
 }
 
 .c-badge:hover {
   opacity: var(--opacity-high);
-  transition: opacity var(--motion-medium);
-  background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
 }
 
 .c-badge[data-variant="primary"] {
   color: var(--color-neutral-300);
   background-color: var(--color-neutral-700);
+  border: none;
   border-radius: var(--radius-sm);
 }
 
 .c-badge[data-variant="outline"] {
   color: var(--color-neutral-300);
-  border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-300);
   background-color: transparent;
+  border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-300);
 }
