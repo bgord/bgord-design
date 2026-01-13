@@ -162,7 +162,7 @@ import * as UtilityGenerators from "./utilities";
   const DisplayUtilityGenerator = new UtilityGenerators.DisplayUtilityGenerator(breakpointRegistry);
   const CursorUtilityGenerator = new UtilityGenerators.CursorUtilityGenerator(
     breakpointRegistry,
-    new StateRegistry({ hover: true }),
+    new StateRegistry({ hover: true, focus: true }),
   );
   const ObjectFitUtilityGenerator = new UtilityGenerators.ObjectFitUtilityGenerator(breakpointRegistry);
   const PositionUtilityGenerator = new UtilityGenerators.PositionUtilityGenerator(breakpointRegistry);
