@@ -14,9 +14,14 @@
     border-color var(--motion-slow) ease;
 }
 
-.c-input:is(:hover, :focus) {
+.c-input:hover {
   border-color: var(--color-neutral-400);
   border-radius: var(--radius-none);
+}
+
+.c-input:focus-visible {
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
+  outline-offset: var(--border-width-thin);
 }
 
 .c-input:disabled {
@@ -36,11 +41,6 @@
 
 .c-input:invalid:not(:placeholder-shown) {
   border-color: var(--color-danger-500);
-}
-
-.c-input:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
-  outline-offset: var(--border-width-thin);
 }
 
 .c-input[type="date"] {
