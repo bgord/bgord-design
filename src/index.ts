@@ -181,6 +181,10 @@ import * as UtilityGenerators from "./utilities";
   );
   const StackUtilityGenerator = new UtilityGenerators.StackUtilityGenerator(breakpointRegistry);
   const SelfUtilityGenerator = new UtilityGenerators.SelfPlacementUtilityGenerator(breakpointRegistry);
+  const FocusRingUtilityGenerator = new UtilityGenerators.FocusRingUtilityGenerator(
+    breakpointRegistry,
+    FocusRingTokenGenerator,
+  );
 
   const generators = [
     AxisPlacementUtilityGenerator,
@@ -223,6 +227,7 @@ import * as UtilityGenerators from "./utilities";
     TransformUtilityGenerator,
     WidthUtilityGenerator,
     ZIndexUtilityGenerator,
+    FocusRingUtilityGenerator,
   ];
 
   await GenerateCSS.process(tokens, generators);
