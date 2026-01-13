@@ -5,7 +5,7 @@ import * as Tokens from "../src/tokens";
 import { OpacityUtilityGenerator } from "../src/utilities";
 
 const breakpoints = new BreakpointRegistry({ md: "768" });
-const states = new StateRegistry({ hover: true });
+const states = new StateRegistry({ hover: true, focus: true });
 
 describe("OpacityUtilityGenerator", () => {
   test("basic usage", () => {
@@ -27,6 +27,14 @@ describe("OpacityUtilityGenerator", () => {
       [data-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
       [data-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
 
+
+      [data-focus-opacity='full']:focus-visible { opacity: var(--opacity-full); }
+      [data-focus-opacity='high']:focus-visible { opacity: var(--opacity-high); }
+      [data-focus-opacity='medium']:focus-visible { opacity: var(--opacity-medium); }
+      [data-focus-opacity='low']:focus-visible { opacity: var(--opacity-low); }
+      [data-focus-opacity='none']:focus-visible { opacity: var(--opacity-none); }
+
+
       @media (max-width: 768px) {
         [data-md-opacity='full'] { opacity: var(--opacity-full); }
         [data-md-opacity='high'] { opacity: var(--opacity-high); }
@@ -38,6 +46,7 @@ describe("OpacityUtilityGenerator", () => {
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-opacity"?: "full" | "high" | "medium" | "low" | "none";
       "data-hover-opacity"?: "full" | "high" | "medium" | "low" | "none";
+      "data-focus-opacity"?: "full" | "high" | "medium" | "low" | "none";
       "data-md-opacity"?: "full" | "high" | "medium" | "low" | "none";
     `);
   });
@@ -62,6 +71,15 @@ describe("OpacityUtilityGenerator", () => {
       [data-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
       [data-hover-opacity='25']:hover:not(:disabled) { opacity: var(--opacity-25); }
 
+
+      [data-focus-opacity='full']:focus-visible { opacity: var(--opacity-full); }
+      [data-focus-opacity='high']:focus-visible { opacity: var(--opacity-high); }
+      [data-focus-opacity='medium']:focus-visible { opacity: var(--opacity-medium); }
+      [data-focus-opacity='low']:focus-visible { opacity: var(--opacity-low); }
+      [data-focus-opacity='none']:focus-visible { opacity: var(--opacity-none); }
+      [data-focus-opacity='25']:focus-visible { opacity: var(--opacity-25); }
+
+
       @media (max-width: 768px) {
         [data-md-opacity='full'] { opacity: var(--opacity-full); }
         [data-md-opacity='high'] { opacity: var(--opacity-high); }
@@ -74,6 +92,7 @@ describe("OpacityUtilityGenerator", () => {
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       "data-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
       "data-hover-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
+      "data-focus-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
       "data-md-opacity"?: "full" | "high" | "medium" | "low" | "none" | "25";
     `);
   });

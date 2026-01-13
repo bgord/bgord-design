@@ -92,7 +92,7 @@ import * as UtilityGenerators from "./utilities";
   );
   const OpacityUtilityGenerator = new UtilityGenerators.OpacityUtilityGenerator(
     breakpointRegistry,
-    new StateRegistry({ hover: true }),
+    new StateRegistry({ hover: true, focus: true }),
     OpacityTokenGenerator,
   );
   const RadiusUtilityGenerator = new UtilityGenerators.RadiusUtilityGenerator(
