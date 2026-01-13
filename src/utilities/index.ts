@@ -31,6 +31,7 @@ export * from "./position-utility-generator";
 export * from "./positioners-utility-generator";
 export * from "./radius-utility-generator";
 export * from "./rotate-utility-generator";
+export * from "./self-placement-utility-generator";
 export * from "./shadow-utility-generator";
 export * from "./size-utility-generator";
 export * from "./stack-utility-generator";

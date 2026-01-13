@@ -178,9 +178,11 @@ import * as UtilityGenerators from "./utilities";
     SizeTokenGenerator,
   );
   const StackUtilityGenerator = new UtilityGenerators.StackUtilityGenerator(breakpointRegistry);
+  const SelfUtilityGenerator = new UtilityGenerators.SelfPlacementUtilityGenerator(breakpointRegistry);
 
   const generators = [
     AxisPlacementUtilityGenerator,
+    SelfUtilityGenerator,
     BackdropUtilityGenerator,
     BackgroundUtilityGenerator,
     BorderColorUtilityGenerator,
