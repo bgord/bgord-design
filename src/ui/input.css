@@ -34,7 +34,6 @@
   opacity: var(--opacity-medium);
   background-color: var(--color-neutral-900);
   border-color: var(--color-neutral-800);
-  pointer-events: none;
 }
 .c-input:disabled:hover {
   border-radius: var(--radius-sm);
