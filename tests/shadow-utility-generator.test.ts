@@ -63,6 +63,35 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-shadow='xl'] { box-shadow: var(--shadow-xl); }
         [data-md-shadow='inner'] { box-shadow: var(--shadow-inner); }
         [data-md-shadow='unset'] { box-shadow: var(--shadow-unset); }
+
+        [data-md-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
+        [data-md-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
+        [data-md-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
+        [data-md-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
+        [data-md-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
+        [data-md-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+        [data-md-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
+        [data-md-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
+
+
+        [data-md-focus-shadow='none']:focus-visible { box-shadow: var(--shadow-none); }
+        [data-md-focus-shadow='xs']:focus-visible { box-shadow: var(--shadow-xs); }
+        [data-md-focus-shadow='sm']:focus-visible { box-shadow: var(--shadow-sm); }
+        [data-md-focus-shadow='md']:focus-visible { box-shadow: var(--shadow-md); }
+        [data-md-focus-shadow='lg']:focus-visible { box-shadow: var(--shadow-lg); }
+        [data-md-focus-shadow='xl']:focus-visible { box-shadow: var(--shadow-xl); }
+        [data-md-focus-shadow='inner']:focus-visible { box-shadow: var(--shadow-inner); }
+        [data-md-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
+
+
+        [data-md-active-shadow='none']:active { box-shadow: var(--shadow-none); }
+        [data-md-active-shadow='xs']:active { box-shadow: var(--shadow-xs); }
+        [data-md-active-shadow='sm']:active { box-shadow: var(--shadow-sm); }
+        [data-md-active-shadow='md']:active { box-shadow: var(--shadow-md); }
+        [data-md-active-shadow='lg']:active { box-shadow: var(--shadow-lg); }
+        [data-md-active-shadow='xl']:active { box-shadow: var(--shadow-xl); }
+        [data-md-active-shadow='inner']:active { box-shadow: var(--shadow-inner); }
+        [data-md-active-shadow='unset']:active { box-shadow: var(--shadow-unset); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -71,6 +100,9 @@ describe("ShadowUtilityGenerator", () => {
       "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
       "data-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
       "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
+      "data-md-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
+      "data-md-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
+      "data-md-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
     `);
   });
 
@@ -132,6 +164,38 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-shadow='inner'] { box-shadow: var(--shadow-inner); }
         [data-md-shadow='unset'] { box-shadow: var(--shadow-unset); }
         [data-md-shadow='huge'] { box-shadow: var(--shadow-huge); }
+
+
+        [data-md-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
+        [data-md-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
+        [data-md-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
+        [data-md-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
+        [data-md-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
+        [data-md-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+        [data-md-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
+        [data-md-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
+        [data-md-hover-shadow='huge']:hover:not(:disabled) { box-shadow: var(--shadow-huge); }
+
+        [data-md-focus-shadow='none']:focus-visible { box-shadow: var(--shadow-none); }
+        [data-md-focus-shadow='xs']:focus-visible { box-shadow: var(--shadow-xs); }
+        [data-md-focus-shadow='sm']:focus-visible { box-shadow: var(--shadow-sm); }
+        [data-md-focus-shadow='md']:focus-visible { box-shadow: var(--shadow-md); }
+        [data-md-focus-shadow='lg']:focus-visible { box-shadow: var(--shadow-lg); }
+        [data-md-focus-shadow='xl']:focus-visible { box-shadow: var(--shadow-xl); }
+        [data-md-focus-shadow='inner']:focus-visible { box-shadow: var(--shadow-inner); }
+        [data-md-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
+        [data-md-focus-shadow='huge']:focus-visible { box-shadow: var(--shadow-huge); }
+
+
+        [data-md-active-shadow='none']:active { box-shadow: var(--shadow-none); }
+        [data-md-active-shadow='xs']:active { box-shadow: var(--shadow-xs); }
+        [data-md-active-shadow='sm']:active { box-shadow: var(--shadow-sm); }
+        [data-md-active-shadow='md']:active { box-shadow: var(--shadow-md); }
+        [data-md-active-shadow='lg']:active { box-shadow: var(--shadow-lg); }
+        [data-md-active-shadow='xl']:active { box-shadow: var(--shadow-xl); }
+        [data-md-active-shadow='inner']:active { box-shadow: var(--shadow-inner); }
+        [data-md-active-shadow='unset']:active { box-shadow: var(--shadow-unset); }
+        [data-md-active-shadow='huge']:active { box-shadow: var(--shadow-huge); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -140,6 +204,9 @@ describe("ShadowUtilityGenerator", () => {
       "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
       "data-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
       "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
+      "data-md-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
+      "data-md-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
+      "data-md-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
     `);
   });
 });

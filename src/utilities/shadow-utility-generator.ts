@@ -58,6 +58,18 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
         );
       }
 
+      for (const [state, selector] of this.stateRegistry.entries) {
+        for (const variable of config) {
+          const key = variable.replace("shadow-", "");
+
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-${state}-shadow='${key}']${selector}`, {
+              "box-shadow": `var(--${variable})`,
+            }),
+          );
+        }
+      }
+
       // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
       // Stryker restore all
@@ -79,6 +91,9 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
       "shadow",
       ...this.stateRegistry.entries.map(([state]) => `${state}-shadow`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-shadow`),
+      ...this.breakpointRegistry.entries.flatMap(([name]) =>
+        this.stateRegistry.entries.map(([state]) => `${name}-${state}-shadow`),
+      ),
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
