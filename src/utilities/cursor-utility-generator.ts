@@ -1,11 +1,15 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
+import type { StateRegistry } from "../state-registry";
 import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
 import { UtilityGenerator } from "./template";
 
 export class CursorUtilityGenerator extends UtilityGenerator {
   config = { wait: "wait", auto: "auto", pointer: "pointer", "not-allowed": "not-allowed" };
 
-  constructor(readonly breakpointRegistry: BreakpointRegistry) {
+  constructor(
+    readonly breakpointRegistry: BreakpointRegistry,
+    readonly stateRegistry: StateRegistry,
+  ) {
     super("Cursor utilities");
   }
 
@@ -18,6 +22,12 @@ export class CursorUtilityGenerator extends UtilityGenerator {
 
     for (const [key, value] of config) {
       regular.push(new CssRuleRegular(`[data-cursor='${key}']`, { cursor: value }));
+    }
+
+    for (const [state, selector] of this.stateRegistry.entries) {
+      for (const [key, value] of config) {
+        regular.push(new CssRuleRegular(`[data-${state}-cursor='${key}']${selector}`, { cursor: value }));
+      }
     }
 
     // Stryker disable all
@@ -49,7 +59,11 @@ export class CursorUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     // Stryker disable all
-    return ["cursor", ...this.breakpointRegistry.entries.map(([name]) => `${name}-cursor`)]
+    return [
+      "cursor",
+      ...this.stateRegistry.entries.map(([state]) => `${state}-cursor`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-cursor`),
+    ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
     // Stryker restore all
