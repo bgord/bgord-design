@@ -87,9 +87,6 @@
 
 .c-button:focus-visible {
   outline: none;
-  box-shadow:
-    0 0 0 2px var(--color-neutral-950),
-    0 0 0 4px var(--color-neutral-400);
 }
 
 a.c-button {
