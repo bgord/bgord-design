@@ -11,6 +11,10 @@ export class GenerateCSS {
     }
     output += "}\n\n";
 
+    output += "@layer defaults {\n";
+    output += await Bun.file("src/defaults.css").text();
+    output += "}\n\n";
+
     output += "@layer components {\n";
     output += await Bun.file("src/ui/button.css").text();
     output += await Bun.file("src/ui/input.css").text();
