@@ -22,8 +22,7 @@
 }
 
 .c-button:hover,
-.c-button:active,
-.c-button:focus {
+.c-button:active {
   cursor: pointer;
   opacity: var(--opacity-high);
   border-radius: var(--radius-none);
