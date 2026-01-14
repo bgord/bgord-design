@@ -1,13 +1,13 @@
 .c-link {
+  color: var(--color-brand-500);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   letter-spacing: var(--letter-spacing-wide);
 
-  color: var(--color-brand-500);
   text-decoration: none;
   text-decoration-color: currentColor;
 
-  transition: color var(--motion-medium) ease;
+  transition: color var(--motion-fast) ease;
 }
 
 .c-link:hover {
@@ -19,4 +19,8 @@
 .c-link:focus-visible {
   outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
   outline-offset: var(--border-width-thin);
+}
+
+.c-link:active {
+  opacity: var(--opacity-high);
 }
