@@ -22,6 +22,7 @@
 }
 
 .c-badge[data-variant="primary"] {
+  padding: var(--spacing-1) var(--spacing-1-5);
   color: var(--color-neutral-300);
   background-color: var(--color-neutral-700);
   border: none;
@@ -31,5 +32,5 @@
 .c-badge[data-variant="outline"] {
   color: var(--color-neutral-300);
   background-color: transparent;
-  border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-300);
+  border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-400);
 }
