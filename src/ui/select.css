@@ -27,16 +27,18 @@
   border-radius: var(--radius-none);
 }
 
+.c-select:focus-visible {
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
+  outline-offset: var(--border-width-thin);
+  border-color: var(--color-neutral-600);
+  border-radius: var(--radius-sm);
+}
+
 .c-select:disabled {
   opacity: var(--opacity-medium);
   background-color: var(--color-neutral-900);
   border-color: var(--color-neutral-800);
   pointer-events: none;
-}
-
-.c-select:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
-  outline-offset: var(--border-width-thin);
 }
 
 .c-select-wrapper {
