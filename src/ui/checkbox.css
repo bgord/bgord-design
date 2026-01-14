@@ -49,3 +49,7 @@
 
   transform: rotate(-45deg);
 }
+
+.c-checkbox:checked:hover::after {
+  border-color: var(--color-neutral-200);
+}
