@@ -1,10 +1,15 @@
 # Changelog
+- 2026-01-14 16:37 f5bd217 **refactor: enforce proper order in p**
+- 2026-01-14 16:36 019d397 **refactor: enforce proper order in m**
+- 2026-01-14 16:35 e37b1ea **step: define response bw**
+- 2026-01-14 16:33 838f2d4 **refactor: enforce proper order in bs**
 - 2026-01-14 16:28 02c6040 **step: define response bs**
 - 2026-01-14 16:20 99ba6f5 **step: define xy bs**
 - 2026-01-14 16:13 5898609 **step: define trbl bs**
 - 2026-01-14 16:07 46cccc9 **step: handle user invalid in select**
 - 2026-01-14 16:05 ea20263 **step: handle user invalid in checkbox**
 - 2026-01-14 16:04 ce30c1c **fix: invalid input and textarea states**
+- 2026-01-14 15:29 5da9289 **docs: generate CHANGELOG**
 - 2026-01-14 14:11 18137a3 **step: add cursor pointer for hovers**
 ## 2026-01-14 13:45 v1.5.0
 - 2026-01-14 13:45 e7009bc **1.5.0**
