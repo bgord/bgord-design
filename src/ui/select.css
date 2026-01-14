@@ -48,19 +48,24 @@
 }
 
 .c-select-wrapper {
-  width: fit-content;
   position: relative;
+
+  width: fit-content;
 }
 
 .c-select-wrapper::after {
-  position: absolute;
   content: "";
-  top: 12px;
-  right: 8px;
+
   height: 8px;
   width: 8px;
-  border: 2px var(--border-style-solid) var(--color-neutral-300);
+
+  position: absolute;
+  top: 12px;
+  right: 8px;
+
+  border: var(--border-width-thin) var(--border-style-solid) var(--color-neutral-400);
   border-left: none;
   border-top: none;
+
   transform: rotate(45deg);
 }
