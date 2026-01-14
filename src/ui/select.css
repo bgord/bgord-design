@@ -13,9 +13,8 @@
   border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-800);
   border-radius: var(--radius-sm);
 
-  text-overflow: ellipsis;
   appearance: none;
-  user-select: none;
+  text-overflow: ellipsis;
   outline: none;
 
   transition:
