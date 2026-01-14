@@ -56,5 +56,5 @@
 }
 
 .c-checkbox:checked:disabled::after {
-  border-color: var(--color-neutral-400);
+  border-color: var(--color-neutral-500);
 }
