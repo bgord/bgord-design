@@ -67,5 +67,7 @@
   border-left: none;
   border-top: none;
 
+  pointer-events: none;
+
   transform: rotate(45deg);
 }
