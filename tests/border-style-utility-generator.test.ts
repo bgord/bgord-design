@@ -60,6 +60,42 @@ describe("BorderStyleUtilityGenerator", () => {
         [data-md-bs='dashed'] { border-style: var(--border-style-dashed); }
         [data-md-bs='dotted'] { border-style: var(--border-style-dotted); }
         [data-md-bs='double'] { border-style: var(--border-style-double); }
+
+        [data-md-bst='none'] { border-top-style: var(--border-style-none); }
+        [data-md-bst='solid'] { border-top-style: var(--border-style-solid); }
+        [data-md-bst='dashed'] { border-top-style: var(--border-style-dashed); }
+        [data-md-bst='dotted'] { border-top-style: var(--border-style-dotted); }
+        [data-md-bst='double'] { border-top-style: var(--border-style-double); }
+
+        [data-md-bsr='none'] { border-right-style: var(--border-style-none); }
+        [data-md-bsr='solid'] { border-right-style: var(--border-style-solid); }
+        [data-md-bsr='dashed'] { border-right-style: var(--border-style-dashed); }
+        [data-md-bsr='dotted'] { border-right-style: var(--border-style-dotted); }
+        [data-md-bsr='double'] { border-right-style: var(--border-style-double); }
+
+        [data-md-bsb='none'] { border-bottom-style: var(--border-style-none); }
+        [data-md-bsb='solid'] { border-bottom-style: var(--border-style-solid); }
+        [data-md-bsb='dashed'] { border-bottom-style: var(--border-style-dashed); }
+        [data-md-bsb='dotted'] { border-bottom-style: var(--border-style-dotted); }
+        [data-md-bsb='double'] { border-bottom-style: var(--border-style-double); }
+
+        [data-md-bsl='none'] { border-left-style: var(--border-style-none); }
+        [data-md-bsl='solid'] { border-left-style: var(--border-style-solid); }
+        [data-md-bsl='dashed'] { border-left-style: var(--border-style-dashed); }
+        [data-md-bsl='dotted'] { border-left-style: var(--border-style-dotted); }
+        [data-md-bsl='double'] { border-left-style: var(--border-style-double); }
+
+        [data-md-bsx='none'] { border-left-style: var(--border-style-none); border-right-style: var(--border-style-none);  }
+        [data-md-bsx='solid'] { border-left-style: var(--border-style-solid); border-right-style: var(--border-style-solid);  }
+        [data-md-bsx='dashed'] { border-left-style: var(--border-style-dashed); border-right-style: var(--border-style-dashed);  }
+        [data-md-bsx='dotted'] { border-left-style: var(--border-style-dotted); border-right-style: var(--border-style-dotted);  }
+        [data-md-bsx='double'] { border-left-style: var(--border-style-double); border-right-style: var(--border-style-double);  }
+
+        [data-md-bsy='none'] { border-top-style: var(--border-style-none); border-bottom-style: var(--border-style-none); }
+        [data-md-bsy='solid'] { border-top-style: var(--border-style-solid); border-bottom-style: var(--border-style-solid); }
+        [data-md-bsy='dashed'] { border-top-style: var(--border-style-dashed); border-bottom-style: var(--border-style-dashed); }
+        [data-md-bsy='dotted'] { border-top-style: var(--border-style-dotted); border-bottom-style: var(--border-style-dotted); }
+        [data-md-bsy='double'] { border-top-style: var(--border-style-double); border-bottom-style: var(--border-style-double); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -71,6 +107,12 @@ describe("BorderStyleUtilityGenerator", () => {
       "data-bsx"?: "none" | "solid" | "dashed" | "dotted" | "double";
       "data-bsy"?: "none" | "solid" | "dashed" | "dotted" | "double";
       "data-md-bs"?: "none" | "solid" | "dashed" | "dotted" | "double";
+      "data-md-bst"?: "none" | "solid" | "dashed" | "dotted" | "double";
+      "data-md-bsr"?: "none" | "solid" | "dashed" | "dotted" | "double";
+      "data-md-bsb"?: "none" | "solid" | "dashed" | "dotted" | "double";
+      "data-md-bsl"?: "none" | "solid" | "dashed" | "dotted" | "double";
+      "data-md-bsx"?: "none" | "solid" | "dashed" | "dotted" | "double";
+      "data-md-bsy"?: "none" | "solid" | "dashed" | "dotted" | "double";
    `);
   });
 
@@ -136,6 +178,48 @@ describe("BorderStyleUtilityGenerator", () => {
         [data-md-bs='dotted'] { border-style: var(--border-style-dotted); }
         [data-md-bs='double'] { border-style: var(--border-style-double); }
         [data-md-bs='inset'] { border-style: var(--border-style-inset); }
+
+        [data-md-bst='none'] { border-top-style: var(--border-style-none); }
+        [data-md-bst='solid'] { border-top-style: var(--border-style-solid); }
+        [data-md-bst='dashed'] { border-top-style: var(--border-style-dashed); }
+        [data-md-bst='dotted'] { border-top-style: var(--border-style-dotted); }
+        [data-md-bst='double'] { border-top-style: var(--border-style-double); }
+        [data-md-bst='inset'] { border-top-style: var(--border-style-inset); }
+
+        [data-md-bsr='none'] { border-right-style: var(--border-style-none); }
+        [data-md-bsr='solid'] { border-right-style: var(--border-style-solid); }
+        [data-md-bsr='dashed'] { border-right-style: var(--border-style-dashed); }
+        [data-md-bsr='dotted'] { border-right-style: var(--border-style-dotted); }
+        [data-md-bsr='double'] { border-right-style: var(--border-style-double); }
+        [data-md-bsr='inset'] { border-right-style: var(--border-style-inset); }
+
+        [data-md-bsb='none'] { border-bottom-style: var(--border-style-none); }
+        [data-md-bsb='solid'] { border-bottom-style: var(--border-style-solid); }
+        [data-md-bsb='dashed'] { border-bottom-style: var(--border-style-dashed); }
+        [data-md-bsb='dotted'] { border-bottom-style: var(--border-style-dotted); }
+        [data-md-bsb='double'] { border-bottom-style: var(--border-style-double); }
+        [data-md-bsb='inset'] { border-bottom-style: var(--border-style-inset); }
+
+        [data-md-bsl='none'] { border-left-style: var(--border-style-none); }
+        [data-md-bsl='solid'] { border-left-style: var(--border-style-solid); }
+        [data-md-bsl='dashed'] { border-left-style: var(--border-style-dashed); }
+        [data-md-bsl='dotted'] { border-left-style: var(--border-style-dotted); }
+        [data-md-bsl='double'] { border-left-style: var(--border-style-double); }
+        [data-md-bsl='inset'] { border-left-style: var(--border-style-inset); }
+
+        [data-md-bsx='none'] { border-left-style: var(--border-style-none); border-right-style: var(--border-style-none);  }
+        [data-md-bsx='solid'] { border-left-style: var(--border-style-solid); border-right-style: var(--border-style-solid);  }
+        [data-md-bsx='dashed'] { border-left-style: var(--border-style-dashed); border-right-style: var(--border-style-dashed);  }
+        [data-md-bsx='dotted'] { border-left-style: var(--border-style-dotted); border-right-style: var(--border-style-dotted);  }
+        [data-md-bsx='double'] { border-left-style: var(--border-style-double); border-right-style: var(--border-style-double);  }
+        [data-md-bsx='inset'] { border-left-style: var(--border-style-inset); border-right-style: var(--border-style-inset);  }
+
+        [data-md-bsy='none'] { border-top-style: var(--border-style-none); border-bottom-style: var(--border-style-none); }
+        [data-md-bsy='solid'] { border-top-style: var(--border-style-solid); border-bottom-style: var(--border-style-solid); }
+        [data-md-bsy='dashed'] { border-top-style: var(--border-style-dashed); border-bottom-style: var(--border-style-dashed); }
+        [data-md-bsy='dotted'] { border-top-style: var(--border-style-dotted); border-bottom-style: var(--border-style-dotted); }
+        [data-md-bsy='double'] { border-top-style: var(--border-style-double); border-bottom-style: var(--border-style-double); }
+        [data-md-bsy='inset'] { border-top-style: var(--border-style-inset); border-bottom-style: var(--border-style-inset);  }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -147,6 +231,12 @@ describe("BorderStyleUtilityGenerator", () => {
       "data-bsx"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
       "data-bsy"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
       "data-md-bs"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
+      "data-md-bst"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
+      "data-md-bsr"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
+      "data-md-bsb"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
+      "data-md-bsl"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
+      "data-md-bsx"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
+      "data-md-bsy"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
    `);
   });
 });
