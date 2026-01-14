@@ -27,6 +27,32 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-bs='${key}']`, { "border-style": `var(--${variable})` }));
     }
 
+    for (const variable of config) {
+      const key = variable.replace("border-style-", "");
+
+      regular.push(new CssRuleRegular(`[data-bst='${key}']`, { "border-top-style": `var(--${variable})` }));
+    }
+
+    for (const variable of config) {
+      const key = variable.replace("border-style-", "");
+
+      regular.push(new CssRuleRegular(`[data-bsr='${key}']`, { "border-right-style": `var(--${variable})` }));
+    }
+
+    for (const variable of config) {
+      const key = variable.replace("border-style-", "");
+
+      regular.push(
+        new CssRuleRegular(`[data-bsb='${key}']`, { "border-bottom-style": `var(--${variable})` }),
+      );
+    }
+
+    for (const variable of config) {
+      const key = variable.replace("border-style-", "");
+
+      regular.push(new CssRuleRegular(`[data-bsl='${key}']`, { "border-left-style": `var(--${variable})` }));
+    }
+
     // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
     // Stryker restore all
@@ -60,7 +86,14 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
       .join(" | ");
 
     // Stryker disable all
-    return ["bs", ...this.breakpointRegistry.entries.map(([name]) => `${name}-bs`)]
+    return [
+      "bs",
+      "bst",
+      "bsr",
+      "bsb",
+      "bsl",
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bs`),
+    ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
     // Stryker restore all
