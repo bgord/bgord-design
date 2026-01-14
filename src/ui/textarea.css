@@ -42,10 +42,7 @@
   opacity: var(--opacity-full);
 }
 
-.c-textarea:user-invalid {
-  border-color: var(--color-danger-600);
-}
-
-.c-textarea:invalid:not(:focus-visible) {
+.c-textarea:user-invalid,
+.c-textarea:invalid:not(:focus-visible):not(:placeholder-shown) {
   border-color: var(--color-danger-600);
 }

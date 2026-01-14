@@ -42,11 +42,8 @@
   opacity: var(--opacity-full);
 }
 
-.c-input:user-invalid {
-  border-color: var(--color-danger-600);
-}
-
-.c-input:invalid:not(:focus-visible) {
+.c-input:user-invalid,
+.c-input:invalid:not(:focus-visible):not(:placeholder-shown) {
   border-color: var(--color-danger-600);
 }
 
