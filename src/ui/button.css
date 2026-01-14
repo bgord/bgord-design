@@ -44,10 +44,6 @@
 .c-button:disabled {
   opacity: var(--opacity-medium);
 }
-.c-button:disabled:hover {
-  cursor: auto;
-  border-radius: var(--radius-sm);
-}
 
 .c-button[data-variant="primary"] {
   padding-inline: var(--spacing-2);
