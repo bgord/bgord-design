@@ -1,17 +1,21 @@
 .c-button {
+  height: 36px;
+
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-wider);
-  border-radius: var(--radius-sm);
-  border: var(--border-width-md) var(--border-style-solid) transparent;
+  text-align: center;
+  text-transform: uppercase;
+
   background-color: transparent;
 
-  height: 36px;
-  text-transform: uppercase;
-  text-align: center;
-  user-select: none;
+  border-radius: var(--radius-sm);
+  border: var(--border-width-md) var(--border-style-solid) transparent;
+
   white-space: nowrap;
+  user-select: none;
   touch-action: manipulation;
+
   transition:
     border-radius var(--motion-medium) ease,
     opacity var(--motion-slow) ease;
