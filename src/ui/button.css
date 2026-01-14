@@ -21,7 +21,7 @@
     opacity var(--motion-slow) ease;
 }
 
-.c-button:hover {
+.c-button:hover:not(:disabled) {
   opacity: var(--opacity-high);
   border-radius: var(--radius-none);
 }
