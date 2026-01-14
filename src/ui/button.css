@@ -21,15 +21,16 @@
     opacity var(--motion-slow) ease;
 }
 
-.c-button:hover,
-.c-button:active {
-  cursor: pointer;
+.c-button:hover {
   opacity: var(--opacity-high);
   border-radius: var(--radius-none);
+  cursor: pointer;
 }
 
 .c-button:active {
+  opacity: var(--opacity-high);
   border: var(--border-width-md) var(--border-style-solid) transparent !important;
+  border-radius: var(--radius-none);
   scale: 0.97;
 }
 
