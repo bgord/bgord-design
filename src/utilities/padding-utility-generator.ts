@@ -159,19 +159,19 @@ export class PaddingUtilityGenerator extends UtilityGenerator {
     // Stryker disable all
     return [
       "p",
+      "px",
+      "py",
       "pt",
       "pr",
       "pb",
       "pl",
-      "px",
-      "py",
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-p`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-px`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-py`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-pt`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-pr`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-pb`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-pl`),
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-px`),
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-py`),
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
