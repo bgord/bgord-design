@@ -18,11 +18,10 @@
 
   transition:
     border-radius var(--motion-medium) ease,
-    opacity var(--motion-slow) ease;
+    opacity var(--motion-fast) ease;
 }
 
 .c-button:hover:not(:disabled) {
-  opacity: var(--opacity-high);
   border-radius: var(--radius-none);
 }
 
@@ -34,19 +33,19 @@
 
 .c-button:active {
   scale: 0.97;
+  opacity: var(--opacity-high);
 }
 
 .c-button:disabled {
   opacity: var(--opacity-medium);
+  cursor: default;
 }
 
 .c-button[data-variant="primary"] {
   min-inline-size: 6.5rem;
-
   padding-inline: var(--spacing-2);
 
   color: var(--color-neutral-800);
-
   background-color: var(--color-neutral-300);
 }
 .c-button[data-variant="primary"]:hover:not(:disabled) {
@@ -55,11 +54,9 @@
 
 .c-button[data-variant="secondary"] {
   min-inline-size: 6.5rem;
-
   padding-inline: var(--spacing-2);
 
   color: var(--color-neutral-300);
-
   background-color: var(--color-neutral-700);
 }
 .c-button[data-variant="secondary"]:hover:not(:disabled) {
@@ -68,10 +65,10 @@
 
 .c-button[data-variant="bare"] {
   padding-inline: var(--spacing-1);
-
   color: var(--color-neutral-300);
 }
 .c-button[data-variant="bare"]:hover:not(:disabled) {
+  opacity: var(--opacity-high);
   color: var(--color-neutral-200);
 }
 
@@ -84,6 +81,7 @@
   color: var(--color-neutral-300);
 }
 .c-button[data-variant="with-icon"]:hover:not(:disabled) {
+  opacity: var(--opacity-high);
   color: var(--color-neutral-200);
 }
 
