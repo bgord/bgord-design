@@ -28,8 +28,8 @@
 }
 
 .c-checkbox:disabled {
-  opacity: var(--opacity-medium);
-  background-color: var(--color-neutral-900);
+  /* Contract exception, regular border kept instead of relying on opacity  */
+  background-color: var(--color-neutral-800);
   border-color: var(--color-neutral-800);
 }
 

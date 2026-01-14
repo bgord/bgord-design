@@ -36,7 +36,6 @@
 
 .c-select:disabled {
   opacity: var(--opacity-medium);
-  background-color: var(--color-neutral-900);
   border-color: var(--color-neutral-800);
 }
 
