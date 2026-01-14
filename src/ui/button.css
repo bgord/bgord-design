@@ -41,6 +41,8 @@
 }
 
 .c-button[data-variant="primary"] {
+  min-inline-size: 6.5rem;
+
   padding-inline: var(--spacing-2);
 
   color: var(--color-neutral-800);
@@ -52,6 +54,8 @@
 }
 
 .c-button[data-variant="secondary"] {
+  min-inline-size: 6.5rem;
+
   padding-inline: var(--spacing-2);
 
   color: var(--color-neutral-200);
