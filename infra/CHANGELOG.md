@@ -1,8 +1,112 @@
 # Changelog
+- 2026-01-14 13:28 2ab0cea **step: update packages**
+- 2026-01-14 13:25 bdc7229 **refactor: improve link**
+- 2026-01-14 13:23 d540bbd **refactor: do not transition text-decoration-color**
+- 2026-01-14 13:20 ac9f5e3 **step: add checkbox active microinteraction**
+- 2026-01-14 13:18 9192a20 **refactor: unify button hovers**
+- 2026-01-14 13:04 900aa04 **refactor: unify opacity in buttons**
+- 2026-01-14 12:56 555fca3 **refactor: adjust bare and with icon colors**
+- 2026-01-14 12:55 1979cc3 **refactor: adjust secondary colors**
+- 2026-01-14 12:53 0a898d3 **refactor: adjust primary colors**
+- 2026-01-14 12:52 7f3c411 **refactor: add min size for primary/secondary buttons**
+- 2026-01-14 12:47 e5bc8fd **refactor: make primary button less energized**
+- 2026-01-14 12:44 900ec37 **refactor: remove redundant transparent bg from bare and with icon buttons**
+- 2026-01-14 12:42 23149f6 **refactor: reduce color in primary**
+- 2026-01-14 12:38 ec9dbe3 **refactor: remove border color from focus visible in button**
+- 2026-01-14 12:24 f65cd55 **refactor: unify transitions**
+- 2026-01-14 12:23 af9ee4a **refactor: remove duplicate placeholder shown**
+- 2026-01-14 12:20 d06146f **refactor: remove border color from disabled**
+- 2026-01-14 12:17 ebb6edb **refactor: remove double borders on focus visible**
+- 2026-01-14 12:14 83893d8 **fix: unify hover borders**
+- 2026-01-14 12:11 a09c0c6 **fix: default cursor for disabled inputs**
+- 2026-01-14 12:09 ae4d49d **fix: checkbox chevron disabled color**
+- 2026-01-14 12:06 fa3a063 **fix: checked checkbox disabled hover**
+- 2026-01-14 12:02 30b2c81 **refactor: unify hover not disabled**
+- 2026-01-14 11:55 9689d4e **step: increase chevron brightness on checked hover**
+- 2026-01-14 11:51 e57a094 **refactor: keep checkbox after chevron in check with color**
+- 2026-01-14 11:50 b285f7d **refactor: keep select wrapper arrow in check with color**
+- 2026-01-14 11:50 9a81bb3 **refactor: unify disabled background color**
+- 2026-01-14 11:42 799e9aa **refactor: reduce text color brightness in fields**
+- 2026-01-14 11:34 887630a **refactor: unify borders everywhere**
+- 2026-01-14 10:30 e2587db **refactor: adjust range**
+- 2026-01-14 10:27 601f8fc **refactor: unify focus visible in range**
+- 2026-01-14 10:26 fac31f3 **refactor: improve variants**
+- 2026-01-14 10:23 24001f7 **refactor: simplify button active**
+- 2026-01-14 10:20 60bfa72 **refactor: exlucde disabled buttons from hover**
+- 2026-01-14 10:18 7e3a5bb **refactor: remove cursor pointer from hover**
+- 2026-01-14 10:17 68d4ace **refactor: remove important**
+- 2026-01-14 10:12 f754724 **refactor: remove button disabled hover**
+- 2026-01-14 10:11 3c693b9 **refactor: unify focus visible in button**
+- 2026-01-14 10:10 1d0f4b2 **refactor: split hover and active in button**
+- 2026-01-14 10:09 086be50 **refactor: group base c-button rules logically**
+- 2026-01-14 10:02 7adeae5 **refactor: remove duplicated transition**
+- 2026-01-14 10:01 561c797 **refactor: remove focus from button**
+- 2026-01-14 10:00 6946d00 **refactor: group base c-button rules logically**
+- 2026-01-14 09:47 aaceee9 **refactor: simplify checkbox**
+- 2026-01-14 09:32 912a36b **refactor: simplify checked after**
+- 2026-01-14 09:31 22e43b5 **step: add checkbox checked state**
+- 2026-01-14 09:31 071ac9a **refactor: remove checkbox after hover**
+- 2026-01-14 09:30 02c90ea **step: add checkbox disabled state**
+- 2026-01-14 09:29 b243a19 **refactor: remove focus from checkbox**
+- 2026-01-14 09:28 ef55147 **refactor: unify focus visible in checkbox**
+- 2026-01-14 09:28 9eeb788 **refactor: unify hover on checkbox**
+- 2026-01-14 09:27 c0b08b3 **refactor: group base c-checkbox rules logically**
+- 2026-01-14 09:23 bec17ff **refactor: remove supports appearance none from checkbox**
+- 2026-01-14 09:21 681131c **step: add pointer events none to select wrapper**
+- 2026-01-14 09:19 e2ec7b9 **refactor: group base c-select-wrapper rules logically**
+- 2026-01-14 09:14 58d4ace **refactor: place ios hack correctly**
+- 2026-01-14 09:13 caf21f4 **refactor: remove pointer events none in select disabled**
+- 2026-01-14 09:12 68e9c7e **refactor: unify focus visible in select**
+- 2026-01-14 09:12 3b4798e **refactor: simplify hover in select**
+- 2026-01-14 09:11 f09e018 **refactor: remove user select none from select**
+- 2026-01-14 09:10 aee0240 **refactor: group base c-select rules logically**
+- 2026-01-14 09:08 42375da **refactor: remove supports appearance none from select**
+- 2026-01-14 09:02 b77078e **refactor: remove pointer events in textarea**
+- 2026-01-14 09:02 4c15edb **refactor: unify invalid state in textearea**
+- 2026-01-14 09:01 e582ca9 **refactor: group base c-textarea rules logically**
+- 2026-01-14 09:01 a89d415 **refactor: unify focus visible in textarea**
+- 2026-01-14 09:01 539c213 **refactor: remove focus from textarea**
+- 2026-01-14 00:00 c5bcb9a **refactor: remove transition from label**
+- 2026-01-13 23:59 ecda1d4 **fix: motion medium**
+- 2026-01-13 23:59 9ae60a6 **refactor: remove cursor pointer and user select none from label**
+- 2026-01-13 23:55 46fa236 **refactor: update input**
+- 2026-01-13 23:27 fa49f74 **refactor: remove disabled:hover from input**
+- 2026-01-13 23:26 53635e8 **refactor: group base c-input rules logically**
+- 2026-01-13 23:26 2c86859 **refactor: remove pointer events from disabled**
+- 2026-01-13 23:24 577eada **refactor: remove focus from c-input**
+- 2026-01-13 23:14 aba4c10 **refactor: simplify link css**
+- 2026-01-13 23:12 8210a93 **refactor: remove cursor pointer from link**
+- 2026-01-13 23:11 aedc4e6 **refactor: remove file explorer**
+- 2026-01-13 23:11 8706f55 **refactor: update visually hidden**
+- 2026-01-13 23:09 b449967 **refactor: update file explorer**
+- 2026-01-13 23:03 d989da8 **refactor: badge.css**
+- 2026-01-13 22:52 2c0b2dd **refactor: cleanup ui comments**
+- 2026-01-13 22:37 7178f3d **refactor: improve test formatting**
+- 2026-01-13 22:28 22ec9ad **step: implement responsive states for border color**
+- 2026-01-13 22:24 806b1ac **step: implement responsive states for color**
+- 2026-01-13 22:21 ae2aa0f **step: implement responsive states for background**
+- 2026-01-13 22:18 1c5043a **step: implement responsive states for cursor**
+- 2026-01-13 22:17 553a075 **step: implement responsive states for shadow**
+- 2026-01-13 21:14 d66c992 **step: implement responsive states for opacity**
+- 2026-01-13 20:27 f3bf7c6 **step: implement active**
+- 2026-01-13 20:22 8e52a18 **step: enable focus for border color**
+- 2026-01-13 20:20 ffd3d42 **step: enable focus for font color**
+- 2026-01-13 20:18 3e80d2b **step: enable focus for background**
+- 2026-01-13 20:15 171db6b **step: enable focus for cursor**
+- 2026-01-13 20:14 2bbf5bc **step: enable focus for shadow**
+- 2026-01-13 20:10 cbf73da **step: enable focus for opacity**
+- 2026-01-13 19:41 271fee1 **step: enable border color utility**
+- 2026-01-13 15:55 b9fefb4 **step: define shadow hover**
+- 2026-01-13 15:53 794612c **step: define cursor hover**
+- 2026-01-13 15:43 bc06f5d **step: define opacity hover**
+- 2026-01-13 15:40 a12d526 **step: define font color hover**
+- 2026-01-13 15:32 b1216c8 **step: define background hover**
+- 2026-01-13 15:31 38e2132 **step: define state registry**
 - 2026-01-13 14:20 54e5930 **step: provide default neutral focus ring**
 - 2026-01-13 14:07 156d5a0 **refactor: remove outline from predefined components**
 - 2026-01-13 14:03 4545ed5 **step: add focus ring utility generator**
 - 2026-01-13 13:46 bdd5e88 **step: add focus ring token generator**
+- 2026-01-13 13:20 8172553 **docs: generate CHANGELOG**
 - 2026-01-13 13:13 f94fcd0 **docs: generate readme**
 - 2026-01-13 13:13 5361153 **docs: generate CHANGELOG**
 ## 2026-01-13 12:00 v1.4.18
