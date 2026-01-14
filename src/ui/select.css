@@ -62,7 +62,7 @@
   top: 12px;
   right: 8px;
 
-  border: var(--border-width-thin) var(--border-style-solid) var(--color-neutral-400);
+  border: var(--border-width-thin) var(--border-style-solid) var(--color-neutral-200);
   border-left: none;
   border-top: none;
 
