@@ -1,57 +1,15 @@
 .c-range {
-  appearance: none;
   height: 8px;
-  border-radius: var(--radius-md);
+
   background: linear-gradient(
     to right,
     var(--color-neutral-500) var(--percentage, 15%),
     var(--color-neutral-700) var(--percentage, 15%)
   );
-}
 
-.c-range::-moz-range-thumb {
-  appearance: none;
-  box-shadow: none;
-  border: none;
-  border-radius: var(--radius-circle);
-  height: 14px;
-  width: 14px;
-  background: var(--color-neutral-300);
-}
-.c-range::-ms-thumb {
-  appearance: none;
-  box-shadow: none;
-  border: none;
-  border-radius: var(--radius-circle);
-  height: 14px;
-  width: 14px;
-  background: var(--color-neutral-300);
-}
-.c-range::-webkit-slider-thumb {
-  appearance: none;
-  box-shadow: none;
-  border: none;
-  border-radius: var(--radius-circle);
-  height: 14px;
-  width: 14px;
-  margin-top: var(--spacing-0);
-  background: var(--color-neutral-300);
-}
+  border-radius: var(--radius-md);
 
-.c-range::-moz-range-track {
   appearance: none;
-  box-shadow: none;
-  border: none;
-}
-.c-range::-webkit-slider-runnable-track {
-  appearance: none;
-  box-shadow: none;
-  border: none;
-}
-.c-range::-ms-track {
-  appearance: none;
-  box-shadow: none;
-  border: none;
 }
 
 .c-range:focus-visible {
@@ -59,4 +17,36 @@
   outline-offset: var(--border-width-thin);
   border-color: var(--color-neutral-600);
   border-radius: var(--radius-sm);
+}
+
+.c-range::-webkit-slider-thumb,
+.c-range::-moz-range-thumb,
+.c-range::-ms-thumb {
+  appearance: none;
+  border: none;
+  border-radius: var(--radius-circle);
+
+  width: 14px;
+  height: 14px;
+
+  background-color: var(--color-neutral-300);
+}
+
+.c-range:hover::-webkit-slider-thumb,
+.c-range:hover::-moz-range-thumb,
+.c-range:hover::-ms-thumb {
+  background-color: var(--color-neutral-200);
+}
+
+.c-range:active::-webkit-slider-thumb,
+.c-range:active::-moz-range-thumb,
+.c-range:active::-ms-thumb {
+  background-color: var(--color-neutral-100);
+}
+
+.c-range::-webkit-slider-runnable-track,
+.c-range::-moz-range-track,
+.c-range::-ms-track {
+  appearance: none;
+  border: none;
 }
