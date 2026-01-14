@@ -39,6 +39,10 @@
   pointer-events: none;
 }
 
+.c-checkbox:user-invalid {
+  border-color: var(--color-danger-600);
+}
+
 .c-checkbox:checked::after {
   content: "";
 
