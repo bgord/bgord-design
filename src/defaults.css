@@ -1,0 +1,25 @@
+@layer defaults {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+
+    color: var(--color-neutral-200);
+    background-color: var(--color-neutral-950);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-tight);
+    color: var(--color-neutral-300);
+  }
+}
