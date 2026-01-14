@@ -40,6 +40,13 @@
   border-color: var(--color-neutral-800);
 }
 
+/* To avoid zooming on select focus on Chrome and Safari on iOS */
+@media not all and (min-resolution: 0.001dpcm) {
+  .c-select {
+    font-size: var(--font-size-base);
+  }
+}
+
 .c-select-wrapper {
   width: fit-content;
   position: relative;
@@ -56,11 +63,4 @@
   border-left: none;
   border-top: none;
   transform: rotate(45deg);
-}
-
-/* To avoid zooming on select focus on Chrome and Safari on iOS */
-@media not all and (min-resolution: 0.001dpcm) {
-  .c-select {
-    font-size: var(--font-size-base);
-  }
 }
