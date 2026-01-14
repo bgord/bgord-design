@@ -28,6 +28,10 @@
   border-radius: var(--radius-sm);
 }
 
+.c-checkbox:active:not(:disabled) {
+  border-radius: var(--radius-sm);
+}
+
 .c-checkbox:disabled {
   /* Contract exception to not rely on opacity */
   background-color: var(--color-neutral-800);
