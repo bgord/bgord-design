@@ -66,8 +66,6 @@
   padding-inline: var(--spacing-1);
 
   color: var(--color-neutral-300);
-
-  background-color: transparent;
 }
 .c-button[data-variant="bare"]:hover:not(:disabled) {
   color: var(--color-neutral-100);
@@ -80,8 +78,6 @@
   gap: var(--spacing-1);
 
   color: var(--color-neutral-300);
-
-  background-color: transparent;
 }
 .c-button[data-variant="with-icon"]:hover:not(:disabled) {
   color: var(--color-neutral-100);
