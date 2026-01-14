@@ -29,7 +29,6 @@
 .c-textarea:focus-visible {
   outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
   outline-offset: var(--border-width-thin);
-  border-color: var(--color-neutral-600);
   border-radius: var(--radius-sm);
 }
 
