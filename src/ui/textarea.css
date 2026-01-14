@@ -1,10 +1,12 @@
 .c-textarea {
   min-height: 64px;
+
   padding: var(--spacing-1-5);
+
+  color: var(--color-neutral-100);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
 
-  color: var(--color-neutral-100);
   background-color: var(--color-neutral-800);
   border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-800);
   border-radius: var(--radius-sm);
