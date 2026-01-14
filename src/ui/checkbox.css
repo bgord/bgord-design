@@ -20,6 +20,7 @@
 .c-checkbox:hover:not(:disabled) {
   border-color: var(--color-neutral-600);
   border-radius: var(--radius-none);
+  cursor: pointer;
 }
 
 .c-checkbox:focus-visible {

@@ -24,6 +24,7 @@
 
 .c-button:hover:not(:disabled) {
   border-radius: var(--radius-none);
+  cursor: pointer;
 }
 
 .c-button:focus-visible {

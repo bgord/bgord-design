@@ -25,6 +25,7 @@
 .c-select:hover:not(:disabled) {
   border-color: var(--color-neutral-600);
   border-radius: var(--radius-none);
+  cursor: pointer;
 }
 
 .c-select:focus-visible {
