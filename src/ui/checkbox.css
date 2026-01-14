@@ -29,7 +29,6 @@
 .c-checkbox:disabled {
   /* Contract exception to not rely on opacity */
   background-color: var(--color-neutral-800);
-  border-color: var(--color-neutral-800);
   pointer-events: none;
 }
 

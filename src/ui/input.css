@@ -33,7 +33,6 @@
 
 .c-input:disabled {
   opacity: var(--opacity-medium);
-  border-color: var(--color-neutral-800);
   cursor: default;
 }
 

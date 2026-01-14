@@ -34,7 +34,6 @@
 
 .c-textarea:disabled {
   opacity: var(--opacity-medium);
-  border-color: var(--color-neutral-800);
 }
 
 .c-textarea::placeholder {

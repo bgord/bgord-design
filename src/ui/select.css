@@ -35,7 +35,6 @@
 
 .c-select:disabled {
   opacity: var(--opacity-medium);
-  border-color: var(--color-neutral-800);
 }
 
 /* To avoid zooming on select focus on Chrome and Safari on iOS */
