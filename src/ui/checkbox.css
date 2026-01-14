@@ -41,8 +41,7 @@
   border-radius: var(--radius-none);
 }
 
-.c-checkbox:checked::after,
-.c-checkbox:hover::after {
+.c-checkbox:checked::after {
   position: absolute;
   content: "";
 
