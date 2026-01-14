@@ -14,8 +14,8 @@
   border-radius: var(--radius-sm);
 
   appearance: none;
-  text-overflow: ellipsis;
   outline: none;
+  text-overflow: ellipsis;
 
   transition:
     border-radius var(--motion-medium) ease,
