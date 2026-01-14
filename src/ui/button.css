@@ -58,12 +58,12 @@
 
   padding-inline: var(--spacing-2);
 
-  color: var(--color-neutral-200);
+  color: var(--color-neutral-300);
 
   background-color: var(--color-neutral-700);
 }
 .c-button[data-variant="secondary"]:hover:not(:disabled) {
-  background-color: color-mix(in oklch, var(--color-neutral-700) 85%, var(--color-neutral-100) 15%);
+  background-color: color-mix(in oklch, var(--color-neutral-700) 80%, var(--color-neutral-300) 20%);
 }
 
 .c-button[data-variant="bare"] {
