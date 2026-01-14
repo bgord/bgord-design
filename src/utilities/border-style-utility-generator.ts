@@ -53,6 +53,28 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-bsl='${key}']`, { "border-left-style": `var(--${variable})` }));
     }
 
+    for (const variable of config) {
+      const key = variable.replace("border-style-", "");
+
+      regular.push(
+        new CssRuleRegular(`[data-bsx='${key}']`, {
+          "border-left-style": `var(--${variable})`,
+          "border-right-style": `var(--${variable})`,
+        }),
+      );
+    }
+
+    for (const variable of config) {
+      const key = variable.replace("border-style-", "");
+
+      regular.push(
+        new CssRuleRegular(`[data-bsy='${key}']`, {
+          "border-top-style": `var(--${variable})`,
+          "border-bottom-style": `var(--${variable})`,
+        }),
+      );
+    }
+
     // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
     // Stryker restore all
@@ -92,6 +114,8 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
       "bsr",
       "bsb",
       "bsl",
+      "bsx",
+      "bsy",
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bs`),
     ]
       .map((key) => `"data-${key}"?: ${type};`)

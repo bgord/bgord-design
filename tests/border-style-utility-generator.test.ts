@@ -42,6 +42,18 @@ describe("BorderStyleUtilityGenerator", () => {
       [data-bsl='dotted'] { border-left-style: var(--border-style-dotted); }
       [data-bsl='double'] { border-left-style: var(--border-style-double); }
 
+      [data-bsx='none'] { border-left-style: var(--border-style-none); border-right-style: var(--border-style-none);  }
+      [data-bsx='solid'] { border-left-style: var(--border-style-solid); border-right-style: var(--border-style-solid);  }
+      [data-bsx='dashed'] { border-left-style: var(--border-style-dashed); border-right-style: var(--border-style-dashed);  }
+      [data-bsx='dotted'] { border-left-style: var(--border-style-dotted); border-right-style: var(--border-style-dotted);  }
+      [data-bsx='double'] { border-left-style: var(--border-style-double); border-right-style: var(--border-style-double);  }
+
+      [data-bsy='none'] { border-top-style: var(--border-style-none); border-bottom-style: var(--border-style-none); }
+      [data-bsy='solid'] { border-top-style: var(--border-style-solid); border-bottom-style: var(--border-style-solid); }
+      [data-bsy='dashed'] { border-top-style: var(--border-style-dashed); border-bottom-style: var(--border-style-dashed); }
+      [data-bsy='dotted'] { border-top-style: var(--border-style-dotted); border-bottom-style: var(--border-style-dotted); }
+      [data-bsy='double'] { border-top-style: var(--border-style-double); border-bottom-style: var(--border-style-double); }
+
       @media (max-width: 768px) {
         [data-md-bs='none'] { border-style: var(--border-style-none); }
         [data-md-bs='solid'] { border-style: var(--border-style-solid); }
@@ -56,6 +68,8 @@ describe("BorderStyleUtilityGenerator", () => {
       "data-bsr"?: "none" | "solid" | "dashed" | "dotted" | "double";
       "data-bsb"?: "none" | "solid" | "dashed" | "dotted" | "double";
       "data-bsl"?: "none" | "solid" | "dashed" | "dotted" | "double";
+      "data-bsx"?: "none" | "solid" | "dashed" | "dotted" | "double";
+      "data-bsy"?: "none" | "solid" | "dashed" | "dotted" | "double";
       "data-md-bs"?: "none" | "solid" | "dashed" | "dotted" | "double";
    `);
   });
@@ -101,6 +115,20 @@ describe("BorderStyleUtilityGenerator", () => {
       [data-bsl='double'] { border-left-style: var(--border-style-double); }
       [data-bsl='inset'] { border-left-style: var(--border-style-inset); }
 
+      [data-bsx='none'] { border-left-style: var(--border-style-none); border-right-style: var(--border-style-none);  }
+      [data-bsx='solid'] { border-left-style: var(--border-style-solid); border-right-style: var(--border-style-solid);  }
+      [data-bsx='dashed'] { border-left-style: var(--border-style-dashed); border-right-style: var(--border-style-dashed);  }
+      [data-bsx='dotted'] { border-left-style: var(--border-style-dotted); border-right-style: var(--border-style-dotted);  }
+      [data-bsx='double'] { border-left-style: var(--border-style-double); border-right-style: var(--border-style-double);  }
+      [data-bsx='inset'] { border-left-style: var(--border-style-inset); border-right-style: var(--border-style-inset);  }
+
+      [data-bsy='none'] { border-top-style: var(--border-style-none); border-bottom-style: var(--border-style-none); }
+      [data-bsy='solid'] { border-top-style: var(--border-style-solid); border-bottom-style: var(--border-style-solid); }
+      [data-bsy='dashed'] { border-top-style: var(--border-style-dashed); border-bottom-style: var(--border-style-dashed); }
+      [data-bsy='dotted'] { border-top-style: var(--border-style-dotted); border-bottom-style: var(--border-style-dotted); }
+      [data-bsy='double'] { border-top-style: var(--border-style-double); border-bottom-style: var(--border-style-double); }
+      [data-bsy='inset'] { border-top-style: var(--border-style-inset); border-bottom-style: var(--border-style-inset);  }
+
       @media (max-width: 768px) {
         [data-md-bs='none'] { border-style: var(--border-style-none); }
         [data-md-bs='solid'] { border-style: var(--border-style-solid); }
@@ -116,6 +144,8 @@ describe("BorderStyleUtilityGenerator", () => {
       "data-bsr"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
       "data-bsb"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
       "data-bsl"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
+      "data-bsx"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
+      "data-bsy"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
       "data-md-bs"?: "none" | "solid" | "dashed" | "dotted" | "double" | "inset";
    `);
   });
