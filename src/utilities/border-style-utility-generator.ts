@@ -30,6 +30,28 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
     for (const variable of config) {
       const key = variable.replace("border-style-", "");
 
+      regular.push(
+        new CssRuleRegular(`[data-bsx='${key}']`, {
+          "border-left-style": `var(--${variable})`,
+          "border-right-style": `var(--${variable})`,
+        }),
+      );
+    }
+
+    for (const variable of config) {
+      const key = variable.replace("border-style-", "");
+
+      regular.push(
+        new CssRuleRegular(`[data-bsy='${key}']`, {
+          "border-top-style": `var(--${variable})`,
+          "border-bottom-style": `var(--${variable})`,
+        }),
+      );
+    }
+
+    for (const variable of config) {
+      const key = variable.replace("border-style-", "");
+
       regular.push(new CssRuleRegular(`[data-bst='${key}']`, { "border-top-style": `var(--${variable})` }));
     }
 
@@ -53,28 +75,6 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-bsl='${key}']`, { "border-left-style": `var(--${variable})` }));
     }
 
-    for (const variable of config) {
-      const key = variable.replace("border-style-", "");
-
-      regular.push(
-        new CssRuleRegular(`[data-bsx='${key}']`, {
-          "border-left-style": `var(--${variable})`,
-          "border-right-style": `var(--${variable})`,
-        }),
-      );
-    }
-
-    for (const variable of config) {
-      const key = variable.replace("border-style-", "");
-
-      regular.push(
-        new CssRuleRegular(`[data-bsy='${key}']`, {
-          "border-top-style": `var(--${variable})`,
-          "border-bottom-style": `var(--${variable})`,
-        }),
-      );
-    }
-
     // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
     // Stryker restore all
@@ -88,6 +88,28 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
         const key = variable.replace("border-style-", "");
         responsive.push(
           new CssRuleRegular(`[data-${name}-bs='${key}']`, { "border-style": `var(--${variable})` }),
+        );
+      }
+
+      for (const variable of config) {
+        const key = variable.replace("border-style-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bsx='${key}']`, {
+            "border-left-style": `var(--${variable})`,
+            "border-right-style": `var(--${variable})`,
+          }),
+        );
+      }
+
+      for (const variable of config) {
+        const key = variable.replace("border-style-", "");
+
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bsy='${key}']`, {
+            "border-top-style": `var(--${variable})`,
+            "border-bottom-style": `var(--${variable})`,
+          }),
         );
       }
 
@@ -123,28 +145,6 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
         );
       }
 
-      for (const variable of config) {
-        const key = variable.replace("border-style-", "");
-
-        responsive.push(
-          new CssRuleRegular(`[data-${name}-bsx='${key}']`, {
-            "border-left-style": `var(--${variable})`,
-            "border-right-style": `var(--${variable})`,
-          }),
-        );
-      }
-
-      for (const variable of config) {
-        const key = variable.replace("border-style-", "");
-
-        responsive.push(
-          new CssRuleRegular(`[data-${name}-bsy='${key}']`, {
-            "border-top-style": `var(--${variable})`,
-            "border-bottom-style": `var(--${variable})`,
-          }),
-        );
-      }
-
       // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
       // Stryker restore all
@@ -164,19 +164,19 @@ export class BorderStyleUtilityGenerator extends UtilityGenerator {
     // Stryker disable all
     return [
       "bs",
+      "bsx",
+      "bsy",
       "bst",
       "bsr",
       "bsb",
       "bsl",
-      "bsx",
-      "bsy",
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bs`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bsx`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bsy`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bst`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bsr`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bsb`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bsl`),
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bsx`),
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bsy`),
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
