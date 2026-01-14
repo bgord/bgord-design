@@ -9,8 +9,8 @@
 
   background-color: transparent;
 
-  border-radius: var(--radius-sm);
   border: var(--border-width-md) var(--border-style-solid) transparent;
+  border-radius: var(--radius-sm);
 
   white-space: nowrap;
   user-select: none;
