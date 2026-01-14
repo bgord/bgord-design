@@ -28,6 +28,26 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
 
     for (const variable of config) {
       const key = variable.replace("border-width-", "");
+      regular.push(
+        new CssRuleRegular(`[data-bwx='${key}']`, {
+          "border-left-width": `var(--${variable})`,
+          "border-right-width": `var(--${variable})`,
+        }),
+      );
+    }
+
+    for (const variable of config) {
+      const key = variable.replace("border-width-", "");
+      regular.push(
+        new CssRuleRegular(`[data-bwy='${key}']`, {
+          "border-top-width": `var(--${variable})`,
+          "border-bottom-width": `var(--${variable})`,
+        }),
+      );
+    }
+
+    for (const variable of config) {
+      const key = variable.replace("border-width-", "");
       regular.push(new CssRuleRegular(`[data-bwt='${key}']`, { "border-top-width": `var(--${variable})` }));
     }
 
@@ -48,26 +68,6 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
       regular.push(new CssRuleRegular(`[data-bwl='${key}']`, { "border-left-width": `var(--${variable})` }));
     }
 
-    for (const variable of config) {
-      const key = variable.replace("border-width-", "");
-      regular.push(
-        new CssRuleRegular(`[data-bwx='${key}']`, {
-          "border-left-width": `var(--${variable})`,
-          "border-right-width": `var(--${variable})`,
-        }),
-      );
-    }
-
-    for (const variable of config) {
-      const key = variable.replace("border-width-", "");
-      regular.push(
-        new CssRuleRegular(`[data-bwy='${key}']`, {
-          "border-top-width": `var(--${variable})`,
-          "border-bottom-width": `var(--${variable})`,
-        }),
-      );
-    }
-
     // Stryker disable all
     result += regular.map((rule) => rule.get()).join("\n");
     // Stryker restore all
@@ -81,6 +81,26 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
         const key = variable.replace("border-width-", "");
         responsive.push(
           new CssRuleRegular(`[data-${name}-bw='${key}']`, { "border-width": `var(--${variable})` }),
+        );
+      }
+
+      for (const variable of config) {
+        const key = variable.replace("border-width-", "");
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bwx='${key}']`, {
+            "border-left-width": `var(--${variable})`,
+            "border-right-width": `var(--${variable})`,
+          }),
+        );
+      }
+
+      for (const variable of config) {
+        const key = variable.replace("border-width-", "");
+        responsive.push(
+          new CssRuleRegular(`[data-${name}-bwy='${key}']`, {
+            "border-top-width": `var(--${variable})`,
+            "border-bottom-width": `var(--${variable})`,
+          }),
         );
       }
 
@@ -112,26 +132,6 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
         );
       }
 
-      for (const variable of config) {
-        const key = variable.replace("border-width-", "");
-        responsive.push(
-          new CssRuleRegular(`[data-${name}-bwx='${key}']`, {
-            "border-left-width": `var(--${variable})`,
-            "border-right-width": `var(--${variable})`,
-          }),
-        );
-      }
-
-      for (const variable of config) {
-        const key = variable.replace("border-width-", "");
-        responsive.push(
-          new CssRuleRegular(`[data-${name}-bwy='${key}']`, {
-            "border-top-width": `var(--${variable})`,
-            "border-bottom-width": `var(--${variable})`,
-          }),
-        );
-      }
-
       // Stryker disable all
       result += responsive.map((rule) => rule.get()).join("\n");
       // Stryker restore all
@@ -151,19 +151,19 @@ export class BorderWidthUtilityGenerator extends UtilityGenerator {
     // Stryker disable all
     return [
       "bw",
+      "bwx",
+      "bwy",
       "bwt",
       "bwr",
       "bwb",
       "bwl",
-      "bwx",
-      "bwy",
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bw`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwx`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwy`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwt`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwr`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwb`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwl`),
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwx`),
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-bwy`),
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
