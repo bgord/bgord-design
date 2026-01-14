@@ -30,6 +30,12 @@
   border-radius: var(--radius-sm);
 }
 
+.checkbox:disabled {
+  opacity: var(--opacity-medium);
+  background-color: var(--color-neutral-900);
+  border-color: var(--color-neutral-800);
+}
+
 .c-checkbox:checked:hover {
   border-color: var(--color-neutral-300);
   cursor: pointer;
