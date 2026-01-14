@@ -1,4 +1,6 @@
 # Changelog
+## 2026-01-14 17:20 v1.5.2
+- 2026-01-14 17:20 f661094 **1.5.2**
 - 2026-01-14 17:18 d6045b4 **refactor: improve badges**
 ## 2026-01-14 16:37 v1.5.1
 - 2026-01-14 16:37 f5bd217 **refactor: enforce proper order in p**
@@ -8,6 +10,7 @@
 - 2026-01-14 16:33 838f2d4 **refactor: enforce proper order in bs**
 - 2026-01-14 16:28 02c6040 **step: define response bs**
 - 2026-01-14 16:20 99ba6f5 **step: define xy bs**
+- 2026-01-14 16:19 dc51583 **docs: generate CHANGELOG**
 - 2026-01-14 16:13 5898609 **step: define trbl bs**
 - 2026-01-14 16:07 46cccc9 **step: handle user invalid in select**
 - 2026-01-14 16:05 ea20263 **step: handle user invalid in checkbox**
