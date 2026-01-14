@@ -28,9 +28,10 @@
 }
 
 .c-checkbox:disabled {
-  /* Contract exception, regular border kept instead of relying on opacity  */
+  /* Contract exception to not rely on opacity */
   background-color: var(--color-neutral-800);
   border-color: var(--color-neutral-800);
+  pointer-events: none;
 }
 
 .c-checkbox:checked::after {
@@ -50,6 +51,10 @@
   transform: rotate(-45deg);
 }
 
-.c-checkbox:checked:hover::after {
+.c-checkbox:checked:hover:not(:disabled)::after {
   border-color: var(--color-neutral-200);
+}
+
+.c-checkbox:checked:disabled::after {
+  border-color: var(--color-neutral-400);
 }
