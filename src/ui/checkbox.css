@@ -42,19 +42,18 @@
 }
 
 .c-checkbox:checked::after {
-  position: absolute;
   content: "";
 
-  top: 6px;
-  left: 6px;
   height: 6px;
   width: 10px;
-  border: var(--border-width-thin) var(--border-style-solid) var(--color-neutral-300);
-  border-top: 0;
-  border-right: 0;
-  transform: rotate(-45deg);
-}
 
-.c-checkbox:hover::after {
-  border-color: var(--color-neutral-400);
+  position: absolute;
+  top: 6px;
+  left: 6px;
+
+  border: var(--border-width-thin) var(--border-style-solid) var(--color-neutral-400);
+  border-top: none;
+  border-right: none0;
+
+  transform: rotate(-45deg);
 }
