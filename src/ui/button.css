@@ -43,7 +43,7 @@
 .c-button[data-variant="primary"] {
   padding-inline: var(--spacing-2);
 
-  color: var(--color-neutral-900);
+  color: var(--color-neutral-800);
 
   background-color: var(--color-neutral-200);
 }
