@@ -35,10 +35,6 @@
   cursor: pointer;
 }
 
-.c-checkbox:focus {
-  border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-300);
-}
-
 .c-checkbox:checked::after,
 .c-checkbox:hover::after {
   position: absolute;
