@@ -1,4 +1,5 @@
 # Changelog
+- 2026-01-14 13:41 573f220 **fix: mutation tests**
 - 2026-01-14 13:28 2ab0cea **step: update packages**
 - 2026-01-14 13:25 bdc7229 **refactor: improve link**
 - 2026-01-14 13:23 d540bbd **refactor: do not transition text-decoration-color**
@@ -13,6 +14,8 @@
 - 2026-01-14 12:44 900ec37 **refactor: remove redundant transparent bg from bare and with icon buttons**
 - 2026-01-14 12:42 23149f6 **refactor: reduce color in primary**
 - 2026-01-14 12:38 ec9dbe3 **refactor: remove border color from focus visible in button**
+- 2026-01-14 12:28 3bec91c **docs: generate readme**
+- 2026-01-14 12:28 1d976d4 **docs: generate CHANGELOG**
 - 2026-01-14 12:24 f65cd55 **refactor: unify transitions**
 - 2026-01-14 12:23 af9ee4a **refactor: remove duplicate placeholder shown**
 - 2026-01-14 12:20 d06146f **refactor: remove border color from disabled**
