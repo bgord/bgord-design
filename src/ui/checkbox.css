@@ -16,7 +16,7 @@
 }
 
 .c-checkbox:hover:not(:disabled) {
-  border-color: var(--color-neutral-400);
+  border-color: var(--color-neutral-600);
   border-radius: var(--radius-none);
 }
 
