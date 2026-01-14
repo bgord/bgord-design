@@ -1,4 +1,5 @@
 # Changelog
+- 2026-01-14 17:18 d6045b4 **refactor: improve badges**
 ## 2026-01-14 16:37 v1.5.1
 - 2026-01-14 16:37 f5bd217 **refactor: enforce proper order in p**
 - 2026-01-14 16:37 e1e2192 **1.5.1**
@@ -11,6 +12,7 @@
 - 2026-01-14 16:07 46cccc9 **step: handle user invalid in select**
 - 2026-01-14 16:05 ea20263 **step: handle user invalid in checkbox**
 - 2026-01-14 16:04 ce30c1c **fix: invalid input and textarea states**
+- 2026-01-14 15:38 1be82cf **docs: generate CHANGELOG**
 - 2026-01-14 15:37 50b06b8 **docs: generate CHANGELOG**
 - 2026-01-14 15:29 5da9289 **docs: generate CHANGELOG**
 - 2026-01-14 14:11 18137a3 **step: add cursor pointer for hovers**
