@@ -20,7 +20,7 @@
     border-color var(--motion-slow) ease;
 }
 
-.c-textarea:is(:hover, :focus) {
+.c-textarea:hover {
   border-color: var(--color-neutral-600);
   border-radius: var(--radius-none);
 }
