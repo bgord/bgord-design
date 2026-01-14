@@ -50,7 +50,7 @@
   background-color: var(--color-neutral-300);
 }
 .c-button[data-variant="primary"]:hover:not(:disabled) {
-  background-color: color-mix(in oklch, var(--color-neutral-200) 80%, var(--color-neutral-50) 20%);
+  background-color: color-mix(in oklch, var(--color-neutral-300) 80%, var(--color-neutral-50) 20%);
 }
 
 .c-button[data-variant="secondary"] {
