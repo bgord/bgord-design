@@ -12,7 +12,9 @@
   appearance: none;
   outline: none;
 
-  transition: border-radius var(--motion-medium) ease;
+  transition:
+    border-radius var(--motion-medium) ease,
+    border-color var(--motion-slow) ease;
 }
 
 .c-checkbox:hover:not(:disabled) {
