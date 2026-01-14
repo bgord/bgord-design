@@ -17,9 +17,8 @@
     border-color var(--motion-slow) ease;
 }
 
-.c-checkbox:hover,
-.c-checkbox:checked {
-  border-color: var(--color-neutral-300);
+.c-checkbox:hover {
+  border-color: var(--color-neutral-400);
   border-radius: var(--radius-none);
   cursor: pointer;
 }
