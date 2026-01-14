@@ -1,4 +1,11 @@
 # Changelog
+- 2026-01-14 16:28 02c6040 **step: define response bs**
+- 2026-01-14 16:20 99ba6f5 **step: define xy bs**
+- 2026-01-14 16:13 5898609 **step: define trbl bs**
+- 2026-01-14 16:07 46cccc9 **step: handle user invalid in select**
+- 2026-01-14 16:05 ea20263 **step: handle user invalid in checkbox**
+- 2026-01-14 16:04 ce30c1c **fix: invalid input and textarea states**
+- 2026-01-14 14:11 18137a3 **step: add cursor pointer for hovers**
 ## 2026-01-14 13:45 v1.5.0
 - 2026-01-14 13:45 e7009bc **1.5.0**
 - 2026-01-14 13:41 573f220 **fix: mutation tests**
@@ -13,6 +20,7 @@
 - 2026-01-14 12:53 0a898d3 **refactor: adjust primary colors**
 - 2026-01-14 12:52 7f3c411 **refactor: add min size for primary/secondary buttons**
 - 2026-01-14 12:47 e5bc8fd **refactor: make primary button less energized**
+- 2026-01-14 12:45 f2d8d7b **docs: generate CHANGELOG**
 - 2026-01-14 12:44 900ec37 **refactor: remove redundant transparent bg from bare and with icon buttons**
 - 2026-01-14 12:42 23149f6 **refactor: reduce color in primary**
 - 2026-01-14 12:41 e0ca752 **docs: generate CHANGELOG**
