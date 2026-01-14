@@ -27,6 +27,13 @@
   cursor: pointer;
 }
 
+.c-button:focus-visible {
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
+  outline-offset: var(--border-width-thin);
+  border-color: var(--color-neutral-600);
+  border-radius: var(--radius-sm);
+}
+
 .c-button:active {
   opacity: var(--opacity-high);
   border: var(--border-width-md) var(--border-style-solid) transparent !important;
@@ -79,11 +86,6 @@
 }
 .c-button[data-variant="with-icon"]:hover:not(:disabled) {
   color: var(--color-neutral-100);
-}
-
-.c-button:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
-  outline-offset: var(--border-width-thin);
 }
 
 a.c-button {
