@@ -24,7 +24,6 @@
 .c-button:hover {
   opacity: var(--opacity-high);
   border-radius: var(--radius-none);
-  cursor: pointer;
 }
 
 .c-button:focus-visible {
