@@ -52,7 +52,3 @@
 .c-input[type="date"] {
   font-size: var(--font-size-xs);
 }
-
-.c-input[type="date"]:placeholder-shown {
-  font-size: var(--font-size-xs);
-}
