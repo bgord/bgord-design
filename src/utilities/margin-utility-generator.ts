@@ -151,19 +151,19 @@ export class MarginUtilityGenerator extends UtilityGenerator {
     // Stryker disable all
     return [
       "m",
+      "mx",
+      "my",
       "mt",
       "mr",
       "mb",
       "ml",
-      "mx",
-      "my",
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-m`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-mx`),
+      ...this.breakpointRegistry.entries.map(([name]) => `${name}-my`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-mt`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-mr`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-mb`),
       ...this.breakpointRegistry.entries.map(([name]) => `${name}-ml`),
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-mx`),
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-my`),
     ]
       .map((key) => `"data-${key}"?: ${type};`)
       .join(" ");
