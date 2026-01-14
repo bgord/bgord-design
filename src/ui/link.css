@@ -7,9 +7,7 @@
   text-decoration: none;
   text-decoration-color: currentColor;
 
-  transition:
-    color var(--motion-medium) ease,
-    text-decoration-color var(--motion-slow) ease;
+  transition: color var(--motion-medium) ease;
 }
 
 .c-link:hover {
