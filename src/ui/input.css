@@ -20,7 +20,7 @@
     border-color var(--motion-slow) ease;
 }
 
-.c-input:hover {
+.c-input:hover:not(:disabled) {
   border-color: var(--color-neutral-400);
   border-radius: var(--radius-none);
 }

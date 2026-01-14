@@ -21,7 +21,7 @@
     border-color var(--motion-slow) ease;
 }
 
-.c-textarea:hover {
+.c-textarea:hover:not(:disabled) {
   border-color: var(--color-neutral-600);
   border-radius: var(--radius-none);
 }

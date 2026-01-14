@@ -15,7 +15,7 @@
   transition: border-radius var(--motion-medium) ease;
 }
 
-.c-checkbox:hover {
+.c-checkbox:hover:not(:disabled) {
   border-color: var(--color-neutral-400);
   border-radius: var(--radius-none);
 }
