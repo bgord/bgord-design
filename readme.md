@@ -28,6 +28,7 @@ src/
 │   ├── grow-fade-in.css
 │   └── shrink-fade-out.css
 ├── breakpoint-registry.ts
+├── defaults.css
 ├── generate-css.ts
 ├── generate-lib.ts
 ├── generate-types.ts
