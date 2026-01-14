@@ -72,7 +72,7 @@
   color: var(--color-neutral-300);
 }
 .c-button[data-variant="bare"]:hover:not(:disabled) {
-  color: var(--color-neutral-100);
+  color: var(--color-neutral-200);
 }
 
 .c-button[data-variant="with-icon"] {
@@ -84,7 +84,7 @@
   color: var(--color-neutral-300);
 }
 .c-button[data-variant="with-icon"]:hover:not(:disabled) {
-  color: var(--color-neutral-100);
+  color: var(--color-neutral-200);
 }
 
 a.c-button {
