@@ -1,10 +1,13 @@
 # Changelog
+## 2026-01-15 12:55 v1.6.0
+- 2026-01-15 12:55 9725c78 **1.6.0**
 - 2026-01-15 12:52 d38c837 **refactor: adjust util gen ordering**
 - 2026-01-15 12:46 284ec79 **step: define curated util gen ordering**
 - 2026-01-15 12:18 2701cb6 **step: mark dependent util gens**
 - 2026-01-15 12:12 9b5ac96 **step: add the general rule**
 - 2026-01-15 12:11 ded2c4b **step: mark util gens as orthogonal**
 - 2026-01-15 12:07 6e500c4 **step: document current utility ordering**
+- 2026-01-15 11:53 12cac0e **docs: generate CHANGELOG**
 ## 2026-01-15 10:37 v1.5.4
 - 2026-01-15 10:37 7be3532 **1.5.4**
 - 2026-01-15 10:36 db36530 **refactor: group flexbox util generators**
