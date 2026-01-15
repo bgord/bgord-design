@@ -1,5 +1,8 @@
 # Changelog
+## 2026-01-15 10:37 v1.5.4
+- 2026-01-15 10:37 7be3532 **1.5.4**
 - 2026-01-15 10:36 db36530 **refactor: group flexbox util generators**
+- 2026-01-15 09:37 b194e26 **docs: generate CHANGELOG**
 ## 2026-01-14 19:15 v1.5.3
 - 2026-01-14 19:15 4c1be30 **1.5.3**
 - 2026-01-14 19:13 21b4cb0 **fix: remove hover cursor from input and textarea**
