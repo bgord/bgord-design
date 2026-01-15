@@ -1,4 +1,4 @@
-Current `Utility Generator`s, and the CSS properties they define:
+## Current `Utility Generator`s, and the CSS properties they define:
 
 [ORTHOGONAL] BackdropUtilityGenerator: ::backdrop background
 [ORTHOGONAL] BackgroundUtilityGenerator: background
@@ -8,12 +8,12 @@ Current `Utility Generator`s, and the CSS properties they define:
 [ORTHOGONAL] BorderStyleUtilityGenerator: border-style, border-{top, right, bottom, left}-style
 
 [ORTHOGONAL] CursorUtilityGenerator: cursor
-DisplayUtilityGenerator: display, flex-wrap
-StackUtilityGenerator: display, flex-wrap, flex-direction
-FlexDirectionUtilityGenerator: flex-direction
+[DEPENDENT] DisplayUtilityGenerator: display, flex-wrap
+[DEPENDENT] StackUtilityGenerator: display, flex-wrap, flex-direction
+[DEPENDENT] FlexDirectionUtilityGenerator: flex-direction
 [ORTHOGONAL] FlexGrowUtilityGenerator: flex-grow
 [ORTHOGONAL] FlexShrinkUtilityGenerator: flex-shrink
-FlexWrapUtilityGenerator: flex-wrap
+[DEPENDENT] FlexWrapUtilityGenerator: flex-wrap
 [ORTHOGONAL] AxisPlacementUtilityGenerator: justify-content, align-items
 [ORTHOGONAL] SelfUtilityGenerator: align-self
 [ORTHOGONAL] GapUtilityGenerator: gap
@@ -21,7 +21,7 @@ FlexWrapUtilityGenerator: flex-wrap
 [ORTHOGONAL] FontFamilyUtilityGenerator: font-family
 [ORTHOGONAL] FontSizeUtilityGenerator: font-size
 [ORTHOGONAL] FontWeightUtilityGenerator: font-weight
-HeightUtilityGenerator: height
+[DEPENDENT] HeightUtilityGenerator: height
 [ORTHOGONAL] LetterSpacingUtilityGenerator: letter-spacing
 [ORTHOGONAL] LineHeightUtilityGenerator: line-height
 [ORTHOGONAL] MarginUtilityGenerator: margin, margin-{top, right, bottom, left}
@@ -30,17 +30,17 @@ HeightUtilityGenerator: height
 [ORTHOGONAL] ObjectFitUtilityGenerator: object-fit
 [ORTHOGONAL] ObjectPositionUtilityGenerator: object-position
 [ORTHOGONAL] OpacityUtilityGenerator: opacity
-OverflowUtilityGenerator: overflow
+[DEPENDENT] OverflowUtilityGenerator: overflow
 [ORTHOGONAL] PaddingUtilityGenerator: padding, padding-{top, right, bottom, left}
 [ORTHOGONAL] PointerEventUtilityGenerator: pointer-events
 [ORTHOGONAL] PositionUtilityGenerator: position
 [ORTHOGONAL] PositionersUtilityGenerator: top, right, bototm, left, inset
 [ORTHOGONAL] RadiusUtilityGenerator: border-radius
-RotateUtilityGenerator: transform
+[DEPENDENT] RotateUtilityGenerator: transform
 [ORTHOGONAL] ShadowUtilityGenerator: box-shadow
-SizeUtilityGenerator: height, width
-TransformUtilityGenerator: overflow, white-space, text-verflow, display, text-align, text-transform, font-variant-numeric
-WidthUtilityGenerator: width
+[DEPENDENT] SizeUtilityGenerator: height, width
+[DEPENDENT] TransformUtilityGenerator: overflow, white-space, text-verflow, display, text-align, text-transform, font-variant-numeric
+[DEPENDENT] WidthUtilityGenerator: width
 [ORTHOGONAL] ZIndexUtilityGenerator:, z-index
 [ORTHOGONAL] FocusRingUtilityGenerator: outline, outline-offset
 
