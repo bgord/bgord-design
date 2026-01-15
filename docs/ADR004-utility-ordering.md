@@ -43,3 +43,7 @@ TransformUtilityGenerator: overflow, white-space, text-verflow, display, text-al
 WidthUtilityGenerator: width
 [ORTHOGONAL] ZIndexUtilityGenerator:, z-index
 [ORTHOGONAL] FocusRingUtilityGenerator: outline, outline-offset
+
+General rule: if a selector appears further in the CSS file, it can override the previous selector
+
+> Generic first, specific later.
