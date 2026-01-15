@@ -196,24 +196,27 @@ import * as UtilityGenerators from "./utilities";
   );
 
   const generators = [
-    AxisPlacementUtilityGenerator,
-    SelfUtilityGenerator,
     BackdropUtilityGenerator,
     BackgroundUtilityGenerator,
     BorderColorUtilityGenerator,
     BorderWidthUtilityGenerator,
     BorderStyleUtilityGenerator,
     CursorUtilityGenerator,
+
     DisplayUtilityGenerator,
+    StackUtilityGenerator,
     FlexDirectionUtilityGenerator,
     FlexGrowUtilityGenerator,
     FlexShrinkUtilityGenerator,
     FlexWrapUtilityGenerator,
+    AxisPlacementUtilityGenerator,
+    SelfUtilityGenerator,
+    GapUtilityGenerator,
+
     FontColorUtilityGenerator,
     FontFamilyUtilityGenerator,
     FontSizeUtilityGenerator,
     FontWeightUtilityGenerator,
-    GapUtilityGenerator,
     HeightUtilityGenerator,
     LetterSpacingUtilityGenerator,
     LineHeightUtilityGenerator,
@@ -232,7 +235,6 @@ import * as UtilityGenerators from "./utilities";
     RotateUtilityGenerator,
     ShadowUtilityGenerator,
     SizeUtilityGenerator,
-    StackUtilityGenerator,
     TransformUtilityGenerator,
     WidthUtilityGenerator,
     ZIndexUtilityGenerator,
