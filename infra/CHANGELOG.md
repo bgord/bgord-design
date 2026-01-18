@@ -1,4 +1,7 @@
 # Changelog
+- 2026-01-18 15:51 69eba4d **step: update packages**
+- 2026-01-18 15:51 5f94178 **refactor: remove unused colori**
+- 2026-01-15 22:12 10a34ef **step: add strip internal tsconfig option**
 ## 2026-01-15 12:55 v1.6.0
 - 2026-01-15 12:55 9725c78 **1.6.0**
 - 2026-01-15 12:52 d38c837 **refactor: adjust util gen ordering**
@@ -7,6 +10,7 @@
 - 2026-01-15 12:12 9b5ac96 **step: add the general rule**
 - 2026-01-15 12:11 ded2c4b **step: mark util gens as orthogonal**
 - 2026-01-15 12:07 6e500c4 **step: document current utility ordering**
+- 2026-01-15 11:55 d2e71ee **docs: generate CHANGELOG**
 - 2026-01-15 11:53 12cac0e **docs: generate CHANGELOG**
 ## 2026-01-15 10:37 v1.5.4
 - 2026-01-15 10:37 7be3532 **1.5.4**
