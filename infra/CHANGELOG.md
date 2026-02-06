@@ -1,5 +1,8 @@
 # Changelog
+## 2026-02-06 17:56 v1.6.1
+- 2026-02-06 17:56 8b3e268 **1.6.1**
 - 2026-02-06 17:55 65fac77 **step: update packages**
+- 2026-02-06 16:56 f2a3f4a **docs: generate CHANGELOG**
 - 2026-01-18 15:51 69eba4d **step: update packages**
 - 2026-01-18 15:51 5f94178 **refactor: remove unused colori**
 - 2026-01-18 14:51 64413e5 **docs: generate CHANGELOG**
