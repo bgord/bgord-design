@@ -19,7 +19,7 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
 
     let result = "";
 
-    const regular: CssRuleStrategy[] = [];
+    const regular: Array<CssRuleStrategy> = [];
 
     for (const variable of config) {
       const key = variable.replace("radius-", "");
@@ -32,7 +32,7 @@ export class RadiusUtilityGenerator extends UtilityGenerator {
     // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
-      const responsive: CssRuleRegular[] = [];
+      const responsive: Array<CssRuleRegular> = [];
 
       result += `@media (max-width: ${breakpoint}px) { `;
 

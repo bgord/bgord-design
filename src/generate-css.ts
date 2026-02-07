@@ -2,7 +2,7 @@ import type { TokenGenerator } from "./tokens/template";
 import type { UtilityGenerator } from "./utilities/template";
 
 export class GenerateCSS {
-  static async process(tokens: TokenGenerator[], utilities: UtilityGenerator[]) {
+  static async process(tokens: ReadonlyArray<TokenGenerator>, utilities: ReadonlyArray<UtilityGenerator>) {
     let output = `@import "../src/normalize.css" layer(reset);\n\n`;
 
     output += ":root {\n";

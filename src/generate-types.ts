@@ -1,7 +1,7 @@
 import type { UtilityGenerator } from "./utilities/template";
 
 export class GenerateTypes {
-  static async process(utilities: UtilityGenerator[]) {
+  static async process(utilities: ReadonlyArray<UtilityGenerator>) {
     const interactions = ["grow", "rotate-into-focus", "subtle-scale"]
       .map((interaction) => `"${interaction}"`)
       .join(" | ");

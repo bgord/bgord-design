@@ -19,7 +19,7 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
 
     let result = "";
 
-    const regular: CssRuleStrategy[] = [];
+    const regular: Array<CssRuleStrategy> = [];
 
     for (const [variable, value] of config) {
       const key = variable.replace("breakpoint-", "");
@@ -32,7 +32,7 @@ export class MaxHeightUtilityGenerator extends UtilityGenerator {
     // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
-      const responsive: CssRuleRegular[] = [];
+      const responsive: Array<CssRuleRegular> = [];
 
       result += `@media (max-width: ${breakpoint}px) { `;
 

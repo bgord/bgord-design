@@ -19,7 +19,7 @@ export class MarginUtilityGenerator extends UtilityGenerator {
 
     let result = "";
 
-    const regular: CssRuleStrategy[] = [];
+    const regular: Array<CssRuleStrategy> = [];
 
     /* It is important to output the utils in this order,
        so the m is extendable by mx/my,
@@ -75,7 +75,7 @@ export class MarginUtilityGenerator extends UtilityGenerator {
     // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
-      const responsive: CssRuleRegular[] = [];
+      const responsive: Array<CssRuleRegular> = [];
 
       result += `@media (max-width: ${breakpoint}px) { `;
 

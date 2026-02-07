@@ -22,7 +22,7 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
 
     let result = "";
 
-    const regular: CssRuleRegular[] = [];
+    const regular: Array<CssRuleRegular> = [];
 
     for (const [key, value] of config) {
       regular.push(new CssRuleRegular(`[data-main='${key}']`, { "justify-content": value }));
@@ -37,7 +37,7 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
     // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
-      const responsive: CssRuleRegular[] = [];
+      const responsive: Array<CssRuleRegular> = [];
 
       result += `@media (max-width: ${breakpoint}px) { `;
 

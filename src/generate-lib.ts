@@ -1,7 +1,7 @@
 import type { TokenGenerator } from "./tokens/template";
 
 export class GenerateLib {
-  static async process(tokens: TokenGenerator[]) {
+  static async process(tokens: ReadonlyArray<TokenGenerator>) {
     let lib = "";
 
     for (const token of tokens) {
