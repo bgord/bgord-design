@@ -1,5 +1,8 @@
 # Changelog
+## 2026-02-08 11:57 v1.6.2
+- 2026-02-08 11:57 236cbac **1.6.2**
 - 2026-02-08 11:54 5642a95 **refactor: remove unused exports**
+- 2026-02-08 10:54 def43f6 **docs: generate CHANGELOG**
 - 2026-02-07 23:05 defd8df **step: update packages**
 - 2026-02-07 23:05 d42ac72 **refactor: use readonly array**
 - 2026-02-07 22:52 badb85f **step: bump bgord/scripts**
