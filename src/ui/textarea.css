@@ -45,3 +45,10 @@
 .c-textarea:invalid:not(:focus-visible):not(:placeholder-shown) {
   border-color: var(--color-danger-600);
 }
+
+/* Prevent iOS zoom-in */
+@media not all and (min-resolution: 0.001dpcm) {
+  .c-textarea {
+    font-size: var(--font-size-base);
+  }
+}

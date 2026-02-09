@@ -49,3 +49,10 @@
 .c-input[type="date"] {
   font-size: var(--font-size-xs);
 }
+
+/* Prevent iOS zoom-in */
+@media not all and (min-resolution: 0.001dpcm) {
+  .c-input {
+    font-size: var(--font-size-base);
+  }
+}
