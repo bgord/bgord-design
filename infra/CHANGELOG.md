@@ -1,7 +1,12 @@
 # Changelog
+## 2026-02-09 13:40 v1.6.3
+- 2026-02-09 13:40 15829ba **1.6.3**
+- 2026-02-09 13:36 9fc5d00 **fix: ios zoom in**
+- 2026-02-09 13:32 dcef22a **fix: select**
 ## 2026-02-08 11:57 v1.6.2
 - 2026-02-08 11:57 236cbac **1.6.2**
 - 2026-02-08 11:54 5642a95 **refactor: remove unused exports**
+- 2026-02-08 10:57 9cf2363 **docs: generate CHANGELOG**
 - 2026-02-08 10:54 def43f6 **docs: generate CHANGELOG**
 - 2026-02-07 23:05 defd8df **step: update packages**
 - 2026-02-07 23:05 d42ac72 **refactor: use readonly array**
