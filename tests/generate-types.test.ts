@@ -12,8 +12,8 @@ const generators = [AxisPlacementUtilityGenerator];
 describe("GenerateTypes", async () => {
   test("process", async () => {
     // @ts-expect-error
-    spyOn(Bun, "file").mockImplementation(() => ({}));
-    const bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
+    using _ = spyOn(Bun, "file").mockImplementation(() => ({}));
+    using bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
 
     await GenerateTypes.process(generators);
 

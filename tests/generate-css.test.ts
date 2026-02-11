@@ -15,8 +15,8 @@ const tokens = [AxisPlacementUtilityGenerator];
 describe("GenerateCSS", async () => {
   test("process", async () => {
     // @ts-expect-error
-    const bunFile = spyOn(Bun, "file").mockImplementation(() => ({ text: () => "" }));
-    const bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
+    using bunFile = spyOn(Bun, "file").mockImplementation(() => ({ text: () => "" }));
+    using bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
 
     await GenerateCSS.process(generators, tokens);
 

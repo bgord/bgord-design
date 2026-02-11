@@ -9,8 +9,8 @@ const generators = [BackdropsTokenGenerator];
 describe("GenerateLib", async () => {
   test("process", async () => {
     // @ts-expect-error
-    spyOn(Bun, "file").mockImplementation(() => ({}));
-    const bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
+    using _ = spyOn(Bun, "file").mockImplementation(() => ({}));
+    using bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
 
     await GenerateLib.process(generators);
 
