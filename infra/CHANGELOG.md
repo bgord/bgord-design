@@ -1,6 +1,9 @@
 # Changelog
+## 2026-02-11 12:33 v1.6.7
 - 2026-02-11 12:33 6bdfd3e **refactor: using for spyOn**
+- 2026-02-11 12:33 21f6ef1 **1.6.7**
 - 2026-02-11 12:32 27d5c49 **step: update packages**
+- 2026-02-11 11:33 bb200e8 **docs: generate CHANGELOG**
 ## 2026-02-09 16:49 v1.6.6
 - 2026-02-09 16:49 fbd4840 **1.6.6**
 - 2026-02-09 15:50 44c4118 **docs: generate CHANGELOG**
