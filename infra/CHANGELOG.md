@@ -1,6 +1,8 @@
 # Changelog
+- 2026-02-24 11:12 4c11653 **step: update packages**
 - 2026-02-20 16:10 9e5c002 **step: update packages**
 - 2026-02-20 16:10 4361676 **step: bump bgord/scripts**
+- 2026-02-20 15:11 757f1e7 **docs: generate CHANGELOG**
 - 2026-02-15 11:32 f1d7d5e **step: update packages**
 ## 2026-02-11 12:33 v1.6.7
 - 2026-02-11 12:33 6bdfd3e **refactor: using for spyOn**
