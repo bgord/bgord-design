@@ -1,5 +1,8 @@
 # Changelog
+## 2026-03-01 09:18 v1.6.8
+- 2026-03-01 09:18 eb50f12 **1.6.8**
 - 2026-03-01 09:17 f891806 **step: update packages**
+- 2026-03-01 08:18 9a4a8de **docs: generate CHANGELOG**
 - 2026-02-24 11:12 4c11653 **step: update packages**
 - 2026-02-24 10:12 312aa7d **docs: generate CHANGELOG**
 - 2026-02-20 16:10 9e5c002 **step: update packages**
