@@ -14,7 +14,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "skipLibCheck": true,
-    "stripInternal": true
+    "stripInternal": true,
+    "types": ["bun"]
   },
   "include": ["src"]
 }
