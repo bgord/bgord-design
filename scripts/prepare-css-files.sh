@@ -41,6 +41,7 @@ bunx tsc dist/lib.ts \
   --emitDeclarationOnly \
   --module esnext \
   --skipLibCheck \
+  --ignoreConfig \
   --outDir dist
 step_end "lib.d.ts generate"
 
