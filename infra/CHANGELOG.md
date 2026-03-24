@@ -1,9 +1,11 @@
 # Changelog
+- 2026-03-24 11:52 3d84ba1 **fix: prepare css files**
 - 2026-03-24 11:43 2d419e4 **step: update packages**
 - 2026-03-24 11:42 d6a218b **refactor: defaults**
 - 2026-03-24 11:41 de96cf2 **step: stricts**
 - 2026-03-24 11:41 5cb0e6a **step: module**
 - 2026-03-24 11:41 36fb073 **step: types**
+- 2026-03-24 10:45 101f852 **docs: generate CHANGELOG**
 ## 2026-03-22 20:52 v1.6.9
 - 2026-03-22 20:52 543c514 **1.6.9**
 - 2026-03-22 20:51 54fdf97 **step: update packages**
