@@ -1,7 +1,10 @@
 # Changelog
+## 2026-04-11 17:57 v1.6.11
 - 2026-04-11 17:57 89fccfd **step: update packages**
+- 2026-04-11 17:57 32a02d8 **1.6.11**
 - 2026-04-11 17:56 c841a59 **step: update packages**
 - 2026-04-11 17:56 a127ea4 **step: bump bgord/scripts**
+- 2026-04-11 15:57 518ebf9 **docs: generate CHANGELOG**
 - 2026-04-06 09:43 609cd8f **step: update packages**
 - 2026-03-29 10:43 932a58b **step: update packages**
 - 2026-03-29 08:43 e8e2caf **docs: generate CHANGELOG**
