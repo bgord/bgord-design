@@ -4,14 +4,12 @@
   "workspaces": {
     "": {
       "name": "@bgord/design",
-      "dependencies": {
-        "@stryker-mutator/typescript-checker": "^9.6.1",
-      },
       "devDependencies": {
         "@biomejs/biome": "2.4.11",
         "@commitlint/cli": "20.5.0",
         "@commitlint/config-conventional": "20.5.0",
         "@stryker-mutator/core": "9.6.1",
+        "@stryker-mutator/typescript-checker": "9.6.1",
         "@types/bun": "1.3.12",
         "cspell": "10.0.0",
         "gzip-cli": "1.2.0",

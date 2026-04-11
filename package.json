@@ -35,9 +35,7 @@
     "lockfile-lint": "5.0.0",
     "only-allow": "1.2.2",
     "shellcheck": "4.1.0",
-    "typescript": "6.0.2"
-  },
-  "dependencies": {
-    "@stryker-mutator/typescript-checker": "^9.6.1"
+    "typescript": "6.0.2",
+    "@stryker-mutator/typescript-checker": "9.6.1"
   }
 }
