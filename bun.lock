@@ -19,7 +19,7 @@
         "lockfile-lint": "5.0.0",
         "only-allow": "1.2.2",
         "shellcheck": "4.1.0",
-        "typescript": "6.0.2",
+        "typescript": "6.0.3",
       },
     },
   },
@@ -1052,7 +1052,7 @@
 
     "typed-rest-client": ["typed-rest-client@2.3.0", "", { "dependencies": { "des.js": "^1.1.0", "js-md4": "^0.3.2", "qs": "^6.14.1", "tunnel": "0.0.6", "underscore": "^1.13.8" } }, "sha512-FfBj5tjviexjIus3La4n4s9i+f81Zj7HU+lUlQWK219HMRfmzLsbIf4PZF2+X6EouJKyuANpvvef5VrUWM4AFw=="],
 
-    "typescript": ["typescript@6.0.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-bGdAIrZ0wiGDo5l8c++HWtbaNCWTS4UTv7RaTH/ThVIgjkveJt83m74bBHMJkuCbslY8ixgLBVZJIOiQlQTjfQ=="],
+    "typescript": ["typescript@6.0.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw=="],
 
     "uint8array-extras": ["uint8array-extras@1.5.0", "", {}, "sha512-rvKSBiC5zqCCiDZ9kAOszZcDvdAHwwIKJG33Ykj43OKcWsnmcBRL09YTU4nOeHZ8Y2a7l1MgTd08SBe9A8Qj6A=="],
 
