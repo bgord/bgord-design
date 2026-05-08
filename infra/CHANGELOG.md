@@ -1,5 +1,7 @@
 # Changelog
+- 2026-05-08 18:05 27ee7b8 **step: update packages**
 - 2026-05-03 09:42 6dad87e **step: update packages**
+- 2026-05-03 07:43 ffdb914 **docs: generate CHANGELOG**
 ## 2026-04-28 12:10 v1.6.12
 - 2026-04-28 12:10 ae6af2d **1.6.12**
 - 2026-04-28 12:05 47f3229 **step: switch to tsgo**
