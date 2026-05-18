@@ -1,6 +1,8 @@
 # Changelog
+- 2026-05-18 16:07 0b79732 **step: update packages**
 - 2026-05-13 22:17 4082ed5 **step: update workflows**
 - 2026-05-13 22:17 2706311 **step: bump bgord/scripts**
+- 2026-05-13 20:18 c272ce3 **docs: generate CHANGELOG**
 - 2026-05-13 13:27 a69d4a7 **step: bump bgord/scripts**
 - 2026-05-13 13:27 6902032 **step: update bunfig**
 - 2026-05-13 13:25 239253d **step: add bunfig**
