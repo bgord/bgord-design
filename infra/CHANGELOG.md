@@ -1,5 +1,8 @@
 # Changelog
+## 2026-05-24 13:34 v1.6.15
+- 2026-05-24 13:34 50c8918 **1.6.15**
 - 2026-05-24 13:33 8004ec6 **step: update packages**
+- 2026-05-24 11:33 7bd3364 **docs: generate CHANGELOG**
 - 2026-05-18 18:30 ea06acc **docs: generate CHANGELOG**
 - 2026-05-18 16:07 0b79732 **step: update packages**
 - 2026-05-13 22:17 4082ed5 **step: update workflows**
