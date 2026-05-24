@@ -1,6 +1,6 @@
 {
   "name": "@bgord/design",
-  "version": "1.6.14",
+  "version": "1.6.15",
   "license": "MIT",
   "author": "Bartosz Gordon",
   "main": "./dist/lib.js",
