@@ -34,7 +34,7 @@
 [x][ORTHOGONAL] PaddingUtilityGenerator: padding, padding-{top, right, bottom, left}
 [x][ORTHOGONAL] PointerEventUtilityGenerator: pointer-events
 [x][ORTHOGONAL] PositionUtilityGenerator: position
-[x][ORTHOGONAL] PositionersUtilityGenerator: top, right, bototm, left, inset
+[x][ORTHOGONAL] PositionersUtilityGenerator: top, right, bottom, left, inset
 [x][ORTHOGONAL] RadiusUtilityGenerator: border-radius
 [x][DEPENDENT] RotateUtilityGenerator: transform
 [x][ORTHOGONAL] ShadowUtilityGenerator: box-shadow
@@ -61,7 +61,7 @@ FlexGrowUtilityGenerator: flex-grow
 FlexShrinkUtilityGenerator: flex-shrink
 
 PositionUtilityGenerator: position
-PositionersUtilityGenerator: top, right, bototm, left, inset
+PositionersUtilityGenerator: top, right, bottom, left, inset
 
 SizeUtilityGenerator: height, width
 HeightUtilityGenerator: height
