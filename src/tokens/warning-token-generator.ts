@@ -1,3 +1,4 @@
+// cSpell:ignore oklch
 import { type TokenConfigType, TokenGenerator } from "./template";
 
 export class WarningTokenGenerator extends TokenGenerator {

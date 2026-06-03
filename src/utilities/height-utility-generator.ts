@@ -6,7 +6,7 @@ export class HeightUtilityGenerator extends UtilityGenerator {
   config = { "100%": "100%", auto: "auto", unset: "unset" };
 
   constructor(readonly breakpointRegistry: BreakpointRegistry) {
-    super("Heght utilities");
+    super("Height utilities");
   }
 
   css() {

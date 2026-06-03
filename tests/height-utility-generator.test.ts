@@ -8,7 +8,7 @@ describe("HeightUtilityGenerator", () => {
   test("basic usage", () => {
     const generator = new HeightUtilityGenerator(breakpoints);
 
-    expect(generator.name).toEqual("Heght utilities");
+    expect(generator.name).toEqual("Height utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
       [data-height='100%'] { height: 100%; }
       [data-height='auto'] { height: auto; }

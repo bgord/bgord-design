@@ -6,5 +6,6 @@
   background: red;
   position: absolute;
   inset: 0;
+  /* cSpell:ignore referer */
   content: "Rule #2 violation (target-blank-referer)";
 }

@@ -1,3 +1,4 @@
+/* cSpell:ignore oklch */
 import { type TokenConfigType, TokenGenerator } from "./template";
 
 export class GrayscaleTokenGenerator extends TokenGenerator {
@@ -20,7 +21,7 @@ export class GrayscaleTokenGenerator extends TokenGenerator {
     /* ───────── SURFACE LAYERS (DARK MODE) ───────── */
     "color-neutral-800": "oklch(0.22 0.01 275)", // filled inputs & secondary buttons over 900 bg
     "color-neutral-900": "oklch(0.18 0.01 275)", // card / sheet background above body
-    "color-neutral-950": "oklch(0.12 0.01 275)", // app body / root canvas (OLED-black feel)
+    "color-neutral-950": "oklch(0.12 0.01 275)", // app body / root canvas
   };
 
   constructor(overrides: TokenConfigType = {}) {

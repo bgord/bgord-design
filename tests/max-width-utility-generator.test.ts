@@ -1,3 +1,4 @@
+// cSpell:ignore maxw
 import { describe, expect, test } from "bun:test";
 import { BreakpointRegistry } from "../src/breakpoint-registry";
 import * as Tokens from "../src/tokens";

@@ -1,3 +1,4 @@
+/* cSpell:ignore oklch */
 import { describe, expect, test } from "bun:test";
 import { DangerTokenGenerator } from "../src/tokens";
 
