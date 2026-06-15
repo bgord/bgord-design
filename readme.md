@@ -17,7 +17,7 @@ bun i
 Run the tests
 
 ```
-./bgord-scripts/test-run.sh
+./bgord-scripts/test.sh
 ```
 
 ## Files:
