@@ -18,8 +18,7 @@
   "scripts": {
     "build": "bash scripts/package-build.sh",
     "postbuild": "bash scripts/prepare-css-files.sh",
-    "prepublish": "bash scripts/prepare-css-files.sh",
-    "preinstall": "bunx only-allow bun"
+    "prepublish": "bash scripts/prepare-css-files.sh"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.0",
@@ -33,7 +32,6 @@
     "lefthook": "2.1.9",
     "lightningcss-cli": "1.32.0",
     "lockfile-lint": "5.0.0",
-    "only-allow": "1.2.2",
     "shellcheck": "4.1.0",
     "typescript": "6.0.3"
   }
