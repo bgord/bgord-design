@@ -1,5 +1,6 @@
 {
   "name": "@bgord/design",
+  "type": "module",
   "version": "1.6.17",
   "license": "MIT",
   "author": "Bartosz Gordon",
