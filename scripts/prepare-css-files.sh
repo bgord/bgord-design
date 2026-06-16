@@ -8,6 +8,20 @@ step_start "Design system CSS build"
 bun dist/index.js
 step_end "Design system CSS build"
 
+step_start "lib.ts build"
+bun build dist/lib.ts --outfile dist/lib.js --format esm
+step_end "lib.ts build"
+
+step_start "lib.d.ts generate"
+bunx tsgo dist/lib.ts \
+  --declaration \
+  --emitDeclarationOnly \
+  --module esnext \
+  --skipLibCheck \
+  --ignoreConfig \
+  --outDir dist
+step_end "lib.d.ts generate"
+
 step_start "Files format"
 bunx @biomejs/biome format --write dist/main.css
 bunx @biomejs/biome format --write dist/index.d.ts
@@ -27,25 +41,8 @@ step_start "Files compress"
 bunx gzip dist/*.min.css --extension=gz --extension=br
 step_end "Files compress"
 
-step_start "index.js remove"
-rm -rf dist/index.js
-step_end "index.js remove"
-
-step_start "lib.ts build"
-bun build dist/lib.ts --outfile dist/lib.js --format esm
-step_end "lib.ts build"
-
-step_start "lib.d.ts generate"
-bunx tsgo dist/lib.ts \
-  --declaration \
-  --emitDeclarationOnly \
-  --module esnext \
-  --skipLibCheck \
-  --ignoreConfig \
-  --outDir dist
-step_end "lib.d.ts generate"
-
 step_start "Cleanup"
+rm -rf dist/index.js
 rm dist/lib.ts
 rm dist/main.css
 step_end "Cleanup"
