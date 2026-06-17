@@ -35,15 +35,5 @@
     "publint": "0.3.21",
     "shellcheck": "4.1.0",
     "typescript": "6.0.3"
-  },
-  "devEngines": {
-    "runtime": {
-      "name": "bun",
-      "onFail": "error"
-    },
-    "packageManager": {
-      "name": "bun",
-      "onFail": "error"
-    }
   }
 }
