@@ -13,7 +13,7 @@ bun build dist/lib.ts --outfile dist/lib.js --format esm
 step_end "lib.ts build"
 
 step_start "lib.d.ts generate"
-bunx tsgo dist/lib.ts \
+bunx tsc dist/lib.ts \
   --declaration \
   --emitDeclarationOnly \
   --module esnext \
