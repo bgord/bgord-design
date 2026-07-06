@@ -21,7 +21,7 @@
     "prepublish": "bash scripts/prepare-css-files.sh"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.1",
+    "@biomejs/biome": "2.5.2",
     "@stryker-mutator/core": "9.6.1",
     "@stryker-mutator/typescript-checker": "9.6.1",
     "@types/bun": "1.3.14",
