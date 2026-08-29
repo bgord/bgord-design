@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.10",
+    "@fullhuman/postcss-purgecss": "8.0.0",
     "@stryker-mutator/core": "10.0.0",
     "@stryker-mutator/typescript-checker": "10.0.0",
     "@types/bun": "1.4.0",
@@ -31,6 +32,7 @@
     "lefthook": "2.1.10",
     "lightningcss-cli": "1.33.0",
     "lockfile-lint": "5.0.1",
+    "postcss": "8.5.26",
     "publint": "0.3.24",
     "shellcheck": "4.1.0",
     "typescript": "7.0.2"
