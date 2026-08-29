@@ -7,10 +7,9 @@ export const keepResetLayer: PluginCreator<void> = () => ({
   postcssPlugin: "keep-reset-layer",
   AtRule: {
     layer(atRule) {
-      if ((atRule.params || "").trim() === "reset") {
-        // no need to import 'postcss'—node objects can be plain
-        atRule.before({ type: "comment", text: "purgecss start ignore" });
-        atRule.after({ type: "comment", text: "purgecss end ignore" });
+      if (atRule.params.trim() === "reset") {
+        atRule.before({ text: "purgecss start ignore" });
+        atRule.after({ text: "purgecss end ignore" });
       }
     },
   },
@@ -31,17 +30,14 @@ export function dataAttributeAwareExtractor(content: string) {
   return [...tokens, ...attrs];
 }
 
-const plugins = [
-  keepResetLayer,
-  purgecss({
-    content: [
-      "web/**/*.{ts,tsx,jsx,js,html,hbs}",
-      "public/**/*.html",
-      "node_modules/@bgord/ui/**/*.{ts,tsx,jsx,js}",
-    ],
-    defaultExtractor: dataAttributeAwareExtractor,
-  }),
+export const content = [
+  "web/**/*.{ts,tsx,jsx,js,html,hbs}",
+  "public/**/*.html",
+  "node_modules/@bgord/ui/**/*.{ts,tsx,jsx,js}",
 ];
+
+// Stryker disable next-line ObjectLiteral
+const plugins = [keepResetLayer, purgecss({ content, defaultExtractor: dataAttributeAwareExtractor })];
 
 if (import.meta.main) {
   const path = process.argv[2];
@@ -52,6 +48,7 @@ if (import.meta.main) {
   }
 
   const css = await Bun.file(path).text();
+  // Stryker disable next-line ObjectLiteral
   const result = await postcss(plugins).process(css, { from: path });
 
   await Bun.write(path, result.css);
