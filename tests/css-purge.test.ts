@@ -1,9 +1,6 @@
-import { describe, expect, test } from "bun:test";
-import { mkdtemp } from "node:fs/promises";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { describe, expect, jest, spyOn, test } from "bun:test";
 import postcss from "postcss";
-import { content, dataAttributeAwareExtractor, keepResetLayer } from "../src/css-purge";
+import { content, dataAttributeAwareExtractor, keepResetLayer, main } from "../src/css-purge";
 
 const run = (css: string) => postcss([keepResetLayer]).process(css, { from: undefined }).css;
 
@@ -106,20 +103,41 @@ describe("css-purge", () => {
     ]);
   });
 
-  test("cli - purges the file in place", async () => {
-    const path = join(await mkdtemp(join(tmpdir(), "css-purge-")), "main.css");
-    await Bun.write(path, "@layer reset{a{color:red}}.unused{color:blue}");
+  test("main - purges the file at the given path", async () => {
+    // @ts-expect-error
+    using bunFile = spyOn(Bun, "file").mockImplementation(() => ({
+      text: async () => "@layer reset{a{color:red}}.unused{color:blue}",
+    }));
+    using bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
 
-    await Bun.spawn(["bun", "src/css-purge.ts", path], { stderr: "ignore" }).exited;
+    await main(["bun", "css-purge", "public/main.min.css"], true);
 
-    expect(await Bun.file(path).text()).toEqual("@layer reset{a{color:red}}");
+    expect(bunFile).toHaveBeenCalledWith("public/main.min.css");
+    expect(bunWrite).toHaveBeenCalledWith("public/main.min.css", "@layer reset{a{color:red}}");
   });
 
-  test("cli - without a path", async () => {
-    const cli = Bun.spawn(["bun", "src/css-purge.ts"], { stderr: "pipe" });
-    const stderr = await new Response(cli.stderr).text();
+  test("main - without a path", async () => {
+    using stderrWrite = spyOn(process.stderr, "write").mockImplementation(jest.fn());
+    // @ts-expect-error
+    using processExit = spyOn(process, "exit").mockImplementation(jest.fn());
+    using bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
 
-    expect(await cli.exited).toEqual(1);
-    expect(stderr).toEqual("Usage: bgord-css-purge <css-file>\n");
+    await main(["bun", "css-purge"], true);
+
+    expect(stderrWrite).toHaveBeenCalledWith("Usage: bgord-css-purge <css-file>\n");
+    expect(processExit).toHaveBeenCalledWith(1);
+    expect(bunWrite).not.toHaveBeenCalled();
+  });
+
+  test("main - does nothing when not the entrypoint", async () => {
+    using stderrWrite = spyOn(process.stderr, "write").mockImplementation(jest.fn());
+    using bunFile = spyOn(Bun, "file");
+    using bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
+
+    await main(["bun", "css-purge", "public/main.min.css"], false);
+
+    expect(stderrWrite).not.toHaveBeenCalled();
+    expect(bunFile).not.toHaveBeenCalled();
+    expect(bunWrite).not.toHaveBeenCalled();
   });
 });

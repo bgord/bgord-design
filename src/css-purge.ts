@@ -39,17 +39,21 @@ export const content = [
 // Stryker disable next-line ObjectLiteral
 const plugins = [keepResetLayer, purgecss({ content, defaultExtractor: dataAttributeAwareExtractor })];
 
-if (import.meta.main) {
-  const path = process.argv[2];
+export async function main(argv: Array<string>, isEntrypoint: boolean): Promise<void> {
+  if (!isEntrypoint) return;
+
+  const path = argv[2];
 
   if (!path) {
     process.stderr.write("Usage: bgord-css-purge <css-file>\n");
     process.exit(1);
+  } else {
+    const css = await Bun.file(path).text();
+    // Stryker disable next-line ObjectLiteral
+    const result = await postcss(plugins).process(css, { from: undefined });
+
+    await Bun.write(path, result.css);
   }
-
-  const css = await Bun.file(path).text();
-  // Stryker disable next-line ObjectLiteral
-  const result = await postcss(plugins).process(css, { from: path });
-
-  await Bun.write(path, result.css);
 }
+
+await main(process.argv, import.meta.main);
