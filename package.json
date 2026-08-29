@@ -12,6 +12,9 @@
       "import": "./dist/lib.js"
     }
   },
+  "bin": {
+    "bgord-css-purge": "./dist/css-purge.js"
+  },
   "files": [
     "dist/**/*"
   ],
