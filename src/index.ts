@@ -7,7 +7,7 @@ import { StateRegistry } from "./state-registry";
 import * as TokenGenerators from "./tokens";
 import * as UtilityGenerators from "./utilities";
 
-(async function main() {
+void (async function main() {
   const breakpointRegistry = new BreakpointRegistry({ md: "768" });
 
   const BackdropsTokenGenerator = new TokenGenerators.BackdropsTokenGenerator();
