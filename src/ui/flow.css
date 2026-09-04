@@ -1,0 +1,55 @@
+/* Vertical rhythm is opt-in: elements carry no margins, the container spaces them. */
+.c-flow > * + * {
+  margin-block-start: var(--flow-space, var(--spacing-4));
+}
+
+/* Headings bind to the copy beneath them and breathe above. */
+.c-flow > :is(h1, h2, h3, h4, h5, h6) + * {
+  --flow-space: var(--spacing-2);
+}
+
+.c-flow > * + :is(h1, h2, h3) {
+  --flow-space: var(--spacing-8);
+}
+
+.c-flow > * + :is(h4, h5, h6) {
+  --flow-space: var(--spacing-6);
+}
+
+/* Prose lists get their markers back — bare `ul`/`ol` stay unstyled for navigation. */
+.c-flow :is(ul, ol) {
+  padding-inline-start: var(--spacing-6);
+}
+
+.c-flow ul {
+  list-style: disc;
+}
+
+.c-flow ol {
+  list-style: decimal;
+}
+
+.c-flow ul ul {
+  list-style: circle;
+}
+
+.c-flow ol ol {
+  list-style: lower-alpha;
+}
+
+.c-flow li::marker {
+  color: var(--text-muted);
+}
+
+.c-flow li + li,
+.c-flow li > :is(ul, ol) {
+  margin-block-start: var(--spacing-1);
+}
+
+.c-flow dd + dt {
+  margin-block-start: var(--spacing-3);
+}
+
+.c-flow dt + dd {
+  margin-block-start: var(--spacing-1);
+}
