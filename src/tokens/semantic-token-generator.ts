@@ -17,6 +17,8 @@ export class SemanticTokenGenerator extends TokenGenerator {
     "text-muted": "var(--color-neutral-400)", // placeholders, captions, meta
     "text-disabled": "var(--color-neutral-500)", // disabled — AA Large only
     "text-inverted": "var(--color-neutral-950)", // text on filled accents
+    "text-link": "var(--color-brand-300)",
+    "text-link-hover": "var(--color-brand-200)",
 
     /* ───────── BORDERS ──────────────────────────── */
     "border-subtle": "var(--color-alpha-subtle)", // hairline dividers
@@ -50,6 +52,8 @@ export class SemanticTokenGenerator extends TokenGenerator {
     "text-muted": "var(--color-neutral-600)",
     "text-disabled": "var(--color-neutral-500)",
     "text-inverted": "var(--color-neutral-0)",
+    "text-link": "var(--color-brand-600)",
+    "text-link-hover": "var(--color-brand-700)",
 
     "border-subtle": "var(--color-alpha-subtle)",
     "border-default": "var(--color-alpha-soft)",

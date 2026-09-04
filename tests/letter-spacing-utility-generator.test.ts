@@ -12,7 +12,9 @@ describe("LetterSpacingUtilityGenerator", () => {
 
     expect(generator.name).toEqual("Letter spacing utilities");
     expect(generator.css()).toEqualIgnoringWhitespace(`
+      [data-ls='tighter'] { letter-spacing: var(--letter-spacing-tighter); }
       [data-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }
+      [data-ls='snug'] { letter-spacing: var(--letter-spacing-snug); }
       [data-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }
       [data-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }
       [data-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }
@@ -20,7 +22,9 @@ describe("LetterSpacingUtilityGenerator", () => {
       [data-ls='unset'] { letter-spacing: var(--letter-spacing-unset); }
 
       @media (max-width: 768px) {
+        [data-md-ls='tighter'] { letter-spacing: var(--letter-spacing-tighter); }
         [data-md-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }
+        [data-md-ls='snug'] { letter-spacing: var(--letter-spacing-snug); }
         [data-md-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }
         [data-md-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }
         [data-md-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }
@@ -29,8 +33,8 @@ describe("LetterSpacingUtilityGenerator", () => {
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset";
-      "data-md-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset";
+      "data-ls"?: "tighter" | "tight" | "snug" | "normal" | "wide" | "wider" | "widest" | "unset";
+      "data-md-ls"?: "tighter" | "tight" | "snug" | "normal" | "wide" | "wider" | "widest" | "unset";
     `);
   });
 
@@ -41,7 +45,9 @@ describe("LetterSpacingUtilityGenerator", () => {
     const generator = new LetterSpacingUtilityGenerator(breakpoints, LetterSpacingTokenGenerator);
 
     expect(generator.css()).toEqualIgnoringWhitespace(`
+      [data-ls='tighter'] { letter-spacing: var(--letter-spacing-tighter); }
       [data-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }
+      [data-ls='snug'] { letter-spacing: var(--letter-spacing-snug); }
       [data-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }
       [data-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }
       [data-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }
@@ -50,7 +56,9 @@ describe("LetterSpacingUtilityGenerator", () => {
       [data-ls='insane'] { letter-spacing: var(--letter-spacing-insane); }
 
       @media (max-width: 768px) {
+        [data-md-ls='tighter'] { letter-spacing: var(--letter-spacing-tighter); }
         [data-md-ls='tight'] { letter-spacing: var(--letter-spacing-tight); }
+        [data-md-ls='snug'] { letter-spacing: var(--letter-spacing-snug); }
         [data-md-ls='normal'] { letter-spacing: var(--letter-spacing-normal); }
         [data-md-ls='wide'] { letter-spacing: var(--letter-spacing-wide); }
         [data-md-ls='wider'] { letter-spacing: var(--letter-spacing-wider); }
@@ -60,8 +68,8 @@ describe("LetterSpacingUtilityGenerator", () => {
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset" | "insane";
-      "data-md-ls"?: "tight" | "normal" | "wide" | "wider" | "widest" | "unset" | "insane";
+      "data-ls"?: "tighter" | "tight" | "snug" | "normal" | "wide" | "wider" | "widest" | "unset" | "insane";
+      "data-md-ls"?: "tighter" | "tight" | "snug" | "normal" | "wide" | "wider" | "widest" | "unset" | "insane";
     `);
   });
 });

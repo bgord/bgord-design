@@ -5,6 +5,7 @@ export class FontWeightTokenGenerator extends TokenGenerator {
     "font-weight-light": "300",
     "font-weight-regular": "400",
     "font-weight-medium": "500",
+    "font-weight-semibold": "600",
     "font-weight-bold": "700",
     "font-weight-black": "900",
     "font-weight-unset": "unset",

@@ -15,7 +15,8 @@ describe("FontSizeTokenGenerator", () => {
       --font-size-2xl: 1.5rem;
       --font-size-3xl: 1.875rem;
       --font-size-4xl: 2.25rem;
-      --font-size-5xl: 3rem;
+      --font-size-5xl: clamp(2.25rem, 1.75rem + 2.5vw, 3rem);
+      --font-size-6xl: clamp(2.75rem, 2rem + 3.75vw, 3.75rem);
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const FontSizeTokens = {
@@ -27,7 +28,8 @@ describe("FontSizeTokenGenerator", () => {
         "font-size-2xl": "1.5rem",
         "font-size-3xl": "1.875rem",
         "font-size-4xl": "2.25rem",
-        "font-size-5xl": "3rem"
+        "font-size-5xl": "clamp(2.25rem, 1.75rem + 2.5vw, 3rem)",
+        "font-size-6xl": "clamp(2.75rem, 2rem + 3.75vw, 3.75rem)"
       } as const;
 
       export type FontSizeTokenType = keyof typeof FontSizeTokens;
@@ -48,7 +50,8 @@ describe("FontSizeTokenGenerator", () => {
       --font-size-2xl: 1.5rem;
       --font-size-3xl: 1.875rem;
       --font-size-4xl: 2.25rem;
-      --font-size-5xl: 3rem;
+      --font-size-5xl: clamp(2.25rem, 1.75rem + 2.5vw, 3rem);
+      --font-size-6xl: clamp(2.75rem, 2rem + 3.75vw, 3.75rem);
       --font-size-biggie: 100px;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -61,7 +64,8 @@ describe("FontSizeTokenGenerator", () => {
         "font-size-2xl": "1.5rem",
         "font-size-3xl": "1.875rem",
         "font-size-4xl": "2.25rem",
-        "font-size-5xl": "3rem",
+        "font-size-5xl": "clamp(2.25rem, 1.75rem + 2.5vw, 3rem)",
+        "font-size-6xl": "clamp(2.75rem, 2rem + 3.75vw, 3.75rem)",
         "font-size-biggie": "100px"
       } as const;
 

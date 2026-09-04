@@ -10,7 +10,8 @@ export class FontSizeTokenGenerator extends TokenGenerator {
     "font-size-2xl": "1.5rem", // 24 px
     "font-size-3xl": "1.875rem", // 30 px
     "font-size-4xl": "2.25rem", // 36 px
-    "font-size-5xl": "3rem", // 48 px
+    "font-size-5xl": "clamp(2.25rem, 1.75rem + 2.5vw, 3rem)", // 36 → 48 px
+    "font-size-6xl": "clamp(2.75rem, 2rem + 3.75vw, 3.75rem)", // 44 → 60 px
   };
 
   constructor(overrides: TokenConfigType = {}) {

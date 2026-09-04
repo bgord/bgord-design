@@ -20,40 +20,28 @@ describe("GenerateCSS", async () => {
 
     await GenerateCSS.process(generators, tokens);
 
-    expect(bunFile).toHaveBeenCalledTimes(16);
-    // @ts-expect-error
-    expect(bunFile.mock.calls[0][0]).toEqual("src/defaults.css");
+    expect(bunFile.mock.calls.map((call) => call[0])).toEqual([
+      "src/defaults.css",
 
-    // @ts-expect-error
-    expect(bunFile.mock.calls[1][0]).toEqual("src/ui/button.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[2][0]).toEqual("src/ui/input.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[3][0]).toEqual("src/ui/label.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[4][0]).toEqual("src/ui/textarea.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[5][0]).toEqual("src/ui/select.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[6][0]).toEqual("src/ui/visually-hidden.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[7][0]).toEqual("src/ui/badge.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[8][0]).toEqual("src/ui/link.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[9][0]).toEqual("src/ui/checkbox.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[10][0]).toEqual("src/ui/range.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[11][0]).toEqual("src/animations/grow-fade-in.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[12][0]).toEqual("src/animations/shrink-fade-out.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[13][0]).toEqual("src/interactions/grow.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[14][0]).toEqual("src/interactions/rotate-into-focus.css");
-    // @ts-expect-error
-    expect(bunFile.mock.calls[15][0]).toEqual("src/interactions/subtle-scale.css");
+      "src/ui/button.css",
+      "src/ui/input.css",
+      "src/ui/label.css",
+      "src/ui/textarea.css",
+      "src/ui/select.css",
+      "src/ui/flow.css",
+      "src/ui/visually-hidden.css",
+      "src/ui/badge.css",
+      "src/ui/link.css",
+      "src/ui/checkbox.css",
+      "src/ui/range.css",
+
+      "src/animations/grow-fade-in.css",
+      "src/animations/shrink-fade-out.css",
+
+      "src/interactions/grow.css",
+      "src/interactions/rotate-into-focus.css",
+      "src/interactions/subtle-scale.css",
+    ]);
 
     expect(bunWrite.mock.calls[0][0]).toEqual("dist/main.css");
     expect(bunWrite.mock.calls[0][1]).toEqualIgnoringWhitespace(`

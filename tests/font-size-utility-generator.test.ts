@@ -21,6 +21,7 @@ describe("FontSizeUtilityGenerator", () => {
       [data-fs='3xl'] { font-size: var(--font-size-3xl); }
       [data-fs='4xl'] { font-size: var(--font-size-4xl); }
       [data-fs='5xl'] { font-size: var(--font-size-5xl); }
+      [data-fs='6xl'] { font-size: var(--font-size-6xl); }
 
       @media (max-width: 768px) {
         [data-md-fs='xs'] { font-size: var(--font-size-xs); }
@@ -32,11 +33,12 @@ describe("FontSizeUtilityGenerator", () => {
         [data-md-fs='3xl'] { font-size: var(--font-size-3xl); }
         [data-md-fs='4xl'] { font-size: var(--font-size-4xl); }
         [data-md-fs='5xl'] { font-size: var(--font-size-5xl); }
+        [data-md-fs='6xl'] { font-size: var(--font-size-6xl); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
-      "data-md-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
+      "data-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
+      "data-md-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
     `);
   });
 
@@ -54,6 +56,7 @@ describe("FontSizeUtilityGenerator", () => {
       [data-fs='3xl'] { font-size: var(--font-size-3xl); }
       [data-fs='4xl'] { font-size: var(--font-size-4xl); }
       [data-fs='5xl'] { font-size: var(--font-size-5xl); }
+      [data-fs='6xl'] { font-size: var(--font-size-6xl); }
       [data-fs='biggie'] { font-size: var(--font-size-biggie); }
 
       @media (max-width: 768px) {
@@ -66,12 +69,13 @@ describe("FontSizeUtilityGenerator", () => {
         [data-md-fs='3xl'] { font-size: var(--font-size-3xl); }
         [data-md-fs='4xl'] { font-size: var(--font-size-4xl); }
         [data-md-fs='5xl'] { font-size: var(--font-size-5xl); }
+        [data-md-fs='6xl'] { font-size: var(--font-size-6xl); }
         [data-md-fs='biggie'] { font-size: var(--font-size-biggie); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "biggie";
-      "data-md-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "biggie";
+      "data-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "biggie";
+      "data-md-fs"?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "biggie";
     `);
   });
 });

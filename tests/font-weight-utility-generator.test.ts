@@ -15,6 +15,7 @@ describe("FontWeightUtilityGenerator", () => {
       [data-fw='light'] { font-weight: var(--font-weight-light); }
       [data-fw='regular'] { font-weight: var(--font-weight-regular); }
       [data-fw='medium'] { font-weight: var(--font-weight-medium); }
+      [data-fw='semibold'] { font-weight: var(--font-weight-semibold); }
       [data-fw='bold'] { font-weight: var(--font-weight-bold); }
       [data-fw='black'] { font-weight: var(--font-weight-black); }
       [data-fw='unset'] { font-weight: var(--font-weight-unset); }
@@ -23,14 +24,15 @@ describe("FontWeightUtilityGenerator", () => {
         [data-md-fw='light'] { font-weight: var(--font-weight-light); }
         [data-md-fw='regular'] { font-weight: var(--font-weight-regular); }
         [data-md-fw='medium'] { font-weight: var(--font-weight-medium); }
+        [data-md-fw='semibold'] { font-weight: var(--font-weight-semibold); }
         [data-md-fw='bold'] { font-weight: var(--font-weight-bold); }
         [data-md-fw='black'] { font-weight: var(--font-weight-black); }
         [data-md-fw='unset'] { font-weight: var(--font-weight-unset); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset";
-      "data-md-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset";
+      "data-fw"?: "light" | "regular" | "medium" | "semibold" | "bold" | "black" | "unset";
+      "data-md-fw"?: "light" | "regular" | "medium" | "semibold" | "bold" | "black" | "unset";
     `);
   });
 
@@ -42,6 +44,7 @@ describe("FontWeightUtilityGenerator", () => {
       [data-fw='light'] { font-weight: var(--font-weight-light); }
       [data-fw='regular'] { font-weight: var(--font-weight-regular); }
       [data-fw='medium'] { font-weight: var(--font-weight-medium); }
+      [data-fw='semibold'] { font-weight: var(--font-weight-semibold); }
       [data-fw='bold'] { font-weight: var(--font-weight-bold); }
       [data-fw='black'] { font-weight: var(--font-weight-black); }
       [data-fw='unset'] { font-weight: var(--font-weight-unset); }
@@ -51,6 +54,7 @@ describe("FontWeightUtilityGenerator", () => {
         [data-md-fw='light'] { font-weight: var(--font-weight-light); }
         [data-md-fw='regular'] { font-weight: var(--font-weight-regular); }
         [data-md-fw='medium'] { font-weight: var(--font-weight-medium); }
+        [data-md-fw='semibold'] { font-weight: var(--font-weight-semibold); }
         [data-md-fw='bold'] { font-weight: var(--font-weight-bold); }
         [data-md-fw='black'] { font-weight: var(--font-weight-black); }
         [data-md-fw='unset'] { font-weight: var(--font-weight-unset); }
@@ -58,8 +62,8 @@ describe("FontWeightUtilityGenerator", () => {
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset" | "super";
-      "data-md-fw"?: "light" | "regular" | "medium" | "bold" | "black" | "unset" | "super";
+      "data-fw"?: "light" | "regular" | "medium" | "semibold" | "bold" | "black" | "unset" | "super";
+      "data-md-fw"?: "light" | "regular" | "medium" | "semibold" | "bold" | "black" | "unset" | "super";
     `);
   });
 });
