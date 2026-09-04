@@ -36,6 +36,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='neutral-600'] { background: var(--color-neutral-600); }
       [data-bg='neutral-700'] { background: var(--color-neutral-700); }
       [data-bg='neutral-800'] { background: var(--color-neutral-800); }
+      [data-bg='neutral-850'] { background: var(--color-neutral-850); }
       [data-bg='neutral-900'] { background: var(--color-neutral-900); }
       [data-bg='neutral-950'] { background: var(--color-neutral-950); }
 
@@ -83,6 +84,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-hover-bg='neutral-600']:hover:not(:disabled) { background: var(--color-neutral-600); }
       [data-hover-bg='neutral-700']:hover:not(:disabled) { background: var(--color-neutral-700); }
       [data-hover-bg='neutral-800']:hover:not(:disabled) { background: var(--color-neutral-800); }
+      [data-hover-bg='neutral-850']:hover:not(:disabled) { background: var(--color-neutral-850); }
       [data-hover-bg='neutral-900']:hover:not(:disabled) { background: var(--color-neutral-900); }
       [data-hover-bg='neutral-950']:hover:not(:disabled) { background: var(--color-neutral-950); }
 
@@ -130,6 +132,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-focus-bg='neutral-600']:focus-visible { background: var(--color-neutral-600); }
       [data-focus-bg='neutral-700']:focus-visible { background: var(--color-neutral-700); }
       [data-focus-bg='neutral-800']:focus-visible { background: var(--color-neutral-800); }
+      [data-focus-bg='neutral-850']:focus-visible { background: var(--color-neutral-850); }
       [data-focus-bg='neutral-900']:focus-visible { background: var(--color-neutral-900); }
       [data-focus-bg='neutral-950']:focus-visible { background: var(--color-neutral-950); }
 
@@ -178,6 +181,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-bg='neutral-600'] { background: var(--color-neutral-600); }
         [data-md-bg='neutral-700'] { background: var(--color-neutral-700); }
         [data-md-bg='neutral-800'] { background: var(--color-neutral-800); }
+        [data-md-bg='neutral-850'] { background: var(--color-neutral-850); }
         [data-md-bg='neutral-900'] { background: var(--color-neutral-900); }
         [data-md-bg='neutral-950'] { background: var(--color-neutral-950); }
 
@@ -225,6 +229,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-hover-bg='neutral-600']:hover:not(:disabled) { background: var(--color-neutral-600); }
         [data-md-hover-bg='neutral-700']:hover:not(:disabled) { background: var(--color-neutral-700); }
         [data-md-hover-bg='neutral-800']:hover:not(:disabled) { background: var(--color-neutral-800); }
+        [data-md-hover-bg='neutral-850']:hover:not(:disabled) { background: var(--color-neutral-850); }
         [data-md-hover-bg='neutral-900']:hover:not(:disabled) { background: var(--color-neutral-900); }
         [data-md-hover-bg='neutral-950']:hover:not(:disabled) { background: var(--color-neutral-950); }
 
@@ -272,6 +277,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-focus-bg='neutral-600']:focus-visible { background: var(--color-neutral-600); }
         [data-md-focus-bg='neutral-700']:focus-visible { background: var(--color-neutral-700); }
         [data-md-focus-bg='neutral-800']:focus-visible { background: var(--color-neutral-800); }
+        [data-md-focus-bg='neutral-850']:focus-visible { background: var(--color-neutral-850); }
         [data-md-focus-bg='neutral-900']:focus-visible { background: var(--color-neutral-900); }
         [data-md-focus-bg='neutral-950']:focus-visible { background: var(--color-neutral-950); }
 
@@ -311,12 +317,12 @@ describe("BackgroundUtilityGenerator", () => {
     `);
 
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
    `);
   });
 
@@ -347,6 +353,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='neutral-600'] { background: var(--color-neutral-600); }
       [data-bg='neutral-700'] { background: var(--color-neutral-700); }
       [data-bg='neutral-800'] { background: var(--color-neutral-800); }
+      [data-bg='neutral-850'] { background: var(--color-neutral-850); }
       [data-bg='neutral-900'] { background: var(--color-neutral-900); }
       [data-bg='neutral-950'] { background: var(--color-neutral-950); }
 
@@ -396,6 +403,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-hover-bg='neutral-600']:hover:not(:disabled) { background: var(--color-neutral-600); }
       [data-hover-bg='neutral-700']:hover:not(:disabled) { background: var(--color-neutral-700); }
       [data-hover-bg='neutral-800']:hover:not(:disabled) { background: var(--color-neutral-800); }
+      [data-hover-bg='neutral-850']:hover:not(:disabled) { background: var(--color-neutral-850); }
       [data-hover-bg='neutral-900']:hover:not(:disabled) { background: var(--color-neutral-900); }
       [data-hover-bg='neutral-950']:hover:not(:disabled) { background: var(--color-neutral-950); }
 
@@ -445,6 +453,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-focus-bg='neutral-600']:focus-visible { background: var(--color-neutral-600); }
       [data-focus-bg='neutral-700']:focus-visible { background: var(--color-neutral-700); }
       [data-focus-bg='neutral-800']:focus-visible { background: var(--color-neutral-800); }
+      [data-focus-bg='neutral-850']:focus-visible { background: var(--color-neutral-850); }
       [data-focus-bg='neutral-900']:focus-visible { background: var(--color-neutral-900); }
       [data-focus-bg='neutral-950']:focus-visible { background: var(--color-neutral-950); }
 
@@ -495,6 +504,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-bg='neutral-600'] { background: var(--color-neutral-600); }
         [data-md-bg='neutral-700'] { background: var(--color-neutral-700); }
         [data-md-bg='neutral-800'] { background: var(--color-neutral-800); }
+        [data-md-bg='neutral-850'] { background: var(--color-neutral-850); }
         [data-md-bg='neutral-900'] { background: var(--color-neutral-900); }
         [data-md-bg='neutral-950'] { background: var(--color-neutral-950); }
 
@@ -544,6 +554,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-hover-bg='neutral-600']:hover:not(:disabled) { background: var(--color-neutral-600); }
         [data-md-hover-bg='neutral-700']:hover:not(:disabled) { background: var(--color-neutral-700); }
         [data-md-hover-bg='neutral-800']:hover:not(:disabled) { background: var(--color-neutral-800); }
+        [data-md-hover-bg='neutral-850']:hover:not(:disabled) { background: var(--color-neutral-850); }
         [data-md-hover-bg='neutral-900']:hover:not(:disabled) { background: var(--color-neutral-900); }
         [data-md-hover-bg='neutral-950']:hover:not(:disabled) { background: var(--color-neutral-950); }
 
@@ -593,6 +604,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-focus-bg='neutral-600']:focus-visible { background: var(--color-neutral-600); }
         [data-md-focus-bg='neutral-700']:focus-visible { background: var(--color-neutral-700); }
         [data-md-focus-bg='neutral-800']:focus-visible { background: var(--color-neutral-800); }
+        [data-md-focus-bg='neutral-850']:focus-visible { background: var(--color-neutral-850); }
         [data-md-focus-bg='neutral-900']:focus-visible { background: var(--color-neutral-900); }
         [data-md-focus-bg='neutral-950']:focus-visible { background: var(--color-neutral-950); }
 
@@ -633,12 +645,12 @@ describe("BackgroundUtilityGenerator", () => {
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
-      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
+      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900";
     `);
   });
 });
