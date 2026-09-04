@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>bgord-design — preview</title>
+    <link rel="stylesheet" href="../dist/main.min.css" />
+    <style>
+      /* Preview scaffolding only. Prefixed `p-` so it never collides with `.c-` components. */
+      .p-page {
+        display: block;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 24px 96px;
+      }
+
+      .p-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+        margin-bottom: 32px;
+        padding: 12px 0;
+
+        background-color: var(--surface-base);
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .p-bar-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-strong);
+      }
+
+      .p-toggle {
+        display: flex;
+        gap: 2px;
+        padding: 2px;
+        border: 1px solid var(--border-default);
+        border-radius: 8px;
+      }
+
+      .p-toggle button {
+        padding: 5px 12px;
+        font-size: 13px;
+        color: var(--text-secondary);
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .p-toggle button[aria-pressed="true"] {
+        color: var(--text-strong);
+        background-color: var(--interactive-rest);
+      }
+
+      .p-section {
+        display: block;
+        margin-bottom: 56px;
+      }
+
+      .p-section > h2 {
+        margin-bottom: 4px;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--text-strong);
+      }
+
+      .p-note {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text-muted);
+      }
+
+      .p-sub {
+        display: block;
+        margin: 28px 0 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+
+      .p-swatches {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 8px;
+      }
+
+      .p-swatch {
+        display: block;
+        overflow: hidden;
+        border: 1px solid var(--border-subtle);
+        border-radius: 8px;
+      }
+
+      .p-chip {
+        display: block;
+        height: 52px;
+      }
+
+      .p-chip[data-alpha] {
+        background-color: var(--color-neutral-500);
+      }
+
+      .p-chip[data-alpha] span {
+        display: block;
+        height: 100%;
+      }
+
+      .p-swatch-meta {
+        display: block;
+        padding: 7px 9px;
+        background-color: var(--surface-raised);
+      }
+
+      .p-swatch-name {
+        display: block;
+        font-family: var(--font-family-mono);
+        font-size: 11px;
+        color: var(--text-secondary);
+      }
+
+      .p-swatch-value {
+        display: block;
+        margin-top: 2px;
+        font-family: var(--font-family-mono);
+        font-size: 10px;
+        color: var(--text-muted);
+      }
+
+      .p-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .p-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        max-width: 320px;
+      }
+
+      .p-panel {
+        display: block;
+        padding: 20px;
+        background-color: var(--surface-raised);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+      }
+
+      .p-label {
+        display: block;
+        min-width: 74px;
+        font-family: var(--font-family-mono);
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .p-type-row {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .p-elevation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 72px;
+        font-family: var(--font-family-mono);
+        font-size: 11px;
+        color: var(--text-muted);
+        background-color: var(--surface-raised);
+        border-radius: 10px;
+      }
+
+      /* Marks the raw-HTML section so it is obvious it carries no styling of its own. */
+      .p-raw {
+        display: block;
+        padding: 20px;
+        border: 1px dashed var(--border-strong);
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="p-page">
+      <div class="p-bar">
+        <div class="p-bar-title">bgord-design — preview</div>
+        <div class="p-toggle" id="theme-toggle">
+          <button type="button" data-set-theme="dark">Dark</button>
+          <button type="button" data-set-theme="light">Light</button>
+          <button type="button" data-set-theme="system">System</button>
+        </div>
+      </div>
+
+      <!-- ───────────────────────── COLOR ───────────────────────── -->
+
+      <div class="p-section">
+        <h2>Semantic aliases</h2>
+        <div class="p-note">
+          What components should consume. These are the only tokens that change between themes.
+        </div>
+
+        <div class="p-sub">Surfaces</div>
+        <div class="p-swatches" data-tokens="surface-base,surface-raised,surface-overlay,surface-sunken"></div>
+
+        <div class="p-sub">Text</div>
+        <div
+          class="p-swatches"
+          data-tokens="text-strong,text-primary,text-secondary,text-muted,text-disabled,text-inverted"
+        ></div>
+
+        <div class="p-sub">Borders</div>
+        <div class="p-swatches" data-tokens="border-subtle,border-default,border-strong" data-alpha></div>
+
+        <div class="p-sub">Interactive fills</div>
+        <div
+          class="p-swatches"
+          data-tokens="interactive-rest,interactive-hover,interactive-active,interactive-disabled"
+        ></div>
+      </div>
+
+      <div class="p-section">
+        <h2>Neutral ramp</h2>
+        <div class="p-note">
+          Chroma rises toward the dark end so surfaces carry the tint while copy stays near-gray.
+          Theme-independent — light mode reads the same ramp from the other direction.
+        </div>
+        <div
+          class="p-swatches"
+          data-tokens="color-neutral-0,color-neutral-50,color-neutral-100,color-neutral-200,color-neutral-300,color-neutral-400,color-neutral-500,color-neutral-600,color-neutral-700,color-neutral-800,color-neutral-850,color-neutral-900,color-neutral-950"
+        ></div>
+
+        <div class="p-sub">Alpha (shown over neutral-500)</div>
+        <div
+          class="p-swatches"
+          data-tokens="color-alpha-subtle,color-alpha-soft,color-alpha-medium"
+          data-alpha
+        ></div>
+      </div>
+
+      <div class="p-section">
+        <h2>Accents</h2>
+        <div class="p-note">Untouched so far — brand, positive, danger and warning are unchanged.</div>
+
+        <div class="p-sub">Brand</div>
+        <div
+          class="p-swatches"
+          data-tokens="color-brand-50,color-brand-100,color-brand-200,color-brand-300,color-brand-400,color-brand-500,color-brand-600,color-brand-700,color-brand-800,color-brand-900"
+        ></div>
+
+        <div class="p-sub">Positive</div>
+        <div
+          class="p-swatches"
+          data-tokens="color-positive-0,color-positive-100,color-positive-200,color-positive-400,color-positive-600,color-positive-800,color-positive-900"
+        ></div>
+
+        <div class="p-sub">Danger</div>
+        <div
+          class="p-swatches"
+          data-tokens="color-danger-0,color-danger-100,color-danger-200,color-danger-400,color-danger-600,color-danger-800,color-danger-900"
+        ></div>
+
+        <div class="p-sub">Warning</div>
+        <div
+          class="p-swatches"
+          data-tokens="color-warning-100,color-warning-300,color-warning-500,color-warning-700,color-warning-900"
+        ></div>
+      </div>
+
+      <!-- ─────────────────────── TYPOGRAPHY ─────────────────────── -->
+
+      <div class="p-section">
+        <h2>Type scale</h2>
+        <div class="p-note">Sizes as tokens. Line-height and tracking are not yet paired per size.</div>
+        <div id="type-scale"></div>
+      </div>
+
+      <div class="p-section">
+        <h2>Weights &amp; families</h2>
+
+        <div class="p-sub">Font weight</div>
+        <div id="weights"></div>
+
+        <div class="p-sub">Font family</div>
+        <div id="families"></div>
+      </div>
+
+      <div class="p-section">
+        <h2>Raw HTML — no classes, no utilities</h2>
+        <div class="p-note">
+          Exactly what an app gets out of the box. Everything inside the dashed border is plain markup.
+        </div>
+
+        <div class="p-raw">
+          <h1>Heading level 1</h1>
+          <h2>Heading level 2</h2>
+          <h3>Heading level 3</h3>
+          <h4>Heading level 4</h4>
+          <h5>Heading level 5</h5>
+          <h6>Heading level 6</h6>
+
+          <p>
+            A paragraph of body copy with a <a href="#">plain anchor</a>, some <strong>strong</strong> and
+            <em>emphasised</em> text, a bit of <code>inline_code()</code>, an <abbr title="abbreviation">abbr</abbr>,
+            and <small>small print</small> trailing the sentence.
+          </p>
+
+          <p>
+            A second paragraph, to show whether consecutive paragraphs are separated at all.
+          </p>
+
+          <ul>
+            <li>First unordered item</li>
+            <li>Second unordered item</li>
+          </ul>
+
+          <ol>
+            <li>First ordered item</li>
+            <li>Second ordered item</li>
+          </ol>
+
+          <dl>
+            <dt>Term</dt>
+            <dd>The definition that belongs to the term above.</dd>
+          </dl>
+
+          <blockquote>A block quotation, which should read as set apart from the surrounding copy.</blockquote>
+
+          <pre><code>const tokens = generator.getTokens();</code></pre>
+
+          <p>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the palette.</p>
+
+          <hr />
+
+          <table>
+            <caption>A caption for the table</caption>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Value</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>surface-base</td>
+                <td>neutral-950</td>
+                <td>App canvas</td>
+              </tr>
+              <tr>
+                <td>surface-raised</td>
+                <td>neutral-900</td>
+                <td>Card, sheet</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <details>
+            <summary>A disclosure summary</summary>
+            <p>The content revealed when the disclosure is open.</p>
+          </details>
+
+          <figure>
+            <figcaption>A figure caption.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- ─────────────────────── COMPONENTS ─────────────────────── -->
+
+      <div class="p-section">
+        <h2>Buttons</h2>
+        <div class="p-note">Hover and focus states need interaction — tab through to see the focus ring.</div>
+
+        <div class="p-row">
+          <span class="p-label">variants</span>
+          <button class="c-button" data-variant="primary">Primary</button>
+          <button class="c-button" data-variant="secondary">Secondary</button>
+          <button class="c-button" data-variant="bare">Bare</button>
+          <button class="c-button" data-variant="with-icon"><span>◆</span> With icon</button>
+          <a class="c-button" data-variant="primary" href="#">Anchor</a>
+        </div>
+
+        <div class="p-row">
+          <span class="p-label">disabled</span>
+          <button class="c-button" data-variant="primary" disabled>Primary</button>
+          <button class="c-button" data-variant="secondary" disabled>Secondary</button>
+          <button class="c-button" data-variant="bare" disabled>Bare</button>
+        </div>
+
+        <div class="p-row">
+          <span class="p-label">missing</span>
+          <span class="p-swatch-value">no brand-filled variant, no destructive variant, no size variants</span>
+        </div>
+      </div>
+
+      <div class="p-section">
+        <h2>Form controls</h2>
+
+        <div class="p-panel">
+          <div class="p-stack">
+            <div>
+              <label class="c-label" for="p-input">Text input</label>
+              <input class="c-input" id="p-input" name="p-input" type="text" placeholder="Placeholder text" />
+            </div>
+
+            <div>
+              <label class="c-label" for="p-input-filled">Filled</label>
+              <input class="c-input" id="p-input-filled" name="p-input-filled" type="text" value="A typed value" />
+            </div>
+
+            <div>
+              <label class="c-label" for="p-input-invalid">Invalid</label>
+              <input
+                class="c-input"
+                id="p-input-invalid"
+                name="p-input-invalid"
+                type="email"
+                value="not-an-email"
+                placeholder="name@example.com"
+              />
+            </div>
+
+            <div>
+              <label class="c-label" for="p-input-disabled">Disabled</label>
+              <input class="c-input" id="p-input-disabled" name="p-input-disabled" type="text" value="Disabled" disabled />
+            </div>
+
+            <div>
+              <label class="c-label" for="p-date">Date</label>
+              <input class="c-input" id="p-date" name="p-date" type="date" />
+            </div>
+
+            <div>
+              <label class="c-label" for="p-textarea">Textarea</label>
+              <textarea class="c-textarea" id="p-textarea" name="p-textarea" placeholder="Placeholder text"></textarea>
+            </div>
+
+            <div>
+              <label class="c-label" for="p-select">Select</label>
+              <div class="c-select-wrapper">
+                <select class="c-select" id="p-select" name="p-select">
+                  <option>First option</option>
+                  <option>Second option</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="c-label" for="p-range">Range</label>
+              <input class="c-range" id="p-range" name="p-range" type="range" />
+            </div>
+          </div>
+
+          <div class="p-sub">Checkbox</div>
+          <div class="p-row">
+            <input class="c-checkbox" id="p-cb-1" name="p-cb-1" type="checkbox" />
+            <label class="c-label" for="p-cb-1">Unchecked</label>
+
+            <input class="c-checkbox" id="p-cb-2" name="p-cb-2" type="checkbox" checked />
+            <label class="c-label" for="p-cb-2">Checked</label>
+
+            <input class="c-checkbox" id="p-cb-3" name="p-cb-3" type="checkbox" disabled />
+            <label class="c-label" for="p-cb-3">Disabled</label>
+
+            <input class="c-checkbox" id="p-cb-4" name="p-cb-4" type="checkbox" checked disabled />
+            <label class="c-label" for="p-cb-4">Checked disabled</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-section">
+        <h2>Badges &amp; links</h2>
+
+        <div class="p-row">
+          <span class="p-label">badge</span>
+          <span class="c-badge" data-variant="primary">Primary</span>
+          <span class="c-badge" data-variant="outline">Outline</span>
+        </div>
+
+        <div class="p-row">
+          <span class="p-label">link</span>
+          <a class="c-link" href="#">A standalone link</a>
+        </div>
+
+        <div class="p-row">
+          <span class="p-label">in prose</span>
+          <span>Body copy with <a class="c-link" href="#">a link inside it</a> to show relative sizing.</span>
+        </div>
+      </div>
+
+      <!-- ────────────────────── PRIMITIVES ────────────────────── -->
+
+      <div class="p-section">
+        <h2>Elevation</h2>
+        <div class="p-note">Shadow tokens are still tuned for light backgrounds.</div>
+        <div class="p-swatches" id="shadows"></div>
+      </div>
+
+      <div class="p-section">
+        <h2>Radius</h2>
+        <div class="p-swatches" id="radii"></div>
+      </div>
+
+      <div class="p-section">
+        <h2>Spacing</h2>
+        <div id="spacing"></div>
+      </div>
+    </div>
+
+    <script>
+      const KEY = "bgord-design-preview-theme";
+      const root = document.documentElement;
+
+      function applyTheme(theme) {
+        if (theme === "system") delete root.dataset.theme;
+        else root.dataset.theme = theme;
+
+        for (const button of document.querySelectorAll("[data-set-theme]")) {
+          button.setAttribute("aria-pressed", String(button.dataset.setTheme === theme));
+        }
+
+        try {
+          localStorage.setItem(KEY, theme);
+        } catch {}
+
+        render();
+      }
+
+      document.getElementById("theme-toggle").addEventListener("click", (event) => {
+        const button = event.target.closest("[data-set-theme]");
+        if (button) applyTheme(button.dataset.setTheme);
+      });
+
+      /* Resolves a token to a real color by letting the browser compute it. */
+      const probe = document.createElement("div");
+      probe.style.display = "none";
+      document.body.appendChild(probe);
+
+      function resolve(token) {
+        probe.style.backgroundColor = "";
+        probe.style.backgroundColor = `var(--${token})`;
+        return getComputedStyle(probe).backgroundColor;
+      }
+
+      function renderSwatches() {
+        for (const grid of document.querySelectorAll("[data-tokens]")) {
+          const alpha = grid.hasAttribute("data-alpha");
+
+          grid.innerHTML = grid.dataset.tokens
+            .split(",")
+            .map((token) => {
+              const chip = alpha
+                ? `<div class="p-chip" data-alpha><span style="background-color: var(--${token})"></span></div>`
+                : `<div class="p-chip" style="background-color: var(--${token})"></div>`;
+
+              return `<div class="p-swatch">
+                  ${chip}
+                  <div class="p-swatch-meta">
+                    <div class="p-swatch-name">${token}</div>
+                    <div class="p-swatch-value">${resolve(token)}</div>
+                  </div>
+                </div>`;
+            })
+            .join("");
+        }
+      }
+
+      const FONT_SIZES = ["xs", "sm", "base", "lg", "xl", "2xl", "3xl", "4xl", "5xl"];
+      const WEIGHTS = ["light", "regular", "medium", "bold", "black"];
+      const FAMILIES = ["sans", "serif", "mono"];
+      const SHADOWS = ["xs", "sm", "md", "lg", "xl", "inner"];
+      const RADII = ["none", "xs", "sm", "md", "lg", "xl", "pill"];
+      const SPACING = ["0-5", "1", "1-5", "2", "2-5", "3", "4", "5", "6", "8", "12", "16"];
+
+      function px(value) {
+        probe.style.backgroundColor = "";
+        probe.style.width = `var(--${value})`;
+        const width = getComputedStyle(probe).width;
+        probe.style.width = "";
+        return width;
+      }
+
+      function renderPrimitives() {
+        document.getElementById("type-scale").innerHTML = FONT_SIZES.map(
+          (size) => `<div class="p-type-row">
+              <span class="p-label">${size}</span>
+              <span style="font-size: var(--font-size-${size})">The quick brown fox</span>
+            </div>`,
+        ).join("");
+
+        document.getElementById("weights").innerHTML = WEIGHTS.map(
+          (weight) => `<div class="p-type-row">
+              <span class="p-label">${weight}</span>
+              <span style="font-weight: var(--font-weight-${weight}); font-size: var(--font-size-lg)">
+                The quick brown fox
+              </span>
+            </div>`,
+        ).join("");
+
+        document.getElementById("families").innerHTML = FAMILIES.map(
+          (family) => `<div class="p-type-row">
+              <span class="p-label">${family}</span>
+              <span style="font-family: var(--font-family-${family}); font-size: var(--font-size-lg)">
+                The quick brown fox
+              </span>
+            </div>`,
+        ).join("");
+
+        document.getElementById("shadows").innerHTML = SHADOWS.map(
+          (shadow) => `<div class="p-elevation" style="box-shadow: var(--shadow-${shadow})">${shadow}</div>`,
+        ).join("");
+
+        document.getElementById("radii").innerHTML = RADII.map(
+          (radius) =>
+            `<div class="p-elevation" style="border-radius: var(--radius-${radius}); background-color: var(--interactive-rest)">${radius}</div>`,
+        ).join("");
+
+        document.getElementById("spacing").innerHTML = SPACING.map(
+          (step) => `<div class="p-row">
+              <span class="p-label">${step}</span>
+              <span style="display: block; height: 12px; border-radius: 3px; background-color: var(--color-brand-400); width: var(--spacing-${step})"></span>
+              <span class="p-swatch-value">${px(`spacing-${step}`)}</span>
+            </div>`,
+        ).join("");
+      }
+
+      function render() {
+        renderSwatches();
+        renderPrimitives();
+      }
+
+      let stored = "system";
+      try {
+        stored = localStorage.getItem(KEY) ?? "system";
+      } catch {}
+
+      matchMedia("(prefers-color-scheme: light)").addEventListener("change", render);
+
+      applyTheme(stored);
+    </script>
+  </body>
+</html>
