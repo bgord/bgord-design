@@ -1,26 +1,30 @@
 .c-link {
-  color: var(--color-brand-500);
-  font-size: var(--font-size-sm);
+  color: var(--text-link);
+
+  /* Inherits size and tracking so it never shrinks inside a sentence. */
+  font-size: inherit;
   font-weight: var(--font-weight-medium);
-  letter-spacing: var(--letter-spacing-wide);
 
-  text-decoration: none;
-  text-decoration-color: currentColor;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
 
-  transition: color var(--motion-fast) ease;
+  transition: color var(--motion-fast) var(--ease-out);
 }
 
 .c-link:hover {
-  color: var(--color-brand-400);
-  text-decoration: underline;
-  text-decoration-color: var(--color-brand-400);
+  color: var(--text-link-hover);
+  text-decoration-thickness: 2px;
 }
 
 .c-link:focus-visible {
   outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
   outline-offset: var(--border-width-thin);
+  border-radius: var(--radius-xs);
 }
 
-.c-link:active {
-  opacity: var(--opacity-high);
+@media (prefers-reduced-motion: reduce) {
+  .c-link {
+    transition: none;
+  }
 }
