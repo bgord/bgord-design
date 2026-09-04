@@ -23,11 +23,17 @@ export class SemanticTokenGenerator extends TokenGenerator {
     "border-default": "var(--color-alpha-soft)", // control borders at rest
     "border-strong": "var(--color-alpha-medium)", // emphasis, hover borders
 
-    /* ───────── INTERACTIVE FILLS ────────────────── */
-    "interactive-rest": "var(--color-neutral-850)", // input & secondary button fill
+    /* ───────── FORM CONTROL WELLS ───────────────── */
+    "interactive-rest": "var(--color-neutral-850)", // input, select, textarea, checkbox
     "interactive-hover": "var(--color-neutral-800)",
     "interactive-active": "var(--color-neutral-700)",
     "interactive-disabled": "var(--color-neutral-900)",
+
+    /* ───────── FILLED EMPHASIS SURFACES ─────────── */
+    "fill-muted": "var(--color-neutral-800)", // badge, secondary button
+    "fill-strong": "var(--color-neutral-700)", // their hover
+    "fill-inverted": "var(--color-neutral-200)", // primary button
+    "fill-inverted-hover": "var(--color-neutral-0)",
   };
 
   light: TokenConfigType = {
@@ -53,6 +59,11 @@ export class SemanticTokenGenerator extends TokenGenerator {
     "interactive-hover": "var(--color-neutral-50)",
     "interactive-active": "var(--color-neutral-100)",
     "interactive-disabled": "var(--color-neutral-50)",
+
+    "fill-muted": "var(--color-neutral-100)",
+    "fill-strong": "var(--color-neutral-200)",
+    "fill-inverted": "var(--color-neutral-900)",
+    "fill-inverted-hover": "var(--color-neutral-950)",
   };
 
   constructor(overrides: TokenConfigType = {}, lightOverrides: TokenConfigType = {}) {

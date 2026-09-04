@@ -3,8 +3,8 @@
 
   background: linear-gradient(
     to right,
-    var(--color-neutral-500) var(--percentage, 15%),
-    var(--color-neutral-700) var(--percentage, 15%)
+    var(--text-secondary) var(--percentage, 15%),
+    var(--fill-strong) var(--percentage, 15%)
   );
 
   border-radius: var(--radius-md);
@@ -28,19 +28,19 @@
   width: 14px;
   height: 14px;
 
-  background-color: var(--color-neutral-300);
+  background-color: var(--text-secondary);
 }
 
 .c-range:hover::-webkit-slider-thumb,
 .c-range:hover::-moz-range-thumb,
 .c-range:hover::-ms-thumb {
-  background-color: var(--color-neutral-200);
+  background-color: var(--text-primary);
 }
 
 .c-range:active::-webkit-slider-thumb,
 .c-range:active::-moz-range-thumb,
 .c-range:active::-ms-thumb {
-  background-color: var(--color-neutral-100);
+  background-color: var(--text-strong);
 }
 
 .c-range::-webkit-slider-runnable-track,

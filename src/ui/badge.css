@@ -23,14 +23,14 @@
 
 .c-badge[data-variant="primary"] {
   padding: var(--spacing-1) var(--spacing-1-5);
-  color: var(--color-neutral-300);
-  background-color: var(--color-neutral-700);
+  color: var(--text-secondary);
+  background-color: var(--fill-muted);
   border: none;
   border-radius: var(--radius-sm);
 }
 
 .c-badge[data-variant="outline"] {
-  color: var(--color-neutral-300);
+  color: var(--text-secondary);
   background-color: transparent;
-  border: var(--border-width-hairline) var(--border-style-solid) var(--color-neutral-400);
+  border: var(--border-width-hairline) var(--border-style-solid) var(--border-strong);
 }

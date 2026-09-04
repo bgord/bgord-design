@@ -8,13 +8,13 @@ describe("FocusRingTokenGenerator", () => {
     expect(generator.getConfig()).toEqual(generator.base);
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
       --focus-ring-brand: var(--color-brand-500);
-      --focus-ring-neutral: var(--color-neutral-400);
+      --focus-ring-neutral: var(--text-secondary);
       --focus-ring-danger: var(--color-danger-200);
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const FocusRingTokens = {
         "focus-ring-brand": "var(--color-brand-500)",
-        "focus-ring-neutral": "var(--color-neutral-400)",
+        "focus-ring-neutral": "var(--text-secondary)",
         "focus-ring-danger": "var(--color-danger-200)"
       } as const;
 
@@ -29,14 +29,14 @@ describe("FocusRingTokenGenerator", () => {
     expect(generator.getConfig()).toEqual({ ...generator.base, ...overrides });
     expect(generator.getTokens()).toEqualIgnoringWhitespace(`
       --focus-ring-brand: var(--color-brand-500);
-      --focus-ring-neutral: var(--color-neutral-400);
+      --focus-ring-neutral: var(--text-secondary);
       --focus-ring-danger: var(--color-danger-200);
       --focus-ring-black: black;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const FocusRingTokens = {
         "focus-ring-brand": "var(--color-brand-500)",
-        "focus-ring-neutral": "var(--color-neutral-400)",
+        "focus-ring-neutral": "var(--text-secondary)",
         "focus-ring-danger": "var(--color-danger-200)",
         "focus-ring-black": "black"
       } as const;

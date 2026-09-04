@@ -25,6 +25,10 @@ describe("SemanticTokenGenerator", () => {
       --interactive-hover: var(--color-neutral-800);
       --interactive-active: var(--color-neutral-700);
       --interactive-disabled: var(--color-neutral-900);
+      --fill-muted: var(--color-neutral-800);
+      --fill-strong: var(--color-neutral-700);
+      --fill-inverted: var(--color-neutral-200);
+      --fill-inverted-hover: var(--color-neutral-0);
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const SemanticTokens = {
@@ -45,7 +49,11 @@ describe("SemanticTokenGenerator", () => {
         "interactive-rest": "var(--color-neutral-850)",
         "interactive-hover": "var(--color-neutral-800)",
         "interactive-active": "var(--color-neutral-700)",
-        "interactive-disabled": "var(--color-neutral-900)"
+        "interactive-disabled": "var(--color-neutral-900)",
+        "fill-muted": "var(--color-neutral-800)",
+        "fill-strong": "var(--color-neutral-700)",
+        "fill-inverted": "var(--color-neutral-200)",
+        "fill-inverted-hover": "var(--color-neutral-0)"
       } as const;
 
       export type SemanticTokenType = keyof typeof SemanticTokens;
@@ -76,6 +84,10 @@ describe("SemanticTokenGenerator", () => {
       --interactive-hover: var(--color-neutral-50);
       --interactive-active: var(--color-neutral-100);
       --interactive-disabled: var(--color-neutral-50);
+      --fill-muted: var(--color-neutral-100);
+      --fill-strong: var(--color-neutral-200);
+      --fill-inverted: var(--color-neutral-900);
+      --fill-inverted-hover: var(--color-neutral-950);
     `);
   });
 

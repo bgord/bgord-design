@@ -47,31 +47,31 @@
   min-inline-size: 6.5rem;
   padding-inline: var(--spacing-2);
 
-  color: var(--color-neutral-800);
-  background-color: var(--color-neutral-300);
+  color: var(--text-inverted);
+  background-color: var(--fill-inverted);
 }
 .c-button[data-variant="primary"]:hover:not(:disabled) {
-  background-color: var(--color-neutral-400);
+  background-color: var(--fill-inverted-hover);
 }
 
 .c-button[data-variant="secondary"] {
   min-inline-size: 6.5rem;
   padding-inline: var(--spacing-2);
 
-  color: var(--color-neutral-300);
-  background-color: var(--color-neutral-700);
+  color: var(--text-secondary);
+  background-color: var(--fill-muted);
 }
 .c-button[data-variant="secondary"]:hover:not(:disabled) {
-  background-color: var(--color-neutral-800);
+  background-color: var(--fill-strong);
 }
 
 .c-button[data-variant="bare"] {
   padding-inline: var(--spacing-1);
-  color: var(--color-neutral-300);
+  color: var(--text-secondary);
 }
 .c-button[data-variant="bare"]:hover:not(:disabled) {
   opacity: var(--opacity-high);
-  color: var(--color-neutral-200);
+  color: var(--text-strong);
 }
 
 .c-button[data-variant="with-icon"] {
@@ -80,11 +80,11 @@
   justify-content: center;
   gap: var(--spacing-1);
 
-  color: var(--color-neutral-300);
+  color: var(--text-secondary);
 }
 .c-button[data-variant="with-icon"]:hover:not(:disabled) {
   opacity: var(--opacity-high);
-  color: var(--color-neutral-200);
+  color: var(--text-strong);
 }
 
 a.c-button {

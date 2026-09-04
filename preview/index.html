@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>bgord-design — preview</title>
-    <link rel="stylesheet" href="../dist/main.min.css" />
+    <link href="../dist/main.min.css" rel="stylesheet" />
     <style>
       /* Preview scaffolding only. Prefixed `p-` so it never collides with `.c-` components. */
       .p-page {
@@ -203,9 +203,9 @@
       <div class="p-bar">
         <div class="p-bar-title">bgord-design — preview</div>
         <div class="p-toggle" id="theme-toggle">
-          <button type="button" data-set-theme="dark">Dark</button>
-          <button type="button" data-set-theme="light">Light</button>
-          <button type="button" data-set-theme="system">System</button>
+          <button data-set-theme="dark" type="button" >Dark</button>
+          <button data-set-theme="light" type="button" >Light</button>
+          <button data-set-theme="system" type="button" >System</button>
         </div>
       </div>
 
@@ -227,12 +227,18 @@
         ></div>
 
         <div class="p-sub">Borders</div>
-        <div class="p-swatches" data-tokens="border-subtle,border-default,border-strong" data-alpha></div>
+        <div class="p-swatches" data-alpha data-tokens="border-subtle,border-default,border-strong" ></div>
 
-        <div class="p-sub">Interactive fills</div>
+        <div class="p-sub">Form control wells</div>
         <div
           class="p-swatches"
           data-tokens="interactive-rest,interactive-hover,interactive-active,interactive-disabled"
+        ></div>
+
+        <div class="p-sub">Filled emphasis surfaces</div>
+        <div
+          class="p-swatches"
+          data-tokens="fill-muted,fill-strong,fill-inverted,fill-inverted-hover"
         ></div>
       </div>
 
@@ -250,8 +256,8 @@
         <div class="p-sub">Alpha (shown over neutral-500)</div>
         <div
           class="p-swatches"
-          data-tokens="color-alpha-subtle,color-alpha-soft,color-alpha-medium"
           data-alpha
+          data-tokens="color-alpha-subtle,color-alpha-soft,color-alpha-medium"
         ></div>
       </div>
 
@@ -306,9 +312,23 @@
         <h2>Raw HTML — no classes, no utilities</h2>
         <div class="p-note">
           Exactly what an app gets out of the box. Everything inside the dashed border is plain markup.
+          Toggle <code>.c-flow</code> to add vertical rhythm and prose list markers.
         </div>
 
-        <div class="p-raw">
+        <div class="p-row">
+
+
+          <button class="c-button" data-variant="secondary" id="flow-toggle" type="button">Toggle .c-flow</button>
+
+
+          <span class="p-swatch-value" id="flow-state"></span>
+
+
+        </div>
+
+
+
+        <div class="p-raw" id="raw">
           <h1>Heading level 1</h1>
           <h2>Heading level 2</h2>
           <h3>Heading level 3</h3>
@@ -318,7 +338,7 @@
 
           <p>
             A paragraph of body copy with a <a href="#">plain anchor</a>, some <strong>strong</strong> and
-            <em>emphasised</em> text, a bit of <code>inline_code()</code>, an <abbr title="abbreviation">abbr</abbr>,
+            <em>emphasized</em> text, a bit of <code>inline_code()</code>, an <abbr title="abbreviation">abbr</abbr>,
             and <small>small print</small> trailing the sentence.
           </p>
 
@@ -418,7 +438,7 @@
           <div class="p-stack">
             <div>
               <label class="c-label" for="p-input">Text input</label>
-              <input class="c-input" id="p-input" name="p-input" type="text" placeholder="Placeholder text" />
+              <input class="c-input" id="p-input" name="p-input" placeholder="Placeholder text" type="text" />
             </div>
 
             <div>
@@ -432,15 +452,15 @@
                 class="c-input"
                 id="p-input-invalid"
                 name="p-input-invalid"
+                placeholder="name@example.com"
                 type="email"
                 value="not-an-email"
-                placeholder="name@example.com"
               />
             </div>
 
             <div>
               <label class="c-label" for="p-input-disabled">Disabled</label>
-              <input class="c-input" id="p-input-disabled" name="p-input-disabled" type="text" value="Disabled" disabled />
+              <input class="c-input" disabled id="p-input-disabled" name="p-input-disabled" type="text" value="Disabled" />
             </div>
 
             <div>
@@ -474,13 +494,13 @@
             <input class="c-checkbox" id="p-cb-1" name="p-cb-1" type="checkbox" />
             <label class="c-label" for="p-cb-1">Unchecked</label>
 
-            <input class="c-checkbox" id="p-cb-2" name="p-cb-2" type="checkbox" checked />
+            <input checked class="c-checkbox" id="p-cb-2" name="p-cb-2" type="checkbox" />
             <label class="c-label" for="p-cb-2">Checked</label>
 
-            <input class="c-checkbox" id="p-cb-3" name="p-cb-3" type="checkbox" disabled />
+            <input class="c-checkbox" disabled id="p-cb-3" name="p-cb-3" type="checkbox" />
             <label class="c-label" for="p-cb-3">Disabled</label>
 
-            <input class="c-checkbox" id="p-cb-4" name="p-cb-4" type="checkbox" checked disabled />
+            <input checked class="c-checkbox" disabled id="p-cb-4" name="p-cb-4" type="checkbox" />
             <label class="c-label" for="p-cb-4">Checked disabled</label>
           </div>
         </div>
@@ -641,6 +661,20 @@
             </div>`,
         ).join("");
       }
+
+      const raw = document.getElementById("raw");
+      const flowState = document.getElementById("flow-state");
+
+      function renderFlowState() {
+        flowState.textContent = raw.classList.contains("c-flow") ? "c-flow on" : "c-flow off";
+      }
+
+      document.getElementById("flow-toggle").addEventListener("click", () => {
+        raw.classList.toggle("c-flow");
+        renderFlowState();
+      });
+
+      renderFlowState();
 
       function render() {
         renderSwatches();
