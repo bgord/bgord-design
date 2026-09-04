@@ -33,6 +33,7 @@ void (async function main() {
   const SizeTokenGenerator = new TokenGenerators.SizeTokenGenerator();
   const MotionTokenGenerator = new TokenGenerators.MotionTokenGenerator();
   const FocusRingTokenGenerator = new TokenGenerators.FocusRingTokenGenerator();
+  const SemanticTokenGenerator = new TokenGenerators.SemanticTokenGenerator();
 
   const tokens = [
     AlphaTokenGenerator,
@@ -58,6 +59,7 @@ void (async function main() {
     ZIndexTokenGenerator,
     MotionTokenGenerator,
     FocusRingTokenGenerator,
+    SemanticTokenGenerator,
   ];
 
   const BackdropUtilityGenerator = new UtilityGenerators.BackdropUtilityGenerator(
