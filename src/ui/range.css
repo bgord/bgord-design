@@ -1,5 +1,7 @@
+/* Vendor pseudo-elements MUST stay in separate rules: a selector list is invalid as a
+   whole if any component is unrecognized, so grouping them drops the rule everywhere. */
 .c-range {
-  height: 8px;
+  block-size: 6px;
 
   background: linear-gradient(
     to right,
@@ -7,45 +9,98 @@
     var(--fill-strong) var(--percentage, 15%)
   );
 
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-pill);
 
   appearance: none;
+  cursor: pointer;
 }
 
 .c-range:focus-visible {
   outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
-  outline-offset: var(--border-width-thin);
-  border-radius: var(--radius-sm);
+  outline-offset: var(--spacing-1);
 }
 
-.c-range::-webkit-slider-thumb,
-.c-range::-moz-range-thumb,
-.c-range::-ms-thumb {
-  appearance: none;
-  border: none;
-  border-radius: var(--radius-circle);
+.c-range:disabled {
+  opacity: var(--opacity-medium);
+  cursor: default;
+}
 
-  width: 14px;
-  height: 14px;
+/* ───────── TRACK ─────────────────────────────── */
+
+.c-range::-webkit-slider-runnable-track {
+  appearance: none;
+  block-size: 6px;
+  background: transparent;
+  border: none;
+}
+
+.c-range::-moz-range-track {
+  block-size: 6px;
+  background: transparent;
+  border: none;
+}
+
+/* ───────── THUMB ─────────────────────────────── */
+
+.c-range::-webkit-slider-thumb {
+  appearance: none;
+
+  inline-size: 16px;
+  block-size: 16px;
+  margin-block-start: -5px;
 
   background-color: var(--text-secondary);
+
+  border: var(--border-width-thin) var(--border-style-solid) var(--surface-base);
+  border-radius: var(--radius-circle);
+
+  transition:
+    background-color var(--motion-fast) var(--ease-out),
+    scale var(--motion-fast) var(--ease-out);
 }
 
-.c-range:hover::-webkit-slider-thumb,
-.c-range:hover::-moz-range-thumb,
-.c-range:hover::-ms-thumb {
-  background-color: var(--text-primary);
-}
-
-.c-range:active::-webkit-slider-thumb,
-.c-range:active::-moz-range-thumb,
-.c-range:active::-ms-thumb {
-  background-color: var(--text-strong);
-}
-
-.c-range::-webkit-slider-runnable-track,
-.c-range::-moz-range-track,
-.c-range::-ms-track {
+.c-range::-moz-range-thumb {
   appearance: none;
-  border: none;
+
+  inline-size: 16px;
+  block-size: 16px;
+
+  background-color: var(--text-secondary);
+
+  border: var(--border-width-thin) var(--border-style-solid) var(--surface-base);
+  border-radius: var(--radius-circle);
+
+  transition:
+    background-color var(--motion-fast) var(--ease-out),
+    scale var(--motion-fast) var(--ease-out);
+}
+
+.c-range:hover:not(:disabled)::-webkit-slider-thumb {
+  background-color: var(--text-strong);
+  scale: 1.12;
+}
+
+.c-range:hover:not(:disabled)::-moz-range-thumb {
+  background-color: var(--text-strong);
+  scale: 1.12;
+}
+
+.c-range:active:not(:disabled)::-webkit-slider-thumb {
+  background-color: var(--text-strong);
+  scale: 0.94;
+}
+
+.c-range:active:not(:disabled)::-moz-range-thumb {
+  background-color: var(--text-strong);
+  scale: 0.94;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-range::-webkit-slider-thumb {
+    transition: none;
+  }
+
+  .c-range::-moz-range-thumb {
+    transition: none;
+  }
 }
