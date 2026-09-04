@@ -10,6 +10,7 @@ import * as UtilityGenerators from "./utilities";
 void (async function main() {
   const breakpointRegistry = new BreakpointRegistry({ md: "768" });
 
+  const AlphaTokenGenerator = new TokenGenerators.AlphaTokenGenerator();
   const BackdropsTokenGenerator = new TokenGenerators.BackdropsTokenGenerator();
   const BorderWidthTokenGenerator = new TokenGenerators.BorderWidthTokenGenerator();
   const BorderStyleTokenGenerator = new TokenGenerators.BorderStyleTokenGenerator();
@@ -34,6 +35,7 @@ void (async function main() {
   const FocusRingTokenGenerator = new TokenGenerators.FocusRingTokenGenerator();
 
   const tokens = [
+    AlphaTokenGenerator,
     BackdropsTokenGenerator,
     BorderWidthTokenGenerator,
     BorderStyleTokenGenerator,
@@ -125,6 +127,7 @@ void (async function main() {
     PositiveTokenGenerator,
     DangerTokenGenerator,
     WarningTokenGenerator,
+    AlphaTokenGenerator,
   );
   const BorderColorUtilityGenerator = new UtilityGenerators.BorderColorUtilityGenerator(
     breakpointRegistry,
@@ -134,6 +137,7 @@ void (async function main() {
     PositiveTokenGenerator,
     DangerTokenGenerator,
     WarningTokenGenerator,
+    AlphaTokenGenerator,
   );
   const PaddingUtilityGenerator = new UtilityGenerators.PaddingUtilityGenerator(
     breakpointRegistry,

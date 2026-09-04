@@ -1,5 +1,6 @@
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { StateRegistry } from "../state-registry";
+import type { AlphaTokenGenerator } from "../tokens/alpha-token-generator";
 import type { BrandTokenGenerator } from "../tokens/brand-token-generator";
 import type { DangerTokenGenerator } from "../tokens/danger-token-generator";
 import type { GrayscaleTokenGenerator } from "../tokens/grayscale-token-generator";
@@ -19,6 +20,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
     PositiveTokenGenerator: PositiveTokenGenerator,
     DangerTokenGenerator: DangerTokenGenerator,
     WarningTokenGenerator: WarningTokenGenerator,
+    AlphaTokenGenerator: AlphaTokenGenerator,
   ) {
     super("Border color utilities");
 
@@ -28,6 +30,7 @@ export class BorderColorUtilityGenerator extends UtilityGenerator {
       ...PositiveTokenGenerator.getConfig(),
       ...DangerTokenGenerator.getConfig(),
       ...WarningTokenGenerator.getConfig(),
+      ...AlphaTokenGenerator.getConfig(),
     };
   }
 

@@ -1,3 +1,4 @@
+export * from "./alpha-token-generator";
 export * from "./backdrops-token-generator";
 export * from "./border-style-token-generator";
 export * from "./border-width-token-generator";
