@@ -1,0 +1,57 @@
+/* Prose rhythm for content whose structure you do not author (markdown, CMS, rich text).
+   For markup you write, prefer data-stack + data-gap.
+   Vertical rhythm is opt-in: elements carry no margins, the container spaces them. */
+.c-prose > * + * {
+  margin-block-start: var(--prose-space, var(--spacing-4));
+}
+
+/* Headings bind to the copy beneath them and breathe above. */
+.c-prose > :is(h1, h2, h3, h4, h5, h6) + * {
+  --prose-space: var(--spacing-2);
+}
+
+.c-prose > * + :is(h1, h2, h3) {
+  --prose-space: var(--spacing-8);
+}
+
+.c-prose > * + :is(h4, h5, h6) {
+  --prose-space: var(--spacing-6);
+}
+
+/* Prose lists get their markers back — bare `ul`/`ol` stay unstyled for navigation. */
+.c-prose :is(ul, ol) {
+  padding-inline-start: var(--spacing-6);
+}
+
+.c-prose ul {
+  list-style: disc;
+}
+
+.c-prose ol {
+  list-style: decimal;
+}
+
+.c-prose ul ul {
+  list-style: circle;
+}
+
+.c-prose ol ol {
+  list-style: lower-alpha;
+}
+
+.c-prose li::marker {
+  color: var(--text-muted);
+}
+
+.c-prose li + li,
+.c-prose li > :is(ul, ol) {
+  margin-block-start: var(--spacing-1);
+}
+
+.c-prose dd + dt {
+  margin-block-start: var(--spacing-3);
+}
+
+.c-prose dt + dd {
+  margin-block-start: var(--spacing-1);
+}

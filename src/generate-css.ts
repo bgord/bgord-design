@@ -33,7 +33,7 @@ export class GenerateCSS {
     output += await Bun.file("src/ui/label.css").text();
     output += await Bun.file("src/ui/textarea.css").text();
     output += await Bun.file("src/ui/select.css").text();
-    output += await Bun.file("src/ui/flow.css").text();
+    output += await Bun.file("src/ui/prose.css").text();
     output += await Bun.file("src/ui/visually-hidden.css").text();
     output += await Bun.file("src/ui/badge.css").text();
     output += await Bun.file("src/ui/link.css").text();

@@ -312,16 +312,16 @@
         <h2>Raw HTML — no classes, no utilities</h2>
         <div class="p-note">
           Exactly what an app gets out of the box. Everything inside the dashed border is plain markup.
-          Toggle <code>.c-flow</code> to add vertical rhythm and prose list markers.
+          Toggle <code>.c-prose</code> to add vertical rhythm and prose list markers.
         </div>
 
         <div class="p-row">
 
 
-          <button class="c-button" data-variant="secondary" id="flow-toggle" type="button">Toggle .c-flow</button>
+          <button class="c-button" data-variant="secondary" id="prose-toggle" type="button">Toggle .c-prose</button>
 
 
-          <span class="p-swatch-value" id="flow-state"></span>
+          <span class="p-swatch-value" id="prose-state"></span>
 
 
         </div>
@@ -412,22 +412,27 @@
         <div class="p-row">
           <span class="p-label">variants</span>
           <button class="c-button" data-variant="primary">Primary</button>
+          <button class="c-button" data-variant="brand">Brand</button>
+          <button class="c-button" data-variant="destructive">Delete</button>
           <button class="c-button" data-variant="secondary">Secondary</button>
-          <button class="c-button" data-variant="bare">Bare</button>
-          <button class="c-button" data-variant="with-icon"><span>◆</span> With icon</button>
+          <button class="c-button" data-variant="ghost">Ghost</button>
+          <button class="c-button" data-variant="icon" title="Settings">◆</button>
           <a class="c-button" data-variant="primary" href="#">Anchor</a>
         </div>
 
         <div class="p-row">
           <span class="p-label">disabled</span>
           <button class="c-button" data-variant="primary" disabled>Primary</button>
+          <button class="c-button" data-variant="brand" disabled>Brand</button>
           <button class="c-button" data-variant="secondary" disabled>Secondary</button>
-          <button class="c-button" data-variant="bare" disabled>Bare</button>
+          <button class="c-button" data-variant="ghost" disabled>Ghost</button>
         </div>
 
         <div class="p-row">
-          <span class="p-label">missing</span>
-          <span class="p-swatch-value">no brand-filled variant, no destructive variant, no size variants</span>
+          <span class="p-label">sizes</span>
+          <button class="c-button" data-size="sm" data-variant="secondary">Small</button>
+          <button class="c-button" data-variant="secondary">Default</button>
+          <button class="c-button" data-size="lg" data-variant="secondary">Large</button>
         </div>
       </div>
 
@@ -502,6 +507,9 @@
 
             <input checked class="c-checkbox" disabled id="p-cb-4" name="p-cb-4" type="checkbox" />
             <label class="c-label" for="p-cb-4">Checked disabled</label>
+
+            <input class="c-checkbox" id="p-cb-5" name="p-cb-5" type="checkbox" />
+            <label class="c-label" for="p-cb-5">Indeterminate</label>
           </div>
         </div>
       </div>
@@ -513,6 +521,8 @@
           <span class="p-label">badge</span>
           <span class="c-badge" data-variant="primary">Primary</span>
           <span class="c-badge" data-variant="outline">Outline</span>
+          <span class="c-badge" data-variant="positive">Positive</span>
+          <span class="c-badge" data-variant="danger">Danger</span>
         </div>
 
         <div class="p-row">
@@ -663,18 +673,20 @@
       }
 
       const raw = document.getElementById("raw");
-      const flowState = document.getElementById("flow-state");
+      const flowState = document.getElementById("prose-state");
 
-      function renderFlowState() {
-        flowState.textContent = raw.classList.contains("c-flow") ? "c-flow on" : "c-flow off";
+      function renderProseState() {
+        flowState.textContent = raw.classList.contains("c-prose") ? "c-prose on" : "c-prose off";
       }
 
-      document.getElementById("flow-toggle").addEventListener("click", () => {
-        raw.classList.toggle("c-flow");
-        renderFlowState();
+      document.getElementById("prose-toggle").addEventListener("click", () => {
+        raw.classList.toggle("c-prose");
+        renderProseState();
       });
 
-      renderFlowState();
+      renderProseState();
+
+      document.getElementById("p-cb-5").indeterminate = true;
 
       function render() {
         renderSwatches();
