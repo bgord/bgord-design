@@ -1,69 +1,105 @@
 .c-checkbox {
-  min-height: var(--size-lg);
-  min-width: var(--size-lg);
-
   position: relative;
+
+  inline-size: var(--size-md);
+  block-size: var(--size-md);
 
   background-color: var(--interactive-rest);
 
   border: var(--border-width-hairline) var(--border-style-solid) var(--border-default);
   border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-inner);
 
   appearance: none;
   outline: none;
+  cursor: pointer;
 
   transition:
-    border-radius var(--motion-medium) ease,
-    border-color var(--motion-slow) ease;
+    background-color var(--motion-fast) var(--ease-out),
+    border-color var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-fast) var(--ease-out);
 }
 
-.c-checkbox:hover:not(:disabled) {
+.c-checkbox:hover:not(:disabled):not(:focus-visible) {
   border-color: var(--border-strong);
-  border-radius: var(--radius-none);
-  cursor: pointer;
 }
 
 .c-checkbox:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
-  outline-offset: var(--border-width-thin);
-  border-radius: var(--radius-sm);
+  border-color: var(--focus-ring-brand);
+  box-shadow: 0 0 0 3px var(--color-alpha-soft);
 }
 
-.c-checkbox:active:not(:disabled) {
-  border-radius: var(--radius-sm);
+/* Checked and indeterminate both fill, so the state reads at a glance. */
+.c-checkbox:checked,
+.c-checkbox:indeterminate {
+  background-color: var(--color-brand-500);
+  border-color: var(--color-brand-500);
+  box-shadow: none;
 }
 
-.c-checkbox:disabled {
-  /* Contract exception to not rely on opacity */
-  background-color: var(--interactive-disabled);
-  pointer-events: none;
+.c-checkbox:checked:hover:not(:disabled),
+.c-checkbox:indeterminate:hover:not(:disabled) {
+  background-color: var(--color-brand-400);
+  border-color: var(--color-brand-400);
 }
 
-.c-checkbox:user-invalid {
-  border-color: var(--color-danger-600);
-}
-
+/* Tick drawn in percentages so it scales with the box. */
 .c-checkbox:checked::after {
   content: "";
 
   position: absolute;
-  top: 6px;
-  left: 6px;
+  inset-block-start: 22%;
+  inset-inline-start: 36%;
 
-  width: 10px;
-  height: 6px;
+  inline-size: 24%;
+  block-size: 48%;
 
-  border: var(--border-width-thin) var(--border-style-solid) var(--text-secondary);
-  border-top: 0;
-  border-right: 0;
+  border: 2px var(--border-style-solid) var(--color-neutral-0);
+  border-block-start: 0;
+  border-inline-start: 0;
 
-  transform: rotate(-45deg);
+  rotate: 45deg;
 }
 
-.c-checkbox:checked:hover:not(:disabled)::after {
-  border-color: var(--text-strong);
+.c-checkbox:indeterminate::after {
+  content: "";
+
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 25%;
+
+  inline-size: 50%;
+  block-size: 0;
+
+  border-block-start: 2px var(--border-style-solid) var(--color-neutral-0);
+
+  translate: 0 -50%;
 }
 
-.c-checkbox:checked:disabled::after {
+.c-checkbox:disabled {
+  background-color: var(--interactive-disabled);
+  border-color: var(--border-subtle);
+  box-shadow: none;
+  cursor: default;
+}
+
+.c-checkbox:checked:disabled,
+.c-checkbox:indeterminate:disabled {
+  background-color: var(--interactive-disabled);
+  border-color: var(--border-subtle);
+}
+
+.c-checkbox:checked:disabled::after,
+.c-checkbox:indeterminate:disabled::after {
   border-color: var(--text-disabled);
+}
+
+.c-checkbox:user-invalid {
+  border-color: var(--color-danger-400);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-checkbox {
+    transition: none;
+  }
 }
