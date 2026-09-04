@@ -13,3 +13,9 @@
 [data-animation="grow-fade-in"] {
   animation: grow-fade-in var(--motion-fast) ease forwards;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animation="grow-fade-in"] {
+    animation: none;
+  }
+}

@@ -1,3 +1,9 @@
 [data-interaction="grow"] {
-  transition: width var(--motion-medium) ease-in-out;
+  transition: inline-size var(--motion-medium) var(--ease-in-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-interaction="grow"] {
+    transition: none;
+  }
 }

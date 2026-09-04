@@ -1,7 +1,13 @@
 [data-interaction="subtle-scale"] {
-  transition: transform var(--motion-medium) ease-in-out;
+  transition: scale var(--motion-fast) var(--ease-out);
 }
 
 [data-interaction="subtle-scale"]:hover {
-  transform: scale(1.25);
+  scale: 1.04;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-interaction="subtle-scale"] {
+    transition: none;
+  }
 }

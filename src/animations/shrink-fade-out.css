@@ -8,3 +8,9 @@
 [data-animation="shrink-fade-out"] {
   animation: shrink-fade-out var(--motion-fast) ease forwards;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animation="shrink-fade-out"] {
+    animation: none;
+  }
+}
