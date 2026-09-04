@@ -2,6 +2,8 @@ import { type TokenConfigType, TokenGenerator } from "./template";
 
 export class SemanticTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
+    "color-scheme": "dark",
+
     /* ───────── SURFACES ─────────────────────────── */
     "surface-base": "var(--color-neutral-950)", // app canvas
     "surface-raised": "var(--color-neutral-900)", // card, sheet, panel
@@ -28,7 +30,32 @@ export class SemanticTokenGenerator extends TokenGenerator {
     "interactive-disabled": "var(--color-neutral-900)",
   };
 
-  constructor(overrides: TokenConfigType = {}) {
-    super("Semantic", overrides);
+  light: TokenConfigType = {
+    "color-scheme": "light",
+
+    "surface-base": "var(--color-neutral-50)",
+    "surface-raised": "var(--color-neutral-0)",
+    "surface-overlay": "var(--color-neutral-0)",
+    "surface-sunken": "var(--color-neutral-100)",
+
+    "text-strong": "var(--color-neutral-950)",
+    "text-primary": "var(--color-neutral-900)",
+    "text-secondary": "var(--color-neutral-700)",
+    "text-muted": "var(--color-neutral-600)",
+    "text-disabled": "var(--color-neutral-500)",
+    "text-inverted": "var(--color-neutral-0)",
+
+    "border-subtle": "var(--color-alpha-subtle)",
+    "border-default": "var(--color-alpha-soft)",
+    "border-strong": "var(--color-alpha-medium)",
+
+    "interactive-rest": "var(--color-neutral-0)",
+    "interactive-hover": "var(--color-neutral-50)",
+    "interactive-active": "var(--color-neutral-100)",
+    "interactive-disabled": "var(--color-neutral-50)",
+  };
+
+  constructor(overrides: TokenConfigType = {}, lightOverrides: TokenConfigType = {}) {
+    super("Semantic", overrides, lightOverrides);
   }
 }

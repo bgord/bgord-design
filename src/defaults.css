@@ -1,6 +1,6 @@
 @layer defaults {
   html {
-    color-scheme: dark;
+    color-scheme: var(--color-scheme);
   }
 
   body {
@@ -8,8 +8,8 @@
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
 
-    color: var(--color-neutral-200);
-    background-color: var(--color-neutral-950);
+    color: var(--text-primary);
+    background-color: var(--surface-base);
   }
 
   h1,
@@ -20,6 +20,6 @@
   h6 {
     font-weight: var(--font-weight-medium);
     line-height: var(--line-height-tight);
-    color: var(--color-neutral-300);
+    color: var(--text-strong);
   }
 }

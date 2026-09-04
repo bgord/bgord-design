@@ -11,6 +11,18 @@ export class GenerateCSS {
     }
     output += "}\n\n";
 
+    let light = "";
+    for (const token of tokens) {
+      light += token.getLightTokens();
+    }
+
+    if (light) {
+      /* Light is opt-in via the OS unless the theme is pinned to dark... */
+      output += `@media (prefers-color-scheme: light) {\n:root:not([data-theme="light"]):not([data-theme="dark"]) {\n${light}}\n}\n\n`;
+      /* ...and always available by pinning the theme to light. */
+      output += `:root[data-theme="light"] {\n${light}}\n\n`;
+    }
+
     output += "@layer defaults {\n";
     output += await Bun.file("src/defaults.css").text();
     output += "}\n\n";

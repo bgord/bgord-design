@@ -7,7 +7,13 @@ export class AlphaTokenGenerator extends TokenGenerator {
     "color-alpha-medium": "rgba(255 255 255 / 0.16)", // strong borders, pressed overlay
   };
 
-  constructor(overrides: TokenConfigType = {}) {
-    super("Alpha", overrides);
+  light: TokenConfigType = {
+    "color-alpha-subtle": "rgba(0 0 0 / 0.06)",
+    "color-alpha-soft": "rgba(0 0 0 / 0.1)",
+    "color-alpha-medium": "rgba(0 0 0 / 0.16)",
+  };
+
+  constructor(overrides: TokenConfigType = {}, lightOverrides: TokenConfigType = {}) {
+    super("Alpha", overrides, lightOverrides);
   }
 }

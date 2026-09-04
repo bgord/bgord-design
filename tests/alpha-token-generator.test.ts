@@ -22,6 +22,26 @@ describe("AlphaTokenGenerator", () => {
     `);
   });
 
+  test("light theme", () => {
+    const generator = new AlphaTokenGenerator();
+
+    expect(generator.getLightConfig()).toEqual(generator.light);
+    expect(generator.getLightTokens()).toEqualIgnoringWhitespace(`
+      --color-alpha-subtle: rgba(0 0 0 / 0.06);
+      --color-alpha-soft: rgba(0 0 0 / 0.1);
+      --color-alpha-medium: rgba(0 0 0 / 0.16);
+    `);
+  });
+
+  test("with light overrides", () => {
+    const lightOverrides = { "color-alpha-soft": "rgba(0 0 0 / 0.2)" };
+    const generator = new AlphaTokenGenerator({}, lightOverrides);
+
+    expect(generator.getLightConfig()).toEqual({ ...generator.light, ...lightOverrides });
+    expect(generator.getConfig()).toEqual(generator.base);
+    expect(generator.getLightTokens()).toContain("--color-alpha-soft: rgba(0 0 0 / 0.2);");
+  });
+
   test("with overrides", () => {
     const overrides = { "color-alpha-custom": "rgba(255 255 255 / 0.5)" };
     const generator = new AlphaTokenGenerator(overrides);
