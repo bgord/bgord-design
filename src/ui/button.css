@@ -43,7 +43,6 @@
 }
 
 /* ───────── VARIANTS ──────────────────────────── */
-
 .c-button[data-variant="primary"] {
   color: var(--text-inverted);
   background-color: var(--fill-inverted);
@@ -90,7 +89,6 @@
   background-color: var(--fill-muted);
 }
 
-/* Square footprint for a button whose only content is an icon. */
 .c-button[data-variant="icon"] {
   inline-size: var(--size-2xl);
   padding-inline: var(--spacing-0);

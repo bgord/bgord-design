@@ -1,7 +1,6 @@
 .c-link {
   color: var(--text-link);
 
-  /* Inherits size and tracking so it never shrinks inside a sentence. */
   font-size: inherit;
   font-weight: var(--font-weight-medium);
 

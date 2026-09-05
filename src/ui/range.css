@@ -1,5 +1,3 @@
-/* Vendor pseudo-elements MUST stay in separate rules: a selector list is invalid as a
-   whole if any component is unrecognized, so grouping them drops the rule everywhere. */
 .c-range {
   block-size: 6px;
 

@@ -29,7 +29,6 @@
   outline-offset: var(--border-width-thin);
 }
 
-/* Checked and indeterminate both fill, so the state reads at a glance. */
 .c-checkbox:checked,
 .c-checkbox:indeterminate {
   background-color: var(--color-brand-500);
@@ -43,7 +42,6 @@
   border-color: var(--color-brand-400);
 }
 
-/* Tick drawn in percentages so it scales with the box. */
 .c-checkbox:checked::after {
   content: "";
 

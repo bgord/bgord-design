@@ -6,329 +6,342 @@
     <title>bgord-design — preview</title>
     <link href="../dist/main.min.css" rel="stylesheet" />
     <style>
-      /* Preview scaffolding only. Prefixed `p-` so it never collides with `.c-` components. */
       .p-page {
-        display: block;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 32px 24px 96px;
-      }
-
-      .p-bar {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-
-        position: sticky;
-        top: 0;
-        z-index: 10;
-
-        margin-bottom: 32px;
-        padding: 12px 0;
-
-        background-color: var(--surface-base);
-        border-bottom: 1px solid var(--border-subtle);
-      }
-
-      .p-bar-title {
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--text-strong);
-      }
-
-      .p-toggle {
-        display: flex;
-        gap: 2px;
-        padding: 2px;
-        border: 1px solid var(--border-default);
-        border-radius: 8px;
-      }
-
-      .p-toggle button {
-        padding: 5px 12px;
-        font-size: 13px;
-        color: var(--text-secondary);
-        border-radius: 6px;
-        cursor: pointer;
-      }
-
-      .p-toggle button[aria-pressed="true"] {
-        color: var(--text-strong);
-        background-color: var(--interactive-rest);
-      }
-
-      .p-section {
-        display: block;
-        margin-bottom: 56px;
-      }
-
-      .p-section > h2 {
-        margin-bottom: 4px;
-        font-size: 20px;
-        font-weight: 600;
-        color: var(--text-strong);
-      }
-
-      .p-note {
-        display: block;
-        margin-bottom: 20px;
-        font-size: 13px;
-        line-height: 1.5;
-        color: var(--text-muted);
-      }
-
-      .p-sub {
-        display: block;
-        margin: 28px 0 12px;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--text-muted);
+        max-inline-size: 1100px;
+        margin-inline: auto;
       }
 
       .p-swatches {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 8px;
-      }
-
-      .p-swatch {
-        display: block;
-        overflow: hidden;
-        border: 1px solid var(--border-subtle);
-        border-radius: 8px;
-      }
-
-      .p-chip {
-        display: block;
-        height: 52px;
-      }
-
-      .p-chip[data-alpha] {
-        background-color: var(--color-neutral-500);
-      }
-
-      .p-chip[data-alpha] span {
-        display: block;
-        height: 100%;
-      }
-
-      .p-swatch-meta {
-        display: block;
-        padding: 7px 9px;
-        background-color: var(--surface-raised);
-      }
-
-      .p-swatch-name {
-        display: block;
-        font-family: var(--font-family-mono);
-        font-size: 11px;
-        color: var(--text-secondary);
-      }
-
-      .p-swatch-value {
-        display: block;
-        margin-top: 2px;
-        font-family: var(--font-family-mono);
-        font-size: 10px;
-        color: var(--text-muted);
-      }
-
-      .p-row {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 14px;
       }
 
       .p-stack {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        max-width: 320px;
-      }
-
-      .p-panel {
-        display: block;
-        padding: 20px;
-        background-color: var(--surface-raised);
-        border: 1px solid var(--border-subtle);
-        border-radius: 12px;
+        max-inline-size: 320px;
       }
 
       .p-label {
-        display: block;
-        min-width: 74px;
-        font-family: var(--font-family-mono);
-        font-size: 11px;
-        color: var(--text-muted);
+        min-inline-size: 74px;
       }
 
-      .p-type-row {
-        display: flex;
-        align-items: baseline;
-        gap: 16px;
-        padding: 8px 0;
-        border-bottom: 1px solid var(--border-subtle);
+      .p-chip {
+        block-size: 52px;
       }
 
-      .p-elevation {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 72px;
-        font-family: var(--font-family-mono);
-        font-size: 11px;
-        color: var(--text-muted);
+      .p-box {
+        block-size: 72px;
+      }
+
+      .p-surface-base {
+        background-color: var(--surface-base);
+      }
+
+      .p-surface-raised {
         background-color: var(--surface-raised);
-        border-radius: 10px;
       }
 
-      /* Marks the raw-HTML section so it is obvious it carries no styling of its own. */
-      .p-raw {
-        display: block;
-        padding: 20px;
-        border: 1px dashed var(--border-strong);
-        border-radius: 12px;
+      .p-well {
+        background-color: var(--interactive-rest);
+      }
+
+      .p-text-strong {
+        color: var(--text-strong);
+      }
+
+      .p-text-secondary {
+        color: var(--text-secondary);
+      }
+
+      .p-text-muted {
+        color: var(--text-muted);
       }
     </style>
   </head>
 
   <body>
-    <div class="p-page">
-      <div class="p-bar">
-        <div class="p-bar-title">bgord-design — preview</div>
-        <div class="p-toggle" id="theme-toggle">
-          <button data-set-theme="dark" type="button" >Dark</button>
-          <button data-set-theme="light" type="button" >Light</button>
-          <button data-set-theme="system" type="button" >System</button>
+    <div class="p-page" data-pb="16" data-pt="8" data-px="6">
+      <div
+        class="p-surface-base"
+        data-bc="alpha-subtle"
+        data-bsb="solid"
+        data-bwb="hairline"
+        data-cross="center"
+        data-disp="flex"
+        data-gap="3"
+        data-main="between"
+        data-mb="8"
+        data-position="sticky"
+        data-py="3"
+        data-top="0"
+        data-z="3"
+      >
+        <div class="p-text-strong" data-fs="sm" data-fw="semibold">bgord-design — preview</div>
+
+        <div data-disp="flex" data-gap="1" id="theme-toggle">
+          <button class="c-button" data-set-theme="dark" type="button">Dark</button>
+          <button class="c-button" data-set-theme="light" type="button">Light</button>
+          <button class="c-button" data-set-theme="system" type="button">System</button>
         </div>
       </div>
 
       <!-- ───────────────────────── COLOR ───────────────────────── -->
 
-      <div class="p-section">
-        <h2>Semantic aliases</h2>
-        <div class="p-note">
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Semantic aliases</h2>
+        <div class="p-text-muted" data-fs="sm" data-lh="base" data-mb="5">
           What components should consume. These are the only tokens that change between themes.
         </div>
 
-        <div class="p-sub">Surfaces</div>
-        <div class="p-swatches" data-tokens="surface-base,surface-raised,surface-overlay,surface-sunken"></div>
-
-        <div class="p-sub">Text</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Surfaces
+        </div>
         <div
           class="p-swatches"
+          data-gap="2"
+          data-tokens="surface-base,surface-raised,surface-overlay,surface-sunken"
+        ></div>
+
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Text
+        </div>
+        <div
+          class="p-swatches"
+          data-gap="2"
           data-tokens="text-strong,text-primary,text-secondary,text-muted,text-disabled,text-inverted"
         ></div>
 
-        <div class="p-sub">Borders</div>
-        <div class="p-swatches" data-alpha data-tokens="border-subtle,border-default,border-strong" ></div>
-
-        <div class="p-sub">Form control wells</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Borders
+        </div>
         <div
           class="p-swatches"
+          data-alpha
+          data-gap="2"
+          data-tokens="border-subtle,border-default,border-strong"
+        ></div>
+
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Form control wells
+        </div>
+        <div
+          class="p-swatches"
+          data-gap="2"
           data-tokens="interactive-rest,interactive-hover,interactive-active,interactive-disabled"
         ></div>
 
-        <div class="p-sub">Filled emphasis surfaces</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Filled emphasis surfaces
+        </div>
         <div
           class="p-swatches"
+          data-gap="2"
           data-tokens="fill-muted,fill-strong,fill-inverted,fill-inverted-hover"
         ></div>
       </div>
 
-      <div class="p-section">
-        <h2>Neutral ramp</h2>
-        <div class="p-note">
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Neutral ramp</h2>
+        <div class="p-text-muted" data-fs="sm" data-lh="base" data-mb="5">
           Chroma rises toward the dark end so surfaces carry the tint while copy stays near-gray.
           Theme-independent — light mode reads the same ramp from the other direction.
         </div>
         <div
           class="p-swatches"
+          data-gap="2"
           data-tokens="color-neutral-0,color-neutral-50,color-neutral-100,color-neutral-200,color-neutral-300,color-neutral-400,color-neutral-500,color-neutral-600,color-neutral-700,color-neutral-800,color-neutral-850,color-neutral-900,color-neutral-950"
         ></div>
 
-        <div class="p-sub">Alpha (shown over neutral-500)</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Alpha (shown over neutral-500)
+        </div>
         <div
           class="p-swatches"
           data-alpha
+          data-gap="2"
           data-tokens="color-alpha-subtle,color-alpha-soft,color-alpha-medium"
         ></div>
       </div>
 
-      <div class="p-section">
-        <h2>Accents</h2>
-        <div class="p-note">Untouched so far — brand, positive, danger and warning are unchanged.</div>
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Accents</h2>
+        <div class="p-text-muted" data-fs="sm" data-lh="base" data-mb="5">
+          Brand is retuned to sit with the neutrals; positive, danger and warning are unchanged.
+        </div>
 
-        <div class="p-sub">Brand</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Brand
+        </div>
         <div
           class="p-swatches"
+          data-gap="2"
           data-tokens="color-brand-50,color-brand-100,color-brand-200,color-brand-300,color-brand-400,color-brand-500,color-brand-600,color-brand-700,color-brand-800,color-brand-900"
         ></div>
 
-        <div class="p-sub">Positive</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Positive
+        </div>
         <div
           class="p-swatches"
+          data-gap="2"
           data-tokens="color-positive-0,color-positive-100,color-positive-200,color-positive-400,color-positive-600,color-positive-800,color-positive-900"
         ></div>
 
-        <div class="p-sub">Danger</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Danger
+        </div>
         <div
           class="p-swatches"
+          data-gap="2"
           data-tokens="color-danger-0,color-danger-100,color-danger-200,color-danger-400,color-danger-600,color-danger-800,color-danger-900"
         ></div>
 
-        <div class="p-sub">Warning</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Warning
+        </div>
         <div
           class="p-swatches"
+          data-gap="2"
           data-tokens="color-warning-100,color-warning-300,color-warning-500,color-warning-700,color-warning-900"
         ></div>
       </div>
 
       <!-- ─────────────────────── TYPOGRAPHY ─────────────────────── -->
 
-      <div class="p-section">
-        <h2>Type scale</h2>
-        <div class="p-note">Sizes as tokens. Line-height and tracking are not yet paired per size.</div>
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Type scale</h2>
+        <div class="p-text-muted" data-fs="sm" data-lh="base" data-mb="5">
+          Rendered through the <code>data-fs</code> utilities, not raw variables.
+        </div>
         <div id="type-scale"></div>
       </div>
 
-      <div class="p-section">
-        <h2>Weights &amp; families</h2>
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Weights &amp; families</h2>
 
-        <div class="p-sub">Font weight</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Font weight
+        </div>
         <div id="weights"></div>
 
-        <div class="p-sub">Font family</div>
+        <div
+          class="p-text-muted"
+          data-fs="xs"
+          data-fw="semibold"
+          data-ls="wider"
+          data-mb="3"
+          data-mt="6"
+          data-transform="uppercase"
+        >
+          Font family
+        </div>
         <div id="families"></div>
       </div>
 
-      <div class="p-section">
-        <h2>Raw HTML — no classes, no utilities</h2>
-        <div class="p-note">
-          Exactly what an app gets out of the box. Everything inside the dashed border is plain markup.
-          Toggle <code>.c-prose</code> to add vertical rhythm and prose list markers.
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">
+          Raw HTML — no classes, no utilities
+        </h2>
+        <div class="p-text-muted" data-fs="sm" data-lh="base" data-mb="5">
+          Exactly what an app gets out of the box. Everything inside the dashed border is plain markup. Toggle
+          <code>.c-prose</code> to add vertical rhythm and prose list markers.
         </div>
 
-        <div class="p-row">
-
-
-          <button class="c-button" data-variant="secondary" id="prose-toggle" type="button">Toggle .c-prose</button>
-
-
-          <span class="p-swatch-value" id="prose-state"></span>
-
-
+        <div data-cross="center" data-disp="flex" data-gap="3" data-mb="3">
+          <button class="c-button" data-variant="secondary" id="prose-toggle" type="button">
+            Toggle .c-prose
+          </button>
+          <span class="p-text-muted" data-ff="mono" data-fs="xs" id="prose-state"></span>
         </div>
 
-
-
-        <div class="p-raw" id="raw">
+        <div data-bc="alpha-medium" data-br="lg" data-bs="dashed" data-bw="hairline" data-p="5" id="raw">
           <h1>Heading level 1</h1>
           <h2>Heading level 2</h2>
           <h3>Heading level 3</h3>
@@ -338,13 +351,11 @@
 
           <p>
             A paragraph of body copy with a <a href="#">plain anchor</a>, some <strong>strong</strong> and
-            <em>emphasized</em> text, a bit of <code>inline_code()</code>, an <abbr title="abbreviation">abbr</abbr>,
-            and <small>small print</small> trailing the sentence.
+            <em>emphasized</em> text, a bit of <code>inline_code()</code>, an
+            <abbr title="abbreviation">abbr</abbr>, and <small>small print</small> trailing the sentence.
           </p>
 
-          <p>
-            A second paragraph, to show whether consecutive paragraphs are separated at all.
-          </p>
+          <p>A second paragraph, to show whether consecutive paragraphs are separated at all.</p>
 
           <ul>
             <li>First unordered item</li>
@@ -361,7 +372,9 @@
             <dd>The definition that belongs to the term above.</dd>
           </dl>
 
-          <blockquote>A block quotation, which should read as set apart from the surrounding copy.</blockquote>
+          <blockquote>
+            A block quotation, which should read as set apart from the surrounding copy.
+          </blockquote>
 
           <pre><code>const tokens = generator.getTokens();</code></pre>
 
@@ -370,7 +383,9 @@
           <hr />
 
           <table>
-            <caption>A caption for the table</caption>
+            <caption>
+              A caption for the table
+            </caption>
             <thead>
               <tr>
                 <th>Token</th>
@@ -405,12 +420,14 @@
 
       <!-- ─────────────────────── COMPONENTS ─────────────────────── -->
 
-      <div class="p-section">
-        <h2>Buttons</h2>
-        <div class="p-note">Hover and focus states need interaction — tab through to see the focus ring.</div>
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Buttons</h2>
+        <div class="p-text-muted" data-fs="sm" data-lh="base" data-mb="5">
+          Hover and focus states need interaction — tab through to see the focus ring.
+        </div>
 
-        <div class="p-row">
-          <span class="p-label">variants</span>
+        <div data-cross="center" data-disp="flex" data-gap="3" data-mb="3">
+          <span class="p-label p-text-muted" data-ff="mono" data-fs="xs">variants</span>
           <button class="c-button" data-variant="primary">Primary</button>
           <button class="c-button" data-variant="brand">Brand</button>
           <button class="c-button" data-variant="destructive">Delete</button>
@@ -420,8 +437,8 @@
           <a class="c-button" data-variant="primary" href="#">Anchor</a>
         </div>
 
-        <div class="p-row">
-          <span class="p-label">disabled</span>
+        <div data-cross="center" data-disp="flex" data-gap="3" data-mb="3">
+          <span class="p-label p-text-muted" data-ff="mono" data-fs="xs">disabled</span>
           <button class="c-button" data-variant="primary" disabled>Primary</button>
           <button class="c-button" data-variant="brand" disabled>Brand</button>
           <button class="c-button" data-variant="destructive" disabled>Delete</button>
@@ -431,11 +448,19 @@
         </div>
       </div>
 
-      <div class="p-section">
-        <h2>Form controls</h2>
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Form controls</h2>
 
-        <div class="p-panel">
-          <div class="p-stack">
+        <div
+          class="p-surface-raised"
+          data-bc="alpha-subtle"
+          data-br="lg"
+          data-bs="solid"
+          data-bw="hairline"
+          data-mt="5"
+          data-p="5"
+        >
+          <div class="p-stack" data-gap="3" data-stack="y">
             <div>
               <label class="c-label" for="p-input">Text input</label>
               <input class="c-input" id="p-input" name="p-input" placeholder="Placeholder text" type="text" />
@@ -443,7 +468,13 @@
 
             <div>
               <label class="c-label" for="p-input-filled">Filled</label>
-              <input class="c-input" id="p-input-filled" name="p-input-filled" type="text" value="A typed value" />
+              <input
+                class="c-input"
+                id="p-input-filled"
+                name="p-input-filled"
+                type="text"
+                value="A typed value"
+              />
             </div>
 
             <div>
@@ -460,7 +491,14 @@
 
             <div>
               <label class="c-label" for="p-input-disabled">Disabled</label>
-              <input class="c-input" disabled id="p-input-disabled" name="p-input-disabled" type="text" value="Disabled" />
+              <input
+                class="c-input"
+                disabled
+                id="p-input-disabled"
+                name="p-input-disabled"
+                type="text"
+                value="Disabled"
+              />
             </div>
 
             <div>
@@ -470,7 +508,12 @@
 
             <div>
               <label class="c-label" for="p-textarea">Textarea</label>
-              <textarea class="c-textarea" id="p-textarea" name="p-textarea" placeholder="Placeholder text"></textarea>
+              <textarea
+                class="c-textarea"
+                id="p-textarea"
+                name="p-textarea"
+                placeholder="Placeholder text"
+              ></textarea>
             </div>
 
             <div>
@@ -489,8 +532,18 @@
             </div>
           </div>
 
-          <div class="p-sub">Checkbox</div>
-          <div class="p-row">
+          <div
+            class="p-text-muted"
+            data-fs="xs"
+            data-fw="semibold"
+            data-ls="wider"
+            data-mb="3"
+            data-mt="6"
+            data-transform="uppercase"
+          >
+            Checkbox
+          </div>
+          <div data-cross="center" data-disp="flex" data-gap="3">
             <input class="c-checkbox" id="p-cb-1" name="p-cb-1" type="checkbox" />
             <label class="c-label" for="p-cb-1">Unchecked</label>
 
@@ -509,44 +562,46 @@
         </div>
       </div>
 
-      <div class="p-section">
-        <h2>Badges &amp; links</h2>
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Badges &amp; links</h2>
 
-        <div class="p-row">
-          <span class="p-label">badge</span>
+        <div data-cross="center" data-disp="flex" data-gap="3" data-mb="3" data-mt="5">
+          <span class="p-label p-text-muted" data-ff="mono" data-fs="xs">badge</span>
           <span class="c-badge" data-variant="primary">Primary</span>
           <span class="c-badge" data-variant="outline">Outline</span>
           <span class="c-badge" data-variant="positive">Positive</span>
           <span class="c-badge" data-variant="danger">Danger</span>
         </div>
 
-        <div class="p-row">
-          <span class="p-label">link</span>
+        <div data-cross="center" data-disp="flex" data-gap="3" data-mb="3">
+          <span class="p-label p-text-muted" data-ff="mono" data-fs="xs">link</span>
           <a class="c-link" href="#">A standalone link</a>
         </div>
 
-        <div class="p-row">
-          <span class="p-label">in prose</span>
+        <div data-cross="center" data-disp="flex" data-gap="3" data-mb="3">
+          <span class="p-label p-text-muted" data-ff="mono" data-fs="xs">in prose</span>
           <span>Body copy with <a class="c-link" href="#">a link inside it</a> to show relative sizing.</span>
         </div>
       </div>
 
       <!-- ────────────────────── PRIMITIVES ────────────────────── -->
 
-      <div class="p-section">
-        <h2>Elevation</h2>
-        <div class="p-note">Shadow tokens are still tuned for light backgrounds.</div>
-        <div class="p-swatches" id="shadows"></div>
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Elevation</h2>
+        <div class="p-text-muted" data-fs="sm" data-lh="base" data-mb="5">
+          <code>raised</code> is the filled-button lift: a highlight on the top edge, a shadow beneath.
+        </div>
+        <div class="p-swatches" data-gap="2" id="shadows"></div>
       </div>
 
-      <div class="p-section">
-        <h2>Radius</h2>
-        <div class="p-swatches" id="radii"></div>
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Radius</h2>
+        <div class="p-swatches" data-gap="2" data-mt="5" id="radii"></div>
       </div>
 
-      <div class="p-section">
-        <h2>Spacing</h2>
-        <div id="spacing"></div>
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Spacing</h2>
+        <div data-mt="5" id="spacing"></div>
       </div>
     </div>
 
@@ -558,8 +613,12 @@
         if (theme === "system") delete root.dataset.theme;
         else root.dataset.theme = theme;
 
+        /* The active choice is a secondary button, the rest are ghosts — no bespoke pressed style. */
         for (const button of document.querySelectorAll("[data-set-theme]")) {
-          button.setAttribute("aria-pressed", String(button.dataset.setTheme === theme));
+          const active = button.dataset.setTheme === theme;
+
+          button.setAttribute("aria-pressed", String(active));
+          button.dataset.variant = active ? "secondary" : "ghost";
         }
 
         try {
@@ -585,6 +644,10 @@
         return getComputedStyle(probe).backgroundColor;
       }
 
+      const SWATCH = `data-bc="alpha-subtle" data-br="md" data-bs="solid" data-bw="hairline" data-overflow="hidden"`;
+      const SWATCH_NAME = `class="p-text-secondary" data-ff="mono" data-fs="xs"`;
+      const SWATCH_VALUE = `class="p-text-muted" data-ff="mono" data-fs="xs" data-mt="0-5"`;
+
       function renderSwatches() {
         for (const grid of document.querySelectorAll("[data-tokens]")) {
           const alpha = grid.hasAttribute("data-alpha");
@@ -592,15 +655,18 @@
           grid.innerHTML = grid.dataset.tokens
             .split(",")
             .map((token) => {
+              /* Alpha values need an opaque ground to read against. */
               const chip = alpha
-                ? `<div class="p-chip" data-alpha><span style="background-color: var(--${token})"></span></div>`
+                ? `<div class="p-chip" data-bg="neutral-500">
+                     <div data-disp="block" data-height="100%" style="background-color: var(--${token})"></div>
+                   </div>`
                 : `<div class="p-chip" style="background-color: var(--${token})"></div>`;
 
-              return `<div class="p-swatch">
+              return `<div ${SWATCH}>
                   ${chip}
-                  <div class="p-swatch-meta">
-                    <div class="p-swatch-name">${token}</div>
-                    <div class="p-swatch-value">${resolve(token)}</div>
+                  <div class="p-surface-raised" data-p="2">
+                    <div ${SWATCH_NAME}>${token}</div>
+                    <div ${SWATCH_VALUE}>${resolve(token)}</div>
                   </div>
                 </div>`;
             })
@@ -608,12 +674,16 @@
         }
       }
 
-      const FONT_SIZES = ["xs", "sm", "base", "lg", "xl", "2xl", "3xl", "4xl", "5xl"];
-      const WEIGHTS = ["light", "regular", "medium", "bold", "black"];
+      const FONT_SIZES = ["xs", "sm", "base", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl"];
+      const WEIGHTS = ["light", "regular", "medium", "semibold", "bold", "black"];
       const FAMILIES = ["sans", "serif", "mono"];
-      const SHADOWS = ["xs", "sm", "md", "lg", "xl", "inner"];
+      const SHADOWS = ["xs", "sm", "md", "lg", "xl", "raised", "inner"];
       const RADII = ["none", "xs", "sm", "md", "lg", "xl", "pill"];
       const SPACING = ["0-5", "1", "1-5", "2", "2-5", "3", "4", "5", "6", "8", "12", "16"];
+
+      const TYPE_ROW = `data-bc="alpha-subtle" data-bsb="solid" data-bwb="hairline" data-cross="baseline" data-disp="flex" data-gap="4" data-py="2"`;
+      const LABEL = `class="p-label p-text-muted" data-ff="mono" data-fs="xs"`;
+      const BOX = `data-cross="center" data-disp="flex" data-ff="mono" data-fs="xs" data-main="center"`;
 
       function px(value) {
         probe.style.backgroundColor = "";
@@ -625,44 +695,40 @@
 
       function renderPrimitives() {
         document.getElementById("type-scale").innerHTML = FONT_SIZES.map(
-          (size) => `<div class="p-type-row">
-              <span class="p-label">${size}</span>
-              <span style="font-size: var(--font-size-${size})">The quick brown fox</span>
+          (size) => `<div ${TYPE_ROW}>
+              <span ${LABEL}>${size}</span>
+              <span data-fs="${size}">The quick brown fox</span>
             </div>`,
         ).join("");
 
         document.getElementById("weights").innerHTML = WEIGHTS.map(
-          (weight) => `<div class="p-type-row">
-              <span class="p-label">${weight}</span>
-              <span style="font-weight: var(--font-weight-${weight}); font-size: var(--font-size-lg)">
-                The quick brown fox
-              </span>
+          (weight) => `<div ${TYPE_ROW}>
+              <span ${LABEL}>${weight}</span>
+              <span data-fs="lg" data-fw="${weight}">The quick brown fox</span>
             </div>`,
         ).join("");
 
         document.getElementById("families").innerHTML = FAMILIES.map(
-          (family) => `<div class="p-type-row">
-              <span class="p-label">${family}</span>
-              <span style="font-family: var(--font-family-${family}); font-size: var(--font-size-lg)">
-                The quick brown fox
-              </span>
+          (family) => `<div ${TYPE_ROW}>
+              <span ${LABEL}>${family}</span>
+              <span data-ff="${family}" data-fs="lg">The quick brown fox</span>
             </div>`,
         ).join("");
 
         document.getElementById("shadows").innerHTML = SHADOWS.map(
-          (shadow) => `<div class="p-elevation" style="box-shadow: var(--shadow-${shadow})">${shadow}</div>`,
+          (shadow) =>
+            `<div class="p-box p-surface-raised p-text-muted" ${BOX} data-br="lg" data-shadow="${shadow}">${shadow}</div>`,
         ).join("");
 
         document.getElementById("radii").innerHTML = RADII.map(
-          (radius) =>
-            `<div class="p-elevation" style="border-radius: var(--radius-${radius}); background-color: var(--interactive-rest)">${radius}</div>`,
+          (radius) => `<div class="p-box p-well p-text-muted" ${BOX} data-br="${radius}">${radius}</div>`,
         ).join("");
 
         document.getElementById("spacing").innerHTML = SPACING.map(
-          (step) => `<div class="p-row">
-              <span class="p-label">${step}</span>
-              <span style="display: block; height: 12px; border-radius: 3px; background-color: var(--color-brand-400); width: var(--spacing-${step})"></span>
-              <span class="p-swatch-value">${px(`spacing-${step}`)}</span>
+          (step) => `<div data-cross="center" data-disp="flex" data-gap="3" data-mb="3">
+              <span ${LABEL}>${step}</span>
+              <span data-bg="brand-400" data-br="xs" data-disp="block" style="height: 12px; width: var(--spacing-${step})"></span>
+              <span class="p-text-muted" data-ff="mono" data-fs="xs">${px(`spacing-${step}`)}</span>
             </div>`,
         ).join("");
       }
