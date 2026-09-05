@@ -24,6 +24,7 @@ describe("GenerateCSS", async () => {
       "src/defaults.css",
 
       "src/ui/button.css",
+      "src/ui/field.css",
       "src/ui/input.css",
       "src/ui/label.css",
       "src/ui/textarea.css",
@@ -56,8 +57,6 @@ describe("GenerateCSS", async () => {
         --backdrop-stronger: rgba(0 0 0 / 0.85);
       }
 
-      @layer defaults {}
-
       @layer components {}
 
       @layer utilities {
@@ -67,13 +66,9 @@ describe("GenerateCSS", async () => {
         [data-main='evenly'] { justify-content: space-evenly; }
         [data-main='between'] { justify-content: space-between; }
         [data-main='center'] { justify-content: center; }
-        [data-main='baseline'] { justify-content: baseline; }
 
         [data-cross='start'] { align-items: flex-start; }
         [data-cross='end'] { align-items: flex-end; }
-        [data-cross='around'] { align-items: space-around; }
-        [data-cross='evenly'] { align-items: space-evenly; }
-        [data-cross='between'] { align-items: space-between; }
         [data-cross='center'] { align-items: center; }
         [data-cross='baseline'] { align-items: baseline; }
 
@@ -84,13 +79,9 @@ describe("GenerateCSS", async () => {
           [data-md-main='evenly'] { justify-content: space-evenly; }
           [data-md-main='between'] { justify-content: space-between; }
           [data-md-main='center'] { justify-content: center; }
-          [data-md-main='baseline'] { justify-content: baseline; }
 
           [data-md-cross='start'] { align-items: flex-start; }
           [data-md-cross='end'] { align-items: flex-end; }
-          [data-md-cross='around'] { align-items: space-around; }
-          [data-md-cross='evenly'] { align-items: space-evenly; }
-          [data-md-cross='between'] { align-items: space-between; }
           [data-md-cross='center'] { align-items: center; }
           [data-md-cross='baseline'] { align-items: baseline; }
         }

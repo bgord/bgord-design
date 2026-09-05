@@ -1,7 +1,3 @@
-/* Prose rhythm for content whose structure you do not author (markdown, CMS, rich text).
-   For markup you write, prefer data-stack + data-gap.
-   Vertical rhythm is opt-in: elements carry no margins, the container spaces them. */
-/* The reading size. Everything outside prose stays at the UI size the body sets. */
 .c-prose {
   font-size: var(--font-size-base);
   line-height: var(--line-height-loose);
@@ -24,7 +20,6 @@
   --prose-space: var(--spacing-6);
 }
 
-/* Prose lists get their markers back — bare `ul`/`ol` stay unstyled for navigation. */
 .c-prose :is(ul, ol) {
   padding-inline-start: var(--spacing-6);
 }

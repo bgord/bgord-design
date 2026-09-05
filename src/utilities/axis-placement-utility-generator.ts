@@ -10,6 +10,12 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
     evenly: "space-evenly",
     between: "space-between",
     center: "center",
+  };
+
+  crossConfig = {
+    start: "flex-start",
+    end: "flex-end",
+    center: "center",
     baseline: "baseline",
   };
 
@@ -18,17 +24,18 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
   }
 
   css() {
-    const config = Object.entries(this.config);
+    const main = Object.entries(this.config);
+    const cross = Object.entries(this.crossConfig);
 
     let result = "";
 
     const regular: Array<CssRuleRegular> = [];
 
-    for (const [key, value] of config) {
+    for (const [key, value] of main) {
       regular.push(new CssRuleRegular(`[data-main='${key}']`, { "justify-content": value }));
     }
 
-    for (const [key, value] of config) {
+    for (const [key, value] of cross) {
       regular.push(new CssRuleRegular(`[data-cross='${key}']`, { "align-items": value }));
     }
 
@@ -41,11 +48,11 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
-      for (const [key, value] of config) {
+      for (const [key, value] of main) {
         responsive.push(new CssRuleRegular(`[data-${name}-main='${key}']`, { "justify-content": value }));
       }
 
-      for (const [key, value] of config) {
+      for (const [key, value] of cross) {
         responsive.push(new CssRuleRegular(`[data-${name}-cross='${key}']`, { "align-items": value }));
       }
 
@@ -60,18 +67,22 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
   }
 
   toTypeScript() {
-    const type = Object.keys(this.config)
+    const main = Object.keys(this.config)
+      .map((key) => `"${key}"`)
+      .join(" | ");
+
+    const cross = Object.keys(this.crossConfig)
       .map((key) => `"${key}"`)
       .join(" | ");
 
     // Stryker disable all
     return [
-      "main",
-      "cross",
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-main`),
-      ...this.breakpointRegistry.entries.map(([name]) => `${name}-cross`),
+      ["main", main],
+      ["cross", cross],
+      ...this.breakpointRegistry.entries.map(([name]) => [`${name}-main`, main]),
+      ...this.breakpointRegistry.entries.map(([name]) => [`${name}-cross`, cross]),
     ]
-      .map((key) => `"data-${key}"?: ${type};`)
+      .map(([key, type]) => `"data-${key}"?: ${type};`)
       .join(" ");
     // Stryker restore all
   }
