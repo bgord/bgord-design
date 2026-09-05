@@ -23,12 +23,13 @@ export class GenerateCSS {
       output += `:root[data-theme="light"] {\n${light}}\n\n`;
     }
 
-    output += "@layer defaults {\n";
+    /* defaults.css declares its own `@layer defaults` block. */
     output += await Bun.file("src/defaults.css").text();
-    output += "}\n\n";
+    output += "\n\n";
 
     output += "@layer components {\n";
     output += await Bun.file("src/ui/button.css").text();
+    output += await Bun.file("src/ui/field.css").text();
     output += await Bun.file("src/ui/input.css").text();
     output += await Bun.file("src/ui/label.css").text();
     output += await Bun.file("src/ui/textarea.css").text();
