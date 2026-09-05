@@ -42,20 +42,6 @@
   scale: 0.98;
 }
 
-/* ───────── SIZES ─────────────────────────────── */
-
-.c-button[data-size="sm"] {
-  block-size: var(--size-xl);
-  padding-inline: var(--spacing-3);
-  font-size: var(--font-size-xs);
-}
-
-.c-button[data-size="lg"] {
-  block-size: var(--size-3xl);
-  padding-inline: var(--spacing-5);
-  font-size: var(--font-size-base);
-}
-
 /* ───────── VARIANTS ──────────────────────────── */
 
 .c-button[data-variant="primary"] {
@@ -110,14 +96,6 @@
 .c-button[data-variant="icon"]:hover:not(:disabled) {
   color: var(--text-strong);
   background-color: var(--fill-muted);
-}
-
-.c-button[data-variant="icon"][data-size="sm"] {
-  inline-size: var(--size-xl);
-}
-
-.c-button[data-variant="icon"][data-size="lg"] {
-  inline-size: var(--size-3xl);
 }
 
 a.c-button,
