@@ -99,8 +99,7 @@
   background-color: var(--fill-muted);
 }
 
-a.c-button,
-a.c-button:hover {
+a.c-button {
   text-decoration: none;
 }
 
