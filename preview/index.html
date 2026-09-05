@@ -16,6 +16,11 @@
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       }
 
+      .p-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
       .p-stack {
         max-inline-size: 320px;
       }
@@ -445,6 +450,74 @@
           <button class="c-button" data-variant="secondary" disabled>Secondary</button>
           <button class="c-button" data-variant="ghost" disabled>Ghost</button>
           <button class="c-button" data-variant="icon" disabled title="Settings">◆</button>
+        </div>
+      </div>
+
+      <div data-mb="12">
+        <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Cards</h2>
+        <div class="p-text-muted" data-fs="sm" data-lh="base" data-mb="5">
+          The default sits on the canvas; <code>flat</code> nests inside another card,
+          <code>sunken</code> is a well, <code>overlay</code> floats. Rendered as an
+          <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>, the whole card becomes the target.
+        </div>
+
+        <div class="p-cards" data-gap="4" data-mb="4">
+          <div class="c-card">
+            <div class="c-card-header">
+              <div class="c-card-title">Default</div>
+              <div class="c-card-description">Raised surface, hairline border, small shadow.</div>
+            </div>
+            <div>Body content sits in the card's own rhythm.</div>
+          </div>
+
+          <div class="c-card" data-variant="sunken">
+            <div class="c-card-header">
+              <div class="c-card-title">Sunken</div>
+              <div class="c-card-description">A well for secondary content — logs, empty states.</div>
+            </div>
+            <div>Body content sits in the card's own rhythm.</div>
+          </div>
+
+          <div class="c-card" data-variant="overlay">
+            <div class="c-card-header">
+              <div class="c-card-title">Overlay</div>
+              <div class="c-card-description">Reads above the page: dialog, popover, menu.</div>
+            </div>
+            <div>Body content sits in the card's own rhythm.</div>
+          </div>
+        </div>
+
+        <div class="p-cards" data-gap="4">
+          <div class="c-card">
+            <div class="c-card-header">
+              <div class="c-card-title">With a footer</div>
+              <div class="c-card-description">Actions separated by a hairline.</div>
+            </div>
+
+            <div data-cross="center" data-disp="flex" data-gap="2">
+              <span class="c-badge" data-variant="positive">Active</span>
+              <span class="c-badge" data-variant="primary">v1.8.0</span>
+            </div>
+
+            <div class="c-card-footer">
+              <button class="c-button" data-variant="primary">Save</button>
+              <button class="c-button" data-variant="ghost">Cancel</button>
+            </div>
+          </div>
+
+          <a class="c-card" href="#">
+            <div class="c-card-header">
+              <div class="c-card-title">Interactive — a whole card as a link</div>
+              <div class="c-card-description">Hover for the border and shadow; tab to it for the ring.</div>
+            </div>
+
+            <div class="c-card" data-variant="flat">
+              <div class="c-card-header">
+                <div class="c-card-title">Flat, nested</div>
+                <div class="c-card-description">No shadow, so the stack does not double up.</div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
 

@@ -1,0 +1,93 @@
+.c-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+
+  padding: var(--spacing-5);
+
+  color: var(--text-primary);
+  background-color: var(--surface-raised);
+
+  border: var(--border-width-hairline) var(--border-style-solid) var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    background-color var(--motion-fast) var(--ease-out),
+    border-color var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-fast) var(--ease-out);
+}
+
+/* ───────── VARIANTS ──────────────────────────── */
+
+.c-card[data-variant="flat"] {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.c-card[data-variant="sunken"] {
+  background-color: var(--surface-sunken);
+  box-shadow: none;
+}
+
+.c-card[data-variant="overlay"] {
+  background-color: var(--surface-overlay);
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-lg);
+}
+
+a.c-card,
+button.c-card {
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.c-card:hover,
+button.c-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+a.c-card:focus-visible,
+button.c-card:focus-visible {
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
+  outline-offset: var(--border-width-thin);
+}
+
+/* ───────── SLOTS ─────────────────────────────── */
+.c-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.c-card-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--text-strong);
+}
+
+.c-card-description {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--text-muted);
+}
+
+.c-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2);
+
+  padding-top: var(--spacing-4);
+
+  border-top: var(--border-width-hairline) var(--border-style-solid) var(--border-subtle);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-card {
+    transition: none;
+  }
+}

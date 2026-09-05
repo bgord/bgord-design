@@ -35,6 +35,7 @@ export class GenerateCSS {
     output += await Bun.file("src/ui/select.css").text();
     output += await Bun.file("src/ui/prose.css").text();
     output += await Bun.file("src/ui/visually-hidden.css").text();
+    output += await Bun.file("src/ui/card.css").text();
     output += await Bun.file("src/ui/badge.css").text();
     output += await Bun.file("src/ui/link.css").text();
     output += await Bun.file("src/ui/checkbox.css").text();

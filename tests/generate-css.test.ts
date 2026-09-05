@@ -30,6 +30,7 @@ describe("GenerateCSS", async () => {
       "src/ui/select.css",
       "src/ui/prose.css",
       "src/ui/visually-hidden.css",
+      "src/ui/card.css",
       "src/ui/badge.css",
       "src/ui/link.css",
       "src/ui/checkbox.css",
