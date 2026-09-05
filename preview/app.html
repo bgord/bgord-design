@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>bgord-design — sample app</title>
+    <link href="../dist/main.min.css" rel="stylesheet" />
+    <style>
+      /* A flat, non-interactive app screen built from the design system. Components carry every
+         surface and every text role; utilities carry all spacing, type, borders and flex layout.
+         What is left here is only what the system cannot express yet — the same three gaps the
+         kitchen-sink page hits: no grid utility, no semantic color utilities, and no width token. */
+
+      .a-shell {
+        max-inline-size: 1280px;
+        margin-inline: auto;
+      }
+
+      .a-sidebar {
+        flex-shrink: 0;
+        inline-size: 208px;
+      }
+
+      /* Without min-inline-size a flex child refuses to shrink below its content. */
+      .a-main {
+        flex-grow: 1;
+        min-inline-size: 0;
+      }
+
+      .a-grid-4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .a-grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      }
+
+      .a-bar {
+        background-color: var(--surface-base);
+      }
+
+      .a-strong {
+        color: var(--text-strong);
+      }
+
+      .a-muted {
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="a-bar"
+      data-bc="alpha-subtle"
+      data-bsb="solid"
+      data-bwb="hairline"
+      data-position="sticky"
+      data-px="6"
+      data-py="3"
+      data-top="0"
+      data-z="3"
+    >
+      <div class="a-shell" data-cross="center" data-disp="flex" data-gap="4" data-main="between">
+        <div data-cross="center" data-disp="flex" data-gap="3">
+          <span class="a-strong" data-fs="base" data-fw="semibold">Panopticon</span>
+          <span class="c-badge" data-variant="outline">staging</span>
+        </div>
+
+        <div data-cross="center" data-disp="flex" data-gap="2">
+          <label class="c-visually-hidden" for="search">Search services</label>
+          <input class="c-input" id="search" name="search" placeholder="Search services…" type="search" />
+          <button class="c-button" data-variant="icon" title="Notifications" type="button">◆</button>
+          <button class="c-button" data-variant="primary" type="button">New check</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="a-shell" data-disp="flex" data-gap="8" data-px="6" data-py="6">
+      <!-- ───────────────────────── SIDEBAR ───────────────────────── -->
+
+      <div class="a-sidebar" data-gap="6" data-stack="y">
+        <div data-gap="1" data-stack="y">
+          <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-mb="1" data-transform="uppercase">
+            Monitor
+          </div>
+          <a class="c-button" data-main="start" data-variant="secondary" data-width="100%" href="#">Overview</a>
+          <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Services</a>
+          <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Incidents</a>
+          <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Checks</a>
+        </div>
+
+        <div data-gap="1" data-stack="y">
+          <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-mb="1" data-transform="uppercase">
+            Account
+          </div>
+          <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Team</a>
+          <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Settings</a>
+          <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Billing</a>
+        </div>
+
+        <div class="c-card" data-variant="sunken">
+          <div class="c-card-header">
+            <div class="c-card-title">Plan usage</div>
+            <div class="c-card-description">18 of 25 checks used.</div>
+          </div>
+          <label class="c-visually-hidden" for="usage">Plan usage</label>
+          <input class="c-range" disabled id="usage" name="usage" type="range" value="72" />
+          <a class="c-link" href="#">Upgrade plan</a>
+        </div>
+      </div>
+
+      <!-- ─────────────────────────── MAIN ─────────────────────────── -->
+
+      <div class="a-main" data-gap="6" data-stack="y">
+        <div data-cross="center" data-disp="flex" data-gap="4" data-main="between">
+          <div data-gap="1" data-stack="y">
+            <div data-cross="center" data-disp="flex" data-gap="2">
+              <a class="c-link" href="#">Services</a>
+              <span class="a-muted" data-fs="sm">/</span>
+              <span class="a-muted" data-fs="sm">api-gateway</span>
+            </div>
+            <h1 class="a-strong" data-fs="3xl" data-fw="semibold" data-ls="tight">api-gateway</h1>
+            <div class="a-muted" data-fs="sm">Last deployed 2 hours ago by the release pipeline.</div>
+          </div>
+
+          <div data-cross="center" data-disp="flex" data-gap="2">
+            <button class="c-button" data-variant="secondary" type="button">Pause checks</button>
+            <button class="c-button" data-variant="destructive" type="button">Delete service</button>
+          </div>
+        </div>
+
+        <div class="a-grid-4" data-gap="4">
+          <div class="c-card">
+            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">Uptime</div>
+            <div data-cross="baseline" data-disp="flex" data-gap="2">
+              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric">99.98%</span>
+              <span class="c-badge" data-variant="positive">+0.02</span>
+            </div>
+          </div>
+
+          <div class="c-card">
+            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">p95 latency</div>
+            <div data-cross="baseline" data-disp="flex" data-gap="2">
+              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric">184ms</span>
+              <span class="c-badge" data-variant="danger">+31ms</span>
+            </div>
+          </div>
+
+          <div class="c-card">
+            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">Error rate</div>
+            <div data-cross="baseline" data-disp="flex" data-gap="2">
+              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric">0.42%</span>
+              <span class="c-badge" data-variant="primary">stable</span>
+            </div>
+          </div>
+
+          <div class="c-card">
+            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">Open incidents</div>
+            <div data-cross="baseline" data-disp="flex" data-gap="2">
+              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric">2</span>
+              <span class="c-badge" data-variant="outline">1 muted</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="a-grid-2" data-gap="4">
+          <!-- A list, as rows separated by hairlines. -->
+          <div class="c-card">
+            <div data-cross="start" data-disp="flex" data-gap="3" data-main="between">
+              <div class="c-card-header">
+                <div class="c-card-title">Recent incidents</div>
+                <div class="c-card-description">Last 7 days across all regions.</div>
+              </div>
+              <a class="c-link" href="#">View all</a>
+            </div>
+
+            <div data-stack="y">
+              <div
+                data-bc="alpha-subtle"
+                data-bsb="solid"
+                data-bwb="hairline"
+                data-cross="center"
+                data-disp="flex"
+                data-gap="3"
+                data-main="between"
+                data-py="3"
+              >
+                <div data-gap="0-5" data-stack="y">
+                  <span class="a-strong" data-fs="sm" data-fw="medium">Elevated 5xx on eu-central</span>
+                  <span class="a-muted" data-fs="xs">Started 14:02 · 38 minutes</span>
+                </div>
+                <span class="c-badge" data-variant="danger">Firing</span>
+              </div>
+
+              <div
+                data-bc="alpha-subtle"
+                data-bsb="solid"
+                data-bwb="hairline"
+                data-cross="center"
+                data-disp="flex"
+                data-gap="3"
+                data-main="between"
+                data-py="3"
+              >
+                <div data-gap="0-5" data-stack="y">
+                  <span class="a-strong" data-fs="sm" data-fw="medium">Certificate expires in 6 days</span>
+                  <span class="a-muted" data-fs="xs">Started 09:41 · muted by a teammate</span>
+                </div>
+                <span class="c-badge" data-variant="outline">Muted</span>
+              </div>
+
+              <div
+                data-cross="center"
+                data-disp="flex"
+                data-gap="3"
+                data-main="between"
+                data-py="3"
+              >
+                <div data-gap="0-5" data-stack="y">
+                  <span class="a-strong" data-fs="sm" data-fw="medium">Latency spike on us-east</span>
+                  <span class="a-muted" data-fs="xs">Resolved yesterday · 12 minutes</span>
+                </div>
+                <span class="c-badge" data-variant="positive">Resolved</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- A form. -->
+          <div class="c-card">
+            <div class="c-card-header">
+              <div class="c-card-title">Check configuration</div>
+              <div class="c-card-description">Applies to every region this service runs in.</div>
+            </div>
+
+            <div data-gap="3" data-stack="y">
+              <div>
+                <label class="c-label" for="endpoint">Endpoint</label>
+                <input
+                  class="c-input"
+                  data-width="100%"
+                  id="endpoint"
+                  name="endpoint"
+                  type="url"
+                  value="https://api.example.com/health"
+                />
+              </div>
+
+              <div data-disp="flex" data-gap="3">
+                <div data-grow="1">
+                  <label class="c-label" for="method">Method</label>
+                  <div class="c-select-wrapper" data-width="100%">
+                    <select class="c-select" data-width="100%" id="method" name="method">
+                      <option>GET</option>
+                      <option>HEAD</option>
+                      <option>POST</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div data-grow="1">
+                  <label class="c-label" for="interval">Interval</label>
+                  <div class="c-select-wrapper" data-width="100%">
+                    <select class="c-select" data-width="100%" id="interval" name="interval">
+                      <option>Every 30 seconds</option>
+                      <option>Every minute</option>
+                      <option>Every 5 minutes</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="c-label" for="expiry">Alert after</label>
+                <input class="c-input" data-width="100%" id="expiry" name="expiry" type="date" />
+              </div>
+
+              <div>
+                <label class="c-label" for="note">Runbook note</label>
+                <textarea
+                  class="c-textarea"
+                  data-width="100%"
+                  id="note"
+                  name="note"
+                  placeholder="What should the on-call engineer do first?"
+                ></textarea>
+              </div>
+
+              <div>
+                <label class="c-label" for="email">Notify</label>
+                <input
+                  class="c-input"
+                  data-width="100%"
+                  id="email"
+                  name="email"
+                  placeholder="oncall@example.com"
+                  type="email"
+                  value="not-an-email"
+                />
+              </div>
+
+              <div data-cross="center" data-disp="flex" data-gap="2">
+                <input checked class="c-checkbox" id="paging" name="paging" type="checkbox" />
+                <label class="c-label" for="paging">Page the on-call rotation</label>
+              </div>
+
+              <div data-cross="center" data-disp="flex" data-gap="2">
+                <input class="c-checkbox" disabled id="follow" name="follow" type="checkbox" />
+                <label class="c-label" for="follow">Follow redirects (locked by policy)</label>
+              </div>
+            </div>
+
+            <div class="c-card-footer">
+              <button class="c-button" data-variant="primary" type="button">Save changes</button>
+              <button class="c-button" data-variant="ghost" type="button">Discard</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- A table. -->
+        <div class="c-card">
+          <div data-cross="start" data-disp="flex" data-gap="3" data-main="between">
+            <div class="c-card-header">
+              <div class="c-card-title">Regions</div>
+              <div class="c-card-description">Rolling 24-hour window.</div>
+            </div>
+            <button class="c-button" data-variant="secondary" type="button">Export CSV</button>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Region</th>
+                <th>Status</th>
+                <th>p95</th>
+                <th>Checks</th>
+                <th>Last failure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>us-east-1</td>
+                <td><span class="c-badge" data-variant="positive">Healthy</span></td>
+                <td>142ms</td>
+                <td>2,880</td>
+                <td class="a-muted">4 days ago</td>
+              </tr>
+              <tr>
+                <td>eu-central-1</td>
+                <td><span class="c-badge" data-variant="danger">Degraded</span></td>
+                <td>318ms</td>
+                <td>2,880</td>
+                <td class="a-muted">38 minutes ago</td>
+              </tr>
+              <tr>
+                <td>ap-south-1</td>
+                <td><span class="c-badge" data-variant="positive">Healthy</span></td>
+                <td>201ms</td>
+                <td>2,879</td>
+                <td class="a-muted">11 days ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="a-grid-2" data-gap="4">
+          <!-- Prose, as an app would render authored copy. -->
+          <div class="c-card">
+            <div class="c-card-header">
+              <div class="c-card-title">Runbook</div>
+              <div class="c-card-description">Rendered from Markdown with <code>.c-prose</code>.</div>
+            </div>
+
+            <div class="c-prose">
+              <p>When <strong>eu-central</strong> reports elevated 5xx, work the list in order:</p>
+              <ol>
+                <li>Check the upstream provider status page.</li>
+                <li>Drain the region if error rate holds above 1% for five minutes.</li>
+                <li>Page the platform team — see <a href="#">the escalation policy</a>.</li>
+              </ol>
+              <blockquote>Draining is reversible. Do not wait for consensus.</blockquote>
+              <p>Roll back with <kbd>Ctrl</kbd> + <kbd>R</kbd> from the deploy console.</p>
+            </div>
+          </div>
+
+          <!-- A sunken well for machine output. -->
+          <div class="c-card">
+            <div class="c-card-header">
+              <div class="c-card-title">Last check output</div>
+              <div class="c-card-description">Truncated to the final response.</div>
+            </div>
+
+            <div class="c-card" data-variant="sunken">
+              <pre><code>GET /health 503
+x-request-id: 8f2c...41ab
+upstream_connect_time: 4.812s
+
+{"status":"degraded","region":"eu-central-1"}</code></pre>
+            </div>
+
+            <div class="c-card-footer">
+              <span class="a-muted" data-fs="xs">Captured 14:02:19 UTC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- An overlay card, shown inline as a dialog would appear. -->
+        <div class="c-card" data-maxw="md" data-variant="overlay" >
+          <div class="c-card-header">
+            <div class="c-card-title">Delete api-gateway?</div>
+            <div class="c-card-description">
+              This removes 3 regions, 8,639 stored checks and every alert rule attached to the service.
+            </div>
+          </div>
+
+          <div>
+            <label class="c-label" for="confirm">Type the service name to confirm</label>
+            <input class="c-input" data-width="100%" id="confirm" name="confirm" placeholder="api-gateway" type="text" />
+          </div>
+
+          <div class="c-card-footer">
+            <button class="c-button" data-variant="destructive" type="button">Delete service</button>
+            <button class="c-button" data-variant="ghost" type="button">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
