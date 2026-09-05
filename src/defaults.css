@@ -47,38 +47,45 @@
     text-wrap: balance;
   }
 
-  h1 {
-    font-size: var(--font-size-3xl);
+  h1,
+  h2 {
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
+  }
+
+  h3,
+  h4 {
+    line-height: var(--line-height-snug);
+    letter-spacing: var(--letter-spacing-snug);
+  }
+
+  h5,
+  h6 {
+    line-height: var(--line-height-snug);
+  }
+
+  h1 {
+    font-size: var(--font-size-3xl);
   }
 
   h2 {
     font-size: var(--font-size-2xl);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-tight);
   }
 
   h3 {
     font-size: var(--font-size-xl);
-    line-height: var(--line-height-snug);
-    letter-spacing: var(--letter-spacing-snug);
   }
 
   h4 {
     font-size: var(--font-size-lg);
-    line-height: var(--line-height-snug);
-    letter-spacing: var(--letter-spacing-snug);
   }
 
   h5 {
     font-size: var(--font-size-base);
-    line-height: var(--line-height-snug);
   }
 
   h6 {
     font-size: var(--font-size-sm);
-    line-height: var(--line-height-snug);
   }
 
   p {
@@ -92,7 +99,7 @@
     text-decoration-thickness: 1px;
     text-underline-offset: 0.2em;
 
-    transition: color var(--motion-fast) ease;
+    transition: color var(--motion-fast) var(--ease-out);
   }
 
   a:hover {
@@ -142,7 +149,6 @@
   sup {
     font-size: 0.75em;
     line-height: 0;
-    position: relative;
   }
 
   sup {
@@ -156,24 +162,21 @@
   code,
   kbd,
   samp {
+    padding: 0.1em 0.35em;
+
     font-family: var(--font-family-mono);
     font-size: 0.9em;
-  }
-
-  code,
-  samp {
-    padding: 0.1em 0.35em;
     color: var(--text-strong);
+
     background-color: var(--fill-muted);
     border: var(--border-width-hairline) var(--border-style-solid) var(--border-subtle);
     border-radius: var(--radius-xs);
   }
 
+  /* A key cap reads as a physical object: roomier, with a harder edge. */
   kbd {
     padding: 0.15em 0.4em;
-    color: var(--text-strong);
-    background-color: var(--fill-muted);
-    border: var(--border-width-hairline) var(--border-style-solid) var(--border-strong);
+    border-color: var(--border-strong);
     border-radius: var(--radius-sm);
   }
 
@@ -240,19 +243,18 @@
     text-align: start;
   }
 
-  th {
+  th,
+  td {
     padding: var(--spacing-2) var(--spacing-3);
+    border-block-end: var(--border-width-hairline) var(--border-style-solid) var(--border-subtle);
+  }
 
+  th {
     color: var(--text-strong);
     font-weight: var(--font-weight-semibold);
     text-align: start;
 
-    border-block-end: var(--border-width-hairline) var(--border-style-solid) var(--border-default);
-  }
-
-  td {
-    padding: var(--spacing-2) var(--spacing-3);
-    border-block-end: var(--border-width-hairline) var(--border-style-solid) var(--border-subtle);
+    border-block-end-color: var(--border-default);
   }
 
   tbody tr:last-child td {
