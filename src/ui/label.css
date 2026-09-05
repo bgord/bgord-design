@@ -8,3 +8,9 @@
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-snug);
 }
+
+.c-label[data-variant="inline"],
+.c-checkbox + .c-label {
+  display: inline-block;
+  margin-block-end: var(--spacing-0);
+}

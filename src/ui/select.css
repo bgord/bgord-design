@@ -44,6 +44,7 @@
 }
 
 .c-select-wrapper {
+  display: inline-flex;
   position: relative;
   inline-size: fit-content;
 }

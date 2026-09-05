@@ -1,13 +1,7 @@
 .c-range {
-  block-size: 6px;
+  block-size: var(--size-lg);
 
-  background: linear-gradient(
-    to right,
-    var(--text-secondary) var(--percentage, 15%),
-    var(--fill-strong) var(--percentage, 15%)
-  );
-
-  border-radius: var(--radius-pill);
+  background: transparent;
 
   appearance: none;
   cursor: pointer;
@@ -24,18 +18,32 @@
 }
 
 /* ───────── TRACK ─────────────────────────────── */
-
 .c-range::-webkit-slider-runnable-track {
   appearance: none;
+
   block-size: 6px;
-  background: transparent;
+
+  background: linear-gradient(
+    to right,
+    var(--text-secondary) var(--percentage, 15%),
+    var(--fill-strong) var(--percentage, 15%)
+  );
+
   border: none;
+  border-radius: var(--radius-pill);
 }
 
 .c-range::-moz-range-track {
   block-size: 6px;
-  background: transparent;
+
+  background: linear-gradient(
+    to right,
+    var(--text-secondary) var(--percentage, 15%),
+    var(--fill-strong) var(--percentage, 15%)
+  );
+
   border: none;
+  border-radius: var(--radius-pill);
 }
 
 /* ───────── THUMB ─────────────────────────────── */

@@ -119,11 +119,11 @@
           <div data-gap="1" data-stack="y">
             <div data-cross="center" data-disp="flex" data-gap="2">
               <a class="c-link" href="#">Services</a>
-              <span class="a-muted" data-fs="sm">/</span>
-              <span class="a-muted" data-fs="sm">api-gateway</span>
+              <span class="a-muted">/</span>
+              <span class="a-muted">api-gateway</span>
             </div>
             <h1 class="a-strong" data-fs="3xl" data-fw="semibold" data-ls="tight">api-gateway</h1>
-            <div class="a-muted" data-fs="sm">Last deployed 2 hours ago by the release pipeline.</div>
+            <div class="a-muted">Last deployed 2 hours ago by the release pipeline.</div>
           </div>
 
           <div data-cross="center" data-disp="flex" data-gap="2">
@@ -189,7 +189,7 @@
                 data-py="3"
               >
                 <div data-gap="0-5" data-stack="y">
-                  <span class="a-strong" data-fs="sm" data-fw="medium">Elevated 5xx on eu-central</span>
+                  <span class="a-strong" data-fw="medium">Elevated 5xx on eu-central</span>
                   <span class="a-muted" data-fs="xs">Started 14:02 · 38 minutes</span>
                 </div>
                 <span class="c-badge" data-variant="danger">Firing</span>
@@ -206,7 +206,7 @@
                 data-py="3"
               >
                 <div data-gap="0-5" data-stack="y">
-                  <span class="a-strong" data-fs="sm" data-fw="medium">Certificate expires in 6 days</span>
+                  <span class="a-strong" data-fw="medium">Certificate expires in 6 days</span>
                   <span class="a-muted" data-fs="xs">Started 09:41 · muted by a teammate</span>
                 </div>
                 <span class="c-badge" data-variant="outline">Muted</span>
@@ -220,7 +220,7 @@
                 data-py="3"
               >
                 <div data-gap="0-5" data-stack="y">
-                  <span class="a-strong" data-fs="sm" data-fw="medium">Latency spike on us-east</span>
+                  <span class="a-strong" data-fw="medium">Latency spike on us-east</span>
                   <span class="a-muted" data-fs="xs">Resolved yesterday · 12 minutes</span>
                 </div>
                 <span class="c-badge" data-variant="positive">Resolved</span>
@@ -392,13 +392,11 @@
               <div class="c-card-description">Truncated to the final response.</div>
             </div>
 
-            <div class="c-card" data-variant="sunken">
-              <pre><code>GET /health 503
+            <pre><code>GET /health 503
 x-request-id: 8f2c...41ab
 upstream_connect_time: 4.812s
 
 {"status":"degraded","region":"eu-central-1"}</code></pre>
-            </div>
 
             <div class="c-card-footer">
               <span class="a-muted" data-fs="xs">Captured 14:02:19 UTC</span>

@@ -24,6 +24,12 @@
   border-color: var(--border-strong);
 }
 
+.c-checkbox::before {
+  content: "";
+  position: absolute;
+  inset: calc((var(--size-md) - var(--size-lg)) / 2);
+}
+
 .c-checkbox:focus-visible {
   outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
   outline-offset: var(--border-width-thin);
