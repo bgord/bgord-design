@@ -24,8 +24,6 @@ describe("SemanticTokenGenerator", () => {
       --border-default: var(--color-alpha-soft);
       --border-strong: var(--color-alpha-medium);
       --interactive-rest: var(--color-neutral-850);
-      --interactive-hover: var(--color-neutral-800);
-      --interactive-active: var(--color-neutral-700);
       --interactive-disabled: var(--color-neutral-900);
       --fill-muted: var(--color-neutral-800);
       --fill-strong: var(--color-neutral-700);
@@ -51,8 +49,6 @@ describe("SemanticTokenGenerator", () => {
         "border-default": "var(--color-alpha-soft)",
         "border-strong": "var(--color-alpha-medium)",
         "interactive-rest": "var(--color-neutral-850)",
-        "interactive-hover": "var(--color-neutral-800)",
-        "interactive-active": "var(--color-neutral-700)",
         "interactive-disabled": "var(--color-neutral-900)",
         "fill-muted": "var(--color-neutral-800)",
         "fill-strong": "var(--color-neutral-700)",
@@ -87,8 +83,6 @@ describe("SemanticTokenGenerator", () => {
       --border-default: var(--color-alpha-soft);
       --border-strong: var(--color-alpha-medium);
       --interactive-rest: var(--color-neutral-0);
-      --interactive-hover: var(--color-neutral-50);
-      --interactive-active: var(--color-neutral-100);
       --interactive-disabled: var(--color-neutral-50);
       --fill-muted: var(--color-neutral-100);
       --fill-strong: var(--color-neutral-200);

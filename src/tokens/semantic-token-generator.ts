@@ -27,8 +27,6 @@ export class SemanticTokenGenerator extends TokenGenerator {
 
     /* ───────── FORM CONTROL WELLS ───────────────── */
     "interactive-rest": "var(--color-neutral-850)", // input, select, textarea, checkbox
-    "interactive-hover": "var(--color-neutral-800)",
-    "interactive-active": "var(--color-neutral-700)",
     "interactive-disabled": "var(--color-neutral-900)",
 
     /* ───────── FILLED EMPHASIS SURFACES ─────────── */
@@ -60,8 +58,6 @@ export class SemanticTokenGenerator extends TokenGenerator {
     "border-strong": "var(--color-alpha-medium)",
 
     "interactive-rest": "var(--color-neutral-0)",
-    "interactive-hover": "var(--color-neutral-50)",
-    "interactive-active": "var(--color-neutral-100)",
     "interactive-disabled": "var(--color-neutral-50)",
 
     "fill-muted": "var(--color-neutral-100)",
