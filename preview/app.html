@@ -58,12 +58,11 @@
       data-bsb="solid"
       data-bwb="hairline"
       data-position="sticky"
-      data-px="6"
       data-py="3"
       data-top="0"
       data-z="3"
     >
-      <div class="a-shell" data-cross="center" data-disp="flex" data-gap="4" data-main="between">
+      <div class="a-shell" data-cross="center" data-disp="flex" data-gap="4" data-main="between" data-px="6">
         <div data-cross="center" data-disp="flex" data-gap="3">
           <span class="a-strong" data-fs="base" data-fw="semibold">Panopticon</span>
           <span class="c-badge" data-variant="outline">staging</span>
@@ -83,17 +82,35 @@
 
       <div class="a-sidebar" data-gap="6" data-stack="y">
         <div data-gap="1" data-stack="y">
-          <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-mb="1" data-transform="uppercase">
+          <div
+            class="a-muted"
+            data-fs="xs"
+            data-fw="semibold"
+            data-ls="wider"
+            data-mb="1"
+            data-pl="4"
+            data-transform="uppercase"
+          >
             Monitor
           </div>
-          <a class="c-button" data-main="start" data-variant="secondary" data-width="100%" href="#">Overview</a>
+          <a class="c-button" data-main="start" data-variant="secondary" data-width="100%" href="#"
+            >Overview</a
+          >
           <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Services</a>
           <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Incidents</a>
           <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Checks</a>
         </div>
 
         <div data-gap="1" data-stack="y">
-          <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-mb="1" data-transform="uppercase">
+          <div
+            class="a-muted"
+            data-fs="xs"
+            data-fw="semibold"
+            data-ls="wider"
+            data-mb="1"
+            data-pl="4"
+            data-transform="uppercase"
+          >
             Account
           </div>
           <a class="c-button" data-main="start" data-variant="ghost" data-width="100%" href="#">Team</a>
@@ -134,33 +151,49 @@
 
         <div class="a-grid-4" data-gap="4">
           <div class="c-card">
-            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">Uptime</div>
+            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">
+              Uptime
+            </div>
             <div data-cross="baseline" data-disp="flex" data-gap="2">
-              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric">99.98%</span>
+              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric"
+                >99.98%</span
+              >
               <span class="c-badge" data-variant="positive">+0.02</span>
             </div>
           </div>
 
           <div class="c-card">
-            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">p95 latency</div>
+            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">
+              p95 latency
+            </div>
             <div data-cross="baseline" data-disp="flex" data-gap="2">
-              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric">184ms</span>
+              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric"
+                >184ms</span
+              >
               <span class="c-badge" data-variant="danger">+31ms</span>
             </div>
           </div>
 
           <div class="c-card">
-            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">Error rate</div>
+            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">
+              Error rate
+            </div>
             <div data-cross="baseline" data-disp="flex" data-gap="2">
-              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric">0.42%</span>
+              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric"
+                >0.42%</span
+              >
               <span class="c-badge" data-variant="primary">stable</span>
             </div>
           </div>
 
           <div class="c-card">
-            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">Open incidents</div>
+            <div class="a-muted" data-fs="xs" data-fw="semibold" data-ls="wider" data-transform="uppercase">
+              Open incidents
+            </div>
             <div data-cross="baseline" data-disp="flex" data-gap="2">
-              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric">2</span>
+              <span class="a-strong" data-fs="3xl" data-fw="semibold" data-transform="font-variant-numeric"
+                >2</span
+              >
               <span class="c-badge" data-variant="outline">1 muted</span>
             </div>
           </div>
@@ -212,13 +245,7 @@
                 <span class="c-badge" data-variant="outline">Muted</span>
               </div>
 
-              <div
-                data-cross="center"
-                data-disp="flex"
-                data-gap="3"
-                data-main="between"
-                data-py="3"
-              >
+              <div data-cross="center" data-disp="flex" data-gap="3" data-main="between" data-py="3">
                 <div data-gap="0-5" data-stack="y">
                   <span class="a-strong" data-fw="medium">Latency spike on us-east</span>
                   <span class="a-muted" data-fs="xs">Resolved yesterday · 12 minutes</span>
@@ -405,7 +432,7 @@ upstream_connect_time: 4.812s
         </div>
 
         <!-- An overlay card, shown inline as a dialog would appear. -->
-        <div class="c-card" data-maxw="md" data-variant="overlay" >
+        <div class="c-card" data-maxw="md" data-variant="overlay">
           <div class="c-card-header">
             <div class="c-card-title">Delete api-gateway?</div>
             <div class="c-card-description">
@@ -415,7 +442,14 @@ upstream_connect_time: 4.812s
 
           <div>
             <label class="c-label" for="confirm">Type the service name to confirm</label>
-            <input class="c-input" data-width="100%" id="confirm" name="confirm" placeholder="api-gateway" type="text" />
+            <input
+              class="c-input"
+              data-width="100%"
+              id="confirm"
+              name="confirm"
+              placeholder="api-gateway"
+              type="text"
+            />
           </div>
 
           <div class="c-card-footer">
