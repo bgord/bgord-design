@@ -1,0 +1,66 @@
+.c-input,
+.c-textarea,
+.c-select {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+
+  background-color: var(--interactive-rest);
+
+  border: var(--border-width-hairline) var(--border-style-solid) var(--border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-inner);
+
+  outline: none;
+  appearance: none;
+
+  transition:
+    border-color var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-fast) var(--ease-out);
+}
+
+.c-input:hover:not(:disabled):not(:focus-visible),
+.c-textarea:hover:not(:disabled):not(:focus-visible),
+.c-select:hover:not(:disabled):not(:focus-visible) {
+  border-color: var(--border-strong);
+}
+
+.c-input:focus-visible,
+.c-textarea:focus-visible,
+.c-select:focus-visible {
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
+  outline-offset: var(--border-width-thin);
+}
+
+.c-input:disabled,
+.c-textarea:disabled,
+.c-select:disabled {
+  color: var(--text-disabled);
+  background-color: var(--interactive-disabled);
+  box-shadow: none;
+  cursor: default;
+}
+
+.c-input::placeholder,
+.c-textarea::placeholder {
+  color: var(--text-muted);
+  opacity: var(--opacity-full);
+}
+
+.c-input:user-invalid:not(:disabled),
+.c-textarea:user-invalid:not(:disabled),
+.c-select:user-invalid:not(:disabled) {
+  border-color: var(--color-danger-400);
+}
+
+.c-input:invalid:not(:disabled):not(:focus-visible):not(:placeholder-shown),
+.c-textarea:invalid:not(:disabled):not(:focus-visible):not(:placeholder-shown) {
+  border-color: var(--color-danger-400);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-input,
+  .c-textarea,
+  .c-select {
+    transition: none;
+  }
+}

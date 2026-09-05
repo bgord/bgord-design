@@ -1,46 +1,10 @@
 .c-select {
   block-size: var(--size-2xl);
-
   padding-inline: var(--spacing-3) var(--spacing-8);
-
-  color: var(--text-primary);
-  font-size: var(--font-size-sm);
   line-height: var(--line-height-none);
 
-  background-color: var(--interactive-rest);
-
-  border: var(--border-width-hairline) var(--border-style-solid) var(--border-default);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-inner);
-
-  appearance: none;
-  outline: none;
   text-overflow: ellipsis;
   cursor: pointer;
-
-  transition:
-    border-color var(--motion-fast) var(--ease-out),
-    box-shadow var(--motion-fast) var(--ease-out);
-}
-
-.c-select:hover:not(:disabled):not(:focus-visible) {
-  border-color: var(--border-strong);
-}
-
-.c-select:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
-  outline-offset: var(--border-width-thin);
-}
-
-.c-select:disabled {
-  color: var(--text-disabled);
-  background-color: var(--interactive-disabled);
-  box-shadow: none;
-  cursor: default;
-}
-
-.c-select:user-invalid:not(:disabled) {
-  border-color: var(--color-danger-400);
 }
 
 .c-select-wrapper {
@@ -74,11 +38,5 @@
 @supports (-webkit-touch-callout: none) {
   .c-select {
     font-size: var(--font-size-base);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .c-select {
-    transition: none;
   }
 }

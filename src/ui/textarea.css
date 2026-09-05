@@ -1,62 +1,13 @@
 .c-textarea {
   min-block-size: 64px;
-
   padding: var(--spacing-2) var(--spacing-3);
-
-  color: var(--text-primary);
-  font-size: var(--font-size-sm);
   line-height: var(--line-height-base);
-
-  background-color: var(--interactive-rest);
-
-  border: var(--border-width-hairline) var(--border-style-solid) var(--border-default);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-inner);
-
-  outline: none;
-  appearance: none;
   resize: vertical;
-
-  transition:
-    border-color var(--motion-fast) var(--ease-out),
-    box-shadow var(--motion-fast) var(--ease-out);
-}
-
-.c-textarea:hover:not(:disabled):not(:focus-visible) {
-  border-color: var(--border-strong);
-}
-
-.c-textarea:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
-  outline-offset: var(--border-width-thin);
-}
-
-.c-textarea:disabled {
-  color: var(--text-disabled);
-  background-color: var(--interactive-disabled);
-  box-shadow: none;
-  cursor: default;
-}
-
-.c-textarea::placeholder {
-  color: var(--text-muted);
-  opacity: var(--opacity-full);
-}
-
-.c-textarea:user-invalid:not(:disabled),
-.c-textarea:invalid:not(:disabled):not(:focus-visible):not(:placeholder-shown) {
-  border-color: var(--color-danger-400);
 }
 
 /* Prevent iOS zoom-in */
 @supports (-webkit-touch-callout: none) {
   .c-textarea {
     font-size: var(--font-size-base);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .c-textarea {
-    transition: none;
   }
 }
