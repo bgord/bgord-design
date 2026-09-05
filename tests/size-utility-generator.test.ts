@@ -18,6 +18,7 @@ describe("SizeUtilityGenerator", () => {
       [data-size='lg'] { height: var(--size-lg); width: var(--size-lg); }
       [data-size='xl'] { height: var(--size-xl); width: var(--size-xl); }
       [data-size='2xl'] { height: var(--size-2xl); width: var(--size-2xl); }
+      [data-size='3xl'] { height: var(--size-3xl); width: var(--size-3xl); }
 
       @media (max-width: 768px) {
         [data-md-size='xs'] { height: var(--size-xs); width: var(--size-xs); }
@@ -26,11 +27,12 @@ describe("SizeUtilityGenerator", () => {
         [data-md-size='lg'] { height: var(--size-lg); width: var(--size-lg); }
         [data-md-size='xl'] { height: var(--size-xl); width: var(--size-xl); }
         [data-md-size='2xl'] { height: var(--size-2xl); width: var(--size-2xl); }
+        [data-md-size='3xl'] { height: var(--size-3xl); width: var(--size-3xl); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-size"?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
-      "data-md-size"?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
+      "data-size"?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
+      "data-md-size"?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
     `);
   });
 });

@@ -16,8 +16,8 @@
 }
 
 .c-range:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
-  outline-offset: var(--spacing-1);
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
+  outline-offset: var(--border-width-thin);
 }
 
 .c-range:disabled {

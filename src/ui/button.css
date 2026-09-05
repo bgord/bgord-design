@@ -1,52 +1,64 @@
 .c-button {
-  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
 
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-wider);
+  block-size: var(--size-2xl);
+  padding-inline: var(--spacing-4);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-none);
   text-align: center;
-  text-transform: uppercase;
 
   background-color: transparent;
 
-  border: var(--border-width-md) var(--border-style-solid) transparent;
-  border-radius: var(--radius-sm);
+  border: var(--border-width-hairline) var(--border-style-solid) transparent;
+  border-radius: var(--radius-md);
 
   white-space: nowrap;
   user-select: none;
   touch-action: manipulation;
 
   transition:
-    border-radius var(--motion-medium) ease,
-    opacity var(--motion-slow) ease,
-    background-color var(--motion-slow) ease;
+    background-color var(--motion-fast) var(--ease-out),
+    border-color var(--motion-fast) var(--ease-out),
+    color var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-fast) var(--ease-out),
+    scale var(--motion-instant) var(--ease-out);
 }
 
 .c-button:hover:not(:disabled) {
-  border-radius: var(--radius-none);
   cursor: pointer;
 }
 
 .c-button:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
   outline-offset: var(--border-width-thin);
-  border-radius: var(--radius-sm);
 }
 
-.c-button:active {
-  scale: 0.97;
-  opacity: var(--opacity-high);
+.c-button:active:not(:disabled) {
+  scale: 0.98;
 }
 
-.c-button:disabled {
-  opacity: var(--opacity-medium);
-  cursor: default;
+/* ───────── SIZES ─────────────────────────────── */
+
+.c-button[data-size="sm"] {
+  block-size: var(--size-xl);
+  padding-inline: var(--spacing-3);
+  font-size: var(--font-size-xs);
 }
+
+.c-button[data-size="lg"] {
+  block-size: var(--size-3xl);
+  padding-inline: var(--spacing-5);
+  font-size: var(--font-size-base);
+}
+
+/* ───────── VARIANTS ──────────────────────────── */
 
 .c-button[data-variant="primary"] {
-  min-inline-size: 6.5rem;
-  padding-inline: var(--spacing-2);
-
   color: var(--text-inverted);
   background-color: var(--fill-inverted);
 }
@@ -54,47 +66,79 @@
   background-color: var(--fill-inverted-hover);
 }
 
-.c-button[data-variant="secondary"] {
-  min-inline-size: 6.5rem;
-  padding-inline: var(--spacing-2);
+.c-button[data-variant="brand"] {
+  color: var(--color-neutral-0);
+  background-color: var(--color-brand-500);
+}
+.c-button[data-variant="brand"]:hover:not(:disabled) {
+  background-color: var(--color-brand-400);
+}
 
-  color: var(--text-secondary);
+.c-button[data-variant="destructive"] {
+  color: var(--color-neutral-0);
+  background-color: var(--color-danger-600);
+}
+.c-button[data-variant="destructive"]:hover:not(:disabled) {
+  background-color: var(--color-danger-400);
+}
+
+.c-button[data-variant="secondary"] {
+  color: var(--text-primary);
   background-color: var(--fill-muted);
+  border-color: var(--border-default);
 }
 .c-button[data-variant="secondary"]:hover:not(:disabled) {
+  color: var(--text-strong);
   background-color: var(--fill-strong);
+  border-color: var(--border-strong);
 }
 
-.c-button[data-variant="bare"] {
-  padding-inline: var(--spacing-1);
+.c-button[data-variant="ghost"] {
   color: var(--text-secondary);
 }
-.c-button[data-variant="bare"]:hover:not(:disabled) {
-  opacity: var(--opacity-high);
+.c-button[data-variant="ghost"]:hover:not(:disabled) {
   color: var(--text-strong);
+  background-color: var(--fill-muted);
 }
 
-.c-button[data-variant="with-icon"] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-1);
-
+/* Square footprint for a button whose only content is an icon. */
+.c-button[data-variant="icon"] {
+  inline-size: var(--size-2xl);
+  padding-inline: var(--spacing-0);
   color: var(--text-secondary);
 }
-.c-button[data-variant="with-icon"]:hover:not(:disabled) {
-  opacity: var(--opacity-high);
+.c-button[data-variant="icon"]:hover:not(:disabled) {
   color: var(--text-strong);
+  background-color: var(--fill-muted);
 }
 
-a.c-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.c-button[data-variant="icon"][data-size="sm"] {
+  inline-size: var(--size-xl);
+}
+
+.c-button[data-variant="icon"][data-size="lg"] {
+  inline-size: var(--size-3xl);
+}
+
+a.c-button,
+a.c-button:hover {
+  text-decoration: none;
+}
+
+/* Must outrank every variant, so it stays last: equal specificity, later wins. */
+.c-button:disabled {
+  color: var(--text-disabled);
+  background-color: var(--interactive-disabled);
+  border-color: var(--border-subtle);
+  cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .c-button {
     transition: none;
+  }
+
+  .c-button:active:not(:disabled) {
+    scale: 1;
   }
 }

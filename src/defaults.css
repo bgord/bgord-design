@@ -32,7 +32,7 @@
   }
 
   :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
-    outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
+    outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
     outline-offset: var(--border-width-thin);
   }
 

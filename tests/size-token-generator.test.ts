@@ -13,6 +13,7 @@ describe("SizeTokenGenerator", () => {
         --size-lg: 24px;
         --size-xl: 32px;
         --size-2xl: 36px;
+        --size-3xl: 44px;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
       export const SizeTokens = {
@@ -21,7 +22,8 @@ describe("SizeTokenGenerator", () => {
         "size-md": "20px",
         "size-lg": "24px",
         "size-xl": "32px",
-        "size-2xl": "36px"
+        "size-2xl": "36px",
+        "size-3xl": "44px"
       } as const;
 
       export type SizeTokenType = keyof typeof SizeTokens;
@@ -40,6 +42,7 @@ describe("SizeTokenGenerator", () => {
         --size-lg: 24px;
         --size-xl: 32px;
         --size-2xl: 36px;
+        --size-3xl: 44px;
         --size-custom: 10rem;
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
@@ -50,6 +53,7 @@ describe("SizeTokenGenerator", () => {
         "size-lg": "24px",
         "size-xl": "32px",
         "size-2xl": "36px",
+        "size-3xl": "44px",
         "size-custom": "10rem"
       } as const;
 

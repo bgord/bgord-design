@@ -1,7 +1,7 @@
 .c-textarea {
-  min-height: 64px;
+  min-block-size: 64px;
 
-  padding: var(--spacing-1-5);
+  padding: var(--spacing-2) var(--spacing-3);
 
   color: var(--text-primary);
   font-size: var(--font-size-sm);
@@ -10,30 +10,32 @@
   background-color: var(--interactive-rest);
 
   border: var(--border-width-hairline) var(--border-style-solid) var(--border-default);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-inner);
 
-  appearance: none;
-  resize: none;
   outline: none;
+  appearance: none;
+  resize: vertical;
 
   transition:
-    border-radius var(--motion-medium) ease,
-    border-color var(--motion-slow) ease;
+    border-color var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-fast) var(--ease-out);
 }
 
-.c-textarea:hover:not(:disabled) {
+.c-textarea:hover:not(:disabled):not(:focus-visible) {
   border-color: var(--border-strong);
-  border-radius: var(--radius-none);
 }
 
 .c-textarea:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-neutral);
+  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
   outline-offset: var(--border-width-thin);
-  border-radius: var(--radius-sm);
 }
 
 .c-textarea:disabled {
-  opacity: var(--opacity-medium);
+  color: var(--text-disabled);
+  background-color: var(--interactive-disabled);
+  box-shadow: none;
+  cursor: default;
 }
 
 .c-textarea::placeholder {
@@ -41,14 +43,20 @@
   opacity: var(--opacity-full);
 }
 
-.c-textarea:user-invalid,
-.c-textarea:invalid:not(:focus-visible):not(:placeholder-shown) {
-  border-color: var(--color-danger-600);
+.c-textarea:user-invalid:not(:disabled),
+.c-textarea:invalid:not(:disabled):not(:focus-visible):not(:placeholder-shown) {
+  border-color: var(--color-danger-400);
 }
 
 /* Prevent iOS zoom-in */
 @supports (-webkit-touch-callout: none) {
   .c-textarea {
     font-size: var(--font-size-base);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-textarea {
+    transition: none;
   }
 }
