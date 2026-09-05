@@ -10,7 +10,6 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-inner);
 
-  outline: none;
   appearance: none;
 
   transition:
@@ -22,13 +21,6 @@
 .c-textarea:hover:not(:disabled):not(:focus-visible),
 .c-select:hover:not(:disabled):not(:focus-visible) {
   border-color: var(--border-strong);
-}
-
-.c-input:focus-visible,
-.c-textarea:focus-visible,
-.c-select:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
-  outline-offset: var(--border-width-thin);
 }
 
 .c-input:disabled,

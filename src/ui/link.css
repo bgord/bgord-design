@@ -16,9 +16,8 @@
   text-decoration-thickness: 2px;
 }
 
+/* The shared ring comes from the defaults layer; a link only rounds its corners. */
 .c-link:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
-  outline-offset: var(--border-width-thin);
   border-radius: var(--radius-xs);
 }
 

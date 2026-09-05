@@ -49,12 +49,6 @@ button.c-card:hover {
   box-shadow: var(--shadow-md);
 }
 
-a.c-card:focus-visible,
-button.c-card:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
-  outline-offset: var(--border-width-thin);
-}
-
 /* ───────── SLOTS ─────────────────────────────── */
 .c-card-header {
   display: flex;

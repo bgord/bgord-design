@@ -10,7 +10,6 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-none);
-  text-align: center;
 
   background-color: transparent;
 
@@ -20,6 +19,7 @@
   white-space: nowrap;
   user-select: none;
   touch-action: manipulation;
+  cursor: pointer;
 
   transition:
     background-color var(--motion-fast) var(--ease-out),
@@ -27,15 +27,6 @@
     color var(--motion-fast) var(--ease-out),
     box-shadow var(--motion-fast) var(--ease-out),
     scale var(--motion-instant) var(--ease-out);
-}
-
-.c-button:hover:not(:disabled) {
-  cursor: pointer;
-}
-
-.c-button:focus-visible {
-  outline: var(--border-width-thin) var(--border-style-solid) var(--focus-ring-brand);
-  outline-offset: var(--border-width-thin);
 }
 
 .c-button:active:not(:disabled) {
