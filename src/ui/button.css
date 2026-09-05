@@ -47,6 +47,7 @@
 .c-button[data-variant="primary"] {
   color: var(--text-inverted);
   background-color: var(--fill-inverted);
+  box-shadow: var(--shadow-xs);
 }
 .c-button[data-variant="primary"]:hover:not(:disabled) {
   background-color: var(--fill-inverted-hover);
@@ -55,6 +56,7 @@
 .c-button[data-variant="brand"] {
   color: var(--color-neutral-0);
   background-color: var(--color-brand-500);
+  box-shadow: var(--shadow-raised);
 }
 .c-button[data-variant="brand"]:hover:not(:disabled) {
   background-color: var(--color-brand-400);
@@ -63,6 +65,7 @@
 .c-button[data-variant="destructive"] {
   color: var(--color-neutral-0);
   background-color: var(--color-danger-600);
+  box-shadow: var(--shadow-raised);
 }
 .c-button[data-variant="destructive"]:hover:not(:disabled) {
   background-color: var(--color-danger-400);
@@ -103,11 +106,9 @@ a.c-button:hover {
   text-decoration: none;
 }
 
-/* Must outrank every variant, so it stays last: equal specificity, later wins. */
 .c-button:disabled {
-  color: var(--text-disabled);
-  background-color: var(--interactive-disabled);
-  border-color: var(--border-subtle);
+  opacity: var(--opacity-medium);
+  box-shadow: none;
   cursor: default;
 }
 

@@ -20,6 +20,7 @@ describe("ShadowUtilityGenerator", () => {
       [data-shadow='md'] { box-shadow: var(--shadow-md); }
       [data-shadow='lg'] { box-shadow: var(--shadow-lg); }
       [data-shadow='xl'] { box-shadow: var(--shadow-xl); }
+      [data-shadow='raised'] { box-shadow: var(--shadow-raised); }
       [data-shadow='inner'] { box-shadow: var(--shadow-inner); }
       [data-shadow='unset'] { box-shadow: var(--shadow-unset); }
 
@@ -30,6 +31,7 @@ describe("ShadowUtilityGenerator", () => {
       [data-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
       [data-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
       [data-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+      [data-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
       [data-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
       [data-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
 
@@ -40,6 +42,7 @@ describe("ShadowUtilityGenerator", () => {
       [data-focus-shadow='md']:focus-visible { box-shadow: var(--shadow-md); }
       [data-focus-shadow='lg']:focus-visible { box-shadow: var(--shadow-lg); }
       [data-focus-shadow='xl']:focus-visible { box-shadow: var(--shadow-xl); }
+      [data-focus-shadow='raised']:focus-visible { box-shadow: var(--shadow-raised); }
       [data-focus-shadow='inner']:focus-visible { box-shadow: var(--shadow-inner); }
       [data-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
 
@@ -50,6 +53,7 @@ describe("ShadowUtilityGenerator", () => {
       [data-active-shadow='md']:active { box-shadow: var(--shadow-md); }
       [data-active-shadow='lg']:active { box-shadow: var(--shadow-lg); }
       [data-active-shadow='xl']:active { box-shadow: var(--shadow-xl); }
+      [data-active-shadow='raised']:active { box-shadow: var(--shadow-raised); }
       [data-active-shadow='inner']:active { box-shadow: var(--shadow-inner); }
       [data-active-shadow='unset']:active { box-shadow: var(--shadow-unset); }
 
@@ -61,6 +65,7 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-shadow='md'] { box-shadow: var(--shadow-md); }
         [data-md-shadow='lg'] { box-shadow: var(--shadow-lg); }
         [data-md-shadow='xl'] { box-shadow: var(--shadow-xl); }
+        [data-md-shadow='raised'] { box-shadow: var(--shadow-raised); }
         [data-md-shadow='inner'] { box-shadow: var(--shadow-inner); }
         [data-md-shadow='unset'] { box-shadow: var(--shadow-unset); }
 
@@ -70,6 +75,7 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
         [data-md-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
         [data-md-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+        [data-md-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
         [data-md-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
         [data-md-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
 
@@ -80,6 +86,7 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-focus-shadow='md']:focus-visible { box-shadow: var(--shadow-md); }
         [data-md-focus-shadow='lg']:focus-visible { box-shadow: var(--shadow-lg); }
         [data-md-focus-shadow='xl']:focus-visible { box-shadow: var(--shadow-xl); }
+        [data-md-focus-shadow='raised']:focus-visible { box-shadow: var(--shadow-raised); }
         [data-md-focus-shadow='inner']:focus-visible { box-shadow: var(--shadow-inner); }
         [data-md-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
 
@@ -90,19 +97,20 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-active-shadow='md']:active { box-shadow: var(--shadow-md); }
         [data-md-active-shadow='lg']:active { box-shadow: var(--shadow-lg); }
         [data-md-active-shadow='xl']:active { box-shadow: var(--shadow-xl); }
+        [data-md-active-shadow='raised']:active { box-shadow: var(--shadow-raised); }
         [data-md-active-shadow='inner']:active { box-shadow: var(--shadow-inner); }
         [data-md-active-shadow='unset']:active { box-shadow: var(--shadow-unset); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
-      "data-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
-      "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
-      "data-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
-      "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
-      "data-md-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
-      "data-md-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
-      "data-md-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset";
+      "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset";
+      "data-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset";
+      "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset";
+      "data-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset";
+      "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset";
+      "data-md-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset";
+      "data-md-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset";
+      "data-md-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset";
     `);
   });
 
@@ -117,6 +125,7 @@ describe("ShadowUtilityGenerator", () => {
       [data-shadow='md'] { box-shadow: var(--shadow-md); }
       [data-shadow='lg'] { box-shadow: var(--shadow-lg); }
       [data-shadow='xl'] { box-shadow: var(--shadow-xl); }
+      [data-shadow='raised'] { box-shadow: var(--shadow-raised); }
       [data-shadow='inner'] { box-shadow: var(--shadow-inner); }
       [data-shadow='unset'] { box-shadow: var(--shadow-unset); }
       [data-shadow='huge'] { box-shadow: var(--shadow-huge); }
@@ -128,6 +137,7 @@ describe("ShadowUtilityGenerator", () => {
       [data-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
       [data-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
       [data-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+      [data-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
       [data-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
       [data-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
       [data-hover-shadow='huge']:hover:not(:disabled) { box-shadow: var(--shadow-huge); }
@@ -138,6 +148,7 @@ describe("ShadowUtilityGenerator", () => {
       [data-focus-shadow='md']:focus-visible { box-shadow: var(--shadow-md); }
       [data-focus-shadow='lg']:focus-visible { box-shadow: var(--shadow-lg); }
       [data-focus-shadow='xl']:focus-visible { box-shadow: var(--shadow-xl); }
+      [data-focus-shadow='raised']:focus-visible { box-shadow: var(--shadow-raised); }
       [data-focus-shadow='inner']:focus-visible { box-shadow: var(--shadow-inner); }
       [data-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
       [data-focus-shadow='huge']:focus-visible { box-shadow: var(--shadow-huge); }
@@ -149,6 +160,7 @@ describe("ShadowUtilityGenerator", () => {
       [data-active-shadow='md']:active { box-shadow: var(--shadow-md); }
       [data-active-shadow='lg']:active { box-shadow: var(--shadow-lg); }
       [data-active-shadow='xl']:active { box-shadow: var(--shadow-xl); }
+      [data-active-shadow='raised']:active { box-shadow: var(--shadow-raised); }
       [data-active-shadow='inner']:active { box-shadow: var(--shadow-inner); }
       [data-active-shadow='unset']:active { box-shadow: var(--shadow-unset); }
       [data-active-shadow='huge']:active { box-shadow: var(--shadow-huge); }
@@ -161,6 +173,7 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-shadow='md'] { box-shadow: var(--shadow-md); }
         [data-md-shadow='lg'] { box-shadow: var(--shadow-lg); }
         [data-md-shadow='xl'] { box-shadow: var(--shadow-xl); }
+        [data-md-shadow='raised'] { box-shadow: var(--shadow-raised); }
         [data-md-shadow='inner'] { box-shadow: var(--shadow-inner); }
         [data-md-shadow='unset'] { box-shadow: var(--shadow-unset); }
         [data-md-shadow='huge'] { box-shadow: var(--shadow-huge); }
@@ -172,6 +185,7 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
         [data-md-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
         [data-md-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+        [data-md-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
         [data-md-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
         [data-md-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
         [data-md-hover-shadow='huge']:hover:not(:disabled) { box-shadow: var(--shadow-huge); }
@@ -182,6 +196,7 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-focus-shadow='md']:focus-visible { box-shadow: var(--shadow-md); }
         [data-md-focus-shadow='lg']:focus-visible { box-shadow: var(--shadow-lg); }
         [data-md-focus-shadow='xl']:focus-visible { box-shadow: var(--shadow-xl); }
+        [data-md-focus-shadow='raised']:focus-visible { box-shadow: var(--shadow-raised); }
         [data-md-focus-shadow='inner']:focus-visible { box-shadow: var(--shadow-inner); }
         [data-md-focus-shadow='unset']:focus-visible { box-shadow: var(--shadow-unset); }
         [data-md-focus-shadow='huge']:focus-visible { box-shadow: var(--shadow-huge); }
@@ -193,20 +208,21 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-active-shadow='md']:active { box-shadow: var(--shadow-md); }
         [data-md-active-shadow='lg']:active { box-shadow: var(--shadow-lg); }
         [data-md-active-shadow='xl']:active { box-shadow: var(--shadow-xl); }
+        [data-md-active-shadow='raised']:active { box-shadow: var(--shadow-raised); }
         [data-md-active-shadow='inner']:active { box-shadow: var(--shadow-inner); }
         [data-md-active-shadow='unset']:active { box-shadow: var(--shadow-unset); }
         [data-md-active-shadow='huge']:active { box-shadow: var(--shadow-huge); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
-      "data-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
-      "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
-      "data-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
-      "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
-      "data-md-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
-      "data-md-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
-      "data-md-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "inner" | "unset" | "huge";
+      "data-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset" | "huge";
+      "data-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset" | "huge";
+      "data-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset" | "huge";
+      "data-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset" | "huge";
+      "data-md-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset" | "huge";
+      "data-md-hover-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset" | "huge";
+      "data-md-focus-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset" | "huge";
+      "data-md-active-shadow"?: "none" | "xs" | "sm" | "md" | "lg" | "xl" | "raised" | "inner" | "unset" | "huge";
     `);
   });
 });

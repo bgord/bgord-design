@@ -13,6 +13,7 @@ describe("ShadowTokenGenerator", () => {
       --shadow-md: 0 4px 6px -1px rgba(0 0 0 / 0.45), 0 2px 4px -2px rgba(0 0 0 / 0.4);
       --shadow-lg: 0 10px 15px -3px rgba(0 0 0 / 0.5), 0 4px 6px -4px rgba(0 0 0 / 0.45);
       --shadow-xl: 0 20px 25px -5px rgba(0 0 0 / 0.55), 0 8px 10px -6px rgba(0 0 0 / 0.5);
+      --shadow-raised: inset 0 1px 0 rgba(255 255 255 / 0.12), 0 1px 2px 0 rgba(0 0 0 / 0.3);
       --shadow-inner: inset 0 1px 2px 0 rgba(0 0 0 / 0.35);
       --shadow-unset: unset;
     `);
@@ -24,6 +25,7 @@ describe("ShadowTokenGenerator", () => {
         "shadow-md": "0 4px 6px -1px rgba(0 0 0 / 0.45), 0 2px 4px -2px rgba(0 0 0 / 0.4)",
         "shadow-lg": "0 10px 15px -3px rgba(0 0 0 / 0.5), 0 4px 6px -4px rgba(0 0 0 / 0.45)",
         "shadow-xl": "0 20px 25px -5px rgba(0 0 0 / 0.55), 0 8px 10px -6px rgba(0 0 0 / 0.5)",
+        "shadow-raised": "inset 0 1px 0 rgba(255 255 255 / 0.12), 0 1px 2px 0 rgba(0 0 0 / 0.3)",
         "shadow-inner": "inset 0 1px 2px 0 rgba(0 0 0 / 0.35)",
         "shadow-unset": "unset"
       } as const;
@@ -44,6 +46,7 @@ describe("ShadowTokenGenerator", () => {
       --shadow-md: 0 4px 6px -1px rgba(0 0 0 / 0.45), 0 2px 4px -2px rgba(0 0 0 / 0.4);
       --shadow-lg: 0 10px 15px -3px rgba(0 0 0 / 0.5), 0 4px 6px -4px rgba(0 0 0 / 0.45);
       --shadow-xl: 0 20px 25px -5px rgba(0 0 0 / 0.55), 0 8px 10px -6px rgba(0 0 0 / 0.5);
+      --shadow-raised: inset 0 1px 0 rgba(255 255 255 / 0.12), 0 1px 2px 0 rgba(0 0 0 / 0.3);
       --shadow-inner: inset 0 1px 2px 0 rgba(0 0 0 / 0.35);
       --shadow-unset: unset;
       --shadow-custom: 0 0 10px 0 rgba(0 0 0 / 0.1);
@@ -56,6 +59,7 @@ describe("ShadowTokenGenerator", () => {
         "shadow-md": "0 4px 6px -1px rgba(0 0 0 / 0.45), 0 2px 4px -2px rgba(0 0 0 / 0.4)",
         "shadow-lg": "0 10px 15px -3px rgba(0 0 0 / 0.5), 0 4px 6px -4px rgba(0 0 0 / 0.45)",
         "shadow-xl": "0 20px 25px -5px rgba(0 0 0 / 0.55), 0 8px 10px -6px rgba(0 0 0 / 0.5)",
+        "shadow-raised": "inset 0 1px 0 rgba(255 255 255 / 0.12), 0 1px 2px 0 rgba(0 0 0 / 0.3)",
         "shadow-inner": "inset 0 1px 2px 0 rgba(0 0 0 / 0.35)",
         "shadow-unset": "unset",
         "shadow-custom": "0 0 10px 0 rgba(0 0 0 / 0.1)"
