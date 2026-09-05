@@ -1,6 +1,12 @@
 /* Prose rhythm for content whose structure you do not author (markdown, CMS, rich text).
    For markup you write, prefer data-stack + data-gap.
    Vertical rhythm is opt-in: elements carry no margins, the container spaces them. */
+/* The reading size. Everything outside prose stays at the UI size the body sets. */
+.c-prose {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-loose);
+}
+
 .c-prose > * + * {
   margin-block-start: var(--prose-space, var(--spacing-4));
 }
