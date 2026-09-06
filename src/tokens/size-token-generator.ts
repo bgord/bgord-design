@@ -7,8 +7,7 @@ export class SizeTokenGenerator extends TokenGenerator {
     "size-md": "20px", // most button icons & inputs
     "size-lg": "24px", // primary action buttons, cards
     "size-xl": "32px", // featured widgets, dashboards
-    "size-2xl": "36px", // default button height
-    "size-3xl": "44px", // large button height
+    "size-2xl": "36px", // button height
   };
 
   constructor(overrides: TokenConfigType = {}) {

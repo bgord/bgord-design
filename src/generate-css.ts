@@ -18,7 +18,7 @@ export class GenerateCSS {
 
     if (light) {
       /* Light is opt-in via the OS unless the theme is pinned to dark... */
-      output += `@media (prefers-color-scheme: light) {\n:root:not([data-theme="light"]):not([data-theme="dark"]) {\n${light}}\n}\n\n`;
+      output += `@media (prefers-color-scheme: light) {\n:root:not([data-theme="dark"]) {\n${light}}\n}\n\n`;
       /* ...and always available by pinning the theme to light. */
       output += `:root[data-theme="light"] {\n${light}}\n\n`;
     }
