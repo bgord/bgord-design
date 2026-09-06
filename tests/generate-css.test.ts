@@ -2,6 +2,7 @@ import { describe, expect, jest, spyOn, test } from "bun:test";
 import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { GenerateCSS } from "../src/generate-css";
 import * as TokensGenerators from "../src/tokens";
+import { type TokenConfigType, TokenGenerator } from "../src/tokens/template";
 import * as UtilityGenerators from "../src/utilities";
 
 const breakpoints = new BreakpointRegistry({ md: "768" });
@@ -87,5 +88,26 @@ describe("GenerateCSS", async () => {
         }
       }
     `);
+  });
+
+  test("process with light tokens", async () => {
+    class LightTokenGenerator extends TokenGenerator {
+      base: TokenConfigType = { dark: "black" };
+      light: TokenConfigType = { dark: "white" };
+
+      constructor() {
+        super("Light", {});
+      }
+    }
+
+    // @ts-expect-error
+    using _bunFile = spyOn(Bun, "file").mockImplementation(() => ({ text: () => "" }));
+    using bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
+
+    await GenerateCSS.process([new LightTokenGenerator()], []);
+
+    expect(bunWrite.mock.calls[0][1]).toEqual(
+      `@import "../src/normalize.css" layer(reset);\n\n:root {\n--dark: black;\n}\n\n@media (prefers-color-scheme: light) {\n:root:not([data-theme="dark"]) {\n--dark: white;\n}\n}\n\n:root[data-theme="light"] {\n--dark: white;\n}\n\n\n\n@layer components {\n}\n\n@layer utilities {\n}\n\n`,
+    );
   });
 });
