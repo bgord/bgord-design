@@ -3,8 +3,8 @@ import { type TokenConfigType, TokenGenerator } from "./template";
 export class FontSizeTokenGenerator extends TokenGenerator {
   base: TokenConfigType = {
     "font-size-xs": "0.75rem", // 12 px
-    "font-size-sm": "0.875rem", // 14 px
-    "font-size-base": "1rem", // 16 px  ← default body
+    "font-size-sm": "0.875rem", // 14 px  ← default body
+    "font-size-base": "1rem", // 16 px  ← long-form prose
     "font-size-lg": "1.125rem", // 18 px
     "font-size-xl": "1.25rem", // 20 px
     "font-size-2xl": "1.5rem", // 24 px
