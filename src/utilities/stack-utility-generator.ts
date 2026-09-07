@@ -20,7 +20,13 @@ export class StackUtilityGenerator extends UtilityGenerator {
 
     for (const [key] of config) {
       if (key === "x") {
-        regular.push(new CssRuleRegular(`[data-stack='${key}']`, { display: "flex", "flex-wrap": "wrap" }));
+        regular.push(
+          new CssRuleRegular(`[data-stack='${key}']`, {
+            display: "flex",
+            "flex-direction": "row",
+            "flex-wrap": "wrap",
+          }),
+        );
       }
 
       /* No wrap on the column: a wrapping column stretches its children to the line height and
@@ -47,7 +53,11 @@ export class StackUtilityGenerator extends UtilityGenerator {
       for (const [key] of config) {
         if (key === "x") {
           responsive.push(
-            new CssRuleRegular(`[data-${name}-stack='${key}']`, { display: "flex", "flex-wrap": "wrap" }),
+            new CssRuleRegular(`[data-${name}-stack='${key}']`, {
+              display: "flex",
+              "flex-direction": "row",
+              "flex-wrap": "wrap",
+            }),
           );
         }
 
