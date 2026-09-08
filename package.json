@@ -28,7 +28,7 @@
     "@fullhuman/postcss-purgecss": "8.0.0",
     "@stryker-mutator/core": "10.0.0",
     "@stryker-mutator/typescript-checker": "10.0.0",
-    "@types/bun": "1.4.1",
+    "@types/bun": "1.4.2",
     "cspell": "10.2.2",
     "fallow": "3.22.0",
     "gzip-cli": "1.2.0",
