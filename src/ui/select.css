@@ -1,7 +1,10 @@
 .c-select {
   block-size: var(--size-2xl);
   padding-inline: var(--spacing-3) var(--spacing-8);
-  line-height: var(--line-height-none);
+
+  /* Chrome aligns the selected text to the top of the content box instead of
+     centring it, so the line box is stretched to fill the control. */
+  line-height: calc(var(--size-2xl) - 2 * var(--border-width-hairline));
 
   text-overflow: ellipsis;
   cursor: pointer;
