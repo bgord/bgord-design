@@ -5,6 +5,10 @@
   resize: vertical;
 }
 
+.c-textarea[data-variant="transparent"] {
+  background-color: transparent;
+}
+
 /* Prevent iOS zoom-in */
 @supports (-webkit-touch-callout: none) {
   .c-textarea {
