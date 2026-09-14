@@ -36,8 +36,13 @@ export const content = [
   "node_modules/@bgord/ui/**/*.{ts,tsx,jsx,js}",
 ];
 
+export const safelist = { standard: [":focus-visible", "tabindex"] };
+
 // Stryker disable next-line ObjectLiteral
-const plugins = [keepResetLayer, purgecss({ content, defaultExtractor: dataAttributeAwareExtractor })];
+const plugins = [
+  keepResetLayer,
+  purgecss({ content, safelist, defaultExtractor: dataAttributeAwareExtractor }),
+];
 
 export async function main(argv: Array<string>, isEntrypoint: boolean): Promise<void> {
   if (!isEntrypoint) return;

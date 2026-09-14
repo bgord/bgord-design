@@ -1,6 +1,6 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
 import postcss from "postcss";
-import { content, dataAttributeAwareExtractor, keepResetLayer, main } from "../src/css-purge";
+import { content, dataAttributeAwareExtractor, keepResetLayer, main, safelist } from "../src/css-purge";
 
 const run = (css: string) => postcss([keepResetLayer]).process(css, { from: undefined }).css;
 
@@ -101,6 +101,26 @@ describe("css-purge", () => {
       "public/**/*.html",
       "node_modules/@bgord/ui/**/*.{ts,tsx,jsx,js}",
     ]);
+  });
+
+  test("safelist - selectors purgecss cannot resolve", () => {
+    expect(safelist).toEqual({ standard: [":focus-visible", "tabindex"] });
+  });
+
+  test("main - keeps the focus ring on :where selectors", async () => {
+    // @ts-expect-error
+    using bunFile = spyOn(Bun, "file").mockImplementation(() => ({
+      text: async () => ":where(a,[tabindex]):focus-visible{outline:none}:where(a,button):hover{color:red}",
+    }));
+    using bunWrite = spyOn(Bun, "write").mockImplementation(jest.fn());
+
+    await main(["bun", "css-purge", "public/main.min.css"], true);
+
+    expect(bunFile).toHaveBeenCalledWith("public/main.min.css");
+    expect(bunWrite).toHaveBeenCalledWith(
+      "public/main.min.css",
+      ":where([tabindex]):focus-visible{outline:none}",
+    );
   });
 
   test("main - purges the file at the given path", async () => {
