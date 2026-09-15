@@ -5,7 +5,18 @@
 }
 
 .c-input[type="date"] {
+  min-inline-size: 11rem;
   font-size: var(--font-size-xs);
+}
+
+/* iOS WebKit centres the value once `appearance: none` strips the native control. */
+.c-input[type="date"]::-webkit-date-and-time-value {
+  min-block-size: 1lh;
+  text-align: start;
+}
+
+.c-input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
 }
 
 .c-input[data-variant="transparent"] {
