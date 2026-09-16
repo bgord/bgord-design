@@ -29,4 +29,9 @@
   .c-input[type="date"] {
     font-size: var(--font-size-base);
   }
+
+  .c-input[type="date"] {
+    display: flex;
+    align-items: center;
+  }
 }
