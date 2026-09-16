@@ -457,9 +457,9 @@
       <div data-mb="12">
         <h2 class="p-text-strong" data-fs="xl" data-fw="semibold" data-mb="1">Cards</h2>
         <div class="p-text-muted" data-lh="base" data-mb="5">
-          The default sits on the canvas; <code>flat</code> nests inside another card,
-          <code>sunken</code> is a well, <code>overlay</code> floats. Rendered as an
-          <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>, the whole card becomes the target.
+          The default sits on the canvas; <code>flat</code> nests inside another card, <code>sunken</code> is
+          a well, <code>overlay</code> floats. Rendered as an <code>&lt;a&gt;</code> or
+          <code>&lt;button&gt;</code>, the whole card becomes the target.
         </div>
 
         <div class="p-cards" data-gap="4" data-mb="4">
@@ -539,6 +539,17 @@
               <label class="c-label" for="p-input">Text input</label>
               <input class="c-input" id="p-input" name="p-input" placeholder="Placeholder text" type="text" />
             </div>
+            <div>
+              <label class="c-label" for="p-input">Text input transparent</label>
+              <input
+                class="c-input"
+                data-variant="transparent"
+                id="p-input"
+                name="p-input"
+                placeholder="Placeholder text"
+                type="text"
+              />
+            </div>
 
             <div>
               <label class="c-label" for="p-input-filled">Filled</label>
@@ -591,9 +602,30 @@
             </div>
 
             <div>
+              <label class="c-label" for="p-textarea">Textarea transparent</label>
+              <textarea
+                class="c-textarea"
+                data-variant="transparent"
+                id="p-textarea"
+                name="p-textarea"
+                placeholder="Placeholder text"
+              ></textarea>
+            </div>
+
+            <div>
               <label class="c-label" for="p-select">Select</label>
               <div class="c-select-wrapper">
                 <select class="c-select" id="p-select" name="p-select">
+                  <option>First option</option>
+                  <option>Second option</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="c-label" for="p-select">Select transparent</label>
+              <div class="c-select-wrapper">
+                <select class="c-select" data-variant="transparent" id="p-select" name="p-select" >
                   <option>First option</option>
                   <option>Second option</option>
                 </select>
