@@ -13,6 +13,7 @@
 [x][DEPENDENT] FlexDirectionUtilityGenerator: flex-direction
 [x][ORTHOGONAL] FlexGrowUtilityGenerator: flex-grow
 [x][ORTHOGONAL] FlexShrinkUtilityGenerator: flex-shrink
+[x][ORTHOGONAL] FlexBasisUtilityGenerator: flex-basis
 [x][DEPENDENT] FlexWrapUtilityGenerator: flex-wrap
 [x][ORTHOGONAL] AxisPlacementUtilityGenerator: justify-content, align-items
 [x][ORTHOGONAL] SelfUtilityGenerator: align-self
@@ -27,6 +28,8 @@
 [x][ORTHOGONAL] MarginUtilityGenerator: margin, margin-{top, right, bottom, left}
 [x][ORTHOGONAL] MaxHeightUtilityGenerator: max-height
 [x][ORTHOGONAL] MaxWidthUtilityGenerator: max-width
+[x][ORTHOGONAL] MinHeightUtilityGenerator: min-height
+[x][ORTHOGONAL] MinWidthUtilityGenerator: min-width
 [x][ORTHOGONAL] ObjectFitUtilityGenerator: object-fit
 [x][ORTHOGONAL] ObjectPositionUtilityGenerator: object-position
 [x][ORTHOGONAL] OpacityUtilityGenerator: opacity
@@ -59,6 +62,7 @@ SelfUtilityGenerator: align-self
 GapUtilityGenerator: gap
 FlexGrowUtilityGenerator: flex-grow
 FlexShrinkUtilityGenerator: flex-shrink
+FlexBasisUtilityGenerator: flex-basis
 
 PositionUtilityGenerator: position
 PositionersUtilityGenerator: top, right, bottom, left, inset
@@ -66,6 +70,8 @@ PositionersUtilityGenerator: top, right, bottom, left, inset
 SizeUtilityGenerator: height, width
 HeightUtilityGenerator: height
 WidthUtilityGenerator: width
+MinHeightUtilityGenerator: min-height
+MinWidthUtilityGenerator: min-width
 MaxHeightUtilityGenerator: max-height
 MaxWidthUtilityGenerator: max-width
 

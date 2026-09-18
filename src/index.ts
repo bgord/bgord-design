@@ -186,10 +186,13 @@ void (async function main() {
   );
   const FlexGrowUtilityGenerator = new UtilityGenerators.FlexGrowUtilityGenerator(breakpointRegistry);
   const FlexShrinkUtilityGenerator = new UtilityGenerators.FlexShrinkUtilityGenerator(breakpointRegistry);
+  const FlexBasisUtilityGenerator = new UtilityGenerators.FlexBasisUtilityGenerator(breakpointRegistry);
   const FlexWrapUtilityGenerator = new UtilityGenerators.FlexWrapUtilityGenerator(breakpointRegistry);
   const TransformUtilityGenerator = new UtilityGenerators.TransformUtilityGenerator(breakpointRegistry);
   const WidthUtilityGenerator = new UtilityGenerators.WidthUtilityGenerator(breakpointRegistry);
   const HeightUtilityGenerator = new UtilityGenerators.HeightUtilityGenerator(breakpointRegistry);
+  const MinHeightUtilityGenerator = new UtilityGenerators.MinHeightUtilityGenerator(breakpointRegistry);
+  const MinWidthUtilityGenerator = new UtilityGenerators.MinWidthUtilityGenerator(breakpointRegistry);
   const SizeUtilityGenerator = new UtilityGenerators.SizeUtilityGenerator(
     breakpointRegistry,
     SizeTokenGenerator,
@@ -211,6 +214,7 @@ void (async function main() {
     GapUtilityGenerator,
     FlexGrowUtilityGenerator,
     FlexShrinkUtilityGenerator,
+    FlexBasisUtilityGenerator,
 
     PositionUtilityGenerator,
     PositionersUtilityGenerator,
@@ -218,6 +222,8 @@ void (async function main() {
     SizeUtilityGenerator,
     HeightUtilityGenerator,
     WidthUtilityGenerator,
+    MinHeightUtilityGenerator,
+    MinWidthUtilityGenerator,
     MaxHeightUtilityGenerator,
     MaxWidthUtilityGenerator,
 
