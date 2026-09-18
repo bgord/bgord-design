@@ -100,6 +100,7 @@ src/
     ├── css-rule.strategy.ts
     ├── cursor-utility-generator.ts
     ├── display-utility-generator.ts
+    ├── flex-basis-utility-generator.ts
     ├── flex-direction-utility-generator.ts
     ├── flex-grow-utility-generator.ts
     ├── flex-shrink-utility-generator.ts
@@ -116,6 +117,8 @@ src/
     ├── margin-utility-generator.ts
     ├── max-height-utility-generator.ts
     ├── max-width-utility-generator.ts
+    ├── min-height-utility-generator.ts
+    ├── min-width-utility-generator.ts
     ├── object-fit-utility-generator.ts
     ├── object-position-utility-generator.ts
     ├── opacity-utility-generator.ts
