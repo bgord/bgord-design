@@ -1,7 +1,7 @@
 {
   "name": "@bgord/design",
   "type": "module",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "license": "MIT",
   "author": "Bartosz Gordon",
   "main": "./dist/lib.js",
