@@ -11,6 +11,7 @@ export * from "./flex-direction-utility-generator";
 export * from "./flex-grow-utility-generator";
 export * from "./flex-shrink-utility-generator";
 export * from "./flex-wrap-utility-generator";
+export * from "./focus-ring-offset-utility-generator";
 export * from "./focus-ring-utility-generator";
 export * from "./font-color-utility-generator";
 export * from "./font-family-utility-generator";

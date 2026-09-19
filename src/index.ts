@@ -203,6 +203,9 @@ void (async function main() {
     breakpointRegistry,
     FocusRingTokenGenerator,
   );
+  const FocusRingOffsetUtilityGenerator = new UtilityGenerators.FocusRingOffsetUtilityGenerator(
+    breakpointRegistry,
+  );
 
   const generators = [
     DisplayUtilityGenerator,
@@ -251,6 +254,7 @@ void (async function main() {
     ObjectPositionUtilityGenerator,
     OpacityUtilityGenerator,
     FocusRingUtilityGenerator,
+    FocusRingOffsetUtilityGenerator,
     ZIndexUtilityGenerator,
     ShadowUtilityGenerator,
     RotateUtilityGenerator,

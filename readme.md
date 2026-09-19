@@ -105,6 +105,7 @@ src/
     ├── flex-grow-utility-generator.ts
     ├── flex-shrink-utility-generator.ts
     ├── flex-wrap-utility-generator.ts
+    ├── focus-ring-offset-utility-generator.ts
     ├── focus-ring-utility-generator.ts
     ├── font-color-utility-generator.ts
     ├── font-family-utility-generator.ts
