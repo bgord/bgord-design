@@ -24,15 +24,15 @@
     "prepublish": "bash scripts/prepare-css-files.sh"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.13",
+    "@biomejs/biome": "2.5.14",
     "@fullhuman/postcss-purgecss": "8.0.0",
     "@stryker-mutator/core": "10.0.0",
     "@stryker-mutator/typescript-checker": "10.0.0",
     "@types/bun": "1.4.2",
-    "cspell": "10.3.0",
+    "cspell": "10.3.3",
     "fallow": "3.25.0",
     "gzip-cli": "1.2.0",
-    "lefthook": "2.1.12",
+    "lefthook": "2.1.14",
     "lightningcss-cli": "1.33.0",
     "lockfile-lint": "5.0.1",
     "postcss": "8.5.28",
