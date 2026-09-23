@@ -20,6 +20,31 @@
   --prose-space: var(--spacing-6);
 }
 
+.c-prose h1 {
+  color: var(--color-neutral-100);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.c-prose h2 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-tight);
+}
+
+.c-prose h3 {
+  font-size: var(--font-size-xl);
+  letter-spacing: var(--letter-spacing-snug);
+}
+
+.c-prose h4 {
+  font-size: var(--font-size-lg);
+  letter-spacing: var(--letter-spacing-snug);
+}
+
+.c-prose h5 {
+  font-size: var(--font-size-base);
+}
+
 .c-prose :is(ul, ol) {
   padding-inline-start: var(--spacing-6);
 }
