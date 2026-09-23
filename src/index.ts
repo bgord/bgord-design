@@ -206,8 +206,8 @@ void (async function main() {
   );
 
   const generators = [
-    DisplayUtilityGenerator,
     StackUtilityGenerator,
+    DisplayUtilityGenerator,
     FlexDirectionUtilityGenerator,
     FlexWrapUtilityGenerator,
     AxisPlacementUtilityGenerator,
