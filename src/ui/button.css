@@ -81,6 +81,7 @@
 }
 
 .c-button[data-variant="icon"] {
+  flex-shrink: 0;
   inline-size: var(--size-2xl);
   padding-inline: var(--spacing-0);
   color: var(--color-neutral-300);
