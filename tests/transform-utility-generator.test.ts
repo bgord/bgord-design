@@ -17,6 +17,7 @@ describe("TransformUtilityGenerator", () => {
       [data-transform~='truncate'] {  overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis; }
       [data-transform~='center'] {  text-align: center; }
       [data-transform~='nowrap'] {  white-space: nowrap; }
+      [data-transform~='pre-line'] {  white-space: pre-line; }
       [data-transform~='none'] { text-transform: none; }
       [data-transform~='line-clamp'] {  display: -webkit-box;  -webkit-box-orient: vertical;  -webkit-line-clamp: var(--lines, 2); overflow: hidden; }
       [data-transform~='font-variant-numeric'] {  font-variant-numeric: tabular-nums; }
@@ -29,14 +30,15 @@ describe("TransformUtilityGenerator", () => {
         [data-md-transform~='truncate'] {  overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis; }
         [data-md-transform~='center'] {  text-align: center; }
         [data-md-transform~='nowrap'] {  white-space: nowrap; }
+        [data-md-transform~='pre-line'] {  white-space: pre-line; }
         [data-md-transform~='none'] { text-transform: none; }
         [data-md-transform~='line-clamp'] {  display: -webkit-box;  -webkit-box-orient: vertical;  -webkit-line-clamp: var(--lines, 2); overflow: hidden; }
         [data-md-transform~='font-variant-numeric'] {  font-variant-numeric: tabular-nums; }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-     "data-transform"?: "uppercase" | "lowercase" | "capitalize" | "upper-first" | "truncate" | "center" | "nowrap" | "none" | "line-clamp" | "font-variant-numeric";
-     "data-md-transform"?: "uppercase" | "lowercase" | "capitalize" | "upper-first" | "truncate" | "center" | "nowrap" | "none" | "line-clamp" | "font-variant-numeric";
+     "data-transform"?: "uppercase" | "lowercase" | "capitalize" | "upper-first" | "truncate" | "center" | "nowrap" | "pre-line" | "none" | "line-clamp" | "font-variant-numeric";
+     "data-md-transform"?: "uppercase" | "lowercase" | "capitalize" | "upper-first" | "truncate" | "center" | "nowrap" | "pre-line" | "none" | "line-clamp" | "font-variant-numeric";
     `);
   });
 });

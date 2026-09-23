@@ -12,6 +12,7 @@ export class TransformUtilityGenerator extends UtilityGenerator {
     truncate: "truncate",
     center: "center",
     nowrap: "nowrap",
+    "pre-line": "pre-line",
     none: "none",
     "line-clamp": "line-clamp",
     "font-variant-numeric": "tabular-nums",
@@ -67,6 +68,11 @@ export class TransformUtilityGenerator extends UtilityGenerator {
 
       if (key === "nowrap") {
         regular.push(new CssRuleRegular(`[data-transform~='${key}']`, { "white-space": "nowrap" }));
+        continue;
+      }
+
+      if (key === "pre-line") {
+        regular.push(new CssRuleRegular(`[data-transform~='${key}']`, { "white-space": "pre-line" }));
         continue;
       }
 
@@ -132,6 +138,13 @@ export class TransformUtilityGenerator extends UtilityGenerator {
         if (key === "nowrap") {
           responsive.push(
             new CssRuleRegular(`[data-${name}-transform~='${key}']`, { "white-space": "nowrap" }),
+          );
+          continue;
+        }
+
+        if (key === "pre-line") {
+          responsive.push(
+            new CssRuleRegular(`[data-${name}-transform~='${key}']`, { "white-space": "pre-line" }),
           );
           continue;
         }
