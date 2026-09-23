@@ -30,6 +30,12 @@
   box-shadow: none;
 }
 
+.c-card[data-variant="danger"] {
+  background-color: color-mix(in oklch, var(--color-danger-900) 18%, transparent);
+  border-color: var(--color-danger-900);
+  box-shadow: none;
+}
+
 .c-card[data-variant="overlay"] {
   background-color: var(--color-neutral-850);
   border-color: var(--color-alpha-soft);
