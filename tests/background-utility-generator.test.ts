@@ -77,6 +77,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='alpha-subtle'] { background: var(--color-alpha-subtle); }
       [data-bg='alpha-soft'] { background: var(--color-alpha-soft); }
       [data-bg='alpha-medium'] { background: var(--color-alpha-medium); }
+      [data-bg='alpha-strong'] { background: var(--color-alpha-strong); }
 
 
       [data-hover-bg='neutral-0']:hover:not(:disabled) { background: var(--color-neutral-0); }
@@ -128,6 +129,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-hover-bg='alpha-subtle']:hover:not(:disabled) { background: var(--color-alpha-subtle); }
       [data-hover-bg='alpha-soft']:hover:not(:disabled) { background: var(--color-alpha-soft); }
       [data-hover-bg='alpha-medium']:hover:not(:disabled) { background: var(--color-alpha-medium); }
+      [data-hover-bg='alpha-strong']:hover:not(:disabled) { background: var(--color-alpha-strong); }
 
 
       [data-focus-bg='neutral-0']:focus-visible { background: var(--color-neutral-0); }
@@ -179,6 +181,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-focus-bg='alpha-subtle']:focus-visible { background: var(--color-alpha-subtle); }
       [data-focus-bg='alpha-soft']:focus-visible { background: var(--color-alpha-soft); }
       [data-focus-bg='alpha-medium']:focus-visible { background: var(--color-alpha-medium); }
+      [data-focus-bg='alpha-strong']:focus-visible { background: var(--color-alpha-strong); }
 
 
       @media (max-width: 768px) {
@@ -231,6 +234,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-bg='alpha-subtle'] { background: var(--color-alpha-subtle); }
         [data-md-bg='alpha-soft'] { background: var(--color-alpha-soft); }
         [data-md-bg='alpha-medium'] { background: var(--color-alpha-medium); }
+        [data-md-bg='alpha-strong'] { background: var(--color-alpha-strong); }
 
         
         [data-md-hover-bg='neutral-0']:hover:not(:disabled) { background: var(--color-neutral-0); }
@@ -282,6 +286,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-hover-bg='alpha-subtle']:hover:not(:disabled) { background: var(--color-alpha-subtle); }
         [data-md-hover-bg='alpha-soft']:hover:not(:disabled) { background: var(--color-alpha-soft); }
         [data-md-hover-bg='alpha-medium']:hover:not(:disabled) { background: var(--color-alpha-medium); }
+        [data-md-hover-bg='alpha-strong']:hover:not(:disabled) { background: var(--color-alpha-strong); }
 
 
         [data-md-focus-bg='neutral-0']:focus-visible { background: var(--color-neutral-0); }
@@ -333,16 +338,17 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-focus-bg='alpha-subtle']:focus-visible { background: var(--color-alpha-subtle); }
         [data-md-focus-bg='alpha-soft']:focus-visible { background: var(--color-alpha-soft); }
         [data-md-focus-bg='alpha-medium']:focus-visible { background: var(--color-alpha-medium); }
+        [data-md-focus-bg='alpha-strong']:focus-visible { background: var(--color-alpha-strong); }
       }
     `);
 
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
+      "data-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
    `);
   });
 
@@ -416,6 +422,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-bg='alpha-subtle'] { background: var(--color-alpha-subtle); }
       [data-bg='alpha-soft'] { background: var(--color-alpha-soft); }
       [data-bg='alpha-medium'] { background: var(--color-alpha-medium); }
+      [data-bg='alpha-strong'] { background: var(--color-alpha-strong); }
 
 
       [data-hover-bg='neutral-0']:hover:not(:disabled) { background: var(--color-neutral-0); }
@@ -469,6 +476,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-hover-bg='alpha-subtle']:hover:not(:disabled) { background: var(--color-alpha-subtle); }
       [data-hover-bg='alpha-soft']:hover:not(:disabled) { background: var(--color-alpha-soft); }
       [data-hover-bg='alpha-medium']:hover:not(:disabled) { background: var(--color-alpha-medium); }
+      [data-hover-bg='alpha-strong']:hover:not(:disabled) { background: var(--color-alpha-strong); }
 
 
       [data-focus-bg='neutral-0']:focus-visible { background: var(--color-neutral-0); }
@@ -522,6 +530,7 @@ describe("BackgroundUtilityGenerator", () => {
       [data-focus-bg='alpha-subtle']:focus-visible { background: var(--color-alpha-subtle); }
       [data-focus-bg='alpha-soft']:focus-visible { background: var(--color-alpha-soft); }
       [data-focus-bg='alpha-medium']:focus-visible { background: var(--color-alpha-medium); }
+      [data-focus-bg='alpha-strong']:focus-visible { background: var(--color-alpha-strong); }
 
 
       @media (max-width: 768px) {
@@ -576,6 +585,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-bg='alpha-subtle'] { background: var(--color-alpha-subtle); }
         [data-md-bg='alpha-soft'] { background: var(--color-alpha-soft); }
         [data-md-bg='alpha-medium'] { background: var(--color-alpha-medium); }
+        [data-md-bg='alpha-strong'] { background: var(--color-alpha-strong); }
 
 
         [data-md-hover-bg='neutral-0']:hover:not(:disabled) { background: var(--color-neutral-0); }
@@ -629,6 +639,7 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-hover-bg='alpha-subtle']:hover:not(:disabled) { background: var(--color-alpha-subtle); }
         [data-md-hover-bg='alpha-soft']:hover:not(:disabled) { background: var(--color-alpha-soft); }
         [data-md-hover-bg='alpha-medium']:hover:not(:disabled) { background: var(--color-alpha-medium); }
+        [data-md-hover-bg='alpha-strong']:hover:not(:disabled) { background: var(--color-alpha-strong); }
 
 
         [data-md-focus-bg='neutral-0']:focus-visible { background: var(--color-neutral-0); }
@@ -682,15 +693,16 @@ describe("BackgroundUtilityGenerator", () => {
         [data-md-focus-bg='alpha-subtle']:focus-visible { background: var(--color-alpha-subtle); }
         [data-md-focus-bg='alpha-soft']:focus-visible { background: var(--color-alpha-soft); }
         [data-md-focus-bg='alpha-medium']:focus-visible { background: var(--color-alpha-medium); }
+        [data-md-focus-bg='alpha-strong']:focus-visible { background: var(--color-alpha-strong); }
       }
     `);
     expect(generator.toTypeScript()).toEqualIgnoringWhitespace(`
-      "data-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
-      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium";
+      "data-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-md-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-md-hover-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
+      "data-md-focus-bg"?: "neutral-0" | "neutral-50" | "neutral-100" | "neutral-200" | "neutral-300" | "neutral-400" | "neutral-500" | "neutral-600" | "neutral-700" | "neutral-800" | "neutral-850" | "neutral-900" | "neutral-950" | "foo" | "brand-50" | "brand-100" | "brand-200" | "brand-300" | "brand-400" | "brand-500" | "brand-600" | "brand-700" | "brand-800" | "brand-900" | "positive-0" | "positive-100" | "positive-200" | "positive-400" | "positive-600" | "positive-800" | "positive-900" | "danger-0" | "danger-100" | "danger-200" | "danger-400" | "danger-600" | "danger-800" | "danger-900" | "warning-100" | "warning-300" | "warning-500" | "warning-700" | "warning-900" | "alpha-subtle" | "alpha-soft" | "alpha-medium" | "alpha-strong";
     `);
   });
 });
