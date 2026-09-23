@@ -24,6 +24,7 @@ export class StackUtilityGenerator extends UtilityGenerator {
           new CssRuleRegular(`[data-stack='${key}']`, {
             display: "flex",
             "flex-direction": "row",
+            "align-items": "center",
           }),
         );
       }
@@ -53,6 +54,7 @@ export class StackUtilityGenerator extends UtilityGenerator {
             new CssRuleRegular(`[data-${name}-stack='${key}']`, {
               display: "flex",
               "flex-direction": "row",
+              "align-items": "center",
             }),
           );
         }
