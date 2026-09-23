@@ -82,7 +82,6 @@ src/
 │   ├── checkbox.css
 │   ├── field.css
 │   ├── input.css
-│   ├── label.css
 │   ├── link.css
 │   ├── prose.css
 │   ├── range.css

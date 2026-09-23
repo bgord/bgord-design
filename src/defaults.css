@@ -305,16 +305,14 @@
     line-height: var(--line-height-snug);
   }
 
-  fieldset {
-    padding: var(--spacing-4);
-    border: var(--border-width-hairline) var(--border-style-solid) var(--color-alpha-soft);
-    border-radius: var(--radius-md);
-  }
-
+  /* A legend is a caption too, but it sits outside the fieldset's flex flow, so it carries the full gap itself. */
   legend {
-    padding-inline: var(--spacing-2);
-    font-size: var(--font-size-sm);
+    margin-block-end: var(--spacing-3);
+
     color: var(--color-neutral-300);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-snug);
   }
 
   dialog {
