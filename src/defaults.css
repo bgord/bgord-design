@@ -73,6 +73,16 @@
     letter-spacing: var(--letter-spacing-tight);
   }
 
+  /* An eyebrow: the small uppercase label above a block. */
+  h3 {
+    color: var(--color-neutral-500);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+  }
+
   p {
     text-wrap: pretty;
   }
