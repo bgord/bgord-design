@@ -26,9 +26,9 @@ describe("GenerateTypes", async () => {
       declare module "react" {
         interface HTMLAttributes<T> {
           "data-main"?: "start" | "end" | "around" | "evenly" | "between" | "center";
-          "data-cross"?: "start" | "end" | "center" | "baseline";
+          "data-cross"?: "start" | "end" | "center" | "baseline" | "stretch";
           "data-md-main"?: "start" | "end" | "around" | "evenly" | "between" | "center";
-          "data-md-cross"?: "start" | "end" | "center" | "baseline";
+          "data-md-cross"?: "start" | "end" | "center" | "baseline" | "stretch";
           "data-animation"?: "grow-fade-in" | "shrink-fade-out";
           "data-interaction"?: "grow" | "rotate-into-focus" | "subtle-scale";
         }

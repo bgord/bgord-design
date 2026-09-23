@@ -17,6 +17,7 @@ export class AxisPlacementUtilityGenerator extends UtilityGenerator {
     end: "flex-end",
     center: "center",
     baseline: "baseline",
+    stretch: "stretch",
   };
 
   constructor(readonly breakpointRegistry: BreakpointRegistry) {

@@ -71,6 +71,7 @@ describe("GenerateCSS", async () => {
         [data-cross='end'] { align-items: flex-end; }
         [data-cross='center'] { align-items: center; }
         [data-cross='baseline'] { align-items: baseline; }
+        [data-cross='stretch'] { align-items: stretch; }
 
         @media (max-width: 768px) {
           [data-md-main='start'] { justify-content: flex-start; }
@@ -84,6 +85,7 @@ describe("GenerateCSS", async () => {
           [data-md-cross='end'] { align-items: flex-end; }
           [data-md-cross='center'] { align-items: center; }
           [data-md-cross='baseline'] { align-items: baseline; }
+          [data-md-cross='stretch'] { align-items: stretch; }
         }
       }
     `);
