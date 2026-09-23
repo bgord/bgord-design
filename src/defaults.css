@@ -293,6 +293,18 @@
     rotate: 45deg;
   }
 
+  /* A label pointing at its control is a caption; one wrapping its control is that control's hit area. */
+  label:where(:not(:has(input, select, textarea))) {
+    display: block;
+
+    margin-block-end: var(--spacing-1-5);
+
+    color: var(--color-neutral-300);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-snug);
+  }
+
   fieldset {
     padding: var(--spacing-4);
     border: var(--border-width-hairline) var(--border-style-solid) var(--color-alpha-soft);
