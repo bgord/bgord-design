@@ -156,7 +156,6 @@
   }
 
   code,
-  kbd,
   samp {
     padding: 0.1em 0.35em;
 
@@ -169,10 +168,18 @@
     border-radius: var(--radius-xs);
   }
 
-  /* A key cap reads as a physical object: roomier, with a harder edge. */
+  /* A key cap reads as a physical object: a sunken face with a harder edge. */
   kbd {
-    padding: 0.15em 0.4em;
-    border-color: var(--color-alpha-medium);
+    padding: 0.15em var(--spacing-1);
+
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-wide);
+    color: var(--color-neutral-300);
+
+    background-color: var(--color-neutral-900);
+    border: var(--border-width-hairline) var(--border-style-solid) var(--color-alpha-medium);
     border-radius: var(--radius-sm);
   }
 
