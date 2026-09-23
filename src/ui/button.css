@@ -35,12 +35,12 @@
 
 /* ───────── VARIANTS ──────────────────────────── */
 .c-button[data-variant="primary"] {
-  color: var(--text-inverted);
-  background-color: var(--fill-inverted);
+  color: var(--color-neutral-950);
+  background-color: var(--color-neutral-200);
   box-shadow: var(--shadow-xs);
 }
 .c-button[data-variant="primary"]:hover:not(:disabled) {
-  background-color: var(--fill-inverted-hover);
+  background-color: var(--color-neutral-0);
 }
 
 .c-button[data-variant="brand"] {
@@ -62,32 +62,32 @@
 }
 
 .c-button[data-variant="secondary"] {
-  color: var(--text-primary);
-  background-color: var(--fill-muted);
-  border-color: var(--border-default);
+  color: var(--color-neutral-200);
+  background-color: var(--color-neutral-800);
+  border-color: var(--color-alpha-soft);
 }
 .c-button[data-variant="secondary"]:hover:not(:disabled) {
-  color: var(--text-strong);
-  background-color: var(--fill-strong);
-  border-color: var(--border-strong);
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-700);
+  border-color: var(--color-alpha-medium);
 }
 
 .c-button[data-variant="ghost"] {
-  color: var(--text-secondary);
+  color: var(--color-neutral-300);
 }
 .c-button[data-variant="ghost"]:hover:not(:disabled) {
-  color: var(--text-strong);
-  background-color: var(--fill-muted);
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-800);
 }
 
 .c-button[data-variant="icon"] {
   inline-size: var(--size-2xl);
   padding-inline: var(--spacing-0);
-  color: var(--text-secondary);
+  color: var(--color-neutral-300);
 }
 .c-button[data-variant="icon"]:hover:not(:disabled) {
-  color: var(--text-strong);
-  background-color: var(--fill-muted);
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-800);
 }
 
 a.c-button {

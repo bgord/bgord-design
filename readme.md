@@ -69,7 +69,6 @@ src/
 │   ├── opacity-token-generator.ts
 │   ├── positive-token-generator.ts
 │   ├── radius-token-generator.ts
-│   ├── semantic-token-generator.ts
 │   ├── shadow-token-generator.ts
 │   ├── size-token-generator.ts
 │   ├── spacing-token-generator.ts

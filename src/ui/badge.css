@@ -17,15 +17,15 @@
 }
 
 .c-badge[data-variant="primary"] {
-  color: var(--text-secondary);
-  background-color: var(--fill-muted);
-  border-color: var(--border-subtle);
+  color: var(--color-neutral-300);
+  background-color: var(--color-neutral-800);
+  border-color: var(--color-alpha-subtle);
 }
 
 .c-badge[data-variant="outline"] {
-  color: var(--text-secondary);
+  color: var(--color-neutral-300);
   background-color: transparent;
-  border-color: var(--border-strong);
+  border-color: var(--color-alpha-medium);
 }
 
 .c-badge[data-variant="positive"] {

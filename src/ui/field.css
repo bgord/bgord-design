@@ -1,12 +1,12 @@
 .c-input,
 .c-textarea,
 .c-select {
-  color: var(--text-primary);
+  color: var(--color-neutral-200);
   font-size: var(--font-size-sm);
 
-  background-color: var(--interactive-rest);
+  background-color: var(--color-neutral-850);
 
-  border: var(--border-width-hairline) var(--border-style-solid) var(--border-default);
+  border: var(--border-width-hairline) var(--border-style-solid) var(--color-alpha-soft);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-inner);
 
@@ -20,21 +20,21 @@
 .c-input:hover:not(:disabled):not(:focus-visible),
 .c-textarea:hover:not(:disabled):not(:focus-visible),
 .c-select:hover:not(:disabled):not(:focus-visible) {
-  border-color: var(--border-strong);
+  border-color: var(--color-alpha-medium);
 }
 
 .c-input:disabled,
 .c-textarea:disabled,
 .c-select:disabled {
-  color: var(--text-disabled);
-  background-color: var(--interactive-disabled);
+  color: var(--color-neutral-500);
+  background-color: var(--color-neutral-900);
   box-shadow: none;
   cursor: default;
 }
 
 .c-input::placeholder,
 .c-textarea::placeholder {
-  color: var(--text-muted);
+  color: var(--color-neutral-400);
   opacity: var(--opacity-full);
 }
 

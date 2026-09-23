@@ -16,7 +16,6 @@ export * from "./motion-token-generator";
 export * from "./opacity-token-generator";
 export * from "./positive-token-generator";
 export * from "./radius-token-generator";
-export * from "./semantic-token-generator";
 export * from "./shadow-token-generator";
 export * from "./size-token-generator";
 export * from "./spacing-token-generator";

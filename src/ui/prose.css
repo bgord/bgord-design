@@ -41,7 +41,7 @@
 }
 
 .c-prose li::marker {
-  color: var(--text-muted);
+  color: var(--color-neutral-400);
 }
 
 .c-prose li + li,

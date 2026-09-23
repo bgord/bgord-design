@@ -4,9 +4,9 @@
   inline-size: var(--size-md);
   block-size: var(--size-md);
 
-  background-color: var(--interactive-rest);
+  background-color: var(--color-neutral-850);
 
-  border: var(--border-width-hairline) var(--border-style-solid) var(--border-default);
+  border: var(--border-width-hairline) var(--border-style-solid) var(--color-alpha-soft);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-inner);
 
@@ -20,7 +20,7 @@
 }
 
 .c-checkbox:hover:not(:disabled):not(:focus-visible) {
-  border-color: var(--border-strong);
+  border-color: var(--color-alpha-medium);
 }
 
 .c-checkbox::before {
@@ -75,21 +75,21 @@
 }
 
 .c-checkbox:disabled {
-  background-color: var(--interactive-disabled);
-  border-color: var(--border-subtle);
+  background-color: var(--color-neutral-900);
+  border-color: var(--color-alpha-subtle);
   box-shadow: none;
   cursor: default;
 }
 
 .c-checkbox:checked:disabled,
 .c-checkbox:indeterminate:disabled {
-  background-color: var(--interactive-disabled);
-  border-color: var(--border-subtle);
+  background-color: var(--color-neutral-900);
+  border-color: var(--color-alpha-subtle);
 }
 
 .c-checkbox:checked:disabled::after,
 .c-checkbox:indeterminate:disabled::after {
-  border-color: var(--text-disabled);
+  border-color: var(--color-neutral-500);
 }
 
 .c-checkbox:user-invalid:not(:disabled) {

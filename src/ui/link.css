@@ -1,5 +1,5 @@
 .c-link {
-  color: var(--text-link);
+  color: var(--color-brand-300);
 
   font-size: inherit;
   font-weight: var(--font-weight-medium);
@@ -12,7 +12,7 @@
 }
 
 .c-link:hover {
-  color: var(--text-link-hover);
+  color: var(--color-brand-200);
   text-decoration-thickness: 2px;
 }
 

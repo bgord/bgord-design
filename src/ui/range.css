@@ -20,8 +20,8 @@
 
   background: linear-gradient(
     to right,
-    var(--text-secondary) var(--percentage, 15%),
-    var(--fill-strong) var(--percentage, 15%)
+    var(--color-neutral-300) var(--percentage, 15%),
+    var(--color-neutral-700) var(--percentage, 15%)
   );
 
   border: none;
@@ -33,8 +33,8 @@
 
   background: linear-gradient(
     to right,
-    var(--text-secondary) var(--percentage, 15%),
-    var(--fill-strong) var(--percentage, 15%)
+    var(--color-neutral-300) var(--percentage, 15%),
+    var(--color-neutral-700) var(--percentage, 15%)
   );
 
   border: none;
@@ -50,9 +50,9 @@
   block-size: 16px;
   margin-block-start: -5px;
 
-  background-color: var(--text-secondary);
+  background-color: var(--color-neutral-300);
 
-  border: var(--border-width-thin) var(--border-style-solid) var(--surface-base);
+  border: var(--border-width-thin) var(--border-style-solid) var(--color-neutral-950);
   border-radius: var(--radius-circle);
 
   transition:
@@ -66,9 +66,9 @@
   inline-size: 16px;
   block-size: 16px;
 
-  background-color: var(--text-secondary);
+  background-color: var(--color-neutral-300);
 
-  border: var(--border-width-thin) var(--border-style-solid) var(--surface-base);
+  border: var(--border-width-thin) var(--border-style-solid) var(--color-neutral-950);
   border-radius: var(--radius-circle);
 
   transition:
@@ -77,22 +77,22 @@
 }
 
 .c-range:hover:not(:disabled)::-webkit-slider-thumb {
-  background-color: var(--text-strong);
+  background-color: var(--color-neutral-100);
   scale: 1.12;
 }
 
 .c-range:hover:not(:disabled)::-moz-range-thumb {
-  background-color: var(--text-strong);
+  background-color: var(--color-neutral-100);
   scale: 1.12;
 }
 
 .c-range:active:not(:disabled)::-webkit-slider-thumb {
-  background-color: var(--text-strong);
+  background-color: var(--color-neutral-100);
   scale: 0.94;
 }
 
 .c-range:active:not(:disabled)::-moz-range-thumb {
-  background-color: var(--text-strong);
+  background-color: var(--color-neutral-100);
   scale: 0.94;
 }
 

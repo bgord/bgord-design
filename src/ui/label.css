@@ -3,7 +3,7 @@
 
   margin-block-end: var(--spacing-1-5);
 
-  color: var(--text-secondary);
+  color: var(--color-neutral-300);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-snug);

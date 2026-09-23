@@ -31,7 +31,7 @@
   inline-size: 0.45em;
   block-size: 0.45em;
 
-  border: var(--border-width-thin) var(--border-style-solid) var(--text-muted);
+  border: var(--border-width-thin) var(--border-style-solid) var(--color-neutral-400);
   border-block-start: 0;
   border-inline-start: 0;
 
