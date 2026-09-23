@@ -10,10 +10,6 @@
   cursor: pointer;
 }
 
-.c-select[data-variant="transparent"] {
-  background-color: transparent;
-}
-
 .c-select-wrapper {
   display: inline-flex;
   position: relative;

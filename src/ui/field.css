@@ -4,7 +4,7 @@
   color: var(--color-neutral-200);
   font-size: var(--font-size-sm);
 
-  background-color: var(--color-neutral-850);
+  background-color: transparent;
 
   border: var(--border-width-hairline) var(--border-style-solid) var(--color-alpha-soft);
   border-radius: var(--radius-md);
@@ -27,7 +27,6 @@
 .c-textarea:disabled,
 .c-select:disabled {
   color: var(--color-neutral-500);
-  background-color: var(--color-neutral-900);
   box-shadow: none;
   cursor: default;
 }

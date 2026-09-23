@@ -19,10 +19,6 @@
   cursor: pointer;
 }
 
-.c-input[data-variant="transparent"] {
-  background-color: transparent;
-}
-
 /* Prevent iOS zoom-in — must outrank the `[type="date"]` size above. */
 @supports (-webkit-touch-callout: none) {
   .c-input,
