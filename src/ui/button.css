@@ -91,6 +91,24 @@
   background-color: var(--color-neutral-800);
 }
 
+.c-button[data-variant="icon"][data-tone="brand"] {
+  color: var(--color-brand-400);
+}
+.c-button[data-variant="icon"][data-tone="brand"]:hover:not(:disabled) {
+  color: var(--color-brand-300);
+}
+
+.c-button[data-variant="icon"][data-tone="positive"] {
+  color: var(--color-positive-400);
+}
+.c-button[data-variant="icon"][data-tone="positive"]:hover:not(:disabled) {
+  color: var(--color-positive-200);
+}
+
+.c-button[data-variant="icon"][data-tone="danger"]:hover:not(:disabled) {
+  color: var(--color-danger-400);
+}
+
 a.c-button {
   text-decoration: none;
 }
