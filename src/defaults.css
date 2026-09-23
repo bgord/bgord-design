@@ -114,8 +114,9 @@
   }
 
   small {
+    color: var(--color-neutral-500);
     font-size: var(--font-size-xs);
-    color: var(--color-neutral-400);
+    font-variant-numeric: tabular-nums;
   }
 
   mark {
