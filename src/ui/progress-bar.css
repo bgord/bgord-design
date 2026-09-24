@@ -1,0 +1,31 @@
+@keyframes progress-bar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(0.9);
+  }
+}
+
+.c-progress-bar {
+  position: fixed;
+  top: env(safe-area-inset-top);
+  left: 0;
+  z-index: var(--z-index-3);
+
+  inline-size: 100%;
+  block-size: 2px;
+
+  background-color: var(--color-brand-500);
+
+  transform-origin: left;
+  animation: progress-bar 8s var(--ease-out) var(--motion-fast) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-progress-bar {
+    animation: none;
+    opacity: var(--opacity-high);
+  }
+}

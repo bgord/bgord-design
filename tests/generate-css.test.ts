@@ -35,6 +35,7 @@ describe("GenerateCSS", async () => {
       "src/ui/link.css",
       "src/ui/checkbox.css",
       "src/ui/range.css",
+      "src/ui/progress-bar.css",
 
       "src/animations/grow-fade-in.css",
       "src/animations/shrink-fade-out.css",

@@ -28,6 +28,7 @@ export class GenerateCSS {
     output += await Bun.file("src/ui/link.css").text();
     output += await Bun.file("src/ui/checkbox.css").text();
     output += await Bun.file("src/ui/range.css").text();
+    output += await Bun.file("src/ui/progress-bar.css").text();
     output += "}\n\n";
 
     output += "@layer utilities {\n";
