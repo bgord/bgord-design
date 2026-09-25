@@ -224,6 +224,19 @@
     color: var(--color-neutral-400);
   }
 
+  output {
+    font-size: var(--font-size-xs);
+    color: var(--color-neutral-400);
+  }
+
+  output[data-tone="danger"] {
+    color: var(--color-danger-400);
+  }
+
+  output[data-tone="positive"] {
+    color: var(--color-positive-400);
+  }
+
   dt {
     color: var(--color-neutral-100);
     font-weight: var(--font-weight-semibold);
