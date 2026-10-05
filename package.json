@@ -36,7 +36,7 @@
     "lightningcss-cli": "1.33.0",
     "lockfile-lint": "5.0.1",
     "postcss": "8.5.28",
-    "publint": "0.3.24",
+    "publint": "0.3.25",
     "shellcheck": "4.1.0",
     "typescript": "7.0.2"
   }
