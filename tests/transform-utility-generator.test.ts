@@ -19,7 +19,7 @@ describe("TransformUtilityGenerator", () => {
       [data-transform~='nowrap'] {  white-space: nowrap; }
       [data-transform~='pre-line'] {  white-space: pre-line; }
       [data-transform~='none'] { text-transform: none; }
-      [data-transform~='line-clamp'] {  display: -webkit-box;  -webkit-box-orient: vertical;  -webkit-line-clamp: var(--lines, 2); overflow: hidden; }
+      [data-transform~='line-clamp'] {  display: -webkit-box;  -webkit-box-orient: vertical;  -webkit-line-clamp: var(--lines, 2); overflow: hidden; white-space: normal; }
       [data-transform~='font-variant-numeric'] {  font-variant-numeric: tabular-nums; }
 
       @media (max-width: 768px) {
@@ -32,7 +32,7 @@ describe("TransformUtilityGenerator", () => {
         [data-md-transform~='nowrap'] {  white-space: nowrap; }
         [data-md-transform~='pre-line'] {  white-space: pre-line; }
         [data-md-transform~='none'] { text-transform: none; }
-        [data-md-transform~='line-clamp'] {  display: -webkit-box;  -webkit-box-orient: vertical;  -webkit-line-clamp: var(--lines, 2); overflow: hidden; }
+        [data-md-transform~='line-clamp'] {  display: -webkit-box;  -webkit-box-orient: vertical;  -webkit-line-clamp: var(--lines, 2); overflow: hidden; white-space: normal; }
         [data-md-transform~='font-variant-numeric'] {  font-variant-numeric: tabular-nums; }
       }
     `);

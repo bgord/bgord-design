@@ -49,6 +49,7 @@ export class TransformUtilityGenerator extends UtilityGenerator {
             "-webkit-box-orient": "vertical",
             "-webkit-line-clamp": "var(--lines, 2)",
             overflow: "hidden",
+            "white-space": "normal",
           }),
         );
         continue;
@@ -114,6 +115,7 @@ export class TransformUtilityGenerator extends UtilityGenerator {
               "-webkit-box-orient": "vertical",
               "-webkit-line-clamp": "var(--lines, 2)",
               overflow: "hidden",
+              "white-space": "normal",
             }),
           );
           continue;
