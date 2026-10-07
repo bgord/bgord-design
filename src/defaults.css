@@ -119,6 +119,11 @@
     font-variant-numeric: tabular-nums;
   }
 
+  time {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
   mark {
     padding-inline: 0.2em;
     color: var(--color-neutral-950);
