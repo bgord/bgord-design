@@ -13,6 +13,7 @@ export class GenerateCSS {
 
     /* defaults.css declares its own `@layer defaults` block. */
     output += await Bun.file("src/defaults.css").text();
+    // Stryker disable next-line StringLiteral: whitespace-only separator, output is compared ignoring whitespace
     output += "\n\n";
 
     output += "@layer components {\n";
