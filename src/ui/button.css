@@ -39,8 +39,10 @@
   background-color: var(--color-neutral-200);
   box-shadow: var(--shadow-xs);
 }
-.c-button[data-variant="primary"]:hover:not(:disabled) {
-  background-color: var(--color-neutral-0);
+@media (hover: hover) {
+  .c-button[data-variant="primary"]:hover:not(:disabled) {
+    background-color: var(--color-neutral-0);
+  }
 }
 
 .c-button[data-variant="brand"] {
@@ -48,8 +50,10 @@
   background-color: var(--color-brand-500);
   box-shadow: var(--shadow-raised);
 }
-.c-button[data-variant="brand"]:hover:not(:disabled) {
-  background-color: var(--color-brand-400);
+@media (hover: hover) {
+  .c-button[data-variant="brand"]:hover:not(:disabled) {
+    background-color: var(--color-brand-400);
+  }
 }
 
 .c-button[data-variant="destructive"] {
@@ -57,8 +61,10 @@
   background-color: var(--color-danger-600);
   box-shadow: var(--shadow-raised);
 }
-.c-button[data-variant="destructive"]:hover:not(:disabled) {
-  background-color: var(--color-danger-400);
+@media (hover: hover) {
+  .c-button[data-variant="destructive"]:hover:not(:disabled) {
+    background-color: var(--color-danger-400);
+  }
 }
 
 .c-button[data-variant="secondary"] {
@@ -66,18 +72,22 @@
   background-color: var(--color-neutral-800);
   border-color: var(--color-alpha-soft);
 }
-.c-button[data-variant="secondary"]:hover:not(:disabled) {
-  color: var(--color-neutral-100);
-  background-color: var(--color-neutral-700);
-  border-color: var(--color-alpha-medium);
+@media (hover: hover) {
+  .c-button[data-variant="secondary"]:hover:not(:disabled) {
+    color: var(--color-neutral-100);
+    background-color: var(--color-neutral-700);
+    border-color: var(--color-alpha-medium);
+  }
 }
 
 .c-button[data-variant="ghost"] {
   color: var(--color-neutral-300);
 }
-.c-button[data-variant="ghost"]:hover:not(:disabled) {
-  color: var(--color-neutral-100);
-  background-color: var(--color-neutral-800);
+@media (hover: hover) {
+  .c-button[data-variant="ghost"]:hover:not(:disabled) {
+    color: var(--color-neutral-100);
+    background-color: var(--color-neutral-800);
+  }
 }
 
 .c-button[data-variant="icon"] {
@@ -86,27 +96,35 @@
   padding-inline: var(--spacing-0);
   color: var(--color-neutral-300);
 }
-.c-button[data-variant="icon"]:hover:not(:disabled) {
-  color: var(--color-neutral-100);
-  background-color: var(--color-neutral-800);
+@media (hover: hover) {
+  .c-button[data-variant="icon"]:hover:not(:disabled) {
+    color: var(--color-neutral-100);
+    background-color: var(--color-neutral-800);
+  }
 }
 
 .c-button[data-variant="icon"][data-tone="brand"] {
   color: var(--color-brand-400);
 }
-.c-button[data-variant="icon"][data-tone="brand"]:hover:not(:disabled) {
-  color: var(--color-brand-300);
+@media (hover: hover) {
+  .c-button[data-variant="icon"][data-tone="brand"]:hover:not(:disabled) {
+    color: var(--color-brand-300);
+  }
 }
 
 .c-button[data-variant="icon"][data-tone="positive"] {
   color: var(--color-positive-400);
 }
-.c-button[data-variant="icon"][data-tone="positive"]:hover:not(:disabled) {
-  color: var(--color-positive-200);
+@media (hover: hover) {
+  .c-button[data-variant="icon"][data-tone="positive"]:hover:not(:disabled) {
+    color: var(--color-positive-200);
+  }
 }
 
-.c-button[data-variant="icon"][data-tone="danger"]:hover:not(:disabled) {
-  color: var(--color-danger-400);
+@media (hover: hover) {
+  .c-button[data-variant="icon"][data-tone="danger"]:hover:not(:disabled) {
+    color: var(--color-danger-400);
+  }
 }
 
 a.c-button {
