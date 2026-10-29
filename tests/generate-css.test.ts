@@ -20,7 +20,7 @@ describe("GenerateCSS", async () => {
 
     await GenerateCSS.process(generators, tokens);
 
-    expect(bunFile.mock.calls.map((call) => call[0])).toEqual([
+    expect(bunFile.mock.calls.map((call) => String(call[0]))).toEqual([
       "src/defaults.css",
 
       "src/ui/button.css",
@@ -45,8 +45,8 @@ describe("GenerateCSS", async () => {
       "src/interactions/subtle-scale.css",
     ]);
 
-    expect(bunWrite.mock.calls[0][0]).toEqual("dist/main.css");
-    expect(bunWrite.mock.calls[0][1]).toEqualIgnoringWhitespace(`
+    expect(bunWrite.mock.calls[0]?.[0]).toEqual("dist/main.css");
+    expect(bunWrite.mock.calls[0]?.[1]).toEqualIgnoringWhitespace(`
       @import "../src/normalize.css" layer(reset);
 
       :root {

@@ -14,8 +14,8 @@ describe("GenerateLib", async () => {
 
     await GenerateLib.process(generators);
 
-    expect(bunWrite.mock.calls[0][0]).toEqual("dist/lib.ts");
-    expect(bunWrite.mock.calls[0][1]).toEqualIgnoringWhitespace(`
+    expect(bunWrite.mock.calls[0]?.[0]).toEqual("dist/lib.ts");
+    expect(bunWrite.mock.calls[0]?.[1]).toEqualIgnoringWhitespace(`
       export const BackdropsTokens = {
         "backdrop-none": "none",
         "backdrop-weak": "rgba(0 0 0 / 0.35)",

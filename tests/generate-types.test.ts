@@ -17,8 +17,8 @@ describe("GenerateTypes", async () => {
 
     await GenerateTypes.process(generators);
 
-    expect(bunWrite.mock.calls[0][0]).toEqual("dist/index.d.ts");
-    expect(bunWrite.mock.calls[0][1]).toEqualIgnoringWhitespace(`
+    expect(bunWrite.mock.calls[0]?.[0]).toEqual("dist/index.d.ts");
+    expect(bunWrite.mock.calls[0]?.[1]).toEqualIgnoringWhitespace(`
       export * from "./lib";
       export {};
       import "react";
