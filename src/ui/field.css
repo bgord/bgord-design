@@ -37,8 +37,8 @@
   opacity: var(--opacity-full);
 }
 
-.c-input:user-invalid:not(:disabled),
-.c-textarea:user-invalid:not(:disabled),
+.c-input:user-invalid:not(:disabled):not(:placeholder-shown),
+.c-textarea:user-invalid:not(:disabled):not(:placeholder-shown),
 .c-select:user-invalid:not(:disabled) {
   border-color: var(--color-danger-400);
 }
