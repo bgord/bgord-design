@@ -37,7 +37,6 @@
     "lockfile-lint": "5.1.0",
     "postcss": "8.5.31",
     "publint": "0.3.25",
-    "shellcheck": "4.1.0",
     "typescript": "7.0.2"
   }
 }
