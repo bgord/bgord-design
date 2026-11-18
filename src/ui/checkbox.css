@@ -19,8 +19,10 @@
     box-shadow var(--motion-fast) var(--ease-out);
 }
 
-.c-checkbox:hover:not(:disabled):not(:focus-visible) {
-  border-color: var(--color-alpha-medium);
+@media (hover: hover) {
+  .c-checkbox:hover:not(:disabled):not(:focus-visible) {
+    border-color: var(--color-alpha-medium);
+  }
 }
 
 .c-checkbox::before {
@@ -36,10 +38,12 @@
   box-shadow: none;
 }
 
-.c-checkbox:checked:hover:not(:disabled),
-.c-checkbox:indeterminate:hover:not(:disabled) {
-  background-color: var(--color-brand-400);
-  border-color: var(--color-brand-400);
+@media (hover: hover) {
+  .c-checkbox:checked:hover:not(:disabled),
+  .c-checkbox:indeterminate:hover:not(:disabled) {
+    background-color: var(--color-brand-400);
+    border-color: var(--color-brand-400);
+  }
 }
 
 .c-checkbox:checked::after {

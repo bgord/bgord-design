@@ -4,9 +4,11 @@
     box-shadow var(--motion-fast) var(--ease-out);
 }
 
-[data-interaction="rotate-into-focus"]:hover {
-  scale: 1.05;
-  box-shadow: var(--shadow-lg);
+@media (hover: hover) {
+  [data-interaction="rotate-into-focus"]:hover {
+    scale: 1.05;
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 [data-interaction="rotate-into-focus"]:active {
@@ -17,8 +19,10 @@
   transition: rotate var(--motion-medium) var(--ease-spring);
 }
 
-[data-interaction="rotate-into-focus"]:hover > * {
-  rotate: 90deg;
+@media (hover: hover) {
+  [data-interaction="rotate-into-focus"]:hover > * {
+    rotate: 90deg;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

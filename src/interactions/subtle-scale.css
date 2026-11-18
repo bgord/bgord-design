@@ -2,8 +2,10 @@
   transition: scale var(--motion-fast) var(--ease-out);
 }
 
-[data-interaction="subtle-scale"]:hover {
-  scale: 1.04;
+@media (hover: hover) {
+  [data-interaction="subtle-scale"]:hover {
+    scale: 1.04;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

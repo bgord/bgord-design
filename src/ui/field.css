@@ -17,10 +17,12 @@
     box-shadow var(--motion-fast) var(--ease-out);
 }
 
-.c-input:hover:not(:disabled):not(:focus-visible),
-.c-textarea:hover:not(:disabled):not(:focus-visible),
-.c-select:hover:not(:disabled):not(:focus-visible) {
-  border-color: var(--color-alpha-medium);
+@media (hover: hover) {
+  .c-input:hover:not(:disabled):not(:focus-visible),
+  .c-textarea:hover:not(:disabled):not(:focus-visible),
+  .c-select:hover:not(:disabled):not(:focus-visible) {
+    border-color: var(--color-alpha-medium);
+  }
 }
 
 .c-input:disabled,

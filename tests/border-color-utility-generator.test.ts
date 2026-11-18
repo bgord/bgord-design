@@ -386,56 +386,58 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcl='alpha-strong'] { border-left-color: var(--color-alpha-strong); }
 
 
-      [data-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
-      [data-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
-      [data-hover-bc='neutral-100']:hover:not(:disabled) { border-color: var(--color-neutral-100); }
-      [data-hover-bc='neutral-200']:hover:not(:disabled) { border-color: var(--color-neutral-200); }
-      [data-hover-bc='neutral-300']:hover:not(:disabled) { border-color: var(--color-neutral-300); }
-      [data-hover-bc='neutral-400']:hover:not(:disabled) { border-color: var(--color-neutral-400); }
-      [data-hover-bc='neutral-500']:hover:not(:disabled) { border-color: var(--color-neutral-500); }
-      [data-hover-bc='neutral-600']:hover:not(:disabled) { border-color: var(--color-neutral-600); }
-      [data-hover-bc='neutral-700']:hover:not(:disabled) { border-color: var(--color-neutral-700); }
-      [data-hover-bc='neutral-800']:hover:not(:disabled) { border-color: var(--color-neutral-800); }
-      [data-hover-bc='neutral-850']:hover:not(:disabled) { border-color: var(--color-neutral-850); }
-      [data-hover-bc='neutral-900']:hover:not(:disabled) { border-color: var(--color-neutral-900); }
-      [data-hover-bc='neutral-950']:hover:not(:disabled) { border-color: var(--color-neutral-950); }
+      @media (hover: hover) {
+        [data-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
+        [data-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
+        [data-hover-bc='neutral-100']:hover:not(:disabled) { border-color: var(--color-neutral-100); }
+        [data-hover-bc='neutral-200']:hover:not(:disabled) { border-color: var(--color-neutral-200); }
+        [data-hover-bc='neutral-300']:hover:not(:disabled) { border-color: var(--color-neutral-300); }
+        [data-hover-bc='neutral-400']:hover:not(:disabled) { border-color: var(--color-neutral-400); }
+        [data-hover-bc='neutral-500']:hover:not(:disabled) { border-color: var(--color-neutral-500); }
+        [data-hover-bc='neutral-600']:hover:not(:disabled) { border-color: var(--color-neutral-600); }
+        [data-hover-bc='neutral-700']:hover:not(:disabled) { border-color: var(--color-neutral-700); }
+        [data-hover-bc='neutral-800']:hover:not(:disabled) { border-color: var(--color-neutral-800); }
+        [data-hover-bc='neutral-850']:hover:not(:disabled) { border-color: var(--color-neutral-850); }
+        [data-hover-bc='neutral-900']:hover:not(:disabled) { border-color: var(--color-neutral-900); }
+        [data-hover-bc='neutral-950']:hover:not(:disabled) { border-color: var(--color-neutral-950); }
 
-      [data-hover-bc='brand-50']:hover:not(:disabled) { border-color: var(--color-brand-50); }
-      [data-hover-bc='brand-100']:hover:not(:disabled) { border-color: var(--color-brand-100); }
-      [data-hover-bc='brand-200']:hover:not(:disabled) { border-color: var(--color-brand-200); }
-      [data-hover-bc='brand-300']:hover:not(:disabled) { border-color: var(--color-brand-300); }
-      [data-hover-bc='brand-400']:hover:not(:disabled) { border-color: var(--color-brand-400); }
-      [data-hover-bc='brand-500']:hover:not(:disabled) { border-color: var(--color-brand-500); }
-      [data-hover-bc='brand-600']:hover:not(:disabled) { border-color: var(--color-brand-600); }
-      [data-hover-bc='brand-700']:hover:not(:disabled) { border-color: var(--color-brand-700); }
-      [data-hover-bc='brand-800']:hover:not(:disabled) { border-color: var(--color-brand-800); }
-      [data-hover-bc='brand-900']:hover:not(:disabled) { border-color: var(--color-brand-900); }
+        [data-hover-bc='brand-50']:hover:not(:disabled) { border-color: var(--color-brand-50); }
+        [data-hover-bc='brand-100']:hover:not(:disabled) { border-color: var(--color-brand-100); }
+        [data-hover-bc='brand-200']:hover:not(:disabled) { border-color: var(--color-brand-200); }
+        [data-hover-bc='brand-300']:hover:not(:disabled) { border-color: var(--color-brand-300); }
+        [data-hover-bc='brand-400']:hover:not(:disabled) { border-color: var(--color-brand-400); }
+        [data-hover-bc='brand-500']:hover:not(:disabled) { border-color: var(--color-brand-500); }
+        [data-hover-bc='brand-600']:hover:not(:disabled) { border-color: var(--color-brand-600); }
+        [data-hover-bc='brand-700']:hover:not(:disabled) { border-color: var(--color-brand-700); }
+        [data-hover-bc='brand-800']:hover:not(:disabled) { border-color: var(--color-brand-800); }
+        [data-hover-bc='brand-900']:hover:not(:disabled) { border-color: var(--color-brand-900); }
 
-      [data-hover-bc='positive-0']:hover:not(:disabled) { border-color: var(--color-positive-0); }
-      [data-hover-bc='positive-100']:hover:not(:disabled) { border-color: var(--color-positive-100); }
-      [data-hover-bc='positive-200']:hover:not(:disabled) { border-color: var(--color-positive-200); }
-      [data-hover-bc='positive-400']:hover:not(:disabled) { border-color: var(--color-positive-400); }
-      [data-hover-bc='positive-600']:hover:not(:disabled) { border-color: var(--color-positive-600); }
-      [data-hover-bc='positive-800']:hover:not(:disabled) { border-color: var(--color-positive-800); }
-      [data-hover-bc='positive-900']:hover:not(:disabled) { border-color: var(--color-positive-900); }
+        [data-hover-bc='positive-0']:hover:not(:disabled) { border-color: var(--color-positive-0); }
+        [data-hover-bc='positive-100']:hover:not(:disabled) { border-color: var(--color-positive-100); }
+        [data-hover-bc='positive-200']:hover:not(:disabled) { border-color: var(--color-positive-200); }
+        [data-hover-bc='positive-400']:hover:not(:disabled) { border-color: var(--color-positive-400); }
+        [data-hover-bc='positive-600']:hover:not(:disabled) { border-color: var(--color-positive-600); }
+        [data-hover-bc='positive-800']:hover:not(:disabled) { border-color: var(--color-positive-800); }
+        [data-hover-bc='positive-900']:hover:not(:disabled) { border-color: var(--color-positive-900); }
 
-      [data-hover-bc='danger-0']:hover:not(:disabled) { border-color: var(--color-danger-0); }
-      [data-hover-bc='danger-100']:hover:not(:disabled) { border-color: var(--color-danger-100); }
-      [data-hover-bc='danger-200']:hover:not(:disabled) { border-color: var(--color-danger-200); }
-      [data-hover-bc='danger-400']:hover:not(:disabled) { border-color: var(--color-danger-400); }
-      [data-hover-bc='danger-600']:hover:not(:disabled) { border-color: var(--color-danger-600); }
-      [data-hover-bc='danger-800']:hover:not(:disabled) { border-color: var(--color-danger-800); }
-      [data-hover-bc='danger-900']:hover:not(:disabled) { border-color: var(--color-danger-900); }
+        [data-hover-bc='danger-0']:hover:not(:disabled) { border-color: var(--color-danger-0); }
+        [data-hover-bc='danger-100']:hover:not(:disabled) { border-color: var(--color-danger-100); }
+        [data-hover-bc='danger-200']:hover:not(:disabled) { border-color: var(--color-danger-200); }
+        [data-hover-bc='danger-400']:hover:not(:disabled) { border-color: var(--color-danger-400); }
+        [data-hover-bc='danger-600']:hover:not(:disabled) { border-color: var(--color-danger-600); }
+        [data-hover-bc='danger-800']:hover:not(:disabled) { border-color: var(--color-danger-800); }
+        [data-hover-bc='danger-900']:hover:not(:disabled) { border-color: var(--color-danger-900); }
 
-      [data-hover-bc='warning-100']:hover:not(:disabled) { border-color: var(--color-warning-100); }
-      [data-hover-bc='warning-300']:hover:not(:disabled) { border-color: var(--color-warning-300); }
-      [data-hover-bc='warning-500']:hover:not(:disabled) { border-color: var(--color-warning-500); }
-      [data-hover-bc='warning-700']:hover:not(:disabled) { border-color: var(--color-warning-700); }
-      [data-hover-bc='warning-900']:hover:not(:disabled) { border-color: var(--color-warning-900); }
-      [data-hover-bc='alpha-subtle']:hover:not(:disabled) { border-color: var(--color-alpha-subtle); }
-      [data-hover-bc='alpha-soft']:hover:not(:disabled) { border-color: var(--color-alpha-soft); }
-      [data-hover-bc='alpha-medium']:hover:not(:disabled) { border-color: var(--color-alpha-medium); }
-      [data-hover-bc='alpha-strong']:hover:not(:disabled) { border-color: var(--color-alpha-strong); }
+        [data-hover-bc='warning-100']:hover:not(:disabled) { border-color: var(--color-warning-100); }
+        [data-hover-bc='warning-300']:hover:not(:disabled) { border-color: var(--color-warning-300); }
+        [data-hover-bc='warning-500']:hover:not(:disabled) { border-color: var(--color-warning-500); }
+        [data-hover-bc='warning-700']:hover:not(:disabled) { border-color: var(--color-warning-700); }
+        [data-hover-bc='warning-900']:hover:not(:disabled) { border-color: var(--color-warning-900); }
+        [data-hover-bc='alpha-subtle']:hover:not(:disabled) { border-color: var(--color-alpha-subtle); }
+        [data-hover-bc='alpha-soft']:hover:not(:disabled) { border-color: var(--color-alpha-soft); }
+        [data-hover-bc='alpha-medium']:hover:not(:disabled) { border-color: var(--color-alpha-medium); }
+        [data-hover-bc='alpha-strong']:hover:not(:disabled) { border-color: var(--color-alpha-strong); }
+      }
 
 
       [data-focus-bc='neutral-0']:focus-visible { border-color: var(--color-neutral-0); }
@@ -849,56 +851,58 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcl='alpha-strong'] { border-left-color: var(--color-alpha-strong); }
 
 
-        [data-md-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
-        [data-md-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
-        [data-md-hover-bc='neutral-100']:hover:not(:disabled) { border-color: var(--color-neutral-100); }
-        [data-md-hover-bc='neutral-200']:hover:not(:disabled) { border-color: var(--color-neutral-200); }
-        [data-md-hover-bc='neutral-300']:hover:not(:disabled) { border-color: var(--color-neutral-300); }
-        [data-md-hover-bc='neutral-400']:hover:not(:disabled) { border-color: var(--color-neutral-400); }
-        [data-md-hover-bc='neutral-500']:hover:not(:disabled) { border-color: var(--color-neutral-500); }
-        [data-md-hover-bc='neutral-600']:hover:not(:disabled) { border-color: var(--color-neutral-600); }
-        [data-md-hover-bc='neutral-700']:hover:not(:disabled) { border-color: var(--color-neutral-700); }
-        [data-md-hover-bc='neutral-800']:hover:not(:disabled) { border-color: var(--color-neutral-800); }
-        [data-md-hover-bc='neutral-850']:hover:not(:disabled) { border-color: var(--color-neutral-850); }
-        [data-md-hover-bc='neutral-900']:hover:not(:disabled) { border-color: var(--color-neutral-900); }
-        [data-md-hover-bc='neutral-950']:hover:not(:disabled) { border-color: var(--color-neutral-950); }
+        @media (hover: hover) {
+          [data-md-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
+          [data-md-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
+          [data-md-hover-bc='neutral-100']:hover:not(:disabled) { border-color: var(--color-neutral-100); }
+          [data-md-hover-bc='neutral-200']:hover:not(:disabled) { border-color: var(--color-neutral-200); }
+          [data-md-hover-bc='neutral-300']:hover:not(:disabled) { border-color: var(--color-neutral-300); }
+          [data-md-hover-bc='neutral-400']:hover:not(:disabled) { border-color: var(--color-neutral-400); }
+          [data-md-hover-bc='neutral-500']:hover:not(:disabled) { border-color: var(--color-neutral-500); }
+          [data-md-hover-bc='neutral-600']:hover:not(:disabled) { border-color: var(--color-neutral-600); }
+          [data-md-hover-bc='neutral-700']:hover:not(:disabled) { border-color: var(--color-neutral-700); }
+          [data-md-hover-bc='neutral-800']:hover:not(:disabled) { border-color: var(--color-neutral-800); }
+          [data-md-hover-bc='neutral-850']:hover:not(:disabled) { border-color: var(--color-neutral-850); }
+          [data-md-hover-bc='neutral-900']:hover:not(:disabled) { border-color: var(--color-neutral-900); }
+          [data-md-hover-bc='neutral-950']:hover:not(:disabled) { border-color: var(--color-neutral-950); }
 
-        [data-md-hover-bc='brand-50']:hover:not(:disabled) { border-color: var(--color-brand-50); }
-        [data-md-hover-bc='brand-100']:hover:not(:disabled) { border-color: var(--color-brand-100); }
-        [data-md-hover-bc='brand-200']:hover:not(:disabled) { border-color: var(--color-brand-200); }
-        [data-md-hover-bc='brand-300']:hover:not(:disabled) { border-color: var(--color-brand-300); }
-        [data-md-hover-bc='brand-400']:hover:not(:disabled) { border-color: var(--color-brand-400); }
-        [data-md-hover-bc='brand-500']:hover:not(:disabled) { border-color: var(--color-brand-500); }
-        [data-md-hover-bc='brand-600']:hover:not(:disabled) { border-color: var(--color-brand-600); }
-        [data-md-hover-bc='brand-700']:hover:not(:disabled) { border-color: var(--color-brand-700); }
-        [data-md-hover-bc='brand-800']:hover:not(:disabled) { border-color: var(--color-brand-800); }
-        [data-md-hover-bc='brand-900']:hover:not(:disabled) { border-color: var(--color-brand-900); }
+          [data-md-hover-bc='brand-50']:hover:not(:disabled) { border-color: var(--color-brand-50); }
+          [data-md-hover-bc='brand-100']:hover:not(:disabled) { border-color: var(--color-brand-100); }
+          [data-md-hover-bc='brand-200']:hover:not(:disabled) { border-color: var(--color-brand-200); }
+          [data-md-hover-bc='brand-300']:hover:not(:disabled) { border-color: var(--color-brand-300); }
+          [data-md-hover-bc='brand-400']:hover:not(:disabled) { border-color: var(--color-brand-400); }
+          [data-md-hover-bc='brand-500']:hover:not(:disabled) { border-color: var(--color-brand-500); }
+          [data-md-hover-bc='brand-600']:hover:not(:disabled) { border-color: var(--color-brand-600); }
+          [data-md-hover-bc='brand-700']:hover:not(:disabled) { border-color: var(--color-brand-700); }
+          [data-md-hover-bc='brand-800']:hover:not(:disabled) { border-color: var(--color-brand-800); }
+          [data-md-hover-bc='brand-900']:hover:not(:disabled) { border-color: var(--color-brand-900); }
 
-        [data-md-hover-bc='positive-0']:hover:not(:disabled) { border-color: var(--color-positive-0); }
-        [data-md-hover-bc='positive-100']:hover:not(:disabled) { border-color: var(--color-positive-100); }
-        [data-md-hover-bc='positive-200']:hover:not(:disabled) { border-color: var(--color-positive-200); }
-        [data-md-hover-bc='positive-400']:hover:not(:disabled) { border-color: var(--color-positive-400); }
-        [data-md-hover-bc='positive-600']:hover:not(:disabled) { border-color: var(--color-positive-600); }
-        [data-md-hover-bc='positive-800']:hover:not(:disabled) { border-color: var(--color-positive-800); }
-        [data-md-hover-bc='positive-900']:hover:not(:disabled) { border-color: var(--color-positive-900); }
+          [data-md-hover-bc='positive-0']:hover:not(:disabled) { border-color: var(--color-positive-0); }
+          [data-md-hover-bc='positive-100']:hover:not(:disabled) { border-color: var(--color-positive-100); }
+          [data-md-hover-bc='positive-200']:hover:not(:disabled) { border-color: var(--color-positive-200); }
+          [data-md-hover-bc='positive-400']:hover:not(:disabled) { border-color: var(--color-positive-400); }
+          [data-md-hover-bc='positive-600']:hover:not(:disabled) { border-color: var(--color-positive-600); }
+          [data-md-hover-bc='positive-800']:hover:not(:disabled) { border-color: var(--color-positive-800); }
+          [data-md-hover-bc='positive-900']:hover:not(:disabled) { border-color: var(--color-positive-900); }
 
-        [data-md-hover-bc='danger-0']:hover:not(:disabled) { border-color: var(--color-danger-0); }
-        [data-md-hover-bc='danger-100']:hover:not(:disabled) { border-color: var(--color-danger-100); }
-        [data-md-hover-bc='danger-200']:hover:not(:disabled) { border-color: var(--color-danger-200); }
-        [data-md-hover-bc='danger-400']:hover:not(:disabled) { border-color: var(--color-danger-400); }
-        [data-md-hover-bc='danger-600']:hover:not(:disabled) { border-color: var(--color-danger-600); }
-        [data-md-hover-bc='danger-800']:hover:not(:disabled) { border-color: var(--color-danger-800); }
-        [data-md-hover-bc='danger-900']:hover:not(:disabled) { border-color: var(--color-danger-900); }
+          [data-md-hover-bc='danger-0']:hover:not(:disabled) { border-color: var(--color-danger-0); }
+          [data-md-hover-bc='danger-100']:hover:not(:disabled) { border-color: var(--color-danger-100); }
+          [data-md-hover-bc='danger-200']:hover:not(:disabled) { border-color: var(--color-danger-200); }
+          [data-md-hover-bc='danger-400']:hover:not(:disabled) { border-color: var(--color-danger-400); }
+          [data-md-hover-bc='danger-600']:hover:not(:disabled) { border-color: var(--color-danger-600); }
+          [data-md-hover-bc='danger-800']:hover:not(:disabled) { border-color: var(--color-danger-800); }
+          [data-md-hover-bc='danger-900']:hover:not(:disabled) { border-color: var(--color-danger-900); }
 
-        [data-md-hover-bc='warning-100']:hover:not(:disabled) { border-color: var(--color-warning-100); }
-        [data-md-hover-bc='warning-300']:hover:not(:disabled) { border-color: var(--color-warning-300); }
-        [data-md-hover-bc='warning-500']:hover:not(:disabled) { border-color: var(--color-warning-500); }
-        [data-md-hover-bc='warning-700']:hover:not(:disabled) { border-color: var(--color-warning-700); }
-        [data-md-hover-bc='warning-900']:hover:not(:disabled) { border-color: var(--color-warning-900); }
-        [data-md-hover-bc='alpha-subtle']:hover:not(:disabled) { border-color: var(--color-alpha-subtle); }
-        [data-md-hover-bc='alpha-soft']:hover:not(:disabled) { border-color: var(--color-alpha-soft); }
-        [data-md-hover-bc='alpha-medium']:hover:not(:disabled) { border-color: var(--color-alpha-medium); }
-        [data-md-hover-bc='alpha-strong']:hover:not(:disabled) { border-color: var(--color-alpha-strong); }
+          [data-md-hover-bc='warning-100']:hover:not(:disabled) { border-color: var(--color-warning-100); }
+          [data-md-hover-bc='warning-300']:hover:not(:disabled) { border-color: var(--color-warning-300); }
+          [data-md-hover-bc='warning-500']:hover:not(:disabled) { border-color: var(--color-warning-500); }
+          [data-md-hover-bc='warning-700']:hover:not(:disabled) { border-color: var(--color-warning-700); }
+          [data-md-hover-bc='warning-900']:hover:not(:disabled) { border-color: var(--color-warning-900); }
+          [data-md-hover-bc='alpha-subtle']:hover:not(:disabled) { border-color: var(--color-alpha-subtle); }
+          [data-md-hover-bc='alpha-soft']:hover:not(:disabled) { border-color: var(--color-alpha-soft); }
+          [data-md-hover-bc='alpha-medium']:hover:not(:disabled) { border-color: var(--color-alpha-medium); }
+          [data-md-hover-bc='alpha-strong']:hover:not(:disabled) { border-color: var(--color-alpha-strong); }
+        }
 
 
         [data-md-focus-bc='neutral-0']:focus-visible { border-color: var(--color-neutral-0); }
@@ -1366,58 +1370,60 @@ describe("BorderColorUtilityGenerator", () => {
       [data-bcl='alpha-strong'] { border-left-color: var(--color-alpha-strong); }
 
 
-      [data-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
-      [data-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
-      [data-hover-bc='neutral-100']:hover:not(:disabled) { border-color: var(--color-neutral-100); }
-      [data-hover-bc='neutral-200']:hover:not(:disabled) { border-color: var(--color-neutral-200); }
-      [data-hover-bc='neutral-300']:hover:not(:disabled) { border-color: var(--color-neutral-300); }
-      [data-hover-bc='neutral-400']:hover:not(:disabled) { border-color: var(--color-neutral-400); }
-      [data-hover-bc='neutral-500']:hover:not(:disabled) { border-color: var(--color-neutral-500); }
-      [data-hover-bc='neutral-600']:hover:not(:disabled) { border-color: var(--color-neutral-600); }
-      [data-hover-bc='neutral-700']:hover:not(:disabled) { border-color: var(--color-neutral-700); }
-      [data-hover-bc='neutral-800']:hover:not(:disabled) { border-color: var(--color-neutral-800); }
-      [data-hover-bc='neutral-850']:hover:not(:disabled) { border-color: var(--color-neutral-850); }
-      [data-hover-bc='neutral-900']:hover:not(:disabled) { border-color: var(--color-neutral-900); }
-      [data-hover-bc='neutral-950']:hover:not(:disabled) { border-color: var(--color-neutral-950); }
+      @media (hover: hover) {
+        [data-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
+        [data-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
+        [data-hover-bc='neutral-100']:hover:not(:disabled) { border-color: var(--color-neutral-100); }
+        [data-hover-bc='neutral-200']:hover:not(:disabled) { border-color: var(--color-neutral-200); }
+        [data-hover-bc='neutral-300']:hover:not(:disabled) { border-color: var(--color-neutral-300); }
+        [data-hover-bc='neutral-400']:hover:not(:disabled) { border-color: var(--color-neutral-400); }
+        [data-hover-bc='neutral-500']:hover:not(:disabled) { border-color: var(--color-neutral-500); }
+        [data-hover-bc='neutral-600']:hover:not(:disabled) { border-color: var(--color-neutral-600); }
+        [data-hover-bc='neutral-700']:hover:not(:disabled) { border-color: var(--color-neutral-700); }
+        [data-hover-bc='neutral-800']:hover:not(:disabled) { border-color: var(--color-neutral-800); }
+        [data-hover-bc='neutral-850']:hover:not(:disabled) { border-color: var(--color-neutral-850); }
+        [data-hover-bc='neutral-900']:hover:not(:disabled) { border-color: var(--color-neutral-900); }
+        [data-hover-bc='neutral-950']:hover:not(:disabled) { border-color: var(--color-neutral-950); }
 
-      [data-hover-bc='foo']:hover:not(:disabled) { border-color: var(--color-foo); }
+        [data-hover-bc='foo']:hover:not(:disabled) { border-color: var(--color-foo); }
 
-      [data-hover-bc='brand-50']:hover:not(:disabled) { border-color: var(--color-brand-50); }
-      [data-hover-bc='brand-100']:hover:not(:disabled) { border-color: var(--color-brand-100); }
-      [data-hover-bc='brand-200']:hover:not(:disabled) { border-color: var(--color-brand-200); }
-      [data-hover-bc='brand-300']:hover:not(:disabled) { border-color: var(--color-brand-300); }
-      [data-hover-bc='brand-400']:hover:not(:disabled) { border-color: var(--color-brand-400); }
-      [data-hover-bc='brand-500']:hover:not(:disabled) { border-color: var(--color-brand-500); }
-      [data-hover-bc='brand-600']:hover:not(:disabled) { border-color: var(--color-brand-600); }
-      [data-hover-bc='brand-700']:hover:not(:disabled) { border-color: var(--color-brand-700); }
-      [data-hover-bc='brand-800']:hover:not(:disabled) { border-color: var(--color-brand-800); }
-      [data-hover-bc='brand-900']:hover:not(:disabled) { border-color: var(--color-brand-900); }
+        [data-hover-bc='brand-50']:hover:not(:disabled) { border-color: var(--color-brand-50); }
+        [data-hover-bc='brand-100']:hover:not(:disabled) { border-color: var(--color-brand-100); }
+        [data-hover-bc='brand-200']:hover:not(:disabled) { border-color: var(--color-brand-200); }
+        [data-hover-bc='brand-300']:hover:not(:disabled) { border-color: var(--color-brand-300); }
+        [data-hover-bc='brand-400']:hover:not(:disabled) { border-color: var(--color-brand-400); }
+        [data-hover-bc='brand-500']:hover:not(:disabled) { border-color: var(--color-brand-500); }
+        [data-hover-bc='brand-600']:hover:not(:disabled) { border-color: var(--color-brand-600); }
+        [data-hover-bc='brand-700']:hover:not(:disabled) { border-color: var(--color-brand-700); }
+        [data-hover-bc='brand-800']:hover:not(:disabled) { border-color: var(--color-brand-800); }
+        [data-hover-bc='brand-900']:hover:not(:disabled) { border-color: var(--color-brand-900); }
 
-      [data-hover-bc='positive-0']:hover:not(:disabled) { border-color: var(--color-positive-0); }
-      [data-hover-bc='positive-100']:hover:not(:disabled) { border-color: var(--color-positive-100); }
-      [data-hover-bc='positive-200']:hover:not(:disabled) { border-color: var(--color-positive-200); }
-      [data-hover-bc='positive-400']:hover:not(:disabled) { border-color: var(--color-positive-400); }
-      [data-hover-bc='positive-600']:hover:not(:disabled) { border-color: var(--color-positive-600); }
-      [data-hover-bc='positive-800']:hover:not(:disabled) { border-color: var(--color-positive-800); }
-      [data-hover-bc='positive-900']:hover:not(:disabled) { border-color: var(--color-positive-900); }
+        [data-hover-bc='positive-0']:hover:not(:disabled) { border-color: var(--color-positive-0); }
+        [data-hover-bc='positive-100']:hover:not(:disabled) { border-color: var(--color-positive-100); }
+        [data-hover-bc='positive-200']:hover:not(:disabled) { border-color: var(--color-positive-200); }
+        [data-hover-bc='positive-400']:hover:not(:disabled) { border-color: var(--color-positive-400); }
+        [data-hover-bc='positive-600']:hover:not(:disabled) { border-color: var(--color-positive-600); }
+        [data-hover-bc='positive-800']:hover:not(:disabled) { border-color: var(--color-positive-800); }
+        [data-hover-bc='positive-900']:hover:not(:disabled) { border-color: var(--color-positive-900); }
 
-      [data-hover-bc='danger-0']:hover:not(:disabled) { border-color: var(--color-danger-0); }
-      [data-hover-bc='danger-100']:hover:not(:disabled) { border-color: var(--color-danger-100); }
-      [data-hover-bc='danger-200']:hover:not(:disabled) { border-color: var(--color-danger-200); }
-      [data-hover-bc='danger-400']:hover:not(:disabled) { border-color: var(--color-danger-400); }
-      [data-hover-bc='danger-600']:hover:not(:disabled) { border-color: var(--color-danger-600); }
-      [data-hover-bc='danger-800']:hover:not(:disabled) { border-color: var(--color-danger-800); }
-      [data-hover-bc='danger-900']:hover:not(:disabled) { border-color: var(--color-danger-900); }
+        [data-hover-bc='danger-0']:hover:not(:disabled) { border-color: var(--color-danger-0); }
+        [data-hover-bc='danger-100']:hover:not(:disabled) { border-color: var(--color-danger-100); }
+        [data-hover-bc='danger-200']:hover:not(:disabled) { border-color: var(--color-danger-200); }
+        [data-hover-bc='danger-400']:hover:not(:disabled) { border-color: var(--color-danger-400); }
+        [data-hover-bc='danger-600']:hover:not(:disabled) { border-color: var(--color-danger-600); }
+        [data-hover-bc='danger-800']:hover:not(:disabled) { border-color: var(--color-danger-800); }
+        [data-hover-bc='danger-900']:hover:not(:disabled) { border-color: var(--color-danger-900); }
 
-      [data-hover-bc='warning-100']:hover:not(:disabled) { border-color: var(--color-warning-100); }
-      [data-hover-bc='warning-300']:hover:not(:disabled) { border-color: var(--color-warning-300); }
-      [data-hover-bc='warning-500']:hover:not(:disabled) { border-color: var(--color-warning-500); }
-      [data-hover-bc='warning-700']:hover:not(:disabled) { border-color: var(--color-warning-700); }
-      [data-hover-bc='warning-900']:hover:not(:disabled) { border-color: var(--color-warning-900); }
-      [data-hover-bc='alpha-subtle']:hover:not(:disabled) { border-color: var(--color-alpha-subtle); }
-      [data-hover-bc='alpha-soft']:hover:not(:disabled) { border-color: var(--color-alpha-soft); }
-      [data-hover-bc='alpha-medium']:hover:not(:disabled) { border-color: var(--color-alpha-medium); }
-      [data-hover-bc='alpha-strong']:hover:not(:disabled) { border-color: var(--color-alpha-strong); }
+        [data-hover-bc='warning-100']:hover:not(:disabled) { border-color: var(--color-warning-100); }
+        [data-hover-bc='warning-300']:hover:not(:disabled) { border-color: var(--color-warning-300); }
+        [data-hover-bc='warning-500']:hover:not(:disabled) { border-color: var(--color-warning-500); }
+        [data-hover-bc='warning-700']:hover:not(:disabled) { border-color: var(--color-warning-700); }
+        [data-hover-bc='warning-900']:hover:not(:disabled) { border-color: var(--color-warning-900); }
+        [data-hover-bc='alpha-subtle']:hover:not(:disabled) { border-color: var(--color-alpha-subtle); }
+        [data-hover-bc='alpha-soft']:hover:not(:disabled) { border-color: var(--color-alpha-soft); }
+        [data-hover-bc='alpha-medium']:hover:not(:disabled) { border-color: var(--color-alpha-medium); }
+        [data-hover-bc='alpha-strong']:hover:not(:disabled) { border-color: var(--color-alpha-strong); }
+      }
 
 
       [data-focus-bc='neutral-0']:focus-visible { border-color: var(--color-neutral-0); }
@@ -1847,58 +1853,60 @@ describe("BorderColorUtilityGenerator", () => {
         [data-md-bcl='alpha-strong'] { border-left-color: var(--color-alpha-strong); }
 
 
-        [data-md-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
-        [data-md-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
-        [data-md-hover-bc='neutral-100']:hover:not(:disabled) { border-color: var(--color-neutral-100); }
-        [data-md-hover-bc='neutral-200']:hover:not(:disabled) { border-color: var(--color-neutral-200); }
-        [data-md-hover-bc='neutral-300']:hover:not(:disabled) { border-color: var(--color-neutral-300); }
-        [data-md-hover-bc='neutral-400']:hover:not(:disabled) { border-color: var(--color-neutral-400); }
-        [data-md-hover-bc='neutral-500']:hover:not(:disabled) { border-color: var(--color-neutral-500); }
-        [data-md-hover-bc='neutral-600']:hover:not(:disabled) { border-color: var(--color-neutral-600); }
-        [data-md-hover-bc='neutral-700']:hover:not(:disabled) { border-color: var(--color-neutral-700); }
-        [data-md-hover-bc='neutral-800']:hover:not(:disabled) { border-color: var(--color-neutral-800); }
-        [data-md-hover-bc='neutral-850']:hover:not(:disabled) { border-color: var(--color-neutral-850); }
-        [data-md-hover-bc='neutral-900']:hover:not(:disabled) { border-color: var(--color-neutral-900); }
-        [data-md-hover-bc='neutral-950']:hover:not(:disabled) { border-color: var(--color-neutral-950); }
+        @media (hover: hover) {
+          [data-md-hover-bc='neutral-0']:hover:not(:disabled) { border-color: var(--color-neutral-0); }
+          [data-md-hover-bc='neutral-50']:hover:not(:disabled) { border-color: var(--color-neutral-50); }
+          [data-md-hover-bc='neutral-100']:hover:not(:disabled) { border-color: var(--color-neutral-100); }
+          [data-md-hover-bc='neutral-200']:hover:not(:disabled) { border-color: var(--color-neutral-200); }
+          [data-md-hover-bc='neutral-300']:hover:not(:disabled) { border-color: var(--color-neutral-300); }
+          [data-md-hover-bc='neutral-400']:hover:not(:disabled) { border-color: var(--color-neutral-400); }
+          [data-md-hover-bc='neutral-500']:hover:not(:disabled) { border-color: var(--color-neutral-500); }
+          [data-md-hover-bc='neutral-600']:hover:not(:disabled) { border-color: var(--color-neutral-600); }
+          [data-md-hover-bc='neutral-700']:hover:not(:disabled) { border-color: var(--color-neutral-700); }
+          [data-md-hover-bc='neutral-800']:hover:not(:disabled) { border-color: var(--color-neutral-800); }
+          [data-md-hover-bc='neutral-850']:hover:not(:disabled) { border-color: var(--color-neutral-850); }
+          [data-md-hover-bc='neutral-900']:hover:not(:disabled) { border-color: var(--color-neutral-900); }
+          [data-md-hover-bc='neutral-950']:hover:not(:disabled) { border-color: var(--color-neutral-950); }
 
-        [data-md-hover-bc='foo']:hover:not(:disabled) { border-color: var(--color-foo); }
+          [data-md-hover-bc='foo']:hover:not(:disabled) { border-color: var(--color-foo); }
 
-        [data-md-hover-bc='brand-50']:hover:not(:disabled) { border-color: var(--color-brand-50); }
-        [data-md-hover-bc='brand-100']:hover:not(:disabled) { border-color: var(--color-brand-100); }
-        [data-md-hover-bc='brand-200']:hover:not(:disabled) { border-color: var(--color-brand-200); }
-        [data-md-hover-bc='brand-300']:hover:not(:disabled) { border-color: var(--color-brand-300); }
-        [data-md-hover-bc='brand-400']:hover:not(:disabled) { border-color: var(--color-brand-400); }
-        [data-md-hover-bc='brand-500']:hover:not(:disabled) { border-color: var(--color-brand-500); }
-        [data-md-hover-bc='brand-600']:hover:not(:disabled) { border-color: var(--color-brand-600); }
-        [data-md-hover-bc='brand-700']:hover:not(:disabled) { border-color: var(--color-brand-700); }
-        [data-md-hover-bc='brand-800']:hover:not(:disabled) { border-color: var(--color-brand-800); }
-        [data-md-hover-bc='brand-900']:hover:not(:disabled) { border-color: var(--color-brand-900); }
+          [data-md-hover-bc='brand-50']:hover:not(:disabled) { border-color: var(--color-brand-50); }
+          [data-md-hover-bc='brand-100']:hover:not(:disabled) { border-color: var(--color-brand-100); }
+          [data-md-hover-bc='brand-200']:hover:not(:disabled) { border-color: var(--color-brand-200); }
+          [data-md-hover-bc='brand-300']:hover:not(:disabled) { border-color: var(--color-brand-300); }
+          [data-md-hover-bc='brand-400']:hover:not(:disabled) { border-color: var(--color-brand-400); }
+          [data-md-hover-bc='brand-500']:hover:not(:disabled) { border-color: var(--color-brand-500); }
+          [data-md-hover-bc='brand-600']:hover:not(:disabled) { border-color: var(--color-brand-600); }
+          [data-md-hover-bc='brand-700']:hover:not(:disabled) { border-color: var(--color-brand-700); }
+          [data-md-hover-bc='brand-800']:hover:not(:disabled) { border-color: var(--color-brand-800); }
+          [data-md-hover-bc='brand-900']:hover:not(:disabled) { border-color: var(--color-brand-900); }
 
-        [data-md-hover-bc='positive-0']:hover:not(:disabled) { border-color: var(--color-positive-0); }
-        [data-md-hover-bc='positive-100']:hover:not(:disabled) { border-color: var(--color-positive-100); }
-        [data-md-hover-bc='positive-200']:hover:not(:disabled) { border-color: var(--color-positive-200); }
-        [data-md-hover-bc='positive-400']:hover:not(:disabled) { border-color: var(--color-positive-400); }
-        [data-md-hover-bc='positive-600']:hover:not(:disabled) { border-color: var(--color-positive-600); }
-        [data-md-hover-bc='positive-800']:hover:not(:disabled) { border-color: var(--color-positive-800); }
-        [data-md-hover-bc='positive-900']:hover:not(:disabled) { border-color: var(--color-positive-900); }
+          [data-md-hover-bc='positive-0']:hover:not(:disabled) { border-color: var(--color-positive-0); }
+          [data-md-hover-bc='positive-100']:hover:not(:disabled) { border-color: var(--color-positive-100); }
+          [data-md-hover-bc='positive-200']:hover:not(:disabled) { border-color: var(--color-positive-200); }
+          [data-md-hover-bc='positive-400']:hover:not(:disabled) { border-color: var(--color-positive-400); }
+          [data-md-hover-bc='positive-600']:hover:not(:disabled) { border-color: var(--color-positive-600); }
+          [data-md-hover-bc='positive-800']:hover:not(:disabled) { border-color: var(--color-positive-800); }
+          [data-md-hover-bc='positive-900']:hover:not(:disabled) { border-color: var(--color-positive-900); }
 
-        [data-md-hover-bc='danger-0']:hover:not(:disabled) { border-color: var(--color-danger-0); }
-        [data-md-hover-bc='danger-100']:hover:not(:disabled) { border-color: var(--color-danger-100); }
-        [data-md-hover-bc='danger-200']:hover:not(:disabled) { border-color: var(--color-danger-200); }
-        [data-md-hover-bc='danger-400']:hover:not(:disabled) { border-color: var(--color-danger-400); }
-        [data-md-hover-bc='danger-600']:hover:not(:disabled) { border-color: var(--color-danger-600); }
-        [data-md-hover-bc='danger-800']:hover:not(:disabled) { border-color: var(--color-danger-800); }
-        [data-md-hover-bc='danger-900']:hover:not(:disabled) { border-color: var(--color-danger-900); }
+          [data-md-hover-bc='danger-0']:hover:not(:disabled) { border-color: var(--color-danger-0); }
+          [data-md-hover-bc='danger-100']:hover:not(:disabled) { border-color: var(--color-danger-100); }
+          [data-md-hover-bc='danger-200']:hover:not(:disabled) { border-color: var(--color-danger-200); }
+          [data-md-hover-bc='danger-400']:hover:not(:disabled) { border-color: var(--color-danger-400); }
+          [data-md-hover-bc='danger-600']:hover:not(:disabled) { border-color: var(--color-danger-600); }
+          [data-md-hover-bc='danger-800']:hover:not(:disabled) { border-color: var(--color-danger-800); }
+          [data-md-hover-bc='danger-900']:hover:not(:disabled) { border-color: var(--color-danger-900); }
 
-        [data-md-hover-bc='warning-100']:hover:not(:disabled) { border-color: var(--color-warning-100); }
-        [data-md-hover-bc='warning-300']:hover:not(:disabled) { border-color: var(--color-warning-300); }
-        [data-md-hover-bc='warning-500']:hover:not(:disabled) { border-color: var(--color-warning-500); }
-        [data-md-hover-bc='warning-700']:hover:not(:disabled) { border-color: var(--color-warning-700); }
-        [data-md-hover-bc='warning-900']:hover:not(:disabled) { border-color: var(--color-warning-900); }
-        [data-md-hover-bc='alpha-subtle']:hover:not(:disabled) { border-color: var(--color-alpha-subtle); }
-        [data-md-hover-bc='alpha-soft']:hover:not(:disabled) { border-color: var(--color-alpha-soft); }
-        [data-md-hover-bc='alpha-medium']:hover:not(:disabled) { border-color: var(--color-alpha-medium); }
-        [data-md-hover-bc='alpha-strong']:hover:not(:disabled) { border-color: var(--color-alpha-strong); }
+          [data-md-hover-bc='warning-100']:hover:not(:disabled) { border-color: var(--color-warning-100); }
+          [data-md-hover-bc='warning-300']:hover:not(:disabled) { border-color: var(--color-warning-300); }
+          [data-md-hover-bc='warning-500']:hover:not(:disabled) { border-color: var(--color-warning-500); }
+          [data-md-hover-bc='warning-700']:hover:not(:disabled) { border-color: var(--color-warning-700); }
+          [data-md-hover-bc='warning-900']:hover:not(:disabled) { border-color: var(--color-warning-900); }
+          [data-md-hover-bc='alpha-subtle']:hover:not(:disabled) { border-color: var(--color-alpha-subtle); }
+          [data-md-hover-bc='alpha-soft']:hover:not(:disabled) { border-color: var(--color-alpha-soft); }
+          [data-md-hover-bc='alpha-medium']:hover:not(:disabled) { border-color: var(--color-alpha-medium); }
+          [data-md-hover-bc='alpha-strong']:hover:not(:disabled) { border-color: var(--color-alpha-strong); }
+        }
 
 
         [data-md-focus-bc='neutral-0']:focus-visible { border-color: var(--color-neutral-0); }

@@ -1,3 +1,5 @@
+import { CssRuleMedia, type CssRuleStrategy } from "./utilities/css-rule.strategy";
+
 export class StateRegistry {
   registry: { hover?: string; focus?: string; active?: string } = {};
 
@@ -11,5 +13,10 @@ export class StateRegistry {
 
   get entries() {
     return Object.entries(this.registry);
+  }
+
+  scope(state: string, rules: Array<CssRuleStrategy>): Array<CssRuleStrategy> {
+    if (state !== "hover") return rules;
+    return [new CssRuleMedia("(hover: hover)", rules)];
   }
 }

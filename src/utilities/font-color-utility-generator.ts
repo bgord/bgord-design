@@ -44,13 +44,17 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
     }
 
     for (const [state, selector] of this.stateRegistry.entries) {
+      const stateful: Array<CssRuleStrategy> = [];
+
       for (const variable of config) {
         const key = variable.replace("color-", "");
 
-        regular.push(
+        stateful.push(
           new CssRuleRegular(`[data-${state}-color='${key}']${selector}`, { color: `var(--${variable})` }),
         );
       }
+
+      regular.push(...this.stateRegistry.scope(state, stateful));
     }
 
     // Stryker disable all
@@ -58,7 +62,7 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
     // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
-      const responsive: Array<CssRuleRegular> = [];
+      const responsive: Array<CssRuleStrategy> = [];
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
@@ -69,15 +73,19 @@ export class FontColorUtilityGenerator extends UtilityGenerator {
       }
 
       for (const [state, selector] of this.stateRegistry.entries) {
+        const stateful: Array<CssRuleStrategy> = [];
+
         for (const variable of config) {
           const key = variable.replace("color-", "");
 
-          responsive.push(
+          stateful.push(
             new CssRuleRegular(`[data-${name}-${state}-color='${key}']${selector}`, {
               color: `var(--${variable})`,
             }),
           );
         }
+
+        responsive.push(...this.stateRegistry.scope(state, stateful));
       }
 
       // Stryker disable all

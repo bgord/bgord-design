@@ -49,10 +49,12 @@ button.c-card {
   cursor: pointer;
 }
 
-a.c-card:hover,
-button.c-card:hover {
-  border-color: var(--color-alpha-medium);
-  box-shadow: var(--shadow-md);
+@media (hover: hover) {
+  a.c-card:hover,
+  button.c-card:hover {
+    border-color: var(--color-alpha-medium);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 /* ───────── SLOTS ─────────────────────────────── */

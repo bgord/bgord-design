@@ -18,10 +18,12 @@ describe("CursorUtilityGenerator", () => {
       [data-cursor='not-allowed'] { cursor: not-allowed; }
 
 
-      [data-hover-cursor='wait']:hover:not(:disabled) { cursor: wait; }
-      [data-hover-cursor='auto']:hover:not(:disabled) { cursor: auto; }
-      [data-hover-cursor='pointer']:hover:not(:disabled) { cursor: pointer; }
-      [data-hover-cursor='not-allowed']:hover:not(:disabled) { cursor: not-allowed; }
+      @media (hover: hover) {
+        [data-hover-cursor='wait']:hover:not(:disabled) { cursor: wait; }
+        [data-hover-cursor='auto']:hover:not(:disabled) { cursor: auto; }
+        [data-hover-cursor='pointer']:hover:not(:disabled) { cursor: pointer; }
+        [data-hover-cursor='not-allowed']:hover:not(:disabled) { cursor: not-allowed; }
+      }
 
 
       [data-focus-cursor='wait']:focus-visible { cursor: wait; }
@@ -36,10 +38,12 @@ describe("CursorUtilityGenerator", () => {
         [data-md-cursor='not-allowed'] { cursor: not-allowed; }
 
 
-        [data-md-hover-cursor='wait']:hover:not(:disabled) { cursor: wait; }
-        [data-md-hover-cursor='auto']:hover:not(:disabled) { cursor: auto; }
-        [data-md-hover-cursor='pointer']:hover:not(:disabled) { cursor: pointer; }
-        [data-md-hover-cursor='not-allowed']:hover:not(:disabled) { cursor: not-allowed; }
+        @media (hover: hover) {
+          [data-md-hover-cursor='wait']:hover:not(:disabled) { cursor: wait; }
+          [data-md-hover-cursor='auto']:hover:not(:disabled) { cursor: auto; }
+          [data-md-hover-cursor='pointer']:hover:not(:disabled) { cursor: pointer; }
+          [data-md-hover-cursor='not-allowed']:hover:not(:disabled) { cursor: not-allowed; }
+        }
 
 
         [data-md-focus-cursor='wait']:focus-visible { cursor: wait; }

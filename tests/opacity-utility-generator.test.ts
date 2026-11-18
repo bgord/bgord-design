@@ -21,11 +21,13 @@ describe("OpacityUtilityGenerator", () => {
       [data-opacity='none'] { opacity: var(--opacity-none); }
 
 
-      [data-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
-      [data-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
-      [data-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
-      [data-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
-      [data-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
+      @media (hover: hover) {
+        [data-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
+        [data-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
+        [data-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
+        [data-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
+        [data-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
+      }
 
 
       [data-focus-opacity='full']:focus-visible { opacity: var(--opacity-full); }
@@ -50,11 +52,13 @@ describe("OpacityUtilityGenerator", () => {
         [data-md-opacity='none'] { opacity: var(--opacity-none); }
 
 
-        [data-md-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
-        [data-md-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
-        [data-md-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
-        [data-md-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
-        [data-md-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
+        @media (hover: hover) {
+          [data-md-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
+          [data-md-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
+          [data-md-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
+          [data-md-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
+          [data-md-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
+        }
 
 
         [data-md-focus-opacity='full']:focus-visible { opacity: var(--opacity-full); }
@@ -96,12 +100,14 @@ describe("OpacityUtilityGenerator", () => {
       [data-opacity='25'] { opacity: var(--opacity-25); }
 
 
-      [data-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
-      [data-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
-      [data-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
-      [data-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
-      [data-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
-      [data-hover-opacity='25']:hover:not(:disabled) { opacity: var(--opacity-25); }
+      @media (hover: hover) {
+        [data-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
+        [data-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
+        [data-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
+        [data-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
+        [data-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
+        [data-hover-opacity='25']:hover:not(:disabled) { opacity: var(--opacity-25); }
+      }
 
 
       [data-focus-opacity='full']:focus-visible { opacity: var(--opacity-full); }
@@ -129,12 +135,14 @@ describe("OpacityUtilityGenerator", () => {
         [data-md-opacity='25'] { opacity: var(--opacity-25); }
 
 
-        [data-md-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
-        [data-md-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
-        [data-md-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
-        [data-md-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
-        [data-md-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
-        [data-md-hover-opacity='25']:hover:not(:disabled) { opacity: var(--opacity-25); }
+        @media (hover: hover) {
+          [data-md-hover-opacity='full']:hover:not(:disabled) { opacity: var(--opacity-full); }
+          [data-md-hover-opacity='high']:hover:not(:disabled) { opacity: var(--opacity-high); }
+          [data-md-hover-opacity='medium']:hover:not(:disabled) { opacity: var(--opacity-medium); }
+          [data-md-hover-opacity='low']:hover:not(:disabled) { opacity: var(--opacity-low); }
+          [data-md-hover-opacity='none']:hover:not(:disabled) { opacity: var(--opacity-none); }
+          [data-md-hover-opacity='25']:hover:not(:disabled) { opacity: var(--opacity-25); }
+        }
 
 
         [data-md-focus-opacity='full']:focus-visible { opacity: var(--opacity-full); }

@@ -30,15 +30,19 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
     }
 
     for (const [state, selector] of this.stateRegistry.entries) {
+      const stateful: Array<CssRuleStrategy> = [];
+
       for (const variable of config) {
         const key = variable.replace("shadow-", "");
 
-        regular.push(
+        stateful.push(
           new CssRuleRegular(`[data-${state}-shadow='${key}']${selector}`, {
             "box-shadow": `var(--${variable})`,
           }),
         );
       }
+
+      regular.push(...this.stateRegistry.scope(state, stateful));
     }
 
     // Stryker disable all
@@ -46,7 +50,7 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
     // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
-      const responsive: Array<CssRuleRegular> = [];
+      const responsive: Array<CssRuleStrategy> = [];
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
@@ -59,15 +63,19 @@ export class ShadowUtilityGenerator extends UtilityGenerator {
       }
 
       for (const [state, selector] of this.stateRegistry.entries) {
+        const stateful: Array<CssRuleStrategy> = [];
+
         for (const variable of config) {
           const key = variable.replace("shadow-", "");
 
-          responsive.push(
+          stateful.push(
             new CssRuleRegular(`[data-${name}-${state}-shadow='${key}']${selector}`, {
               "box-shadow": `var(--${variable})`,
             }),
           );
         }
+
+        responsive.push(...this.stateRegistry.scope(state, stateful));
       }
 
       // Stryker disable all

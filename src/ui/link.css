@@ -11,9 +11,11 @@
   transition: color var(--motion-fast) var(--ease-out);
 }
 
-.c-link:hover {
-  color: var(--color-brand-200);
-  text-decoration-thickness: 2px;
+@media (hover: hover) {
+  .c-link:hover {
+    color: var(--color-brand-200);
+    text-decoration-thickness: 2px;
+  }
 }
 
 /* The shared ring comes from the defaults layer; a link only rounds its corners. */

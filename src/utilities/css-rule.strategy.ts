@@ -16,3 +16,16 @@ export class CssRuleRegular implements CssRuleStrategy {
     // Stryker restore all
   }
 }
+
+export class CssRuleMedia implements CssRuleStrategy {
+  constructor(
+    private readonly query: string,
+    private readonly rules: ReadonlyArray<CssRuleStrategy>,
+  ) {}
+
+  get(): string {
+    // Stryker disable all
+    return `@media ${this.query} { ${this.rules.map((rule) => rule.get()).join("\n")} }`;
+    // Stryker restore all
+  }
+}

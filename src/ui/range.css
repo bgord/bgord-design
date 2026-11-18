@@ -76,14 +76,16 @@
     scale var(--motion-fast) var(--ease-out);
 }
 
-.c-range:hover:not(:disabled)::-webkit-slider-thumb {
-  background-color: var(--color-neutral-100);
-  scale: 1.12;
-}
+@media (hover: hover) {
+  .c-range:hover:not(:disabled)::-webkit-slider-thumb {
+    background-color: var(--color-neutral-100);
+    scale: 1.12;
+  }
 
-.c-range:hover:not(:disabled)::-moz-range-thumb {
-  background-color: var(--color-neutral-100);
-  scale: 1.12;
+  .c-range:hover:not(:disabled)::-moz-range-thumb {
+    background-color: var(--color-neutral-100);
+    scale: 1.12;
+  }
 }
 
 .c-range:active:not(:disabled)::-webkit-slider-thumb {

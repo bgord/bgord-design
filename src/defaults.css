@@ -97,9 +97,11 @@
     transition: color var(--motion-fast) var(--ease-out);
   }
 
-  a:hover {
-    color: var(--color-brand-200);
-    text-decoration-thickness: 2px;
+  @media (hover: hover) {
+    a:hover {
+      color: var(--color-brand-200);
+      text-decoration-thickness: 2px;
+    }
   }
 
   strong,

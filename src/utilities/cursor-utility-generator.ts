@@ -25,9 +25,13 @@ export class CursorUtilityGenerator extends UtilityGenerator {
     }
 
     for (const [state, selector] of this.stateRegistry.entries) {
+      const stateful: Array<CssRuleStrategy> = [];
+
       for (const [key, value] of config) {
-        regular.push(new CssRuleRegular(`[data-${state}-cursor='${key}']${selector}`, { cursor: value }));
+        stateful.push(new CssRuleRegular(`[data-${state}-cursor='${key}']${selector}`, { cursor: value }));
       }
+
+      regular.push(...this.stateRegistry.scope(state, stateful));
     }
 
     // Stryker disable all
@@ -35,7 +39,7 @@ export class CursorUtilityGenerator extends UtilityGenerator {
     // Stryker restore all
 
     for (const [name, breakpoint] of this.breakpointRegistry.entries) {
-      const responsive: Array<CssRuleRegular> = [];
+      const responsive: Array<CssRuleStrategy> = [];
 
       result += `@media (max-width: ${breakpoint}px) { `;
 
@@ -44,11 +48,15 @@ export class CursorUtilityGenerator extends UtilityGenerator {
       }
 
       for (const [state, selector] of this.stateRegistry.entries) {
+        const stateful: Array<CssRuleStrategy> = [];
+
         for (const [key, value] of config) {
-          responsive.push(
+          stateful.push(
             new CssRuleRegular(`[data-${name}-${state}-cursor='${key}']${selector}`, { cursor: value }),
           );
         }
+
+        responsive.push(...this.stateRegistry.scope(state, stateful));
       }
 
       // Stryker disable all

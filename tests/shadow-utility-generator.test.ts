@@ -25,15 +25,17 @@ describe("ShadowUtilityGenerator", () => {
       [data-shadow='unset'] { box-shadow: var(--shadow-unset); }
 
 
-      [data-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
-      [data-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
-      [data-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
-      [data-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
-      [data-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
-      [data-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
-      [data-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
-      [data-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
-      [data-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
+      @media (hover: hover) {
+        [data-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
+        [data-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
+        [data-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
+        [data-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
+        [data-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
+        [data-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+        [data-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
+        [data-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
+        [data-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
+      }
 
 
       [data-focus-shadow='none']:focus-visible { box-shadow: var(--shadow-none); }
@@ -69,15 +71,17 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-shadow='inner'] { box-shadow: var(--shadow-inner); }
         [data-md-shadow='unset'] { box-shadow: var(--shadow-unset); }
 
-        [data-md-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
-        [data-md-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
-        [data-md-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
-        [data-md-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
-        [data-md-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
-        [data-md-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
-        [data-md-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
-        [data-md-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
-        [data-md-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
+        @media (hover: hover) {
+          [data-md-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
+          [data-md-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
+          [data-md-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
+          [data-md-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
+          [data-md-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
+          [data-md-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+          [data-md-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
+          [data-md-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
+          [data-md-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
+        }
 
 
         [data-md-focus-shadow='none']:focus-visible { box-shadow: var(--shadow-none); }
@@ -131,16 +135,18 @@ describe("ShadowUtilityGenerator", () => {
       [data-shadow='huge'] { box-shadow: var(--shadow-huge); }
 
 
-      [data-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
-      [data-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
-      [data-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
-      [data-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
-      [data-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
-      [data-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
-      [data-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
-      [data-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
-      [data-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
-      [data-hover-shadow='huge']:hover:not(:disabled) { box-shadow: var(--shadow-huge); }
+      @media (hover: hover) {
+        [data-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
+        [data-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
+        [data-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
+        [data-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
+        [data-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
+        [data-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+        [data-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
+        [data-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
+        [data-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
+        [data-hover-shadow='huge']:hover:not(:disabled) { box-shadow: var(--shadow-huge); }
+      }
 
       [data-focus-shadow='none']:focus-visible { box-shadow: var(--shadow-none); }
       [data-focus-shadow='xs']:focus-visible { box-shadow: var(--shadow-xs); }
@@ -179,16 +185,18 @@ describe("ShadowUtilityGenerator", () => {
         [data-md-shadow='huge'] { box-shadow: var(--shadow-huge); }
 
 
-        [data-md-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
-        [data-md-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
-        [data-md-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
-        [data-md-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
-        [data-md-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
-        [data-md-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
-        [data-md-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
-        [data-md-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
-        [data-md-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
-        [data-md-hover-shadow='huge']:hover:not(:disabled) { box-shadow: var(--shadow-huge); }
+        @media (hover: hover) {
+          [data-md-hover-shadow='none']:hover:not(:disabled) { box-shadow: var(--shadow-none); }
+          [data-md-hover-shadow='xs']:hover:not(:disabled) { box-shadow: var(--shadow-xs); }
+          [data-md-hover-shadow='sm']:hover:not(:disabled) { box-shadow: var(--shadow-sm); }
+          [data-md-hover-shadow='md']:hover:not(:disabled) { box-shadow: var(--shadow-md); }
+          [data-md-hover-shadow='lg']:hover:not(:disabled) { box-shadow: var(--shadow-lg); }
+          [data-md-hover-shadow='xl']:hover:not(:disabled) { box-shadow: var(--shadow-xl); }
+          [data-md-hover-shadow='raised']:hover:not(:disabled) { box-shadow: var(--shadow-raised); }
+          [data-md-hover-shadow='inner']:hover:not(:disabled) { box-shadow: var(--shadow-inner); }
+          [data-md-hover-shadow='unset']:hover:not(:disabled) { box-shadow: var(--shadow-unset); }
+          [data-md-hover-shadow='huge']:hover:not(:disabled) { box-shadow: var(--shadow-huge); }
+        }
 
         [data-md-focus-shadow='none']:focus-visible { box-shadow: var(--shadow-none); }
         [data-md-focus-shadow='xs']:focus-visible { box-shadow: var(--shadow-xs); }
