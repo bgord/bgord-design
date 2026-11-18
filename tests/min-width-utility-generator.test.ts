@@ -1,4 +1,3 @@
-// cSpell:ignore minw
 import { describe, expect, test } from "bun:test";
 import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { MinWidthUtilityGenerator } from "../src/utilities";

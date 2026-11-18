@@ -1,4 +1,3 @@
-// cSpell:ignore minh
 import { describe, expect, test } from "bun:test";
 import { BreakpointRegistry } from "../src/breakpoint-registry";
 import { MinHeightUtilityGenerator } from "../src/utilities";

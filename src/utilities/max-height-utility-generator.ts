@@ -1,4 +1,3 @@
-// cSpell:ignore maxh
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import type { BreakpointTokenGenerator } from "../tokens/breakpoint-token-generator";
 import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";

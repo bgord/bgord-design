@@ -1,4 +1,3 @@
-/* cSpell:ignore oklch */
 import { type TokenConfigType, TokenGenerator } from "./template";
 
 export class GrayscaleTokenGenerator extends TokenGenerator {

@@ -1,4 +1,3 @@
-// cSpell:ignore minw
 import type { BreakpointRegistry } from "../breakpoint-registry";
 import { CssRuleRegular, type CssRuleStrategy } from "./css-rule.strategy";
 import { UtilityGenerator } from "./template";

@@ -1,5 +1,4 @@
 /* biome-ignore-all lint/complexity/noImportantStyles: rule highlights must override app styles */
-/* cspell:disable */
 [hidden][tabindex]:not([tabindex="-1"]) {
   border: 2px solid red !important;
   content: "Rule #8 violation (focusable-hidden-element)";

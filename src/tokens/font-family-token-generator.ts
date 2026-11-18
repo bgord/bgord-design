@@ -1,4 +1,3 @@
-/* cSpell:ignore Roboto Cambria Segoe Menlo Consolas monospace BlinkMacSystemFont Neue */
 import { type TokenConfigType, TokenGenerator } from "./template";
 
 export class FontFamilyTokenGenerator extends TokenGenerator {

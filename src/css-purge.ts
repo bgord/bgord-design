@@ -1,5 +1,4 @@
 #!/usr/bin/env bun
-// cSpell:ignore fullhuman
 import purgecss from "@fullhuman/postcss-purgecss";
 import postcss, { type PluginCreator } from "postcss";
 

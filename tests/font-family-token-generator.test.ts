@@ -1,4 +1,3 @@
-/* cSpell:ignore Roboto Cambria Segoe Menlo Consolas monospace BlinkMacSystemFont Neue */
 import { describe, expect, test } from "bun:test";
 import { FontFamilyTokenGenerator } from "../src/tokens";
 

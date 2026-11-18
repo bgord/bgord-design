@@ -1,4 +1,3 @@
-/* cSpell:ignore oklch */
 import { describe, expect, test } from "bun:test";
 import { GrayscaleTokenGenerator } from "../src/tokens";
 
